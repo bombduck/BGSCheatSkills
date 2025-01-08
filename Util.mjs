@@ -302,7 +302,7 @@ export class Util {
 	static calcValue(modValue, type, lv, mul, extraMul = 1) {
 		if (modValue === undefined)
 			return undefined;
-		if (isNumber(modValue)) return calcNumberValue(modValue, type, lv, mul, extraMul);
+		if (isNumber(modValue)) return this.calcNumberValue(modValue, type, lv, mul, extraMul);
 
 		let value;
 		let maxValue = null;

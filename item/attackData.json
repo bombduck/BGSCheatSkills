@@ -1,7 +1,7 @@
 [
   {
     "id": "TerrorBeam",
-    "defaultChance": [0,10],
+    "defaultChance": {"lv": 10},
     "damage": [
       {
         "damageType": "Custom",
