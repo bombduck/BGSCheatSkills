@@ -1,0 +1,180 @@
+{
+    "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+    "data": {
+        "skillData": [
+            {
+                "skillID": "melvorD:Agility",
+                "data": {
+                    "pillars": [
+                        {
+                            "id": "BgsPillarIta",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Pillar Ita",
+                            "itemCosts": [],
+                            "modifiers": {},
+							"slot": 0
+                        }
+                    ],
+                    "obstacles": [
+                        {
+                            "id": "BgsObstacleIta0",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 1",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 0,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta1",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 2",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 1,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta2",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 3",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 2,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta3",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 4",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 3,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta4",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 5",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 4,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta5",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 6",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 5,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta6",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 7",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 6,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta7",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 8",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 7,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta8",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 9",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 8,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta9",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 10",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 9,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta10",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 11",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 10,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacleIta11",
+							"realm": "melvorItA:Abyssal",
+                            "name": "Cheat Obstacle Ita 12",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 11,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

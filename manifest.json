@@ -1,0 +1,8 @@
+{
+"name": "BGSCheat",
+  "namespace": "BGSCheat",
+  "setup": "setup.mjs",
+  "version": "0.0.1",
+  "icon": "img/arm.png"
+
+}

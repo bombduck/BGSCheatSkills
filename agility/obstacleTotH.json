@@ -1,0 +1,89 @@
+{
+    "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+    "data": {
+        "skillData": [
+            {
+                "skillID": "melvorD:Agility",
+                "data": {
+                    "pillars": [
+                        {
+                            "id": "BgsPillarTotH",
+							"realm": "melvorD:Melvor",
+                            "name": "Cheat Pillar TotH",
+                            "itemCosts": [],
+                            "modifiers": {},
+							"slot": 1
+                        }
+                    ],
+                    "obstacles": [
+                        {
+                            "id": "BgsObstacle10",
+							"realm": "melvorD:Melvor",
+                            "name": "Cheat Obstacle 11",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 10,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacle11",
+							"realm": "melvorD:Melvor",
+                            "name": "Cheat Obstacle 12",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 11,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacle12",
+							"realm": "melvorD:Melvor",
+                            "name": "Cheat Obstacle 13",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 12,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacle13",
+							"realm": "melvorD:Melvor",
+                            "name": "Cheat Obstacle 14",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 13,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        },
+                        {
+                            "id": "BgsObstacle14",
+							"realm": "melvorD:Melvor",
+                            "name": "Cheat Obstacle 15",
+                            "itemCosts": [],
+                            "modifiers": {},
+                            "media": "img/agility.svg",
+                            "category": 14,
+                            "baseInterval": 1,
+                            "skillRequirements": [],
+                            "baseExperience": 0,
+                            "itemRewards": []
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

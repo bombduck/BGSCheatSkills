@@ -1,0 +1,123 @@
+[
+  {
+    "id": "TerrorBeam",
+    "defaultChance": [0,10],
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "roll": false,
+        "maxRoll": "MaxHit",
+        "maxPercent": [-50,0,100]
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:Burn",
+        "chance": [ 0, 5 ],
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": [ 0, 0, 100 ]
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:DeadlyPoison",
+        "chance": [ 0, 5 ],
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": [ 0, 0, 100 ]
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Ablaze",
+        "chance": [ 0, 5 ],
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": [ 0, 0, 100 ]
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Toxin",
+        "chance": [ 0, 5 ],
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": [ 0, 0, 100 ]
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Fear",
+        "chance": [ 0, 5 ],
+        "initialParams": [
+          {
+            "name": "initialStacks",
+            "value": [ 0, 0, 1000 ]
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Bleed400",
+        "chance": [ 0, 5 ],
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": [ 0, 0, 100 ]
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Wither",
+        "chance": [ 0, 5 ],
+        "initialParams": [
+          {
+            "name": "maxStacks",
+            "value": [ 0, 0, 10, 0, 1000, 1 ]
+          },
+          {
+            "name": "stacksToAdd",
+            "value": [ 0, 0, 1, 0, 1000, 1 ]
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Blight",
+        "chance": [ 0, 5 ],
+        "initialParams": [
+          {
+            "name": "maxStacks",
+            "value": [ 0, 0, 10, 0, 1000, 1 ]
+          },
+          {
+            "name": "resetStacks",
+            "value": [ 0, 0, 5, 0, 1000, 1 ]
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Voidburst",
+        "chance": [ 0, 5 ],
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": [ 0, 0, 100 ]
+          }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": [-25, 0, 50],
+    "attackInterval": [200, 0, -50, 50],
+    "lifesteal": 0,
+    "name": "Terror Beam",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of the attacker's max hit ${hitCount} times over ${duration}s. Each hit, there is a 5% chance to apply Burn, Poison, Ablaze, Toxin, Fear, Bleed, Wither, Blight or Voidburst.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage> damage <count> times over <duration>. Each hit, <hitEffect>."
+  }
+]

@@ -1,0 +1,3067 @@
+{
+	"melvorF:CargoNet": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 6
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"value": 3
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Fishing",
+						"value": 2
+					}
+				]
+			}
+		}
+	},
+	"melvorF:RopeSwing": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 8
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": 2
+					}
+				]
+			}
+		}
+	},
+	"melvorF:RopeClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 8
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Thieving",
+						"value": 2
+					}
+				]
+			}
+		}
+	},
+	"melvorF:RopeJump": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 40
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Smithing",
+						"value": 3
+					}
+				]
+			}
+		}
+	},
+	"melvorF:MonkeyBars": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 27
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Firemaking",
+						"value": -4
+					}
+				]
+			}
+		}
+	},
+	"melvorF:BalanceBeam": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 34
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": 2
+					}
+				]
+			}
+		}
+	},
+	"melvorF:BalanceSeesaw": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 92
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": 2
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": 2
+					}
+				]
+			}
+		}
+	},
+	"melvorF:PipeClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 67
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"meleeMaxHit": 5,
+				"meleeEvasion": 5
+			}
+		}
+	},
+	"melvorF:PipeBalance": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 96
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatMiningNodeHP": 10,
+				"skillPreservationChance": 3,
+				"noMiningNodeDamageChance": [
+					{
+						"categoryID": "melvorD:Essence",
+						"value": 3
+					},
+					{
+						"categoryID": "melvorD:Ore",
+						"value": 3
+					}
+				]
+			}
+		}
+	},
+	"melvorF:PitJump": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 24
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillXP": [
+					{
+						"value": 3
+					},
+					{
+						"skillID": "melvorD:Agility",
+						"value": [ -4 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorF:SteppingStones": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 63
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillXP": [
+					{
+						"skillID": "melvorD:Firemaking",
+						"value": 3
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Woodcutting",
+						"value": -6
+					}
+				]
+			}
+		}
+	},
+	"melvorF:CoalStones": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 40
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillPreservationChance": 3,
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"skillID": "melvorD:Thieving",
+						"value": 20
+					}
+				],
+				"foodHealingValue": 10,
+				"skillXP": [ -4 ]
+			}
+		}
+	},
+	"melvorF:MudCrawl": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 140
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillPreservationChance": [
+					{
+						"skillID": "melvorD:Herblore",
+						"value": 3
+					}
+				],
+				"skillXP": [
+					{
+						"skillID": "melvorD:Herblore",
+						"value": 2
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Herblore",
+						"value": 2
+					}
+				],
+				"basePrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Farming",
+						"value": [ -10 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorF:MudDive": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 66
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"meleeMaxHit": 2,
+				"meleeAccuracyRating": 5,
+				"flatMaxHitpoints": 2,
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorD:Normal",
+						"value": [ -4 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorF:CaveClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 96
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"ammoPreservationChance": 5,
+				"runePreservationChance": 5,
+				"meleeMaxHit": 5,
+				"flatMaxHitpoints": [ -4 ]
+			}
+		}
+	},
+	"melvorF:GapJump": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 45
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Runecrafting",
+						"value": 3
+					}
+				]
+			}
+		}
+	},
+	"melvorF:RockClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 172
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillItemDoublingChance": [
+					{
+						"skillID": "melvorD:Fishing",
+						"value": 5
+					},
+					{
+						"skillID": "melvorD:Woodcutting",
+						"value": 5
+					},
+					{
+						"skillID": "melvorD:Mining",
+						"value": 5
+					},
+					{
+						"skillID": "melvorD:Thieving",
+						"value": 5
+					}
+				],
+				"skillPreservationChance": [ -10 ]
+			}
+		}
+	},
+	"melvorF:CliffClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 82
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:SlayerCoins",
+						"value": 10
+					}
+				],
+				"damageDealtToSlayerTasks": 5,
+				"slayerTaskLength": 10,
+				"skillXP": [
+					{
+						"skillID": "melvorD:Slayer",
+						"value": [ -10 ]
+					}
+				],
+				"flatSlayerAreaEffectNegation": [ -20 ]
+			}
+		}
+	},
+	"melvorF:CliffBalance": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 117
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"meleeAccuracyRating": 5,
+				"rangedAccuracyRating": 5,
+				"magicAccuracyRating": 5,
+				"flatMaxHitpoints": 2,
+				"flatPrayerPointCost": [ 2 ]
+			}
+		}
+	},
+	"melvorF:MountainClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 296
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"skillID": "melvorD:Agility",
+						"value": 15
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": -12
+					}
+				],
+				"skillXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": [ -8 ]
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": [ -2 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorF:TreeClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 91
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillXP": 4,
+				"masteryXP": 3,
+				"skillPreservationChance": [ -10 ],
+				"ammoPreservationChance": [ -10 ],
+				"runePreservationChance": [ -10 ]
+			}
+		}
+
+	},
+	"melvorF:TreeHop": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 565
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillPreservationChance": 5,
+				"ammoPreservationChance": 5,
+				"runePreservationChance": 5
+			}
+		}
+	},
+	"melvorF:TreeBalance": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 505
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": -12
+					}
+				],
+				"skillXP": [ -4 ]
+			}
+		}
+	},
+	"melvorF:RockyWaters": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 578
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatMaxHitpoints": 5
+			}
+		}
+	},
+	"melvorF:LakeSwim": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 521
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"damageDealtToAllMonsters": 5,
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorD:Normal",
+						"value": 1
+					}
+				],
+				"prayerPointPreservationChance": 3
+			}
+		}
+	},
+	"melvorF:RaftDrifting": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 247
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"basePrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Farming",
+						"value": 10
+					}
+				]
+			}
+		}
+	},
+	"melvorF:SpikeTrap": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 640
+			}
+		],
+		"modifiers": {
+			"add": {
+				"flatMaxHitpoints": -4,
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorD:Normal",
+						"value": -2
+					}
+				]
+			}
+		}
+	},
+	"melvorF:HeatTrap": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 849
+			}
+		],
+		"modifiers": {
+			"add": {
+				"damageDealtToAllMonsters": -10,
+				"autoEatEfficiency": -10
+			}
+		}
+	},
+	"melvorF:BoulderTrap": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 777
+			}
+		],
+		"modifiers": {
+			"add": {
+				"skillPreservationChance": -20
+			}
+		}
+	},
+	"melvorF:WaterTrap": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 1035
+			}
+		],
+		"modifiers": {
+			"add": {
+				"skillXP": -6,
+				"masteryXP": -6
+			}
+		}
+	},
+	"melvorF:FreezingTrap": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 598
+			}
+		],
+		"modifiers": {
+			"add": {
+				"runePreservationChance": -30,
+				"ammoPreservationChance": -30,
+				"meleeAccuracyRating": -16,
+				"rangedAccuracyRating": -16,
+				"magicAccuracyRating": -16
+			}
+		}
+	},
+	"melvorF:PipeCrawl": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 1603
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"damageDealtToMonstersInArea": [
+					{
+						"categoryID": "melvorF:SlayerAreas",
+						"value": 8
+					}
+				],
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:SlayerCoins",
+						"value": [ -10 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorF:RaftBuilding": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 2619
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"damageDealtToAllMonsters": 2,
+				"flatMaxHitpoints": 2,
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorD:Normal",
+						"value": 1
+					}
+				]
+			}
+		}
+	},
+	"melvorF:SpikeJump": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 2301
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"damageDealtToMonstersInArea": [
+					{
+						"categoryID": "melvorD:Dungeons",
+						"value": 5
+					}
+				],
+				"combatLootDoublingChance": 5
+			}
+		}
+	},
+	"melvorF:TreeHang": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 2360
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": 5,
+				"skillXP": [ -6 ]
+			}
+		}
+	},
+	"melvorF:ALovelyJog": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 1228
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillXP": 5,
+				"masteryXP": [ -6 ]
+			}
+		}
+	},
+	"melvorF:LavaJump": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 3488
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatMonsterRespawnInterval": -300,
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorD:Normal",
+						"value": [ -6 ]
+					}
+				],
+				"masteryXP": [ -6 ],
+				"autoEatEfficiency": [ -6 ]
+			}
+		}
+	},
+	"melvorF:WaterJump": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 888
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": 3,
+				"meleeMaxHit": 8,
+				"rangedMaxHit": 8,
+				"magicMaxHit": 8
+			}
+		}
+	},
+	"melvorF:IceJump": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 3898
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillPreservationChance": 10,
+				"foodHealingValue": 5,
+				"globalItemDoublingChance": 5,
+				"flatMaxHitpoints": 2,
+				"flatMiningNodeHP": 10
+			}
+		}
+	},
+	"melvorF:CaveMaze": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 604
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"prayerPointPreservationChance": 10,
+				"ammoPreservationChance": 10,
+				"runePreservationChance": 10,
+				"flatPrayerPointCost": -1
+			}
+		}
+	},
+	"melvorF:FrozenLakeCrossing": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 1086
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"damageDealtToAllMonsters": 3,
+				"autoEatEfficiency": 10,
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:SlayerCoins",
+						"value": 10
+					}
+				],
+				"skillXP": [
+					{
+						"skillID": "melvorD:Slayer",
+						"value": 5
+					}
+				]
+			}
+		}
+	},
+	"melvorF:Waterfall": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 7626
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Astrology",
+						"value": -5
+					}
+				],
+				"skillXP": [
+					{
+						"skillID": "melvorD:Astrology",
+						"value": 5
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Astrology",
+						"value": 5
+					}
+				]
+			}
+		}
+	},
+	"melvorF:LavaWaterfallDodge": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 2915
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillPreservationChance": 10,
+				"ammoPreservationChance": 5,
+				"runePreservationChance": 10,
+				"prayerPointPreservationChance": 10
+			}
+		}
+	},
+	"melvorF:BoulderMove": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 3257
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": 8
+			}
+		}
+	},
+	"melvorF:DragonFight": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 7175
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatMonsterRespawnInterval": -300,
+				"autoEatEfficiency": [ -16 ]
+			}
+		}
+	},
+	"melvorF:OceanRafting": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 3380
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"damageDealtToAllMonsters": 5,
+				"autoEatEfficiency": 5,
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:SlayerCoins",
+						"value": 10
+					}
+				]
+			}
+		}
+	},
+	"melvorF:ForestTrail": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 252
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Summoning",
+						"value": 5
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Summoning",
+						"value": -5
+					}
+				],
+				"basePrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Farming",
+						"value": [ -6 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorF:RunicTrail": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 2399
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillPreservationChance": [
+					{
+						"skillID": "melvorD:Summoning",
+						"value": 5
+					},
+					{
+						"skillID": "melvorD:Herblore",
+						"value": [ -16 ]
+					}
+				],
+				"summoningChargePreservationChance": 15,
+				"flatBasePrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Summoning",
+						"value": 3
+					}
+				]
+			}
+		}
+	},
+	"melvorF:BurningCoals": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 56
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillXP": [
+					{
+						"skillID": "melvorD:Cooking",
+						"value": 3
+					}
+				],
+				"successfulCookChance": 5,
+				"damageDealtToAllMonsters": [ -6 ],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Cooking",
+						"value": -3
+					}
+				]
+			}
+		}
+
+	},
+	"melvorF:SwelteringPools": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 2200
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Cooking",
+						"value": 3
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Cooking",
+						"value": -3
+					}
+				],
+				"foodHealingValue": 10,
+				"autoEatEfficiency": 10,
+				"skillPreservationChance": [ -20 ]
+			}
+		}
+	},
+	"melvorF:RooftopRun": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 288
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillXP": [
+					{
+						"skillID": "melvorD:Thieving",
+						"value": 3
+					}
+				],
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"skillID": "melvorD:Thieving",
+						"value": 20
+					}
+				],
+				"flatSkillInterval": [
+					{
+						"skillID": "melvorD:Thieving",
+						"value": -200
+					}
+				],
+				"thievingStealth": 35,
+				"damageDealtToAllMonsters": [ -10 ]
+			}
+		}
+	},
+	"melvorF:PillarofCombat": {
+		"0u:modifiers": {
+			"add": {
+				"meleeEvasion": 10,
+				"rangedEvasion": 10,
+				"magicEvasion": 10,
+				"flatHPRegen": 1,
+				"flatSlayerAreaEffectNegation": 5,
+				"minHitBasedOnMaxHit": 5,
+				"flatMonsterRespawnInterval": -200
+			}
+		}
+	},
+	"melvorF:PillarofSkilling": {
+		"0u:modifiers": {
+			"add": {
+				"basePrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Farming",
+						"realmID": "melvorD:Melvor",
+						"value": 10
+					}
+				],
+				"globalItemDoublingChance": 3,
+				"skillPreservationChance": 3,
+				"masteryXP": 2
+			}
+		}
+	},
+	"melvorF:PillarofGenerosity": {
+		"0u:modifiers": {
+			"add": {
+				"bankSpace": 10,
+				"potionChargePreservationChance": 10,
+				"flatPotionCharges": 5,
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"value": 10
+					}
+				],
+				"summoningChargePreservationChance": 5
+			}
+		}
+	},
+	"melvorTotH:PitMaze": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 7044
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"realmID": "melvorD:Melvor",
+						"value": 3
+					}
+				],
+				"flatMiningNodeHP": 15,
+				"qualitySuperiorGemChance": 2,
+				"skillPreservationChance": [ -20 ]
+			}
+		}
+	},
+	"melvorTotH:FrozenMaze": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 8269
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatMonsterRespawnInterval": -100,
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorD:Normal",
+						"value": 1
+					}
+				],
+				"flatPrayerPointCost": -3,
+				"runePreservationChance": [ -20 ],
+				"ammoPreservationChance": [ -20 ]
+			}
+		}
+	},
+	"melvorTotH:WaterMaze": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 5130
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"globalItemDoublingChance": 10,
+				"skillXP": [ -10 ]
+			}
+		}
+	},
+	"melvorTotH:ForestMaze": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 4341
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillXP": [
+					{
+						"skillID": "melvorD:Slayer",
+						"value": 8
+					}
+				],
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:SlayerCoins",
+						"value": 10
+					}
+				],
+				"flatSlayerAreaEffectNegation": 15,
+				"autoEatEfficiency": [ -20 ],
+				"accuracyRating": [ -20 ]
+			}
+		}
+	},
+	"melvorTotH:PipeMaze": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 5111
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"damageDealtToMonstersInArea": [
+					{
+						"categoryID": "melvorD:Dungeons",
+						"value": 5
+					}
+				],
+				"combatLootDoublingChance": [ -20 ]
+			}
+		},
+		"0u:enemyModifiers": {
+			"add": {
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorD:Normal",
+						"value": -5
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:BoulderBalance": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 5478
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"minHitBasedOnMaxHit": 5,
+				"flatAttackInterval": -100,
+				"accuracyRating": [ -20 ]
+			}
+		}
+	},
+	"melvorTotH:CaveWaters": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 9164
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"potionChargePreservationChance": 15,
+				"skillPreservationChance": [
+					{
+						"skillID": "melvorD:Herblore",
+						"value": [ -10 ]
+					}
+				],
+				"masteryXP": [
+					{
+						"realmID": "melvorD:Melvor",
+						"value": [ -6 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:RuneCrawl": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 8552
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatBasePrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Summoning",
+						"value": 6
+					}
+				],
+				"summoningChargePreservationChance": 10,
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Summoning",
+						"value": -5
+					}
+				],
+				"potionChargePreservationChance": [ -20 ]
+			}
+		}
+	},
+	"melvorTotH:MonkeyTrail": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 6204
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"basePrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Farming",
+						"realmID": "melvorD:Melvor",
+						"value": 15
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Cooking",
+						"value": -5
+					}
+				],
+				"foodHealingValue": 10,
+				"skillPreservationChance": [ -10 ],
+				"skillXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": [ -6 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:ForestJog": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 6628
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"agilityObstacleCost": [
+					{
+						"realmID": "melvorD:Melvor",
+						"value": -5
+					}
+				],
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"skillID": "melvorD:Agility",
+						"value": 25
+					}
+				],
+				"masteryXP": [
+					{
+						"realmID": "melvorD:Melvor",
+						"value": [ -6 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:RopeTrap": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 9080
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"damageDealtToBosses": 8,
+				"masteryXP": [
+					{
+						"realmID": "melvorD:Melvor",
+						"value": [ -10 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:IceTrap": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 8387
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"realmID": "melvorD:Melvor",
+						"value": 6
+					}
+				],
+				"damageDealtToAllMonsters": [ -10 ],
+				"autoEatEfficiency": [ -20 ]
+			}
+		}
+	},
+	"melvorTotH:BurningTrap": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 8682
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"value": 15
+					}
+				],
+				"globalItemDoublingChance": [ -30 ],
+				"combatLootDoublingChance": [ -30 ]
+			}
+		}
+	},
+	"melvorTotH:CaveTrap": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 7567
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"potionChargePreservationChance": 5,
+				"summoningChargePreservationChance": 5,
+				"flatMaxHitpoints": [ -5 ],
+				"skillPreservationChance": [ -10 ]
+			}
+		}
+	},
+	"melvorTotH:BalanceTrap": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 9844
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"globalItemDoublingChance": 5,
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": 10
+					}
+				],
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"skillID": "melvorD:Agility",
+						"value": [ -30 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:RooftopClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 9274
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"thievingStealth": 75,
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"skillID": "melvorD:Thieving",
+						"value": 50
+					}
+				],
+				"thievingStunInterval": -25,
+				"globalItemDoublingChance": [ -30 ],
+				"combatLootDoublingChance": [ -30 ]
+			}
+		}
+	},
+	"melvorTotH:ForestClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 7123
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Astrology",
+						"value": -10
+					}
+				],
+				"randomProductChance": [
+					{
+						"skillID": "melvorD:Astrology",
+						"itemID": "melvorF:Stardust",
+						"value": 1.5
+					},
+					{
+						"skillID": "melvorD:Astrology",
+						"itemID": "melvorF:Golden_Stardust",
+						"value": 0.5
+					}
+				],
+				"skillXP": [ -6 ]
+			}
+		}
+	},
+	"melvorTotH:FreezingClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 10357
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"evasion": 30,
+				"accuracyRating": 30,
+				"damageDealtToMonstersInArea": [
+					{
+						"categoryID": "melvorD:Dungeons",
+						"value": 15
+					}
+				],
+				"currencyGainFromCombat": [
+					{
+						"currencyID": "melvorD:GP",
+						"value": [ -150 ]
+					}
+				],
+				"combatLootDoublingChance": [ -6 ]
+			}
+		}
+	},
+	"melvorTotH:GapClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 6659
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:SlayerCoins",
+						"value": 10
+					}
+				],
+				"flatSlayerAreaEffectNegation": 15,
+				"damageDealtToMonstersInArea": [
+					{
+						"categoryID": "melvorF:SlayerAreas",
+						"value": 15
+					},
+					{
+						"categoryID": "melvorD:Dungeons",
+						"value": [ -20 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:WaterfallClimb": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 10897
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"realmID": "melvorD:Melvor",
+						"value": 10
+					}
+				],
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"skillID": "melvorD:Agility",
+						"value": 40
+					}
+				],
+				"skillXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": [ -16 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:FreezingRafting": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 11571
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"autoEatThreshold": 3,
+				"autoEatEfficiency": 15,
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Cooking",
+						"value": -10
+					}
+				],
+				"basePrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Farming",
+						"value": [ -20 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:WaterDive": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 13542
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"realmID": "melvorD:Melvor",
+						"value": 8
+					}
+				],
+				"skillXP": [ -8 ]
+			}
+		}
+	},
+	"melvorTotH:WaterfallCrossing": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 11556
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"attackRolls": 1,
+				"flatMaxHitpoints": [ -10 ],
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:SlayerCoins",
+						"value": [ -10 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:MountainTrail": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 10103
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatSkillInterval": [
+					{
+						"skillID": "melvorD:Smithing",
+						"value": -200
+					},
+					{
+						"skillID": "melvorD:Fletching",
+						"value": -200
+					},
+					{
+						"skillID": "melvorD:Crafting",
+						"value": -200
+					}
+				],
+				"additionalPrimaryProductChance": [
+					{
+						"skillID": "melvorD:Smithing",
+						"value": 30
+					},
+					{
+						"skillID": "melvorD:Fletching",
+						"value": 30
+					},
+					{
+						"skillID": "melvorD:Crafting",
+						"value": 30
+					}
+				],
+				"qualitySuperiorGemChance": 3,
+				"skillPreservationChance": [ -20 ]
+			}
+		}
+	},
+	"melvorTotH:LavaTrail": {
+		"removeCurrencyRewards": [ "melvorD:GP" ],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 9899
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillPreservationChance": [
+					{
+						"realmID": "melvorD:Melvor",
+						"value": 15
+					}
+				],
+				"masteryXP": [
+					{
+						"realmID": "melvorD:Melvor",
+						"value": [ -8 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:ElitePillarOfConflict": {
+		"0u:modifiers": {
+			"add": {
+				"hitpointRegeneration": 50,
+				"lifesteal": 10,
+				"flatSlayerAreaEffectNegation": 35,
+				"prayerPointPreservationChance": 25,
+				"flatPrayerPointCost": -3,
+				"currencyGainFromCombat": [
+					{
+						"currencyID": "melvorD:GP",
+						"value": 350
+					}
+				]
+			}
+		}
+	},
+	"melvorTotH:ElitePillarOfEndowment": {
+		"0u:modifiers": {
+			"add": {
+				"potionChargePreservationChance": 20,
+				"summoningChargePreservationChance": 20,
+				"flatBasePrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Summoning",
+						"value": 20
+					}
+				],
+				"bankSpace": 50,
+				"consumablePreservationChance": 20
+			}
+		}
+	},
+	"melvorTotH:ElitePillarOfExpertise": {
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"realmID": "melvorD:Melvor",
+						"value": 8
+					}
+				],
+				"currencyGain": [
+					{
+						"currencyID": "melvorD:GP",
+						"value": 40
+					}
+				],
+				"globalItemDoublingChance": 8,
+				"skillInterval": -3
+			}
+		}
+	},
+	"melvorAoD:RiverCrossing": {
+		"removeCurrencyRewards": ["melvorD:GP"],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 45
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"cartographySurveyInterval": -5,
+				"mapRefinementCost": -5,
+				"skillXP": [
+					{
+						"skillID": "melvorAoD:Cartography",
+						"value": 5
+					}
+				]
+			}
+		}
+	},
+	"melvorAoD:CaveTrail": {
+		"removeCurrencyRewards": ["melvorD:GP"],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 80
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"melvorAoD:mapChargePreservationChance": 5,
+				"skillXP": [
+					{
+						"skillID": "melvorAoD:Archaeology",
+						"value": 6
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorAoD:Archaeology",
+						"value": 6
+					}
+				]
+			}
+		}
+	},
+	"melvorAoD:OceanDrifting": {
+		"removeCurrencyRewards": ["melvorD:GP"],
+		"currencyRewards": [
+			{
+				"id": "melvorD:GP",
+				"quantity": 1560
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"mapRefinementCost": -10,
+				"skillItemDoublingChance": [
+					{
+						"skillID": "melvorAoD:Archaeology",
+						"value": 10
+					},
+					{
+						"skillID": "melvorAoD:Cartography",
+						"value": 10
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorAoD:Cartography",
+						"value": -5
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_1_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 26
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"abyssalSkillXP": [
+					{
+						"skillID": "melvorItA:Harvesting",
+						"value": 5
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorItA:Harvesting",
+						"value": 3
+					}
+				],
+				"flatSkillInterval": [
+					{
+						"skillID": "melvorItA:Harvesting",
+						"value": -200
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_1_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 11
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"abyssalSkillXP": [
+					{
+						"skillID": "melvorItA:Corruption",
+						"value": 6
+					}
+				],
+				"minHitBasedOnMaxHit": 3
+			}
+		}
+	},
+	"melvorItA:Tier_1_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 27
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatHiddenSkillLevel": [
+					{
+						"skillID": "melvorItA:Corruption",
+						"value": 3
+					}
+				],
+				"foodHealingValue": 5,
+				"additionalPrimaryProductChance": [
+					{
+						"skillID": "melvorD:Cooking",
+						"value": 10
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_2_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 73
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"maxHitAgainstDamageType": [
+					{
+						"damageTypeID": "melvorItA:Abyssal",
+						"value": 8
+					}
+				],
+				"accuracyRatingAgainstDamageType": [
+					{
+						"damageTypeID": "melvorItA:Abyssal",
+						"value": 10
+					}
+				],
+				"doubleItemsChanceAgainstDamageType": [
+					{
+						"damageTypeID": "melvorItA:Abyssal",
+						"value": 3
+					}
+				],
+				"skillPreservationChance": [ -10 ]
+			}
+		},
+		"0u:enemyModifiers": {
+			"add": {
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorItA:Abyssal",
+						"value": -2
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_2_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 63
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"abyssalSkillXP": 4,
+				"additionalPrimaryProductChance": [
+					{
+						"skillID": "melvorD:Woodcutting",
+						"value": 5
+					},
+					{
+						"skillID": "melvorD:Mining",
+						"value": 5
+					}
+				],
+				"maxHit": [ -10 ]
+			}
+		}
+	},
+	"melvorItA:Tier_2_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 56
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"thievingStealth": [
+					{
+						"value": 50,
+						"realmID": "melvorItA:Abyssal"
+					}
+				],
+				"currencyGain": [
+					{
+						"currencyID": "melvorItA:AbyssalPieces",
+						"value": 10
+					}
+				],
+				"ignoreThievingDamageChance": 5,
+				"masteryXP": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": [ -10 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_3_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 149
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorItA:Abyssal",
+						"value": 1
+					}
+				],
+				"autoEatEfficiency": 5,
+				"skillInterval": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"skillID": "melvorD:Cooking",
+						"value": -3
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_3_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 117
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatAdditionalPrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Summoning",
+						"realmID": "melvorItA:Abyssal",
+						"value": 10
+					}
+				],
+				"flatSummoningShardCost": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": -1
+					}
+				],
+				"flatSkillInterval": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"skillID": "melvorD:Summoning",
+						"value": -200
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_3_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 194
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"ammoPreservationChance": 5,
+				"runePreservationChance": 5,
+				"flatAdditionalPrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Fletching",
+						"categoryID": "melvorItA:AbyssalArrows",
+						"value": 3
+					}
+				],
+				"flatBasePrimaryProductQuantityChance": [
+					{
+						"skillID": "melvorD:Runecrafting",
+						"categoryID": "melvorItA:AbyssalRunes",
+						"value": 3
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_4_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 347
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"abyssalSkillXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": 10
+					},
+					{
+						"value": [ -6 ]
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": -3
+					}
+				],
+				"currencyGain": [
+					{
+						"currencyID": "melvorItA:AbyssalPieces",
+						"value": 5
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_4_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 385
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"abyssalSkillXP": 3,
+				"abyssalGemChance": 0.5,
+				"randomProductChance": [
+					{
+						"skillID": "melvorD:Woodcutting",
+						"itemID": "melvorItA:Shadow_Drake_Nest",
+						"value": 0.05
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_4_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 400
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatAbyssalSlayerAreaEffectNegation": 10,
+				"currencyGain": [
+					{
+						"currencyID": "melvorItA:AbyssalSlayerCoins",
+						"value": 10
+					}
+				],
+				"damageDealtToDamageTypeSlayerTasks": [
+					{
+						"damageTypeID": "melvorItA:Abyssal",
+						"value": 5
+					}
+				],
+				"damageDealtToMonstersInArea": [
+					{
+						"categoryID": "melvorItA:AbyssalSlayerAreas",
+						"value": 5
+					}
+				],
+				"skillPreservationChance": [ -10 ]
+			}
+		}
+	},
+	"melvorItA:Tier_5_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 1943
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatAdditionalPrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Crafting",
+						"categoryID": "melvorItA:AbyssalConsumables",
+						"value": 5
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Crafting",
+						"value": -3
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Crafting",
+						"realmID": "melvorItA:Abyssal",
+						"value": 5
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_5_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 941
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"additional8PrimaryProductChance": [
+					{
+						"skillID": "melvorD:Runecrafting",
+						"categoryID": "melvorItA:AbyssalComboRunes",
+						"value": 25
+					}
+				],
+				"flatBasePrimaryProductQuantityChance": [
+					{
+						"skillID": "melvorD:Runecrafting",
+						"categoryID": "melvorItA:AbyssalRunes",
+						"value": 4
+					}
+				],
+				"runePreservationChance": 5
+			}
+		}
+	},
+	"melvorItA:Tier_5_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 1178
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"soulPointPreservationChance": 10,
+				"doubleSoulDropChance": 10,
+				"flatSoulPointCost": -1
+			}
+		}
+	},
+	"melvorItA:Tier_6_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 3933
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"abyssalSkillXP": [
+					{
+						"skillID": "melvorItA:Harvesting",
+						"value": 8
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorItA:Harvesting",
+						"value": -4
+					}
+				],
+				"flatAdditionalPrimaryProductQuantity": [
+					{
+						"skillID": "melvorItA:Harvesting",
+						"value": 2
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_6_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 1777
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"abyssalSkillXP": [
+					{
+						"skillID": "melvorD:Astrology",
+						"value": 4
+					}
+				],
+				"starFallChance": 0.025,
+				"flatBaseRandomProductQuantity": [
+					{
+						"skillID": "melvorD:Astrology",
+						"itemID": "melvorItA:Abyssal_Stardust",
+						"value": 1
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_6_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 1354
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"accuracyRating": 20,
+				"minHitBasedOnMaxHit": 10,
+				"critChance": 5,
+				"critMultiplier": 25
+			}
+		}
+	},
+	"melvorItA:Tier_7_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 8566
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"potionChargePreservationChance": 10,
+				"additionalPrimaryProductChance": [
+					{
+						"skillID": "melvorD:Herblore",
+						"value": 10
+					}
+				],
+				"basePrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Farming",
+						"realmID": "melvorItA:Abyssal",
+						"value": 10
+					}
+				],
+				"abyssalSkillXP": [
+					{
+						"skillID": "melvorD:Summoning",
+						"value": -12
+					}
+				],
+				"summoningChargePreservationChance": [ -12 ]
+			}
+		}
+	},
+	"melvorItA:Tier_7_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 6156
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"thievingStealth": [
+					{
+						"value": 80,
+						"realmID": "melvorItA:Abyssal"
+					}
+				],
+				"currencyGain": [
+					{
+						"currencyID": "melvorItA:AbyssalPieces",
+						"value": 5
+					}
+				],
+				"thievingStunAvoidanceChance": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": 15
+					}
+				],
+				"maxHit": [ -12 ]
+			}
+		}
+	},
+	"melvorItA:Tier_7_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 5757
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"autoEatEfficiency": 5,
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Cooking",
+						"value": -3
+					}
+				],
+				"additionalPrimaryProductChance": [
+					{
+						"skillID": "melvorD:Cooking",
+						"value": 10
+					}
+				],
+				"masteryXP": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": [ -12 ]
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_8_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 8499
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorItA:Abyssal",
+						"value": 3
+					}
+				],
+				"lifesteal": 5,
+				"evasion": 30,
+				"autoEatEfficiency": [ -20 ]
+			}
+		}
+	},
+	"melvorItA:Tier_8_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 9881
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatAdditionalPrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Smithing",
+						"value": 1
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Smithing",
+						"value": -3
+					},
+					{
+						"skillID": "melvorD:Firemaking",
+						"value": -3
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Smithing",
+						"realmID": "melvorItA:Abyssal",
+						"value": 5
+					},
+					{
+						"skillID": "melvorD:Firemaking",
+						"realmID": "melvorItA:Abyssal",
+						"value": 5
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_8_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 10628
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillCostReduction": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": 5
+					}
+				],
+				"globalItemDoublingChance": 3
+			}
+		}
+	},
+	"melvorItA:Tier_9_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 17862
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatAdditionalPrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Summoning",
+						"realmID": "melvorItA:Abyssal",
+						"value": 10
+					}
+				],
+				"flatSummoningShardCost": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": -1
+					}
+				],
+				"flatSkillInterval": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"skillID": "melvorD:Summoning",
+						"value": -300
+					}
+				],
+				"summoningAttackInterval": -5
+			}
+		}
+	},
+	"melvorItA:Tier_9_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 26694
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"abyssalSkillXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": 8
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorD:Agility",
+						"realmID": "melvorItA:Abyssal",
+						"value": 4
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Agility",
+						"value": -3
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_9_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 11741
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"additionalPrimaryProductChance": [
+					{
+						"skillID": "melvorD:Woodcutting",
+						"value": 10
+					},
+					{
+						"skillID": "melvorD:Mining",
+						"value": 10
+					},
+					{
+						"skillID": "melvorD:Fishing",
+						"value": 10
+					}
+				],
+				"abyssalSkillXP": 6,
+				"abyssalGemChance": 0.5,
+				"randomProductChance": [
+					{
+						"skillID": "melvorD:Woodcutting",
+						"itemID": "melvorItA:Shadow_Drake_Nest",
+						"value": 0.05
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_10_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 26665
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"currencyGain": [
+					{
+						"currencyID": "melvorItA:AbyssalSlayerCoins",
+						"value": 10
+					}
+				],
+				"damageDealtToMonstersInArea": [
+					{
+						"categoryID": "melvorItA:AbyssalSlayerAreas",
+						"value": 10
+					}
+				],
+				"potionChargePreservationChance": [ -16 ],
+				"skillCostReduction": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": -16
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_10_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 13841
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatBasePrimaryProductQuantityChance": [
+					{
+						"skillID": "melvorD:Runecrafting",
+						"categoryID": "melvorItA:AbyssalRunes",
+						"value": 5
+					}
+				],
+				"flatAdditionalPrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Crafting",
+						"categoryID": "melvorItA:AbyssalConsumables",
+						"value": 5
+					},
+					{
+						"skillID": "melvorD:Fletching",
+						"categoryID": "melvorItA:AbyssalArrows",
+						"value": 5
+					},
+					{
+						"skillID": "melvorD:Fletching",
+						"categoryID": "melvorItA:AbyssalBolts",
+						"value": 1
+					}
+				],
+				"abyssalSkillXP": [ -16 ]
+			}
+		}
+	},
+	"melvorItA:Tier_10_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 8465
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"masteryXP": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": 4
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Firemaking",
+						"value": -5
+					},
+					{
+						"skillID": "melvorD:Herblore",
+						"value": -5
+					}
+				],
+				"accuracyRating": [ -16 ],
+				"evasion": [ -16 ]
+			}
+		}
+	},
+	"melvorItA:Tier_11_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 29651
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatBasePrimaryProductQuantity": [
+					{
+						"skillID": "melvorItA:Harvesting",
+						"value": 2
+					}
+				],
+				"skillInterval": [
+					{
+						"skillID": "melvorItA:Harvesting",
+						"value": -6
+					}
+				],
+				"masteryXP": [
+					{
+						"skillID": "melvorItA:Harvesting",
+						"value": 5
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_11_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 17051
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorItA:Abyssal",
+						"value": 5
+					}
+				],
+				"hPRegenBasedOnMaxHP": 1,
+				"autoEatEfficiency": 5
+			}
+		}
+	},
+	"melvorItA:Tier_11_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 15350
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillCostReduction": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": 5
+					}
+				],
+				"globalItemDoublingChance": 3
+			}
+		}
+	},
+	"melvorItA:Tier_12_1": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 43500
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"damageDealtToBosses": 10,
+				"minHitBasedOnMaxHit": 5
+			}
+		},
+		"0u:enemyModifiers": {
+			"add": {
+				"flatResistance": [
+					{
+						"damageTypeID": "melvorItA:Abyssal",
+						"value": -3
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_12_2": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 61890
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"flatAdditionalPrimaryProductQuantity": 1,
+				"skillPreservationCap": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": 2
+					}
+				],
+				"masteryXP": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": 4
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:Tier_12_3": {
+		"removeCurrencyRewards": ["melvorItA:AbyssalPieces"],
+		"currencyRewards": [
+			{
+				"id": "melvorItA:AbyssalPieces",
+				"quantity": 73040
+			}
+		],
+		"0u:modifiers": {
+			"add": {
+				"skillInterval": [
+					{
+						"skillID": "melvorD:Thieving",
+						"realmID": "melvorItA:Abyssal",
+						"value": -3
+					},
+					{
+						"skillID": "melvorD:Summoning",
+						"realmID": "melvorItA:Abyssal",
+						"value": -3
+					},
+					{
+						"skillID": "melvorD:Crafting",
+						"realmID": "melvorItA:Abyssal",
+						"value": -3
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:WrathObelisk": {
+		"0u:modifiers": {
+			"add": {
+				"flatAbyssalSlayerAreaEffectNegation": 30,
+				"currencyGain": [
+					{
+						"currencyID": "melvorItA:AbyssalSlayerCoins",
+						"value": 15
+					}
+				],
+				"accuracyRating": 30,
+				"evasion": 30,
+				"effectIgnoreChance": [
+					{
+						"effectGroupID": "melvorD:LacerationDOT",
+						"value": 20
+					},
+					{
+						"effectGroupID": "melvorItA:Blight",
+						"value": 20
+					},
+					{
+						"effectGroupID": "melvorD:Fear",
+						"value": 20
+					},
+					{
+						"effectGroupID": "melvorItA:Silence",
+						"value": 20
+					},
+					{
+						"effectGroupID": "melvorItA:EldritchCurse",
+						"value": 20
+					},
+					{
+						"effectGroupID": "melvorItA:Voidburst",
+						"value": 20
+					}
+				]
+			}
+		},
+		"0rc": [ "melvorItA:WrathObelisk" ],
+		"0uc:stacks": [
+			"BGSCheat:WrathObelisk", 7, [ 100 ], [ 1, 1, 1 ], 0, "CUSTOM_APPLICATOR_WrathObelisk" ]
+	},
+	"melvorItA:GreedObelisk": {
+		"0u:modifiers": {
+			"add": {
+				"skillCostReduction": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": 10
+					}
+				],
+				"flatAdditionalPrimaryProductQuantity": [
+					{
+						"skillID": "melvorD:Crafting",
+						"categoryID": "melvorItA:AbyssalConsumables",
+						"value": 10
+					},
+					{
+						"skillID": "melvorD:Runecrafting",
+						"categoryID": "melvorItA:AbyssalRunes",
+						"value": 3
+					},
+					{
+						"skillID": "melvorD:Fletching",
+						"categoryID": "melvorItA:AbyssalArrows",
+						"value": 5
+					},
+					{
+						"skillID": "melvorD:Fletching",
+						"categoryID": "melvorItA:AbyssalBolts",
+						"value": 1
+					}
+				],
+				"masteryXP": [
+					{
+						"realmID": "melvorItA:Abyssal",
+						"value": 4
+					}
+				]
+			}
+		}
+	},
+	"melvorItA:SlothObelisk": {
+		"0u:modifiers": {
+			"add": {
+				"currencyGain": [
+					{
+						"currencyID": "melvorItA:AbyssalPieces",
+						"value": 15
+					}
+				],
+				"bankSpace": 50,
+				"ammoPreservationChance": 15,
+				"runePreservationChance": 15,
+				"summoningChargePreservationChance": 15,
+				"summoningAttackInterval": -15,
+				"globalItemDoublingChance": 5
+			}
+		}
+	}
+}
