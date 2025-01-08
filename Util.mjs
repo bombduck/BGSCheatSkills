@@ -942,8 +942,70 @@ export class Util {
 		sp.registerSoftDependencies(data, game);
 	}
 
-	static levelUpSpecialAttack(id, data, type, lv, mul, extraMul) {
+	static levelUpSpecialAttack(id, data, modData, type, lv, mul, extraMul) {
 		let v = JSON.parse(JSON.stringify(data));
+
+		//Last chance ot modify subdata
+		if (modData.defaultChance) v.defaultChance = modData.defaultChance;
+		if (modData.attackCount) v.attackCount = modData.attackCount;
+		if (modData.attackInterval) v.attackInterval = modData.attackInterval;
+		if (modData.lifesteal) v.lifesteal = modData.lifesteal;
+		if (modData.damage instanceof Array && v.damage instanceof Array) {			//Should match, since only sub modify
+			for (let m = 0; m < modData.damage.length; ++m) {
+				if (v.damage[m] === undefined)
+					continue;
+				if (modData.damage[m].amplitude) v.damage[m].amplitude = modData.damage[m].amplitude;
+				if (modData.damage[m].minPercent) v.damage[m].minPercent = modData.damage[m].minPercent;
+				if (modData.damage[m].maxPercent) v.damage[m].maxPercent = modData.damage[m].maxPercent;
+			}
+		}
+		if (modData.prehitEffects instanceof Array) {
+			modData.prehitEffects.forEach(x => {
+				let effect = v.prehitEffects.find(y => y.effectID == x.effectID);
+				if (!effect) {
+					v.prehitEffects.push(x);
+					return;
+				}
+				if (x.chance) effect.chance = x.chance;
+				if (!(x.initialParams instanceof Array))
+					return;
+				if (effect.initialParams == null)
+					effect.initialParams = [];
+				x.initialParams.forEach(y => {
+					let param = effect.initialParams.find(z => z.name == y.name);
+					if (!param) {
+						effect.initialParams.push(y);
+						return;
+					}
+					param.value = y.value;
+				});
+			});
+		}
+
+		if (modData.onhitEffects instanceof Array) {
+			modData.onhitEffects.forEach(x => {
+				let effect = v.onhitEffects.find(y => y.effectID == x.effectID);
+				if (!effect) {
+					v.onhitEffects.push(x);
+					return;
+				}
+				if (x.chance) effect.chance = x.chance;
+				if (!(x.initialParams instanceof Array))
+					return;
+				if (effect.initialParams == null)
+					effect.initialParams = [];
+				x.initialParams.forEach(y => {
+					let param = effect.initialParams.find(z => z.name == y.name);
+					if (!param) {
+						effect.initialParams.push(y);
+						return;
+					}
+					param.value = y.value;
+				});
+			});
+		}
+
+		v = JSON.parse(JSON.stringify(v));
 		v.defaultChance = this.calcValue(data.defaultChance, type, lv, mul, extraMul) ?? 0;
 		v.attackCount = (this.calcValue(data.attackCount, type, lv, mul, extraMul) ?? 0) >> 0;
 		v.attackInterval = (this.calcValue(data.attackInterval, type, lv, mul, extraMul) ?? 0) >> 0;
@@ -967,13 +1029,14 @@ export class Util {
 		});
 		v?.onhitEffects?.forEach(x => {
 			if (x?.effectID?.indexOf("BGSCheat:") == 0) {
-				x.bypassBarrier = true;
-				x.applyEffectWhenMerged = true;
+				if (x.bypassBarrier === undefined)
+					x.bypassBarrier = true;
+				if (x.applyEffectWhenMerged === undefined)
+					x.applyEffectWhenMerged = true;
 			}
 			if (x.chance) x.chance = this.calcValue(x.chance, type, lv, mul, extraMul);
 			x?.initialParams?.forEach(y => { if (y.value) y.value = this.calcValue(y.value, type, lv, mul, extraMul); });
 		});
-		console.log("Sp Data: " + JSON.stringify(v));
 		let sp = game.specialAttacks.getObjectByID(id);
 		if (sp == null)
 			this.registerSpecialAttack(v, id);
@@ -3112,13 +3175,11 @@ export class EasyTool {
 			}
 			case "uniqueAttack": {
 				if (attackData) {
-					const modData = attackData.find(x => x.id == _v.id && x.class == _v.class);
-					if (modData) {
+					const atk = attackData.find(x => x.id == _v.id && x.class == _v.class);
+					if (atk) {
 						Util.removeAllSpecialAttackData(statObject.specialAttacks, data);
-						Util.levelUpSpecialAttack(statObject.localID, modData, type, lv, mul, extraMul);
-						let v = {
-							"specialAttacks": { "add": [`BGSCheat:${statObject.localID}`] },"overrideSpecialChances":[0]
-						};
+						Util.levelUpSpecialAttack(statObject.localID, atk, _v, type, lv, mul, extraMul);
+						let v = { "specialAttacks": { "add": [`BGSCheat:${statObject.localID}`] },"overrideSpecialChances":[0] };
 						Util.addSpecialAttacksData(statObject, data, v, type, lv, mul, extraMul);
 					}
 				}

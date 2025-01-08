@@ -630,7 +630,7 @@
 	"melvorItA:Whisperwillow_Longbow": {
 		"base": [ "Unholy5", "TotHA" ],
 		"u:ress": [ 0, [ -15, 0, 15 ] ],
-		"5u:uniqueAttack": {"id": "TerrorBeam"}
+		"5u:uniqueAttack": { "id": "TerrorBeam" }
 	},
 	"melvorF:Bronze_Crossbow": {
 		"base": "tier1",
