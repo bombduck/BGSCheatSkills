@@ -269,6 +269,7 @@ export class Util {
 		if (isNumber(extraMul) && extraMul != 0) v = v * extraMul;
 
 		if (isInteger) v = (v >> 0);
+		return v;
 	}
 
 	static calcObjectValue(value, type, lv, mul, extraMul) {
