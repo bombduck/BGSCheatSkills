@@ -1,5 +1,488 @@
 [
   {
+    "id": "CommandOfTheKing",
+    "defaultChance": { "lv": 10 },
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "maxRoll": "MaxHit",
+        "maxPercent": 135,
+        "roll": false
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:Laceration",
+        "initialParams": [
+          {
+            "name": "maxStacks",
+            "value": 25
+          },
+          {
+            "name": "percentPerStack",
+            "value": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Blight",
+        "initialParams": [
+          {
+            "name": "maxStacks",
+            "value": 10
+          },
+          {
+            "name": "resetStacks",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Fear",
+        "initialParams": [
+          {
+            "name": "turns",
+            "value": 3
+          },
+          {
+            "name": "initialStacks",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Silence",
+        "initialParams": [
+          {
+            "name": "turns",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Wither",
+        "initialParams": [
+          {
+            "name": "maxStacks",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Voidburst",
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": 100
+          },
+          {
+            "name": "stacks",
+            "value": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Stun",
+        "initialParams": [
+          {
+            "name": "turns",
+            "value": 3
+          }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": { "c": 1 },
+    "attackInterval": { "c": 50 },
+    "lifesteal": 0,
+    "name": "Command of the King",
+    "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's max hit as damage. On a hit, inflicts a stack of Laceration, inflicts Blight, applies Fear for ${onHitEffect2turns} turn, inflicts Silence, inflicts Wither, inflicts ${onHitEffect5stacks} stack of Voidburst and applies stun for ${onHitEffect6turns} turn.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage. On a hit, <hitEffect>."
+  },
+  {
+    "id": "TendrilSlam",
+    "defaultChance": {"lv": 10},
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "roll": false,
+        "maxRoll": "MaxHit",
+        "maxPercent": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:Fear",
+        "chance": 15
+      },
+      {
+        "effectID": "BGSCheat:Stun",
+        "chance": 15
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": 3,
+    "attackInterval": {"c": 50},
+    "lifesteal": 35,
+    "name": "Tendril Slam",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. Heals you for ${lifesteal}% of the damage dealt. On a hit, has a ${onHitEffect0chance}% chance to apply Fear for ${onHitEffect0turns} turn and has a ${onHitEffect1chance}% chance to apply stun for ${onHitEffect1turns} turn.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage> damage <count> times over <duration>. Heals <attacker> for <lifesteal> of the damage dealt. On a hit, <hitEffect>."
+  },
+  {
+    "id": "Madness",
+    "defaultChance": { "lv": 10 },
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "roll": false,
+        "maxRoll": "MaxHit",
+        "maxPercent": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:Madness2",
+        "initialParams": [
+          {
+            "name": "turns",
+            "value": 5
+          },
+          {
+            "name": "maxStacks",
+            "value": { "c": 1 }
+          },
+          {
+            "name": "stacksToAdd",
+            "value": { "c": 1 }
+          },
+          {
+            "name": "initialStacks",
+            "value": { "c": 1 }
+          }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": 3,
+    "attackInterval": { "c":50 },
+    "lifesteal": 0,
+    "name": "Madness",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, gives the enemy -${onHitEffect1modValue0}% Global Accuracy for ${onHitEffect1turns} of the enemy's turns.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage> damage <count> times over <duration>. On a hit, <hitEffect>."
+  },
+  {
+    "id": "ConsumingGrasp",
+    "defaultChance": {"lv": 10},
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "roll": false,
+        "maxRoll": "MaxHit",
+        "maxPercent": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:Fear",
+        "chance": 20
+      },
+      {
+        "effectID": "BGSCheat:Slow",
+        "chance": 20,
+        "initialParams": [
+          {
+            "name": "magnitude",
+            "value": 20
+          },
+          {
+            "name": "turns",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:ConsumingGrasp"
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": { "c": -2, "mul": 5,"int": true },
+    "attackInterval": { "c":550, "mul": -100,"min": 50,"int": true },
+    "lifesteal": 40,
+    "name": "Consuming Grasp",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. Heals you for ${lifesteal}% of the damage dealt. On a hit, has a ${onHitEffect0chance}% chance to apply Fear for ${onHitEffect0turns} turn;has a ${onHitEffect1chance}% chance to inflict a Slow that gives the enemy +${onHitEffect1magnitude}% Attack Interval for ${onHitEffect1turns} of the enemy's turns and gives the enemy -${onHitEffect2modValue0}% Global Accuracy and -${onHitEffect2modValue1}% Global Evasion for ${onHitEffect2turns} of the enemy's turns.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage> damage <count> times over <duration>. Heals <attacker> for <lifesteal> of the damage dealt. On a hit, <hitEffect>."
+  },
+  {
+    "id": "Pandemonium",
+    "defaultChance": { "lv": 10 },
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "roll": false,
+        "maxRoll": "MaxHit",
+        "maxPercent": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:Fear",
+        "chance": 25,
+        "initialParams": [
+          { "name": "turns", "value": 2 }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": { "mul": 4, "int": true },
+    "attackInterval": { "c": 600, "mul": -100, "min": 50, "int": true },
+    "lifesteal": 0,
+    "name": "Pandemonium",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply Fear for ${onHitEffect0turns} turns.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage> damage <count> times over <duration>. On a hit, <hitEffect>."
+  },
+  {
+    "id": "VoidfireVolley",
+    "defaultChance": {"lv": 10},
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "roll": false,
+        "maxRoll": "MaxHit",
+        "maxPercent": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:Voidburst",
+        "chance": 30
+      },
+      {
+        "effectID": "BGSCheat:VoidfireVolley"
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": { "mul": 3, "int": true },
+    "attackInterval": { "c": 400,"mul": -50, "min": 50, "int": true },
+    "lifesteal": 0,
+    "name": "Voidfire Volley",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict ${onHitEffect0stacks} stack of Voidburst and gives the enemy -${onHitEffect1modValue0-0}% ${onHitEffect1modResistanceName0-0} for ${onHitEffect1turns} of your turns. Voidburst stacks up to ${onHitEffect0maxStacks} times. Upon reaching maximum stacks, they take damage equal to ${onHitEffect0percent}% of your base max hit.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage> damage <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
+  },
+  {
+    "id": "BlackHole",
+    "defaultChance": {"lv": 10},
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "roll": false,
+        "maxRoll": "MaxHit",
+        "maxPercent": { "f": 100 }
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:Voidburst",
+        "chance": { "mul": 15, "max": 100, "int": true },
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": { "f": 100 }
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Slow",
+        "initialParams": [
+          {
+            "name": "magnitude",
+            "value": 30
+          },
+          {
+            "name": "turns",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:BlackHole",
+        "initialParams": [
+          {
+            "name": "turns",
+            "value": 5
+          },
+          {
+            "name": "maxStacks",
+            "value": { "c": 1 }
+          },
+          {
+            "name": "stacksToAdd",
+            "value": { "c": 1 }
+          },
+          {
+            "name": "initialStacks",
+            "value": { "c": 1 }
+          }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": {"c": -4,"mul": 8, "int": true},
+    "attackInterval": { "c": 200, "mul": -50, "min": 50 },
+    "lifesteal": 0,
+    "name": "Black Hole",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict ${onHitEffect0stacks} stack of Voidburst, inflicts a Slow that gives the enemy +${onHitEffect1magnitude}% Attack Interval for ${onHitEffect1turns} of the enemy's turns and gives the enemy -${onHitEffect2modValue0-0}% ${onHitEffect2modResistanceName0-0} for ${onHitEffect2turns} of your turns.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage> damage <count> times over <duration>. On a hit, <hitEffect>."
+  },
+  {
+    "id": "NullSphere",
+    "defaultChance": {"lv": 10},
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "roll": false,
+        "maxRoll": "MaxHit",
+        "maxPercent": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:Voidburst",
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Nulled",
+        "chance": { "mul": 30, "max": 100 },
+        "initialParams": [
+          {
+            "name": "turns",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:NullSphere",
+        "initialParams": [
+          {
+            "name": "turns",
+            "value": 5
+          },
+          {
+            "name": "maxStacks",
+            "value": { "c": 1 }
+          },
+          {
+            "name": "stacksToAdd",
+            "value": { "c": 1 }
+          },
+          {
+            "name": "initialStacks",
+            "value": { "c": 1 }
+          }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": { "c": 1 },
+    "attackInterval": 50,
+    "lifesteal": 0,
+    "name": "Null Sphere",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hit. On a hit, inflicts ${onHitEffect0stacks} stack of Voidburst, has a ${onHitEffect1chance}% chance to make the enemy unable to apply buffs or modifier effects to themselves for ${onHitEffect1turns} of their turns and gives the enemy -${onHitEffect2modValue0-0}% ${onHitEffect2modResistanceName0-0} for ${onHitEffect2turns} of your turns.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage> damage. On a hit, <hitEffect>."
+  },
+  {
+    "id": "InfiniteVoid",
+    "defaultChance": {"lv": 10},
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "roll": false,
+        "maxRoll": "MaxHit",
+        "maxPercent": { "c": -50, "mul": 100 }
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:InfiniteVoid",
+        "initialParams": [
+          {
+            "name": "maxStacks",
+            "value": { "c": 1 }
+          },
+          {
+            "name": "stacksToAdd",
+            "value": { "c": 1 }
+          },
+          {
+            "name": "initialStacks",
+            "value": { "c": 1 }
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Voidburst",
+        "chance": { "mul": 25, "max": 100 },
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": 100
+          },
+          {
+            "name": "stacksToAdd",
+            "value": {"mul": 1, "int": true}
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:Stun",
+        "chance": {"lv": 10,"max": 100},
+        "initialParams": [
+          {
+            "name": "turns",
+            "value": 2
+          }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": {"c": -3, "mul": 6},
+    "attackInterval": [ 500, 0, -100 ],
+    "lifesteal": 0,
+    "name": "Infinite Void",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, gives the enemy -${onHitEffect0modValue0-0}% ${onHitEffect0modResistanceName0-0} until the end of the fight, has a ${onHitEffect1chance}% chance to inflict ${onHitEffect1stacks} stack of Voidburst and has a ${onHitEffect2chance}% chance to apply stun for ${onHitEffect2turns} turns.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage> damage <count> times over <duration>. On a hit, <hitEffect>."
+  },
+  {
     "id": "TerrorBeam",
     "defaultChance": {"lv": 10},
     "damage": [
@@ -8,113 +491,113 @@
         "character": "Attacker",
         "roll": false,
         "maxRoll": "MaxHit",
-        "maxPercent": [-50,0,100]
+        "maxPercent": { "c": -40, "mul": 90 }
       }
     ],
     "prehitEffects": [],
     "onhitEffects": [
       {
         "effectID": "BGSCheat:Burn",
-        "chance": [ 0, 5 ],
+        "chance": { "lv": 5 },
         "initialParams": [
           {
             "name": "percent",
-            "value": [ 0, 0, 100 ]
+            "value": { "c": 100 }
           }
         ]
       },
       {
         "effectID": "BGSCheat:DeadlyPoison",
-        "chance": [ 0, 5 ],
+        "chance": { "lv": 5 },
         "initialParams": [
           {
             "name": "percent",
-            "value": [ 0, 0, 100 ]
+            "value": { "c": 100 }
           }
         ]
       },
       {
         "effectID": "BGSCheat:Ablaze",
-        "chance": [ 0, 5 ],
+        "chance": { "lv": 5 },
         "initialParams": [
           {
             "name": "percent",
-            "value": [ 0, 0, 100 ]
+            "value": { "c": 100 }
           }
         ]
       },
       {
         "effectID": "BGSCheat:Toxin",
-        "chance": [ 0, 5 ],
+        "chance": { "lv": 5 },
         "initialParams": [
           {
             "name": "percent",
-            "value": [ 0, 0, 100 ]
+            "value": { "c": 100 }
           }
         ]
       },
       {
         "effectID": "BGSCheat:Fear",
-        "chance": [ 0, 5 ],
+        "chance": { "lv": 5 },
         "initialParams": [
           {
             "name": "initialStacks",
-            "value": [ 0, 0, 1000 ]
+            "value": { "c": 1 }
           }
         ]
       },
       {
         "effectID": "BGSCheat:Bleed400",
-        "chance": [ 0, 5 ],
+        "chance": { "lv": 5 },
         "initialParams": [
           {
             "name": "percent",
-            "value": [ 0, 0, 100 ]
+            "value": { "c": 100 }
           }
         ]
       },
       {
         "effectID": "BGSCheat:Wither",
-        "chance": [ 0, 5 ],
+        "chance": { "lv": 5 },
         "initialParams": [
           {
             "name": "maxStacks",
-            "value": [ 0, 0, 10, 0, 1000, 1 ]
+            "value": {"c": 15}
           },
           {
             "name": "stacksToAdd",
-            "value": [ 0, 0, 1, 0, 1000, 1 ]
+            "value": {"c": 1}
           }
         ]
       },
       {
         "effectID": "BGSCheat:Blight",
-        "chance": [ 0, 5 ],
+        "chance": { "lv": 5 },
         "initialParams": [
           {
             "name": "maxStacks",
-            "value": [ 0, 0, 10, 0, 1000, 1 ]
+            "value": {"c": 10}
           },
           {
             "name": "resetStacks",
-            "value": [ 0, 0, 5, 0, 1000, 1 ]
+            "value": {"c": 5}
           }
         ]
       },
       {
         "effectID": "BGSCheat:Voidburst",
-        "chance": [ 0, 5 ],
+        "chance": { "lv": 5 },
         "initialParams": [
           {
             "name": "percent",
-            "value": [ 0, 0, 100 ]
+            "value": { "c": 100 }
           }
         ]
       }
     ],
     "cantMiss": false,
-    "attackCount": [-25, 0, 50],
-    "attackInterval": [200, 0, -50, 50],
+    "attackCount": { "c":-6, "mul": 12 },
+    "attackInterval": {"c": 250, "mul": -50, "min": 50,"int": true},
     "lifesteal": 0,
     "name": "Terror Beam",
     "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of the attacker's max hit ${hitCount} times over ${duration}s. Each hit, there is a 5% chance to apply Burn, Poison, Ablaze, Toxin, Fear, Bleed, Wither, Blight or Voidburst.",

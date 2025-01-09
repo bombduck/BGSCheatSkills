@@ -39,9 +39,8 @@
 	},
 	"Unholy5": {
 		"base": "Base",
-		"1allow": [0,0,2],
-		"1u:atkeffect": [4],
-		"1uc:cbeasy": [ "20unholy", 3 ]
+		"5u:corrupt": [10,5],
+		"10u:corrupt": [5,10]
 	},
 	"TotHD": {
 		"5slayer": [ 60 ],
@@ -69,14 +68,20 @@
 	},
 	"tier1": {
 		"base": "Base",
-		"4u:sp-currg2": [ 0, 0, 600 ],
-		"6u:sp-currs2": [ 0, 0, 300 ],
-		"10u:sp-currg": [0, 100],
-		"10u:sp-currs": [0, 100]
+		"1v:modifiers": {
+			"add": {
+				"bankSpace": 5
+			}
+		},
+		"4u:sp-currg2": [ 0, 0, 100 ],
+		"6u:sp-currs2": [ 0, 0, 50 ],
+		"10u:sp-currg": [0, 50],
+		"10u:sp-currs": [0, 50]
 	},
 	"tier2": {
 		"base": "Base",
-		"5u:skillextra": [0,0,2]
+		"3l:skillbase": [1,0],
+		"5u:skillextra": [1,0,2]
 	},
 	"tier3": {
 		"base": "Base",
@@ -642,7 +647,12 @@
 	},
 	"melvorD:Gold_Topaz_Ring": {
 		"base": "BaseRing1",
-		"5u:cbeasy": [ "BGSCheat:Stun", 2, 30 ],
+		"1v:modifiers": {
+			"add": {
+				"bankSpace": 10
+			}
+		},
+		"5u:cbeasy": [ "BGSCheat:Stun", 2, 10 ],
 		"5u:sp-currg3": [0,0,100],
 		"5u:sp-currs3": [0,0,50],
 		"10u:sp-currg4": [0,0,20],
@@ -1030,7 +1040,12 @@
 	},
 	"melvorF:Gold_Topaz_Necklace": {
 		"base": "BaseAmulet1",
-		"5uc:cbeasy": ["BGSCheat:Crystallize", 6, 20],
+		"1v:modifiers": {
+			"add": {
+				"bankSpace": 10
+			}
+		},
+		"5uc:cbeasy": ["BGSCheat:Crystallize", 6, 10],
 		"10u:sp-currg3": [50],
 		"10u:sp-currs3": [25]
 	},

@@ -102,8 +102,8 @@ export class ItemLevelManager{
 		if (item instanceof PotionItem)
 			statObject = item.stats;
 		this.getLevelUpData(statObject, modData ,itemID,modBase,lv,mul);
-		if (itemID === "melvorItA:Whisperwillow_Longbow")
-			console.log(JSON.stringify(modData));
+		//if (itemID === "melvorItA:Whisperwillow_Longbow")
+		//	console.log(JSON.stringify(modData));
 		item.applyDataModification(modData, game);
 		delete item._modifiedDescription;
 		delete item._customDescription;

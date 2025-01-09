@@ -39,9 +39,8 @@
 	},
 	"Unholy5": {
 		"base": "Base",
-		"1allow": [0,0,2],
-		"1u:atkeffect": [4],
-		"1uc:cbeasy": [ "20unholy", 3 ]
+		"5u:corrupt": [10,5],
+		"10u:corrupt": [5,10]
 	},
 	"TotHA": {
 		"5allow": [0, 1]
@@ -71,14 +70,20 @@
 	},
 	"tier1": {
 		"base": "Base",
-		"4u:sp-currg2": [ 0, 0, 600 ],
-		"6u:sp-currs2": [ 0, 0, 300 ],
-		"10u:sp-currg": [0, 100],
-		"10u:sp-currs": [0, 100]
+		"1v:modifiers": {
+			"add": {
+				"bankSpace": 5
+			}
+		},
+		"4u:sp-currg2": [ 0, 0, 100 ],
+		"6u:sp-currs2": [ 0, 0, 50 ],
+		"10u:sp-currg": [0, 50],
+		"10u:sp-currs": [0, 50]
 	},
 	"tier2": {
 		"base": "Base",
-		"5u:skillextra": [0,0,2]
+		"3l:skillbase": [1,0],
+		"5u:skillextra": [1,0,2]
 	},
 	"tier3": {
 		"base": "Base",
@@ -167,8 +172,50 @@
 	},
 	"melvorItA:Netherite_Dagger": {
 		"base": [ "Unholy5", "TotHA" ],
-		"5uc:cbeasy": [ "BGSCheat:Blight", 2, 30 ],
-		"10u:spsar": {"BGSCheat:NetherSlumberStrikes": 50}
+		"5u:uniqueAttack": {
+			"id": "CommandOfTheKing",
+			"damage": [
+				{ "maxPercent": 150 }
+			],
+			"onhitEffects": [
+				{
+					"effectID": "BGSCheat:Laceration",
+					"initialParams": [
+						{
+							"name": "percentPerStack",
+							"value": 2
+						},
+						{
+							"name": "stacksToAdd",
+							"value": 2
+						}
+					]
+				},
+				{
+					"effectID": "BGSCheat:Blight",
+					"initialParams": [
+						{
+							"name": "maxStacks",
+							"value": 16
+						},
+						{
+							"name": "resetStacks",
+							"value": 8
+						}
+					]
+				},
+				{
+					"effectID": "BGSCheat:Voidburst",
+					"initialParams": [
+						{
+							"name": "percent",
+							"value": 150
+						}
+					]
+				}
+			]
+		},
+		"10u:buff": [ [ "50acc", "spd" ], 3, 100, {"c": "w","t": 3} ]
 	},
 	"melvorD:Bronze_Sword": {
 		"base": "tier1",
@@ -241,8 +288,14 @@
 	},
 	"melvorItA:Witherite_Sword": {
 		"base": [ "Unholy5", "TotH" ],
-		"5u:spsar": {"melvorItA:WitheringDoubleCut": 30},
-		"10u:spsar": {"BGSCheat:WitheringDoubleCut": 30}
+		"5u:uniqueAttack": {
+			"id": "Pandemonium",
+			"attackCount": { "mul": 5, "int": true },
+			"damage": [
+				{ "maxPercent": 120 }
+			]
+		},
+		"10u:debuff": [ [ "hp" ], 3, 50 ]
 	},
 	"melvorItA:Netherite_Sword": {
 		"base": [ "Unholy5", "TotH" ],
@@ -435,8 +488,30 @@
 	"melvorItA:Abyssium_2H_Sword": {
 		"base": [ "Unholy5", "TotH" ],
 		"u:ress": [0, [-3,0,3]],
-		"5uc:buff": [ [ "spd","res","eva" ], 2, 50 ],
-		"10u:spsar": { "BGSCheat:AbyssalDoubleStrike":25 }
+		"5u:uniqueAttack": {
+			"id": "NullSphere",
+			"damage": [
+				{
+					"maxPercent": 180
+				}
+			],
+			"onhitEffects": [
+				{
+					"effectID": "BGSCheat:Voidburst",
+					"initialParams": [
+						{
+							"name": "stacksToAdd",
+							"value": [ 1 ]
+						},
+						{
+							"name": "stacks",
+							"value": [ 1 ]
+						}
+					]
+				}
+			]
+		},
+		"10uc:buff": [ [ "2spd","2res","2eva" ], 2, 25 ]
 	},
 	"melvorItA:Brumite_2H_Sword": {
 		"base": [ "Unholy5", "TotH" ],
@@ -459,8 +534,11 @@
 	"melvorItA:Netherite_2H_Sword": {
 		"base": [ "Unholy5", "TotH" ],
 		"u:ress": [0, [-15,0,15]],
-		"5u:spsar": { "melvorItA:KingsRage":25,"melvorItA:CommandOfTheKing": 25 },
-		"10u:spsar": { "BGSCheat:KingsRage":25,"BGSCheat:CommandOfTheKing": 25 }
+		"5u:uniqueAttack": {
+			"id": "TerrorBeam",
+			"damage": [ {"maxPercent": [-80,0,180]} ]
+		},
+		"10u:cbeasy": [ [ "5Stun" ], 2, 25 ]
 	},
 	"melvorD:Bronze_Throwing_Knife": {
 		"base": "tier1",
@@ -547,8 +625,25 @@
 	},
 	"melvorItA:Netherite_Throwing_Knife": {
 		"base": [ "Unholy5", "TotHA" ],
-		"5c:spsar": { "melvorItA:SilentSurgePlayer": 100 },
-		"10c:spsar": { "BGSCheat:SilentSurgePlayer": 100 }
+		"5u:uniqueAttack": {
+			"id": "VoidfireVolley",
+			"damage": [
+				{
+					"maxPercent": 110
+				}
+			],
+			"attackCount": 4,
+			"onhitEffects": [
+				{
+					"effectID": "BGSCheat:Voidburst",
+					"initialParams": [
+						{ "name": "stacks", "value": {"mul": 1, "max": 5, "int": true} },
+						{ "name": "stacksToAdd", "value": {"mul": 1, "max": 5, "int": true} }
+					]
+				}
+			]
+		},
+		"10u:cbeasy": ["10Blight", 2, 15]
 	},
 	"melvorD:Bronze_Shield": {
 		"base": [ "tier1", "shield" ],

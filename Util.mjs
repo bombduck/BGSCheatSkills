@@ -272,8 +272,7 @@ export class Util {
 		return v;
 	}
 
-	static calcObjectValue(value, type, lv, mul, extraMul) {
-		let isInteger = (type & 0x1000) != 0;
+	static calcObjectValue(value, lv, mul, extraMul) {
 		let v = 0;
 		if (typeof (value.f) == "string")			//formula first
 			v = this.calcFormulaValue(value.f, lv);
@@ -293,9 +292,7 @@ export class Util {
 			v = value.min;
 		if (isNumber(value.max) && v > value.max)
 			v = value.max;
-		if (value.int === true) v = (v >> 0);
-		else if (value.int === false) { }
-		else if (isInteger == true) v = (v >> 0);
+		if (value.int) v = (v >> 0);
 
 		return v;
 	}
@@ -303,43 +300,62 @@ export class Util {
 	static calcValue(modValue, type, lv, mul, extraMul = 1) {
 		if (modValue === undefined)
 			return undefined;
-		if (isNumber(modValue)) return this.calcNumberValue(modValue, type, lv, mul, extraMul);
+		let _a = modValue;
+		let v = {};
 
-		let value;
-		let maxValue = null;
-		let minValue = null;
-
-		if (typeof (modValue) == "string")
-			return this.calcObjectValue({ "f": modValue }, type, lv, mul, extraMul);
-		else if (!(modValue instanceof Array))
-			return this.calcObjectValue(modValue, type, lv, mul, extraMul);
-		else {
-			let value = {};
-			if (typeof (modValue[0]) == "string") {
-				value.f = modValue[0];
-				if (isNumber(modValue[1]))
-					value.min = modValue[1];
-				if (isNumber(modValue[2]))
-					value.max = modValue[2];
-				if (modValue[3] != 0)
-					value.int = true;
+		if (isNumber(_a)) {
+			if ((type & 0x0FFF) == 1) v.lv = _a;
+			else if ((type & 0x0FFF) == 2) v.mul = _a;
+			else v.c = _a;
+		}
+		else if (typeof (_a) == "string") {
+			v.f = _a;
+		}
+		else if (_a instanceof Array) {
+			if (typeof (_a[0]) == "string") {
+				v.f = _a[0];
+				if (isNumber(_a[1]))
+					v.min = _a[1];
+				if (isNumber(_a[2]))
+					v.max = _a[2];
+				if (_a[3] !== undefined)
+					v.int = _a[3];
 			}
 			else {
-				if (isNumber(modValue[0]))
-					value.c = modValue[0];
-				if (isNumber(modValue[1]))
-					value.lv = modValue[1];
-				if (isNumber(modValue[2]))
-					value.mul = modValue[2];
-				if (isNumber(modValue[3]))
-					value.min = modValue[3];
-				if (isNumber(modValue[4]))
-					value.max = modValue[4];
-				if (modValue[5] != 0)
-					value.int = true;
+				if (isNumber(_a[0]))
+					v.c = _a[0];
+				if (isNumber(_a[1]))
+					v.lv = _a[1];
+				if (isNumber(_a[2]))
+					v.mul = _a[2];
+				if (isNumber(_a[3]))
+					v.min = _a[3];
+				if (isNumber(_a[4]))
+					v.max = _a[4];
+				if (_a[5] !== undefined)
+					v.int = _a[5];
 			}
-			return this.calcObjectValue(value, type, lv, mul, extraMul);
 		}
+		else {
+			if (isNumber(_a.f)) {
+				if ((type & 0x0FFF) == 1) v.lv = _a.f;
+				else if ((type & 0x0FFF) == 2) v.mul = _a.f;
+				else v.c = _a.f;
+			}
+			else if (typeof (_a.f) == "string")
+				v.f = _a.f;
+			else {
+				if (_a.c !== undefined) v.c = _a.c;
+				if (_a.lv !== undefined) v.lv = _a.lv;
+				if (_a.mul !== undefined) v.mul = _a.mul;
+			}
+			if (_a.min !== undefined) v.min = _a.min;
+			if (_a.max !== undefined) v.max = _a.max;
+			if (_a.int !== undefined) v.int = _a.int;
+		}
+		if (v.int === undefined && (type & 0x1000) != 0)
+			v.int = true;
+		return this.calcObjectValue(v, lv, mul, extraMul);
 	}
 
 	static equalModifierScopeData(l,r){
@@ -1006,14 +1022,14 @@ export class Util {
 		}
 
 		v = JSON.parse(JSON.stringify(v));
-		v.defaultChance = this.calcValue(data.defaultChance, type, lv, mul, extraMul) ?? 0;
-		v.attackCount = (this.calcValue(data.attackCount, type, lv, mul, extraMul) ?? 0) >> 0;
-		v.attackInterval = (this.calcValue(data.attackInterval, type, lv, mul, extraMul) ?? 0) >> 0;
+		v.defaultChance = this.calcValue(v.defaultChance, type, lv, mul, extraMul) ?? 0;
+		v.attackCount = (this.calcValue(v.attackCount, type, lv, mul, extraMul) ?? 0) >> 0;
+		v.attackInterval = (this.calcValue(v.attackInterval, type, lv, mul, extraMul) ?? 0) >> 0;
 		if (v.attackInterval < 50)
 			v.attackInterval = 50;
 		if (v.attackInterval % 50 != 0)
 			v.attackInterval = v.attackInterval - (v.attackInterval % 50);
-		v.lifesteal = this.calcValue(data.lifesteal, type, lv, mul, extraMul) ?? 0;
+		v.lifesteal = this.calcValue(v.lifesteal, type, lv, mul, extraMul) ?? 0;
 		v?.damage.forEach(x => {
 			if (x.amplitude) x.amplitude = this.calcValue(x.amplitude, type, lv, mul, extraMul);
 			if (x.minPercent) x.minPercent = this.calcValue(x.minPercent, type, lv, mul, extraMul);
@@ -1037,6 +1053,7 @@ export class Util {
 			if (x.chance) x.chance = this.calcValue(x.chance, type, lv, mul, extraMul);
 			x?.initialParams?.forEach(y => { if (y.value) y.value = this.calcValue(y.value, type, lv, mul, extraMul); });
 		});
+
 		let sp = game.specialAttacks.getObjectByID(id);
 		if (sp == null)
 			this.registerSpecialAttack(v, id);
@@ -2360,6 +2377,7 @@ export class EasyTool {
 				case "Toxin": ret = "BGSCheat:Toxin"; break;
 				case "laceration": 
 				case "lace": 
+				case "Lace": 
 				case "Laceration": ret = "BGSCheat:Laceration"; break;
 				case "voidburst": 
 				case "void": 
@@ -3177,9 +3195,12 @@ export class EasyTool {
 				if (attackData) {
 					const atk = attackData.find(x => x.id == _v.id && x.class == _v.class);
 					if (atk) {
+						let name = statObject.localID;
+						if (_v.order !== undefined)
+							name += _v.order;
 						Util.removeAllSpecialAttackData(statObject.specialAttacks, data);
-						Util.levelUpSpecialAttack(statObject.localID, atk, _v, type, lv, mul, extraMul);
-						let v = { "specialAttacks": { "add": [`BGSCheat:${statObject.localID}`] },"overrideSpecialChances":[0] };
+						Util.levelUpSpecialAttack(name, atk, _v, type, lv, mul, extraMul);
+						let v = { "specialAttacks": { "add": [`BGSCheat:${name}`] },"overrideSpecialChances":[0] };
 						Util.addSpecialAttacksData(statObject, data, v, type, lv, mul, extraMul);
 					}
 				}

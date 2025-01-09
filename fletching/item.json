@@ -39,9 +39,8 @@
 	},
 	"Unholy5": {
 		"base": "Base",
-		"1allow": [0,0,2],
-		"1u:atkeffect": [4],
-		"1uc:cbeasy": [ "20unholy", 3 ]
+		"5u:corrupt": [10,5],
+		"10u:corrupt": [5,10]
 	},
 	"TotHA": {
 		"5allow": [0, 1]
@@ -54,14 +53,20 @@
 	},
 	"tier1": {
 		"base": "Base",
-		"4u:sp-currg2": [ 0, 0, 600 ],
-		"6u:sp-currs2": [ 0, 0, 300 ],
-		"10u:sp-currg": [0, 100],
-		"10u:sp-currs": [0, 100]
+		"1v:modifiers": {
+			"add": {
+				"bankSpace": 5
+			}
+		},
+		"4u:sp-currg2": [ 0, 0, 100 ],
+		"6u:sp-currs2": [ 0, 0, 50 ],
+		"10u:sp-currg": [0, 50],
+		"10u:sp-currs": [0, 50]
 	},
 	"tier2": {
 		"base": "Base",
-		"5u:skillextra": [0,0,2]
+		"3l:skillbase": [1,0],
+		"5u:skillextra": [1,0,2]
 	},
 	"tier3": {
 		"base": "Base",
@@ -394,8 +399,36 @@
 	"melvorItA:Netherite_Javelin": {
 		"base": [ "Unholy5", "TotHA" ],
 		"5uc:debuff": [ [ "acc","eva","dmg" ], 2, 25, {"sa": 3} ],
-		"5u:spsar": {"melvorItA:SeismicTossPlayer": 25},
-		"10u:spsar": {"BGSCheat:SeismicTossPlayer": 25}
+		"5u:uniqueAttack": {
+			"id": "BlackHole",
+			"onhitEffects": [
+				{
+					"effectID": "BGSCheat:Voidburst",
+					"initialParams": [
+						{
+							"name": "stacksToAdd",
+							"value": [ 2 ]
+						},
+						{
+							"name": "stacks",
+							"value": [ 2 ]
+						}
+					]
+				},
+				{
+					"effectID": "BGSCheat:Slow",
+					"initialParams": [
+						{
+							"name": "magnitude",
+							"value": 50
+						}
+					]
+				}
+			],
+			"attackCount": {"c": -4,"mul": 10, "int": true},
+			"attackInterval": { "c": 200, "mul": -100, "min": 50 }
+		},
+		"10u:cbeasy": [ "Silence", 3, 30 ]
 	},
 	"melvorD:Normal_Shortbow": {
 		"base": "tier1",
@@ -507,8 +540,27 @@
 	"melvorItA:Whisperwillow_Shortbow": {
 		"base": [ "Unholy5", "TotHA" ],
 		"u:ress": [ 0, [ -15, 0, 15 ] ],
-		"5u:spsar": {"BGSCheat:NetherDrowsingBolt": 25},
-		"10u:spsar": {"BGSCheat:NetherDrowsingBolt2": 25}
+		"5u:uniqueAttack": {
+			"id": "ConsumingGrasp",
+	    "attackCount": { "c": -1, "mul": 6,"int": true },
+			"damage": [
+				{
+					"maxPercent": 110
+				}
+			],
+			"onhitEffects": [
+				{
+					"effectID": "BGSCheat:Slow",
+					"initialParams": [
+						{
+							"name": "magnitude",
+							"value": 30
+						}
+					]
+				}
+			]
+		},
+		"10u:cbeasy": [ "Silence", 3, 25 ]
 	},
 	"melvorF:Normal_Longbow": {
 		"base": "tier1",
@@ -618,8 +670,43 @@
 	"melvorItA:Shadebark_Longbow": {
 		"base": [ "Unholy5", "TotHA" ],
 		"u:ress": [ 0, [ -9, 0, 9 ] ],
-		"5u:spsar": {"BGSCheat:PsionicPulse": 15},
-		"10u:spsar": {"BGSCheat:PsionicPulse2": 15}
+		"5u:uniqueAttack": {
+			"id": "CommandOfTheKing",
+			"onhitEffects": [
+				{
+					"effectID": "BGSCheat:Fear",
+					"initialParams": [
+						{
+							"name": "initialStacks",
+							"value": 2
+						}
+					]
+				},
+				{
+					"effectID": "BGSCheat:Wither",
+					"initialParams": [
+						{
+							"name": "maxStacks",
+							"value": 16
+						}
+					]
+				},
+				{
+					"effectID": "BGSCheat:Voidburst",
+					"initialParams": [
+						{
+							"name": "stacks",
+							"value": 2
+						},
+						{
+							"name": "stacksToAdd",
+							"value": 2
+						}
+					]
+				}
+			]
+		},
+		"10u:cbeasy": [ [ "100Ablaze", "100Toxin" ], 3, 100 ]
 	},
 	"melvorItA:Crumbletain_Longbow": {
 		"base": [ "Unholy5", "TotHA" ],
@@ -630,7 +717,8 @@
 	"melvorItA:Whisperwillow_Longbow": {
 		"base": [ "Unholy5", "TotHA" ],
 		"u:ress": [ 0, [ -15, 0, 15 ] ],
-		"5u:uniqueAttack": { "id": "TerrorBeam" }
+		"5u:uniqueAttack": { "id": "TerrorBeam", "attackCount": [-5,0,15] },
+		"10u:debuff": [ [ "5spd" ], 3, 100 ]
 	},
 	"melvorF:Bronze_Crossbow": {
 		"base": "tier1",
@@ -733,7 +821,7 @@
 	},
 	"melvorItA:Netherite_Crossbow": {
 		"base": [ "Unholy5", "TotHA" ],
-		"5u:spsar": {"melvorItA:AbyssalWhirlwind": 25},
-		"10u:spsar": {"BGSCheat:AbyssalWhirlwind": 25}
+		"5u:uniqueAttack": { "id": "InfiniteVoid", "attackCount": [-4,0,8] },
+		"10u:debuff": [ [ "5dmg" ], 3, 100 ]
 	}
 }
