@@ -368,13 +368,15 @@
 	"melvorAoD:Unholy_Body": {
 		"base": [ "Base", "7body" ],
 		"u:ress": [[-7,0,7]],
+		"5u:atkeffect": [5],
 		"5slayer": [ 40 ]
 	},
 	"melvorAoD:Cursed_Body": {
 		"base": "melvorAoD:Unholy_Body",
-		"5u:atkeffect": [0,0,50],
-		"5barrier": [0,25,35],
-		"5summon": [0,-10,35]
+		"5u:barrier": [ 0, 25, 35 ],
+		"5u:summon": [ 0, -10, 35 ],
+		"5atkeffect": [ 0, 0, 50 ],
+		"10atkeffect": [ 0, 0, 100 ]
 	},
 	"melvorTotH:Elderwood_Body": {
 		"base": ["Unholy3","8body", "TotHD1"],

@@ -131,15 +131,14 @@
 	},
 	"melvorAoD:Crystal_Battlestaff": {
 		"base": "staff4",
-		"5uc:cbeasy": ["1BGSCheat:CrystalSanction", 2, 15],
+		"5u:uniqueAtks": [ { "id": "CrystalBlast" }, {"id": "Whirlpool"}, {"id": "CrushingWaves"} ],
 		"10cc:cbeasy": ["c",
 			[ "melvorAoD:Malice", 7, 100, { "sm": 10, "sa": 10  } ],
 			[ "melvorAoD:GrudgePlayer", 7, 100, { "sm": 10, "sa":10  } ],
 			[ "melvorAoD:GrudgeEnemy", 7, 100, { "si": 10 } ],
 			[ "melvorAoD:Consume", 7, 100, { "sm":  10,"sa": 10  } ],
 			[ "melvorAoD:Eradicate", 7, 100, { "sm":  10,"sa": 10  } ]
-		],
-		"10spsa": { "melvorAoD:CrystalBlast": 40, "melvorTotH:UnisonOfFireAndEarth": 25, "melvorTotH:UnisonOfAirAndWater": 25, "melvorTotH:WaterDance": 10}
+		]
 	},
 	"staff7": {
 		"base": "Uhholy2",
@@ -175,9 +174,7 @@
 		"u:maghits": [7,14]
 	},
 	"melvorF:Air_Imbued_Wand": {
-		"base": "wand7",
-		"5u:spsar": { "melvorTotH:LargeThunderStrike": 20},
-		"10u:spsa": { "melvorTotH:FeatherStormPlayer": 10}
+		"base": "wand7"
 	},
 	"melvorF:Water_Imbued_Wand": {
 		"base": "wand7",
@@ -196,89 +193,77 @@
 	},
 	"melvorAoD:Mystic_Pure_Crystal_Staff": {
 		"base": "staff7",
-		"5cc:cbeasy": ["c",
-			[ "melvorAoD:Malice", 7, 100, { "sm":  10, "sa":10  } ],
-			[ "melvorAoD:GrudgePlayer", 7, 100, { "sm":  10, "sa":10  } ],
-			[ "melvorAoD:GrudgeEnemy", 7, 100, { "si": 10 } ],
-			[ "melvorAoD:Consume", 7, 100, { "sm":  10,"sa": 10  } ],
-			[ "melvorAoD:Eradicate", 7, 100, { "sm":  10, "sa":10  } ]
-		],
-		"10spsar": { "BGSCheat:CrystalTomb": 100}
+		"5u:uniqueAttack": { "id": "CrystalTomb" },
+		"10u:cbeasy": [["Fatigue","Petrified"], 2, 20]
 	},
 	"melvorAoD:Unholy_Staff": {
 		"base": "Base",
 		"ress": [ [ -7, 0, 7 ] ],
 		"u:maghits": [7,14],
 		"5u:atkeffect": [5],
-		"5u:spsa": { "melvorAoD:ReflectionPlayer": 5, "melvorAoD:TelekinesisPlayer": 5},
-		"10uc:cbeasy": ["c",
+		"5u:uniqueAttack": { "id": "WaterPulsePlayer" }
+	},
+	"melvorAoD:Cursed_Staff": {
+		"base": "melvorAoD:Unholy_Staff",
+		"10u:cbeasy": ["c",
 			[ "10Malice", 7, 100 ],
 			[ "10Destruction", 7, 100],
 			[ "10Spite", 7, 100 ],
 			[ "10Consume", 7, 100],
-			[ "10Eradicate", 7, 100],
-			[ "50BGSCheat:UnholyMark", 7, 100 ]
-		],
-		"10u:spsa": { "melvorAoD:TrapDoor": 5, "melvorAoD:Manipulate": 5}
+			[ "10Eradicate", 7, 100]
+		]
 	},
 	"melvorTotH:Poison_Staff": {
 		"base": "Unholy4",
 		"ress": [ [ -12, 0, 12 ] ],
 		"u:maghits": [ [ 0, 0, 100, 100 ], "s","melvorTotH:Poison"],
-		"uc:cbeasy": [ "BGSCheat:Poison", 2, 25 ],
-		"5spsa": { "melvorTotH:PoisonPods": 50, "melvorTotH:NaturesBloom": 50},
-		"10spsar": { "BGSCheat:PoisonPods": 50, "BGSCheat:NaturesBloom": 50}
+		"5u:uniqueAtks": [ { "id": "PoisonPods" }, {"id": "NaturesBloom"} ],
+		"10u:cbeasy": [ [ "100Poison", "100Deadly" ], 2, 25 ]
 	},
 	"melvorTotH:Infernal_Staff": {
 		"base": "Unholy4",
 		"ress": [ [ -12, 0, 12 ] ],
 		"u:maghits": [ [ 0, 0, 100, 100 ], "s","melvorTotH:Infernal"],
-		"uc:cbeasy": [ "BGSCheat:Burn", 2, 25 ],
-		"5spsa": { "melvorTotH:GiantFireball": 50, "melvorTotH:InfernalPower": 50},
-		"10spsar": { "BGSCheat:GiantFireball": 50, "BGSCheat:InfernalPower": 50}
+		"5u:uniqueAtks": [ { "id": "GiantFireball" }, {"id": "InfernalPower"} ],
+		"10u:cbeasy": [ [ "100Burn", "Freeze" ], 2, 25 ]
 	},
 	"melvorTotH:Lightning_Staff": {
 		"base": "Unholy4",
 		"ress": [ [ -12, 0, 12 ] ],
 		"u:maghits": [ [ 0, 0, 100, 100 ], "s","melvorTotH:Lightning"],
-		"uc:cbeasy": [ "melvorTotH:Shock", 2, 25, { "sm": 10 } ],
-		"5spsa": { "melvorTotH:ThunderStrike": 50, "melvorTotH:DragonStormCall": 50},
-		"10spsar": { "BGSCheat:ThunderStrike": 50, "BGSCheat:DragonStormCall": 50}
+		"5u:uniqueAtks": [ { "id": "ThunderStrike" }, {"id": "DragonStormCall"} ],
+		"10u:cbeasy": [ [ "BGSCheat:Shock","Stun" ], 2, 25 ]
 	},
 	"melvorTotH:Meteorite_Staff": {
 		"base": "Unholy4",
 		"ress": [ [ -12, 0, 12 ] ],
 		"u:maghits": [ [ 0, 0, 100, 100 ], "s","melvorTotH:Infernal"],
-		"uc:cbeasy": [ "BGSCheat:Stun", 2, 25, { "t": 3 } ],
-		"5spsa": { "melvorTotH:MeteorShowerArchaic": 100},
-		"10spsar": { "BGSCheat:MeteorShowerArchaic": 100}
+		"5u:uniqueAttack": { "id": "MeteorShowerArchaic","damage": [{"amplitude": 140}] },
+		"10u:cbeasy": [ "Nulled", 2, 30 ]
 	},
 	"melvorTotH:Despair_Wand": {
 		"base": "Unholy4",
 		"u:maghits": [ 50, 100, 50, 50 ],
-		"uc:cbeasy": [ "BGSCheat:Despair", 2, 10, { "t": 3 } ],
 		"5c:spellcost": [[0,0,-10],"s","melvorTotH:Despair_Rune"],
-		"5spsa": { "melvorD:BruteForce": 50},
+		"5u:uniqueAttack": { "id": "TsunamiArchaic" },
 		"10c:spellcost": [[0,0,-20],"s","melvorTotH:Despair_Rune"],
-		"10spsar": { "BGSCheat:BruteForce": 50}
+		"10u:cbeasy": [ "1Despair", 2, 10, { "t": 3 } ]
 	},
 	"melvorTotH:Archaic_Wand": {
 		"base": "Unholy4",
 		"u:maghits": [ 50, 100, 50, 50 ],
-		"uc:cbeasy": [ "BGSCheat:Petrified", 2, 10, { "t": 3 } ],
 		"5c:spellcost": [[0,0,-10],"s","melvorTotH:Archaic_Rune"],
-		"5spsa": { "melvorD:BruteForce": 50},
+		"5u:uniqueAttack": { "id": "Soulash" },
 		"10c:spellcost": [[0,0,-20],"s","melvorTotH:Archaic_Rune"],
-		"10spsar": { "BGSCheat:BruteForce": 50}
+		"10u:cbeasy": [ "1Madness", 2, 10, { "t": 3 } ]
 	},
 	"melvorTotH:Calamity_Wand": {
 		"base": "Unholy4",
 		"u:maghits": [ 50, 100, 50, 50 ],
-		"uc:cbeasy": [ "BGSCheat:Fatigue", 2, 10, { "t": 3 } ],
 		"5c:spellcost": [[0,0,-10],"s","melvorTotH:Calamity_Rune"],
-		"5spsa": { "melvorD:BruteForce": 50},
+		"5u:uniqueAttack": { "id": "SlicingMaelstromArchaic" },
 		"10c:spellcost": [[0,0,-20],"s","melvorTotH:Calamity_Rune"],
-		"10spsar": { "BGSCheat:BruteForce": 50}
+		"10u:cbeasy": [ "1Torment", 2, 10, { "t": 3 } ]
 	},
 	"melvorItA:Abyssal_Staff": {
 		"base": "Unholy5",
@@ -293,31 +278,49 @@
 					"initialParams": [
 						{
 							"name": "maxStacks",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						},
 						{
 							"name": "stacksToAdd",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						},
 						{
 							"name": "initialStacks",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
+						},
+						{
+							"name": "turns",
+							"value": 2
 						}
 					]
 				}
 			]
 		},
-		"10u:cbeasy": [ "30Lace", 3, 25 ]
+		"10u:buff": [ "hp", 2, 25 ]
 	},
 	"melvorItA:Lacerating_Staff": {
 		"base": "melvorItA:Abyssal_Staff",
-		"10u:spsar": { "BGSCheat:Lacerate": 30}
+		"10u:cbeasy": [ "30Lace", 3, 25 ]
 	},
 	"melvorItA:Abyssal_Wand": {
 		"base": "Unholy5",
 		"u:maghits": [ [ 0, 0, 100, 50 ], "s","melvorItA:Abyssal"],
-		"uc:cbeasy": [ "BGSCheat:EldritchCurse", 2, 10, { "t": 3 } ],
-		"10u:spsar": { "BGSCheat:AbyssalIncantation": 30}
+		"5u:uniqueAttack": {
+			"id": "VoidVortexPlayer",
+			"attackInterval": { "c": 50 },
+			"onhitEffects": [
+				{
+					"effectID": "BGSCheat:Slow",
+					"initialParams": [
+						{
+							"name": "magnitude",
+							"value": 50
+						}
+					]
+				}
+			]
+		},
+		"10u:cbeasy": [ "EldritchCurse", 3, 25 ]
 	},
 	"melvorItA:Brume_Staff": {
 		"base": "Unholy5",
@@ -331,15 +334,15 @@
 					"initialParams": [
 						{
 							"name": "maxStacks",
-							"value": {"mul": 1, "int": true}
+							"value": 1
 						},
 						{
 							"name": "stacksToAdd",
-							"value": {"mul": 1, "int": true}
+							"value": 1
 						},
 						{
 							"name": "initialStacks",
-							"value": {"mul": 1, "int": true}
+							"value": 1
 						}
 					]
 				}
@@ -351,12 +354,25 @@
 	"melvorItA:Brume_Wand": {
 		"base": "Unholy5",
 		"u:maghits": [ [ 0, 0, 100, 50 ], "s","melvorItA:Brume"],
-		"uc:cbeasy": [ "BGSCheat:Silence", 2, 10, { "t": 3 } ],
-		"10u:spsar": { "BGSCheat:BrumeExplosiveBlasts": 35}
+		"5u:uniqueAttack": {
+			"id": "ToxicBlastPlayer",
+			"onhitEffects": [
+				{
+					"effectID": "BGSCheat:Toxin",
+					"initialParams": [
+						{
+							"name": "interval",
+							"value": { "c": 250, "u": -50 }
+						}
+					]
+				}
+			]
+		},
+		"10u:cbeasy": [ "Silence", 3, 100 ]
 	},
 	"melvorItA:Toxic_Fumes_Wand": {
 		"base": "melvorItA:Brume_Wand",
-		"10u:spsar": { "BGSCheat:ToxicFumesPlayer": 25}
+		"10u:cbeasy": [ "Crystallize", 3, 100 ]
 	},
 	"melvorItA:Gloom_Staff": {
 		"base": "Unholy5",
@@ -375,15 +391,15 @@
 					"initialParams": [
 						{
 							"name": "maxStacks",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						},
 						{
 							"name": "stacksToAdd",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						},
 						{
 							"name": "initialStacks",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						}
 					]
 				}
@@ -394,8 +410,8 @@
 	"melvorItA:Gloom_Wand": {
 		"base": "Unholy5",
 		"u:maghits": [ [ 0, 0, 100, 50 ], "s","melvorItA:Gloom"],
-		"uc:cbeasy": [ "BGSCheat:Ablaze", 2, 10 ],
-		"10u:spsar": { "BGSCheat:GloomCascade": 35}
+		"5u:uniqueAttack": { "id": "WitherSporesPlayer" },
+		"10u:cbeasy": [ [ "100Ablaze" ], 3, 100 ]
 	},
 	"melvorItA:Wither_Staff": {
 		"base": "Unholy5",
@@ -414,15 +430,15 @@
 					"initialParams": [
 						{
 							"name": "maxStacks",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						},
 						{
 							"name": "stacksToAdd",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						},
 						{
 							"name": "initialStacks",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						}
 					]
 				}
@@ -463,7 +479,7 @@
 					"initialParams": [
 						{
 							"name": "initialStacks",
-							"value": {"mul": 1,"int": true}
+							"value": 1
 						}
 					]
 				}
@@ -483,15 +499,15 @@
 					"initialParams": [
 						{
 							"name": "maxStacks",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						},
 						{
 							"name": "stacksToAdd",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						},
 						{
 							"name": "initialStacks",
-							"value": {"c": 1,"mul": 1,"int": true}
+							"value": 1
 						}
 					]
 				},
@@ -871,12 +887,14 @@
 			"c",
 			[ [ [ -30, 0, 30 ], [ -60, 0, 60 ] ], "s", "melvorD:Elemental" ],
 			[ [ [ -40, 0, 40 ], [ -40, 0, 40 ] ], "s", "melvorF:Nature" ]
-		]
+		],
+		"5u:atkeffect": [5],
+		"5slayer": [ 40 ]
 	},
 	"melvorAoD:Cursed_Wizard_Robes": {
 		"base": "melvorAoD:Unholy_Wizard_Robes",
-		"5barrier": [ 0, 25, 35 ],
-		"5summon": [ 0, -10, 35 ],
+		"5u:barrier": [ 0, 25, 35 ],
+		"5u:summon": [ 0, -10, 35 ],
 		"5atkeffect": [ 0, 0, 50 ],
 		"10atkeffect": [ 0, 0, 100 ]
 	},

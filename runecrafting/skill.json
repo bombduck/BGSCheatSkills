@@ -107,7 +107,7 @@
 	"melvorTotH:Archaic_Wand":["melvorTotH:Archaic_Wand"],
 	"melvorTotH:Calamity_Wand":["melvorTotH:Calamity_Wand"],
 	"melvorAoD:Unholy_Wizard_Robes": [ "melvorAoD:Unholy_Wizard_Robes", "melvorAoD:Cursed_Wizard_Robes" ],
-	"melvorAoD:Unholy_Staff":["melvorAoD:Unholy_Staff"],
+	"melvorAoD:Unholy_Staff": [ "melvorAoD:Unholy_Staff", "melvorAoD:Cursed_Staff" ],
 	"melvorAoD:Crystal_Battlestaff":["melvorAoD:Crystal_Battlestaff"],
 	"melvorAoD:Mystic_Pure_Crystal_Staff":["melvorAoD:Mystic_Pure_Crystal_Staff"],
 	"melvorItA:Abyssal_Staff": [ "melvorItA:Abyssal_Staff", "melvorItA:Lacerating_Staff" ],

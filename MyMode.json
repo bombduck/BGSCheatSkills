@@ -4979,12 +4979,12 @@
 					}
 				],
 				"effectGroups": [
-					"BGSCheat:Buff"
+					"melvorD:Buff"
 				]
 			},
 			{
 				"id": "Shock",
-				"templateID": "melvorD:StackingNonCountingModifier",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
 				"name": "Shocked",
 				"nameLang": "PASSIVES_NAME_Shocked",
 				"media": "assets/media/status/shocked.png",
@@ -5011,17 +5011,13 @@
 								{
 									"damageTypeID": "melvorD:Normal",
 									"value": -2
-								},
-								{
-									"damageTypeID": "melvorItA:Abyssal",
-									"value": -1
 								}
 							]
 						}
 					}
 				],
 				"effectGroups": [
-					"BGSCheat:Debuff"
+					"melvorD:Debuff"
 				]
 			},
 			{
@@ -5227,120 +5223,6 @@
 				]
 			},
 			{
-				"id": "NullAndCleanse0",
-				"templateID": "melvorD:StaticSelfCountingModifier",
-				"name": "Null and Cleanse",
-				"nameLang": "SPECIAL_ATTACK_NAME_NullAndCleanse",
-				"media": "assets/media/status/speedup.png",
-				"target": "Self",
-				"parameters": [
-					{
-						"name": "turns",
-						"initialValue": 5
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"effectImmunity": [
-								{
-									"effectGroupID": "melvorD:Debuff",
-									"value": 1
-								},
-								{
-									"effectGroupID": "melvorD:Curse",
-									"value": 1
-								},
-								{
-									"effectGroupID": "melvorD:Fear",
-									"value": 1
-								},
-								{
-									"effectGroupID": "melvorItA:Blight",
-									"value": 1
-								},
-								{
-									"effectGroupID": "melvorItA:Voidburst",
-									"value": 1
-								}
-							],
-							"effectIgnoreChance": [
-								{
-									"effectGroupID": "melvorD:StunLike",
-									"value": 100
-								},
-								{
-									"effectGroupID": "melvorD:DamageOverTime",
-									"value": 1
-								}
-							],
-							"sleepImmunity": 1
-						}
-					}
-				],
-				"effectGroups": [
-					"BGSCheat:Buff"
-				]
-			},
-			{
-				"id": "NullAndCleanse1",
-				"templateID": "melvorD:StaticTargetCountingModifier",
-				"name": "Null and Cleanse",
-				"nameLang": "SPECIAL_ATTACK_NAME_NullAndCleanse",
-				"media": "assets/media/status/null.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "turns",
-						"initialValue": 5
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"effectImmunity": [
-								{
-									"effectGroupID": "melvorD:Buff",
-									"value": 1
-								}
-							]
-						}
-					}
-				],
-				"effectGroups": [
-					"BGSCheat:Debuff"
-				]
-			},
-			{
-				"id": "NullAndCleanse2",
-				"templateID": "melvorD:Regen",
-				"parameters": [
-					{
-						"name": "procs",
-						"initialValue": 1
-					},
-					{
-						"name": "interval",
-						"initialValue": 50
-					}
-				],
-				"damageGroups": [
-					{
-						"name": "totalHealing",
-						"damage": [
-							{
-								"roll": false,
-								"character": "Attacker",
-								"maxRoll": "MaxHP",
-								"maxPercent": 100
-							}
-						]
-					}
-				]
-			},
-			{
 				"id": "AbyssalSpell",
 				"templateID": "melvorD:StackingNonCountingModifier",
 				"name": "Abyssal Spell",
@@ -5481,51 +5363,34 @@
 					{
 						"name": "stacks",
 						"modifiers": {
-							"minHitBasedOnMaxHit": 75,
-							"maxHit": 50,
-							"attackInterval": -20
+							"minHitBasedOnMaxHit": 75
 						}
 					}
 				],
 				"effectGroups": [
-					"BGSCheat:Buff"
-				]
-			},
-			{
-				"id": "AugiteCrystallization1",
-				"templateID": "melvorD:StaticSelfCountingModifier",
-				"name": "Augite Crystallization",
-				"nameLang": "SPECIAL_ATTACK_NAME_AugiteCrystallization",
-				"media": "assets/media/status/attack_increase.png",
-				"target": "Self",
-				"parameters": [
-					{
-						"name": "turns",
-						"initialValue": 3
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"minHitBasedOnMaxHit": 75,
-							"maxHit": 200,
-							"attackInterval": -50
-						}
-					}
-				],
-				"effectGroups": [
-					"BGSCheat:Buff"
+					"melvorD:Buff"
 				]
 			},
 			{
 				"id": "DivineBreaker0",
-				"templateID": "melvorD:StaticSelfCountingModifier",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
 				"name": "Divine Breaker",
 				"nameLang": "SPECIAL_ATTACK_NAME_DivineBreaker",
 				"media": "assets/media/status/attack_increase.png",
 				"target": "Self",
 				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 100
+					},
 					{
 						"name": "turns",
 						"initialValue": 3
@@ -5538,49 +5403,19 @@
 							"maxHitBasedOnTargetResistance": [
 								{
 									"damageTypeID": "melvorD:Normal",
-									"value": 30
+									"value": 6
 								}
 							]
 						}
 					}
 				],
 				"effectGroups": [
-					"BGSCheat:Buff"
-				]
-			},
-			{
-				"id": "DivineBreaker1",
-				"templateID": "melvorD:StaticSelfCountingModifier",
-				"name": "Divine Breaker",
-				"nameLang": "SPECIAL_ATTACK_NAME_DivineBreaker",
-				"media": "assets/media/status/attack_increase.png",
-				"target": "Self",
-				"parameters": [
-					{
-						"name": "turns",
-						"initialValue": 3
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"maxHitBasedOnTargetResistance": [
-								{
-									"damageTypeID": "melvorD:Normal",
-									"value": 150
-								}
-							]
-						}
-					}
-				],
-				"effectGroups": [
-					"BGSCheat:Buff"
+					"melvorD:Buff"
 				]
 			},
 			{
 				"id": "DarkBladePlayer0",
-				"templateID": "melvorD:StackingNonCountingModifier",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
 				"name": "Dark Blade",
 				"nameLang": "SPECIAL_ATTACK_NAME_DarkBladePlayer",
 				"media": "assets/media/status/attack_increase.png",
@@ -5614,47 +5449,34 @@
 					}
 				],
 				"effectGroups": [
-					"BGSCheat:Buff"
-				]
-			},
-			{
-				"id": "HastyAssaultPlayer0",
-				"templateID": "melvorD:StackingSelfCountingModifier",
-				"name": "Hasty Assault",
-				"nameLang": "SPECIAL_ATTACK_NAME_HastyAssaultPlayer",
-				"media": "assets/media/status/speedup.png",
-				"target": "Self",
-				"parameters": [
-					{
-						"name": "turns",
-						"initialValue": 5
-					},
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"attackInterval": -20,
-							"maxHit": 20
-						}
-					}
-				],
-				"effectGroups": [
 					"melvorD:Buff"
 				]
 			},
+      {
+        "id": "Manipulate0",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Manipulate",
+        "nameLang": "SPECIAL_ATTACK_NAME_Manipulate",
+        "media": "assets/media/status/speedup.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "disableAttackDamage": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
       {
         "id": "ForesightPlayer0",
         "templateID": "melvorD:StaticSelfCountingModifier",
@@ -5683,84 +5505,40 @@
       },
       {
         "id": "EradicatingBlast0",
-        "templateID": "melvorD:StaticSelfCountingModifier",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "Eradicating Blast",
         "nameLang": "SPECIAL_ATTACK_NAME_EradicatingBlast",
         "media": "assets/media/status/attack_increase.png",
         "target": "Self",
         "parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 1
+					},
           {
             "name": "turns",
-            "initialValue": 5
+            "initialValue": 2
           }
         ],
         "statGroups": [
           {
             "name": "stacks",
             "modifiers": {
-              "maxHit": 20,
-              "maxHitBasedOnTargetCurrentHitpoints": 1
+              "maxHit": 2,
+              "maxHitBasedOnTargetCurrentHitpoints": 0.1
             }
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
-        ]
-      },
-      {
-        "id": "AbyssalDoubleStrike0",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Abyssal Double Strike",
-        "nameLang": "SPECIAL_ATTACK_NAME_AbyssalDoubleStrike",
-        "media": "assets/media/status/attack_decrease.png",
-        "target": "Target",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 5
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "maxHit": -30
-            }
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
-        ]
-      },
-      {
-        "id": "DampenField",
-        "templateID": "melvorD:StaticTargetCountingModifier",
-        "name": "Dampen Field",
-        "nameLang": "SPECIAL_ATTACK_NAME_DampenField",
-        "media": "assets/media/status/evasion_increase.png",
-        "target": "Self",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorItA:Abyssal",
-                  "value": 45
-                }
-              ],
-              "evasion": 45
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 5
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -5783,34 +5561,9 @@
           "BGSCheat:Debuff"
         ]
       },
-			{
-				"id": "Brume0",
-				"templateID": "melvorD:StaticSelfCountingModifier",
-				"name": "Brume Debuff",
-				"nameLang": "COMBAT_EFFECT_NAME_Brume0",
-				"media": "assets/media/status/attack_decrease.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "turns",
-						"initialValue": 3
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"accuracyRating": -75
-						}
-					}
-				],
-				"effectGroups": [
-					"BGSCheat:Debuff"
-				]
-			},
       {
         "id": "BlazingShadow",
-        "templateID": "melvorD:StaticTargetCountingModifier",
+        "templateID": "BGSCheat:StackingTargetCountingModifier",
         "name": "Blazing Shadow",
         "nameLang": "SPECIAL_ATTACK_NAME_BlazingShadowPlayer",
         "media": "assets/media/status/evasion_decrease.png",
@@ -5819,18 +5572,30 @@
           {
             "name": "stacks",
             "modifiers": {
-              "evasion": -60
+              "evasion": -20
             }
           }
         ],
         "parameters": [
+          {
+            "name": "maxStacks",
+            "value": 10
+          },
+          {
+            "name": "stacksToAdd",
+            "value": 1
+          },
+          {
+            "name": "initialStacks",
+            "value": 1
+          },
           {
             "name": "turns",
             "initialValue": 5
           }
         ],
         "effectGroups": [
-          "BGSCheat:Debuff"
+          "melvorD:Debuff"
         ]
       },
       {
@@ -5855,38 +5620,12 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
-        ]
-      },
-      {
-        "id": "RavenousHunger",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Ravenous Hunger",
-        "nameLang": "SPECIAL_ATTACK_NAME_RavenousHunger",
-        "media": "assets/media/status/speedup.png",
-        "target": "Self",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "attackInterval": -60,
-              "lifesteal": 50
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
         "id": "SilentTangle",
-        "templateID": "melvorD:StaticSelfCountingModifier",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "Silent Tangle",
         "nameLang": "SPECIAL_ATTACK_NAME_SilentTangle",
         "media": "assets/media/status/attack_decrease.png",
@@ -5895,18 +5634,30 @@
           {
             "name": "stacks",
             "modifiers": {
-              "maxHit": -36
+              "maxHit": -12
             }
           }
         ],
         "parameters": [
+          {
+            "name": "maxStacks",
+            "value": 10
+          },
+          {
+            "name": "stacksToAdd",
+            "value": 1
+          },
+          {
+            "name": "initialStacks",
+            "value": 1
+          },
           {
             "name": "turns",
             "initialValue": 3
           }
         ],
         "effectGroups": [
-          "BGSCheat:Debuff"
+          "melvorD:Debuff"
         ]
       },
       {
@@ -6507,31 +6258,6 @@
         ]
       },
       {
-        "id": "AbyssalIncantation0",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Abyssal Incantation",
-        "nameLang": "SPECIAL_ATTACK_NAME_AbyssalIncantation",
-        "media": "assets/media/status/attack_decrease.png",
-        "target": "Target",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "maxHit": -30
-            }
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Debuff"
-        ]
-      },
-      {
         "id": "TiltedShot0",
         "templateID": "melvorD:Combo",
         "name": "Tilted Shot",
@@ -6558,29 +6284,41 @@
       },
       {
         "id": "ElderwoodPoison1",
-        "templateID": "melvorD:StaticSelfCountingModifier",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "Elderwood Poison",
         "nameLang": "SPECIAL_ATTACK_NAME_ElderwoodPoison",
         "media": "assets/media/status/attack_decrease.png",
         "target": "Target",
         "parameters": [
           {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          },
+          {
             "name": "turns",
-            "initialValue": 6
+            "initialValue": 3
           }
         ],
         "statGroups": [
           {
             "name": "stacks",
             "modifiers": {
-              "attackInterval": 15,
-              "maxHit": -15,
-              "maxHitpoints": -15
+              "attackInterval": 5,
+              "maxHit": -5,
+              "maxHitpoints": -5
             }
           }
         ],
         "effectGroups": [
-          "BGSCheat:Debuff"
+          "melvorD:Debuff"
         ]
       },
       {
@@ -6608,7 +6346,7 @@
           {
             "name": "stacks",
             "modifiers": {
-              "maxHit": -6
+              "maxHit": -2
             }
           }
         ],
@@ -6634,21 +6372,21 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 20
+            "initialValue": 5
           }
         ],
         "statGroups": [
           {
             "name": "stacks",
             "modifiers": {
-              "evasion": -6,
-              "accuracyRating": -6,
-              "damageTakenPerAttack": 5
+              "evasion": -3,
+              "accuracyRating": -3,
+              "damageTakenPerAttack": 3
             }
           }
         ],
         "effectGroups": [
-          "BGSCheat:Debuff"
+          "melvorD:Debuff"
         ]
       },
       {
@@ -6673,7 +6411,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 20
+            "initialValue": 4
           }
         ],
         "statGroups": [
@@ -6684,42 +6422,13 @@
                 {
                   "damageTypeID": "melvorD:Normal",
                   "value": -5
-                },
-                {
-                  "damageTypeID": "melvorItA:Abyssal",
-                  "value": -5
                 }
               ]
             }
           }
         ],
         "effectGroups": [
-          "BGSCheat:Debuff"
-        ]
-      },
-      {
-        "id": "AbyssalDoubleShot0",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Abyssal Double Shot",
-        "nameLang": "SPECIAL_ATTACK_NAME_AbyssalDoubleShot",
-        "media": "assets/media/status/attack_decrease.png",
-        "target": "Target",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "maxHit": -30
-            }
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Debuff"
         ]
       },
       {
@@ -6887,8 +6596,45 @@
         ]
       },
       {
+        "id": "AbyssalBarrage",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Abyssal Barrage",
+        "nameLang": "SPECIAL_ATTACK_NAME_AbyssalBarrage",
+        "media": "assets/media/status/speedup.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "attackInterval": -30
+            }
+          }
+        ],
+        "parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 5
+					},
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "ConsumingGrasp",
-        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "ConsumingGrasp",
         "nameLang": "SPECIAL_ATTACK_NAME_ConsumingGrasp",
         "media": "assets/media/status/attack_decrease.png",
@@ -7393,6 +7139,86 @@
         ]
       },
       {
+        "id": "CorundumWounds0",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "CorundumWounds",
+        "nameLang": "SPECIAL_ATTACK_NAME_CorundumWounds",
+        "media": "assets/media/status/attack_decrease.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 25
+          },
+          {
+            "name": "turns",
+            "initialValue": 5
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -6
+                }
+              ],
+              "evasion": -35
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "CrystalFlurry0",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Crystal Flurry",
+        "nameLang": "SPECIAL_ATTACK_NAME_CrystalFlurry",
+        "media": "assets/media/status/speedup.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 20
+          },
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "attackInterval": -10
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "Madness2",
         "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "Madness",
@@ -7546,172 +7372,6 @@
     ],
 		"attacks": [
 			{
-				"id": "CrystalFlurry",
-				"defaultChance": 60,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 100
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "melvorAoD:CrystalFlurry0"
-					},
-					{
-						"effectID": "BGSCheat:Crystallize",
-						"chance": 50,
-						"initialParams": [
-							{
-								"name": "turns",
-								"value": 2
-							}
-						]
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 6,
-				"attackInterval": 300,
-				"lifesteal": 0,
-				"name": "Crystal Flurry",
-				"description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. Gives you -${onHitEffect0modValue0}% Attack Interval for ${onHitEffect0turns} of your turns and there is a 50% chance apply Crystallization for 2 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-				"descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. <HitEffect>. On a hit, there is a 50% chance apply Crystallization for 2 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-				"usesRunesPerProc": true
-			},
-			{
-				"id": "CrystalCleave",
-				"defaultChance": 40,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 200
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:Bleed1600"
-					},
-					{
-						"effectID": "melvorD:Crystallize",
-						"chance": 35,
-						"initialParams": [
-							{
-								"name": "turns",
-								"value": 3
-							}
-						]
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 5,
-				"attackInterval": 400,
-				"lifesteal": 0,
-				"name": "Crystal Cleave",
-				"description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. Inflicts Bleed that deals ${onHitEffect0DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect0duration}s and there is a 35% chance apply Crystallization for 3 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-				"descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. <HitEffect>. On a hit, there is a 35% chance apply Crystallization for 3 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-				"usesRunesPerProc": true
-			},
-			{
-				"id": "Crystalline",
-				"defaultChance": 30,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 200
-					},
-					{
-						"damageType": "Custom",
-						"character": "Attacker",
-						"maxRoll": "Fixed",
-						"maxPercent": 200,
-						"roll": false
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:Crystallize",
-						"chance": 90,
-						"initialParams": [
-							{
-								"name": "turns",
-								"value": 1
-							}
-						]
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 1,
-				"attackInterval": 200,
-				"lifesteal": 0,
-				"name": "Crystalline",
-				"description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage plus ${attackDamageMaxValue1} fixed damage. On a hit, there is a 90% chance apply Crystallization for 1 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-				"descriptionGenerator": "An <avoidable> attack that deals <damage>. On a hit, there is a 90% chance apply Crystallization for 1 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-				"usesRunesPerProc": true
-			},
-			{
-				"id": "CorundumWounds",
-				"defaultChance": 5,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 250
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "melvorTotH:CorundumWounds0",
-						"initialParams": [
-							{
-								"name": "turns",
-								"value": 10
-							}
-						]
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 4,
-				"attackInterval": 200,
-				"lifesteal": 0,
-				"name": "CorundumWounds",
-				"description": "You perform ${hitCount} attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On a hit, gives the enemy -${onHitEffect0modValue0}% Damage Reduction and -${onHitEffect0modValue1}% Global Evasion for ${onHitEffect0turns} of the enemy's turns. Avoidable.",
-				"descriptionGenerator": "<Attacker> perform <count> attacks that deal <damage> over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "CorundumWounds2",
-				"defaultChance": 5,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 300
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "melvorTotH:CorundumWounds0",
-						"initialParams": [
-							{
-								"name": "turns",
-								"value": 100
-							}
-						]
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 8,
-				"attackInterval": 100,
-				"lifesteal": 0,
-				"name": "CorundumWounds",
-				"description": "You perform ${hitCount} attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On a hit, gives the enemy -${onHitEffect0modValue0}% Damage Reduction and -${onHitEffect0modValue1}% Global Evasion for ${onHitEffect0turns} of the enemy's turns. Avoidable.",
-				"descriptionGenerator": "<Attacker> perform <count> attacks that deal <damage> over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-				"usesRunesPerProc": false
-			},
-			{
 				"id": "SunsetStab",
 				"defaultChance": 15,
 				"damage": [
@@ -7853,262 +7513,6 @@
 				"descriptionGenerator": "Attack <count> times for <damage>. On a hit <hitEffect>. Attacks <canMiss>.",
 				"usesRunesPerProc": false
 			},
-			{
-				"id": "AugiteCrystallization",
-				"defaultChance": 5,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 120
-					}
-				],
-				"prehitEffects": [
-					{
-						"effectID": "BGSCheat:AugiteCrystallization0"
-					}
-				],
-				"onhitEffects": [],
-				"cantMiss": true,
-				"attackCount": 4,
-				"attackInterval": 150,
-				"lifesteal": 0,
-				"name": "Augite Crystallization",
-				"description": "You perform ${hitCount} attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On use, gives you +${preHitEffect0modValue0}% of Maximum Hit added to Minimum Hit for ${preHitEffect0turns} of your turns. Unavoidable.",
-				"descriptionGenerator": "You perform <count> attacks that deal <damage> over <duration>. On use, <prehitEffect>. <Avoidable>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "AugiteCrystallization2",
-				"defaultChance": 5,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 200
-					}
-				],
-				"prehitEffects": [
-					{
-						"effectID": "BGSCheat:AugiteCrystallization1"
-					}
-				],
-				"onhitEffects": [],
-				"cantMiss": true,
-				"attackCount": 6,
-				"attackInterval": 100,
-				"lifesteal": 0,
-				"name": "Augite Crystallization",
-				"description": "You perform ${hitCount} attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On use, gives you +${preHitEffect0modValue0}% of Maximum Hit added to Minimum Hit for ${preHitEffect0turns} of your turns. Unavoidable.",
-				"descriptionGenerator": "You perform <count> attacks that deal <damage> over <duration>. On use, <prehitEffect>. <Avoidable>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "DivineBreaker",
-				"defaultChance": 5,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 135
-					}
-				],
-				"prehitEffects": [
-					{
-						"effectID": "BGSCheat:DivineBreaker0"
-					}
-				],
-				"onhitEffects": [],
-				"cantMiss": false,
-				"attackCount": 4,
-				"attackInterval": 100,
-				"lifesteal": 0,
-				"name": "Divine Breaker",
-				"description": "You perform ${hitCount} attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On use, gives you +${preHitEffect0modValue0}% Max Hit for each 1% of Damage Reduction the Enemy has for ${preHitEffect0turns} of your turns. Avoidable.",
-				"descriptionGenerator": "<Attacker> perform <count> attacks that deal <damage> over <duration>. On use, <prehitEffect>. <Avoidable>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "DivineBreaker2",
-				"defaultChance": 5,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 300
-					}
-				],
-				"prehitEffects": [
-					{
-						"effectID": "BGSCheat:DivineBreaker1"
-					}
-				],
-				"onhitEffects": [],
-				"cantMiss": false,
-				"attackCount": 5,
-				"attackInterval": 40,
-				"lifesteal": 0,
-				"name": "Divine Breaker",
-				"description": "You perform ${hitCount} attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On use, gives you +${preHitEffect0modValue0}% Max Hit for each 1% of Damage Reduction the Enemy has for ${preHitEffect0turns} of your turns. Avoidable.",
-				"descriptionGenerator": "<Attacker> perform <count> attacks that deal <damage> over <duration>. On use, <prehitEffect>. <Avoidable>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "DarkBladePlayer",
-				"defaultChance": 20,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 100
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:DarkBladePlayer0"
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 1,
-				"attackInterval": 50,
-				"lifesteal": 0,
-				"name": "Dark Blade",
-				"description": "(MELEE ONLY) Perform a regular attack. On a hit, gives you +${onHitEffect0modValue0}% Max Hit and -${onHitEffect0modValue1}% Damage Reduction that stacks up to ${onHitEffect0maxStacks} times. Avoidable.",
-				"descriptionGenerator": "(MELEE ONLY) Perform a regular attack. On a hit, <hitEffect>. <Avoidable>.",
-				"attackTypes": [
-					"melee"
-				],
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "SpectralIceBlades",
-				"defaultChance": 30,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 160
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:Frostburn",
-						"initialParams": [
-							{
-								"name": "turns",
-								"value": 15
-							}
-						]
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 8,
-				"attackInterval": 75,
-				"lifesteal": 0,
-				"name": "Spectral Ice Blades",
-				"description": "You summon spectral ice swords dealing ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, gives the enemy Frostburn for ${onHitEffect0turns} of the enemy's turns. Avoidable.",
-				"descriptionGenerator": "<Attacker> summon spectral ice swords dealing <damage> <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>."
-			},
-			{
-				"id": "SpinningAxePlayer",
-				"defaultChance": 50,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 120
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:Bleed1600"
-					}
-				],
-				"cantMiss": true,
-				"attackCount": 18,
-				"attackInterval": 50,
-				"lifesteal": 0,
-				"name": "Spinning Axe",
-				"description": "You swing your axe around in a circle slashing through everything it hits, dealing ${attackDamageMaxValue0}% of your normal damage damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Bleed that deals ${onHitEffect0DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect0duration}s. Unavoidable.",
-				"descriptionGenerator": "<Attacker> swing your axe around in a circle slashing through everything it hits, dealing <damage> damage <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "HastyAssaultPlayer",
-				"defaultChance": 100,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 100
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:HastyAssaultPlayer0"
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 1,
-				"attackInterval": 50,
-				"lifesteal": 0,
-				"name": "Hasty Assault",
-				"description": "Perform a regular attack. On a hit, gives you -${onHitEffect0modValue0}% Attack Interval and -20% Max Hit that stacks up to ${onHitEffect0maxStacks} times.",
-				"descriptionGenerator": "Perform a regular attack. On a hit, <hitEffect>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "MeteorSwing",
-				"defaultChance": 30,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 1500
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:Burn",
-						"chance": 100
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 1,
-				"attackInterval": 50,
-				"lifesteal": 0,
-				"name": "Meteor Swing",
-				"description": "You cleave down against the enemy with the power of a crashing meteor, dealing ${attackDamageMaxValue0}% of your normal damage. On a hit, inflicts Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s. Avoidable.",
-				"descriptionGenerator": "<Attacker> cleave down against <target> with the power of a crashing meteor, dealing <damage>. On a hit, <hitEffect>. <Avoidable>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "MeteorSwing2",
-				"defaultChance": 30,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 3000
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:Burn",
-						"chance": 100,
-						"initialParam": [
-							{
-								"name": "percent",
-								"value": 300
-							}
-						]
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 1,
-				"attackInterval": 50,
-				"lifesteal": 0,
-				"name": "Meteor Swing",
-				"description": "You cleave down against the enemy with the power of a crashing meteor, dealing ${attackDamageMaxValue0}% of your normal damage. On a hit, inflicts Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s. Avoidable.",
-				"descriptionGenerator": "<Attacker> cleave down against <target> with the power of a crashing meteor, dealing <damage>. On a hit, <hitEffect>. <Avoidable>.",
-				"usesRunesPerProc": false
-			},
       {
         "id": "ForesightPlayer",
         "defaultChance": 50,
@@ -8132,229 +7536,6 @@
         "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your normal damage. On a hit, gives you +${onHitEffect0modValue0}% Accuracy Rating and +${onHitEffect0modValue1}% Global Evasion for ${onHitEffect0turns} of your turns.",
         "descriptionGenerator": "An <avoidable> attack that deals damage equal to <damage>. On a hit, <hitEffect>.",
         "usesRunesPerProc": false
-      },
-      {
-        "id": "HeatedFury",
-        "defaultChance": 30,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 200,
-            "attackCount": 0
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 350,
-            "attackCount": 1
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 360,
-            "attackCount": 2
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 420,
-            "attackCount": 3
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Burn",
-            "chance": 100
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Heated Fury",
-        "description": "You furiously strike at the enemy ${hitCount} times over ${duration}s, dealing ${attackDamageMaxValue0}% of your normal damage on the 1st attack, ${attackDamageMaxValue1}% of your normal damage on the 2nd attack, ${attackDamageMaxValue2}% of your normal damage on the 3rd attack, and ${attackDamageMaxValue3}% of your normal damage on the 4th attack. On a hit, inflicts Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s. Avoidable",
-        "descriptionGenerator": "<Attacker> furiously strike at <target> <count> times over <duration>, dealing <damage>. On a hit, <hitEffect>. <Avoidable>"
-      },
-      {
-        "id": "AgileWingsPlayer",
-        "defaultChance": 30,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 200,
-            "attackCount": 0
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 350,
-            "attackCount": 1
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 500,
-            "attackCount": 2
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Bleed1600"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 3,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Agile Wings",
-        "description": "You aim at weak points and unleash a powerful combination attack, performing ${hitCount} avoidable strikes that deal ${attackDamageMaxValue0}% of your normal damage on the 1st attack, ${attackDamageMaxValue1}% of your normal damage on the 2nd attack, and ${attackDamageMaxValue2}% of your normal damage on the 3rd attack. On a hit, has a ${onHitEffect0chance}% chance to inflict Bleed that deals ${onHitEffect0DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "<Attacker> aim at weak points and unleash a powerful combination attack, performing <count> <avoidable> strikes that deal <damage>. On a hit, <hitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "GhostlyScimitarPlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 250
-          },
-          {
-            "damageType": "Custom",
-            "character": "Target",
-            "maxRoll": "MaxHP",
-            "maxPercent": 100,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Ghostly Scimitar",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage and ${attackDamageMaxValue1}% of the enemy's max hitpoints.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "EradicatingBlast",
-        "defaultChance": 60,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 120
-          }
-        ],
-        "prehitEffects": [
-          {
-            "effectID": "BGSCheat:EradicatingBlast0"
-          }
-        ],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 15,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Eradicating Blast",
-        "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. Gives the enemy +${preHitEffect0modValue0}% Max Hit and +${preHitEffect0modValue1}% Max Hit for each 1% of Target current Hitpoints remaining for ${preHitEffect0turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals damage equal to <damage> <count> times over <duration>. <PrehitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "AbyssalDoubleStrike",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:AbyssalDoubleStrike0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Abyssal Double Strike",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, gives the enemy -${onHitEffect0modValue0}% Maximum Hit for ${onHitEffect0turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "DampenField",
-        "defaultChance": 40,
-        "damage": [],
-        "prehitEffects": [
-          {
-            "effectID": "BGSCheat:DampenField"
-          }
-        ],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "canNormalAttack": true,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Dampen Field",
-        "description": "Gives the enemy +${preHitEffect0modValue0-0}% ${preHitEffect0modResistanceName0-0} and +${preHitEffect0modValue1}% Global Evasion for ${preHitEffect0turns} of your turns. If the buff is already active, perform a regular attack instead.",
-        "descriptionGenerator": "<PrehitEffect>. If the buff is already active, perform a regular attack instead."
-      },
-      {
-        "id": "HollowDoomPlayer",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Laceration"
-          },
-          {
-            "effectID": "BGSCheat:Blight"
-          },
-          {
-            "effectID": "BGSCheat:Fear"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 150,
-        "lifesteal": 0,
-        "name": "Hollow Doom",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, inflicts a stack of Laceration, inflicts Blight, and applies Fear for ${onHitEffect2turns} turn.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "NullAndCleanse",
-        "defaultChance": 30,
-        "damage": [],
-        "prehitEffects": [
-          {
-            "effectID": "BGSCheat:NullAndCleanse0"
-          },
-          {
-            "effectID": "BGSCheat:NullAndCleanse1"
-          },
-          {
-            "effectID": "BGSCheat:NullAndCleanse2"
-          }
-        ],
-        "onhitEffects": [],
-        "cantMiss": true,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Null and Cleanse",
-        "description": "Nulls the Target, disabling their ability to gain buffs or modifier effects for 10 turns. Also cleanses the Attacker, making them immune to debuffs and curses for 10 turns. Attacker also heals for 100% of their current HP.",
-        "descriptionGenerator": "Nulls the Target, disabling their ability to gain buffs or modifier effects for 10 turns. Also cleanses the Attacker, making them immune to debuffs and curses for 10 turns. Attacker also heals for 100% of their current HP.",
-        "usesRunesPerProc": false,
-        "canNormalAttack": true
       },
       {
         "id": "TidalWave",
@@ -8396,496 +7577,6 @@
         "description": "Launch a massive tidal wave, dealing ${attackDamageMaxValue0} + 50% of your max hit as damage ${hitCount} times which can't miss. Gives the enemy +${onHitEffect0modValue0}% Attack Interval for ${onHitEffect0turns} of the enemy's turns. Gives the enemy -${preHitEffect0modValue0}% Melee Evasion until the end of the fight.",
         "descriptionGenerator": "Launch a massive tidal wave, dealing <damage> damage <count> times which <canMiss>. <HitEffect>. On use, <prehitEffect>.",
         "usesRunesPerProc": false
-      },
-      {
-        "id": "StingingSilencePlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": false,
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 300
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Toxin"
-          },
-          {
-            "effectID": "BGSCheat:Silence"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Stinging Silence",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your max hit as damage ${hitCount} times over ${duration}s. On a hit, inflicts Toxin that deals ${onHitEffect0DamageMaxValue0}% of your base max hitpoints as damage over ${onHitEffect0duration}s and inflicts Silence, which prevents the enemy from performing special attacks for ${onHitEffect1turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "BrumeTaintedBlade",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 150
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Toxin",
-            "chance": 60
-          },
-          {
-            "effectID": "BGSCheat:Brume0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Brume Tainted Blade",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Toxin that deals ${onHitEffect0DamageMaxValue0}% of your base max hitpoints as damage over ${onHitEffect0duration}s and gives the enemy -${onHitEffect1modValue0}% Global Accuracy for ${onHitEffect1turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>.",
-        "attackTypes": [
-          "melee"
-        ]
-      },
-      {
-        "id": "BlightedSlashesPlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 90
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Blight",
-            "chance": 50
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 10,
-        "attackInterval": 60,
-        "lifesteal": 0,
-        "name": "Blighted Slashes",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Blight. Blight gives -${onHitEffect0modValue0}% Maximum Hit,-${onHitEffect0modValue1}% Global Accuracy,-${onHitEffect0modValue2}% Global Evasion every ${onHitEffect0interval}s (Stacks up to ${onHitEffect0maxStacks} times, removed at max stacks).",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "NullWave",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 120
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Nulled",
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 8
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 12,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Null Wave",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, prevents you from applying buffs or modifier effects to yourself for ${onHitEffect0turns} of your turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "BlightedFeathersPlayer",
-        "defaultChance": 25,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 100
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Blight"
-          },
-          {
-            "effectID": "BGSCheat:Bleed400"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 120,
-        "lifesteal": 0,
-        "name": "Blighted Feathers",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, inflicts Blight and inflicts Bleed that deals ${onHitEffect1DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect1duration}s. Blight gives -${onHitEffect0modValue0}% Maximum Hit,-${onHitEffect0modValue1}% Global Accuracy,-${onHitEffect0modValue2}% Global Evasion every ${onHitEffect0interval}s (Stacks up to ${onHitEffect0maxStacks} times, removed at max stacks).",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "BlazingShadowPlayer",
-        "defaultChance": 42,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 69
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Ablaze"
-          },
-          {
-            "effectID": "BGSCheat:BlazingShadow"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 30,
-        "attackInterval": 30,
-        "lifesteal": 0,
-        "name": "Shadow Blaze 420",
-        "description": "An avoidable attack that deals up to ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, inflicts Ablaze that deals ${onHitEffect0DamageMaxValue0}% of your max hit as damage over ${onHitEffect0duration}s and gives the enemy -${onHitEffect1modValue0}% Global Evasion for ${onHitEffect1turns} of your turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals up to <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "GloomShadowstrike",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 400
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Fear",
-            "chance": 100
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Gloom Shadowstrike",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage. On a hit, has a ${onHitEffect0chance}% chance to apply Fear for ${onHitEffect0turns} turn.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>. On a hit, <hitEffect>.",
-        "attackTypes": [
-          "melee"
-        ]
-      },
-      {
-        "id": "OpenWoundsPlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 320
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Laceration",
-            "initialParams": [
-              {
-                "name": "stacksToAdd",
-                "value": 10
-              },
-              {
-                "name": "maxStacks",
-                "value": 100
-              }
-            ]
-          },
-          {
-            "effectID": "BGSCheat:Bleed400"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 3,
-        "attackInterval": 300,
-        "lifesteal": 0,
-        "name": "Open Wounds",
-        "description": "An avoidable attack that deals up to ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, inflicts ${onHitEffect0stacks} stacks of Laceration and inflicts Bleed that deals ${onHitEffect1DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect1duration}s. Laceration deals damage equal to ${onHitEffect0percent}% of your max hit per stack (Stacks up to ${onHitEffect0maxStacks} times) every ${onHitEffect0interval}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals up to <damage> <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "MalevolentBlightPlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 100
-          }
-        ],
-        "prehitEffects": [
-          {
-            "effectID": "BGSCheat:MalevolentBlight"
-          }
-        ],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Blight"
-          },
-          {
-            "effectID": "melvorItA:Toxin"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 9,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Malevolent Blight",
-        "description": "An avoidable attack that deals up to ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. Gives you +${preHitEffect0modValue0}% Toxin lifesteal for ${preHitEffect0turns} of your turns. On a hit, inflicts Blight and inflicts Toxin that deals ${onHitEffect1DamageMaxValue0}% of your base max hitpoints as damage over ${onHitEffect1duration}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals up to <damage> <count> times over <duration>. <PrehitEffect>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "MarkOfTheVoidPlayer",
-        "defaultChance": 30,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 100
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Voidburst",
-            "initialParams": [
-              {
-                "name": "percent",
-                "value": 200
-              },
-              {
-                "name": "maxStacks",
-                "value": 2
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 9,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Mark of the Void",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, inflicts ${onHitEffect0stacks} stack of Voidburst. Voidburst stacks up to ${onHitEffect0maxStacks} times. Upon reaching maximum stacks, they take damage equal to ${onHitEffect0percent}% of your base max hit.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "RavenousHungerPlayer",
-        "defaultChance": 10,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 200
-          }
-        ],
-        "prehitEffects": [
-          {
-            "effectID": "BGSCheat:RavenousHunger"
-          }
-        ],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Ravenous Hunger",
-        "description": "Perform a regular attack. Gives you -${preHitEffect0modValue0}% Attack Interval and +${preHitEffect0modValue1}% Lifesteal for ${preHitEffect0turns} of your turns.",
-        "descriptionGenerator": "Perform a regular attack. <PrehitEffect>."
-      },
-      {
-        "id": "SilentTanglePlayer",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 150
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:SilentTangle"
-          },
-          {
-            "effectID": "BGSCheat:Silence"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 10,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Silent Tangle",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your max hit as damage ${hitCount} times over ${duration}s. On a hit, gives the enemy -${onHitEffect0modValue0}% Maximum Hit for ${onHitEffect0turns} of the enemy's turns and inflicts Silence, which prevents the enemy from performing special attacks for ${onHitEffect1turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "WitheringDoubleCut",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 420
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Wither",
-            "chance": 50
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 2,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Withering Double Cut",
-        "description": "Perform ${hitCount} avoidable attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Wither which gives the enemy -${onHitEffect0modValue0}% ${onHitEffect0modResistanceName0} and -${onHitEffect0modValue1}% Global Evasion that stacks up to ${onHitEffect0maxStacks} times until the end of the fight",
-        "descriptionGenerator": "Perform <count> <avoidable> attacks that deal <damage> over <duration>s. On a hit, <hitEffect>",
-        "attackTypes": [
-          "melee"
-        ]
-      },
-      {
-        "id": "NetherSlumberStrikes",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": true,
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 600,
-            "minRoll": "MinHit",
-            "minPercent": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Sleep",
-            "chance": 5
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 6,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Nether Slumber Strikes",
-        "description": "Perform ${hitCount} avoidable attacks that deal ${attackDamageMinValue0}% of your min hit to ${attackDamageMaxValue0}% of your max hit over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply sleep for ${onHitEffect0turns} turn.",
-        "descriptionGenerator": "Perform <count> <avoidable> attacks that deal <damage> over <duration>. On a hit, <hitEffect>.",
-        "attackTypes": [
-          "melee"
-        ]
-      },
-      {
-        "id": "Lacerate",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 140
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorItA:Laceration",
-            "initialParams": [
-              {
-                "name": "stacksToAdd",
-                "value": 2
-              },
-              {
-                "name": "maxStacks",
-                "value": 50
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Lacerate",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage. On a hit, inflicts ${onHitEffect0stacks} stacks of Laceration. Laceration deals damage equal to ${onHitEffect0percent}% of your max hit per stack (Stacks up to ${onHitEffect0maxStacks} times) every ${onHitEffect0interval}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "Lacerate2",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Laceration",
-            "initialParams": [
-              {
-                "name": "stacksToAdd",
-                "value": 4
-              },
-              {
-                "name": "maxStacks",
-                "value": 100
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Lacerate",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage. On a hit, inflicts ${onHitEffect0stacks} stacks of Laceration. Laceration deals damage equal to ${onHitEffect0percent}% of your max hit per stack (Stacks up to ${onHitEffect0maxStacks} times) every ${onHitEffect0interval}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "SilentSurgePlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Silence"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Silent Surge",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, inflicts Silence, which prevents the enemy from performing special attacks for ${onHitEffect0turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
       },
       {
         "id": "Stormsnap",
@@ -8933,40 +7624,6 @@
         "description": "Perform a regular attack. On a hit, inflicts Bleed that deals ${onHitEffect0DamageMaxValue0} and ${onHitEffect0DamageMaxValue1}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s.",
         "descriptionGenerator": "Perform a regular attack. On a hit, <hitEffect>.",
         "usesRunesPerProc": false,
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "CrystalShot",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 500
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Crystallize",
-            "chance": 25,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 400,
-        "lifesteal": 0,
-        "name": "Crystal Cleave",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage. On a hit, there is a 5% chance apply Crystallization for 1 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>. On a hit, there is a 5% chance apply Crystallization for 1 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-        "usesRunesPerProc": true,
         "attackTypes": [
           "ranged"
         ]
@@ -9072,58 +7729,6 @@
         "description": "The enemy fires ${hitCount} unavoidable razor sharp feathers at you, dealing ${attackDamageMaxValue0}% of the enemy's normal damage on the 1st attack, ${attackDamageMaxValue1}% of the enemy's normal damage on the 2nd attack, ${attackDamageMaxValue2}% of the enemy's normal damage on the 3rd attack, and ${attackDamageMaxValue3}% of the enemy's normal damage on the 4th attack. On a hit, has a ${onHitEffect0chance}% chance to inflict Bleed that deals ${onHitEffect0DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect0duration}s.",
         "descriptionGenerator": "<Attacker> fires <count> <avoidable> razor sharp feathers at <target>, dealing <damage>. On a hit, <hitEffect>.",
         "usesRunesPerProc": false
-      },
-      {
-        "id": "MeteorShot",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 75,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Meteor Shot",
-        "description": "(RANGED ONLY) An avoidable attack that splits into ${hitCount} shooting stars, that deal damage equal to ${attackDamageMaxValue0}% of your max hit each over ${duration}s.",
-        "descriptionGenerator": "(RANGED ONLY) An <avoidable> attack that splits into <count> shooting stars, that deal damage equal to <damage> each over <duration>.",
-        "usesRunesPerProc": false,
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "MeteorShot2",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 100,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 12,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Meteor Shot",
-        "description": "(RANGED ONLY) An avoidable attack that splits into ${hitCount} shooting stars, that deal damage equal to ${attackDamageMaxValue0}% of your max hit each over ${duration}s.",
-        "descriptionGenerator": "(RANGED ONLY) An <avoidable> attack that splits into <count> shooting stars, that deal damage equal to <damage> each over <duration>.",
-        "usesRunesPerProc": false,
-        "attackTypes": [
-          "ranged"
-        ]
       },
       {
         "id": "Firebreathing",
@@ -9262,389 +7867,6 @@
         "usesRunesPerProc": false
       },
       {
-        "id": "CrystalTomb",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 300
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Stun",
-            "chance": 35,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 4
-              }
-            ]
-          },
-          {
-            "effectID": "BGSCheat:Crystallize",
-            "chance": 25,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Crystal Tomb",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage. Has a ${onHitEffect0chance}% chance to apply stun for ${onHitEffect0turns} turns and there is a 5% chance apply Crystallization for 1 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>. <HitEffect>. On a hit, there is a 5% chance apply Crystallization for 1 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-        "usesRunesPerProc": true
-      },
-      {
-        "id": "PoisonPods",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Poison",
-            "chance": 100
-          },
-          {
-            "effectID": "BGSCheat:DeadlyPoison",
-            "chance": 100
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 10,
-        "attackInterval": 500,
-        "lifesteal": 0,
-        "name": "Poison Pods",
-        "description": "You hurl large pods filled with poisonous gas at the enemy that burst open into a noxious cloud of gas that deals damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, inflicts Poison that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s. Avoidable.",
-        "descriptionGenerator": "<Attacker> hurl large pods filled with poisonous gas at <target> that burst open into a noxious cloud of gas that deals damage equal to <damage> <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "GiantFireball",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Burn",
-            "chance": 50
-          },
-          {
-            "effectID": "BGSCheat:Ablaze",
-            "chance": 50
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 500,
-        "lifesteal": 0,
-        "name": "Giant Fireball",
-        "description": "You fire an enormous fireball at the enemy dealing damage equal to ${attackDamageMaxValue0}% of your max hit. On a hit, has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s. Avoidable.",
-        "descriptionGenerator": "<Attacker> fire an enormous fireball at <target> dealing damage equal to <damage>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "ThunderStrike",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Stun",
-            "chance": 60,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 500,
-        "lifesteal": 0,
-        "name": "Thunder Strike",
-        "description": "You summon a bolt of lightning from the skies that strike the enemy, dealing damage equal to ${attackDamageMaxValue0}% of your max hit. On a hit, has a ${onHitEffect0chance}% chance to apply stun for ${onHitEffect0turns} turn. Avoidable.",
-        "descriptionGenerator": "<Attacker> summon a bolt of lightning from the skies that strike <target>, dealing damage equal to <damage>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "MeteorShowerArchaic",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 100
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Burn",
-            "chance": 30
-          },
-          {
-            "effectID": "BGSCheat:Frostburn",
-            "chance": 30
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Meteor Shower",
-        "description": "You summon a swarm of small meteors in the sky which shower down upon the enemy, dealing damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s. Avoidable.",
-        "descriptionGenerator": "<Attacker> summon a swarm of small meteors in the sky which shower down upon <target>, dealing damage equal to <damage> <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "TsunamiArchaic",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 100
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 50
-              },
-              {
-                "name": "turns",
-                "value": 5
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Tsunami",
-        "description": "You conjure immense waves that crash into the enemy, dealing damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, gives the enemy +${onHitEffect0modValue0}% Attack Interval for ${onHitEffect0turns} of the enemy's turns. Avoidable.",
-        "descriptionGenerator": "<Attacker> conjure immense waves that crash into <target>, dealing damage equal to <damage> <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "NaturesBloom",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 100
-          },
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "PoisonedMaxHit",
-            "maxPercent": 150
-          }
-        ],
-        "prehitEffects": [
-          {
-            "effectID": "BGSCheat:NaturesBloom0"
-          }
-        ],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Poison",
-            "chance": 100
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 12,
-        "attackInterval": 250,
-        "lifesteal": 0,
-        "name": "Natures Bloom",
-        "description": "You wrap yourself in protective leaves that lash out at the enemy dealing damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. Damage is doubled if the enemy is poisoned. On a hit, has a ${onHitEffect0chance}% chance to inflict Poison that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s. On use, gives Regen that heals ${preHitEffect0DamageMaxValue0}% of your current hitpoints over ${preHitEffect0duration}s. Avoidable.",
-        "descriptionGenerator": "<Attacker> wrap yourself in protective leaves that lash out at <target> dealing damage equal to ${attackDamageMaxValue0}% of your max hit <count> times over <duration>. Damage is doubled if <target> is poisoned. On a hit, <hitEffect>. On use, <prehitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "InfernalPower",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "BurnMaxHit100",
-            "maxPercent": 180
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Burn",
-            "chance": 100
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 6,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Infernal Power",
-        "description": "You create fractures in the earth that pursue the enemy and unleash lava from below. Deals damage equal to ${attackDamageMaxValue0}% + 100% if the enemy is burning of your max hit ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s. Avoidable.",
-        "descriptionGenerator": "<Attacker> create fractures in the earth that pursue <target> and unleash lava from below. Deals damage equal to ${attackDamageMaxValue0}% + 100% if <target> is burning of your max hit <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "Soulash",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 150
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Stun",
-            "chance": 60,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 6,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Soulash",
-        "description": "You create ghostly tendrils that lash out at the enemy dealing damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply stun for ${onHitEffect0turns} turn. Avoidable.",
-        "descriptionGenerator": "<Attacker> create ghostly tendrils that lash out at <target> dealing damage equal to <damage> <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "DragonStormCall",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Stun",
-            "chance": 50,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Dragon Storm Call",
-        "description": "You summon a dragon made of dark clouds that crackles with thunder. It discharges lightning onto the enemy dealing damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply stun for ${onHitEffect0turns} turn. Avoidable.",
-        "descriptionGenerator": "<Attacker> summon a dragon made of dark clouds that crackles with thunder. It discharges lightning onto <target> dealing damage equal to <damage> <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "SlicingMaelstromArchaic",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 150
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Bleed400"
-          },
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 75
-              },
-              {
-                "name": "turns",
-                "value": 6
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 6,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Slicing Maelstrom",
-        "description": "You conjure a maelstrom that slices through the enemy's armor. It performs ${hitCount} avoidable attacks that deal ${attackDamageMaxValue0}% of your max hit. On a hit, inflicts Bleed that deals ${onHitEffect0DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect0duration}s and gives the enemy +${onHitEffect1modValue0}% Attack Interval for ${onHitEffect1turns} of the enemy's turns.",
-        "descriptionGenerator": "<Attacker> conjure a maelstrom that slices through <tarpos> armor. It performs <count> <avoidable> attacks that deal <damage>. On a hit, <hitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
         "id": "BruteForce",
         "defaultChance": 20,
         "damage": [
@@ -9663,173 +7885,6 @@
         "description": "Perform an attack that deals up to ${attackDamageMaxValue0}% of your normal damage.",
         "descriptionGenerator": "Perform an attack that does <damage>.",
         "usesRunesPerProc": false
-      },
-      {
-        "id": "AbyssalIncantation",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:AbyssalIncantation0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Abyssal Incantation",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage. On a hit, gives the enemy -${onHitEffect0modValue0}% Maximum Hit for ${onHitEffect0turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "BrumeExplosiveBlasts",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 110
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Toxin",
-            "chance": 50
-          },
-          {
-            "effectID": "BGSCheat:Brume0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Brume Explosive Blasts",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Toxin that deals ${onHitEffect0DamageMaxValue0}% of your base max hitpoints as damage over ${onHitEffect0duration}s and gives the enemy -${onHitEffect1modValue0}% Global Accuracy for ${onHitEffect1turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>.",
-        "attackTypes": [
-          "magic"
-        ]
-      },
-      {
-        "id": "ToxicFumesPlayer",
-        "defaultChance": 25,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 200
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Toxin"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Toxic Fumes",
-        "description": "Perform a regular attack. On a hit, inflicts Toxin that deals ${onHitEffect0DamageMaxValue0}% of your base max hitpoints as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "Perform a regular attack. On a hit, <hitEffect>."
-      },
-      {
-        "id": "GloomCascade",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 100
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Fear",
-            "chance": 25
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Gloom Cascade",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply Fear for ${onHitEffect0turns} turn.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>.",
-        "attackTypes": [
-          "magic"
-        ]
-      },
-      {
-        "id": "WitheringBeam",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": true,
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 44,
-            "minRoll": "MinHit",
-            "minPercent": 150
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Wither",
-            "chance": 30
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Withering Beam",
-        "description": "Perform ${hitCount} avoidable attacks that deal ${attackDamageMinValue0}% of your min hit to ${attackDamageMaxValue0}% of your max hit over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Wither which gives the enemy -${onHitEffect0modValue0}% ${onHitEffect0modResistanceName0} and -${onHitEffect0modValue1}% Global Evasion that stacks up to ${onHitEffect0maxStacks} times until the end of the fight",
-        "descriptionGenerator": "Perform <count> <avoidable> attacks that deal <damage> over <duration>s. On a hit, <hitEffect>",
-        "attackTypes": [
-          "magic"
-        ]
-      },
-      {
-        "id": "NetherDreamOrb",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": true,
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 180,
-            "minRoll": "MinHit",
-            "minPercent": 150
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Sleep",
-            "chance": 30
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Nether Dream Orb",
-        "description": "Perform ${hitCount} avoidable attacks that deal ${attackDamageMinValue0}% of your min hit to ${attackDamageMaxValue0}% of your max hit over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply sleep for ${onHitEffect0turns} turn",
-        "descriptionGenerator": "Perform <count> <avoidable> attacks that deal <damage> over <duration>s. On a hit, <hitEffect>",
-        "attackTypes": [
-          "magic"
-        ]
       },
       {
         "id": "Volley",
@@ -9918,791 +7973,6 @@
         "usesRunesPerProc": true
       },
       {
-        "id": "ElderwoodPoison",
-        "defaultChance": 5,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 135
-          },
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "PoisonedMaxHit",
-            "maxPercent": 60
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Poison",
-            "chance": 50
-          },
-          {
-            "effectID": "melvorTotH:ElderwoodPoison1"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Elderwood Poison",
-        "description": "Your bow imbues your arrows with a sickly poison. You perform ${hitCount} attacks that deal ${attackDamageMaxValue0}% of your normal damage plus ${attackDamageMaxValue1}% of your max hit if the target is poisoned over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Poison that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s and gives the enemy -${onHitEffect1modValue0}% Attack Interval, -${onHitEffect1modValue1}% Max Hit, and -${onHitEffect1modValue2}% Maximum Hitpoints for ${onHitEffect1turns} of the enemy's turns. Avoidable.",
-        "descriptionGenerator": "<AttPos> bow imbues your arrows with a sickly poison. You perform <count> attacks that deal <damage> over <duration>. On a hit, <hitEffect>. <Avoidable>."
-      },
-      {
-        "id": "RevenantHunter",
-        "defaultChance": 5,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 250
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:RevenantHunter0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Revenant Hunter",
-        "description": "You perform ${hitCount} attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On a hit, gives the enemy -${onHitEffect0modValue0}% Max Hit that stacks up to ${onHitEffect0maxStacks} times. Avoidable.",
-        "descriptionGenerator": "<Attacker> perform <count> attacks that deal <damage> over <duration>. On a hit, <hitEffect>. <Avoidable>."
-      },
-      {
-        "id": "CarrionMarker",
-        "defaultChance": 5,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 150
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:CarrionMarker0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Carrion Marker",
-        "description": "You perform ${hitCount} attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On a hit, gives the enemy -${onHitEffect0modValue0}% Global Evasion, -${onHitEffect0modValue1}% Global Accuracy, and +${onHitEffect0modValue2}% of Current HP taken as damage per Attack that stacks up to ${onHitEffect0maxStacks} times. Avoidable.",
-        "descriptionGenerator": "<Attacker> perform <count> attacks that deal <damage> over <duration>. On a hit, <hitEffect>. <Avoidable>."
-      },
-      {
-        "id": "ThornedPower",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 150
-          },
-          {
-            "damageType": "Custom",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 600,
-            "character": "Target"
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": true,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Thorned Power",
-        "description": "Perform an attack that deals ${attackDamageMaxValue0}% of your normal damage and ${attackDamageMaxValue1}% of the enemy's max hit damage. Unavoidable.",
-        "descriptionGenerator": "Perform an attack that deals <damage> damage. <Avoidable>."
-      },
-      {
-        "id": "TorrentialBlast",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 175
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": true,
-        "attackCount": 6,
-        "attackInterval": 300,
-        "lifesteal": 0,
-        "name": "Torrential Blast",
-        "description": "You fire a bolt that transforms into a torrent of water dealing ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. Unavoidable.",
-        "descriptionGenerator": "<Attacker> fire a bolt that transforms into a torrent of water dealing <damage> <count> times over <duration>. <Avoidable>."
-      },
-      {
-        "id": "EtheralArrows",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 120
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:EtheralArrows0"
-          }
-        ],
-        "cantMiss": true,
-        "attackCount": 6,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Ethereal Arrows",
-        "description": "You conjure shimmering ethereal arrows and fire them at the enemy, dealing ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, gives the enemy -${onHitEffect0modValue0}% Damage Reduction that stacks up to ${onHitEffect0maxStacks} times. Unavoidable.",
-        "descriptionGenerator": "<Attacker> conjure shimmering ethereal arrows and fire them at <target>, dealing <damage> <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "BlightedTendrilGrasp",
-        "defaultChance": 30,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 100
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Toxin"
-          },
-          {
-            "effectID": "BGSCheat:Blight"
-          },
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 30
-              },
-              {
-                "name": "turns",
-                "value": 2
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 500,
-        "lifesteal": 0,
-        "name": "Blighted Tendril Grasp",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, inflicts Toxin that deals ${onHitEffect0DamageMaxValue0}% of the enemy's base max hitpoints as damage over ${onHitEffect0duration}s, inflicts Blight and inflicts a Slow that gives you +${onHitEffect2magnitude}% Attack Interval for ${onHitEffect2turns} of your turns. Blight gives -${onHitEffect1modValue0}% Maximum Hit,-${onHitEffect1modValue1}% Global Accuracy,-${onHitEffect1modValue2}% Global Evasion every ${onHitEffect1interval}s (Stacks up to ${onHitEffect1maxStacks} times, removed at max stacks).",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "BlightedTendrilGrasp2",
-        "defaultChance": 30,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 120
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Toxin"
-          },
-          {
-            "effectID": "BGSCheat:Blight"
-          },
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 60
-              },
-              {
-                "name": "turns",
-                "value": 5
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 6,
-        "attackInterval": 300,
-        "lifesteal": 0,
-        "name": "Blighted Tendril Grasp",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, inflicts Toxin that deals ${onHitEffect0DamageMaxValue0}% of the enemy's base max hitpoints as damage over ${onHitEffect0duration}s, inflicts Blight and inflicts a Slow that gives you +${onHitEffect2magnitude}% Attack Interval for ${onHitEffect2turns} of your turns. Blight gives -${onHitEffect1modValue0}% Maximum Hit,-${onHitEffect1modValue1}% Global Accuracy,-${onHitEffect1modValue2}% Global Evasion every ${onHitEffect1interval}s (Stacks up to ${onHitEffect1maxStacks} times, removed at max stacks).",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "BrumeInfusedTips",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 320
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Toxin",
-            "chance": 50
-          },
-          {
-            "effectID": "BGSCheat:Brume0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Brume Infused Tips",
-        "description": "(RANGED ONLY) An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage. On a hit, has a ${onHitEffect0chance}% chance to inflict Toxin that deals ${onHitEffect0DamageMaxValue0}% of your base max hitpoints as damage over ${onHitEffect0duration}s and gives the enemy -${onHitEffect1modValue0}% Global Accuracy for ${onHitEffect1turns} of the enemy's turns.",
-        "descriptionGenerator": "(RANGED ONLY) An <avoidable> attack that deals <damage>. On a hit, <hitEffect>.",
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "EchoingAssault",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 70
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 50
-              },
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 6,
-        "attackInterval": 250,
-        "lifesteal": 0,
-        "name": "Echoing Assault",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's max hit as damage ${hitCount} times over ${duration}s. On a hit, inflicts a Slow that gives you +${onHitEffect0magnitude}% Attack Interval for ${onHitEffect0turns} of your turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "SeismicTossPlayer",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 350
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Stun",
-            "chance": 50
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Seismic Toss",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your Max Hit as damage. On a hit, 50% chance to apply a Stun for 1 Turn.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>. <OnhitEffect>"
-      },
-      {
-        "id": "PhantomShiftPlayer",
-        "defaultChance": 10,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": false,
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 300
-          }
-        ],
-        "prehitEffects": [
-          {
-            "effectID": "melvorItA:PhantomShift"
-          }
-        ],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Phantom Shift",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your max hit. Gives you +${preHitEffect0modValue0}% Global Evasion for ${preHitEffect0turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>. <PrehitEffect>."
-      },
-      {
-        "id": "VoidVortexPlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 50
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 50
-              },
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          },
-          {
-            "effectID": "BGSCheat:Voidburst"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 150,
-        "lifesteal": 0,
-        "name": "Void Vortex",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your max hit as damage ${hitCount} times over ${duration}s. On a hit, inflicts a Slow that gives the enemy +${onHitEffect0magnitude}% Attack Interval for ${onHitEffect0turns} of the enemy's turns and inflicts ${onHitEffect1stacks} stack of Voidburst. Voidburst stacks up to ${onHitEffect1maxStacks} times. Upon reaching maximum stacks, they take damage equal to ${onHitEffect1percent}% of your base max hitpoints.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "VoidVortexPlayer2",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 60
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 100
-              },
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          },
-          {
-            "effectID": "BGSCheat:Voidburst"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 12,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Void Vortex",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your max hit as damage ${hitCount} times over ${duration}s. On a hit, inflicts a Slow that gives the enemy +${onHitEffect0magnitude}% Attack Interval for ${onHitEffect0turns} of the enemy's turns and inflicts ${onHitEffect1stacks} stack of Voidburst. Voidburst stacks up to ${onHitEffect1maxStacks} times. Upon reaching maximum stacks, they take damage equal to ${onHitEffect1percent}% of your base max hitpoints.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "GloomDoubleshot",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 125
-          }
-        ],
-        "prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:Fear",
-						"chance": 25,
-						"initialParams": [
-							{
-								"name": "initialStacks",
-								"value": 3
-							},
-							{
-								"name": "turns",
-								"value": 5
-							}
-						]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 2,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Gloom Doubleshot",
-        "description": "(RANGED ONLY) An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply Fear for ${onHitEffect0turns} turn.",
-        "descriptionGenerator": "(RANGED ONLY) An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>.",
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "GloomDoubleshot2",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 165
-          }
-        ],
-        "prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:Fear",
-						"chance": 50,
-						"initialParams": [
-							{
-								"name": "initialStacks",
-								"value": 10
-							},
-							{
-								"name": "turns",
-								"value": 10
-							}
-						]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 3,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Gloom Doubleshot",
-        "description": "(RANGED ONLY) An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply Fear for ${onHitEffect0turns} turn.",
-        "descriptionGenerator": "(RANGED ONLY) An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>.",
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "NetherDrowsingBolt",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": true,
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 400,
-            "minRoll": "MinHit",
-            "minPercent": 150
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Sleep",
-            "chance": 40
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 300,
-        "lifesteal": 0,
-        "name": "Nether Drowsing Bolt",
-        "description": "(RANGED ONLY) Perform ${hitCount} avoidable attacks that deal ${attackDamageMinValue0}% of your min hit to ${attackDamageMaxValue0}% of your max hit over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply sleep for ${onHitEffect0turns} turn",
-        "descriptionGenerator": "(RANGED ONLY) Perform <count> <avoidable> attacks that deal <damage> over <duration>. On a hit, <hitEffect>",
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "NetherDrowsingBolt2",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": true,
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 600,
-            "minRoll": "MinHit",
-            "minPercent": 250
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Sleep",
-            "chance": 100
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 300,
-        "lifesteal": 0,
-        "name": "Nether Drowsing Bolt",
-        "description": "(RANGED ONLY) Perform ${hitCount} avoidable attacks that deal ${attackDamageMinValue0}% of your min hit to ${attackDamageMaxValue0}% of your max hit over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply sleep for ${onHitEffect0turns} turn",
-        "descriptionGenerator": "(RANGED ONLY) Perform <count> <avoidable> attacks that deal <damage> over <duration>. On a hit, <hitEffect>",
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "FeatherStormPlayer",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 350,
-            "attackCount": 0
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 150,
-            "attackCount": 1
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 150,
-            "attackCount": 2
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 180,
-            "attackCount": 3
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Bleed400"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Feather Storm",
-        "description": "You fire ${hitCount} avoidable razor sharp feathers at the enemy, dealing ${attackDamageMaxValue0}% of your normal damage on the 1st attack, ${attackDamageMaxValue1}% of your normal damage on the 2nd attack, ${attackDamageMaxValue2}% of your normal damage on the 3rd attack, and ${attackDamageMaxValue3}% of your normal damage on the 4th attack. On a hit, has a ${onHitEffect0chance}% chance to inflict Bleed that deals ${onHitEffect0DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "<Attacker> fire <count> <avoidable> razor sharp feathers at <target>, dealing <damage>. On a hit, <hitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "AbyssalDoubleShot",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 90
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:AbyssalDoubleShot0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Abyssal Barrage",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, gives the enemy -${onHitEffect0modValue0}% Maximum Hit for ${onHitEffect0turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "AbyssalDoubleShot2",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 120
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:AbyssalDoubleShot0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Abyssal Barrage",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, gives the enemy -${onHitEffect0modValue0}% Maximum Hit for ${onHitEffect0turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "NecroticBeam",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 40
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 20,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Necrotic Beam",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>."
-      },
-      {
-        "id": "PsionicPulse",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 140
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Confusion",
-            "initialParams": [
-              {
-                "name": "initialStacks",
-                "value": 4
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 3,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Psionic Pulse",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, applies the Confusion Curse for 3 turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "PsionicPulse2",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 180
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Confusion",
-            "initialParams": [
-              {
-                "name": "initialStacks",
-                "value": 5
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Psionic Pulse",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, applies the Confusion Curse for 3 turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "WitheringBarrage",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 100
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Wither",
-            "chance": 50
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 3,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Withering Barrage",
-        "description": "(RANGED ONLY) Perform ${hitCount} avoidable attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Wither which gives the enemy -${onHitEffect0modValue0}% ${onHitEffect0modResistanceName0} and -${onHitEffect0modValue1}% Global Evasion that stacks up to ${onHitEffect0maxStacks} times until the end of the fight",
-        "descriptionGenerator": "(RANGED ONLY) Perform <count> <avoidable> attacks that deal <damage> over <duration>s. On a hit, <hitEffect>",
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "WitheringBarrage2",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 130
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Wither",
-						"chance": 50,
-						"initialParams": [
-							{
-								"name": "stacksToAdd",
-								"initialValue": 5
-							}
-						]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Withering Barrage",
-        "description": "(RANGED ONLY) Perform ${hitCount} avoidable attacks that deal ${attackDamageMaxValue0}% of your normal damage over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Wither which gives the enemy -${onHitEffect0modValue0}% ${onHitEffect0modResistanceName0} and -${onHitEffect0modValue1}% Global Evasion that stacks up to ${onHitEffect0maxStacks} times until the end of the fight",
-        "descriptionGenerator": "(RANGED ONLY) Perform <count> <avoidable> attacks that deal <damage> over <duration>s. On a hit, <hitEffect>",
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
         "id": "ReflectionPlayer",
         "defaultChance": 20,
         "damage": [
@@ -10770,643 +8040,6 @@
         "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hitpoints.",
         "descriptionGenerator": "An <avoidable> attack that deals damage equal to <damage>.",
         "usesRunesPerProc": false
-      },
-      {
-        "id": "Manipulate",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Target",
-            "maxRoll": "MaxHit",
-            "maxPercent": 200,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorAoD:Manipulate0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Manipulate",
-        "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hit. On a hit, disables all damage from your Attacks until the end of the attack",
-        "descriptionGenerator": "An <avoidable> attack that deals damage equal to <damage>. On a hit, disables all damage from your Attacks until the end of the attack",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "CrystalBoom",
-        "defaultChance": 15,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 160,
-            "attackCount": 0
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 90,
-            "attackCount": 1
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 120,
-            "attackCount": 2
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Crystallize",
-            "chance": 35,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 3,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Crystal Boom",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage on the 1st attack, ${attackDamageMaxValue1}% of your normal damage on the 2nd attack, and ${attackDamageMaxValue2}% of your normal damage on the 3rd attack. On a hit, there is a 6% chance apply Crystallization for 1 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>. On a hit, there is a 6% chance apply Crystallization for 1 Attack Turn (Target is stunned and takes +50% Damage during effect)",
-        "usesRunesPerProc": true
-      },
-      {
-        "id": "PiercingToxicStrike",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 110
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Poison",
-            "chance": 50
-          },
-          {
-            "effectID": "BGSCheat:DeadlyPoison",
-            "chance": 50
-          },
-          {
-            "effectID": "BGSCheat:Bleed1600"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Piercing Toxic Strike",
-        "description": "You jab the enemy with your poison tipped spear dealing ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Poison that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s; a ${onHitEffect1chance}% chance to inflict Deadly Poison that deals ${onHitEffect1DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect1duration}s and inflicts Bleed that deals ${onHitEffect2DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect2duration}s. Avoidable.",
-        "descriptionGenerator": "<Attacker> jab <target> with <attpos> poison tipped spear dealing <damage> <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>."
-      },
-      {
-        "id": "FeatheredFrenzy",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 60
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Laceration"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 7,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Feathered Frenzy",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, inflicts a stack of Laceration. Laceration deals damage equal to ${onHitEffect0percent}% of the enemy's max hit per stack (Stacks up to ${onHitEffect0maxStacks} times) every ${onHitEffect0interval}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "ToxicSwarm",
-        "defaultChance": 25,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 35
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Toxin"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 150,
-        "lifesteal": 0,
-        "name": "Toxic Swarm",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, inflicts Toxin that deals ${onHitEffect0DamageMaxValue0}% of the enemy's base max hitpoints as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "ToxicSwarm2",
-        "defaultChance": 25,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 45
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Toxin"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 10,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Toxic Swarm",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, inflicts Toxin that deals ${onHitEffect0DamageMaxValue0}% of the enemy's base max hitpoints as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "StoneBreath",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 45
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 16,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Stone Breath",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>."
-      },
-      {
-        "id": "ToxicBlastPlayer",
-        "defaultChance": 25,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": false,
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 120
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-						"effectID": "BGSCheat:Toxin",
-						"initialParams": [
-							{
-								"name": "percent",
-								"value": 400
-							}
-						]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Toxic Blast",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your max hit as damage. On a hit, inflicts Toxin that deals ${onHitEffect0DamageMaxValue0}% of your base max hitpoints as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage. On a hit, <hitEffect>."
-      },
-      {
-        "id": "ToxicBlastPlayer2",
-        "defaultChance": 25,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": false,
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 140
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-						"effectID": "BGSCheat:Toxin",
-						"initialParams": [
-							{
-								"name": "percent",
-								"value": 400
-							}
-						]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Toxic Blast",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your max hit as damage. On a hit, inflicts Toxin that deals ${onHitEffect0DamageMaxValue0}% of your base max hitpoints as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage. On a hit, <hitEffect>."
-      },
-      {
-        "id": "MutedMaelstrom",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 30
-          },
-          {
-            "damageType": "Custom",
-            "character": "Target",
-            "roll": false,
-            "maxRoll": "MaxHP",
-            "maxPercent": 30
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Silence"
-          },
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 60
-              },
-              {
-                "name": "turns",
-                "value": 2
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 30,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Muted Maelstrom",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's max hit and ${attackDamageMaxValue1}% of your max hitpoints ${hitCount} times over ${duration}s. On a hit, inflicts Silence, which prevents you from performing special attacks for ${onHitEffect0turns} of your turns, and inflicts a Slow that gives you +${onHitEffect1magnitude}% Attack Interval for ${onHitEffect1turns} of your turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "VoidblazeBurst",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 135
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Ablaze"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Voidblaze Burst",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, inflicts Ablaze that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hit as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "AbyssalWhirlwind",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 140
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Laceration"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 6,
-        "attackInterval": 150,
-        "lifesteal": 0,
-        "name": "Abyssal Whirlwind",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, inflicts a stack of Laceration. Laceration deals damage equal to ${onHitEffect0percent}% of the enemy's max hit per stack (Stacks up to ${onHitEffect0maxStacks} times) every ${onHitEffect0interval}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "VoidburstBarragePlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 130
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Voidburst"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Voidburst Barrage",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, inflicts ${onHitEffect0stacks} stack of Voidburst. Voidburst stacks up to ${onHitEffect0maxStacks} times. Upon reaching maximum stacks, they take damage equal to ${onHitEffect0percent}% of your base max hit.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "VoidfireCascadePlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 100,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Voidburst",
-            "initialParams": [
-              {
-                "name": "percent",
-                "value": 200
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Voidfire Cascade",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your max hit as damage ${hitCount} times over ${duration}s. On a hit, inflicts ${onHitEffect0stacks} stack of Voidburst. Voidburst stacks up to ${onHitEffect0maxStacks} times. Upon reaching maximum stacks, they take damage equal to ${onHitEffect0percent}% of your base max hit.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "HollowReap",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 125
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 250,
-        "lifesteal": 5,
-        "name": "Hollow Reap",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. Heals the enemy for ${lifesteal}% of the damage dealt.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. Heals <attacker> for <lifesteal> of the damage dealt."
-      },
-      {
-        "id": "TendrilBindPlayer",
-        "defaultChance": 10,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": false,
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 90
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Stun",
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 5
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 250,
-        "lifesteal": 0,
-        "name": "Tendril Bind",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, applies stun for ${onHitEffect0turns} turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "SilentSlashesPlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 160
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Silence",
-            "chance": 50
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Silent Slashes",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Silence, which prevents the enemy from performing special attacks for ${onHitEffect0turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "WitherBindingPlayer",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 150
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Wither"
-          },
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 50
-              },
-              {
-                "name": "turns",
-                "value": 5
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Wither Binding",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, inflicts Wither which gives the enemy -${onHitEffect0modValue0-0}% ${onHitEffect0modResistanceName0-0} and +${onHitEffect0modValue1}% Global Evasion that stacks up to ${onHitEffect0maxStacks} times until the end of the fight and inflicts a Slow that gives the enemy +${onHitEffect1magnitude}% Attack Interval for ${onHitEffect1turns} of the enemy's turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "WitherStabsPlayer",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 100
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Wither"
-          },
-          {
-            "effectID": "BGSCheat:Bleed400"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Wither Stabs",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, inflicts Wither which gives the enemy -${onHitEffect0modValue0-0}% ${onHitEffect0modResistanceName0-0} and -${onHitEffect0modValue1}% Global Evasion that stacks up to ${onHitEffect0maxStacks} times until the end of the fight and inflicts Bleed that deals ${onHitEffect1DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect1duration}s.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "VoidburstBeam",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 40,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Voidburst"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 10,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Voidburst Beam",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's max hit as damage ${hitCount} times over ${duration}s. On a hit, inflicts ${onHitEffect0stacks} stack of Voidburst. Voidburst stacks up to ${onHitEffect0maxStacks} times. Upon reaching maximum stacks, you take damage equal to ${onHitEffect0percent}% of the enemy's base max hitpoints.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage <count> times over <duration>. On a hit, <hitEffect>. <EffectMechanics>"
-      },
-      {
-        "id": "DevouringVoid",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 100
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Voidburst",
-            "initialParams": [
-              {
-                "name": "stacksToAdd",
-                "value": 2
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 4,
-        "attackInterval": 125,
-        "lifesteal": 100,
-        "name": "Devouring Void",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, inflicts ${onHitEffect0stacks} stacks of Voidburst. Heals the enemy for ${lifesteal}% of the damage dealt. Voidburst stacks up to ${onHitEffect0maxStacks} times. Upon reaching maximum stacks, you take damage equal to ${onHitEffect0percent}% of the enemy's base max hitpoints.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. On a hit, <hitEffect>. Heals <attacker> for <lifesteal> of the damage dealt. <EffectMechanics>"
-      },
-      {
-        "id": "EldritchBeam",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 35
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:EldritchCurse",
-            "chance": 50
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 20,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Eldritch Beam",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of the enemy's max hit as damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Eldritch Curse which disables your lifesteal and hitpoint regeneration for ${onHitEffect0turns} of your turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> as damage <count> times over <duration>. On a hit, <hitEffect>."
-      },
-      {
-        "id": "HollowReapPlayer",
-        "defaultChance": 40,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 135
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 8,
-        "attackInterval": 250,
-        "lifesteal": 5,
-        "name": "Hollow Reap",
-        "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. Heals you for ${lifesteal}% of the damage dealt.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> <count> times over <duration>. Heals <attacker> for <lifesteal> of the damage dealt."
       },
       {
         "id": "BladeEchoes",

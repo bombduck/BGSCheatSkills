@@ -260,18 +260,6 @@ export class Util {
 		return undefined;
 	}
 
-	static calcNumberValue(value, type, lv, mul, extraMul) {
-		let isInteger = (type & 0x1000) != 0;
-		let v = 0;
-		if ((type & 0x0FFF) == 1 && isNumber(lv)) v = lv * value;
-		else if ((type & 0x0FFF) == 2 && isNumber(mul)) v = mul * value;
-		else v = value;
-		if (isNumber(extraMul) && extraMul != 0) v = v * extraMul;
-
-		if (isInteger) v = (v >> 0);
-		return v;
-	}
-
 	static calcObjectValue(value, lv, mul, extraMul) {
 		let v = 0;
 		if (typeof (value.f) == "string")			//formula first
@@ -279,20 +267,20 @@ export class Util {
 		else {
 			if (isNumber(value.c))
 				v += value.c;
-			if (isNumber(value.lv) && isNumber(lv))
-				v += (value.lv * lv);
-			if (isNumber(value.mul) && isNumber(mul))
-				v += (value.mul * mul);
+			if (isNumber(value.v) && isNumber(lv))
+				v += (value.v * lv);
+			if (isNumber(value.u) && isNumber(mul))
+				v += (value.u * mul);
 		}
 
 		if (isNumber(extraMul) && extraMul != 0)
 			v *= extraMul;
 
-		if (isNumber(value.min) && v < value.min)
-			v = value.min;
-		if (isNumber(value.max) && v > value.max)
-			v = value.max;
-		if (value.int) v = (v >> 0);
+		if (isNumber(value.m) && v < value.m)
+			v = value.m;
+		if (isNumber(value.M) && v > value.M)
+			v = value.M;
+		if (value.i) v = (v >> 0);
 
 		return v;
 	}
@@ -304,8 +292,8 @@ export class Util {
 		let v = {};
 
 		if (isNumber(_a)) {
-			if ((type & 0x0FFF) == 1) v.lv = _a;
-			else if ((type & 0x0FFF) == 2) v.mul = _a;
+			if ((type & 0x0FFF) == 1) v.v = _a;
+			else if ((type & 0x0FFF) == 2) v.u = _a;
 			else v.c = _a;
 		}
 		else if (typeof (_a) == "string") {
@@ -315,46 +303,46 @@ export class Util {
 			if (typeof (_a[0]) == "string") {
 				v.f = _a[0];
 				if (isNumber(_a[1]))
-					v.min = _a[1];
+					v.m = _a[1];
 				if (isNumber(_a[2]))
-					v.max = _a[2];
+					v.M = _a[2];
 				if (_a[3] !== undefined)
-					v.int = _a[3];
+					v.i = _a[3];
 			}
 			else {
 				if (isNumber(_a[0]))
 					v.c = _a[0];
 				if (isNumber(_a[1]))
-					v.lv = _a[1];
+					v.v = _a[1];
 				if (isNumber(_a[2]))
-					v.mul = _a[2];
+					v.u = _a[2];
 				if (isNumber(_a[3]))
-					v.min = _a[3];
+					v.m = _a[3];
 				if (isNumber(_a[4]))
-					v.max = _a[4];
+					v.M = _a[4];
 				if (_a[5] !== undefined)
-					v.int = _a[5];
+					v.i = _a[5];
 			}
 		}
 		else {
 			if (isNumber(_a.f)) {
-				if ((type & 0x0FFF) == 1) v.lv = _a.f;
-				else if ((type & 0x0FFF) == 2) v.mul = _a.f;
+				if ((type & 0x0FFF) == 1) v.v = _a.f;
+				else if ((type & 0x0FFF) == 2) v.u = _a.f;
 				else v.c = _a.f;
 			}
 			else if (typeof (_a.f) == "string")
 				v.f = _a.f;
 			else {
 				if (_a.c !== undefined) v.c = _a.c;
-				if (_a.lv !== undefined) v.lv = _a.lv;
-				if (_a.mul !== undefined) v.mul = _a.mul;
+				if (_a.v !== undefined) v.v = _a.v;
+				if (_a.u !== undefined) v.u = _a.u;
 			}
-			if (_a.min !== undefined) v.min = _a.min;
-			if (_a.max !== undefined) v.max = _a.max;
-			if (_a.int !== undefined) v.int = _a.int;
+			if (_a.m !== undefined) v.m = _a.m;
+			if (_a.M !== undefined) v.M = _a.M;
+			if (_a.i !== undefined) v.i = _a.i;
 		}
-		if (v.int === undefined && (type & 0x1000) != 0)
-			v.int = true;
+		if (v.i === undefined && (type & 0x1000) != 0)
+			v.i = true;
 		return this.calcObjectValue(v, lv, mul, extraMul);
 	}
 
@@ -1022,14 +1010,14 @@ export class Util {
 		}
 
 		v = JSON.parse(JSON.stringify(v));
-		v.defaultChance = this.calcValue(v.defaultChance, type, lv, mul, extraMul) ?? 0;
-		v.attackCount = (this.calcValue(v.attackCount, type, lv, mul, extraMul) ?? 0) >> 0;
-		v.attackInterval = (this.calcValue(v.attackInterval, type, lv, mul, extraMul) ?? 0) >> 0;
+		v.defaultChance = this.calcValue(v.defaultChance, 0x1000 | type, lv, mul, extraMul) ?? 0;
+		v.attackCount = (this.calcValue(v.attackCount, 0x1000 | type, lv, mul, extraMul) ?? 0);
+		v.attackInterval = (this.calcValue(v.attackInterval, 0x1000 | type, lv, mul, extraMul) ?? 0);
 		if (v.attackInterval < 50)
 			v.attackInterval = 50;
 		if (v.attackInterval % 50 != 0)
 			v.attackInterval = v.attackInterval - (v.attackInterval % 50);
-		v.lifesteal = this.calcValue(v.lifesteal, type, lv, mul, extraMul) ?? 0;
+		v.lifesteal = this.calcValue(v.lifesteal, 0x1000 | type, lv, mul, extraMul) ?? 0;
 		v?.damage.forEach(x => {
 			if (x.amplitude) x.amplitude = this.calcValue(x.amplitude, type, lv, mul, extraMul);
 			if (x.minPercent) x.minPercent = this.calcValue(x.minPercent, type, lv, mul, extraMul);
@@ -1041,7 +1029,7 @@ export class Util {
 				x.applyEffectWhenMerged = true;
 			}
 			if (x.chance) x.chance = this.calcValue(x.chance, type, lv, mul, extraMul);
-			x?.initialParams?.forEach(y => { if (y.value) y.value = this.calcValue(y.value, type, lv, mul, extraMul); });
+			x?.initialParams?.forEach(y => { if (y.value) y.value = this.calcValue(y.value, 0x1000 | type, lv, mul, extraMul); });
 		});
 		v?.onhitEffects?.forEach(x => {
 			if (x?.effectID?.indexOf("BGSCheat:") == 0) {
@@ -1051,7 +1039,7 @@ export class Util {
 					x.applyEffectWhenMerged = true;
 			}
 			if (x.chance) x.chance = this.calcValue(x.chance, type, lv, mul, extraMul);
-			x?.initialParams?.forEach(y => { if (y.value) y.value = this.calcValue(y.value, type, lv, mul, extraMul); });
+			x?.initialParams?.forEach(y => { if (y.value) y.value = this.calcValue(y.value, 0x1000 | type, lv, mul, extraMul); });
 		});
 
 		let sp = game.specialAttacks.getObjectByID(id);
@@ -2356,6 +2344,7 @@ export class EasyTool {
 				case "poison2": 
 				case "dp": 
 				case "deadly": 
+				case "Deadly": 
 				case "DeadlyPoison": ret = "BGSCheat:DeadlyPoison"; break;
 				case "bleed": 
 				case "Bleed": ret = "BGSCheat:Bleed"; break;
@@ -2381,6 +2370,7 @@ export class EasyTool {
 				case "Laceration": ret = "BGSCheat:Laceration"; break;
 				case "voidburst": 
 				case "void": 
+				case "Void": 
 				case "Voidburst": ret = "BGSCheat:Voidburst"; break;
 				case "malice": 
 				case "Malice": ret = "BGSCheat:Malice"; break;
@@ -3193,16 +3183,32 @@ export class EasyTool {
 			}
 			case "uniqueAttack": {
 				if (attackData) {
-					const atk = attackData.find(x => x.id == _v.id && x.class == _v.class);
+					const atk = attackData.find(x => x.id == _v.id);
 					if (atk) {
 						let name = statObject.localID;
-						if (_v.order !== undefined)
-							name += _v.order;
 						Util.removeAllSpecialAttackData(statObject.specialAttacks, data);
 						Util.levelUpSpecialAttack(name, atk, _v, type, lv, mul, extraMul);
 						let v = { "specialAttacks": { "add": [`BGSCheat:${name}`] },"overrideSpecialChances":[0] };
 						Util.addSpecialAttacksData(statObject, data, v, type, lv, mul, extraMul);
 					}
+				}
+				break;
+			}
+			case "uniqueAtks": {
+				if (attackData) {
+					let order = 0;
+					Util.removeAllSpecialAttackData(statObject.specialAttacks, data);
+					_v.forEach(x => {
+						const atk = attackData.find(y => y.id == x.id);
+						if (atk) {
+							let name = statObject.localID;
+							name += order;
+							order++;
+							Util.levelUpSpecialAttack(name, atk, _v, type, lv, mul, extraMul);
+							let v = { "specialAttacks": { "add": [`BGSCheat:${name}`] }, "overrideSpecialChances": [0] };
+							Util.addSpecialAttacksData(statObject, data, v, type, lv, mul, extraMul);
+						}
+					});
 				}
 				break;
 			}
