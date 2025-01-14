@@ -1,9 +1,8 @@
 {
 	"Base": {
-		"u:matks": [ 1, 1, 1, 1, 1 ],
-		"u:mstrs": [ 1, 1, 1 ],
-		"u:mdefs": [ 1, 1, 1 ],
-		"u:msums": [ 1, 1, 1 ]
+		"Omatks": [ 1, 1, 1, 1, 1 ],
+		"Omstrs": [ 1, 1, 1 ],
+		"Omdefs": [ 1, 1, 1 ]
 	},
 	"Unholy1": {
 		"base": "Base",
@@ -34,13 +33,14 @@
 		"3atkeffect": [ 1 ],
 		"3cbeasy": [ "melvorAoD:UnholyMark", 3 ],
 		"5allow": [ 0, 0, 2 ],
-		"5u:atkeffect": [ 3 ],
-		"10uc:cbeasy": [ "10unholy", 3 ]
+		"6cbeasy": [ "10unholy", 3 ],
+		"5Uatkeffect": [ 3 ],
+		"10Ucbeasy": [ "20unholy", 3 ]
 	},
 	"Unholy5": {
 		"base": "Base",
-		"5u:corrupt": [ 10, 5 ],
-		"10u:corrupt": [ 5, 10 ]
+		"5Ucorrupt": [ 10, 5 ],
+		"10Ucorrupt": [ 5, 10 ]
 	},
 	"TotHA": {
 		"5allow": [ 0, 1 ]
@@ -51,29 +51,26 @@
 		"5barrier": [ 0, 30, 50 ]
 	},
 	"TotHD2": {
-		"5u:slayer": [ 60 ],
-		"5u:summon": [ 0, -5, 80 ],
-		"5u:barrier": [ 0, 30, 50 ]
+		"5Uslayer": [ 60 ],
+		"5Usummon": [ 0, -5, 80 ],
+		"5Ubarrier": [ 0, 30, 50 ]
 	},
 	"AbyD": {
-		"5u:slayer": [ 0, 10 ],
-		"5u:summon": [ 0, -5, 50 ]
+		"5Uslayer": [ 0, 10 ],
+		"5Usummon": [ 0, -5, 100 ]
 	},
 	"body": {
-		"u:hp": [
-			0,
-			[ -5, 0, 5 ]
-		]
+		"Uhp": [ 0, 5 ]
 	},
 	"legs": {
-		"u:hp": [ [ -5, 0, 5 ] ]
+		"Mhp": [ 5 ]
 	},
 	"shield": {
-		"u:dmgTaken": [ [ 5, 0, -5 ] ]
+		"UdmgTaken": [ -5 ]
 	},
 	"tier1": {
 		"base": "Base",
-		"1v:modifiers": {
+		"1Vmodifiers": {
 			"add": {
 				"bankSpace": 5
 			}
@@ -95,80 +92,45 @@
 	"melvorD:Bronze_Dagger": {
 		"base": "tier1",
 		"2barrier": [ 3 ],
-		"2u:spsa": { "melvorAoD:AcidicBlast": 20 },
-		"6u:spsa": { "melvorF:PenetratingClaws": 10 }
+		"2OuniqueAttack": { "id": "Sandstorm", "damage": [{"minPercent": 2, "maxPercent": 20}] }
 	},
 	"melvorD:Iron_Dagger": {
 		"base": "tier2",
 		"3barrier": [ 5 ],
-		"3u:spsa": { "melvorF:DeadlyCut": 20 },
-		"5u:spsa": { "melvorTotH:Explosion": 5 }
+		"3OuniqueAttack": { "id": "PoisonedHit" }
 	},
 	"melvorD:Steel_Dagger": {
 		"base": "tier3",
-		"3u:spsa": {
-			"melvorF:Quicksand": 10,
-			"melvorF:Sandblast": 10
-		},
-		"5u:spsa": { "melvorF:BurningClaws": 5 },
-		"10u:itemRand": [
-			"c",
-			[
-				[ 0, 5 ],
-				"s",
-				"melvorF:Stardust",
-				"melvorD:Astrology"
-			],
-			[
-				[ 0, 3 ],
-				"s",
-				"melvorF:Golden_Stardust",
-				"melvorD:Astrology"
-			]
+		"4OuniqueAttack": { "id": "SwiftAttack", "damage": [ { "amplitude": 140 } ] },
+		"10u:itemRand": [ "c",
+			[ [ 0, 5 ], "s", "melvorF:Stardust", "melvorD:Astrology" ],
+			[ [ 0, 3 ], "s", "melvorF:Golden_Stardust", "melvorD:Astrology" ]
 		]
 	},
 	"melvorD:Mithril_Dagger": {
 		"base": "Unholy1",
-		"5u:spsa": { "melvorF:BurningFireball": 15 },
-		"10u:spsa": { "melvorTotH:TouchOfAffliction": 5 }
+		"5u:uniqueAttack": { "id": "BruteForce", "damage": [ { "amplitude": 140 } ] },
+		"10UbuffAuto": [ [ "100acc", "100eva", "10stDmg" ], 3, 25, {"t": 2} ]
 	},
 	"melvorD:Adamant_Dagger": {
 		"base": "Unholy1",
-		"5u:spsa": { "melvorTotH:LargeLightningStrike": 30 },
-		"10cc:cbeasy": [
-			"melvorTotH:Shock",
-			3,
-			100,
-			{ "sm": 30 }
-		]
+		"5OuniqueAttack": { "id": "ElementalImpactFrostburn" },
+		"10Ucbeasy": [ [ "Freeze" ], 3, 20 ]
 	},
 	"melvorD:Rune_Dagger": {
 		"base": "Unholy2",
-		"5u:spsa": { "melvorF:SwiftAttack": 25 },
-		"10uc:cbeasy": [
-			"BGSCheat:Bleed400",
-			3,
-			25,
-			{ "p": 100 }
-		]
+		"5OuniqueAttack": { "id": "SunsetStab" },
+		"10UbuffAuto": [ "20dmgOnHp", 1, 10 ]
 	},
 	"melvorD:Dragon_Dagger": {
 		"base": "Unholy2",
-		"5u:spsa": { "melvorD:TripleDamage": 25 },
-		"10u:debuff": [ "taken", 2, 15 ]
+		"5OuniqueAttack": { "id": "CrushingBlow", "damage": [{"maxPercent": 350}] },
+		"10Ucbeasy": [ "stun", 3, 20 ]
 	},
 	"melvorTotH:Corundum_Dagger": {
 		"base": [ "Unholy3", "TotHA" ],
-		"5u:uniqueAttack": {
-			"id": "Soulash",
-			"damage": [ { "amplitude": 160 } ]
-		},
-		"10u:cbeasy": [
-			[ "BGSCheat:Shock" ],
-			3,
-			35,
-			{ "sm": 10 }
-		]
+		"5u:uniqueAttack": { "id": "Soulash", "damage": [ { "amplitude": 160 } ] },
+		"10u:cbeasy": [ [ "BGSCheat:Shock" ], 3, 35, { "sm": 10 } ]
 	},
 	"melvorTotH:Augite_Dagger": {
 		"base": [ "Unholy3", "TotHA" ],
@@ -194,24 +156,13 @@
 	},
 	"melvorTotH:Divine_Dagger": {
 		"base": [ "Unholy4", "TotHA" ],
-		"5u:uniqueAttack": {
-			"id": "PiercingToxicStrike",
-			"attackCount": 5
-		},
-		"10u:cbeasy": [
-			[ "100Burn" ],
-			3,
-			35
-		]
+		"5u:uniqueAttack": { "id": "PiercingToxicStrike", "attackCount": 5 },
+		"10u:cbeasy": [ [ "100Burn" ], 3, 35 ]
 	},
 	"melvorItA:Abyssium_Dagger": {
 		"base": [ "Unholy5", "TotHA" ],
 		"5u:uniqueAttack": { "id": "WitherBindingPlayer" },
-		"10u:debuff": [
-			[ "maxHit" ],
-			3,
-			100
-		]
+		"10u:debuff": [ [ "maxHit" ], 3, 100 ]
 	},
 	"melvorItA:Lacerating_Dagger": {
 		"base": "melvorItA:Abyssium_Dagger",
@@ -233,20 +184,12 @@
 	"melvorItA:Gloomite_Dagger": {
 		"base": [ "Unholy5", "TotHA" ],
 		"5u:uniqueAttack": { "id": "BlazingShadowPlayer" },
-		"10u:cbeasy": [
-			[ "10Blight" ],
-			3,
-			100
-		]
+		"10u:cbeasy": [ [ "10Blight" ], 3, 100 ]
 	},
 	"melvorItA:Witherite_Dagger": {
 		"base": [ "Unholy5", "TotHA" ],
 		"5u:uniqueAttack": { "id": "HollowDoomPlayer" },
-		"10u:cbeasy": [
-			[ "10Wither" ],
-			3,
-			100
-		]
+		"10u:cbeasy": [ [ "10Wither" ], 3, 100 ]
 	},
 	"melvorItA:Netherite_Dagger": {
 		"base": [ "Unholy5", "TotHA" ],
@@ -306,58 +249,36 @@
 	"melvorD:Bronze_Sword": {
 		"base": "tier1",
 		"2barrier": [ 5 ],
-		"2u:spsa": { "melvorD:FrozenWind": 20 },
-		"6u:spsa": { "melvorAoD:RingOfFire": 10 }
+		"2OuniqueAttack": { "id": "SunsetStab" }
 	},
 	"melvorD:Iron_Sword": {
 		"base": "tier2",
 		"3barrier": [ 8 ],
-		"3u:spsa": { "melvorF:CrushingDoubleSlash": 20 },
-		"5u:spsa": { "melvorTotH:ShockBlast": 5 }
+		"3OuniqueAttack": { "id": "Sandstorm" }
 	},
 	"melvorD:Steel_Sword": {
 		"base": "tier3",
-		"3u:spsa": { "melvorF:Sandstorm": 25 },
-		"6u:spsa": { "melvorF:Charge": 10 },
-		"10u:thieving": [
-			[ 0, 10000 ],
-			"s",
-			"melvorD:GP"
-		]
+		"4OuniqueAttack": { "id": "Sandstorm", "damage": [{"minPercent": 4, "maxPercent": 28}] },
+		"10u:thieving": [ [ 0, 10000 ], "s", "melvorD:GP" ]
 	},
 	"melvorD:Mithril_Sword": {
 		"base": "Unholy1",
-		"5u:spsa": { "melvorTotH:CurseOfTorment": 20 },
-		"10u:spsa": { "melvorTotH:IceBlast": 5 }
+		"5OuniqueAttack": { "id": "Onslaught" }
 	},
 	"melvorD:Adamant_Sword": {
 		"base": "Unholy1",
-		"5u:spsa": { "melvorD:SunsetStab": 40 },
-		"10u:spsar": { "BGSCheat:SunsetStab": 40 }
+		"5OuniqueAttack": { "id": "DeadlyCut" },
+		"10Ubuff": ["steal", 3, 30]
 	},
 	"melvorD:Rune_Sword": {
 		"base": "Unholy2",
-		"5uc:cbeasy": [
-			"BGSCheat:Confusion",
-			2,
-			20,
-			{
-				"t": 5,
-				"si": 1
-			}
-		],
-		"5u:spsa": { "melvorF:IcePrison": 20 },
-		"10u:spsa": { "BGSCheat:IcePrison": 25 }
+		"5u:uniqueAttack": { "id": "QuadSwipe" },
+		"10Ucbeasy": [ "1Confusion", 3, 30 ]
 	},
 	"melvorD:Dragon_Sword": {
 		"base": "Unholy2",
-		"5u:spsa": { "melvorF:TidalWave": 30 },
-		"10uc:cbeasy": [
-			"BGSCheat:DeadlyPoison",
-			2,
-			20,
-			{ "p": 120 }
-		]
+		"5u:uniqueAttack": { "id": "TidalWave", "damage": [ { "amplitude": 120 } ] },
+		"10Ubuff": [ "hp", 3, 30 ]
 	},
 	"melvorTotH:Corundum_Sword": {
 		"base": [ "Unholy3", "TotH" ],
@@ -433,57 +354,41 @@
 	"melvorD:Bronze_Battleaxe": {
 		"base": "tier1",
 		"2barrier": [ 7 ],
-		"2u:spsa": { "melvorAoD:SoulTaker": 10 },
-		"6u:spsa": { "melvorF:CursedEdge": 10 }
+		"2OuniqueAttack": { "id": "Sandblast" }
 	},
 	"melvorD:Iron_Battleaxe": {
 		"base": "tier2",
 		"3barrier": [ 12 ],
-		"3u:spsa": { "melvorTotH:ThornedPower": 20 },
-		"5u:spsa": { "melvorF:CrushingClaws": 5 }
+		"3OuniqueAttack": { "id": "ElementalImpactStun" }
 	},
 	"melvorD:Steel_Battleaxe": {
 		"base": "tier3",
-		"3u:spsa": { "melvorD:Onslaught": 20 },
-		"6u:spsa": { "melvorTotH:Smother": 2 },
+		"4OuniqueAttack": { "id": "UnlimitedSlappingPower" },
 		"10cart": [ -90 ]
 	},
 	"melvorD:Mithril_Battleaxe": {
 		"base": "Unholy1",
-		"5u:spsa": { "melvorF:Cleave": 20 },
-		"10u:spsa": { "melvorTotH:BurningFury": 5 }
+		"5OuniqueAttack": { "id": "Rend" },
+		"10Ucbeasy": [ "stun", 3, 50 ]
 	},
 	"melvorD:Adamant_Battleaxe": {
 		"base": "Unholy1",
-		"5u:spsa": { "melvorF:Rend": 20 },
-		"10uc:cbeasy": [ "3Freeze", 3, 30 ]
+		"5OuniqueAttack": { "id": "PoisonedHit" },
+		"10Udebuff": [ "25dotTaken", 3, 50, {"t": 3} ]
 	},
 	"melvorD:Rune_Battleaxe": {
 		"base": "Unholy2",
-		"5u:spsa": { "melvorF:CrushingBlow": 20 },
-		"10uc:cbeasy": [
-			"BGSCheat:Anguish",
-			3,
-			25,
-			{
-				"t": 2,
-				"si": 2
-			}
-		]
+		"5OuniqueAttack": { "id": "CrushingBlow" },
+		"10Ucbeasy": [ "3Crystallize", 3, 10 ]
 	},
 	"melvorD:Dragon_Battleaxe": {
 		"base": "Unholy2",
-		"5u:spsa": { "melvorF:Shadowstep": 20 },
-		"10uc:cbeasy": [
-			"BGSCheat:Stun",
-			3,
-			25,
-			{ "t": 2 }
-		]
+		"5OuniqueAttack": { "id": "Flurry", "attackCount": 8 },
+		"10UbuffAuto": [ "20dmgOnHp", 3, 10, {"t": 3} ]
 	},
 	"melvorTotH:Corundum_Battleaxe": {
 		"base": [ "Unholy3", "TotHA" ],
-		"5u:uniqueAttack": { "id": "DarkBladePlayer" },
+		"5OuniqueAttack": { "id": "DarkBladePlayer" },
 		"10u:cbeasy": [ "Bleed400", 3, 20 ]
 	},
 	"melvorTotH:Augite_Battleaxe": {
@@ -499,19 +404,16 @@
 	"melvorD:Bronze_Scimitar": {
 		"base": "tier1",
 		"2barrier": [ 6 ],
-		"2u:spsa": { "melvorF:Drain": 15 },
-		"6u:spsa": { "melvorTotH:SmolderingBlow": 5 }
+		"2OuniqueAttack": { "id": "ElementalImpactBurn" }
 	},
 	"melvorD:Iron_Scimitar": {
 		"base": "tier2",
 		"3barrier": [ 9 ],
-		"3u:spsa": { "melvorTotH:AggressiveOnslaught": 15 },
-		"5u:spsa": { "melvorTotH:PoisonBulbs": 5 }
+		"3OuniqueAttack": { "id": "CrushingDoubleSlash", "damage": [ { "amplitude": 60 } ] }
 	},
 	"melvorD:Steel_Scimitar": {
 		"base": "tier3",
-		"3u:spsa": { "melvorAoD:GhostlyScimitarPlayer": 20 },
-		"6u:spsa": { "melvorTotH:FlameRush": 3 },
+		"4OuniqueAttack": { "id": "DoubleEdged" },
 		"10c:skillAddItem": [
 			[ 0, 0.1 ],
 			"s",
@@ -521,31 +423,27 @@
 	},
 	"melvorD:Mithril_Scimitar": {
 		"base": "Unholy1",
-		"5u:spsa": { "melvorF:MeteorShower": 5 },
-		"10u:spsa": { "melvorTotH:RazorWind": 3 }
+		"5OuniqueAttack": { "id": "DoubleSwip" },
+		"10Ucbeasy": [ "100Burn", 3, 50 ]
 	},
 	"melvorD:Adamant_Scimitar": {
 		"base": "Unholy1",
-		"5u:spsa": { "melvorF:CrushingDoubleSlash": 30 },
-		"5critical": [ 20 ],
-		"10u:critical": [ 0, 50 ]
+		"5OuniqueAttack": { "id": "QuadSwipe" },
+		"10Ubuff": [ [ "hit", "crit" ], 3, 50, {"t": 3} ]
 	},
 	"melvorD:Rune_Scimitar": {
 		"base": "Unholy2",
-		"5u:spsa": { "melvorF:Flurry": 30 },
-		"10u:spsa": { "BGSCheat:Flurry": 30 }
+		"5OuniqueAttack": { "id": "TidalWave", "damage": [ { "maxPercent": 100 } ] },
+		"10Ucbeasy": [ "4stun", 2, 15 ]
 	},
 	"melvorD:Dragon_Scimitar": {
 		"base": "Unholy2",
-		"5u:spsa": { "melvorF:Infernum": 30 },
-		"10u:spsa": { "BGSCheat:Infernum": 30 }
+		"5OuniqueAttack": { "id": "Flurry", "damage": [ { "amplitude": 80 } ] },
+		"10UdebuffAuto": [ "50eva", 1, 50, {"t": 3} ]
 	},
 	"melvorTotH:Corundum_Scimitar": {
 		"base": [ "Unholy3", "TotHA" ],
-		"5u:uniqueAttack": {
-			"id": "CorundumWounds",
-			"damage": [ { "amplitude": 300 } ]
-		},
+		"5u:uniqueAttack": { "id": "CorundumWounds", "damage": [ { "amplitude": 300 } ] },
 		"10u:cbeasy": [ "150Slow", 3, 50 ]
 	},
 	"melvorTotH:Augite_Scimitar": {
@@ -588,57 +486,52 @@
 		"base": "tier1",
 		"u:ress": [ [ -1, 0, 1 ] ],
 		"2barrier": [ 10 ],
-		"2u:spsa": { "melvorF:DoubleSwipe": 20 },
-		"6u:spsa": { "melvorD:RazorSharpClaws": 5 }
+		"2OuniqueAttack": { "id": "CrushingDoubleSlash", "damage": [ { "amplitude": 60 } ] }
 	},
 	"melvorD:Iron_2H_Sword": {
 		"base": "tier2",
 		"u:ress": [ [ -2, 0, 2 ] ],
 		"3barrier": [ 15 ],
-		"3u:spsa": { "melvorTotH:RapidParry": 20 },
-		"5u:spsa": { "melvorF:ShadowBurst": 5 }
+		"3OuniqueAttack": { "id": "UnlimitedSlappingPower" }
 	},
 	"melvorD:Steel_2H_Sword": {
 		"base": "tier3",
 		"u:ress": [ [ -3, 0, 3 ] ],
-		"3u:spsa": { "melvorAoD:GhostlySword": 30 },
-		"6u:spsa": { "melvorTotH:IceShards": 3 },
+		"3OuniqueAttack": { "id": "DeadlyCut" },
 		"10arch": [ 0, 0, 0, 0, 50 ],
 		"10arch2": [ 50, 50, 50, 50 ]
 	},
 	"melvorD:Mithril_2H_Sword": {
 		"base": "Unholy1",
 		"u:ress": [ [ -4, 0, 4 ] ],
-		"5u:spsa": { "melvorTotH:Soulburn": 5 },
-		"10u:spsa": { "melvorTotH:LightningBreath": 3 }
+		"5OuniqueAttack": { "id": "DoubleSwipe", "damage": [ { "amplitude": 60 } ] },
+		"10UdebuffAuto": [ [ "15spd", "10res" ], 3, 50 ]
 	},
 	"melvorD:Adamant_2H_Sword": {
 		"base": "Unholy1",
 		"u:ress": [ [ -5, 0, 5 ] ],
-		"5u:spsa": { "melvorF:TripleSwipe": 20 },
-		"10uc:debuff": [ "taken", 3, 20 ]
+		"5OuniqueAttack": { "id": "TripleSwipe" },
+		"10Ucbeasy": [ [ "Frostburn" ], 3, 25 ]
 	},
 	"melvorD:Rune_2H_Sword": {
 		"base": "Unholy2",
 		"u:ress": [ [ -6, 0, 6 ] ],
-		"5uc:cbeasy": [
-			"BGSCheat:Crystallize",
-			2,
-			20,
-			{ "t": 3 }
-		],
-		"10uc:cbeasy": [ "melvorF:BigOlRon", 7, 100 ]
+		"5OuniqueAttack": {
+			"id": "Infernum",
+			"damage": [
+				{ "amplitude": 120 },
+				{ "amplitude": 150 },
+				{ "amplitude": 200 }
+			],
+			"attackInterval": { "c": 50 }
+		},
+		"10Ucbeasy": [ [ "Bleed400", "25Slow" ], 3, 20 ]
 	},
 	"melvorD:Dragon_2H_Sword": {
 		"base": "Unholy2",
 		"u:ress": [ [ -7, 0, 7 ] ],
-		"5c:spsa": {
-			"melvorF:Flurry": 25,
-			"melvorF:IcePrison": 35,
-			"melvorF:CrushingBlow": 20,
-			"melvorF:Infernum": 20
-		},
-		"10uc:cbeasy": [ "BGSCheat:ReignOverTime", 2, 25 ]
+		"5OuniqueAtks": [ { "id": "Flurry" }, {"id": "IcePrison"}, { "id": "CrushingBlow" }, {"id": "Infernum"} ],
+		"10Ubuff": [ "hp", 2, 25 ]
 	},
 	"melvorAoD:Unholy_2H_Sword": {
 		"base": "Base",
@@ -664,11 +557,7 @@
 			"id": "DragonStormCall",
 			"damage": [ { "amplitude": 200 } ]
 		},
-		"10u:cbeasy": [
-			[ "Deadly" ],
-			2,
-			10
-		]
+		"10u:cbeasy": [ [ "Deadly" ], 2, 10 ]
 	},
 	"melvorTotH:Augite_2H_Sword": {
 		"base": [ "Unholy3", "TotH" ],
@@ -787,19 +676,16 @@
 	"melvorD:Bronze_Throwing_Knife": {
 		"base": "tier1",
 		"2barrier": [ 3 ],
-		"2u:spsa": { "melvorAoD:PoisonLeech": 10 },
-		"6u:spsa": { "melvorF:WindBlade": 5 }
+		"2UuniqueAttack": { "id": "FrozenShot" }
 	},
 	"melvorD:Iron_Throwing_Knife": {
 		"base": "tier2",
 		"3barrier": [ 5 ],
-		"3u:spsa": { "melvorAoD:MudballPlayer": 15 },
-		"5u:spsa": { "melvorTotH:PoisonBite": 5 }
+		"4UuniqueAttack": { "id": "SwiftAttack", "damage": [{"amplitude": 80}] }
 	},
 	"melvorD:Steel_Throwing_Knife": {
 		"base": "tier3",
-		"3u:spsa": { "melvorD:RapidFire": 20 },
-		"6u:spsa": { "melvorTotH:BlindingBeams": 2 },
+		"4UuniqueAttack": { "id": "ElementalImpactFrostburn" },
 		"10c:skillAddItem": [
 			[ 0, 0.1 ],
 			"s",
@@ -809,8 +695,8 @@
 	},
 	"melvorD:Mithril_Throwing_Knife": {
 		"base": "Unholy1",
-		"5u:spsa": { "melvorTotH:UnleashedPower": 8 },
-		"10u:spsa": { "melvorTotH:FreezingBreath": 4 }
+		"5OuniqueAttack": { "id": "InfernalVolley" },
+		"10Udebuff": [ [ "maxHit" ], 2, 50 ]
 	},
 	"melvorAoD:Crystal_Throwing_Knife": {
 		"base": "Unholy1",
@@ -819,26 +705,39 @@
 	},
 	"melvorD:Adamant_Throwing_Knife": {
 		"base": "Unholy1",
-		"5u:spsa": { "melvorF:Quicksand": 50 },
-		"10cc:cbeasy": [ "Poison", 3, 100 ]
+		"5OuniqueAttack": { "id": "TiltedShot" },
+		"10Ubuff": [ [ "10acc" ], 2, 100 ]
 	},
 	"melvorD:Rune_Throwing_Knife": {
 		"base": "Unholy2",
-		"5uc:cbeasy": [
-			"BGSCheat:Crystallize",
-			2,
-			20,
-			{ "t": 4 }
-		],
-		"10uc:cbeasy": [
-			"BGSCheat:Poison",
-			2,
-			20,
-			{ "p": 100 }
-		]
+		"5OuniqueAttack": { "id": "JadestoneShots" },
+		"10Ucbeasy": [ [ "100Poison" ], 2, 15 ]
 	},
 	"melvorD:Dragon_Throwing_Knife": {
-		"base": "Unholy2"
+		"base": "Unholy2",
+		"5OuniqueAttack": {
+			"id": "IcePrison",
+			"onhitEffects": [
+				{
+					"effectID": "BGSCheat:IcePrison1",
+					"initialParams": [
+						{
+							"name": "maxStacks",
+							"value": 5
+						},
+						{
+							"name": "stacksToAdd",
+							"value": 1
+						},
+						{
+							"name": "initialStacks",
+							"value": 1
+						}
+					]
+				}
+			]
+		},
+		"10uc:bunderwater": [ 2, 50 ]
 	},
 	"melvorAoD:Pure_Crystal_Throwing_Knife": {
 		"base": "Unholy2",

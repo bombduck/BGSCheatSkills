@@ -7,7 +7,7 @@
 				"quantity": 6
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"currencyGain": [
 					{
@@ -32,7 +32,7 @@
 				"quantity": 8
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -51,7 +51,7 @@
 				"quantity": 8
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -70,7 +70,7 @@
 				"quantity": 40
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -89,7 +89,7 @@
 				"quantity": 27
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillInterval": [
 					{
@@ -108,7 +108,7 @@
 				"quantity": 34
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillXP": [
 					{
@@ -127,7 +127,7 @@
 				"quantity": 92
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillXP": [
 					{
@@ -152,7 +152,7 @@
 				"quantity": 67
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"meleeMaxHit": 5,
 				"meleeEvasion": 5
@@ -167,7 +167,7 @@
 				"quantity": 96
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatMiningNodeHP": 10,
 				"skillPreservationChance": 3,
@@ -192,7 +192,7 @@
 				"quantity": 24
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillXP": [
 					{
@@ -200,7 +200,7 @@
 					},
 					{
 						"skillID": "melvorD:Agility",
-						"value": [ -4 ]
+						"value": { "c": -4 }
 					}
 				]
 			}
@@ -214,7 +214,7 @@
 				"quantity": 63
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillXP": [
 					{
@@ -239,7 +239,7 @@
 				"quantity": 40
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillPreservationChance": 3,
 				"currencyGain": [
@@ -250,7 +250,7 @@
 					}
 				],
 				"foodHealingValue": 10,
-				"skillXP": [ -4 ]
+				"skillXP": { "c": -4 }
 			}
 		}
 	},
@@ -262,7 +262,7 @@
 				"quantity": 140
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillPreservationChance": [
 					{
@@ -285,7 +285,7 @@
 				"basePrimaryProductQuantity": [
 					{
 						"skillID": "melvorD:Farming",
-						"value": [ -10 ]
+						"value": { "c": -10 }
 					}
 				]
 			}

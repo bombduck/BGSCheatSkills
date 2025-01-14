@@ -78,31 +78,21 @@
 	},
 	"melvorF:Staff_of_Air": {
 		"base": "staff1",
-		"2spsa": {"melvorF:SlicingWinds": 20},
-		"4spsa": {"melvorF:Gust": 20},
-		"6spsa": {"melvorTotH:FeatherTornado": 10},
-		"10spsa": {"melvorTotH:Headbutt": 5}
+		"2OuniqueAtks": [ { "id": "SlicingWinds" }, {"id": "Gust"} ]
 	},
 	"melvorF:Staff_of_Water": {
 		"base": "staff1",
-		"2spsa": {"melvorF:IcicleVolley": 20},
-		"4spsa": {"melvorF:Frostbite": 20},
-		"6spsa": {"melvorAoD:Whirlpool": 10},
-		"10spsa": {"melvorTotH:Drown": 5}
+		"2OuniqueAtks": [ { "id": "IcicleVolley" }, {"id": "Frostbite"} ],
+		"6OuniqueAtks": [ { "id": "IcicleVolley" }, {"id": "Frostbite"}, {"id": "OceanSong"} ]
 	},
 	"melvorF:Staff_of_Earth": {
 		"base": "staff1",
-		"2spsa": {"melvorAoD:CrushingWaves": 20},
-		"4spsa": {"melvorF:Quake": 20},
-		"6spsa": {"melvorF:ChaoticSlam": 10},
-		"10spsa": {"melvorF:SeismicSlam": 5}
+		"2OuniqueAttack": { "id": "Quake" },
+		"6Ucbeasy": ["Bleed400", 1, 25]
 	},
 	"melvorF:Staff_of_Fire": {
 		"base": "staff1",
-		"2spsa": {"melvorF:Ignite": 20},
-		"4spsa": {"melvorF:Incinerate": 20},
-		"6spsa": {"melvorD:Dragonbreath": 10},
-		"10spsa": {"melvorTotH:FlameBarrage": 5}
+		"2OuniqueAtks": [ { "id": "Ignite" }, {"id": "Incinerate"} ]
 	},
 	"staff4": {
 		"base": "Uhholy1",
@@ -111,23 +101,23 @@
 	},
 	"melvorD:Air_Battlestaff": {
 		"base": "staff4",
-		"5u:spsa": {"melvorTotH:DevourerOfTheCursed": 8,"melvorTotH:CurseOfDespair": 4},
-		"10u:spsa": {"melvorF:CurseoftheDeep": 3,"melvorF:Cyclone": 2}
+		"5OuniqueAttack": { "id": "NaturesCall" },
+		"10UdebuffAuto": ["20taken", 2, 30]
 	},
 	"melvorD:Water_Battlestaff": {
 		"base": "staff4",
-		"5u:spsa": {"melvorF:CurseofFear": 8,"melvorTotH:RollingSnowball": 4},
-		"10u:spsa": {"melvorTotH:Tsunami": 3,"melvorF:CursedFrostShards": 2}
+		"5OuniqueAttack": { "id": "ElementalImpactFrostburn" },
+		"10Udebuff": ["fspd", 2, 30]
 	},
 	"melvorD:Earth_Battlestaff": {
 		"base": "staff4",
-		"5u:spsa": { "melvorF:FragileMind": 8, "melvorTotH:FullCharge": 4 },
-		"10u:spsa": { "melvorTotH:DiseaseSwarm": 3, "melvorTotH:Sunder": 2 }
+		"5OuniqueAttack": { "id": "ElementalImpactStun" },
+		"10Ubuff": ["hp", 2, 30]
 	},
 	"melvorD:Fire_Battlestaff": {
 		"base": "staff4",
-		"5u:spsa": { "melvorTotH:GreaterFireball": 8, "melvorTotH:MegaFireball": 4 },
-		"10u:spsa": { "melvorF:GreaterDragonbreath": 3, "melvorF:Cataclysm": 2 }
+		"5OuniqueAttack": { "id": "ElementalImpactBurn" },
+		"10Ucbeasy": ["Weakening", 2, 30]
 	},
 	"melvorAoD:Crystal_Battlestaff": {
 		"base": "staff4",
@@ -147,49 +137,70 @@
 	},
 	"melvorD:Mystic_Air_Staff": {
 		"base": "staff7",
-		"5u:spsa": { "melvorTotH:PowerOfTheMist": 15},
-		"10u:rsp": ["melvorTotH:PowerOfTheMist"],
-		"10u:spsa": { "BGSCheat:PowerOfTheMist": 15}
+		"5OuniqueAttack": { "id": "SpiritPower" },
+		"10Ucbeasy": [["Burn"], 3, 10]
 	},
 	"melvorF:Mystic_Water_Staff": {
 		"base": "staff7",
-		"5u:spsa": { "melvorF:FreezeRay": 25},
-		"10u:rsp": ["melvorF:FreezeRay"],
-		"10u:spsa": { "BGSCheat:FreezeRay": 25}
+		"5OuniqueAttack": { "id": "FreezeRay" },
+		"10Ucbeasy": [["Frostburn"], 3, 30]
 	},
 	"melvorF:Mystic_Earth_Staff": {
 		"base": "staff7",
-		"5u:spsa": { "melvorTotH:PetrifyingGlare": 25},
-		"10u:rsp": ["melvorTotH:PetrifyingGlare"],
-		"10u:spsa": { "BGSCheat:PetrifyingGlare": 25}
+		"5OuniqueAttack": { "id": "NaturesWrath" },
+		"10UbuffAuto": ["25spd", 2, 35, {"t": 2}]
 	},
 	"melvorF:Mystic_Fire_Staff": {
 		"base": "staff7",
-		"5u:spsa": { "melvorD:Firebreathing": 10},
-		"10u:rsp": ["melvorD:Firebreathing"],
-		"10u:spsa": { "BGSCheat:Firebreathing": 10}
+		"5OuniqueAttack": { "id": "TripleDamage" },
+		"10Ucbeasy": [["Anguish"], 2, 25]
 	},
 	"wand7": {
 		"base": "Uhholy2",
 		"u:maghits": [7,14]
 	},
 	"melvorF:Air_Imbued_Wand": {
-		"base": "wand7"
+		"base": "wand7",
+		"5OuniqueAttack": {
+			"id": "UnknownThreat",
+			"prehitEffects": [
+				{
+					"effectID": "BGSCheat:UnknownThreat0",
+					"initialParams": [
+						{
+							"name": "stacksToAdd",
+							"value": 1
+						},
+						{
+							"name": "initialStacks",
+							"value": 1
+						},
+						{
+							"name": "turns",
+							"value": 1
+						}
+
+					]
+				}
+			],
+			"attackInterval": { "c": 50 }
+		},
+		"10Udebuff": [ "taken", 3, 15 ]
 	},
 	"melvorF:Water_Imbued_Wand": {
 		"base": "wand7",
-		"5u:spsar": { "melvorF:OceanSong": 20},
-		"10u:spsa": { "melvorTotH:SlicingMaelstromArchaic": 10}
+		"5OuniqueAttack": { "id": "UnlimitedSlappingPower", "attackInterval": {"c": 50} },
+		"10Ucbeasy": [["Fear"], 2, 20]
 	},
 	"melvorF:Earth_Imbued_Wand": {
 		"base": "wand7",
-		"5u:spsar": { "melvorTotH:ThornedPower": 25},
-		"10u:spsa": { "melvorTotH:PiercingToxicStrike": 10}
+		"5OuniqueAttack": { "id": "BruteForce" },
+		"10Ubuff": [["fspd"], 2, 25]
 	},
 	"melvorF:Fire_Imbued_Wand": {
 		"base": "wand7",
-		"5u:spsar": { "melvorAoD:LavaSwipePlayer": 15},
-		"10u:spsa": { "melvorF:Inferno": 5}
+		"5OuniqueAttack": { "id": "UnlimitedSlappingPower", "attackInterval": {"c": 50} },
+		"10Ucbeasy": [["Burn"], 2, 10]
 	},
 	"melvorAoD:Mystic_Pure_Crystal_Staff": {
 		"base": "staff7",
@@ -201,7 +212,7 @@
 		"ress": [ [ -7, 0, 7 ] ],
 		"u:maghits": [7,14],
 		"5u:atkeffect": [5],
-		"5u:uniqueAttack": { "id": "WaterPulsePlayer" }
+		"5OuniqueAttack": { "id": "WaterPulsePlayer" }
 	},
 	"melvorAoD:Cursed_Staff": {
 		"base": "melvorAoD:Unholy_Staff",

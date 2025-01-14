@@ -2029,221 +2029,221 @@
       }
 		],
 		"combatEffects": [
-			{
-				"id": "AfflictionAccu",
-				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
-        "media": "assets/media/status/attack_decrease.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10000
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"accuracyRating": -1
-						}
-					}
-				],
-				"effectGroups": [
-					"melvorD:Debuff"
-				]
-			},
-			{
-				"id": "AfflictionAccuT",
-				"templateID": "BGSCheat:StackingSelfCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
-        "media": "assets/media/status/attack_decrease.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10000
-					},
-					{
-						"name": "turns",
-						"initialValue": 3
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"accuracyRating": -1
-						}
-					}
-				],
-				"effectGroups": [
-					"melvorD:Debuff"
-				]
-			},
-			{
-				"id": "AfflictionEva",
-				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
-        "media": "assets/media/status/evasion_decrease.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10000
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"evasion": -1
-						}
-					}
-				],
-				"effectGroups": [
-					"melvorD:Debuff"
-				]
-			},
-			{
-				"id": "AfflictionEvaT",
-				"templateID": "BGSCheat:StackingTargetCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
-        "media": "assets/media/status/evasion_decrease.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10000
-					},
-					{
-						"name": "turns",
-						"initialValue": 3
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"evasion": -1
-						}
-					}
-				],
-				"effectGroups": [
-					"melvorD:Debuff"
-				]
-			},
-			{
-				"id": "AfflictionMaxhit",
-				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
-        "media": "assets/media/status/attack_decrease.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10000
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"maxHit": -1
-						}
-					}
-				],
-				"effectGroups": [
-					"melvorD:Debuff"
-				]
-			},
-			{
-				"id": "AfflictionMaxhitT",
-				"templateID": "BGSCheat:StackingSelfCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
-        "media": "assets/media/status/attack_decrease.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10000
-					},
-					{
-						"name": "turns",
-						"initialValue": 3
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"maxHit": -1
-						}
-					}
-				],
-				"effectGroups": [
-					"melvorD:Debuff"
-				]
-			},
       {
-        "id": "AfflictionSpd",
+        "id": "DebuffAccu",
         "templateID": "BGSCheat:StackingNonCountingModifier",
-        "name": "Affliction",
-        "nameLang": "COMBAT_MISC_AFFLICTION",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/attack_decrease.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": -1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+			{
+				"id": "DebuffAccuT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/attack_decrease.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					},
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"accuracyRating": -1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffEva",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/evasion_decrease.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"evasion": -1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffEvaT",
+				"templateID": "BGSCheat:StackingTargetCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/evasion_decrease.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					},
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"evasion": -1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffMaxhit",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/attack_decrease.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"maxHit": -1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffMaxhitT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/attack_decrease.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					},
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"maxHit": -1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+      {
+        "id": "DebuffSpd",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
         "media": "assets/media/status/slowed.png",
         "target": "Target",
         "parameters": [
@@ -2273,10 +2273,10 @@
         ]
       },
       {
-        "id": "AfflictionSpdT",
+        "id": "DebuffSpdT",
 				"templateID": "BGSCheat:StackingSelfCountingModifier",
-        "name": "Affliction",
-        "nameLang": "COMBAT_MISC_AFFLICTION",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
         "media": "assets/media/status/slowed.png",
         "target": "Target",
         "parameters": [
@@ -2309,44 +2309,114 @@
           "melvorD:Debuff"
         ]
       },
-			{
-				"id": "AfflictionDealt",
-				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
-        "media": "assets/media/status/attack_decrease.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10000
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"damageDealt": -1
-						}
-					}
-				],
-				"effectGroups": [
-					"melvorD:Debuff"
-				]
-			},
-			{
-				"id": "AfflictionDealtT",
+      {
+        "id": "DebuffFSpd",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/slowed.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatAttackInterval": 100
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "DebuffFSpdT",
 				"templateID": "BGSCheat:StackingSelfCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/slowed.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatAttackInterval": 100
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+			{
+				"id": "DebuffDealt",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/attack_decrease.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"damageDealt": -1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffDealtT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
         "media": "assets/media/status/attack_decrease.png",
 				"target": "Target",
 				"parameters": [
@@ -2380,10 +2450,80 @@
 				]
 			},
 			{
-				"id": "AfflictionRes",
+				"id": "DebuffDmgPerAtk",
 				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/attack_decrease.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"damageTakenPerAttack": 1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffDmgPerAtkT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/attack_decrease.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					},
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"damageTakenPerAttack": -1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffRes",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
         "media": "assets/media/status/evasion_decrease.png",
 				"target": "Target",
 				"parameters": [
@@ -2430,10 +2570,10 @@
 				]
 			},
 			{
-				"id": "AfflictionResT",
+				"id": "DebuffResT",
 				"templateID": "BGSCheat:StackingTargetCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
         "media": "assets/media/status/evasion_decrease.png",
 				"target": "Target",
 				"parameters": [
@@ -2484,10 +2624,10 @@
 				]
 			},
 			{
-				"id": "AfflictionTaken",
+				"id": "DebuffTaken",
 				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
 				"media": "assets/media/misc/afflicted.png",
 				"target": "Target",
 				"parameters": [
@@ -2517,10 +2657,10 @@
 				]
 			},
 			{
-				"id": "AfflictionTakenT",
+				"id": "DebuffTakenT",
 				"templateID": "BGSCheat:StackingTargetCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
 				"media": "assets/media/misc/afflicted.png",
 				"target": "Target",
 				"parameters": [
@@ -2554,10 +2694,150 @@
 				]
 			},
 			{
-				"id": "Affliction",
+				"id": "DebuffDot",
 				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Affliction",
-				"nameLang": "COMBAT_MISC_AFFLICTION",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+				"media": "assets/media/misc/afflicted.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"dotDamageTaken": 1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffDotT",
+				"templateID": "BGSCheat:StackingTargetCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+				"media": "assets/media/misc/afflicted.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					},
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"dotDamageTaken": 1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffTakenOnHp",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+				"media": "assets/media/misc/afflicted.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"damageTakenBasedOnHP": 0.1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffTakenOnHpT",
+				"templateID": "BGSCheat:StackingTargetCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+				"media": "assets/media/misc/afflicted.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					},
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"damageTakenBasedOnHP": 0.1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+			{
+				"id": "DebuffHp",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
 				"media": "assets/media/misc/afflicted.png",
 				"target": "Target",
 				"parameters": [
@@ -2587,113 +2867,150 @@
 				]
 			},
 			{
-				"id": "IncreasedAccuracy",
-				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Puppet Master",
-				"nameLang": "PASSIVES_NAME_PuppetMaster",
-        "media": "assets/media/status/attack_increase.png",
-				"target": "Self",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10000
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"accuracyRating": 1
-						}
-					}
-				],
-				"effectGroups": [
-					"melvorD:Buff"
-				]
-			},
-			{
-				"id": "IncreasedAccuracyT",
-				"templateID": "BGSCheat:StackingSelfCountingModifier",
-				"name": "Puppet Master",
-				"nameLang": "PASSIVES_NAME_PuppetMaster",
-        "media": "assets/media/status/attack_increase.png",
-				"target": "Self",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10000
-					},
-					{
-						"name": "turns",
-						"initialValue": 3
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"accuracyRating": 1
-						}
-					}
-				],
-				"effectGroups": [
-					"melvorD:Buff"
-				]
-			},
-      {
-        "id": "IncreasedEvasion",
-        "templateID": "BGSCheat:StackingNonCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
-        "media": "assets/media/status/evasion_increase.png",
-        "target": "Self",
-        "parameters": [
-          {
-            "name": "initialStacks",
-            "initialValue": 1
-          },
-          {
-            "name": "stacksToAdd",
-            "initialValue": 1
-          },
-          {
-            "name": "maxStacks",
-            "initialValue": 10000
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "evasion": 1
-            }
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Buff"
-        ]
-      },
-      {
-        "id": "IncreasedEvasionT",
+				"id": "DebuffHpT",
 				"templateID": "BGSCheat:StackingTargetCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Debuff",
+        "nameLang": "EFFECT_GROUP_Debuff",
+        "media": "assets/media/status/evasion_decrease.png",
+				"target": "Target",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					},
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"maxHitpoints": -1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Debuff"
+				]
+			},
+      {
+        "id": "BuffAccu",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+			{
+				"id": "BuffAccuT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+				"target": "Self",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					},
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"accuracyRating": 1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Buff"
+				]
+			},
+      {
+        "id": "BuffEva",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/evasion_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "evasion": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffEvaT",
+				"templateID": "BGSCheat:StackingTargetCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/evasion_increase.png",
         "target": "Self",
         "parameters": [
@@ -2727,10 +3044,10 @@
         ]
       },
       {
-        "id": "IncreasedMaxhit",
+        "id": "BuffMaxhit",
         "templateID": "BGSCheat:StackingNonCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/attack_increase.png",
         "target": "Self",
         "parameters": [
@@ -2760,10 +3077,10 @@
         ]
       },
       {
-        "id": "IncreasedMaxhitT",
+        "id": "BuffMaxhitT",
 				"templateID": "BGSCheat:StackingSelfCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/attack_increase.png",
         "target": "Self",
         "parameters": [
@@ -2797,10 +3114,288 @@
         ]
       },
       {
-        "id": "IncreasedSpd",
+        "id": "BuffMaxhitOnCurrHp",
         "templateID": "BGSCheat:StackingNonCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitBasedOnTargetCurrentHitpoints": 0.1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffMaxhitOnCurrHpT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitBasedOnTargetCurrentHitpoints": 0.1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffMaxhitOnRes",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitBasedOnResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 0.1
+                },
+								{
+									"damageTypeID": "melvorF:Pure",
+									"value": 0.1
+								},
+								{
+									"damageTypeID": "melvorItA:Abyssal",
+									"value": 0.1
+								},
+								{
+									"damageTypeID": "melvorItA:Eternal",
+									"value": 0.1
+								}
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffMaxhitOnResT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitBasedOnResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 0.1
+                },
+								{
+									"damageTypeID": "melvorF:Pure",
+									"value": 0.1
+								},
+								{
+									"damageTypeID": "melvorItA:Abyssal",
+									"value": 0.1
+								},
+								{
+									"damageTypeID": "melvorItA:Eternal",
+									"value": 0.1
+								}
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffMaxhitOnTargetRes",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitBasedOnTargetResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 0.1
+                },
+								{
+									"damageTypeID": "melvorF:Pure",
+									"value": 0.1
+								},
+								{
+									"damageTypeID": "melvorItA:Abyssal",
+									"value": 0.1
+								},
+								{
+									"damageTypeID": "melvorItA:Eternal",
+									"value": 0.1
+								}
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffMaxhitOnTargetResT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitBasedOnTargetResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+									"value": 0.1
+                },
+								{
+									"damageTypeID": "melvorF:Pure",
+									"value": 0.1
+								},
+								{
+									"damageTypeID": "melvorItA:Abyssal",
+									"value": 0.1
+								},
+								{
+									"damageTypeID": "melvorItA:Eternal",
+									"value": 0.1
+								}
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffSpd",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/speedup.png",
         "target": "Self",
         "parameters": [
@@ -2830,10 +3425,10 @@
         ]
       },
       {
-        "id": "IncreasedSpdT",
+        "id": "BuffSpdT",
 				"templateID": "BGSCheat:StackingSelfCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/speedup.png",
         "target": "Self",
         "parameters": [
@@ -2867,10 +3462,80 @@
         ]
       },
       {
-        "id": "IncreasedDealt",
+        "id": "BuffFSpd",
         "templateID": "BGSCheat:StackingNonCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/speedup.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatAttackInterval": -100
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffFSpdT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/speedup.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatAttackInterval": -100
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffDealt",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/attack_increase.png",
         "target": "Self",
         "parameters": [
@@ -2900,10 +3565,10 @@
         ]
       },
       {
-        "id": "IncreasedDealtT",
+        "id": "BuffDealtT",
 				"templateID": "BGSCheat:StackingSelfCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/attack_increase.png",
         "target": "Self",
         "parameters": [
@@ -2929,6 +3594,286 @@
             "name": "stacks",
             "modifiers": {
               "damageDealt": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffDmgOnHp",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageBasedOnCurrentHitpoints": 0.1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffDmgOnHpT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageBasedOnCurrentHitpoints": 0.1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffDmgOnMaxHp",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageBasedOnMaxHitpoints": 0.1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffDmgOnMaxHpT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageBasedOnMaxHitpoints": 0.1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffDmgOnMaxHpSelf",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageBasedOnMaxHitpointsSelf": 0.1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffDmgOnMaxHpSelfT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageBasedOnMaxHitpointsSelf": 0.1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffStealDmgOnHp",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "lifestealDamageBasedOnCurrentHitpoints": 0.1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffStealDmgOnHpT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "lifestealDamageBasedOnCurrentHitpoints": 0.1
             }
           }
         ],
@@ -2937,10 +3882,10 @@
         ]
       },
 			{
-				"id": "IncreasedRes",
+				"id": "BuffRes",
 				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Puppet Master",
-				"nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/evasion_increase.png",
 				"target": "Self",
 				"parameters": [
@@ -2987,10 +3932,10 @@
 				]
 			},
 			{
-				"id": "IncreasedResT",
+				"id": "BuffResT",
 				"templateID": "BGSCheat:StackingTargetCountingModifier",
-				"name": "Puppet Master",
-				"nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/evasion_increase.png",
 				"target": "Self",
 				"parameters": [
@@ -3041,10 +3986,10 @@
 				]
 			},
 			{
-				"id": "DecreasedTaken",
+				"id": "BuffTaken",
 				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Puppet Master",
-				"nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
 				"media": "assets/media/skills/hitpoints/hitpoints.png",
 				"target": "Self",
 				"parameters": [
@@ -3074,10 +4019,10 @@
 				]
 			},
 			{
-				"id": "DecreasedTakenT",
+				"id": "BuffTakenT",
 				"templateID": "BGSCheat:StackingTargetCountingModifier",
-				"name": "Puppet Master",
-				"nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
 				"media": "assets/media/skills/hitpoints/hitpoints.png",
 				"target": "Self",
 				"parameters": [
@@ -3111,10 +4056,80 @@
 				]
 			},
 			{
-				"id": "IncreasedMaxHitpoints",
+				"id": "BuffDot",
 				"templateID": "BGSCheat:StackingNonCountingModifier",
-				"name": "Puppet Master",
-				"nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+				"media": "assets/media/skills/hitpoints/hitpoints.png",
+				"target": "Self",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+              "dotDamageTaken": -1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Buff"
+				]
+			},
+			{
+				"id": "BuffDotT",
+				"templateID": "BGSCheat:StackingTargetCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+				"media": "assets/media/skills/hitpoints/hitpoints.png",
+				"target": "Self",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					},
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+              "dotDamageTaken": -1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Buff"
+				]
+			},
+			{
+				"id": "BuffHp",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
 				"media": "assets/media/skills/hitpoints/hitpoints.png",
 				"target": "Self",
 				"parameters": [
@@ -3143,11 +4158,48 @@
 					"melvorD:Buff"
 				]
 			},
+			{
+				"id": "BuffHpT",
+				"templateID": "BGSCheat:StackingTargetCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+				"media": "assets/media/skills/hitpoints/hitpoints.png",
+				"target": "Self",
+				"parameters": [
+					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 10000
+					},
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+				],
+				"statGroups": [
+					{
+						"name": "stacks",
+						"modifiers": {
+							"maxHitpoints": 1
+						}
+					}
+				],
+				"effectGroups": [
+					"melvorD:Buff"
+				]
+			},
       {
-        "id": "IncreasedCrit",
+        "id": "BuffCrit",
         "templateID": "BGSCheat:StackingNonCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/attack_increase.png",
         "target": "Self",
         "parameters": [
@@ -3177,10 +4229,10 @@
         ]
       },
       {
-        "id": "IncreasedCritT",
+        "id": "BuffCritT",
 				"templateID": "BGSCheat:StackingSelfCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/attack_increase.png",
         "target": "Self",
         "parameters": [
@@ -3214,10 +4266,10 @@
         ]
       },
       {
-        "id": "IncreasedCritMul",
+        "id": "BuffCritMul",
         "templateID": "BGSCheat:StackingNonCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/attack_increase.png",
         "target": "Self",
         "parameters": [
@@ -3247,10 +4299,10 @@
         ]
       },
       {
-        "id": "IncreasedCritMulT",
+        "id": "BuffCritMulT",
 				"templateID": "BGSCheat:StackingSelfCountingModifier",
-        "name": "Puppet Master",
-        "nameLang": "PASSIVES_NAME_PuppetMaster",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
         "media": "assets/media/status/attack_increase.png",
         "target": "Self",
         "parameters": [
@@ -3276,6 +4328,76 @@
             "name": "stacks",
             "modifiers": {
               "critMultiplier": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffSteal",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "lifesteal": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffStealT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10000
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "lifesteal": 1
             }
           }
         ],
@@ -3315,7 +4437,7 @@
 			},
 			{
 				"id": "Frostburn",
-				"templateID": "melvorD:StaticSelfCountingModifier",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
 				"name": "Frostburn",
 				"nameLang": "COMBAT_MISC_FROSTBURN",
 				"media": "assets/media/status/frostburn.png",
@@ -3325,22 +4447,34 @@
 						"type": "LangString",
 						"langID": "MODIFIER_DATA_increasedFrostburn",
 						"templateData": {
-							"value": 8
+							"value": "3 * statGroup.stacks"
 						}
 					}
 				],
 				"tooltipMergeMode": "Start",
 				"parameters": [
 					{
+						"name": "initialStacks",
+						"initialValue": 1
+					},
+					{
+						"name": "stacksToAdd",
+						"initialValue": 1
+					},
+					{
+						"name": "maxStacks",
+						"initialValue": 100
+					},
+					{
 						"name": "turns",
-						"initialValue": 6
+						"initialValue": 3
 					}
 				],
 				"statGroups": [
 					{
 						"name": "stacks",
 						"modifiers": {
-							"attackInterval": 30
+							"attackInterval": 10
 						}
 					}
 				],
@@ -3352,7 +4486,7 @@
 								"character": "Target",
 								"roll": false,
 								"maxRoll": "MaxHP",
-								"maxPercent": 10
+								"maxPercent": 3
 							}
 						],
 						"applyResistance": true
@@ -3361,7 +4495,7 @@
 				"behaviours": [
 					{
 						"type": "DamageCharacter",
-						"value": "d.total",
+						"value": "d.total * statGroup.stacks",
 						"triggersOn": [
 							{
 								"type": "EndOfTurn",
@@ -3615,6 +4749,72 @@
 					}
 				]
 			},
+      {
+        "id": "BleedDeadlyCut",
+        "templateID": "BGSCheat:BleedDOT",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 20
+          },
+          {
+            "name": "interval",
+            "initialValue": 500
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "total",
+            "damage": [
+              {
+                "character": "Target",
+                "roll": false,
+                "maxRoll": "Fixed",
+                "maxPercent": 20
+              },
+              {
+                "character": "Target",
+                "roll": false,
+                "maxRoll": "MaxHP",
+                "maxPercent": 4
+              }
+            ],
+            "applyDamageModifiers": true,
+            "applyTypeModifiers": "Bleed",
+            "applyResistance": true
+          }
+        ]
+      },
+      {
+        "id": "Rend0",
+        "templateID": "BGSCheat:BleedDOT",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 20
+          },
+          {
+            "name": "interval",
+            "initialValue": 500
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "total",
+            "damage": [
+              {
+                "character": "Attacker",
+                "maxRoll": "Rend",
+                "maxPercent": 400,
+                "roll": false
+              }
+            ],
+            "applyDamageModifiers": true,
+            "applyTypeModifiers": "Bleed",
+            "applyResistance": true
+          }
+        ]
+      },
 			{
 				"id": "Stun",
 				"templateID": "BGSCheat:Stun",
@@ -3955,8 +5155,11 @@
 				"statGroups": [
 					{
 						"name": "stacks",
-						"modifiers": {
-							"cantSpecialAttack": 1,
+            "modifiers": {
+              "cantSpecialAttack": 1,
+              "flatReflectDamage": -1000,
+              "reflectDamage": -1000,
+              "rawReflectDamage": -1000,
               "effectImmunity": [
                 {
                   "effectGroupID": "melvorD:Debuff",
@@ -4057,7 +5260,7 @@
                   "value": -100
                 }
               ]
-						}
+            }
 					}
 				],
 				"parameters": [
@@ -5317,36 +6520,6 @@
 				]
 			},
 			{
-				"id": "IcePrison1",
-				"templateID": "melvorD:StaticSelfCountingModifier",
-				"name": "Ice Prison",
-				"nameLang": "SPECIAL_ATTACK_NAME_IcePrison",
-				"media": "assets/media/status/evasion_decrease.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "turns",
-						"initialValue": 5
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"damageTaken": [
-								{
-									"effectGroupID": "BGSCheat:StunLike",
-									"value": 50
-								}
-							]
-						}
-					}
-				],
-				"effectGroups": [
-					"BGSCheat:Debuff"
-				]
-			},
-			{
 				"id": "AugiteCrystallization0",
 				"templateID": "melvorD:StaticSelfCountingModifier",
 				"name": "Augite Crystallization",
@@ -5478,32 +6651,6 @@
         ]
       },
       {
-        "id": "ForesightPlayer0",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Foresight",
-        "nameLang": "SPECIAL_ATTACK_NAME_ForesightPlayer",
-        "media": "assets/media/status/evasion_increase.png",
-        "target": "Self",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 5
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "accuracyRating": 200,
-              "evasion": 200
-            }
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
-        ]
-      },
-      {
         "id": "EradicatingBlast0",
         "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "Eradicating Blast",
@@ -5539,26 +6686,6 @@
         ],
         "effectGroups": [
           "melvorD:Buff"
-        ]
-      },
-      {
-        "id": "TidalWave0",
-        "templateID": "melvorD:StaticNonCountingModifier",
-        "name": "Tidal Wave",
-        "nameLang": "SPECIAL_ATTACK_NAME_TidalWave",
-        "media": "assets/media/status/evasion_decrease.png",
-        "target": "Target",
-        "parameters": [],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "meleeEvasion": -50
-            }
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Debuff"
         ]
       },
       {
@@ -5952,26 +7079,6 @@
         ]
       },
       {
-        "id": "Shockwave0",
-        "templateID": "melvorD:StaticNonCountingModifier",
-        "name": "Shockwave",
-        "nameLang": "SPECIAL_ATTACK_NAME_Shockwave",
-        "media": "assets/media/status/evasion_decrease.png",
-        "target": "Target",
-        "parameters": [],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "rangedEvasion": -90
-            }
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Debuff"
-        ]
-      },
-      {
         "id": "AbsorbingSkin",
         "templateID": "melvorD:StackingNonCountingModifier",
         "name": "AbsorbingSkin",
@@ -6221,65 +7328,6 @@
               }
             ]
           }
-        ]
-      },
-      {
-        "id": "PowerOfTheMist0",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Power of the Mist",
-        "nameLang": "SPECIAL_ATTACK_NAME_PowerOfTheMist",
-        "media": "assets/media/status/attack_increase.png",
-        "descriptionTemplateData": {
-          "initialParameters": {
-            "modValue0": 100
-          }
-        },
-        "target": "Self",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 0
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "combatEffects": [
-              {
-                "effectID": "BGSCheat:Affliction",
-                "chance": 100,
-                "appliesWhen": "PostFirstAttack"
-              }
-            ]
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
-        ]
-      },
-      {
-        "id": "TiltedShot0",
-        "templateID": "melvorD:Combo",
-        "name": "Tilted Shot",
-        "nameLang": "SPECIAL_ATTACK_NAME_TiltedShot",
-        "media": "assets/media/status/attack_increase.png",
-        "parameters": [
-          {
-            "name": "maxStacks",
-            "initialValue": 10
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "accuracyRating": -5,
-              "maxHit": 30
-            }
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
         ]
       },
       {
@@ -6679,7 +7727,7 @@
         "parameters": [
           {
             "name": "maxStacks",
-            "initialValue": 50
+            "initialValue": 20
           }
         ],
         "statGroups": [
@@ -6688,7 +7736,7 @@
             "modifiers": {
               "flatAttackInterval": -150,
               "accuracyRating": -1,
-              "maxHit": 2
+              "maxHit": 1
             }
           }
         ],
@@ -7219,6 +8267,131 @@
         ]
       },
       {
+        "id": "UnknownThreat0",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Unknown Threat",
+        "nameLang": "SPECIAL_ATTACK_NAME_UnknownThreat",
+        "media": "assets/media/status/attack_increase.png",
+        "descriptionTemplateData": {
+          "initialParameters": {
+            "modValue0": 5
+          }
+        },
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 20
+          },
+          {
+            "name": "turns",
+            "initialValue": 0
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "combatEffects": [
+              {
+                "effectID": "melvorD:Affliction",
+                "chance": 5,
+                "appliesWhen": "PostFirstAttack"
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "UnknownThreat1",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Unknown Threat",
+        "nameLang": "SPECIAL_ATTACK_NAME_UnknownThreat",
+        "media": "assets/media/status/speedup.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          },
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "attackInterval": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "IcePrison1",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Ice Prison",
+        "nameLang": "SPECIAL_ATTACK_NAME_IcePrison",
+        "media": "assets/media/status/evasion_decrease.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          },
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageTaken": [
+                {
+                  "effectGroupID": "melvorD:StunLike",
+                  "value": 30
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
         "id": "Madness2",
         "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "Madness",
@@ -7311,25 +8484,25 @@
         "id": "NaturesCall0",
         "table": [
           {
-            "effectID": "melvorD:Stun",
+            "effectID": "BGSCheat:Stun",
             "initialParams": [
               {
                 "name": "turns",
-                "value": 1
+                "value": 2
               }
             ],
             "weight": 1
           },
           {
-            "effectID": "melvorD:Slow",
+            "effectID": "BGSCheat:Slow",
             "initialParams": [
               {
                 "name": "magnitude",
-                "value": 15
+                "value": 40
               },
               {
                 "name": "turns",
-                "value": 2
+                "value": 4
               }
             ],
             "weight": 1
@@ -7340,29 +8513,29 @@
         "id": "NaturesWrath0",
         "table": [
           {
-            "effectID": "melvorD:Freeze",
+            "effectID": "BGSCheat:Freeze",
             "initialParams": [
               {
                 "name": "turns",
-                "value": 1
+                "value": 2
               }
             ],
             "weight": 1
           },
           {
-            "effectID": "melvorD:Burn",
+            "effectID": "BGSCheat:Burn",
             "weight": 1
           },
           {
-            "effectID": "melvorD:Frostburn",
+            "effectID": "BGSCheat:Frostburn",
             "weight": 1
           },
           {
-            "effectID": "melvorD:Sleep",
+            "effectID": "BGSCheat:Sleep",
             "initialParams": [
               {
                 "name": "turns",
-                "value": 1
+                "value": 2
               }
             ],
             "weight": 1
@@ -7371,301 +8544,6 @@
       }
     ],
 		"attacks": [
-			{
-				"id": "SunsetStab",
-				"defaultChance": 15,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 180
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:Bleed400"
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 1,
-				"attackInterval": 50,
-				"lifesteal": 0,
-				"name": "Sunset Stab",
-				"description": "On a hit inflicts Bleed that deals ${onHitEffect0DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect0duration}s.",
-				"descriptionGenerator": "On a hit <hitEffect>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "Infernum",
-				"defaultChance": 20,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 225,
-						"attackCount": 0
-					},
-					{
-						"damageType": "Normal",
-						"amplitude": 325,
-						"attackCount": 1
-					},
-					{
-						"damageType": "Normal",
-						"amplitude": 425,
-						"attackCount": 2
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [],
-				"cantMiss": true,
-				"attackCount": 3,
-				"attackInterval": 100,
-				"lifesteal": 0,
-				"name": "Infernum",
-				"description": "Perform ${hitCount} unavoidable attacks that deal ${attackDamageMaxValue0}% of normal damage on the 1st attack, ${attackDamageMaxValue1}% of normal damage on the 2nd attack, and ${attackDamageMaxValue2}% of normal damage on the 3rd attack.",
-				"descriptionGenerator": "Perform <count> <avoidable> attacks that deal <damage>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "CrushingBlow",
-				"defaultChance": 15,
-				"damage": [
-					{
-						"damageType": "Custom",
-						"roll": false,
-						"maxRoll": "MaxHitScaledByHP",
-						"maxPercent": 800,
-						"character": "Attacker"
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [],
-				"cantMiss": true,
-				"attackCount": 1,
-				"attackInterval": 50,
-				"lifesteal": 0,
-				"name": "Crushing Blow",
-				"description": "Perform an unavoidable attack that does ${attackDamageMaxValue0}% of your max hit multiplied by your current hitpoints percent damage.",
-				"descriptionGenerator": "Perform an <avoidable> attack that does <damage> damage.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "IcePrison",
-				"defaultChance": 35,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 200
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "BGSCheat:Freeze",
-						"chance": 100,
-						"initialParams": [
-							{
-								"name": "turns",
-								"value": 10
-							}
-						]
-					},
-					{
-						"effectID": "BGSCheat:IcePrison1"
-					}
-				],
-				"cantMiss": true,
-				"attackCount": 1,
-				"attackInterval": 50,
-				"lifesteal": 0,
-				"name": "Ice Prison",
-				"description": "Unavoidable attack that applies freeze for ${onHitEffect0turns} turns.",
-				"descriptionGenerator": "<Avoidable> attack that <hitEffect>.",
-				"usesRunesPerProc": false
-			},
-			{
-				"id": "Flurry",
-				"defaultChance": 25,
-				"damage": [
-					{
-						"damageType": "Normal",
-						"amplitude": 100
-					}
-				],
-				"prehitEffects": [],
-				"onhitEffects": [
-					{
-						"effectID": "melvorF:Flurry0",
-						"initialParams": [
-							{
-								"name": "maxStacks",
-								"value": 20
-							}
-						]
-					}
-				],
-				"cantMiss": false,
-				"attackCount": 20,
-				"attackInterval": 25,
-				"lifesteal": 0,
-				"name": "Flurry",
-				"description": "Attack ${hitCount} times for ${attackDamageMaxValue0}% of your normal damage (avoidable). Gain +${onHitEffect0modValue0}% Maximum Hit each time you succesfully hit, stacking up to ${onHitEffect0maxStacks} times. Stacks reset on a miss.",
-				"descriptionGenerator": "Attack <count> times for <damage>. On a hit <hitEffect>. Attacks <canMiss>.",
-				"usesRunesPerProc": false
-			},
-      {
-        "id": "ForesightPlayer",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 250
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:ForesightPlayer0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Foresight",
-        "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your normal damage. On a hit, gives you +${onHitEffect0modValue0}% Accuracy Rating and +${onHitEffect0modValue1}% Global Evasion for ${onHitEffect0turns} of your turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals damage equal to <damage>. On a hit, <hitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "TidalWave",
-        "defaultChance": 25,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "FixedPlusMaxHit50",
-            "maxPercent": 2500,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [
-          {
-            "effectID": "BGSCheat:TidalWave0"
-          }
-        ],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 100
-              },
-              {
-                "name": "turns",
-                "value": 5
-              }
-            ]
-          }
-        ],
-        "cantMiss": true,
-        "attackCount": 4,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Tidal Wave",
-        "description": "Launch a massive tidal wave, dealing ${attackDamageMaxValue0} + 50% of your max hit as damage ${hitCount} times which can't miss. Gives the enemy +${onHitEffect0modValue0}% Attack Interval for ${onHitEffect0turns} of the enemy's turns. Gives the enemy -${preHitEffect0modValue0}% Melee Evasion until the end of the fight.",
-        "descriptionGenerator": "Launch a massive tidal wave, dealing <damage> damage <count> times which <canMiss>. <HitEffect>. On use, <prehitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "Stormsnap",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": false,
-            "maxRoll": "MagicScaling",
-            "maxPercent": 300,
-            "character": "Attacker"
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": true,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Stormsnap",
-        "description": "Perform an unavoidable attack that does ${attackDamageMaxValue0}% of your Magic level + 1.",
-        "descriptionGenerator": "Perform an <avoidable> attack that does <damage>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "DeadlyCutRanged",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 300
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Bleed400"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Deadly Cut",
-        "description": "Perform a regular attack. On a hit, inflicts Bleed that deals ${onHitEffect0DamageMaxValue0} and ${onHitEffect0DamageMaxValue1}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "Perform a regular attack. On a hit, <hitEffect>.",
-        "usesRunesPerProc": false,
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "Shockwave",
-        "defaultChance": 15,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 550,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [
-          {
-            "effectID": "BGSCheat:Shockwave0"
-          }
-        ],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Stun",
-            "chance": 100,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 4
-              }
-            ]
-          }
-        ],
-        "cantMiss": true,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Shockwave",
-        "description": "Fire a charged shot that does ${attackDamageMaxValue0}% of your max hit and can't miss. Applies stun for ${onHitEffect0turns} turn. Gives the enemy -${preHitEffect0modValue0}% Ranged Evasion until the end of the fight.",
-        "descriptionGenerator": "Fire a charged shot that does <damage> and <canMiss>. <HitEffect>. On use, <prehitEffect>.",
-        "usesRunesPerProc": false
-      },
       {
         "id": "CurseTotemSummonPlayer",
         "defaultChance": 20,
@@ -7691,268 +8569,6 @@
         "usesRunesPerProc": false
       },
       {
-        "id": "FeatherStorm",
-        "defaultChance": 30,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 500,
-            "attackCount": 0
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 250,
-            "attackCount": 1
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 250,
-            "attackCount": 2
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 250,
-            "attackCount": 3
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Bleed200"
-          }
-        ],
-        "cantMiss": true,
-        "attackCount": 4,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Feather Storm",
-        "description": "The enemy fires ${hitCount} unavoidable razor sharp feathers at you, dealing ${attackDamageMaxValue0}% of the enemy's normal damage on the 1st attack, ${attackDamageMaxValue1}% of the enemy's normal damage on the 2nd attack, ${attackDamageMaxValue2}% of the enemy's normal damage on the 3rd attack, and ${attackDamageMaxValue3}% of the enemy's normal damage on the 4th attack. On a hit, has a ${onHitEffect0chance}% chance to inflict Bleed that deals ${onHitEffect0DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "<Attacker> fires <count> <avoidable> razor sharp feathers at <target>, dealing <damage>. On a hit, <hitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "Firebreathing",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 75,
-            "character": "Attacker"
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Burn",
-            "chance": 100
-          }
-        ],
-        "cantMiss": true,
-        "attackCount": 8,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Firebreathing",
-        "description": "Breath fire on the Enemy, dealing 300% of your max hit damage over ${duration}s (Unavoidable). On a hit, Inflicts Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "Breath fire on the Enemy, dealing 300% of your max hit damage over <duration> (<Avoidable>). On a hit, <hitEffect>."
-      },
-      {
-        "id": "PetrifyingGlare",
-        "defaultChance": 30,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 330
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Stun",
-            "chance": 80,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 5
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 150,
-        "lifesteal": 0,
-        "name": "Petrifying Glare",
-        "description": "The enemy's central eye emits a bright beam dealing ${attackDamageMaxValue0}% of the enemy's normal damage. On a hit, has a ${onHitEffect0chance}% chance to apply stun for ${onHitEffect0turns} turns. Avoidable.",
-        "descriptionGenerator": "<AttPos> central eye emits a bright beam dealing <damage>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "FreezeRay",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 125
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 50
-              },
-              {
-                "name": "turns",
-                "value": 5
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Magic Ray",
-        "description": "Converts your selected Standard Magic Spell into a Magic Ray, dealing ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. On a hit, gives the enemy +${onHitEffect0modValue0}% Attack Interval for ${onHitEffect0turns} of the enemy's turns. Consumes Runes per hit.",
-        "descriptionGenerator": "Converts your selected Standard Magic Spell into a Magic Ray, dealing <damage> <count> times over <duration>. On a hit, <hitEffect>. Consumes Runes per hit.",
-        "usesRunesPerProc": true
-      },
-      {
-        "id": "PowerOfTheMist",
-        "defaultChance": 25,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
-            "maxRoll": "MaxHit",
-            "maxPercent": 50
-          }
-        ],
-        "prehitEffects": [
-          {
-            "effectID": "BGSCheat:PowerOfTheMist0"
-          }
-        ],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Sleep",
-            "chance": 100,
-            "condition": {
-              "character": "Enemy",
-              "type": "Hitpoints",
-              "operator": "<",
-              "value": 100
-            },
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 4
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 10,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Power of the Mist",
-        "description": "The Herald conjures a shroud of mist and pushes it towards you, dealing damage equal to ${attackDamageMaxValue0}% of the enemy's max hit ${hitCount} times over ${duration}s. This attack has +${preHitEffect0modValue0}% chance to apply affliction. On a hit, applies sleep for ${onHitEffect0turns} turns if your hitpoints are below ${onHitEffect0hpThreshold}%. Avoidable.",
-        "descriptionGenerator": "The Herald conjures a shroud of mist and pushes it towards you, dealing damage equal to <damage> <count> times over <duration>. This attack has +${preHitEffect0modValue0}% chance to apply affliction. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "BruteForce",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 400
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Brute Force",
-        "description": "Perform an attack that deals up to ${attackDamageMaxValue0}% of your normal damage.",
-        "descriptionGenerator": "Perform an attack that does <damage>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "Volley",
-        "defaultChance": 30,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 120
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": true,
-        "attackCount": 5,
-        "attackInterval": 100,
-        "lifesteal": 0,
-        "name": "Volley",
-        "description": "Fire off an unavoidable volley of ${hitCount} x Arrows (Attack ${hitCount} times).",
-        "descriptionGenerator": "Fire off an <avoidable> volley of <count> x Arrows (Attack <count> times).",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "Killshot",
-        "defaultChance": 5,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "MaxHit",
-            "maxPercent": 210,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": true,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Killshot",
-        "description": "An unavoidable attack that deals ${attackDamageMaxValue0}% of your max hit.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage>.",
-        "usesRunesPerProc": true
-      },
-      {
-        "id": "TiltedShot",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 130
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:TiltedShot0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Tilted Shot",
-        "description": "Perform a regular attack (Avoidable). On a hit, gives you -${onHitEffect0modValue0}% Global Accuracy and +${onHitEffect0modValue1}% Maximum Hit each time you successfully hit, stacking up to ${onHitEffect0maxStacks} times. Stacks reset on a miss.",
-        "descriptionGenerator": "Perform a regular attack (<Avoidable>). On a hit, <hitEffect>."
-      },
-      {
         "id": "BloodLinkPlayer",
         "defaultChance": 50,
         "damage": [
@@ -7970,287 +8586,6 @@
         "name": "Blood Link",
         "description": "An unavoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. Lifesteals for 50% of damage dealt.",
         "descriptionGenerator": "An unavoidable attack that deals <damage> <count> times over <duration>. Lifesteals for 50% of damage dealt.",
-        "usesRunesPerProc": true
-      },
-      {
-        "id": "ReflectionPlayer",
-        "defaultChance": 20,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Target",
-            "maxRoll": "Reflection",
-            "maxPercent": 200,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Reflection",
-        "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of the enemy's combined Attack, Ranged and Magic Levels.",
-        "descriptionGenerator": "An avoidable attack that deals damage equal to <damage>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "TelekinesisPlayer",
-        "defaultChance": 25,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Target",
-            "maxRoll": "DefenceLevel",
-            "maxPercent": 500,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": true,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Telekinesis",
-        "description": "An unavoidable attack that deals damage equal to ${attackDamageMaxValue0}% of the enemy's Defence Level.",
-        "descriptionGenerator": "An <avoidable> attack that deals damage equal to <damage>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "TrapDoor",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Target",
-            "maxRoll": "MaxHP",
-            "maxPercent": 100,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Trap Door",
-        "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hitpoints.",
-        "descriptionGenerator": "An <avoidable> attack that deals damage equal to <damage>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "BladeEchoes",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 180,
-            "attackCount": 0
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 80,
-            "attackCount": 1
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 80,
-            "attackCount": 2
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 3,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Blade Echoes",
-        "description": "(MELEE ONLY) Perform 3 attacks that deal ${attackDamageMaxValue0}% of your normal damage on the 1st attack,${attackDamageMaxValue1}% of your normal damage on the 2nd attack and ${attackDamageMaxValue2}% of your normal damage on the 3rd attack.",
-        "descriptionGenerator": "(MELEE ONLY) Perform 3 attacks that deal <damage>.",
-        "attackTypes": [
-          "melee"
-        ]
-      },
-      {
-        "id": "BladeEchoes2",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 220,
-            "attackCount": 0
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 120,
-            "attackCount": 1
-          },
-          {
-            "damageType": "Normal",
-            "amplitude": 120,
-            "attackCount": 2
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 3,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Blade Echoes",
-        "description": "(MELEE ONLY) Perform 3 attacks that deal ${attackDamageMaxValue0}% of your normal damage on the 1st attack,${attackDamageMaxValue1}% of your normal damage on the 2nd attack and ${attackDamageMaxValue2}% of your normal damage on the 3rd attack.",
-        "descriptionGenerator": "(MELEE ONLY) Perform 3 attacks that deal <damage>.",
-        "attackTypes": [
-          "melee"
-        ]
-      },
-      {
-        "id": "BarragePlayer",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 100
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:BarragePlayer0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Barrage",
-        "description": "(RANGED ONLY) Perform an attack dealing ${attackDamageMaxValue0}% of your normal damage. Gain -${onHitEffect0modValue0}s Attack Interval,-${onHitEffect0modValue1}% Global Accuracy and -${onHitEffect0modValue2}% Maximum Hit each time you succesfully hit, stacking up to ${onHitEffect0maxStacks} times. Stacks reset on a miss.",
-        "descriptionGenerator": "(RANGED ONLY) Perform an attack dealing <damage>. On a hit <hitEffect>",
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "BarragePlayer2",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 210
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:BarragePlayer0"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Barrage",
-        "description": "(RANGED ONLY) Perform an attack dealing ${attackDamageMaxValue0}% of your normal damage. Gain -${onHitEffect0modValue0}s Attack Interval,-${onHitEffect0modValue1}% Global Accuracy and -${onHitEffect0modValue2}% Maximum Hit each time you succesfully hit, stacking up to ${onHitEffect0maxStacks} times. Stacks reset on a miss.",
-        "descriptionGenerator": "(RANGED ONLY) Perform an attack dealing <damage>. On a hit <hitEffect>",
-        "attackTypes": [
-          "ranged"
-        ]
-      },
-      {
-        "id": "SpiritPower",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 120
-          },
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "Fixed",
-            "maxPercent": 50,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Stun",
-            "chance": 50,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Spirit Power",
-        "description": "(MAGIC ONLY) Perform an attack dealing your normal damage plus an additional ${attackDamageMaxValue1} damage. On a hit has a ${onHitEffect0chance}% chance to apply stun for ${onHitEffect0turns} turn. Consumes 3 Spirit Runes per attack.",
-        "descriptionGenerator": "(MAGIC ONLY) Perform an attack dealing <damage> damage. On a hit <hitEffect>. Consumes 3 Spirit Runes per attack.",
-        "attackTypes": [
-          "magic"
-        ],
-        "extraRuneConsumption": [
-          {
-            "id": "melvorF:Spirit_Rune",
-            "quantity": 3
-          }
-        ],
-        "usesRunesPerProc": true
-      },
-      {
-        "id": "SpiritPower2",
-        "defaultChance": 100,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 300
-          },
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "Fixed",
-            "maxPercent": 150,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "BGSCheat:Stun",
-            "chance": 60,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Spirit Power",
-        "description": "(MAGIC ONLY) Perform an attack dealing your normal damage plus an additional ${attackDamageMaxValue1} damage. On a hit has a ${onHitEffect0chance}% chance to apply stun for ${onHitEffect0turns} turn. Consumes 3 Spirit Runes per attack.",
-        "descriptionGenerator": "(MAGIC ONLY) Perform an attack dealing <damage> damage. On a hit <hitEffect>. Consumes 3 Spirit Runes per attack.",
-        "attackTypes": [
-          "magic"
-        ],
-        "extraRuneConsumption": [
-          {
-            "id": "melvorF:Spirit_Rune",
-            "quantity": 3
-          }
-        ],
         "usesRunesPerProc": true
       },
 			{

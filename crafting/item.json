@@ -101,7 +101,7 @@
 	"melvorItA:Abyssal_Leather_Boots": {
 		"base": [ "Unholy5", "AbyD" ],
 		"ress": [0, [-3,0,3]],
-		"10u:itemrand": [ [ [ 80 ] ,"s","melvorItA:Abyssal_Stardust", "melvorD:Astrology" ] ]
+		"10u:itemRand": [ [ [ 80 ] ,"s","melvorItA:Abyssal_Stardust", "melvorD:Astrology" ] ]
 	},
 	"melvorF:Green_Dhide_Shield": {
 		"base": [ "Unholy1", "4shield" ]
@@ -534,7 +534,7 @@
 		"base": [ "Unholy5", "AbyD" ],
 		"ress": [0,[-3,0,3]],
 		"eva": [10],
-		"10u:itemrand": [ [ [ 0, 8 ] ,"s","melvorItA:Abyssal_Stardust", "melvorD:Astrology" ] ]
+		"10u:itemRand": [ [ [ 0, 8 ] ,"s","melvorItA:Abyssal_Stardust", "melvorD:Astrology" ] ]
 	},
 	"melvorItA:Abyssia_Legs": {
 		"base": [ "Unholy5", "AbyD" ],
@@ -693,24 +693,21 @@
 	},
 	"melvorF:Ring_Of_Blade_Echoes": {
 		"base": "BaseRing1",
-		"5u:cbeasy": [ "BGSCheat:Bleed", 3, 50, { "p": 800 } ],
-		"5spsar": {"BGSCheat:BladeEchoes": 100},
-		"10u:cbeasy": [ "BGSCheat:Stun", 1, 50, { "t": 3 } ],
-		"10spsar": {"BGSCheat:BladeEchoes2": 100}
+		"5u:uniqueAttack": { "id": "BladeEchoes" },
+		"5UdebuffAuto": ["25spd", 8, 20, {"t": 3}],
+		"10Ubuff": ["hitHp", 2, 25]
 	},
 	"melvorF:Ring_Of_Barrage": {
 		"base": "BaseRing1",
-		"5u:cbeasy": [ "BGSCheat:Poison", 3, 50, { "p": 100 } ],
-		"5spsar": {"BGSCheat:BarragePlayer": 100},
-		"10u:cbeasy": [ "BGSCheat:Freeze", 1, 50, { "t": 3 } ],
-		"10spsar": {"BGSCheat:BarragePlayer2": 100}
+		"5u:uniqueAttack": { "id": "BarragePlayer" },
+		"5Ucbeasy": [ "200Poison", 2, 50 ],
+		"10Udebuff": [ [ "5eva" ], 3, 100 ]
 	},
 	"melvorF:Ring_Of_Spirit_Power": {
 		"base": "BaseRing1",
-		"5u:cbeasy": [ "BGSCheat:Burn", 3, 50, { "p": 100 } ],
-		"5spsar": {"BGSCheat:SpiritPower": 100},
-		"10u:cbeasy": [ "BGSCheat:Sleep", 1, 50, { "t": 3 } ],
-		"10spsar": {"BGSCheat:SpiritPower2": 100}
+		"5u:uniqueAttack": { "id": "SpiritPower" },
+		"5Udebuff": ["maxHit", 2, 50],
+		"10Ucbeasy": [ "Frostburn", 2, 20 ]
 	},
 	"BaseRing2": {
 		"base": "Base",
@@ -830,7 +827,7 @@
 		"u:defs": [ [ -70, 0, 70 ], [ -70, 0, 70 ], [ -70, 0, 70 ] ],
 		"u:ress": [0, [-5,0,5]],
 		"u:sums": [ 0, 20 ],
-		"u:corrup": [0,0,0,50],
+		"u:corrupt": [0,0,0,50],
 		"5corrupt": [ 50, 50, 50 ],
 		"5uc:cbeasy": ["BGSCheat:Nulled", 2, 30, {"t": 3}]
 	},
@@ -1125,7 +1122,7 @@
 	},
 	"melvorTotH:Iridium_Zephyte_Necklace": {
 		"base": "BaseAmulet2",
-		"5strBonud": [10,10,10,10,10]
+		"5strBonus": [10,10,10,10,10]
 	},
 	"melvorTotH:Palladium_Zephyte_Necklace": {
 		"base": "BaseAmulet2",
@@ -1179,7 +1176,7 @@
 		"base": "BaseAmulet3",
 		"5uc:cbeasy": [ [ "BGSCheat:Ablaze", "BGSCheat:Toxin"], 3, 15, { "p": 100 } ],
 		"10u:acc2": [20,20,20],
-		"10u:strbonus": [10,10,10,20,20]
+		"10u:strBonus": [10,10,10,20,20]
 	},
 	"melvorItA:Azurian_Moonstone_Amulet_I": {
 		"base": "BaseAmulet3",
@@ -1207,7 +1204,7 @@
 		"base": "BaseAmulet3",
 		"5uc:cbeasy": [ [ "BGSCheat:Ablaze", "BGSCheat:Toxin"], 3, 30, { "p": 200 } ],
 		"10u:acc2": [40,40,40],
-		"10u:strbonus": [20,20,20,40,40]
+		"10u:strBonus": [20,20,20,40,40]
 	},
 	"melvorItA:Azurian_Moonstone_Amulet_II": {
 		"base": "BaseAmulet3",

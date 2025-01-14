@@ -271,6 +271,8 @@ export class Util {
 				v += (value.v * lv);
 			if (isNumber(value.u) && isNumber(mul))
 				v += (value.u * mul);
+			if (isNumber(value.o) && isNumber(mul))
+				v += (value.o * (mul + 1));
 		}
 
 		if (isNumber(extraMul) && extraMul != 0)
@@ -294,6 +296,7 @@ export class Util {
 		if (isNumber(_a)) {
 			if ((type & 0x0FFF) == 1) v.v = _a;
 			else if ((type & 0x0FFF) == 2) v.u = _a;
+			else if ((type & 0x0FFF) == 3) v.o = _a;
 			else v.c = _a;
 		}
 		else if (typeof (_a) == "string") {
@@ -336,6 +339,7 @@ export class Util {
 				if (_a.c !== undefined) v.c = _a.c;
 				if (_a.v !== undefined) v.v = _a.v;
 				if (_a.u !== undefined) v.u = _a.u;
+				if (_a.o !== undefined) v.o = _a.o;
 			}
 			if (_a.m !== undefined) v.m = _a.m;
 			if (_a.M !== undefined) v.M = _a.M;
@@ -963,6 +967,7 @@ export class Util {
 				if (modData.damage[m].maxPercent) v.damage[m].maxPercent = modData.damage[m].maxPercent;
 			}
 		}
+
 		if (modData.prehitEffects instanceof Array) {
 			modData.prehitEffects.forEach(x => {
 				let effect = v.prehitEffects.find(y => y.effectID == x.effectID);
@@ -1042,7 +1047,7 @@ export class Util {
 			x?.initialParams?.forEach(y => { if (y.value) y.value = this.calcValue(y.value, 0x1000 | type, lv, mul, extraMul); });
 		});
 
-		let sp = game.specialAttacks.getObjectByID(id);
+		let sp = game.specialAttacks.getObjectByID("BGSCheat:" + id);
 		if (sp == null)
 			this.registerSpecialAttack(v, id);
 		else
@@ -1379,75 +1384,6 @@ export class EasyTool {
 	}
 	//modify elsments of values by adding minimun and maxinum, by valueMap setting.
 	static addModiferWithScopeMinMaxEasy(modifiers, data, values, valueMap, scopes, scopeMap, type, lv, mul, extraMul = 1) {
-		for (let m = 0; m < values.length; ++m) {
-			let key = valueMap[m];
-			if (typeof (key) != "string")
-				continue;
-			let i = key.indexOf('$');
-			if (i == -1)
-				continue;
-			valueMap[m] = key.slice(0, i);
-			let min = null;
-			let max = null;
-			let isInteger = 0;
-			let v = key.slice(i + 1);
-			if (v[0] == '-' || (v[0] >= '0' && v[0] <= '9')) {
-				let d = 1;
-				while (p[0][d] >= '0' && p[0][d] <= '9')
-					++d;
-				min = Number(v.slice(0, d));
-			}
-			i = v.indexOf('$');
-			if (i != -1) {
-				v = v.slice(i + 1);
-				if (v[0] >= '0' && v[0] <= '9') {
-					let d = 1;
-					while (v[0][d] >= '0' && v[0][d] <= '9')
-						++d;
-					max = Number(v.slice(0, d));
-				}
-				i = v.indexOf('$');
-				if (i != -1) {
-					v = v.slice(i + 1);
-					if (v[0] == '1')
-						isInteger = true;
-				}
-			}
-			if (isNumber(min) == false && isNumber(max) == false && isInteger == false)
-				continue;
-
-			if (isNumber(values[m])) {
-				if (type == 1)
-					values[m] = [0, values[m], 0, min, max, isInteger];
-				else if (type == 2)
-					values[m] = [0, 0, values[m], min, max, isInteger];
-				else
-					values[m] = [values[m], 0, 0, min, max, isInteger];
-			}
-			else if (typeof (values[m]) == "string")
-				values[m] = [values[m], min, max, isInteger];
-			else if (!(values[m] instanceof Array))
-				continue;
-			else {
-				if (typeof (values[m][0]) == "string") {
-					if (values[m].length < 2)
-						values[m].push(min);
-					if (values[m].length < 3)
-						values[m].push(max);
-					if (values[m].length < 4)
-						values[m].push(isInteger);
-				}
-				else if (isNumber(values[m][0])) {
-					if (values[m].length < 4)
-						values[m].push(min);
-					if (values[m].length < 5)
-						values[m].push(max);
-					if (values[m].length < 6)
-						values[m].push(isInteger);
-				}
-			}
-		}
-
 		Util.addModiferDataAlias(modifiers, data, values, valueMap, scopes, scopeMap, type, lv, mul, extraMul);
 	}
 
@@ -1700,15 +1636,223 @@ export class EasyTool {
 				});
 				break;
 			}
+			default: {
+				console.log("No such specfied modifier alias: " + key);
+			}
 		}
 
 	}
+
+	static scopeFromShortCut(scope, v) {
+		if (v.indexOf(":") != -1)
+			return v;
+
+		let ret = null;
+		switch (scope) {
+			case "realmID": {
+				switch (v) {
+					case "m":
+					case "M":
+					case "melvor": ret = "melvorD:Melvor"; break;
+					case "a":
+					case "A":
+					case "abyssal": ret = "melvorItA:Abyssal"; break;
+					case "e":
+					case "E":
+					case "eternal": ret = "melvorItA:Eternal"; break;
+					default: {
+						console.log("Realm ID no such shortcut: " + v);
+					}
+				}
+				break;
+			}
+			case "currencyID": {
+				switch (v) {
+					case "gp":
+					case "GP": ret = "melvorD:GP"; break;
+					case "sc":
+					case "SC": ret = "melvorD:SlayerCoins"; break;
+					case "ap":
+					case "AP": ret = "melvorItA:AbyssalPieces"; break;
+					case "as":
+					case "AS": ret = "melvorItA:AbyssalSlayerCoins"; break;
+					default: {
+						console.log("Currency ID no such shortcut: " + v);
+					}
+				}
+				break;
+			}
+			case "damageTypeID": {
+				switch (v) {
+					case "n": ret = "melvorD:Normal"; break;
+					case "p": ret = "melvorF:Pure"; break;
+					case "a": ret = "melvorItA:Abyssal"; break;
+					case "e": ret = "melvorItA:Eternal"; break;
+					default: {
+						console.log("Damage Type ID no such shortcut: " + v);
+					}
+				}
+			}
+			case "skillID": {
+				switch (v) {
+					case "atk": ret = "melvorD:Attack"; break;
+					case "atr": ret = "melvorD:Strength"; break;
+					case "def": ret = "melvorD:Defence"; break;
+					case "hp": ret = "melvorD:Hitpoints"; break;
+					case "ran": ret = "melvorD:Ranged"; break;
+					case "mag": ret = "melvorD:Magic"; break;
+					case "pray": ret = "melvorD:Prayer"; break;
+					case "slay": ret = "melvorD:Slayer"; break;
+					case "wood": ret = "melvorD:Woodcutting"; break;
+					case "fish": ret = "melvorD:Fishing"; break;
+					case "fire": ret = "melvorD:Firemaking"; break;
+					case "cook": ret = "melvorD:Cooking"; break;
+					case "mine": ret = "melvorD:Mining"; break;
+					case "smit": ret = "melvorD:Smithing"; break;
+					case "thie": ret = "melvorD:Thieving"; break;
+					case "farm": ret = "melvorD:Farming"; break;
+					case "flet": ret = "melvorD:Fletching"; break;
+					case "craf": ret = "melvorD:Crafting"; break;
+					case "rune": ret = "melvorD:Runecrafting"; break;
+					case "herb": ret = "melvorD:Herblore"; break;
+					case "agil": ret = "melvorD:Agility"; break;
+					case "summ": ret = "melvorD:Summoning"; break;
+					case "astr": ret = "melvorD:Astrology"; break;
+					case "town": ret = "melvorD:Township"; break;
+					case "cart": ret = "melvorAoD:Cartography"; break;
+					case "arch": ret = "melvorAoD:Archaeology"; break;
+					case "corr": ret = "melvorItA:Corruption"; break;
+					case "harv": ret = "melvorItA:Harvesting"
+					default: {
+						console.log("Skill ID no such shortcut: " + v);
+					}
+				}
+			}
+			case "effectGroupID": {
+				switch (v) {
+					case "stunlike":
+					case "like":
+					case "StunLike": ret = "melvorD:StunLike"; break;
+					case "stun":
+					case "Stun": ret = "melvorD:Stun"; break;
+					case "StunImmune": ret = "melvorD:StunImmune"; break;
+					case "freeze":
+					case "Freeze": ret = "melvorD:Freeze"; break;
+					case "crystallize":
+					case "crystal":
+					case "Crystal":
+					case "Crystallize": ret = "melvorD:Crystallize"; break;
+					case "sleep":
+					case "Sleep": ret = "melvorD:Sleep"; break;
+					case "SleepImmune": ret = "melvorD:SleepImmune"; break;
+					case "Drowsy": ret = "melvorD:Drowsy"; break;
+					case "slow":
+					case "Slow": ret = "melvorD:Slow"; break;
+					case "frostburn":
+					case "frost":
+					case "Frostburn": ret = "melvorD:Frostburn"; break;
+					case "dot":
+					case "DOT":
+					case "DamageOverTime": ret = "melvorD:DamageOverTime"; break;
+					case "burn":
+					case "Burn": ret = "melvorD:BurnDOT"; break;
+					case "bleed":
+					case "Bleed": ret = "melvorD:BleedDOT"; break;
+					case "poison":
+					case "Poison": ret = "melvorD:PoisonDOT"; break;
+					case "regen":
+					case "Regen": ret = "melvorD:RegenDOT"; break;
+					case "Poison2":
+					case "poison2":
+					case "deadly":
+					case "Deadly":
+					case "dp":
+					case "DP":
+					case "DeadlyPoison": ret = "melvorD:DeadlyPoisonDOT"; break;
+					case "BarrierBleed": ret = "melvorD:BarrierBleedDOT"; break;
+					case "BarrierBurn": ret = "melvorD:BarrierBurnDOT"; break;
+					case "lace":
+					case "Lace":
+					case "Laceration": ret = "melvorD:LacerationDOT"; break;
+					case "stacking":
+					case "stack":
+					case "Stack":
+					case "Stacking": ret = "melvorD:Stacking"; break;
+					case "curse":
+					case "Curse": ret = "melvorD:Curse"; break;
+					case "buff":
+					case "Buff": ret = "melvorD:Buff"; break;
+					case "debuff":
+					case "Debuff": ret = "melvorD:Debuff"; break;
+					case "fear":
+					case "Fear": ret = "melvorD:Fear"; break;
+					case "FearImmune": ret = "melvorD:FearImmune"; break;
+					case "cs":
+					case "CS":
+					case "CrystalSanction": ret = "melvorD:CrystalSanction"; break;
+					case "corr":
+					case "corrupt":
+					case "Corrupt":
+					case "Corruption": ret = "melvorItA:Corruption"; break;
+					case "blight":
+					case "Blight": ret = "melvorItA:Blight"; break;
+					case "wither":
+					case "Wither": ret = "melvorItA:Wither"; break;
+					case "silence":
+					case "Silence": ret = "melvorItA:Silence"; break;
+					case "SilenceImmune": ret = "melvorItA:SilenceImmune"; break;
+					case "ec":
+					case "EC":
+					case "EldritchCurse": ret = "melvorItA:EldritchCurse"; break;
+					case "void":
+					case "Void":
+					case "Voidburst": ret = "melvorItA:Voidburst"; break;
+					case "Toxin": ret = "melvorItA:ToxinDOT"; break;
+					case "Ablaze": ret = "melvorItA:AblazeDOT"
+					default: {
+						console.log("Effect  Group ID no such shortcut: " + v);
+					}
+				}
+			}
+			case "subcategoryID": {
+				switch (v) {
+					case "air": ret = "melvorD:Air"; break;
+					case "water": ret = "melvorD:Water"; break;
+					case "earth": ret = "melvorD:Earth"; break;
+					case "fire": ret = "melvorD:Fire"; break;
+					case "elemental": ret = "melvorD:Elemental"; break;
+					case "strike": ret = "melvorD:Strike"; break;
+					case "bolt": ret = "melvorD:Bolt"; break;
+					case "blast": ret = "melvorD:Blast"; break;
+					case "wave": ret = "melvorD:Wave"; break;
+					case "surge": ret = "melvorD:Surge"; break;
+					case "nature": ret = "melvorF:Nature"; break;
+					case "poison": ret = "melvorTotH:Poison"; break;
+					case "infernal": ret = "melvorTotH:Infernal"; break;
+					case "lightning": ret = "melvorTotH:Lightning"; break;
+					case "abyssal": ret = "melvorItA:Abyssal"; break;
+					case "brume": ret = "melvorItA:Brume"; break;
+					case "gloom": ret = "melvorItA:Gloom"; break;
+					case "wither": ret = "melvorItA:Wither"; break;
+					case "nether": ret = "melvorItA:Nether"
+					default: {
+						console.log("Category ID no such shortcut: " + v);
+					}
+				}
+			}
+			default: {
+				console.log("No such scope: " + scope);
+			}
+		}
+		return ret;
+	}
+
 	/*
 	 * xp: 
 				valueMap = ["skillXP", "abyssalSkillXP", "masteryXP"];
 				scopeMap = ["skillID", "realmID"];
 	 * skillbase:
-				valueMap = ["skillPreservationChance","skillItemDoublingChance","flatSkillInterval","skillInterval"],
+				valueMap = ["skillPreservationChance","skillItemDoublingChance","flatSkillInterval","skillInterval","globalItemDoublingChance"],
 				scopeMap = ["skillID", "realmID", "actionID", "categoryID", "subcategoryID"];
 	 * skillextra
 				valueMap = ["PreservationCap","doubleItemPower","flatAdditionalPrimaryProductQuantity","skillCostReduction"],
@@ -1771,6 +1915,7 @@ export class EasyTool {
 				scopeMap = ["subcategoryID"];
 	 * maxHits
 				valueMap = ["maxHitBasedOnTargetCurrentHitpoints", "maxHitBasedOnPrayerCost", "maxHitBasedOnResistance", "maxHitBasedOnTargetResistance", "meleeMaxHit", "rangedMaxHit","magicMaxHit"];
+				scopeMap = ["damageTypeID"];
 	 * against
 				valueMap = ["accuracyRatingAgainstDamageType", "evasionAgainstDamageType","maxHitAgainstDamageType","maxHitpointsAgainstDamageType"];
 				scopeMap = ["damageTypeID"];
@@ -1898,7 +2043,7 @@ export class EasyTool {
 				break;
 			}
 			case "skillbase": {
-				valueMap = ["skillPreservationChance", "skillItemDoublingChance", "flatSkillInterval", "skillInterval"];
+				valueMap = ["skillPreservationChance", "skillItemDoublingChance", "flatSkillInterval", "skillInterval","globalItemDoublingChance"];
 				scopeMap = ["skillID", "realmID", "actionID", "categoryID", "subcategoryID"];
 				break;
 			}
@@ -1999,6 +2144,7 @@ export class EasyTool {
 			}
 			case "maxHits": {
 				valueMap = ["maxHitBasedOnTargetCurrentHitpoints", "maxHitBasedOnPrayerCost", "maxHitBasedOnResistance", "maxHitBasedOnTargetResistance", "meleeMaxHit", "rangedMaxHit","magicMaxHit"];
+				scopeMap = ["damageTypeID"];
 				break;
 			}
 			case "against": {
@@ -2238,6 +2384,9 @@ export class EasyTool {
 				valueMap = ["harvestingUniqueProductChance", "flatHarvestingIntensity", "doubleHarvestingIntensityChance", "minimumHarvestingIntensity","minimumHarvestingIntensity"];
 				break;
 			}
+			default: {
+				console.log("No such modifier shortcut: " + key);
+			}
 		}
 		if (valueMap)
 			this.addModiferWithScopeMinMaxEasy(modifiers, data, values, valueMap, scopes, scopeMap, type, lv, mul, extraMul);
@@ -2247,12 +2396,19 @@ export class EasyTool {
 		if (!(modData instanceof Array))
 			return;
 
-		if (modData[0] === "c") {
-			modData.slice(1).forEach(x => {
+		if (modData[0] instanceof Array) {
+			modData.forEach(x => {
 				this.addModifersEasy(modifiers, data, key, x, type, lv, mul, extraMul);
 			});
 			return;
 		}
+
+		const i = modData.findIndex(x => (x instanceof Array) || typeof (x) == "string");
+		if (i == -1)
+			return this.addModiferWithScope(modifiers, data, key, modData, null, type, lv, mul, extraMul);
+
+		const value = modData.slice(0, i);
+		const scopes = modData.slice(i);
 
 		if (modData[1] === "n") {
 			if (!(modData[0] instanceof Array))
@@ -2295,6 +2451,8 @@ export class EasyTool {
 				case "Stun": ret = "BGSCheat:Stun"; break;
 				case "freeze": 
 				case "Freeze": ret = "BGSCheat:Freeze"; break;
+				case "crystal":
+				case "Crystal":
 				case "crystallize": 
 				case "Crystallize": ret = "BGSCheat:Crystallize"; break;
 				case "sleep": 
@@ -2303,7 +2461,11 @@ export class EasyTool {
 				case "Blind": ret = "BGSCheat:Blind"; break;
 				case "silence": 
 				case "Silence": ret = "BGSCheat:Silence"; break;
+				case "ec":
+				case "EC":
 				case "EldritchCurse": ret = "BGSCheat:EldritchCurse"; break;
+				case "cs":
+				case "CS":
 				case "CrystalSanction": ret = "BGSCheat:CrystalSanction"; break;
 				case "nulled": 
 				case "null": 
@@ -2537,7 +2699,6 @@ export class EasyTool {
 		const i = id.indexOf(":");
 		const lID = id.slice(i + 1);
 		switch (lID) {
-			case "Frostburn":
 			case "Stun":
 			case "Freeze":
 			case "Crystallize":
@@ -2612,6 +2773,13 @@ export class EasyTool {
 				if (_a.find(x => x.name == "maxStacks") == null && _a.find(x => x.name == "resetStacks") == null) {
 					_a.push({ "name": "maxStacks", "value": defValue });
 					_a.push({ "name": "resetStacks", "value": defValue / 2 });
+				}
+				break;
+			}
+			case "Frostburn": {
+				if (_a.find(x => x.name == "stacksToAdd") == null && _a.find(x => x.name == "initialStacks") == null) {
+					_a.push({ "name": "stacksToAdd", "value": defValue });
+					_a.push({ "name": "initialStacks", "value": defValue / 2 });
 				}
 				break;
 			}
@@ -2948,6 +3116,8 @@ export class EasyTool {
 				this.addCombatEffectsModificationEasyParams(effects, data, "cbeasy", id, _a[0], _a[1] ? _a[1] : 100, _a[2], _a[3], _a[4], _a[5] ? _a[5] : "", type, lv, mul, extraMul);
 				break;
 			}
+			case "buffAuto":
+			case "debuffAuto":
 			case "debuff":
 			case "buff": {
 				if (_a[0] instanceof Array) {
@@ -2973,29 +3143,49 @@ export class EasyTool {
 					defValue = Number(k.slice(0, d));
 					k = k.slice(d);
 				}
-				const b = (key == "buff");
+				const b = (key == "buff" || key == "buffAuto");
 				let id = null;
 				switch (k) {
-					case "acc": id = b?"BGSCheat:IncreasedAccuracy":"BGSCheat:AfflictionAccu"; break;
-					case "eva": id = b?"BGSCheat:IncreasedEvasion":"BGSCheat:AfflictionEva"; break;
-					case "maxHit": id = b?"BGSCheat:IncreasedMaxhit":"BGSCheat:AfflictionMaxhit"; break;
-					case "spd": id = b?"BGSCheat:IncreasedSpd":"BGSCheat:AfflictionSpd"; break;
-					case "dmg": id = b?"BGSCheat:IncreasedDealt":"BGSCheat:AfflictionDealt"; break;
-					case "res": id = b?"BGSCheat:IncreasedRes":"BGSCheat:AfflictionRes"; break;
-					case "taken": id = b?"BGSCheat:DecreasedTaken":"BGSCheat:AfflictionTaken"; break;
-					case "hp": id = b?"BGSCheat:IncreasedMaxHitpoints":"BGSCheat:Affliction"; break;
-					case "crit": id = b?"BGSCheat:IncreasedCrit":null; break;
-					case "critMul": id = b?"BGSCheat:IncreasedCritMul":null; break;
+					case "accu":
+					case "acc": id = b?"BGSCheat:BuffAccu":"BGSCheat:DebuffAccu"; break;
+					case "eva": id = b?"BGSCheat:BuffEva":"BGSCheat:DebuffEva"; break;
+					case "hit":
+					case "maxHit": id = b?"BGSCheat:BuffMaxhit":"BGSCheat:DebuffMaxhit"; break;
+					case "hitHp":
+					case "maxHitOnHp": id = b?"BGSCheat:BuffMaxhitOnCurrHp":null; break;
+					case "hitRes":
+					case "maxHitOnRes": id = b?"BGSCheat:BuffMaxhitOnRes":null; break;
+					case "hitTRes":
+					case "maxHitOnTRes": id = b?"BGSCheat:BuffMaxhitOnTargetRes":null; break;
+					case "spd": id = b?"BGSCheat:BuffSpd":"BGSCheat:DebuffSpd"; break;
+					case "fspd": id = b?"BGSCheat:BuffFSpd":"BGSCheat:DebuffFSpd"; break;
+					case "dmg": id = b?"BGSCheat:BuffDealt":"BGSCheat:DebuffDealt"; break;
+					case "dmgS":
+					case "dmgPerAtk": id = b?null:"BGSCheat:DebuffDmgPerAtk"; break;
+					case "dmgOnHp": id = b?"BGSCheat:BuffDmgOnHp":null; break;
+					case "dmgOnMHp": id = b?"BGSCheat:BuffDmgOnMaxHp":null; break;
+					case "dmgOnSHP":
+					case "dmgOnMHpSelf": id = b?"BGSCheat:BuffDmgOnMaxHpSelf":null; break;
+					case "stDmg":
+					case "stealDmgOnHp": id = b?"BGSCheat:BuffStealDmgOnHp":null; break;
+					case "res": id = b?"BGSCheat:BuffRes":"BGSCheat:DebuffRes"; break;
+					case "taken": id = b?"BGSCheat:BuffTaken":"BGSCheat:DebuffTaken"; break;
+					case "dotTaken": id = b?"BGSCheat:BuffDot":"BGSCheat:DebuffDot"; break;
+					case "takenOnHp": id = b?null:"BGSCheat:DebuffTakenOnHp"; break;
+					case "hp": id = b?"BGSCheat:BuffHp":"BGSCheat:DebuffHp"; break;
+					case "crit": id = b?"BGSCheat:BuffCrit":null; break;
+					case "critMul": id = b?"BGSCheat:BuffCritMul":null; break;
+					case "steal": id = b?"BGSCheat:BuffSteal":null; break;
 				}
 				if (id == null) {
-					console.log("Buff and Debuff has no such case: " + _a[0]);
+					console.log(key + " has no such case: " + _a[0]);
 					return;
 				}
 				let p = Object.assign({},_a[3]);
 				if (p && (p.t || p.turns)) {
 					id += "T";
 				}
-				if (p.category || p.c) {
+				if (typeof(p.category) == "string" || typeof(p.c) == "string") {
 					let c = p.category ? p.category : p.c;
 					let cv = 1;
 					switch(c){
@@ -3023,6 +3213,8 @@ export class EasyTool {
 						case "e": cv = 31; break;
 						case "consumable": 
 						case "c": cv = 37; break;
+						case "attack": 
+						case "a": cv = 41; break;
 					}
 					if (cv > 1) {
 						if (p.category)
@@ -3112,11 +3304,47 @@ export class EasyTool {
 				}
 				break;
 			}
-			case "cbeasy":
+			case "buffAuto":
+			case "debuffAuto": {
+				if (_v.length < 2) {
+					console.log("data is too less: " + statObject.id);
+				}
+				let c = null;
+				statObject?.validSlots?.forEach(x => {
+					if (c > 1) return;
+					switch (x.id) {
+						case "melvorD:Helmet": c = "helmet"; break;
+						case "melvorD:Platebody": c = "body"; break;
+						case "melvorD:Platelegs": c = "legs"; break;
+						case "melvorD:Boots": c = "boots"; break;
+						case "melvorD:Weapon": c = "weapon"; break;
+						case "melvorD:Shield": c = "shield"; break;
+						case "melvorD:Amulet": c = "amulet"; break;
+						case "melvorD:Ring": c = "ring"; break;
+						case "melvorD:Gloves": c = "gloves"; break;
+						case "melvorD:Quiver": c = "ammo"; break;
+						case "melvorD:Consumable": c = "consumable"; break;
+						case "melvorD:Gem": c = "gem"; break;
+					}
+				});
+				if (typeof(c) == "string") {
+					let p = Object.assign({}, _v[3]);
+					p.category = c;
+					if (_v.length < 3)
+						_v.push(100);
+					if (_v.length < 4)
+						_v.push(p);
+					else
+						_v[3] = p;
+				}
+				else {
+					console.log("Can't find category for: " + statObject.id);
+					return;
+				}
+			}
 			case "buff":
-			case "buff1":
-			case "debuff":
-			case "debuff1": {
+			case "debuff": 
+			case "cbeasy": {
 				if (data.combatEffects == null)
 					data.combatEffects = {};
 				this.addCombatEffectsModificationEasy(statObject.combatEffects, data.combatEffects, key, _v, type, lv, mul, extraMul);
@@ -3315,6 +3543,18 @@ export class EasyTool {
 				if (k[1] == 's')
 					mType = 's';
 			}
+		}
+		else {
+			if (k[0] == 'L' || k[0] == 'V')
+				type = 1;
+			if (k[0] == 'M' || k[0] == 'U')
+				type = 2;
+			if (k[0] == 'O' || k[0] == 'N')
+				type = 3;
+			if (k[0] == 'V' || k[0] == 'U' || k[0] == 'N')
+				type = type | 0x1000;
+			if (k[0] >= 'A' && k[0] <= 'Z')
+				k = k.slice(1);
 		}
 		let name = i == -1 ? k : k.slice(i + 1);
 		this.addEasyValueInternal(statObject, data, name, value, mType, type, lv, mul, base, extraMul);

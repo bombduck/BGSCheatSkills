@@ -108,8 +108,8 @@
 	},
 	"melvorAoD:Crystal_Arrows": {
 		"base": "Base",
-		"5cc:cbeasy": ["BGSCheat:Crystallize", 3, 30],
-		"10uc:cbeasy": [ "BGSCheat:Burn", 2, 100 ]
+		"5u:uniqueAttack": { "id": "CrystalShot" },
+		"10u:cbeasy": [ "Burn", 2, 100 ]
 	},
 	"melvorD:Rune_Arrows": {
 		"base": "Base",
@@ -133,7 +133,7 @@
 	},
 	"melvorAoD:Pure_Crystal_Arrows": {
 		"base": "Base",
-		"5uc:cbeasy": ["BGSCheat:Eradicate", 3, 10, {"sm": 50,"sa": [2]}],
+		"5u:uniqueAttack": { "id": "CrystalShot" },
 		"10uc:bunderwater": [2,100,{"sm": 10}]
 	},
 	"melvorTotH:Corundum_Arrows": {
@@ -183,9 +183,8 @@
 	},
 	"melvorF:Topaz_Bolts": {
 		"base": "tier2",
-		"3barrier": [5],
-		"3cc:cbeasy": ["BGSCheat:Frostburn", 3, 20],
-		"5cc:cbeasy": ["BGSCheat:Sleep", 3, 25]
+		"3OuniqueAttack": { "id": "TopazShots" },
+		"10Ucbeasy": [ "Confusion", 3, 10 ]
 	},
 	"melvorAoD:Topaz_Bolts_Enchanted": {
 		"base": "melvorF:Topaz_Bolts"
@@ -195,8 +194,8 @@
 	},
 	"melvorF:Sapphire_Bolts": {
 		"base": "tier3",
-		"3cc:cbeasy": ["BGSCheat:Freeze", 3, 25],
-		"5uc:cbeasy": ["BGSCheat:Confusion", 2, 25]
+		"5OuniqueAttack": { "id": "SapphireShots" },
+		"10Ucbeasy": [ "Freeze", 3, 10 ]
 	},
 	"melvorAoD:Sapphire_Bolts_Enchanted": {
 		"base": "melvorF:Sapphire_Bolts"
@@ -206,8 +205,8 @@
 	},
 	"melvorF:Ruby_Bolts": {
 		"base": "Base",
-		"5cc:cbeasy": ["BGSCheat:Burn", 2, 20],
-		"10uc:cbeasy": ["BGSCheat:Burn", 2, 20, {"p": 100}]
+		"5OuniqueAttack": { "id": "RubyShots" },
+		"10Ucbeasy": [ "Burn", 3, 10 ]
 	},
 	"melvorAoD:Ruby_Bolts_Enchanted": {
 		"base": "melvorF:Ruby_Bolts"
@@ -217,8 +216,8 @@
 	},
 	"melvorF:Emerald_Bolts": {
 		"base": "Base",
-		"5cc:cbeasy": ["BGSCheat:Poison", 2, 20],
-		"10uc:cbeasy": ["BGSCheat:Poison", 2, 20, {"p": 100}]
+		"5OuniqueAttack": { "id": "EmeraldShots" },
+		"10Ucbeasy": [ "Poison", 3, 10 ]
 	},
 	"melvorAoD:Emerald_Bolts_Enchanted": {
 		"base": "melvorF:Emerald_Bolts"
@@ -228,8 +227,8 @@
 	},
 	"melvorF:Diamond_Bolts": {
 		"base": "Base",
-		"5uc:buff": [ [ "maxHit", "res" ], 2, 15 ],
-		"10uc:debuff": [ [ "res", "eva" ], 2, 15 ]
+		"5OuniqueAttack": { "id": "DiamondShots" },
+		"10Udebuff": [ [ "res", "eva" ], 2, 10 ]
 	},
 	"melvorAoD:Diamond_Bolts_Enchanted": {
 		"base": "melvorF:Diamond_Bolts"
@@ -239,8 +238,8 @@
 	},
 	"melvorF:Jadestone_Bolts": {
 		"base": "Base",
-		"5cc:cbeasy": ["BGSCheat:DeadlyPoison", 2, 15],
-		"10uc:cbeasy": ["BGSCheat:DeadlyPoison", 2, 15, {"p": 100}]
+		"5OuniqueAttack": { "id": "JadestoneShots" },
+		"10Ucbeasy": ["100DeadlyPoison", 2, 10]
 	},
 	"melvorAoD:Jadestone_Bolts_Enchanted": {
 		"base": "melvorF:Jadestone_Bolts"
@@ -296,28 +295,21 @@
 	"melvorF:Bronze_Javelin": {
 		"base": "tier1",
 		"2barrier": [7],
-		"2u:spsa": {"melvorF:Spores": 15},
-		"4u:spsa": {"melvorF:Fireball": 10},
-		"6u:spsa": {"melvorTotH:SharpSlice": 5},
-		"10u:spsa": {"melvorTotH:SeekingRoots": 3}
+		"2OuniqueAttack": { "id": "ImpairingShot" }
 	},
 	"melvorF:Iron_Javelin": {
 		"base": "tier2",
 		"3barrier": [10],
-		"3u:spsa": {"melvorF:Whirlwind": 15},
-		"5u:spsa": {"melvorTotH:GiantBubble": 10},
-		"10u:spsa": {"melvorTotH:TreeSlam": 5, "melvorF:RapidOnslaught":  5}
+		"3OuniqueAttack": { "id": "Volley" }
 	},
 	"melvorF:Steel_Javelin": {
 		"base": "tier3",
-		"3u:spsa": {"melvorTotH:CurseOfMadness": 15},
-		"5u:spsa": {"melvorF:PenetratingSpikeShot": 10},
-		"10u:spsa": {"melvorF:Tornado": 5, "melvorF:FrigidWaves":  5}
+		"4OuniqueAttack": { "id": "ElementalImpactFreeze" }
 	},
 	"melvorF:Mithril_Javelin": {
 		"base": "Unholy1",
-		"5u:spsa": {"melvorF:GraspingRoots": 15,"melvorTotH:DeadlyBite": 10},
-		"10u:spsa": {"melvorF:SpikedTailWhip": 5, "melvorTotH:RapidStaticStrikes":  3}
+		"5OuniqueAttack": { "id": "DualAttack" },
+		"10Udebuff": [ "maxHit", 3, 20 ]
 	},
 	"melvorAoD:Crystal_Javelin": {
 		"base": "Unholy1",
@@ -326,17 +318,33 @@
 	},
 	"melvorF:Adamant_Javelin": {
 		"base": "Unholy1",
-		"5uc:cbeasy": ["BGSCheat:Stun", 1, 10],
-		"5u:spsa": {"melvorD:ImpossibleShot": 40},
-		"10u:spsa": {"melvorTotH:Alacrity": 20}
+		"5OuniqueAttack": { "id": "TripleDamage" },
+		"10Ubuff": [ [ "acc","res" ], 3, 15 ]
 	},
 	"melvorF:Rune_Javelin": {
 		"base": "Unholy2",
-		"5uc:cbeasy": [ "c", [ "BGSCheat:Decay", 3, 15 ], [ "BGSCheat:Poison", 2, 15 ] ]
+		"5u:uniqueAttack": { "id": "UnknownThreat", "attackCount": 3 },
+		"10Udebuff": [ "taken", 3, 15 ]
 	},
 	"melvorF:Dragon_Javelin": {
 		"base": "Unholy2",
-		"5uc:cbeasy": [ "c", [ "BGSCheat:Burn", 2, 25, {"p": 100} ], [ "BGSCheat:Frostburn", 3, 25,{"t": 3} ] ]
+		"5OuniqueAttack": {
+			"id": "Flurry",
+			"damage": [ { "amplitude": 60 } ],
+			"attackCount": 6,
+			"onhitEffects": [
+				{
+					"effectID": "melvorF:Flurry0",
+					"initialParams": [
+						{
+							"name": "maxStacks",
+							"value": 10
+						}
+					]
+				}
+			]
+		},
+		"10Ucbeasy": [ "1Frostburn", 3, 20 ]
 	},
 	"melvorAoD:Pure_Crystal_Javelin": {
 		"base": "Unholy2",
@@ -422,55 +430,48 @@
 		"base": "tier1",
 		"u:ress": [ [ -1, 0, 1 ] ],
 		"2barrier": [4],
-		"2u:spsa": {"melvorD:FrozenShot": 20},
-		"4u:spsa": {"melvorF:Webshot": 10},
-		"6u:spsa": {"melvorF:FrozenSpears": 5},
-		"10u:spsa": {"melvorF:CursedFlames": 3}
+		"2OuniqueAttack": { "id": "PoisonedHit" }
 	},
 	"melvorD:Oak_Shortbow": {
 		"base": "tier2",
 		"u:ress": [ [ -2, 0, 2 ] ],
 		"3barrier": [6],
-		"3u:spsa": {"melvorD:RapidFire": 25},
-		"5u:spsa": {"melvorF:Barrage": 10},
-		"10u:spsa": {"melvorF:ShockwaveEnemy": 5}
+		"3OuniqueAttack": { "id": "Stormsnap" }
 	},
 	"melvorF:Willow_Shortbow": {
 		"base": "tier3",
 		"u:ress": [ [ -3, 0, 3 ] ],
-		"3u:spsa": {"melvorAoD:PoisonHuntsman": 20},
-		"6u:spsa": {"melvorF:SpikedTailWhip": 10},
-		"10u:spsa": {"melvorF:CursedTether": 5,"melvorTotH:IceShards": 3}
+		"4OuniqueAttack": { "id": "TiltedShot" }
 	},
 	"melvorAoD:Crystal_Shortbow": {
 		"base": "Unholy1",
 		"u:ress": [ [ -4, 0, 4 ] ],
-		"5u:uniqueAttack": { "id": "TelekinesisPlayer" },
-		"10u:cbeasy": [ "1Fear", 2, 20 ]
+		"5UuniqueAttack": { "id": "TelekinesisPlayer" },
+		"10Ucbeasy": [ "1Fear", 2, 20 ]
 	},
 	"melvorD:Maple_Shortbow": {
 		"base": "Unholy1",
 		"u:ress": [ [ -4, 0, 4 ] ],
-		"5u:spsa": {"melvorF:Agility": 20, "melvorF:Boulder": 10},
-		"10u:spsa": {"melvorTotH:ChillingWinds": 5,"melvorTotH:DeadlyWrap": 5}
+		"5UuniqueAttack": { "id": "PoisonedHit" },
+		"10Ucbeasy": [ "1Anguish", 8, 15 ]
 	},
 	"melvorD:Yew_Shortbow": {
 		"base": "Unholy1",
 		"u:ress": [ [ -5, 0, 5 ] ],
-		"5u:spsa": {"melvorD:Volley": 10},
-		"10u:spsa": {"BGSCheat:Volley": 15}
+		"5OuniqueAttack": { "id": "ImpossibleShot" },
+		"10Ucbeasy": [ "100Sleep", 8, 10 ]
 	},
 	"melvorD:Magic_Shortbow": {
 		"base": "Unholy2",
 		"u:ress": [ [ -6, 0, 6 ] ],
-		"5u:spsa": {"melvorAoD:Killshot": 25},
-		"10u:spsa": {"BGSCheat:Killshot": 25}
+		"5UuniqueAttack": { "id": "RapidFire" },
+		"10Ucbeasy": [ "100Poison", 8, 15 ]
 	},
 	"melvorF:Redwood_Shortbow": {
 		"base": "Unholy2",
 		"u:ress": [ [ -7, 0, 7 ] ],
-		"5u:spsa": {"melvorD:TiltedShot": 50},
-		"10u:spsa": {"BGSCheat:TiltedShot": 50}
+		"5OuniqueAttack": { "id": "PiercingArrow" },
+		"10Ucbeasy": [ [ "1Decay", "20Slow" ], 3, 25 ]
 	},
 	"melvorAoD:Pure_Crystal_Shortbow": {
 		"base": "Unholy2",
@@ -553,49 +554,42 @@
 		"base": "tier1",
 		"u:ress": [ [ -1, 0, 1 ] ],
 		"2barrier": [5],
-		"2u:spsa": {"melvorF:HunterExpertise": 25},
-		"4u:spsa": {"melvorAoD:PoisonShotPlayer": 15},
-		"6u:spsa": {"melvorF:FlashFreeze": 10},
-		"10u:spsa": {"melvorTotH:FocusedStaticPunch": 5}
+		"2OuniqueAttack": { "id": "PoisonedHit" }
 	},
 	"melvorF:Oak_Longbow": {
 		"base": "tier2",
 		"u:ress": [ [ -2, 0, 2 ] ],
 		"3barrier": [7],
-		"3u:spsa": {"melvorF:ToxicBite": 20},
-		"5u:spsa": {"melvorTotH:Bind": 15},
-		"10u:spsa": {"melvorTotH:FatalSpike": 5,"melvorTotH:DeadlyWrap": 5}
+		"3OuniqueAttack": { "id": "DiamondShots" }
 	},
 	"melvorF:Willow_Longbow": {
 		"base": "tier3",
 		"u:ress": [ [ -3, 0, 3 ] ],
-		"3u:spsa": {"melvorTotH:FreezingRoar": 8},
-		"6u:spsa": {"melvorTotH:FeatherTornado": 5},
-		"10u:spsa": {"melvorF:OverwhelmingPower": 3}
+		"4OuniqueAttack": { "id": "OnTheHunt" }
 	},
 	"melvorAoD:Crystal_Longbow": {
 		"base": "Unholy1",
 		"u:ress": [ [ -4, 0, 4 ] ],
-		"5u:uniqueAttack": { "id": "TrapDoor" },
-		"10u:buff": [ "30spd", 3, 35 ]
+		"5OuniqueAttack": { "id": "TrapDoor" },
+		"10Ubuff": [ "30spd", 3, 35 ]
 	},
 	"melvorD:Maple_Longbow": {
 		"base": "Unholy1",
 		"u:ress": [ [ -4, 0, 4 ] ],
-		"5u:spsa": {"melvorTotH:PoisonSplit": 10,"melvorTotH:FerociousBite": 10},
-		"10u:spsa": {"melvorF:ScorchingRay": 5,"melvorTotH:Entangle": 5}
+		"5OuniqueAttack": { "id": "RapidFire" },
+		"10Udebuff": [ [ "hit", "eva" ], 3, 25 ]
 	},
 	"melvorF:Yew_Longbow": {
 		"base": "Unholy1",
 		"u:ress": [ [ -5, 0, 5 ] ],
-		"5u:spsa": {"melvorD:Volley": 25},
-		"10u:spsa": {"melvorTotH:TorrentialDragonbreath": 5}
+		"5OuniqueAttack": { "id": "Volley" },
+		"10UdebuffAuto": [ [ "30hit", "10res" ], 3, 25, {"t": 3} ]
 	},
 	"melvorF:Magic_Longbow": {
 		"base": "Unholy2",
 		"u:ress": [ [ -6, 0, 6 ] ],
-		"5u:spsa": {"melvorD:PiercingArrow": 20},
-		"10u:spsar": {"BGSCheat:Shockwave": 10}
+		"5OuniqueAttack": { "id": "Shockwave", "damage": [ {}, { "maxPercent": 300 } ] },
+		"10Ucbeasy": [ [ "Weakening" ], 3, 40 ]
 	},
 	"melvorAoD:Unholy_Longbow": {
 		"base": "Unholy2",
@@ -616,13 +610,15 @@
 	},
 	"melvorD:Redwood_Longbow": {
 		"base": "Unholy2",
-		"u:ress": [ [ -7, 0, 7 ] ]
+		"u:ress": [ [ -7, 0, 7 ] ],
+		"5OuniqueAttack": { "id": "IcePrison", "damage": [{"amplitude": 180}] },
+		"10Ucbeasy": [ "100Poison", 2, 10 ]
 	},
 	"melvorAoD:Pure_Crystal_Longbow": {
 		"base": "Unholy2",
 		"u:ress": [ [ -7, 0, 7 ] ],
-		"5u:uniqueAttack": { "id": "PlagueBoltPlayer" },
-		"10u:cbeasy": [ "100Deadly", 2, 10 ]
+		"5OuniqueAttack": { "id": "PlagueBoltPlayer" },
+		"10Ucbeasy": [ "100Deadly", 2, 10 ]
 	},
 	"melvorTotH:Elderwood_Longbow": {
 		"base": [ "Unholy3", "TotHA" ],
@@ -714,46 +710,41 @@
 	"melvorF:Bronze_Crossbow": {
 		"base": "tier1",
 		"2barrier": [3],
-		"2u:spsa": {"melvorAoD:CrystalShard": 20},
-		"4u:spsa": {"melvorF:IceBreak": 15},
-		"6u:spsa": {"melvorF:BoneCrush": 10},
-		"10u:spsa": {"melvorTotH:MegaFireball": 5}
+		"2OuniqueAttack": { "id": "ElementalImpactBurn" }
 	},
 	"melvorF:Iron_Crossbow": {
 		"base": "tier2",
 		"3barrier": [5],
-		"3u:spsa": {"melvorAoD:CrushingRoots": 15},
-		"5u:spsa": {"melvorTotH:FrozenClub": 10},
-		"10u:spsa": {"melvorF:SavageSpike": 5, "melvorAoD:Puppets":  5}
+		"3OuniqueAttack": { "id": "SwiftAttack", "damage": [{"amplitude": 80}] }
 	},
 	"melvorF:Steel_Crossbow": {
 		"base": "tier3",
-		"3u:spsa": {"melvorAoD:CursedBlunderbuss": 15},
-		"6u:spsa": {"melvorTotH:SpikesFromBelow": 10},
-		"10u:spsa": {"melvorTotH:FerociousBite": 5, "melvorTotH:ThornedRoots":  5}
+		"4OuniqueAttack": { "id": "FrozenShot" }
 	},
 	"melvorF:Mithril_Crossbow": {
 		"base": "Unholy1",
-		"5u:spsa": {"melvorF:Burrow": 15,"melvorTotH:LightningStrikeEnemy": 5},
-		"10u:spsa": {"melvorTotH:FeatherLance": 5,"melvorTotH:HarmfulConcoction": 3}
+		"5OuniqueAttack": { "id": "Stormsnap" },
+		"10Ucbeasy": [ [ "sleep" ], 3, 15 ]
 	},
 	"melvorAoD:Crystal_Crossbow": {
 		"base": "Unholy1",
-		"5u:uniqueAttack": { "id": "Manipulate" },
-		"10u:cbeasy": [ "Petrified", 3, 35 ]
+		"5OuniqueAttack": { "id": "Manipulate" },
+		"10Ucbeasy": [ "Petrified", 3, 30 ]
 	},
 	"melvorF:Adamant_Crossbow": {
 		"base": "Unholy1",
-		"5u:spsa": {"melvorAoD:ReflectionPlayer": 20,"melvorAoD:TelekinesisPlayer": 20},
-		"10u:spsar": {"BGSCheat:ReflectionPlayer": 20,"BGSCheat:TelekinesisPlayer": 20}
+		"5OuniqueAttack": { "id": "InfernalVolley" },
+		"10Ubuff": [ [ "spd" ], 3, 25 ]
 	},
 	"melvorF:Rune_Crossbow": {
-		"base": "Unholy2"
+		"base": "Unholy2",
+		"5OuniqueAttack": { "id": "BruteForce" },
+		"10Udebuff": [ [ "maxHit" ], 3, 20 ]
 	},
 	"melvorF:Dragon_Crossbow": {
 		"base": "Unholy2",
-		"5u:spsar": {"melvorF:Stormsnap": 30},
-		"10u:spsar": {"BGSCheat:Stormsnap": 30}
+		"5OuniqueAttack": { "id": "Shockwave", "damage": [ {}, { "maxPercent": 260 } ] },
+		"10Ubuff": [ [ "res", "eva" ], 3, 30 ]
 	},
 	"melvorF:Slayer_Crossbow": {
 		"base": "melvorF:Dragon_Crossbow"
@@ -790,12 +781,12 @@
 	},
 	"melvorItA:Brumite_Crossbow": {
 		"base": [ "Unholy5", "TotHA" ],
-		"5u:uniqueAttack": { "id": "ToxicBlastPlayer", "damage": [ { "maxPercent": 160 } ] },
-		"10u:buff": [ [ "maxHit", "res" ], 3, 15 ]
+		"5OuniqueAttack": { "id": "ToxicBlastPlayer", "damage": [ { "maxPercent": 160 } ] },
+		"10Ubuff": [ [ "maxHit", "res" ], 3, 15 ]
 	},
 	"melvorItA:Toxic_Blast_Crossbow": {
 		"base": "melvorItA:Brumite_Crossbow",
-		"10u:cbeasy": [ "Anguish", 3, 25 ]
+		"10Ucbeasy": [ "Anguish", 3, 25 ]
 	},
 	"melvorItA:Gloomite_Crossbow": {
 		"base": [ "Unholy5", "TotHA" ],
