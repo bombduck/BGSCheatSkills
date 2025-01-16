@@ -1,28 +1,26 @@
 {
   "melvorF:Melee_Accuracy_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "meleeAccuracyRating": 25
       }
     },
     "5acc2": [0,0,5],
-    "5ue:dot": [0,100], 
-    "5oe:sp-ignd": [0,-50],
-    "10oe:sp-ignd": [0,-100],
-    "10oe:sp-immud": [0,-1]
+    "5UEdot": [0,100], 
+    "5Eignore": [-50,"bleed"],
+    "10Eignore": [-100,-1,"bleed"]
   },
   "melvorF:Melee_Strength_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "meleeMaxHit": 10
       }
     },
-    "5oe:sp-ignc": [-50],
-    "10oe:sp-ignc": [-100],
-    "10oe:sp-immuc": [-1]
+    "5Eignore": [-50,"stun"],
+    "10Eignore": [-100,-1,"stun"]
   },
   "melvorF:Melee_Evasion_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "meleeEvasion": 25,
         "effectIgnoreChance": [
@@ -33,10 +31,10 @@
         ]
       }
     },
-    "10u:dmgignore": [10]
+    "10Udmgignore": [10]
   },
   "melvorF:Ranged_Assistance_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "rangedAccuracyRating": 20,
         "rangedEvasion": 20,
@@ -48,10 +46,10 @@
         ]
       }
     },
-    "10u:dmgignore": [0,10]
+    "10Udmgignore": [0,10]
   },
   "melvorF:Magic_Assistance_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "magicAccuracyRating": 20,
         "magicEvasion": 20,
@@ -67,19 +65,19 @@
         ]
       }
     },
-    "10u:dmgignore": [0,0,10]
+    "10Udmgignore": [0,0,10]
   },
   "melvorF:Regeneration_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "hitpointRegeneration": 150
       }
     },
-    "5v:regen": [ -1000 ],
-    "10u:regen": [0,0,0,10] 
+    "5Vregen": [ -1000 ],
+    "10Uregen": [0,0,0,10] 
   },
   "melvorF:Damage_Reduction_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "flatResistance": [
           {
@@ -89,35 +87,35 @@
         ]
       }
     },
-    "10u:dmgTaken": [-10]
+    "10UdmgTaken": [-10]
   },
   "melvorF:Bird_Nest_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "randomProductChance": [
           {
             "skillID": "melvorD:Woodcutting",
             "itemID": "melvorD:Bird_Nest",
-            "value": [ 0, 0, 30, 0, 100, 1 ]
+            "value": 30
           }
         ]
       }
     },
-    "5u:modifiers": {
+    "5Nmodifiers": {
       "add": {
         "randomProductChance": [
           {
             "skillID": "melvorD:Woodcutting",
             "itemID": "melvorTotH:Raven_Nest",
-            "value": [ 0, 0, 20, 0, 100, 1 ]
+            "value": 20
           }
         ]
       }
     },
-    "10u:bypass": [[0,1],"s","melvorD:Woodcutting"]
+    "10Ubypass": [0,1,"wood"]
   },
   "melvorF:Fishermans_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillItemDoublingChance": [
           {
@@ -127,7 +125,7 @@
         ]
       }
     },
-    "10u:bypass": [[0,1],"s","melvorD:Fishing"]
+    "10Ubypass": [0,1,"fish"]
   },
   "melvorF:Controlled_Heat_Potion_IV": {
     "modifiers": {
@@ -135,12 +133,12 @@
         "freeBonfires": 1
       }
     },
-    "5u:bypass": [ 20 ],
-    "5u:firemaking": [ [ 200 ], "s", "melvorD:GP" ],
-    "10u:skillAddItem": [ [ 0,1 ], "s", "melvorF:Chest_Of_Gems", "melvorD:Firemaking" ]
+    "5Ubypass": [ 20 ],
+    "5Ufiremaking": [ 200, "gp" ],
+    "10UskillAddItem": [ 0, 1, [ "melvorF:Chest_Of_Gems", "fire" ] ]
   },
   "melvorF:Generous_Cook_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillItemDoublingChance": [
           {
@@ -150,7 +148,7 @@
         ]
       }
     },
-    "10u:bypass": [[0,1],"s","melvorD:Cooking"]
+    "10Ubypass": [0,1,"cook"]
   },
   "melvorF:Perfect_Swing_Potion_IV": {
     "modifiers": {
@@ -167,8 +165,8 @@
         ]
       }
     },
-    "1u:mine2": [-10],
-    "10u:bypass": [[0,1],"s","melvorD:Mining"]
+    "1Umine2": [-10],
+    "10Ubypass": [0,1,"mine"]
   },
   "melvorF:Seeing_Gold_Potion_IV": {
     "modifiers": {
@@ -195,19 +193,19 @@
         ]
       }
     },
-    "10u:skillAddItem": [[5],"n",["melvorD:Silver_Bar","melvorD:Gold_Bar","melvorTotH:Iridium_Bar","melvorTotH:Palladium_Bar"]]
+    "10UskillAddItem": [5,"melvorD:Silver_Bar","melvorD:Gold_Bar","melvorTotH:Iridium_Bar","melvorTotH:Palladium_Bar"]
   },
   "melvorF:Gentle_Hands_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "thievingStealth": 75
       }
     },
-    "5u:thieving": [[0,2000],"s","melvorD:GP"],
-    "10u:thieving": [0,0,0,2]
+    "5Uthieving": [0,2000,"gp"],
+    "10Uthieving": [0,0,0,2]
   },
   "melvorF:Farming_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillItemDoublingChance": [
           {
@@ -217,10 +215,10 @@
         ]
       }
     },
-    "10u:bypass": [[0,1],"s","melvorD:Farming"]
+    "10Ubypass": [0,1,"farm"]
   },
   "melvorF:Fletching_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillItemDoublingChance": [
           {
@@ -230,7 +228,7 @@
         ]
       }
     },
-    "10u:bypass": [[0,1],"s","melvorD:Fletching"]
+    "10Ubypass": [0,1,"flet"]
   },
   "melvorF:Crafting_Potion_IV": {
     "modifiers": {
@@ -241,7 +239,7 @@
         }
       ]
     },
-    "10u:bypass": [[0,1],"s","melvorD:Crafting"]
+    "10Ubypass": [0,1,"craf"]
   },
   "melvorF:Elemental_Potion_IV": {
     "modifiers": {
@@ -255,36 +253,33 @@
         "elementalRuneChance": 100
       }
     },
-    "10u:bypass": [[0,1],"s","melvorD:Runecrafting"]
+    "10Ubypass": [0,1,"rune"]
   },
   "melvorF:Herblore_Potion_IV": {
-
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "randomHerblorePotionChance": 6
       }
     },
-    "10u:bypass": [10]
+    "10Ubypass": [10]
   },
   "melvorF:Magic_Damage_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "magicMaxHit": 15
       }
     },
-    "5oe:sp-ignc": [0,-50],
-    "10oe:sp-ignc": [0,-100],
-    "10oe:sp-immuc": [0,-1]
+    "5Eignore": [-50,"freeze"],
+    "10Eignore": [-100,-1,"freeze"]
   },
   "melvorF:Ranged_Strength_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "rangedMaxHit": 25
       }
     },
-    "5oe:sp-ignc": [0,0,0,-50],
-    "10oe:sp-ignc": [0,0,0,-100],
-    "10oe:sp-immuc": [0,0,0,-1]
+    "5Eignore": [-50,"sleep"],
+    "10Eignore": [-100,-1,"sleep"]
   },
   "melvorF:Diamond_Luck_Potion_IV": {
     "modifiers": {
@@ -292,18 +287,17 @@
         "attackRolls": 1
       }
     },
-    "1u:acc2": [5]
+    "1Uacc2": [5]
   },
   "melvorF:Divine_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "prayerPointPreservationChance": 35
       }
     },
-    "5ue:dot": [100], 
-    "5oe:sp-ignd": [-50],
-    "10oe:sp-ignd": [-100],
-    "10oe:sp-immud": [-1]
+    "5UEdot": [100], 
+    "5Eignore": [-50,"burn"],
+    "10Eignore": [-100,-1,"burn"]
   },
   "melvorF:Lucky_Herb_Potion_IV": {
     "modifiers": {
@@ -311,10 +305,10 @@
         "seedDropConversionChance": 50
       }
     },
-    "1u:loot": [25,-500]
+    "1Uloot": [25,-500]
   },
   "melvorF:Performance_Enhancing_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillInterval": [
           {
@@ -324,10 +318,10 @@
         ]
       }
     },
-    "5u:sp-currg": [0,50]
+    "5Ucurrency": [0,50,"gp"]
   },
   "melvorF:Necromancer_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "flatBasePrimaryProductQuantity": [
           {
@@ -337,30 +331,29 @@
         ]
       }
     },
-    "10bypass": [10]
+    "10Ubypass": [10]
   },
   "melvorF:Hinder_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "onHitSlowMagnitude": 15
       }
     },
-    "5oe:sp-ignc": [0,0,0,0,-50],
-    "10oe:sp-ignc": [0,0,0,0,-100],
-    "10oe:sp-immuc": [0,0,0,0,-1]
+    "5Eignore": [-50,"slow"],
+    "10Eignore": [-100,-1,"slow"]
   },
   "melvorF:Famished_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "autoEatEfficiency": 25,
         "foodPreservationChance": 25
       }
     },
-    "10v:food": [1]
+    "10Vfood": [1]
   },
   "melvorF:Lethal_Toxins_Potion_IV": {
     "rc": ["melvorD:Poison"],
-    "u:combatEffects": {
+    "NcombatEffects": {
       "add": [
         {
           "effectID": "melvorD:Poison",
@@ -387,15 +380,14 @@
         }
       ]
     },
-    "5uc:cbeasy": ["Poison", 3, 15],
-    "5ue:dot": [0,0,100], 
-    "5oe:sp-ignd": [0,0,-50],
-    "10oe:sp-ignd": [0,0,-100],
-    "10oe:sp-immud": [0,0,-1]
+    "5Ucbeasy": ["Poison", 3, 30],
+    "5UEdot": [0,0,100], 
+    "5Eignore": [-50,"poison"],
+    "10Eignore": [-100,-1,"poison"]
   },
   "melvorTotH:Deadly_Toxins_Potion": {
     "rc": ["melvorD:Poison","melvorD:DeadlyPoison"],
-    "0u:combatEffects": {
+    "NcombatEffects": {
       "add": [
         {
           "effectID": "melvorD:DeadlyPoison",
@@ -410,14 +402,13 @@
       ]
     },
     "5rc": ["melvorD:Poison"],
-    "5uc:cbeasy": ["dp", 3, 15],
-    "5ue:dot": [0,0,0,100], 
-    "5oe:sp-ignd": [0,0,0,-50],
-    "10oe:sp-ignd": [0,0,0,-100],
-    "10oe:sp-immud": [0,0,0,-1]
+    "5Ucbeasy": ["dp", 3, 15],
+    "5UEdot": [0,0,0,100], 
+    "5Eignore": [-50,"dp"],
+    "10Eignore": [-100,-1,"dp"]
   },
   "melvorF:Secret_Stardust_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillInterval": [
           {
@@ -427,28 +418,28 @@
         ]
       }
     },
-    "10u:itemRand": [ [ 0, 10 ], "s", "melvorF:Stardust", "melvorD:Astrology" ]
+    "10UitemRand": [ 0, 10, [ "melvorF:Stardust", "astr" ] ]
   },
   "melvorTotH:Area_Control_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "flatSlayerAreaEffectNegation": 50
       }
     },
-    "5u:sp-currs3": [100],
-    "10u:sp-currs3": [0,0,0,100]
+    "5Ucurrency3": [100,"sc"],
+    "10Ucurrency2": [0,0,0,100, "sc"]
   },
   "melvorTotH:Adaptive_Defence_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "globalEvasionHPScaling": 1.75
       }
     },
-    "5u:regen3": [0,10],
-    "10u:regen3": [0,0,0,0,10]
+    "5Uregen3": [0,10],
+    "10Uregen3": [0,0,0,0,10]
   },
   "melvorTotH:Slayer_Bounty_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "currencyGain": [
           {
@@ -459,41 +450,41 @@
         "doubleSlayerTaskKillChance": 25
       }
     },
-    "5u:slayer": [0,0,20],
-    "10u:slayer": [[0,0,0,8],"s","melvorD:Normal"]
+    "5Uslayer": [0,0,20],
+    "10Uslayer": [0,0,0,8,"n"]
   },
   "melvorTotH:Holy_Bulwark_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "damageTakenAddedAsPrayerPoints": 10
       }
     },
-    "1u:prayerGetCombat": [5]
+    "1UprayerGetCombat": [5]
   },
   "melvorTotH:Adaptive_Accuracy_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "accuracyRatingHPScaling": 1.5
       }
     },
-    "5u:regen2": [0,10,10,10],
-    "10ce:dmgignore": [0,0,0,-1,-1,-1,-1]
+    "5Uregen2": [0,10,10,10],
+    "10Edmgignore": [0,0,0,-1,-1,-1,-1]
   },
   "melvorTotH:Reaper_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "bleedLifesteal": 75,
         "burnLifesteal": 75,
         "poisonLifesteal": 75
       }
     },
-    "5u:regen2": [ 10 ],
-    "5uc:cbeasy": [ [ "Burn", "Poison", "deadly" ], 2, 5 ],
-    "10oe:sp-ignd": [-100,-100,-100],
-    "10oe:sp-immud": [-1,-1,-1]
+    "5Uregen2": [ 10 ],
+    "5Ucbeasy": [ [ "100bleed", "100burn", "100poison" ], 2, 10 ],
+    "5Eignore": [-50,"bleed","burn","poison"],
+    "10Eignore": [-100,-1,"bleed","burn","poison"]
   },
   "melvorTotH:Penetration_Potion_IV": {
-    "u:enemyModifiers": {
+    "NenemyModifiers": {
       "add": {
         "flatResistance": [
           {
@@ -503,7 +494,7 @@
         ]
       }
     },
-    "10u:enemyModifiers": {
+    "10NenemyModifiers": {
       "add": {
         "flatResistance": [
           {
@@ -515,17 +506,17 @@
     }
   },
   "melvorTotH:Critical_Strike_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "meleeCritChance": 20,
         "rangedCritChance": 20,
         "magicCritChance": 20
       }
     },
-    "5u:critical": [0,10] 
+    "5Ucritical": [0,10] 
   },
   "melvorTotH:Alchemic_Practice_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillItemDoublingChance": [
           {
@@ -535,26 +526,26 @@
         ]
       }
     },
-    "10u:bypass": [[0,1],"s","melvorD:Herblore"]
+    "10Ubypass": [0,1,"herb"]
   },
   "melvorTotH:Gem_Detector_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "qualitySuperiorGemChance": 10
       }
     },
-    "10u:mine": [0,0,0,0,5]
+    "10Umine": [0,0,0,0,5]
   },
   "melvorTotH:Multicooker_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "passiveCookingInterval": -40
       }
     },
-    "10u:bypass": [10]
+    "10Ubypass": [10]
   },
   "melvorTotH:Star_Seeker_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "randomProductChance": [
           {
@@ -565,16 +556,11 @@
         ]
       }
     },
-    "5u:itemRand": [
-      [ 0, 6 ],
-      "s",
-      "melvorF:Golden_Stardust",
-      "melvorD:Astrology"
-    ],
-    "10u:bypass": [[0,1],"s","melvorD:Astrology"]
+    "5UitemRand": [ 0, 6, [ "melvorF:Golden_Stardust", "astr" ] ],
+    "10Ubypass": [0,1,"astr"]
   },
   "melvorTotH:Traps_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "currencyGainFromNegativeObstacles": [
           {
@@ -588,7 +574,7 @@
     }
   },
   "melvorTotH:Blacksmith_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillItemDoublingChance": [
           {
@@ -598,10 +584,10 @@
         ]
       }
     },
-    "10u:bypass": [[0,1],"s","melvorD:Smithing"]
+    "10Ubypass": [0,1,"smit"]
   },
   "melvorTotH:Enkindled_Yields_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillItemDoublingChance": [
           {
@@ -612,14 +598,13 @@
       }
     },
     "10u:skillAddItem": [
-      "c",
-      [ [ 0, 1 ], "s", "melvorTotH:Lost_Chest", "melvorD:Firemaking" ],
-      [ [ 0, 3 ], "s", "melvorTotH:Ectoplasm", "melvorD:Firemaking" ],
-      [ [ 0, 5 ], "s", "melvorTotH:Summoning_Familiar_Spider", "melvorD:Firemaking" ]
+      [ 0, 1, [ "melvorTotH:Lost_Chest", "fire" ] ],
+      [ 0, 3, [ "melvorTotH:Ectoplasm", "fire" ] ],
+      [ 0, 5, [ "melvorTotH:Summoning_Familiar_Spider", "fire" ] ]
     ]
   },
   "melvorTotH:Alt_Magic_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillInterval": [
           {
@@ -629,19 +614,19 @@
         ]
       }
     },
-    "10u:bypass": [10]
+    "10Ubypass": [10]
   },
   "melvorAoD:Barrier_Touch_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "flatBarrierSummonDamage": 4
       }
     },
-    "5u:barrier": [0,0,10],
-    "10u:summon": [0,-8]
+    "5Ubarrier": [0,0,10],
+    "10Usummon": [0,-8]
   },
   "melvorAoD:Barrier_Igniter_Potion_IV": {
-    "u:combatEffects": {
+    "NcombatEffects": {
       "add": [
         {
           "effectID": "melvorAoD:BarrierBurn",
@@ -651,7 +636,7 @@
         }
       ]
     },
-    "5u:combatEffects": {
+    "5NcombatEffects": {
       "add": [
         {
           "effectID": "melvorAoD:BarrierBleed",
@@ -661,24 +646,24 @@
         }
       ]
     },
-    "10uc:cbeasy": [ "c", [ "100BarrierBleed", 11, 12 ], ["100BarrierBurn", 2, 12 ] ]
+    "10Ucbeasy": [ "c", [ "100BarrierBleed", 11, 12 ], ["100BarrierBurn", 2, 12 ] ]
   },
   "melvorAoD:Unholy_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "unholyPrayerPointPreservationChance": 20
       }
     }
   },
   "melvorAoD:Cursed_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "curseOnHitWithUnholyMark": 20
       }
     }
   },
   "melvorAoD:Crystallization_Potion_IV": {
-    "u:combatEffects": {
+    "NcombatEffects": {
       "add": [
         {
           "effectID": "melvorD:Crystallize",
@@ -688,9 +673,9 @@
         }
       ]
     },
-    "5uc:cbeasy": ["3Crystallize", 2, 4],
-    "10oe:sp-ignc": [0,0,-100],
-    "10oe:sp-immuc": [0,0,-1]
+    "5Ucbeasy": ["3Crystallize", 2, 4],
+    "5Eignore": [-50,"crystal"],
+    "10Eignore": [-100,-1,"crystal"]
   },
   "melvorAoD:Crystal_Sanction_Potion_IV": {
     "u:combatEffects": {
@@ -703,12 +688,12 @@
         }
       ]
     },
-    "5uc:cbeasy": ["2CrystalSanction", 2, 4, 2],
-    "10oe:sp-igns": [0,-100],
-    "10oe:sp-immus": [0,-1]
+    "5Ucbeasy": ["2CrystalSanction", 2, 4, 2],
+    "5Eignore": [-50,"cs"],
+    "10Eignore": [-100,-1,"cs"]
   },
   "melvorItA:Harvesters_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillInterval": [
           {
@@ -718,10 +703,10 @@
         ]
       }
     },
-    "10u:bypass": [[0,1],"s","melvorItA:Harvesting"]
+    "10Ubypass": [0,1,"harv"]
   },
   "melvorItA:Corrupted_Fighter_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "abyssalSkillXP": [
           {
@@ -731,11 +716,11 @@
         ]
       }
     },
-    "5u:corrupt": [5,5],
-    "10u:corrupt": [0,0,5,5]
+    "5Ucorrupt": [5,5],
+    "10Ucorrupt": [0,0,5,5]
   },
   "melvorItA:Piece_Finder_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "currencyGainFromCombat": [
           {
@@ -745,11 +730,11 @@
         ]
       }
     },
-    "5u:sp-curra2": [0,0,10000],
-    "10u:sp-curra3": [1000]
+    "5Ucurrency2": [0,0,10000,"ap"],
+    "10Ucurrency3": [1000,"ap"]
   },
   "melvorItA:Laceration_Potion_IV": {
-    "u:combatEffects": {
+    "NcombatEffects": {
       "add": [
         {
           "effectID": "melvorItA:Laceration",
@@ -758,14 +743,13 @@
         }
       ]
     },
-    "5uc:cbeasy": ["25Laceration", 3, 40],
-    "5ue:dot": [0,0,0,0,0,0,100], 
-    "5oe:sp-ignd": [0,0,0,0,-50],
-    "10oe:sp-ignd": [0,0,0,0,-100],
-    "10oe:sp-immud": [0,0,0,0,-1]
+    "5Ucbeasy": ["25Laceration", 3, 40],
+    "5UEdot": [0,0,0,0,0,0,100], 
+    "5Eignore": [-50,"lace"],
+    "10Eignore": [-100,-1,"lace"]
   },
   "melvorItA:Gloomgrowth_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "basePrimaryProductQuantity": [
         {
           "skillID": "melvorD:Farming",
@@ -780,10 +764,10 @@
         }
       ]
     },
-    "10u:bypass": [[0,1],"s","melvorD:Farming"]
+    "10Ubypass": [0,1,"farm"]
   },
   "melvorItA:Blighted_Touch_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "effectIgnoreChance": [
           {
@@ -793,7 +777,7 @@
         ]
       }
     },
-    "u:combatEffects": {
+    "NcombatEffects": {
       "add":[
         {
           "effectID": "melvorItA:Blight",
@@ -802,30 +786,30 @@
         }
       ]
     },
-    "5uc:cbeasy": [ "10Blight", 3, 20 ],
-    "5ce:ignore": [ [ -50 ] ,"s","melvorItA:Blight"] ,
-    "10ce:ignore": [ [ -100, -1 ] ,"s","melvorItA:Blight"]
+    "5Ucbeasy": [ "10Blight", 3, 20 ],
+    "5Eignore": [ -50 ,"blight"] ,
+    "10Eignore": [ -100, -1,"blight"]
   },
   "melvorItA:Abyssal_Miner_Potion_IV": {
-    "m:modifiers": {
+    "Omodifiers": {
       "add": {
         "abyssalGemChance": 0.4
       }
     },
-    "5m:mine": [0,0,0,5],
-    "10m:mine": [0,0,0,0,0,1]
+    "5Mmine": [0,0,0,5],
+    "10Mmine": [0,0,0,0,0,1]
   },
   "melvorItA:Shadeveil_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "critChance": 20
       }
     },
-    "u:combatEffects": {
+    "UcombatEffects": {
       "add": [
         {
           "effectID": "melvorItA:Shadeveil",
-          "chance": 50,
+          "chance": 60,
           "initialParams": [
             {
               "name": "stacksToAdd",
@@ -837,10 +821,10 @@
       ]
     },
     "10rc": [ "melvorItA:Shadeveil" ],
-    "10uc:cbeasy": [ "BGSCheat:Shadeveil", 14, 50, { "sm": 2 } ]
+    "10Ucbeasy": [ "2shade", 14, 60 ]
   },
   "melvorItA:Abyssal_Combination_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "additional8PrimaryProductChance": [
           {
@@ -851,10 +835,10 @@
         ]
       }
     },
-    "10u:bypass": [10]
+    "10Ubypass": [10]
   },
   "melvorItA:Fear_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "effectIgnoreChance": [
           {
@@ -864,7 +848,7 @@
         ]
       }
     },
-    "combatEffects": {
+    "NcombatEffects": {
       "add": [
         {
           "effectID": "melvorD:Fear",
@@ -874,12 +858,12 @@
       ]
     },
     "5rc": [ "melvorD:Fear" ],
-    "5uc:cbeasy": [ "BGSCheat:Fear", 3, 8, { "t": 3, "si": 2} ],
-    "5ce:ignore": [ [ -50 ] ,"s","melvorD:Fear"] ,
-    "10ce:ignore": [ [ -100, -1 ] ,"s","melvorD:Fear"]
+    "5Ucbeasy": [ "1Fear", 3, 16 ],
+    "5Eignore": [ -50, "fear"] ,
+    "10Eignore": [ -100, -1, "fear"]
   },
   "melvorItA:Abyssal_Consumable_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "flatAdditionalPrimaryProductQuantity": [
           {
@@ -890,20 +874,20 @@
         ]
       }
     },
-    "5u:skillextra": [[0,0,0,6],"s","melvorD:Crafting"]
+    "5Uskillextra": [0,0,0,6,"craf"]
   },
   "melvorItA:Withering_Potion_IV": {
-        "u:modifiers": {
-          "add": {
-            "effectIgnoreChance": [
-              {
-                "effectGroupID": "melvorItA:Wither",
-                "value": 40
-              }
-            ]
+    "Nmodifiers": {
+      "add": {
+        "effectIgnoreChance": [
+          {
+            "effectGroupID": "melvorItA:Wither",
+            "value": 40
           }
-        },
-    "u:combatEffects": {
+        ]
+      }
+    },
+    "NcombatEffects": {
       "add": [
         {
           "effectID": "melvorItA:Wither",
@@ -913,12 +897,12 @@
       ]
     },
     "5rc": ["melvorItA:Wither"],
-    "5uc:cbeasy": ["10Wither", 2, 40, {"sa": 2}],
-    "5ce:ignore": [ [ -50 ] ,"s","melvorItA:Wither"] ,
-    "10ce:ignore": [ [ -100, -1 ] ,"s","melvorItA:Wither"]
+    "5Ucbeasy": ["10Wither", 2, 80, {"sa": 2}],
+    "5Eignore": [ -50,"wither"] ,
+    "10Eignore": [ -100,-1,"wither"]
   },
   "melvorItA:Silent_Thief_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "thievingStealth": [
           {
@@ -934,19 +918,19 @@
         ]
       }
     },
-    "5u:thieving": [[0,3000],"s","melvorItA:AbyssalPieces"],
-    "10u:thieving": [0,0,0,2]
+    "5Uthieving": [0,3000,"ap"],
+    "10Uthieving": [0,0,0,2]
   },
   "melvorItA:Echoing_Lure_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "additionalSameAreaFishChance": 20
       }
     },
-    "10u:bypass": [[0,1],"s","melvorD:Fishing"]
+    "10Ubypass": [0,1,"fish"]
   },
   "melvorItA:Silence_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "effectIgnoreChance": [
           {
@@ -956,7 +940,7 @@
         ]
       }
     },
-    "u:combatEffects": {
+    "NcombatEffects": {
       "add": [
         {
           "effectID": "melvorItA:Silence",
@@ -966,22 +950,22 @@
       ]
     },
     "5rc": ["melvorItA:Silence"],
-    "5uc:cbeasy": ["BGSCheat:Silence", 2, 40, {"t": 5}],
-    "5ce:ignore": [ [ -50 ] ,"s","melvorItA:Silence"] ,
-    "10ce:ignore": [ [ -100, -1 ] ,"s","melvorItA:Silence"]
+    "5Ucbeasy": ["3Silence", 2, 80],
+    "5Eignore": [-50,"silence"],
+    "10Eignore": [-100,-1,"silence"]
   },
   "melvorItA:Soulsnap_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "doubleSoulDropChance": 20
       }
     },
-    "5ue:dot": [0,0,0,0,100,100], 
-    "5ce:ignore": [ [ -50 ], "n", [ "melvorItA:ToxinDOT","melvorItA:AblazeDOT"] ],
-    "10ce:ignore": [ [ -100, -1 ], "n", [ "melvorItA:ToxinDOT" ,"melvorItA:AblazeDOT"] ]
+    "5Udot": [0,0,0,0,100,100], 
+    "5Eignore": [-50,"toxin","ablaze"],
+    "10Eignore": [-100,-1,"toxin","ablaze"]
   },
   "melvorItA:Dark_Ritual_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "nonShardSummoningCostReduction": [
           {
@@ -994,7 +978,7 @@
     "10summon2": [0,10]
   },
   "melvorItA:Eldritch_Curse_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "effectIgnoreChance": [
           {
@@ -1004,7 +988,7 @@
         ]
       }
     },
-    "u:combatEffects": {
+    "UcombatEffects": {
       "add": [
         {
           "effectID": "melvorItA:EldritchCurse",
@@ -1014,12 +998,12 @@
       ]
     },
     "5rc": ["melvorItA:EldritchCurse"],
-    "5uc:cbeasy": ["BGSCheat:EldritchCurse", 2, 40, {"t": 5}],
-    "5ce:ignore": [ [ -50 ] ,"s","melvorItA:EldritchCurse"] ,
-    "10ce:ignore": [ [ -100, -1 ] ,"s","melvorItA:EldritchCurse"]
+    "5Ucbeasy": ["3EldritchCurse", 2, 80],
+    "5Eignore": [-50,"ec"],
+    "10Eignore": [-100,-1,"ec"]
   },
   "melvorItA:Void_Stabilisation_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "skillCostReduction": [
           {
@@ -1040,7 +1024,7 @@
     "10bypass": [10]
   },
   "melvorItA:Voidburst_Potion_IV": {
-    "u:modifiers": {
+    "Nmodifiers": {
       "add": {
         "effectIgnoreChance": [
           {
@@ -1050,7 +1034,7 @@
         ]
       }
     },
-    "u:combatEffects": {
+    "UcombatEffects": {
       "add": [
         {
           "effectID": "melvorItA:Voidburst",
@@ -1060,9 +1044,9 @@
       ]
     },
     "5rc": ["melvorItA:Voidburst"],
-    "5ue:dot": [0,0,0,0,0,0,0,100], 
-    "5uc:cbeasy": ["BGSCheat:Voidburst", 2, 20, {"p": 100}],
-    "5ce:ignore": [ [ -50 ] ,"s","melvorItA:Voidburst"] ,
-    "10ce:ignore": [ [ -100, -1 ] ,"s","melvorItA:Voidburst"]
+    "5UEdot": [0,0,0,0,0,0,0,100], 
+    "5Ucbeasy": ["100Voidburst", 2, 20],
+    "5Eignore": [-50,"void"],
+    "10Eignore": [-100,-1,"void"]
   }
 }

@@ -1,23 +1,18 @@
 {
 	"melvorF:Deedree": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"0u:xp": [ [ 0, 0, 1 ], "n", [ "melvorD:Woodcutting", "melvorD:Farming" ] ]
+				"Nxp": [ 0, 0, 1, "wood", "farm" ]
 			},
-			{
-				"index": 2
-			}
+			{ "index": 2 }
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
-				"5itemRand": [ [ 1 ], "s", "melvorTotH:Raven_Nest", "melvorD:Woodcutting" ],
-				"10itemRand": [ [ 0, 1 ], "n", [ [ "melvorD:Bird_Nest", "melvorD:Woodcutting" ], [ "melvorTotH:Raven_Nest", "melvorD:Woodcutting" ] ]
-				]
+				"5itemRand": [ 1, [ "melvorTotH:Raven_Nest", "wood" ] ],
+				"10itemRand": [ 0, 1, [ "melvorD:Bird_Nest", "wood" ], [ "melvorTotH:Raven_Nest", "wood" ] ]
 			},
 			{
 				"index": 1,
@@ -27,53 +22,48 @@
 			},
 			{
 				"index": 2,
-				"5skillAddItem": [ [ 1 ], "s", "melvorF:Stardust", "melvorD:Woodcutting" ],
-				"10skillAddItem": [ [ 1 ], "s", "melvorF:Golden_Stardust", "melvorD:Woodcutting" ]
+				"5skillAddItem": [ 1, [ "melvorF:Stardust", "wood" ] ],
+				"10skillAddItem": [ 1, [ "melvorF:Golden_Stardust", "wood" ] ]
 			}
 		]
 	},
 	"melvorF:Iridan": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"0u:xp": [ [ 0, 0, 1 ], "s", "melvorD:Smithing" ]
+				"Nxp": [ 0, 0, 1 , "smit" ]
 			},
 			{
 				"index": 2,
-				"10skillbase": [ [ 1 ], "s", "melvorD:Smithing" ]
+				"10skillbase": [ 1 , "smit" ]
 			}
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
-				"10hidden": [ [ 0, 1 ], "s", "melvorD:Attack" ]
+				"10hidden": [ 0, 1 , "atk" ]
 			},
 			{
 				"index": 1,
-				"10skillextra": [ [ 1 ], "s", "melvorD:Smithing" ]
+				"10skillextra": [  1 , "smit" ]
 			},
 			{
-				"index": 2,
-				"10ue:dot": [ 0, 1 ]
+				"index": 2
 			}
 		]
 	},
 	"melvorF:Ameria": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"0u:xp": [ [ 0, 0, 1 ], "n", [ "melvorD:Fishing", "melvorD:Firemaking" ] ]
+				"Nxp": [ 0, 0, 1, "fish", "fire" ]
 			},
 			{
 				"index": 2,
-				"5firemaking": [ [ 10 ], "s", "melvorD:GP" ],
-				"10skillbase": [ [ 1 ], "s", "melvorD:Firemaking" ]
+				"5firemaking": [ 10,  "gp" ],
+				"10skillbase": [ 1 , "fire" ]
 			}
 		],
 		"uniqueModifiers": [
@@ -84,9 +74,9 @@
 			},
 			{
 				"index": 1,
-				"5itemRand": [ [ 1, 0 ], "s", "melvorF:Stardust", "melvorD:Firemaking" ],
-				"10itemRand": [ [ 0, 1 ], "s", "melvorF:Stardust", "melvorD:Firemaking" ],
-				"10skillextra": [ [ 1 ], "s", "melvorD:Firemaking" ]
+				"5itemRand": [ 1, [ "melvorF:Stardust", "fire" ] ],
+				"10itemRand": [ 0, 1, [ "melvorF:Stardust", "fire" ] ],
+				"10skillextra": [ 1, "fire" ]
 			},
 			{
 				"index": 2,
@@ -96,21 +86,17 @@
 	},
 	"melvorF:Terra": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"0u:xp": [ [ 0, 0, 1 ], "s", "melvorD:Mining" ]
+				"Nxp": [ 0, 0, 1, "mine" ]
 			},
-			{
-				"index": 2
-			}
+			{ "index": 2 }
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
-				"10hidden": [ [ 0, 1 ], "s", "melvorD:Strength" ]
+				"10hidden": [ 0, 1, "str" ]
 			},
 			{
 				"index": 1,
@@ -129,116 +115,102 @@
 			},
 			{
 				"index": 1,
-				"0u:xp": [ [ 0, 0, 1 ], "s", "melvorD:Cooking" ]
+				"Nxp": [ 0, 0, 1, "cook" ]
 			},
 			{
 				"index": 2,
-				"5skillbase": [ [ 1 ], "s", "melvorD:Cooking" ]
+				"5skillbase": [ 1, "cook" ]
 			}
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
 				"5cook": [ -1 ],
-				"10skillextra": [ [ 1 ], "s", "melvorD:Cooking" ]
+				"10skillextra": [ 1, "cook" ]
 			},
 			{
 				"index": 1,
-				"10m:hp": [ 0, [-1, 0, 1] ]
+				"10Mhp": [ 0, 1 ]
 			},
 			{
 				"index": 2,
-				"10u:food": [ 0, 0, 0, 0, 2 ],
-				"10ue:dot": [ 0, 0, 0, 1 ]
+				"10Nfood": [ 0, 0, 0, 0, 2 ]
 			}
 		]
 	},
 	"melvorF:Syllia": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"0u:xp": [ [ 0, 0, 1 ], "s", "melvorD:Fletching" ]
+				"Nxp": [ 0, 0, 1, "flet" ]
 			},
 			{
 				"index": 2,
-				"5skillbase": [ [ 1 ], "s", "melvorD:Fletching" ]
+				"5skillbase": [ 1, "flet" ]
 			}
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
-				"10hidden": [ [ 0, 1 ], "s", "melvorD:Ranged" ]
+				"10hidden": [ 0, 1, "ran" ]
 			},
 			{
 				"index": 1,
 				"10rm": [ "ammoPreservationChance" ],
-				"10bypass": [ 0, 0, 1 ],
-				"10ue:dot": [ 0, 0, 1 ]
+				"10bypass": [ 0, 0, 1 ]
 			},
 			{
 				"index": 2,
-				"10:skillextra": [ [ 1 ], "s", "melvorD:Fletching" ]
+				"10skillextra": [ 1, "flet" ]
 			}
 		]
 	},
 	"melvorF:Arachi": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"0u:xp": [ [ 0, 0, 1 ], "s", "melvorD:Runecrafting" ]
+				"Nxp": [ 0, 0, 1, "rune" ]
 			},
 			{
 				"index": 2,
-				"5skillbase": [ [ 1 ], "s", "melvorD:Runecrafting" ]
+				"5skillbase": [ 1, "rune" ]
 			}
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
-				"10hidden": [ [ 0, 1 ], "s", "melvorD:Magic" ]
+				"10hidden": [ 0, 1, "mag" ]
 			},
 			{
 				"index": 1,
-				"10bypass": [ 0, 0, 0, 1 ],
-				"10ue:dot": [ 1 ]
+				"10bypass": [ 0, 0, 0, 1 ]
 			},
 			{
 				"index": 2,
-				"10:skillextra": [ [ 1 ], "s", "melvorD:Runecrafting" ]
+				"10:skillextra": [ 1, "rune" ]
 			}
 		]
 	},
 	"melvorF:Ko": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"0u:xp": [ [ 0, 0, 1 ], "n", [ "melvorD:Thieving", "melvorD:Agility" ]
-				]
+				"Nxp": [ 0, 0, 1, "thie", "agil" ]
 			},
-			{
-				"index": 2
-			}
+			{ "index": 2 }
 		],
 		"uniqueModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"5currency": [ [ 0, 10 ], "s", "melvorD:GP", "melvorD:Agility" ]
+				"5currency": [ 0, 10, [ "gp", "agil" ] ]
 			},
 			{
 				"index": 2,
-				"5thieving": [ "c", [ [ 0, 100 ], "s", "melvorD:GP" ], [ 2, 0, 0, 2 ] ],
+				"5thieving": [ [ 0, 100, "gp" ], [ 2, 0, 0, 2 ] ],
 				"10thieving": [ 3 ]
 			}
 		]
@@ -248,55 +220,51 @@
 		"standardModifiers": [
 			{
 				"index": 0,
-				"10hidden": [ [ 0, 1 ], "s", "melvorD:Defence" ]
+				"10hidden": [ 0, 1, "def" ]
 			},
 			{
 				"index": 1
 			},
 			{
 				"index": 2,
-				"5o:currency2": [ [ 0, 0, 0, 2 ], "s", "melvorD:GP" ],
-				"10currency2": [ [ 0, 0, 0, 5, 5 ], "s", "melvorD:GP" ]
+				"5currency2": [ 0, 0, 0, 2, "gp" ],
+				"10currency2": [0, 0, 0, 5, 5, "gp" ]
 			}
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
-				"5o:currency": [ [ 0, 2 ], "s", "melvorD:SlayerCoins" ],
-				"10:currency": [ [ 0, 5 ], "s", "melvorD:SlayerCoins" ],
-				"10:currency3": [ [ 10 ], "s", "melvorD:SlayerCoins" ]
+				"5currency": [ 0, 2, "sc" ],
+				"10currency": [ 0, 5, "sc" ],
+				"10currency3": [ 10, "sc" ]
 			},
 			{
 				"index": 1,
-				"10slayer": [ [ 0, 0, 0, 1 ], "s", "melvorD:Normal" ]
+				"10slayer": [ 0, 0, 0, 1, "n" ]
 			},
 			{
 				"index": 2,
-				"10spres": [ 1 ]
+				"10res": [ 1, "n" ]
 			}
 		]
 	},
 	"melvorF:Hyden": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"0u:xp": [ [ 0, 0, 1 ], "s", "melvorD:Crafting" ]
+				"Nxp": [ 0, 0, 1, "craf" ]
 			},
 			{
 				"index": 2,
-				"5skillbase": [ [ 1 ], "s", "melvorD:Crafting" ]
+				"5skillbase": [ 1, "craf" ]
 			}
 		],
 		"uniqueModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"10:skillextra": [ [ 1 ], "s", "melvorD:Crafting" ]
+				"10skillextra": [ 1, "craf" ]
 			},
 			{
 				"index": 2,
@@ -306,21 +274,17 @@
 	},
 	"melvorF:Qimican": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"0u:xp": [ [ 0, 0, 1 ], "n", [ "melvorD:Herblore", "melvorD:Summoning" ] ]
+				"Nxp": [ 0, 0, 1, "herb", "summ" ]
 			},
-			{
-				"index": 2
-			}
+			{ "index": 2 }
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
-				"10skillextra": [ [ 1 ], "n", [ "melvorD:Herblore", "melvorD:Summoning" ] ]
+				"10skillextra": [ 1, "herb", "summ" ]
 			},
 			{
 				"index": 1,
@@ -337,28 +301,26 @@
 	},
 	"melvorTotH:Variel": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
 				"1rm": [ "masteryXP" ],
-				"1u:xp": [ [ 0, 0, 1 ], "n", [ "melvorD:Astrology" ] ]
+				"1Nxp": [ 0, 0, 1, "astr" ]
 			},
 			{
 				"index": 2,
-				"5itemRand": [ [ 0, 1 ], "s", "melvorF:Stardust", "melvorD:Astrology" ],
-				"10m:itemRand": [ [ 0, 2 ], "s", "melvorF:Stardust", "melvorD:Astrology" ]
+				"5itemRand": [ 0, 1, [ "melvorF:Stardust", "astr" ] ],
+				"10itemRand": [ 0, 2, [ "melvorF:Stardust", "astr" ] ]
 			}
 		],
 		"uniqueModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"10m:itemRand": [ "c", [ [ 0, 2 ], "s", "melvorF:Golden_Stardust", "melvorD:Astrology" ],
-					[ [ 0.3, 1 ], "s", "melvorItA:Abyssal_Stardust", "melvorD:Astrology" ] ]
+				"10itemRand": [
+					[ 0, 2, [ "melvorF:Golden_Stardust", "astr" ] ],
+					[ 0.3, 1, [ "melvorItA:Abyssal_Stardust", "astr" ] ]
+				]
 			},
 			{
 				"index": 2,
@@ -369,16 +331,14 @@
 	},
 	"melvorTotH:Haemir": {
 		"standardModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"5town": [ 0, 0, [ 1, 0, 2, 0, 100, 1 ] ]
+				"5town": [ 0, 0, {"o": 2,"i": 1} ]
 			},
 			{
 				"index": 2,
-				"5town": [ [ 1, 0, 4, 0, 100, 1 ] ]
+				"5town": [ {"o": 4,"i": 1} ]
 			}
 		],
 		"uniqueModifiers": [
@@ -394,7 +354,7 @@
 			},
 			{
 				"index": 2,
-				"5town": [ 0, 0, 0, [ 0, 0, 4, 0, 100, 1 ] ]
+				"5town": [ 0, 0, 0, {"o": 4, "i": 1} ]
 			}
 		]
 	},
@@ -407,7 +367,7 @@
 			},
 			{
 				"index": 1,
-				"5skillextra": [ 0, 0, [ 1, 0, 1, 0, 1000, 1 ] ]
+				"5skillextra": [ 0, 0, {"o": 1,"i": 1} ]
 			},
 			{
 				"index": 2,
@@ -425,7 +385,7 @@
 			},
 			{
 				"index": 2,
-				"5u:xp": [ 0, 0, 1 ]
+				"5Nxp": [ 0, 0, 1 ]
 			}
 		]
 	},
@@ -441,22 +401,22 @@
 			},
 			{
 				"index": 2,
-				"10ce:atkspd": [ 0, 1 ]
+				"10Eatkspd": [ 0, 1 ]
 			}
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
-				"10ce:hp": [ 0, -1 ]
+				"10Ehp": [ 0, -1 ]
 			},
 			{
 				"index": 1,
-				"10m:hp": [ 0, 1 ],
+				"10Mhp": [ 0, 1 ],
 				"10slayer": [ 2 ]
 			},
 			{
 				"index": 2,
-				"10ce:spres": [ -1 ]
+				"10Eres": [ -1, "n" ]
 			}
 		]
 	},
@@ -472,7 +432,7 @@
 			},
 			{
 				"index": 2,
-				"0u:xp": [ [ 0, 0, 1 ], "s", "melvorAoD:Archaeology" ]
+				"Nxp": [ 0, 0, 1, "arch" ]
 			}
 		],
 		"uniqueModifiers": [
@@ -491,13 +451,12 @@
 				"10arch2": [ 1, 1, 1, 1 ]
 			}
 		]
-
 	},
 	"melvorItA:Harvesting": {
 		"abyssalModifiers": [
 			{
 				"index": 0,
-				"0u:xp": [ [ 0, 0, 1 ], "s", "melvorItA:Harvesting" ],
+				"Nxp": [ 0, 0, 1, "harv" ],
 				"10harvest": [ 0, 0, 1 ]
 			},
 			{
@@ -519,62 +478,43 @@
 	},
 	"melvorItA:CorruptedDeedree": {
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"5itemRand": [ [ 0.3 ], "s", "melvorItA:Shadow_Raven_Nest", "melvorD:Woodcutting" ],
-				"10itemRand": [ [ 0, 1 ], "s", "melvorItA:Shadow_Raven_Nest", "melvorD:Woodcutting" ]
+				"5itemRand": [ [ 0.4, [ "melvorItA:Shadow_Raven_Nest", "wood" ] ], [ 0.1, [ "melvorItA:Shadow_Drake_Nest", "wood" ] ] ],
+				"10itemRand": [ 0, 1, [ "melvorItA:Shadow_Raven_Nest", "wood" ],  [ "melvorItA:Shadow_Drake_Nest", "wood" ] ]
 			},
 			{
 				"index": 2,
-				"5skillItemBase": [ [ 1 ], "s", "melvorD:Farming" ]
+				"5skillItemBase": [ 1, "farm" ]
 			},
-			{
-				"index": 3
-			}
+			{ "index": 3 }
 		]
 	},
 	"melvorItA:CorruptedIridan":{
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
 				"10critical": [0,1]
 			},
+			{ "index": 2 },
 			{
-				"index": 2
-			},
-			{
-				"index": 3,
-				"10ue:dot": [ 0, 0, 0, 0, 0, 0, 0, 1 ]
+				"index": 3
 			}
 		]
 	},
 	"melvorItA:CorruptedAmeria": {
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
-			{
-				"index": 1
-			},
-			{
-				"index": 2
-			},
-			{
-				"index": 3
-			}
+			{ "index": 0 },
+			{ "index": 1 },
+			{ "index": 2 },
+			{ "index": 3 }
 		]
 	},
 	"melvorItA:CorruptedTerra": {
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
 				"10critical": [0,1]
@@ -585,24 +525,19 @@
 				"10mine": [0,0,0,1,0,1]
 			},
 			{
-				"index": 3,
-				"10ue:dot": [ 0, 0, 0, 0, 0, 0, 1 ]
+				"index": 3
 			}
 		]
 	},
 	"melvorItA:CorruptedVale": {
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
 				"5regen": [0,0,1],
 				"10regen": [-100]
 			},
-			{
-				"index": 2
-			},
+			{ "index": 2 },
 			{
 				"index": 3,
 				"maxCount": "return lv<11?(lv/5)>>0:lv<20?(lv-9)*2:25",
@@ -612,87 +547,63 @@
 	},
 	"melvorItA:CorruptedSyllia": {
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
 				"10critical": [0,1]
 			},
+			{ "index": 2 },
 			{
-				"index": 2
-			},
-			{
-				"index": 3,
-				"10ue:dot": [ 0, 0, 0, 0, 1 ]
+				"index": 3
 			}
 		]
 	},
 	"melvorItA:CorruptedArachi": {
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
 				"10critical": [0,1]
 			},
+			{ "index": 2 },
 			{
-				"index": 2
-			},
-			{
-				"index": 3,
-				"10ue:dot": [ 0, 0, 0, 0, 0, 1 ]
+				"index": 3
 			}
 		]
 	},
 	"melvorItA:CorruptedKo": {
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
-			{
-				"index": 1
-			},
-			{
-				"index": 2
-			},
+			{ "index": 0 },
+			{ "index": 1 },
+			{ "index": 2 },
 			{
 				"index": 3,
-				"5currency": [ [ 0, [ 1, 0, 2, 0, 100, 1 ] ],"s","melvorItA:AbyssalPieces"]
+				"5currency": [ 0, {"o": 2, "i": 1}, "ap"]
 			}
 		]
 	},
 	"melvorItA:CorruptedTellus": {
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
 				"10dmgTaken": [-1]
 			},
 			{
 				"index": 2,
-				"5currency": [ [ 0, [ 0, 0, 2, 0, 100, 1 ] ],"s","melvorItA:AbyssalSlayerCoins"]
+				"5currency": [ 0, {"o": 2, "i": 1} , "melvorItA:AbyssalSlayerCoins" ]
 			},
 			{
 				"index": 3,
-				"10spres": [0,0,1]
+				"10res": [1,"a"]
 			}
 		]
 	},
 	"melvorItA:CorruptedHyden": {
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
-			{
-				"index": 1
-			},
-			{
-				"index": 2
-			},
+			{ "index": 0 },
+			{ "index": 1 },
+			{ "index": 2 },
 			{
 				"index": 3,
 				"10rm": ["soulPointPreservationChance"],
@@ -702,22 +613,15 @@
 	},
 	"melvorItA:CorruptedQimican": {
 		"abyssalModifiers": [
-			{
-				"index": 0
-			},
+			{ "index": 0 },
 			{
 				"index": 1,
-				"5summon": [ 0, 0, [2,0,4,0, 1000,1] ]
+				"5summon": [ 0, 0, {"o": 4, "i": 1} ]
 			},
-			{
-				"index": 2
-			},
-			{
-				"index": 3
-			}
+			{ "index": 2 },
+			{ "index": 3 }
 		]
 	},
 	"melvorItA:Celestis": {
-
 	}
 }

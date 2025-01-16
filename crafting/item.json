@@ -1,107 +1,110 @@
 {
 	"Base": {
-		"u:matks": [ 1, 1, 1, 1, 1 ],
-		"u:mstrs": [1,1,1],
-		"u:mdefs": [1,1,1],
-		"u:msums": [1,1,1,1]
+		"Omatks": [ 1, 1, 1, 1, 1 ],
+		"Omstrs": [ 1, 1, 1 ],
+		"Omdefs": [ 1, 1, 1 ]
 	},
 	"Unholy1": {
 		"base": "Base",
-		"10allow": [0,0,1],
-		"10atkeffect": [1],
-		"10cbeasy": ["melvorAoD:UnholyMark",3]
+		"10allow": [ 0, 0, 1 ],
+		"10atkeffect": [ 1 ],
+		"10cbeasy": [ "melvorAoD:UnholyMark", 3 ]
 	},
 	"Unholy2": {
 		"base": "Base",
-		"5allow": [0,0,1],
-		"5atkeffect": [1],
-		"5cbeasy": ["melvorAoD:UnholyMark",3],
+		"5allow": [ 0, 0, 1 ],
+		"5atkeffect": [ 1 ],
+		"5cbeasy": [ "melvorAoD:UnholyMark", 3 ],
 		"10cbeasy": [ "10unholy", 3 ]
 	},
 	"Unholy3": {
 		"base": "Base",
-		"3allow": [0,0,1],
-		"3atkeffect": [1],
-		"3cbeasy": ["melvorAoD:UnholyMark",3],
-		"6allow": [0,0,2],
-		"6cbeasy": [ "10unholy", 3 ],
-		"10atkeffect": [2],
-		"10cbeasy": [ "20unholy", 3 ]
+		"5allow": [ 0, 0, 1 ],
+		"5atkeffect": [ 1 ],
+		"5cbeasy": [ "10unholy", 3 ],
+		"10atkeffect": [ 2 ]
 	},
 	"Unholy4": {
 		"base": "Base",
-		"3allow": [0,0,1],
-		"3atkeffect": [1],
-		"3cbeasy": ["melvorAoD:UnholyMark",3],
-		"5allow": [0,0,2],
-		"5u:atkeffect": [3],
-		"10uc:cbeasy": [ "10unholy", 3 ]
+		"5allow": [ 0, 0, 1 ],
+		"5atkeffect": [ 1 ],
+		"5Ucbeasy": [ "20unholy", 3 ],
+		"10Uatkeffect": [ 2 ]
 	},
 	"Unholy5": {
 		"base": "Base",
-		"5u:corrupt": [10,5],
-		"10u:corrupt": [5,10]
+		"5Ucorrupt": [ 10, 5 ],
+		"10Ucorrupt": [ 5, 10 ]
 	},
 	"TotHD": {
 		"5slayer": [ 60 ],
 		"5summon": [ 0, -5, 80 ],
-		"5barrier": [0, 30, 50]
+		"5barrier": [ 0, 30, 50 ]
 	},
 	"TotHD2": {
-		"5u:slayer": [ 60 ],
-		"5u:summon": [ 0, -5, 80 ],
-		"5u:barrier": [0, 30, 50]
+		"5Uslayer": [ 60 ],
+		"5Usummon": [ 0, -5, 80 ],
+		"5Ubarrier": [ 0, 30, 50 ]
 	},
 	"AbyD": {
-		"5u:slayer": [ 0, 10 ],
-		"5u:summon": [ 0, -5, 50 ]
+		"Uress": [ 0, 3 ],
+		"5Uslayer": [ 0, 10 ],
+		"5Usummon": [ 0, -5, 100 ]
 	},
 	"body": {
-		"u:hp": [ 0, [ -5, 0, 5 ] ]
+		"Uhp": [ 0, 5 ]
 	},
 	"legs": {
-		"u:hp": [ [ -5, 0, 5 ] ]
+		"Mhp": [ 5 ]
 	},
 	"shield": {
-		"u:dmgTaken": [[5,0,-5]],
-		"ress": [[-1,0,1]]
+		"Uress": [ 1 ],
+		"UdmgTaken": [ -5 ]
 	},
 	"tier1": {
 		"base": "Base",
-		"1v:modifiers": {
+		"1Vmodifiers": {
 			"add": {
 				"bankSpace": 5
 			}
 		},
-		"4u:sp-currg2": [ 0, 0, 100 ],
-		"6u:sp-currs2": [ 0, 0, 50 ],
-		"10u:sp-currg": [0, 50],
-		"10u:sp-currs": [0, 50]
+		"4Ucurrency2": [ 0, 0, 100, "gp" ],
+		"6Ucurrency2": [ 0, 0, 100, "sc" ],
+		"10Ucurrency": [ 0, 50, "gp", "sc" ]
 	},
 	"tier2": {
 		"base": "Base",
-		"3l:skillbase": [1,0],
-		"5u:skillextra": [1,0,2]
+		"1Vmodifiers": {
+			"add": {
+				"bankSpace": 3
+			}
+		},
+		"3Lskillbase": [ 1, 0, 1 ],
+		"5Uskillextra": [ 1, 0, 2 ]
 	},
 	"tier3": {
 		"base": "Base",
-		"6u:xp": [0,0,100]
+		"1Vmodifiers": {
+			"add": {
+				"bankSpace": 1
+			}
+		},
+		"6Uxp": [ 0, 0, 100 ]
 	},
 	"melvorD:Leather_Boots": {
 		"base": "tier1",
-		"u:ress": [[-1,0,1]],
+		"Uress": [1],
 		"2slayer": [5]
 	},
 	"melvorF:Hard_Leather_Boots": {
 		"base": "tier2",
-		"u:ress": [[-2,0,2]],
+		"Uress": [2],
 		"2slayer": [10],
-		"10u:skillAddItem": [[100], "s", "melvorF:Basic_Bag", "melvorD:Woodcutting"]
+		"10u:skillAddItem": [ 100, [ "melvorF:Basic_Bag", "wood" ] ]
 	},
 	"melvorItA:Abyssal_Leather_Boots": {
 		"base": [ "Unholy5", "AbyD" ],
-		"ress": [0, [-3,0,3]],
-		"10u:itemRand": [ [ [ 80 ] ,"s","melvorItA:Abyssal_Stardust", "melvorD:Astrology" ] ]
+		"10itemRand": [ 80,["melvorItA:Abyssal_Stardust", "astr" ] ]
 	},
 	"melvorF:Green_Dhide_Shield": {
 		"base": [ "Unholy1", "4shield" ]
@@ -147,15 +150,15 @@
 	},
 	"melvorF:Leather_Gloves": {
 		"base": "tier1",
-		"4uc:cbeasy": ["BGSCheat:Poison", 2, 20]
+		"4Ucbeasy": ["Poison", 2, 10]
 	},
 	"melvorF:Hard_Leather_Gloves": {
 		"base": "tier2",
-		"5uc:cbeasy": ["BGSCheat:Sleep", 3, 20]
+		"5Ucbeasy": ["Sleep", 3, 15]
 	},
 	"melvorD:Leather_Vambraces": {
 		"base": "tier2",
-		"5uc:cbeasy": ["BGSCheat:Bleed200", 3, 20]
+		"5Ucbeasy": ["Bleed200", 3, 15]
 	},
 	"melvorAoD:Leather_Vambraces_B": {
 		"base": "melvorD:Leather_Vambraces",
@@ -164,7 +167,7 @@
 	},
 	"melvorF:Hard_Leather_Vambraces": {
 		"base": "tier3",
-		"5uc:cbeasy": ["BGSCheat:Confusion", 3, 20]
+		"5Ucbeasy": ["Confusion", 3, 20]
 	},
 	"melvorAoD:Hard_Leather_Vambraces_B": {
 		"base": "melvorF:Hard_Leather_Vambraces",
@@ -173,7 +176,7 @@
 	},
 	"melvorD:Green_Dhide_Vambraces": {
 		"base": "Unholy1",
-		"5uc:cbeasy": ["BGSCheat:DeadlyPoison", 2, 20]
+		"5Ucbeasy": ["100dp", 2, 20]
 	},
 	"melvorD:Green_Dhide_Vambraces_U": {
 		"base": "melvorD:Green_Dhide_Vambraces"
@@ -185,7 +188,7 @@
 	},
 	"melvorD:Blue_Dhide_Vambraces": {
 		"base": "Unholy1",
-		"5uc:buff": [ "30maxHit", 2, 35, { "c" :"g","t": 3 } ]
+		"5UbuffAuto": [ "30maxHit", 2, 35, { "t": 3 } ]
 	},
 	"melvorD:Blue_Dhide_Vambraces_U": {
 		"base": "melvorD:Blue_Dhide_Vambraces"
@@ -197,7 +200,7 @@
 	},
 	"melvorD:Red_Dhide_Vambraces": {
 		"base": "Unholy2",
-		"5uc:cbeasy": ["BGSCheat:Anguish", 2, 20, {"t": 2, "si": 1}]
+		"5Ucbeasy": ["1Anguish", 2, 20, {"t": 2}]
 	},
 	"melvorD:Red_Dhide_Vambraces_U": {
 		"base": "melvorD:Red_Dhide_Vambraces"
@@ -209,7 +212,7 @@
 	},
 	"melvorD:Black_Dhide_Vambraces": {
 		"base": "Unholy2",
-		"5uc:cbeasy": ["BGSCheat:Crystallize", 2, 30, {"t": 2}]
+		"5Ucbeasy": ["2Crystallize", 2, 20]
 	},
 	"melvorD:Black_Dhide_Vambraces_U": {
 		"base": "melvorD:Black_Dhide_Vambraces"
@@ -221,78 +224,73 @@
 	},
 	"melvorTotH:Elderwood_Vambraces": {
 		"base": [ "Unholy3", "TotHD1" ],
-		"5uc:cbeasy": ["BGSCheat:Rage", 2, 30]
+		"5Ucbeasy": ["reign", 2, 30]
 	},
 	"melvorTotH:Elderwood_Vambraces_U": {
 		"base": "melvorTotH:Elderwood_Vambraces"
 	},
 	"melvorTotH:Revenant_Vambraces": {
 		"base": [ "Unholy3", "TotHD1" ],
-		"5uc:debuff": [ [ "hp", "maxHit" ], 2, 30 ]
+		"5Udebuff": [ [ "hp", "maxHit" ], 2, 30 ]
 	},
 	"melvorTotH:Revenant_Vambraces_U": {
 		"base": "melvorTotH:Revenant_Vambraces"
 	},
 	"melvorTotH:Carrion_Vambraces": {
 		"base": [ "Unholy4", "TotHD2" ],
-		"5uc:bunderwater": [8, 100, {"sm": 15}]
+		"5UCbunderwater": [8, 100, {"sm": 15}]
 	},
 	"melvorTotH:Carrion_Vambraces_U": {
 		"base": "melvorTotH:Carrion_Vambraces"
 	},
 	"melvorD:Leather_Cowl": {
 		"base": "tier1",
-		"ress": [[-1,0,1]],
-		"4uc:cbeasy": ["BGSCheat:Burn", 4, 30]
+		"Uress": [1],
+		"4Ucbeasy": ["100Burn", 4, 30]
 	},
 	"melvorF:Hard_Leather_Cowl": {
 		"base": "tier2",
-		"ress": [[-2,0,2]],
-		"5uc:cbeasy": ["BGSCheat:Silence", 4, 30]
+		"Uress": [2],
+		"5Ucbeasy": ["2Silence", 4, 30]
 	},
 	"melvorItA:Abyssia_Coif": {
 		"base": [ "Unholy5", "AbyD" ],
-		"ress": [0, [-3,0,3]],
-		"5uc:cbeasy": ["BGSCheat:Toxin", 4, 30, {"p": 100}]
+		"5Ucbeasy": ["100Toxin", 4, 30]
 	},
 	"melvorItA:Abyssia_Coif_U": {
 		"base": "melvorItA:Abyssia_Coif"
 	},
 	"melvorItA:Brumia_Coif": {
 		"base": [ "Unholy5", "2AbyD" ],
-		"ress": [0, [-6,0,6]],
-		"5uc:cbeasy": ["BGSCheat:EldritchCurse", 4, 30, {"t": 4}]
+		"5Ucbeasy": ["4ec", 4, 50]
 	},
 	"melvorItA:Brumia_Coif_U": {
 		"base": "melvorItA:Brumia_Coif"
 	},
 	"melvorItA:Gloomia_Coif": {
 		"base": [ "Unholy5", "3AbyD" ],
-		"ress": [0, [-9,0,9]],
-		"5uc:cbeasy": ["BGSCheat:Blight", 4, 30, {"sm": 10, "sr": 5}]
+		"5Ucbeasy": ["10Blight", 4, 30]
 	},
 	"melvorItA:Gloomia_Coif_U": {
 		"base": "melvorItA:Gloomia_Coif"
 	},
 	"melvorItA:Withia_Coif": {
 		"base": [ "Unholy5", "4AbyD" ],
-		"ress": [0, [-12,0,12]],
-		"5uc:cbeasy": ["BGSCheat:Wither", 4, 30, {"sm": 12}]
+		"5Ucbeasy": ["12Wither", 4, 50]
 	},
 	"melvorItA:Withia_Coif_U": {
 		"base": "melvorItA:Withia_Coif"
 	},
 	"melvorItA:Nethia_Coif": {
 		"base": [ "Unholy5", "5AbyD" ],
-		"ress": [0, [-15,0,15]],
-		"5uc:cbeasy": ["BGSCheat:Voidburst", 4, 30, {"p": 100}]
+		"5Ucbeasy": ["100void", 4, 30]
 	},
 	"melvorItA:Nethia_Coif_U": {
 		"base": "melvorItA:Nethia_Coif"
 	},
 	"melvorF:Leather_Body": {
 		"base": ["tier1", "body"],
-		"ress": [[-1,0,1]],
+		"Uress": [1],
 		"2slayer": [ 5 ]
 	},
 	"melvorAoD:Leather_Body_B": {
@@ -301,11 +299,11 @@
 	},
 	"melvorF:Hard_Leather_Body": {
 		"base": ["tier2", "2body"],
-		"ress": [[-2,0,2]],
+		"Uress": [2],
 		"3slayer": [ 10 ],
-		"10itemRand": [ "c",
-			[ [ 100 ], "s", "melvorF:Stardust", "melvorD:Astrology" ],
-			[ [ 80 ], "s", "melvorF:Golden_Stardust", "melvorD:Astrology" ]
+		"10itemRand": [
+			[ 100, [ "melvorF:Stardust", "astr" ] ],
+			[ 80, [ "melvorF:Golden_Stardust", "astr" ] ]
 		]
 	},
 	"melvorAoD:Hard_Leather_Body_B": {
@@ -315,7 +313,7 @@
 	},
 	"melvorD:Green_Dhide_Body": {
 		"base": [ "Unholy1", "4body" ],
-		"u:ress": [[-4,0,4]],
+		"Uress": [4],
 		"5slayer": [ 10 ]
 	},
 	"melvorD:Green_Dhide_Body_U": {
@@ -328,7 +326,7 @@
 	},
 	"melvorD:Blue_Dhide_Body": {
 		"base": [ "Unholy1", "5body" ],
-		"u:ress": [[-5,0,5]],
+		"Uress": [5],
 		"5slayer": [ 20 ]
 	},
 	"melvorD:Blue_Dhide_Body_U": {
@@ -341,7 +339,7 @@
 	},
 	"melvorD:Red_Dhide_Body": {
 		"base": [ "Unholy2", "6body" ],
-		"u:ress": [[-6,0,6]],
+		"Uress": [6],
 		"5slayer": [ 30 ]
 	},
 	"melvorD:Red_Dhide_Body_U": {
@@ -354,7 +352,7 @@
 	},
 	"melvorD:Black_Dhide_Body": {
 		"base": [ "Unholy2", "7body" ],
-		"u:ress": [[-7,0,7]],
+		"Uress": [7],
 		"5slayer": [ 40 ]
 	},
 	"melvorD:Black_Dhide_Body_U": {
@@ -367,80 +365,75 @@
 	},
 	"melvorAoD:Unholy_Body": {
 		"base": [ "Base", "7body" ],
-		"u:ress": [[-7,0,7]],
-		"5u:atkeffect": [5],
+		"Uress": [7],
+		"5Uatkeffect": [3],
+		"5Ucbeasy": [ "20unholy", 3 ],
 		"5slayer": [ 40 ]
 	},
 	"melvorAoD:Cursed_Body": {
 		"base": "melvorAoD:Unholy_Body",
-		"5u:barrier": [ 0, 25, 35 ],
-		"5u:summon": [ 0, -10, 35 ],
+		"5Ubarrier": [ 0, 25, 35 ],
+		"5Usummon": [ 0, -10, 35 ],
 		"5atkeffect": [ 0, 0, 50 ],
 		"10atkeffect": [ 0, 0, 100 ]
 	},
 	"melvorTotH:Elderwood_Body": {
 		"base": ["Unholy3","8body", "TotHD1"],
-		"u:ress": [[-8,0,8]]
+		"Uress": [8]
 	},
 	"melvorTotH:Elderwood_Body_U": {
 		"base": "melvorTotH:Elderwood_Body"
 	},
 	"melvorTotH:Revenant_Body": {
 		"base": ["Unholy3","9body","TotHD1"],
-		"u:ress": [[-9,0,9]]
+		"Uress": [9]
 	},
 	"melvorTotH:Revenant_Body_U": {
 		"base": "melvorTotH:Revenant_Body"
 	},
 	"melvorTotH:Carrion_Body": {
 		"base": ["Unholy4","10body","TotHD2"],
-		"u:ress": [[-10,0,10]]
+		"Uress": [10]
 	},
 	"melvorTotH:Carrion_Body_U": {
 		"base": "melvorTotH:Carrion_Body"
 	},
 	"melvorItA:Abyssal_Leather_Body": {
-		"base": ["Unholy5","11body","AbyD"],
-		"u:ress": [0, [-3,0,3]]
+		"base": ["Unholy5","11body","AbyD"]
 	},
 	"melvorItA:Abyssia_Body": {
-		"base": ["Unholy5","11body","AbyD"],
-		"u:ress": [0, [-3,0,3]]
+		"base": ["Unholy5","11body","AbyD"]
 	},
 	"melvorItA:Abyssia_Body_U": {
 		"base": "melvorItA:Abyssia_Body"
 	},
 	"melvorItA:Brumia_Body": {
-		"base": ["Unholy5","12body","2AbyD"],
-		"u:ress": [0, [-6,0,6]]
+		"base": ["Unholy5","12body","2AbyD"]
 	},
 	"melvorItA:Brumia_Body_U": {
 		"base": "melvorItA:Brumia_Body"
 	},
 	"melvorItA:Gloomia_Body": {
-		"base": ["Unholy5","13body","3AbyD"],
-		"u:ress": [0, [-9,0,9]]
+		"base": ["Unholy5","13body","3AbyD"]
 	},
 	"melvorItA:Gloomia_Body_U": {
 		"base": "melvorItA:Gloomia_Body"
 	},
 	"melvorItA:Withia_Body": {
-		"base": ["Unholy5","14body","4AbyD"],
-		"u:ress": [0, [-12,0,12]]
+		"base": ["Unholy5","14body","4AbyD"]
 	},
 	"melvorItA:Withia_Body_U": {
 		"base": "melvorItA:Withia_Body"
 	},
 	"melvorItA:Nethia_Body": {
-		"base": ["Unholy5","15body","5AbyD"],
-		"u:ress": [0, [-15,0,15]]
+		"base": ["Unholy5","15body","5AbyD"]
 	},
 	"melvorItA:Nethia_Body_U": {
 		"base": "melvorItA:Nethia_Body"
 	},
 	"melvorD:Leather_Chaps": {
 		"base": [ "tier1", "legs" ],
-		"u:ress": [[-1,0,1]],
+		"Uress": [1],
 		"2slayer": [ 5 ]
 	},
 	"melvorD:Leather_Chaps_B": {
@@ -449,7 +442,7 @@
 	},
 	"melvorF:Hard_Leather_Chaps": {
 		"base": [ "tier2", "2legs"],
-		"u:ress": [[-2,0,2]],
+		"Uress": [2],
 		"3slayer": [ 10 ]
 	},
 	"melvorF:Hard_Leather_Chaps_B": {
@@ -459,7 +452,7 @@
 	},
 	"melvorD:Green_Dhide_Chaps": {
 		"base": [ "Unholy1", "4legs" ],
-		"u:ress": [[-4,0,4]],
+		"Uress": [4],
 		"5slayer": [ 10 ]
 	},
 	"melvorD:Green_Dhide_Chaps_U": {
@@ -472,7 +465,7 @@
 	},
 	"melvorD:Blue_Dhide_Chaps": {
 		"base": [ "Unholy1", "5legs" ],
-		"u:ress": [[-5,0,5]],
+		"Uress": [5],
 		"5slayer": [ 20 ]
 	},
 	"melvorD:Blue_Dhide_Chaps_U": {
@@ -485,7 +478,7 @@
 	},
 	"melvorD:Red_Dhide_Chaps": {
 		"base": [ "Unholy2", "6legs" ],
-		"u:ress": [[-6,0,6]],
+		"Uress": [6],
 		"5slayer": [ 30 ]
 	},
 	"melvorD:Red_Dhide_Chaps_U": {
@@ -498,7 +491,7 @@
 	},
 	"melvorD:Black_Dhide_Chaps": {
 		"base": [ "Unholy2", "7legs" ],
-		"u:ress": [[-7,0,7]],
+		"Uress": [7],
 		"5slayer": [ 40 ]
 	},
 	"melvorD:Black_Dhide_Chaps_U": {
@@ -511,353 +504,346 @@
 	},
 	"melvorTotH:Elderwood_Chaps": {
 		"base": [ "Unholy3", "8legs","TotHD1" ],
-		"u:ress": [[-8,0,8]]
+		"Uress": [8]
 	},
 	"melvorTotH:Elderwood_Chaps_U": {
 		"base": "melvorTotH:Elderwood_Chaps"
 	},
 	"melvorTotH:Revenant_Chaps": {
 		"base": [ "Unholy3", "9legs","TotHD1" ],
-		"u:ress": [[-9,0,9]]
+		"Uress": [9]
 	},
 	"melvorTotH:Revenant_Chaps_U": {
 		"base": "melvorTotH:Revenant_Chaps"
 	},
 	"melvorTotH:Carrion_Chaps": {
 		"base": [ "Unholy4", "10legs","TotHD2" ],
-		"u:ress": [[-10,0,10]]
+		"Uress": [10]
 	},
 	"melvorTotH:Carrion_Chaps_U": {
 		"base": "melvorTotH:Carrion_Chaps"
 	},
 	"melvorItA:Abyssal_Leather_Legs": {
 		"base": [ "Unholy5", "AbyD" ],
-		"ress": [0,[-3,0,3]],
 		"eva": [10],
-		"10u:itemRand": [ [ [ 0, 8 ] ,"s","melvorItA:Abyssal_Stardust", "melvorD:Astrology" ] ]
+		"10u:itemRand": [ 0, 8,["melvorItA:Abyssal_Stardust", "astr" ] ]
 	},
 	"melvorItA:Abyssia_Legs": {
 		"base": [ "Unholy5", "AbyD" ],
-		"u:ress": [0, [-3,0,3]],
-		"u:eva": [10]
+		"Ueva": [10]
 	},
 	"melvorItA:Abyssia_Legs_U": {
 		"base": "melvorItA:Abyssia_Legs"
 	},
 	"melvorItA:Brumia_Legs": {
 		"base": [ "Unholy5", "2AbyD" ],
-		"u:ress": [0, [-6,0,6]],
-		"u:eva": [20]
+		"Ueva": [20]
 	},
 	"melvorItA:Brumia_Legs_U": {
 		"base": "melvorItA:Brumia_Legs"
 	},
 	"melvorItA:Gloomia_Legs": {
 		"base": [ "Unholy5", "3AbyD" ],
-		"u:ress": [0, [-9,0,9]],
-		"u:eva": [30]
+		"Ueva": [30]
 	},
 	"melvorItA:Gloomia_Legs_U": {
 		"base": "melvorItA:Gloomia_Legs"
 	},
 	"melvorItA:Withia_Legs": {
 		"base": [ "Unholy5", "4AbyD" ],
-		"u:ress": [0, [-12,0,12]],
-		"u:eva": [40]
+		"Ueva": [40]
 	},
 	"melvorItA:Withia_Legs_U": {
 		"base": "melvorItA:Withia_Legs"
 	},
 	"melvorItA:Nethia_Legs": {
 		"base": [ "Unholy5", "5AbyD" ],
-		"u:ress": [0, [-15,0,15]],
-		"u:eva": [50]
+		"Ueva": [50]
 	},
 	"melvorItA:Nethia_Legs_U": {
 		"base": "melvorItA:Nethia_Legs"
 	},
 	"BaseRing1": {
 		"base": "Base",
-		"u:atks": [ [ -20, 0, 20 ], [ -20, 0, 20 ], [ -20, 0, 20 ], [ -20, 0, 20 ], [ -20, 0, 20 ] ],
-		"u:strs": [ [ -20, 0, 20 ], [ -20, 0, 20 ], [ -10, 0, 10 ] ],
-		"u:defs": [ [ -20, 0, 20 ], [ -20, 0, 20 ], [ -20, 0, 20 ] ],
-		"u:ress": [[-5,0,5]],
-		"u:sums": [ [ -5, 0, 5 ] ],
-		"10uc:cbeasy": ["BGSCheat:Nulled", 2, 10, {"t": 3}]
+		"Uatks": [ 20, 20, 20, 20, 20 ],
+		"Ustrs": [ 20, 20, 10 ],
+		"Udefs": [  20, 20, 20 ],
+		"Uress": [5],
+		"Usums": [ 5 ],
+		"10Ucbeasy": ["3Nulled", 2, 20]
 	},
 	"melvorF:Silver_Topaz_Ring": {
 		"base": "BaseRing1",
-		"u:atks": [12],
-		"1v:modifiers": {
+		"Uatks": [12],
+		"1Vmodifiers": {
 			"add": {
 				"bankSpace": 10
 			}
 		},
-		"5c:modifiers": {
+		"5modifiers": {
 			"add": {
 				"autoSlayerUnlocked": 1
 			}
 		},
-		"5uc:buff": [
-			[ "50acc", "50eva" ], 3, 25, { "c":"r","t": 3 } ],
-		"10c:skillAddItem": [[0,0.1],"s","melvorF:Bank_Slot_Token","melvorD:Firemaking"]
+		"5UbuffAuto": [ [ "50acc", "50eva" ], 3, 25, { "t": 3 } ],
+		"10skillAddItem": [ 0, 0.1, [ "melvorF:Bank_Slot_Token", "fire" ] ]
 	},
 	"melvorF:Silver_Sapphire_Ring": {
 		"base": "BaseRing1",
-		"u:atks": [0,0,12],
-		"u:strs": [ 6 ],
-		"u:defs": [6],
-		"5u:slayer": [30,30,30],
-		"5u:regen": [ -1000 ],
-		"5u:cbeasy": [ "BGSCheat:Frostburn", 2, 30, { "t": 4 } ],
-		"5c:modifiers": {
+		"Natks": [0,0,12],
+		"Nstrs": [ 6 ],
+		"Ndefs": [6],
+		"5Uslayer": [30,30,30],
+		"5Uregen": [ -1000 ],
+		"5Ucbeasy": [ "Frostburn", 2, 30 ],
+		"5modifiers": {
 			"add": {
 				"autoSlayerUnlocked": 1
 			}
 		},
-		"10u:acc2": [0,0,5,5,5]
+		"10Uacc2": [0,0,5,5,5]
 	},
 	"melvorF:Silver_Ruby_Ring": {
 		"base": "BaseRing1",
-		"5u:strBonus": [ 10, 10, 10 ],
-		"5u:cbeasy": [ "BGSCheat:Bleed", 3, 30, { "p": 100 } ],
-		"5c:modifiers": {
+		"5UstrBonus": [ 10, 10, 10 ],
+		"5Ucbeasy": [ "100Bleed", 3, 30 ],
+		"5modifiers": {
 			"add": {
 				"autoSlayerUnlocked": 1
 			}
 		},
-		"10u:dmg": [0,0,0,0,100]
+		"10Udmg": [0,0,0,0,100]
 	},
 	"melvorF:Silver_Emerald_Ring": {
 		"base": "BaseRing1",
-		"u:atks": [0,0,0,6],
-		"u:strs": [ 0, 6 ],
-		"u:sphidden": [ 0, 0, [ -10, 0, 10 ] ],
-		"5u:strBonus": [ 0, 0, 0, 0, 2 ],
-		"5c:modifiers": {
+		"Natks": [0,0,0,6],
+		"Nstrs": [ 0, 6 ],
+		"Uhidden": [ 10, "ran" ],
+		"5UstrBonus": [ 0, 0, 0, 0, 2 ],
+		"5Umodifiers": {
 			"add": {
 				"autoSlayerUnlocked": 1
 			}
 		},
-		"5u:cbeasy": [ "BGSCheat:Poison", 3, 30, { "p": 100, "i": [500, 0, -50, 25] } ],
-		"10ue:dot": [0,0,100]
+		"5Ucbeasy": [ "100Poison", 3, 15, { "i": [500, 0, -50, 25] } ]
 	},
 	"melvorF:Silver_Diamond_Ring": {
 		"base": "BaseRing1",
-		"u:dmgTaken": [[8,0,-10]],
-		"5u:buff": [["1res","1hp","1taken"],1,50]
+		"UdmgTaken": [-10],
+		"5Ubuff": [["1res","1hp","1taken"],1,30]
 	},
 	"melvorD:Gold_Topaz_Ring": {
 		"base": "BaseRing1",
-		"1v:modifiers": {
+		"Ncurrency2": [0,0,0,15,"gp"],
+		"1Vmodifiers": {
 			"add": {
 				"bankSpace": 10
 			}
 		},
-		"5u:cbeasy": [ "BGSCheat:Stun", 2, 10 ],
-		"5u:sp-currg3": [0,0,100],
-		"5u:sp-currs3": [0,0,50],
-		"10u:sp-currg4": [0,0,20],
-		"10u:sp-currs4": [0,0,20]
+		"5Ucbeasy": [ "Stun", 2, 10 ],
+		"5Ucurrency3": [ [ 0, 0, 100, "gp" ], [ 0, 0, 50, "sc" ] ],
+		"10Ucurrency4": [ 0, 0, 100, "gp", "sc" ]
 	},
 	"melvorF:Gold_Sapphire_Ring": {
 		"base": "BaseRing1",
-		"u:reflect": [ 3 ],
-		"u:regen": [0,0,0,2],
+		"Ureflect": [ 3 ],
+		"Uregen": [0,0,0,2],
 		"5regen": [-3000],
-		"5u:reflect": [0,10],
+		"5Ureflect": [0,10],
+		"5Udebuff": [ [ "hp", "maxHit" ], 6, 50 ],
 		"10regen2": [20],
-		"10u:reflect": [0,0,0,20],
-		"5u:debuff": [ [ "hp", "maxHit" ], 6, 50 ]
+		"10Ureflect": [0,0,0,20]
 	},
 	"melvorF:Gold_Ruby_Ring": {
 		"base": "BaseRing1",
-		"u:regen": [ -3000, 0, 5 ],
-		"5u:regen2": [ 0, 10, 10, 10 ],
-		"5u:cbeasy": ["BGSCheat:Burn", 2, 25, {"p": 50,"i": [500,0,-100,25]}],
-		"10u:regen3": [0,10] 
+		"Uregen": [ -3000, 0, 5 ],
+		"5Uregen2": [ 0, 10, 10, 10 ],
+		"5Ucbeasy": ["100Burn", 2, 20, {"i": [500,0,-100,25]}],
+		"10Uregen3": [0,10] 
 	},
 	"melvorF:Gold_Emerald_Ring": {
 		"base": "BaseRing1",
-		"u:loot": [20, -1000],
-		"5u:sphidden": [5,5,5,5,5],
-		"5u:cbeasy": ["BGSCheat:DeadlyPoison", 2, 25, {"p": 50,"i": [500,0,-100,25]}],
+		"Uloot": [20, -1000],
+		"5Uhidden": [5,"atk","str","def","ran","mag"],
+		"5Ucbeasy": ["100dp", 2, 25, {"i": [500,0,-100,25]}],
 		"5allow": [ 0, 1, 0, 0, 1 ],
 		"10food": [5, 5]
 	},
 	"melvorF:Gold_Diamond_Ring": {
 		"base": "BaseRing1",
-		"u:prayerGetCombat": [ 3 ],
-		"1u:acc": [ 15 ],
-		"5u:cbeasy": [ [ "BGSCheat:Weakening","BGSCheat:Anguish","BGSCheat:Decay" ], 2, 25, { "t": 3, "si": 2 } ]
+		"UprayerGetCombat": [ 3 ],
+		"1Uacc": [ 15 ],
+		"5Ucbeasy": [ [ "2Weakening","2Anguish","2Decay" ], 2, 25, { "t": 3 } ]
 	},
 	"melvorF:Ring_Of_Blade_Echoes": {
 		"base": "BaseRing1",
-		"5u:uniqueAttack": { "id": "BladeEchoes" },
+		"5OuniqueAttack": { "id": "BladeEchoes" },
 		"5UdebuffAuto": ["25spd", 8, 20, {"t": 3}],
 		"10Ubuff": ["hitHp", 2, 25]
 	},
 	"melvorF:Ring_Of_Barrage": {
 		"base": "BaseRing1",
-		"5u:uniqueAttack": { "id": "BarragePlayer" },
-		"5Ucbeasy": [ "200Poison", 2, 50 ],
-		"10Udebuff": [ [ "5eva" ], 3, 100 ]
+		"5OuniqueAttack": { "id": "BarragePlayer" },
+		"5Ucbeasy": [ "100Poison", 2, 20 ],
+		"10Udebuff": [ [ "5eva" ], 3, 50 ]
 	},
 	"melvorF:Ring_Of_Spirit_Power": {
 		"base": "BaseRing1",
-		"5u:uniqueAttack": { "id": "SpiritPower" },
+		"5OuniqueAttack": { "id": "SpiritPower" },
 		"5Udebuff": ["maxHit", 2, 50],
 		"10Ucbeasy": [ "Frostburn", 2, 20 ]
 	},
 	"BaseRing2": {
 		"base": "Base",
-		"u:atks": [ [ -30, 0, 30 ], [ -30, 0, 30 ], [ -30, 0, 30 ], [ -30, 0, 30 ], [ -30, 0, 30 ] ],
-		"u:strs": [ [ -25, 0, 25 ], [ -25, 0, 25 ], [ -12, 0, 12 ] ],
-		"u:defs": [ [ -30, 0, 30 ], [ -30, 0, 30 ], [ -30, 0, 30 ] ],
-		"u:ress": [[-6,0,6]],
-		"u:sums": [ [ -10, 0, 10 ] ],
-		"5uc:cbeasy": ["BGSCheat:Nulled", 2, 20, {"t": 3}]
+		"Uatks": [ 30, 30, 30, 30, 30 ],
+		"Ustrs": [ 25, 25, 12 ],
+		"Udefs": [ 30, 30, 30 ],
+		"Uress": [6],
+		"Usums": [ 10 ],
+		"5Ucbeasy": ["3Nulled", 2, 30]
 	},
 	"melvorTotH:Iridium_Onyx_Ring": {
 		"base": "BaseRing2",
 		"1acc2": [ 0, 0, [ 1, 1, 2 ] ],
 		"1strBonus" : [ 0, 0, 0, [1,1,2] ],
-		"5uc:cbeasy": ["BGSCheat:Madness", 1, 20, {"t": 3,"si": 3}],
-		"10u:sphidden": [10]
+		"5Ucbeasy": ["3Madness", 1, 20, {"t": 3}],
+		"10Uhidden": [10, "atk"]
 	},
 	"melvorTotH:Palladium_Onyx_Ring": {
 		"base": "BaseRing2",
-		"5uc:buff": [ [ "res", "maxHit", "spd", "acc"], 2, 25 ],
-		"10uc:cbeasy": ["BGSCheat:DeadlyPoison", 3, 30, {"p": 100}]
+		"5Ubuff": [ [ "res", "maxHit", "spd", "acc"], 2, 25 ],
+		"10Ucbeasy": ["100dp", 3, 30, {"p": 100}]
 	},
 	"melvorTotH:Iridium_Oricha_Ring": {
 		"base": "BaseRing2",
 		"1acc2": [ 0, 0, 0, [ 1, 1, 2 ] ],
 		"1strBonus" : [ 0, 0, 0, 0, [1,1,2] ],
-		"5uc:cbeasy": ["BGSCheat:Despair", 1, 20, {"t": 3,"si": 3}],
-		"10u:sphidden": [0, 10]
+		"5Ucbeasy": ["3Despair", 1, 20, {"t": 3}],
+		"10Uhidden": [10, "str"]
 	},
 	"melvorTotH:Palladium_Oricha_Ring": {
 		"base": "BaseRing2",
-		"5uc:buff": [ [ "eva", "hp", "crit", "critMul"], 2, 25 ],
-		"10uc:cbeasy": ["melvorTotH:DejaVu0", 3, 30, {"t": 3}]
+		"5Ubuff": [ [ "eva", "hp", "crit", "critMul"], 2, 25 ],
+		"10Ucbeasy": ["melvorTotH:DejaVu0", 3, 50, {"t": 3}]
 	},
 	"melvorTotH:Iridium_Cerulean_Ring": {
 		"base": "BaseRing2",
-		"u:regen": [-2000],
-		"5uc:buff": [ [ "hp", "eva"], 2, 25 ],
+		"Uregen": [-2000],
+		"5Ubuff": [ [ "hp", "eva"], 2, 25 ],
 		"5food": [10],
-		"5u:regen": [0,20],
-		"10uc:cbeasy": [ [ "BGSCheat:Burn","BGSCheat:Poison", "BGSCheat:Bleed400" ], 3, 25, { "p": 50,"i": [500,0,-50, 50] } ]
+		"5Uregen": [0,20],
+		"10Ucbeasy": [ [ "100Burn","100Poison", "100Bleed400" ], 3, 25, { "i": [500,0,-50, 50] } ]
 	},
 	"melvorTotH:Palladium_Cerulean_Ring": {
 		"base": "BaseRing2",
-		"5uc:cbeasy": [ [ "BGSCheat:Torment","BGSCheat:Madness","BGSCheat:Despair" ], 1, 25, { "t": 3, "si": 3 } ],
-		"10u:strBonus": [10, 10, 10]
+		"5Ucbeasy": [ [ "3Torment","3Madness","3Despair" ], 1, 25, { "t": 3 } ],
+		"10UstrBonus": [10, 10, 10]
 	},
 	"melvorTotH:Iridium_Runestone_Ring": {
 		"base": "BaseRing2",
 		"1acc2": [ 0, 0, 0, 0, [ 1, 1, 2 ] ],
-		"5uc:cbeasy": ["BGSCheat:Torment", 1, 25, {"t": 3,"si": 3}],
-		"10u:sphidden": [0, 0, 10]
+		"5Ucbeasy": ["3Torment", 1, 25, {"t": 3}],
+		"10Uhidden": [10, "def"]
 	},
 	"melvorTotH:Palladium_Runestone_Ring": {
 		"base": "BaseRing2",
-		"5uc:debuff": [ [ "spd", "maxHit", "acc", "dmg"], 2, 25 ],
-		"10cc:cbeasy": ["melvorD:EndOfTurnCurrentHealing", 7, 100, {"x": 1,"p": 100 }]
+		"5Udebuff": [ [ "spd", "maxHit", "acc", "dmg"], 2, 25 ],
+		"10cbeasy": ["melvorD:EndOfTurnCurrentHealing", 7, 100, {"x": 1,"p": 100 }]
 	},
 	"melvorTotH:Iridium_Zephyte_Ring": {
 		"base": "BaseRing2",
-		"5uc:debuff": [ [ "1hp", "1eva", "1taken", "1res"], 2, 25 ],
-		"10uc:cbeasy": ["BGSCheat:Confusion", 1, 50, {"t": 4,"si": 5 }]
+		"5Udebuff": [ [ "1hp", "1eva", "1taken", "1res"], 2, 25 ],
+		"10U:cbeasy": ["5Confusion", 1, 50, {"t": 4 }]
 	},
 	"melvorTotH:Palladium_Zephyte_Ring": {
 		"base": "BaseRing2",
-		"5uc:buff": [ [ "1acc", "1maxHit", "1spd", "1critMul"], 2, 25 ],
-		"10uc:cbeasy": ["BGSCheat:Petrified", 1, 50, {"t": 4,"si": 5 }]
+		"5Ubuff": [ [ "1acc", "1maxHit", "1spd", "1critMul"], 2, 25 ],
+		"10U:cbeasy": ["5Petrified", 1, 50, {"t": 4 }]
 	},
 	"melvorTotH:Meteorite_Warrior_Ring": {
 		"base": "BaseRing2",
-		"u:atks":[15,15,15],
-		"u:strs":[10],
-		"5u:sphidden": [ 10 ],
-		"5uc:cbeasy": ["BGSCheat:Bleed400", 3, 50, {"p": 100 }],
+		"Natks":[15,15,15],
+		"Nstrs":[10],
+		"5Uhidden": [ 10, "str" ],
+		"5Ucbeasy": ["100Bleed400", 3, 50],
 		"10strBonus": [10]
 	},
 	"melvorTotH:Meteorite_Marksman_Ring": {
 		"base": "BaseRing2",
-		"u:atks":[0,0,0,15],
-		"u:strs":[0,10],
-		"5u:sphidden": [ 0, 10 ],
-		"5uc:cbeasy": ["BGSCheat:DeadlyPoison", 3, 50, {"p": 100 }],
+		"Natks":[0,0,0,15],
+		"Nstrs":[0,10],
+		"5Uhidden": [ 10, "ran" ],
+		"5Ucbeasy": ["100dp", 3, 50],
 		"10strBonus": [0, 10]
 	},
 	"melvorTotH:Meteorite_Spellcaster_Ring": {
 		"base": "BaseRing2",
-		"u:atks":[0,0,0,0,15],
-		"u:strs":[0,0,8],
-		"5u:sphidden": [ 0, 0, 10 ],
-		"5uc:cbeasy": [ "c", [ "BGSCheat:Burn", 3, 50, { "p": 100 } ], [ "BGSCheat:Frostburn", 3, 50, { "t": 10 } ] ],
+		"Natks":[0,0,0,0,15],
+		"Nstrs":[0,0,8],
+		"5Uhidden": [ 10, "mag" ],
+		"5Ucbeasy": [ "c", [ "100Burn", 3, 50 ], [ "100Frostburn", 3, 50 ] ],
 		"10strBonus": [0, 0, 10]
 	},
 	"melvorAoD:Unholy_Ring": {
 		"base": "BaseRing2",
-		"5uc:cbeasy": [ [ "BGSCheat:Fatigue","BGSCheat:Petrified" ], 1, 50, { "t": 3, "si": 3 } ],
+		"5U:cbeasy": [ [ "3Fatigue","3Petrified" ], 1, 50, { "t": 3 } ],
+		"5Uatkeffect": [3],
+		"5Ucbeasy": [ "20unholy", 3 ],
 		"10atkeffect": [0,0,50]
 	},
 	"melvorAoD:Cursed_Ring": {
 		"base": "melvorAoD:Unholy_Ring",
-		"5uc:cbeasy": [ [ "BGSCheat:Malice","BGSCheat:Consume","BGSCheat:Eradicate", "BGSCheat:Destruction" ], 1, 50, { "sm": 10, "sa": 10 } ],
+		"5Ucbeasy": [ [ "10Malice","10Consume","10Eradicate", "10Destruction" ], 1, 30 ],
 		"5barrier": [ 0, 25, 35 ],
 		"5summon": [0,0,35],
 		"10atkeffect": [0,0,100]
 	},
 	"melvorAoD:Ring_of_Barrier_Touch": {
 		"base": "BaseRing2",
-		"u:sums": [ 10, 10, 10, 10 ],
-		"u:barrier": [ 0, 10, 20 ],
-		"5u:summon": [0,-10,20],
-		"5uc:cbeasy": [ [ "BGSCheat:BarrierBleed","BGSCheat:BarrierBurn","BGSCheat:Burn","BGSCheat:Poison" ], 11, 50, { "p": 100 } ],
-		"10uc:cbeasy": [ [ "BGSCheat:Crystallize","BGSCheat:CrystalSanction" ], 11, 50, { "t": 5 } ]
+		"Usums": [ 10, 10, 10, 10 ],
+		"Ubarrier": [ 0, 10, 20 ],
+		"Usummon": [0,-10,20],
+		"5Ucbeasy": [ [ "100BarrierBleed","100BarrierBurn","100Burn","100Poison" ], 11, 50 ],
+		"10U:cbeasy": [ [ "5Crystallize","5CrystalSanction" ], 11, 30 ]
 	},
 	"BaseRing3": {
 		"base": "Base",
-		"u:atks": [ [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ] ],
-		"u:strs": [ [ -100, 0, 100 ], [ -100, 0, 100 ], [ -40, 0, 40 ] ],
-		"u:defs": [ [ -70, 0, 70 ], [ -70, 0, 70 ], [ -70, 0, 70 ] ],
-		"u:ress": [0, [-5,0,5]],
-		"u:sums": [ 0, 20 ],
-		"u:corrupt": [0,0,0,50],
+		"Uatks": [ 100, 100, 100, 100, 100 ],
+		"Ustrs": [ 100, 100, 40 ],
+		"Udefs": [ 70, 70, 70 ],
+		"Uress": [0, 5],
+		"Nsums": [ 0, 20 ],
+		"Ucorrupt": [0,0,0,50],
 		"5corrupt": [ 50, 50, 50 ],
-		"5uc:cbeasy": ["BGSCheat:Nulled", 2, 30, {"t": 3}]
+		"5Ucbeasy": ["3Nulled", 2, 50]
 	},
 	"melvorItA:Azurian_Nightopal_Ring_I": {
 		"base": "BaseRing3",
-		"u:atks": [ 50, 50, 50 ],
-		"u:strs": [50],
-		"5uc:cbeasy": [ "BGSCheat:Blight", 1, 20, { "sm": 10, "sr": 5 } ],
-		"10uc:buff": [["eva","acc","critMul"], 3, 50]
+		"Natks": [ 50, 50, 50 ],
+		"Nstrs": [50],
+		"5Ucbeasy": [ "10Blight", 1, 15 ],
+		"10Ubuff": [["eva","acc","critMul"], 3, 25]
 	},
 	"melvorItA:Azurian_Shadowpearl_Ring_I": {
 		"base": "BaseRing3",
-		"u:atks": [ 0, 0, 50, 50 ],
-		"u:strs": [0,50],
-		"5uc:cbeasy": [ "BGSCheat:Fear", 1, 20, { "si": 3, "t": 5 } ],
-		"10uc:buff": [["eva","acc","critMul"], 3, 50]
+		"Natks": [ 0, 0, 50, 50 ],
+		"Nstrs": [0,50],
+		"5Ucbeasy": [ "3Fear", 1, 20, { "t": 5 } ],
+		"10Ubuff": [["eva","acc","critMul"], 3, 25]
 	},
 	"melvorItA:Azurian_Moonstone_Ring_I": {
 		"base": "BaseRing3",
-		"u:atks": [ 0, 0, 50, 0, 50 ],
-		"u:strs": [0,0,20],
-		"5uc:cbeasy": [ "BGSCheat:Wither", 1, 20, { "sm": 10, "sa": 1 } ],
-		"10uc:buff": [["eva","acc","critMul"], 3, 50]
+		"Natks": [ 0, 0, 50, 0, 50 ],
+		"Nstrs": [0,0,20],
+		"5Ucbeasy": [ "10Wither", 1, 20, { "sa": 1 } ],
+		"10Ubuff": [["eva","acc","critMul"], 3, 25]
 	},
 	"melvorItA:Azurian_Voidheart_Ring_I": {
 		"base": "BaseRing3",
-		"u:eva": [25],
-		"10u:eva2": [10],
-		"5uc:cbeasy": [ ["BGSCheat:Burn", "BGSCheat:Poison", "BGSCheat:Toxin", "BGSCheat:BarrierBurn" ], 13, 25 ],
-		"10uc:cbeasy": [ ["BGSCheat:DeadlyPoison", "BGSCheat:Ablaze", "BGSCheat:Laceration", "BGSCheat:Voidburst" ], 13, 25 ]
+		"Ueva": [25],
+		"10Ueva2": [10],
+		"5Ucbeasy": [ ["Burn", "Poison", "Toxin", "BarrierBurn" ], 13, 15 ],
+		"10Ucbeasy": [ ["dp", "Ablaze", "Laceration", "Voidburst" ], 13, 15 ]
 	},
 	"melvorItA:Abyss_Ring": {
 		"base": "melvorItA:Azurian_Voidheart_Ring_I"
@@ -870,115 +856,115 @@
 	},
 	"melvorItA:Azurian_Nightopal_Ring_II": {
 		"base": "BaseRing3",
-		"u:atks": [ 100, 100, 100 ],
-		"u:strs": [100],
-		"5uc:cbeasy": [ "BGSCheat:Blight", 1, 30, { "sm": 20, "sr": 10 } ],
-		"10uc:buff": [["hp","maxHit","critMul"], 3, 50]
+		"Natks": [ 100, 100, 100 ],
+		"Nstrs": [100],
+		"5Ucbeasy": [ "20Blight", 1, 20 ],
+		"10Ubuff": [["hp","maxHit","critMul"], 3, 30]
 	},
 	"melvorItA:Azurian_Shadowpearl_Ring_II": {
 		"base": "BaseRing3",
-		"u:atks": [ 0, 0, 100, 100 ],
-		"u:strs": [0,100],
-		"5uc:cbeasy": [ "BGSCheat:Fear", 1, 30, { "si": 6, "t": 5 } ],
-		"10uc:buff": [["hp","maxHit","critMul"], 3, 50]
+		"Natks": [ 0, 0, 100, 100 ],
+		"Nstrs": [0,100],
+		"5Ucbeasy": [ "6Fear", 1, 30, { "t": 5 } ],
+		"10Ubuff": [["hp","maxHit","critMul"], 3, 30]
 	},
 	"melvorItA:Azurian_Moonstone_Ring_II": {
 		"base": "BaseRing3",
-		"u:atks": [ 0, 0, 100, 0, 100 ],
-		"u:strs": [0,0,40],
-		"5uc:cbeasy": [ "BGSCheat:Wither", 1, 30, { "sm": 20, "sa": 2 } ],
-		"10uc:buff": [["hp","maxHit","critMul"], 3, 50]
+		"Natks": [ 0, 0, 100, 0, 100 ],
+		"Nstrs": [0,0,40],
+		"5Ucbeasy": [ "20Wither", 1, 30, { "sa": 2 } ],
+		"10Ubuff": [["hp","maxHit","critMul"], 3, 30]
 	},
 	"melvorItA:Azurian_Voidheart_Ring_II": {
 		"base": "BaseRing3",
 		"u:eva": [50],
 		"10u:eva2": [20],
-		"5uc:cbeasy": [ [ "BGSCheat:Burn", "BGSCheat:Poison", "BGSCheat:Toxin", "BGSCheat:BarrierBurn" ], 13, 25, { "p": 100 } ],
-		"10uc:cbeasy": [ "c", [ ["BGSCheat:DeadlyPoison", "BGSCheat:Ablaze"], 13, 25,{"p": 100} ], [ "BGSCheat:Laceration", 13, 25,{"sp": 1} ], [ "BGSCheat:Voidburst" , 13, 25,{"p": 100} ] ]
+		"5Ucbeasy": [ [ "100Burn", "100Poison", "100Toxin", "100BarrierBurn" ], 13, 25 ],
+		"10Ucbeasy": [ ["100dp", "100Ablaze", "25Laceration", "100Voidburst" ], 13, 15 ]
 	},
 	"melvorItA:Obsidian_Nightopal_Ring_I": {
 		"base": "BaseRing3",
-		"5uc:debuff": [["2acc","2eva","2res","2maxHit"], 1, 50],
-		"5uc:cbeasy": ["BGSCheat:Bleed400",3,25,{"p": 100}],
-		"10uc:cbeasy": ["BGSCheat:Laceration",3,25,{"sm": 25, "sp": 2}]
+		"5Udebuff": [["2acc","2eva","2res","2maxHit"], 1, 30],
+		"5Ucbeasy": ["100Bleed400",3,25],
+		"10Ucbeasy": ["25Laceration",3,25,{"sp": 2}]
 	},
 	"melvorItA:Obsidian_Shadowpearl_Ring_I": {
 		"base": "BaseRing3",
-		"5uc:debuff": [["2acc","2eva","2res","2maxHit"], 1, 50],
-		"5uc:cbeasy": ["BGSCheat:DeadlyPoison",3,25,{"p": 100}],
-		"10uc:cbeasy": ["BGSCheat:Toxin",3,25,{"p": 100}]
+		"5Udebuff": [["2acc","2eva","2res","2maxHit"], 1, 30],
+		"5Ucbeasy": ["100dp",3,20],
+		"10Ucbeasy": [ "100Toxin", 3, 30 ]
 	},
 	"melvorItA:Obsidian_Moonstone_Ring_I": {
 		"base": "BaseRing3",
-		"5uc:debuff": [["2acc","2eva","2res","2maxHit"], 1, 50],
-		"5uc:cbeasy": ["BGSCheat:Burn",3,25,{"p": 100}],
-		"10uc:cbeasy": ["BGSCheat:Voidburst",3,25,{"p": 100}]
+		"5Udebuff": [["2acc","2eva","2res","2maxHit"], 1, 30],
+		"5Ucbeasy": ["100Burn",3,20],
+		"10Ucbeasy": ["100Voidburst",3,25]
 	},
 	"melvorItA:Obsidian_Voidheart_Ring_I": {
 		"base": "BaseRing3",
-		"u:critical": [1,5],
-		"5uc:cbeasy": [ ["BGSCheat:Burn", "BGSCheat:Poison", "BGSCheat:Toxin", "BGSCheat:BarrierBurn" ], 14, 25 ],
+		"Ucritical": [1,5],
+		"5Ucbeasy": [ ["Burn", "Poison", "Toxin", "BarrierBurn" ], 14, 15 ],
 		"10rc": ["melvorItA:ObsidianVoidheartRingI"],
-		"10uc:cbeasy": [
+		"10Ucbeasy": [
 			"c",
-			[ [ "BGSCheat:DeadlyPoison", "BGSCheat:Ablaze", "BGSCheat:Laceration", "BGSCheat:Voidburst" ], 14, 25 ],
+			[ [ "DeadlyPoison", "Ablaze", "Laceration", "Voidburst" ], 14, 25 ],
 			[ "BGSCheat:ObsidianVoidheartRingI", 6, 0, {"sa": 5}, 0, "CUSTOM_APPLICATOR_ObsidianVoidheartRingI"],
 			[ "BGSCheat:ObsidianVoidheartRingI", 3, 0, 0, 0, 0, ""]
 		]
 	},
 	"melvorItA:Obsidian_Nightopal_Ring_II": {
 		"base": "BaseRing3",
-		"5uc:debuff": [["2taken","2spd","2hp","2dmg"], 1, 50],
-		"5uc:cbeasy": ["BGSCheat:Bleed400",3,30,{"p": 200}],
-		"10uc:cbeasy": ["BGSCheat:Laceration",3,30,{"sm": 50, "sp": 3}]
+		"5Udebuff": [["2taken","2spd","2hp","2dmg"], 1, 30],
+		"5Ucbeasy": ["200Bleed400",3,25],
+		"10Ucbeasy": ["50Laceration",3,30,{"sp": 3}]
 	},
 	"melvorItA:Obsidian_Shadowpearl_Ring_II": {
 		"base": "BaseRing3",
-		"5uc:debuff": [["2taken","2spd","2hp","2dmg"], 1, 50],
-		"5uc:cbeasy": ["BGSCheat:DeadlyPoison",3,30,{"p": 200}],
-		"10uc:cbeasy": ["BGSCheat:Toxin",3,30,{"p": 200}]
+		"5Udebuff": [["2taken","2spd","2hp","2dmg"], 1, 30],
+		"5Ucbeasy": ["200DeadlyPoison",3,20],
+		"10Ucbeasy": ["200Toxin",3,30]
 	},
 	"melvorItA:Obsidian_Moonstone_Ring_II": {
 		"base": "BaseRing3",
-		"5uc:debuff": [["2taken","2spd","2hp","2dmg"], 1, 50],
-		"5uc:cbeasy": ["BGSCheat:Burn",3,30,{"p": 200}],
-		"10uc:cbeasy": ["BGSCheat:Voidburst",3,30,{"p": 200}]
+		"5Udebuff": [["2taken","2spd","2hp","2dmg"], 1, 30],
+		"5Ucbeasy": ["200Burn",3,20],
+		"10Ucbeasy": ["200Voidburst",3,25]
 	},
 	"melvorItA:Obsidian_Voidheart_Ring_II": {
 		"base": "BaseRing3",
-		"u:critical": [2,10],
-		"5uc:cbeasy": [ ["BGSCheat:Burn", "BGSCheat:Poison", "BGSCheat:Toxin", "BGSCheat:BarrierBurn" ], 14, 30,{"p": 100} ],
-		"10rc": ["melvorItA:ObsidianVoidheartRingI"],
-		"10uc:cbeasy": [
+		"Ucritical": [2,10],
+		"5U:cbeasy": [ ["100Burn", "100Poison", "100Toxin", "100BarrierBurn" ], 14, 20 ],
+		"10rc": ["melvorItA:ObsidianVoidheartRingII"],
+		"10Ucbeasy": [
 			"c",
-			[ [ "BGSCheat:DeadlyPoison", "BGSCheat:Ablaze" ], 14, 30, { "p": 100 } ],
-			[ "BGSCheat:Laceration", 14, 30, { "sm": 25, "sp": 2 } ],
-				["BGSCheat:Voidburst", 14, 30,{"p": 100} ],
+			[ [ "100dp", "100Ablaze" ], 14, 20 ],
+			[ "25Laceration", 14, 20, { "sp": 2 } ],
+				["100Voidburst", 14, 25 ],
 			[ "BGSCheat:ObsidianVoidheartRingII", 6, 0, {"sa": 5}, 0, "CUSTOM_APPLICATOR_ObsidianVoidheartRingII"],
 			[ "BGSCheat:ObsidianVoidheartRingII", 3, 0, 0, 0, 0, ""]
 		]
 	},
 	"BaseRing4": {
 		"base": "BaseRing3",
-		"u:atks": [ [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ] ],
-		"u:strs": [ [ -1350, 0, 1350 ], [ -2750, 0, 2750 ], [ -170, 0, 170 ] ],
-		"u:defs": [ [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ] ]
+		"Uatks": [ 100, 100, 100, 100, 100 ],
+		"Ustrs": [ 1350, 2750, 170 ],
+		"Udefs": [ 100, 100, 100 ]
 	},
 	"melvorItA:Obzurian_Melee_Breaker_Ring": {
 		"base": "BaseRing4",
-		"5u:cbeasy": [ "BGSCheat:Silence", 1, 25, { "t": 5 } ],
+		"5Ucbeasy": [ "5Silence", 1, 50 ],
 		"10buff": [ ["acc","maxHit","crit","critMul","dmg","spd"], 1, 100 ],
 		"10debuff": [ ["eva","hp","taken"], 1, 100 ]
 	},
 	"melvorItA:Obzurian_Ranged_Impactor_Ring": {
 		"base": "BaseRing4",
-		"5u:cbeasy": [ "BGSCheat:EldritchCurse", 1, 25, { "t": 5 } ],
+		"5Ucbeasy": [ "5EldritchCurse", 1, 50 ],
 		"10buff": [ ["acc","maxHit","crit","critMul","dmg","spd"], 1, 100 ],
 		"10debuff": [ ["eva","hp","taken"], 1, 100 ]
 	},
 	"melvorItA:Obzurian_Magic_Debilitator_Ring": {
 		"base": "BaseRing4",
-		"5u:cbeasy": [ "BGSCheat:Fear", 1, 25, { "t": 5,"si": 100 } ],
+		"5Ucbeasy": [ "5Fear", 1, 50, { "t": 5 } ],
 		"10buff": [ ["acc","maxHit","crit","critMul","dmg","spd"], 1, 100 ],
 		"10debuff": [ ["eva","hp","taken"], 1, 100 ]
 	},
@@ -986,139 +972,144 @@
 		"base": "BaseRing4",
 		"5rc": ["melvorItA:ObzurianUnnaturalVitalityRing"],
 		"5cbeasy": ["BGSCheat:ObzurianUnnaturalVitalityRing",7,100,0,0,"CUSTOM_APPLICATOR_END_OF_TURN_MAX_HEALING"],
-		"5uc:cbeasy": [ ["BGSCheat:Burn", "BGSCheat:Poison", "BGSCheat:Toxin", "BGSCheat:Bleed1600" ], 3, 25,{"p": 100} ],
-		"10uc:cbeasy": [
+		"5Ucbeasy": [ ["100Burn", "100Poison", "100Toxin", "100Bleed1600" ], 3, 20 ],
+		"10Ucbeasy": [
 			"c",
-			[ [ "BGSCheat:DeadlyPoison", "BGSCheat:Ablaze" ], 3, 25, { "p": 100 } ],
-			[ "BGSCheat:Laceration", 3, 25, { "sm": 50, "sp": 2 } ],
-				["BGSCheat:Voidburst", 3, 25,{"p": 100} ]
+			[ [ "100dp", "100Ablaze" ], 3, 25 ],
+			[ "50Laceration", 3, 25, { "sp": 2 } ],
+				["100Voidburst", 3, 25 ]
 		],
 		"10buff": [ ["acc","maxHit","crit","critMul","dmg","spd"], 1, 100 ],
 		"10debuff": [ ["eva","hp","taken"], 1, 100 ]
 	},
 	"BaseAmulet1": {
 		"base": "Base",
-		"u:atks": [ [ -30, 0, 30 ], [ -30, 0, 30 ], [ -30, 0, 30 ], [ -45, 0, 45 ], [ -27, 0, 27 ] ],
-		"u:strs": [ [ -30, 0, 30 ], [ -15, 0, 15 ], [ -5, 0, 5 ] ],
-		"u:defs": [ [ -22, 0, 22 ], [ -22, 0, 22 ], [ -27, 0, 27 ] ],
-		"u:ress": [[-5,0,5]],
-		"u:sums": [ [ -5, 0, 5 ] ],
-		"10uc:cbeasy": ["BGSCheat:Cleansed", 2, 10, {"t": 3}]
+		"Uatks": [ 30, 30, 30, 45, 27 ],
+		"Ustrs": [ 30, 15, 5 ],
+		"Udefs": [ 22, 22, 27 ],
+		"Uress": [5],
+		"Usums": [5],
+		"10Ucbeasy": ["3Cleansed", 2, 20]
 	},
 	"melvorF:Silver_Topaz_Necklace": {
 		"base": "BaseAmulet1",
-		"u:sphidden": [12],
-		"1v:modifiers": {
+		"Uhidden": [12, "atk"],
+		"1Vmodifiers": {
 			"add": {
 				"bankSpace": 10
 			}
 		},
 		"5allow": [0,0,0,1],
-		"5uc:debuff": [ [ "50acc", "50eva" ], 4, 25, { "c": "m", "t": 3 } ],
-		"10u:regen3": [5],
-		"10c:skillAddItem": [[0,0.1],"s","melvorF:Bank_Slot_Token","melvorAoD:Archaeology"]
+		"5UdebuffAuto": [ [ "50acc", "50eva" ], 4, 35, { "t": 3 } ],
+		"10Uregen3": [5],
+		"10skillAddItem": [ 0, 0.1, ["melvorF:Bank_Slot_Token", "melvorAoD:Archaeology" ]]
 	},
 	"melvorF:Silver_Sapphire_Necklace": {
 		"base": "BaseAmulet1",
-		"5uc:bunderwater": [8]
+		"5buff": ["spd", 2, 100, {"sm": 30}],
+		"5debuff": ["spd", 2, 100, {"sm": 30}]
 	},
 	"melvorF:Silver_Ruby_Necklace": {
 		"base": "BaseAmulet1",
-		"5uc:buff": [ [ "25res", "25taken" ], 2, 25, { "c": "m", "t": 5 } ],
-		"10uc:cbeasy": ["BGSCheat:Stun",4,25]
+		"5UbuffAuto": [ [ "25res", "25taken" ], 2, 25, { "t": 5 } ],
+		"10Ucbeasy": ["Stun",4,25]
 	},
 	"melvorF:Silver_Emerald_Necklace": {
 		"base": "BaseAmulet1",
-		"5uc:debuff": [ [ "35maxHit", "35dmg" ], 6, 100, { "c": "m", "t": 5 } ],
-		"10uc:cbeasy": ["BGSCheat:Weakening", 4, 100, {"t": 2, "si": 2}]
+		"5UdebuffAuto": [ [ "35maxHit", "35dmg" ], 6, 100, { "t": 5 } ],
+		"10Ucbeasy": ["2Weakening", 4, 100, {"t": 2}]
 	},
 	"melvorF:Silver_Diamond_Necklace": {
 		"base": "BaseAmulet1",
-		"5uc:buff": [ "hp", 1, 50 ],
-		"10uc:cbeasy": ["BGSCheat:Freeze", 6, 25]
+		"5Ubuff": [ "hp", 1, 50 ],
+		"10Ucbeasy": ["Freeze", 6, 25]
 	},
 	"melvorF:Gold_Topaz_Necklace": {
 		"base": "BaseAmulet1",
-		"1v:modifiers": {
+		"Ncurrency2": [50,0,0,10,"gp"],
+		"1Vmodifiers": {
 			"add": {
 				"bankSpace": 10
 			}
 		},
-		"5uc:cbeasy": ["BGSCheat:Crystallize", 6, 10],
-		"10u:sp-currg3": [50],
-		"10u:sp-currs3": [25]
+		"5allow": [0,0,0,0,1],
+		"5Ucbeasy": ["Crystallize", 6, 10],
+		"10Ucurrency3": [
+			[ 50, "gp" ],
+			[ 25, "sc" ]
+		]
 	},
 	"melvorF:Gold_Sapphire_Necklace": {
 		"base": "BaseAmulet1",
-		"5uc:cbeasy": [ "BGSCheat:Slow", 1, 50, { "m": 50, "t": 2 } ],
+		"5Ucbeasy": [ "50Slow", 1, 20, { "t": 2 } ],
 		"10dmgignore": [0,0,0,0,1]
 	},
 	"melvorF:Gold_Ruby_Necklace": {
 		"base": "BaseAmulet1",
-		"u:regen": [10],
-		"5u:regen": [ 0, 0, 10 ],
+		"Uregen": [10],
+		"5Uregen": [ 0, 0, 10 ],
 		"5allow": [ 0, 0, 0, 0, 1 ],
-		"5u:steal": [10],
+		"5Usteal": [10],
 		"10regen": [ -10000, 0, 10 ]
 	},
 	"melvorF:Gold_Emerald_Necklace": {
 		"base": "BaseAmulet1",
-		"5uc:cbeasy": [ "BGSCheat:Fear", 1, 50, { "si": 50, "t": 2 } ],
+		"5Ucbeasy": [ "2Fear", 1, 20, { "t": 2 } ],
 		"10dmgignore": [0,0,0,0,0,1]
 	},
 	"melvorF:Gold_Diamond_Necklace": {
 		"base": "BaseAmulet1",
-		"5uc:cbeasy": [ "BGSCheat:Frostburn", 2, 50, { "t": 5 } ],
+		"5Ucbeasy": [ "1Frostburn", 2, 30, { "t": 5 } ],
 		"10dmgignore": [0,0,0,0,0,0,1]
 	},
 	"BaseAmulet2": {
 		"base": "Base",
-		"u:atks": [ [ -40, 0, 40 ], [ -40, 0, 40 ], [ -40, 0, 40 ], [ -55, 0, 55 ], [ -37, 0, 37 ] ],
-		"u:strs": [ [ -35, 0, 35 ], [ -20, 0, 20 ], [ -7, 0, 7 ] ],
-		"u:defs": [ [ -32, 0, 32 ], [ -32, 0, 32 ], [ -37, 0, 37 ] ],
-		"u:ress": [[-5,0,5]],
-		"u:sums": [ [ -5, 0, 5 ] ],
-		"5uc:cbeasy": ["BGSCheat:Cleansed", 2, 20, {"t": 3}]
+		"Uatks": [ 40, 40, 40, 55, 37 ],
+		"Ustrs": [ 35, 20, 7 ],
+		"Udefs": [ 32, 32, 37 ],
+		"Uress": [ 10 ],
+		"Usums": [ 10 ],
+		"5Ucbeasy": ["3Cleansed", 2, 30]
 	},
 	"melvorTotH:Iridium_Onyx_Necklace": {
 		"base": "BaseAmulet2",
-		"5uc:cbeasy": ["BGSCheat:Crystallize", 4, 25, {"t": 3}],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorD:Crystallize","melvorD:BleedDOT" ] ]
+		"5Ucbeasy": ["3Crystallize", 4, 25],
+		"10Eignore": [ -100, -1, "crystal","bleed" ]
 	},
 	"melvorTotH:Palladium_Onyx_Necklace": {
 		"base": "BaseAmulet2",
-		"5uc:cbeasy": ["BGSCheat:Madness", 4, 25, {"t": 3,"si": 2}],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorD:Curse","melvorD:PoisonDOT" ] ]
+		"5Ucbeasy": ["2Madness", 4, 25, {"t": 3}],
+		"10Eignore": [ -100, -1, "curse","poison" ]
 	},
 	"melvorTotH:Iridium_Oricha_Necklace": {
 		"base": "BaseAmulet2",
-		"5uc:cbeasy": ["BGSCheat:Freeze", 4, 25, {"t": 3}],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorD:StunLike","melvorD:BurnDOT" ] ]
+		"5Ucbeasy": ["3Freeze", 4, 25],
+		"10Eignore": [ -100, -1, "stunlike","burn" ]
 	},
 	"melvorTotH:Palladium_Oricha_Necklace": {
 		"base": "BaseAmulet2",
-		"5uc:debuff": [ [ "maxHit", "hp" ], 4, 50 ],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorD:CrystalSanction","melvorD:Frostburn" ] ]
+		"5Udebuff": [ [ "maxHit", "hp" ], 4, 50 ],
+		"10Eignore": [ -100, -1, "cs","frostburn" ]
 	},
 	"melvorTotH:Iridium_Cerulean_Necklace": {
 		"base": "BaseAmulet2",
-		"5uc:cbeasy": ["BGSCheat:Weakening", 2, 25, {"t": 3,"si": 3}],
-		"10uc:cbeasy": ["BGSCheat:Freeze", 5, 25, {"t": 3}]
+		"5Ucbeasy": ["3Weakening", 2, 25, {"t": 3}],
+		"10Ucbeasy": ["3Freeze", 5, 25]
 	},
 	"melvorTotH:Palladium_Cerulean_Necklace": {
 		"base": "BaseAmulet2",
-		"5uc:cbeasy": ["BGSCheat:Anguish", 2, 25, {"t": 3,"si": 3}],
-		"10uc:cbeasy": ["melvorTotH:DejaVu0", 4, 50, {"t": 3}]
+		"5Ucbeasy": ["3Anguish", 2, 25, {"t": 3}],
+		"10Ucbeasy": ["melvorTotH:DejaVu0", 4, 50, {"t": 3}]
 	},
 	"melvorTotH:Iridium_Runestone_Necklace": {
 		"base": "BaseAmulet2",
-		"5uc:buff": [ [ "res", "hp" ], 2, 50 ],
-		"10uc:cbeasy": ["BGSCheat:Torment", 3, 20, {"t": 3,"si": 5}]
+		"5Ubuff": [ [ "res", "hp" ], 2, 50 ],
+		"10Ucbeasy": ["5Torment", 3, 20, {"t": 3}]
 	},
 	"melvorTotH:Palladium_Runestone_Necklace": {
 		"base": "BaseAmulet2",
-		"5uc:debuff": [ [ "maxHit", "dmg", "spd" ], 4, 50 ],
-		"10uc:cbeasy": ["BGSCheat:Rage", 2, 20]
+		"5Udebuff": [ [ "maxHit", "dmg", "spd" ], 4, 50 ],
+		"10Ucbeasy": ["reign", 2, 20]
 	},
 	"melvorTotH:Iridium_Zephyte_Necklace": {
 		"base": "BaseAmulet2",
@@ -1126,214 +1117,216 @@
 	},
 	"melvorTotH:Palladium_Zephyte_Necklace": {
 		"base": "BaseAmulet2",
-		"u:hp": [0,0,50],
-		"5uc:buff": ["hp", 12, 100],
-		"5uc:cbeasy": [ ["BGSCheat:Burn", "BGSCheat:Poison", "BGSCheat:Toxin", "BGSCheat:BarrierBurn" ], 12, 100, {"p": 100} ],
-		"10uc:cbeasy": [
+		"Uhp": [0,0,50],
+		"5Ubuff": ["hp", 12, 100],
+		"5Ucbeasy": [ ["100Burn", "100Poison", "100Toxin", "100BarrierBurn" ], 12, 100 ],
+		"10Ucbeasy": [
 			"c",
-			[ [ "BGSCheat:DeadlyPoison", "BGSCheat:Ablaze" ], 12, 100, { "p": 100 } ],
-			[ "BGSCheat:Laceration", 12, 100, { "sm": 50, "sa": 10, "sp": 3 } ],
-			[ "BGSCheat:Voidburst", 12, 100, { "p": 100 } ]
+			[ [ "100dp", "100Ablaze" ], 12, 100 ],
+			[ "50lace", 12, 100, { "sa": 10, "sp": 3 } ],
+			[ "100void", 12, 100 ]
 		]
 	},
 	"melvorAoD:Unholy_Amulet": {
 		"base": "BaseAmulet2",
-		"10uc:cbeasy": [ [ "BGSCheat:Fatigue","BGSCheat:Petrified" ], 1, 50, { "t": 3, "si": 3 } ],
+		"10Ucbeasy": [ [ "3Fatigue","3Petrified" ], 1, 50, { "t": 3 } ],
+		"5Uatkeffect": [3],
+		"5Ucbeasy": [ "20unholy", 3 ],
 		"10atkeffect": [0,0,50]
 	},
 	"melvorAoD:Cursed_Amulet": {
 		"base": "melvorAoD:Unholy_Amulet",
-		"5uc:cbeasy": [ "BGSCheat:Spite", 4, 50, { "si": 10 } ],
-		"10uc:cbeasy": [ [ "BGSCheat:Malice","BGSCheat:Consume","BGSCheat:Eradicate", "BGSCheat:Destruction" ], 4, 50, { "sm": 10, "sa": 10 } ],
+		"5Ucbeasy": [ "10Spite", 4, 50 ],
+		"10Ucbeasy": [ [ "10Malice","10Consume","10Eradicate", "10Destruction" ], 4, 50 ],
 		"5barrier": [ 0, 25, 35 ],
 		"5summon": [0,0,35],
 		"10atkeffect": [0,0,100]
 	},
 	"melvorAoD:Amulet_of_Barrier_Touch": {
-		"u:sums": [ 10, 10, 10, 10 ],
-		"u:barrier": [ 0, 10, 20 ],
-		"5u:summon": [0,-10,20],
-		"5uc:cbeasy": [ [ "BGSCheat:BarrierBleed","BGSCheat:BarrierBurn","BGSCheat:Burn","BGSCheat:Poison" ], 11, 50, { "p": 100 } ],
-		"10uc:cbeasy": [ [ "BGSCheat:Crystallize","BGSCheat:CrystalSanction" ], 11, 50, { "t": 5 } ]
+		"Usums": [ 10, 10, 10, 10 ],
+		"Ubarrier": [ 0, 10, 20 ],
+		"5Usummon": [0,-10,20],
+		"5Ucbeasy": [ [ "100BarrierBleed","100BarrierBurn","100Burn","100Poison" ], 11, 50 ],
+		"10Ucbeasy": [ [ "5Crystallize","5CrystalSanction" ], 11, 50 ]
 	},
 	"BaseAmulet3": {
 		"base": "Base",
-		"u:atks": [ [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ], [ -115, 0, 115 ], [ -100, 0, 100 ] ],
-		"u:strs": [ [ -60, 0, 60 ], [ -45, 0, 45 ], [ -12, 0, 12 ] ],
-		"u:defs": [ [ -92, 0, 92 ], [ -92, 0, 92 ], [ -97, 0, 97 ] ],
-		"u:ress": [0, [-5,0,5]],
-		"u:sums": [0, [ -10, 0, 10 ] ],
-		"5uc:cbeasy": ["BGSCheat:Cleansed", 2, 30, {"t": 3}]
+		"Uatks": [ 100, 100, 100, 115, 100 ],
+		"Ustrs": [ 60, 45, 12 ],
+		"Udefs": [ 92, 92, 97 ],
+		"Uress": [0, 5],
+		"Nsums": [0, 10 ],
+		"5Ucbeasy": ["3Cleansed", 2, 30]
 	},
 	"melvorItA:Azurian_Nightopal_Amulet_I": {
 		"base": "BaseAmulet3",
-		"u:sp-curra3": [ 0, 0, 50 ],
-		"5u:sp-curra3": [ 0, 0, 0, 50 ],
-		"5uc:cbeasy": ["BGSCheat:EldritchCurse", 2, 15, {"t": 3}],
-		"10u:sp-curra3": [ 50]
+		"Ucurrency3": [ 0, 0, 50, "ap" ],
+		"5Ucurrency3": [ 0, 0, 0, 50, "ap" ],
+		"5Ucbeasy": ["3ec", 2, 15],
+		"10Ucurrency3": [ 50, "ap" ]
 	},
 	"melvorItA:Azurian_Shadowpearl_Amulet_I": {
 		"base": "BaseAmulet3",
-		"5uc:cbeasy": [ [ "BGSCheat:Ablaze", "BGSCheat:Toxin"], 3, 15, { "p": 100 } ],
-		"10u:acc2": [20,20,20],
-		"10u:strBonus": [10,10,10,20,20]
+		"5Ucbeasy": [ [ "100Ablaze", "100Toxin"], 3, 15 ],
+		"10Uacc2": [20,20,20],
+		"10UstrBonus": [10,10,10,20,20]
 	},
 	"melvorItA:Azurian_Moonstone_Amulet_I": {
 		"base": "BaseAmulet3",
-		"5sphidden": [20,20,20,20,20,0,20],
-		"10uc:cbeasy": [ "BGSCheat:Wither", 3, 30, { "sm": 20,"sa": 2 } ]
+		"5hidden": [20, "atk", "str", "def", "ran", "mag", "corr"],
+		"10Ucbeasy": [ "20Wither", 3, 30, { "sa": 2 } ]
 	},
 	"melvorItA:Azurian_Voidheart_Amulet_I": {
 		"base": "BaseAmulet3",
 		"5rc": ["melvorItA:AzurianVoidheartAmuletI"],
-		"5uc:cbeasy": [
+		"5Ucbeasy": [
 			"c",
-			[ "BGSCheat:Shadeveil", 3, 25, { "sm": 10, "sa": 2 } ],
+			[ "10shade", 3, 25, { "sa": 2 } ],
 			["BGSCheat:AzurianVoidheartAmuletI",7,100,0,0,"CUSTOM_APPLICATOR_AzurianVoidheartAmulet"]
 		],
-		"10uc:cbeasy": ["BGSCheat:Blight", 2, 25, {"sm": 10,"sr": 5}]
+		"10Ucbeasy": ["10Blight", 2, 25]
 	},
 	"melvorItA:Azurian_Nightopal_Amulet_II": {
 		"base": "BaseAmulet3",
-		"u:sp-curra3": [ 0, 0, 100 ],
-		"5u:sp-curra3": [ 0, 0, 0, 100 ],
-		"5uc:cbeasy": ["BGSCheat:EldritchCurse", 2, 15, {"t": 3}],
-		"10u:sp-curra3": [ 100 ]
+		"Ucurrency3": [ 0, 0, 100, "ap" ],
+		"5Ucurrency3": [ 0, 0, 0, 100, "ap" ],
+		"5Ucbeasy": ["3EldritchCurse", 2, 30],
+		"10Ucurrency3": [ 100, "ap" ]
 	},
 	"melvorItA:Azurian_Shadowpearl_Amulet_II": {
 		"base": "BaseAmulet3",
-		"5uc:cbeasy": [ [ "BGSCheat:Ablaze", "BGSCheat:Toxin"], 3, 30, { "p": 200 } ],
-		"10u:acc2": [40,40,40],
-		"10u:strBonus": [20,20,20,40,40]
+		"5Ucbeasy": [ [ "200Ablaze", "200Toxin"], 3, 30 ],
+		"10Uacc2": [40,40,40],
+		"10UstrBonus": [20,20,20,40,40]
 	},
 	"melvorItA:Azurian_Moonstone_Amulet_II": {
 		"base": "BaseAmulet3",
-		"5sphidden": [20,20,20,20,20,0,20],
-		"10uc:cbeasy": [ "BGSCheat:Wither", 3, 30, { "sm": 20,"sa": 2 } ]
+		"5hidden": [20, "atk", "str", "def", "ran", "mag", "corr"],
+		"10Ucbeasy": [ "20Wither", 3, 30, { "sa": 2 } ]
 	},
 	"melvorItA:Azurian_Voidheart_Amulet_II": {
 		"base": "BaseAmulet3",
 		"5rc": ["melvorItA:AzurianVoidheartAmuletII"],
-		"5uc:cbeasy": [
+		"5Ucbeasy": [
 			"c",
-			[ "BGSCheat:Shadeveil", 3, 30, { "sm": 20, "sa": 4 } ],
+			[ "20shade", 3, 30, { "sa": 4 } ],
 			["BGSCheat:AzurianVoidheartAmuletII",7,100,0,0,"CUSTOM_APPLICATOR_AzurianVoidheartAmulet"]
 		],
-		"10uc:cbeasy": ["BGSCheat:Blight", 2, 30, {"sm": 20,"sr": 10}]
+		"10Ucbeasy": ["20blight", 2, 30, {"sr": 10}]
 	},
 	"melvorItA:Obsidian_Nightopal_Amulet_I": {
 		"base": "BaseAmulet3",
-		"u:sp-curras3": [ 0, 0, 25 ],
-		"5u:sp-curras3": [ 0, 0, 0, 25 ],
-		"5uc:cbeasy": ["BGSCheat:Silence", 2, 15, {"t": 5}],
-		"10u:sp-curras3": [ 25 ]
+		"Ucurrency3": [ 0, 0, 25, "as" ],
+		"5Ucurrency3": [ 0, 0, 0, 25, "as" ],
+		"5Ucbeasy": ["5Silence", 2, 15],
+		"10Ucurrency3": [ 25, "as" ]
 	},
 	"melvorItA:Obsidian_Shadowpearl_Amulet_I": {
 		"base": "BaseAmulet3",
-		"u:eva": [25],
-		"5uc:buff": [["res","hp", "eva"], 13, 100],
+		"Ueva": [25],
+		"5Ubuff": [["res","hp", "eva"], 13, 100],
 		"5rc": ["melvorItA:ObsidianShadowpearlAmuletI"],
-		"5uc:cbeasy": ["BGSCheat:ObsidianShadowpearlAmuletI",13,100,0,0,"CUSTOM_APPLICATOR_ObsidianShadowPearlAmulet"],
-		"10u:eva2": [25]
+		"5Ucbeasy": ["BGSCheat:ObsidianShadowpearlAmuletI",13,100,0,0,"CUSTOM_APPLICATOR_ObsidianShadowPearlAmulet"],
+		"10Ueva2": [25]
 	},
 	"melvorItA:Obsidian_Moonstone_Amulet_I": {
 		"base": "BaseAmulet3",
-		"5uc:buff": [["res","hp", "eva"], 1, 100],
+		"5Ubuff": [["res","hp", "eva"], 1, 100],
 		"5rc": ["melvorItA:ObsidianMoonstoneAmuletI"],
-		"5uc:cbeasy": ["BGSCheat:Fear",3,20,{"si": 150}],
-		"5cc:cbeasy": ["BGSCheat:ObsidianMoonstoneAmuletI",7,100,0,0,"CUSTOM_APPLICATOR_ObsidianMoonstoneAmuletI"],
-		"10cc:cbeasy": ["BGSCheat:ObsidianMoonstoneAmuletI",1,100,0,0,null,""],
+		"5Ucbeasy": ["5Fear",3,20],
+		"5cbeasy": ["BGSCheat:ObsidianMoonstoneAmuletI",7,100,0,0,"CUSTOM_APPLICATOR_ObsidianMoonstoneAmuletI"],
+		"10cbeasy": ["BGSCheat:ObsidianMoonstoneAmuletI",1,100,0,0,null,""],
 		"10regen": [-10000]
 	},
 	"melvorItA:Obsidian_Voidheart_Amulet_I": {
 		"base": "BaseAmulet3",
-		"u:prayerGetCombat": [ 0, 0, 0, 20, 50 ],
-		"5u:prayerGet": [0,0,100,0,50,1],
-		"5uc:buff": [["res","hp", "eva"], 1, 100],
-		"10uc:cbeasy": [ [ "BGSCheat:Silence", "BGSCheat:EldritchCurse", "BGSCheat:Crystallize" ], 4, 30, { "t": 2 } ]
+		"UprayerGetCombat": [ 0, 0, 0, 20, 50 ],
+		"5UprayerGet": [0,0,100,0,50,1],
+		"5Ubuff": [["res","hp", "eva"], 1, 100],
+		"10Ucbeasy": [ [ "2Silence", "2EldritchCurse", "2Crystallize" ], 4, 30 ]
 	},
 	"melvorItA:Obsidian_Nightopal_Amulet_II": {
 		"base": "BaseAmulet3",
-		"u:sp-curras3": [ 0, 0, 50 ],
-		"5u:sp-curras3": [ 0, 0, 0, 50 ],
-		"5uc:cbeasy": ["BGSCheat:Silence", 2, 30, {"t": 5}],
-		"10u:sp-curras3": [ 50 ]
+		"Ucurrency3": [ 0, 0, 50, "as" ],
+		"5Ucurrency3": [ 0, 0, 0, 50, "as" ],
+		"5Ucbeasy": ["5Silence", 2, 45],
+		"10Ucurrency3": [ 50, "as" ]
 	},
 	"melvorItA:Obsidian_Shadowpearl_Amulet_II": {
 		"base": "BaseAmulet3",
-		"u:eva": [50],
-		"5uc:buff": [["res","hp", "eva", "spd"], 13, 100],
+		"Ueva": [50],
+		"5Ubuff": [["res","hp", "eva", "spd"], 13, 100],
 		"5rc": ["melvorItA:ObsidianShadowpearlAmuletII"],
-		"5uc:cbeasy": ["BGSCheat:ObsidianShadowpearlAmuletII",13,100,0,0,"CUSTOM_APPLICATOR_ObsidianShadowPearlAmulet"]
+		"5Ucbeasy": ["BGSCheat:ObsidianShadowpearlAmuletII",13,100,0,0,"CUSTOM_APPLICATOR_ObsidianShadowPearlAmulet"]
 	},
 	"melvorItA:Obsidian_Moonstone_Amulet_II": {
 		"base": "BaseAmulet3",
-		"5uc:buff": [["res","hp", "eva", "spd"], 1, 100],
+		"5Ubuff": [["res","hp", "eva", "spd"], 1, 100],
 		"5rc": ["melvorItA:ObsidianMoonstoneAmuletII"],
-		"5uc:cbeasy": ["BGSCheat:Fear",3,30,{"si": 300}],
-		"5cc:cbeasy": ["BGSCheat:ObsidianMoonstoneAmuletII",7,100,0,0,"CUSTOM_APPLICATOR_ObsidianMoonstoneAmuletII"],
-		"10cc:cbeasy": ["BGSCheat:ObsidianMoonstoneAmuletII",1,100,0,0,null,""],
+		"5Ucbeasy": ["10Fear",3,30],
+		"5cbeasy": ["BGSCheat:ObsidianMoonstoneAmuletII",7,100,0,0,"CUSTOM_APPLICATOR_ObsidianMoonstoneAmuletII"],
+		"10cbeasy": ["BGSCheat:ObsidianMoonstoneAmuletII",1,100,0,0,null,""],
 		"10regen": [-10000]
 	},
 	"melvorItA:Obsidian_Voidheart_Amulet_II": {
 		"base": "BaseAmulet3",
-		"u:prayerGetCombat": [ 0, 0, 0, 40, 100 ],
-		"5u:prayerGet": [0,0,200,0,100,2],
-		"5uc:buff": [["res","hp", "eva", "taken"], 1, 100],
-		"10uc:cbeasy": [ [ "BGSCheat:Silence", "BGSCheat:EldritchCurse", "BGSCheat:Crystallize" ], 4, 50, { "t": 2 } ]
+		"UprayerGetCombat": [ 0, 0, 0, 40, 100 ],
+		"5UprayerGet": [0,0,200,0,100,2],
+		"5Ubuff": [["res","hp", "eva", "taken"], 1, 100],
+		"10Ucbeasy": [ [ "2Silence", "2EldritchCurse", "2Crystallize" ], 4, 50 ]
 	},
 	"BaseAmulet4": {
 		"base": "BaseAmulet3",
-		"u:atks": [ [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ] ],
-		"u:strs": [ [ -1350, 0, 1350 ], [ -2750, 0, 2750 ], [ -170, 0, 170 ] ],
-		"u:defs": [ [ -100, 0, 100 ], [ -100, 0, 100 ], [ -100, 0, 100 ] ],
-		"u:ress": [0, [-3,0,3]],
-		"u:sums": [0, [ -10, 0, 10 ] ]
+		"Uatks": [ 100, 100, 100, 100, 100 ],
+		"Ustrs": [ 1350, 2750, 170 ],
+		"Udefs": [ 100, 100, 100 ],
+		"Uress": [0, 3],
+		"Nsums": [0, 10 ]
 	},
 	"melvorItA:Obzurian_Critical_Strike_Amulet": {
 		"base": "BaseAmulet4",
-		"u:critical": [2,10],
-		"5u:cbeasy": 	[ "BGSCheat:Shadeveil", 3, 30, { "sm": 20, "sa": 4 } ],
-		"5u:buff": [ [ "2taken", "2hp", "2eva", "2res" ], 2, 50],
-		"10u:debuff": [ [ "2maxHit", "2acc", "2spd", "2dmg" ], 2, 50]
+		"Ucritical": [2,10],
+		"5Ucbeasy": 	[ "20Shadeveil", 3, 30, { "sa": 4 } ],
+		"5Ubuff": [ [ "2taken", "2hp", "2eva", "2res" ], 2, 50],
+		"10Udebuff": [ [ "2maxHit", "2acc", "2spd", "2dmg" ], 2, 50]
 	},
 	"melvorItA:Obzurian_Versatile_Hunter_Amulet": {
 		"base": "BaseAmulet4",
-		"5u:steal": [100],
-		"5u:buff": [ [ "2taken", "2hp", "2eva", "2res" ], 2, 50],
-		"10u:debuff": [ [ "2maxHit", "2acc", "2spd", "2dmg" ], 2, 50]
+		"5Usteal": [100],
+		"5Ubuff": [ [ "2taken", "2hp", "2eva", "2res" ], 2, 50],
+		"10Udebuff": [ [ "2maxHit", "2acc", "2spd", "2dmg" ], 2, 50]
 	},
 	"melvorItA:Obzurian_Rampant_Power_Amulet": {
 		"base": "BaseAmulet4",
 		"5rc": ["melvorItA:ObzurianRampantPowerAmuletPlayer","melvorItA:ObzurianRampantPowerAmuletEnemy"],
-		"5uc:cbeasy": [ [ "BGSCheat:Blight", "BGSCheat:Wither"], 2, 100,{"sm": 20} ],
+		"5Ucbeasy": [ [ "20Blight", "20Wither"], 2, 100 ],
 		"5cbeasy": [ [ "BGSCheat:ObzurianRampantPowerAmuletPlayer", "BGSCheat:ObzurianRampantPowerAmuletEnemy"], 3 ],
-		"10u:cbeasy": [ [ "BGSCheat:ObzurianRampantPowerAmuletPlayer", "BGSCheat:ObzurianRampantPowerAmuletEnemy"], 3, 100,{"sa": 10} ]
+		"10Ucbeasy": [ [ "BGSCheat:ObzurianRampantPowerAmuletPlayer", "BGSCheat:ObzurianRampantPowerAmuletEnemy"], 3, 100,{"sa": 10} ]
 	},
 	"melvorItA:Obzurian_Unbreakable_Defender_Amulet": {
 		"base": "BaseAmulet4",
 		"5rc": ["melvorItA:ObzurianUnbreakableDefenderAmulet"],
 		"5cbeasy": [ "BGSCheat:ObzurianUnbreakableDefenderAmulet", 6, 100,0, 0, "CUSTOM_APPLICATOR_ObzurianUnbreakableDefenderAmulet" ],
-		"5uc:cbeasy": [
+		"5Ucbeasy": [
 			"c",
-			[ "BGSCheat:Blight", 2, 100, {"sm": 20, "sr": 10, "i": [2000,0,-500,100]} ],
-			[ "BGSCheat:Wither", 2, 100, { "sm": 20, "sa": 2 } ],
-			[ [ "BGSCheat:Fear" ], 2, 100, { "t": 5,"si": 100 } ],
-			[ [ "BGSCheat:Silence", "BGSCheat:EldritchCurse" ], 2, 100, { "t": 5 } ]
+			[ "20Blight", 2, 100, {"i": [2000,0,-500,100]} ],
+			[ "20Wither", 2, 100, { "sa": 2 } ],
+			[ [ "5Fear" ], 2, 100, { "t": 5 } ],
+			[ [ "5Silence", "5EldritchCurse" ], 2, 100, { "t": 5 } ]
 		],
-		"10u:cbeasy": [ "BGSCheat:ObzurianUnbreakableDefenderAmulet", 6, 100,{"sa": 10}, 0, "CUSTOM_APPLICATOR_ObzurianUnbreakableDefenderAmulet" ]
+		"10Ucbeasy": [ "BGSCheat:ObzurianUnbreakableDefenderAmulet", 6, 100,{"sa": 10}, 0, "CUSTOM_APPLICATOR_ObzurianUnbreakableDefenderAmulet" ]
 	},
 	"melvorF:Thiefs_Moneysack": {
-		"u:thieving": [ [ 0, 0, 200 ] ,"s", "melvorD:GP"] ,
-		"5u:thieving": [ [ 0, 10000 ] ,"s", "melvorD:GP"] 
+		"Uthieving": [ 0, 0, 200, "gp"] ,
+		"5Uthieving": [ 0, 10000, "gp"] 
 	},
 	"melvorF:Thiefs_Moneysack_II": {
-		"u:thieving": [ [ 0, 0, 500 ] ,"s", "melvorD:GP"] ,
-		"5u:thieving": [ [ 0, 30000 ] ,"s", "melvorD:GP"] 
+		"Uthieving": [ 0, 0, 500, "gp"] ,
+		"5Uthieving": [ 0, 30000, "gp"] 
 	},
 	"melvorF:Seed_Pouch": {
-		"u:skillItemBase": [ [ 0, 30 ], "s", "melvorD:Farming"],
-		"5u:skillItemBase": [ [ 3 ], "s", "melvorD:Farming"],
+		"NskillItemBase": [ 0, 30, "farm"],
+		"5NskillItemBase": [ 3, "farm"],
 		"5modifiers": {
 			"add": {
 				"flatFarmingSeedCost": [
@@ -1365,8 +1358,8 @@
 	},
 	"melvorF:Seed_Pouch_II": {
 		"base":"melvorF:Seed_Pouch",
-		"u:skillItemBase": [ [ 0, 60 ], "s", "melvorD:Farming"],
-		"5u:skillItemBase": [ [ 6 ], "s", "melvorD:Farming"],
+		"NskillItemBase": [ 0, 60, "farm"],
+		"5NskillItemBase": [ 6, "farm"],
 		"5modifiers": {
 			"add": {
 				"flatFarmingSeedCost": [
@@ -1397,247 +1390,229 @@
 		}
 	},
 	"melvorF:Runecrafting_Pouch": {
-		"u:skillItemBase": [ [ 10 ], "s", "melvorD:Runecrafting"]
+		"OskillItemBase": [ 10, "rune"]
 	},
 	"melvorF:Alchemists_Bag": {
-		"u:potion": [5,20]
+		"Npotion": [5,20]
 	},
 	"melvorF:Alchemists_Bag_II": {
-		"u:potion": [10,40]
+		"Npotion": [10,40]
 	},
 	"melvorTotH:Artisan_Pouch": {
-		"u:skillItemBase": [ [ 10 ], "s", "melvorD:Crafting"]
+		"NskillItemBase": [ 10, "craf"]
 	},
 	"melvorTotH:Artisan_Pouch_II": {
-		"u:skillItemBase": [ [ 20 ], "s", "melvorD:Crafting"]
+		"NskillItemBase": [ 20, "craf"]
 	},
 	"melvorTotH:Kindling_Pouch": {
-		"u:firemaking": [ [ 2000 ] ,"s","melvorD:GP"],
-		"5u:skillbase": [[0,0,0,-5],"s","melvorD:Firemaking"] 
+		"Ufiremaking": [ 2000, "gp"],
+		"5Uskillbase": [0,0,0,-5,"fire"] 
 	},
 	"melvorTotH:Kindling_Pouch_II": {
-		"u:firemaking": [ [ 4000 ] ,"s","melvorD:GP"],
-		"5u:skillbase": [[0,0,0,-10],"s","melvorD:Firemaking"] 
+		"Ufiremaking": [ 4000, "gp"],
+		"5Uskillbase": [0,0,0,-10,"fire"] 
 	},
 	"melvorTotH:Stamina_Pouch": {
-		"u:currency": [ [0,300], "s", "melvorD:GP", "melvorD:Agility" ],
-		"5u:skillbase": [[0,0,0,-10],"s","melvorD:Agility"] 
+		"Ucurrency": [ 0, 300, [ "gp", "agil" ] ],
+		"5Uskillbase": [0,0,0,-10,"agil"] 
 	},
 	"melvorTotH:Spirit_Bag": {
-		"u:modifiers": {
+		"Umodifiers": {
 			"add": {
 				"gpFromItemAlchemy": 5
 			}
 		}
 	},
 	"melvorTotH:Chefs_Bag": {
-		"u:skillItemBase": [ [ 10 ], "s", "melvorD:Cooking"]
+		"UskillItemBase": [ 10, "cook"]
 	},
 	"melvorTotH:Summoners_Bag": {
-		"u:skillItemBase": [ [ 0, 50 ], "s", "melvorD:Summoning"]
+		"UskillItemBase": [ 0, 50, "summ"]
 	},
 	"melvorItA:Harvesting_Consumable_I": {
-		"u:skillItemBase": [ [ 5, 10 ], "s", "melvorItA:Harvesting"]
+		"UskillItemBase": [ 5, 10, "harv"]
 	},
 	"melvorItA:Harvesting_Consumable_II": {
-		"u:skillItemBase": [ [ 10, 20 ], "s", "melvorItA:Harvesting"]
+		"UskillItemBase": [ 10, 20, "harv"]
 	},
 	"melvorItA:Harvesting_Consumable_III": {
-		"u:skillItemBase": [ [ 20, 40 ], "s", "melvorItA:Harvesting"]
+		"UskillItemBase": [ 20, 40, "harv"]
 	},
 	"melvorItA:Corrupted_Light_Consumable_I": {
-		"u:itemRand": [ [ 2, 5 ], "s", "melvorItA:Abyssal_Stardust", "melvorD:Astrology" ]
+		"UitemRand": [ 2, 5, [ "melvorItA:Abyssal_Stardust", "astr" ] ]
 	},
 	"melvorItA:Corrupted_Light_Consumable_II": {
-		"u:itemRand": [ [ 4, 10 ], "s", "melvorItA:Abyssal_Stardust", "melvorD:Astrology" ]
+		"UitemRand": [ 4, 10, [ "melvorItA:Abyssal_Stardust", "astr" ] ]
 	},
 	"melvorItA:Corrupted_Light_Consumable_III": {
-		"u:itemRand": [ [ 8, 20 ], "s", "melvorItA:Abyssal_Stardust", "melvorD:Astrology" ]
+		"UitemRand": [ 8, 20, [ "melvorItA:Abyssal_Stardust", "astr" ] ]
 	},
 	"melvorItA:Dark_Summon_Consumable_I": {
-		"u:summon": [0,0,100],
+		"Usummon": [0,0,100],
 		"5summon": [0, -10],
 		"10summon": [-500]
 	},
 	"melvorItA:Dark_Summon_Consumable_II": {
-		"u:summon": [0,0,200],
+		"Usummon": [0,0,200],
 		"5summon": [0, -20],
 		"10summon": [-1000]
 	},
 	"melvorItA:Dark_Summon_Consumable_III": {
-		"u:summon": [0,0,400],
+		"Usummon": [0,0,400],
 		"5summon": [0, -40],
 		"10summon": [-2000]
 	},
 	"melvorItA:Toxicity_Consumable_I": {
-		"u:ignore": [ [ 10 ], "n", [ "melvorItA:Blight" ,  "melvorItA:ToxinDOT" ] ],
-		"5rc": [ "melvorItA:Blight", "melvorItA:Toxin" ],
-		"5uc:cbeasy": [["BGSCheat:Blight", "BGSCheat:Toxin"], 3, 10],
-		"10ce:ignore": [ [ -25 ], "n", [ "melvorItA:Blight" ,  "melvorItA:ToxinDOT" ] ]
+		"Oignore": [ 10, "blight" , "toxin" ],
+		"5Ocbeasy": [["Blight", "Toxin"], 3, 10],
+		"10Eignore": [  -25, "blight" , "toxin" ]
 	},
 	"melvorItA:Toxicity_Consumable_II": {
-		"u:ignore": [ [ 20 ], "n", [ "melvorItA:Blight" ,  "melvorItA:ToxinDOT" ] ],
-		"5rc": [ "melvorItA:Blight", "melvorItA:Toxin" ],
-		"5uc:cbeasy": [["BGSCheat:Blight", "BGSCheat:Toxin"], 3, 20],
-		"10ce:ignore": [ [ -50 ], "n", [ "melvorItA:Blight" ,  "melvorItA:ToxinDOT" ] ]
+		"Oignore": [ 20, "blight" , "toxin" ],
+		"5Ocbeasy": [["Blight", "Toxin"], 3, 20],
+		"10Eignore": [  -50, "blight" , "toxin" ]
 	},
 	"melvorItA:Toxicity_Consumable_III": {
-		"u:ignore": [ [ 40 ], "n", [ "melvorItA:Blight" ,  "melvorItA:ToxinDOT" ] ],
-		"5rc": [ "melvorItA:Blight", "melvorItA:Toxin" ],
-		"5uc:cbeasy": [["BGSCheat:Blight", "BGSCheat:Toxin"], 3, 40],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorItA:Blight" ,  "melvorItA:ToxinDOT" ] ]
+		"Oignore": [ 40, "blight" , "toxin" ],
+		"5Ocbeasy": [["Blight", "Toxin"], 3, 40],
+		"10Eignore": [  -100, "blight" , "toxin" ]
 	},
 	"melvorItA:Abyssal_Essence_Consumable_I": {
-		"u:skillItemBase": [ [ 10, 100 ], "s", "melvorD:Mining",0,"melvorItA:Abyssal_Essence"]
+		"UskillItemBase": [ 10, 100, [ "mine", 0, "melvorItA:Abyssal_Essence" ] ]
 	},
 	"melvorItA:Abyssal_Essence_Consumable_II": {
-		"u:skillItemBase": [ [ 20, 200 ], "s", "melvorD:Mining",0,"melvorItA:Abyssal_Essence"]
+		"UskillItemBase": [ 20, 200, [ "mine", 0, "melvorItA:Abyssal_Essence" ] ]
 	},
 	"melvorItA:Abyssal_Essence_Consumable_III": {
-		"u:skillItemBase": [ [ 40, 400 ], "s", "melvorD:Mining",0,"melvorItA:Abyssal_Essence"]
+		"UskillItemBase": [ 40, 400, [ "mine", 0, "melvorItA:Abyssal_Essence" ] ]
 	},
 	"melvorItA:Shade_Consumable_I": {
-		"u:acc": [ 10 ],
-		"u:critical": [10, 20]
+		"Uacc": [ 10 ],
+		"Ucritical": [10, 20]
 	},
 	"melvorItA:Shade_Consumable_II": {
-		"u:acc": [ 20 ],
-		"u:critical": [20, 40]
+		"Uacc": [ 20 ],
+		"Ucritical": [20, 40]
 	},
 	"melvorItA:Shade_Consumable_III": {
-		"u:acc": [ 40 ],
-		"u:critical": [40, 80]
+		"Uacc": [ 40 ],
+		"Ucritical": [40, 80]
 	},
 	"melvorItA:Fear_Consumable_I": {
-		"u:ignore": [ [ 10 ], "n", [ "melvorD:Fear" ,  "melvorItA:AblazeDOT" ] ],
-		"5rc": [ "melvorD:Fear"],
-		"5uc:cbeasy": [["BGSCheat:Fear" ], 3, 10],
-		"10ce:ignore": [ [ -25 ], "n", [ "melvorD:Fear" ,  "melvorItA:AblazeDOT" ] ]
+		"Oignore": [ 10, "fear", "ablaze" ],
+		"5Ocbeasy": [["Fear" ], 3, 10],
+		"10Eignore": [ -25, "fear" , "ablaze" ]
 	},
 	"melvorItA:Fear_Consumable_II": {
-		"u:ignore": [ [ 20 ], "n", [ "melvorD:Fear" ,  "melvorItA:AblazeDOT" ] ],
-		"5rc": [ "melvorD:Fear"],
-		"5uc:cbeasy": [["BGSCheat:Fear" ], 3, 20],
-		"10ce:ignore": [ [ -50 ], "n", [ "melvorD:Fear" ,  "melvorItA:AblazeDOT" ] ]
+		"Oignore": [ 20, "fear", "ablaze" ],
+		"5Ocbeasy": [["Fear" ], 3, 20],
+		"10Eignore": [ -50, "fear" , "ablaze" ]
 	},
 	"melvorItA:Fear_Consumable_III": {
-		"u:ignore": [ [ 40 ], "n", [ "melvorD:Fear" ,  "melvorItA:AblazeDOT" ] ],
-		"5rc": [ "melvorD:Fear"],
-		"5uc:cbeasy": [["BGSCheat:Fear" ], 3, 40, {"t": 3,"si": 200}],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorD:Fear" ,  "melvorItA:AblazeDOT" ] ]
+		"Oignore": [ 40, "fear", "ablaze" ],
+		"5Ocbeasy": [["Fear" ], 3, 40],
+		"10Eignore": [ -100, "fear" , "ablaze" ]
 	},
 	"melvorItA:Abyssal_Resist_Consumable_I": {
-		"u:spres": [0,0,2]
+		"Ures": [2, "a"]
 	},
 	"melvorItA:Abyssal_Resist_Consumable_II": {
-		"u:spres": [0,0,4]
+		"Ures": [4, "a"]
 	},
 	"melvorItA:Abyssal_Resist_Consumable_III": {
-		"u:spres": [0,0,8]
+		"Ures": [8, "a"]
 	},
 	"melvorItA:Deep_Wounds_Consumable_I": {
-		"u:ignore": [ [ 10 ], "n", [ "melvorD:BleedDOT" ,  "melvorD:LacerationDOT" ] ],
-		"5ue:dot": [0,25,0,0,0,0,25],
-		"10ce:ignore": [ [ -25 ], "n", [ "melvorD:BleedDOT" ,  "melvorD:LacerationDOT" ] ]
+		"Oignore": [ 10, "bleed", "lace" ],
+		"5UEdot": [0,25,0,0,0,0,25],
+		"10Eignore": [ -25, "bleed", "lace" ]
 	},
 	"melvorItA:Deep_Wounds_Consumable_II": {
-		"u:ignore": [ [ 20 ], "n", [ "melvorD:BleedDOT" ,  "melvorD:LacerationDOT" ] ],
-		"5ue:dot": [0,50,0,0,0,0,50],
-		"10ce:ignore": [ [ -50 ], "n", [ "melvorD:BleedDOT" ,  "melvorD:LacerationDOT" ] ]
+		"Oignore": [ 20, "bleed", "lace" ],
+		"5UEdot": [0,50,0,0,0,0,50],
+		"10Eignore": [ -50, "bleed", "lace" ]
 	},
 	"melvorItA:Deep_Wounds_Consumable_III": {
-		"u:ignore": [ [ 40 ], "n", [ "melvorD:BleedDOT" ,  "melvorD:LacerationDOT" ] ],
-		"5ue:dot": [0,100,0,0,0,0,100],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorD:BleedDOT" ,  "melvorD:LacerationDOT" ] ]
+		"Oignore": [ 40, "bleed", "lace" ],
+		"5UEdot": [0,100,0,0,0,0,100],
+		"10Eignore": [ -100, "bleed", "lace" ]
 	},
 	"melvorItA:Withering_Consumable_I": {
-		"u:ignore": [ [ 10 ], "n", [ "melvorItA:Wither" ,  "melvorD:DeadlyPoisonDOT" ] ],
-		"5rc": [ "melvorItA:Wither"],
-		"5uc:cbeasy": [["BGSCheat:Wither" ], 3, 10],
-		"10ce:ignore": [ [ -25 ], "n", [ "melvorItA:Wither" ,  "melvorD:DeadlyPoisonDOT" ] ]
+		"Oignore": [ 10, "wither", "dp" ],
+		"5Ocbeasy": [["Wither" ], 3, 10],
+		"10Eignore": [ -25, "wither", "dp" ]
 	},
 	"melvorItA:Withering_Consumable_II": {
-		"u:ignore": [ [ 20 ], "n", [ "melvorItA:Wither" ,  "melvorD:DeadlyPoisonDOT" ] ],
-		"5rc": [ "melvorItA:Wither"],
-		"5uc:cbeasy": [["BGSCheat:Wither" ], 3, 20],
-		"10ce:ignore": [ [ -50 ], "n", [ "melvorItA:Wither" ,  "melvorD:DeadlyPoisonDOT" ] ]
+		"Oignore": [ 20, "wither", "dp" ],
+		"5Ocbeasy": [["Wither" ], 3, 20],
+		"10Eignore": [ -50, "wither", "dp" ]
 	},
 	"melvorItA:Withering_Consumable_III": {
-		"u:ignore": [ [ 40 ], "n", [ "melvorItA:Wither" ,  "melvorD:DeadlyPoisonDOT" ] ],
-		"5rc": [ "melvorItA:Wither"],
-		"5uc:cbeasy": [["BGSCheat:Wither" ], 3, 40, {"sm": 20}],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorItA:Wither" ,  "melvorD:DeadlyPoisonDOT" ] ]
+		"Oignore": [ 40, "wither", "dp" ],
+		"5Ocbeasy": [["Wither" ], 3, 40],
+		"10Eignore": [ -100, "wither", "dp" ]
 	},
 	"melvorItA:Silence_Consumable_I": {
-		"u:ignore": [ [ 10 ], "n", [ "melvorItA:Silence" ,  "melvorD:PoisonDOT" ] ],
-		"5rc": [ "melvorItA:Silence"],
-		"5uc:cbeasy": [["BGSCheat:Silence" ], 3, 10],
-		"10ce:ignore": [ [ -25 ], "n", [ "melvorItA:Silence" ,  "melvorD:PoisonDOT" ] ]
+		"Oignore": [ 10, "silence", "poison" ],
+		"5Ocbeasy": [["Silence" ], 3, 10],
+		"10Eignore": [ -25, "silence", "poison" ]
 	},
 	"melvorItA:Silence_Consumable_II": {
-		"u:ignore": [ [ 20 ], "n", [ "melvorItA:Silence" ,  "melvorD:PoisonDOT" ] ],
-		"5rc": [ "melvorItA:Silence"],
-		"5uc:cbeasy": [["BGSCheat:Silence" ], 3, 20],
-		"10ce:ignore": [ [ -50 ], "n", [ "melvorItA:Silence" ,  "melvorD:PoisonDOT" ] ]
+		"Oignore": [ 20, "silence", "poison" ],
+		"5Ocbeasy": [["Silence" ], 3, 20],
+		"10Eignore": [ -50, "silence", "poison" ]
 	},
 	"melvorItA:Silence_Consumable_III": {
-		"u:ignore": [ [ 40 ], "n", [ "melvorItA:Silence" ,  "melvorD:PoisonDOT" ] ],
-		"5rc": [ "melvorItA:Silence"],
-		"5uc:cbeasy": [["BGSCheat:Silence" ], 3, 40],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorItA:Silence" ,  "melvorD:PoisonDOT" ] ]
+		"Oignore": [ 40, "silence", "poison" ],
+		"5Ocbeasy": [["Silence" ], 3, 40],
+		"10Eignore": [ -100, "silence", "poison" ]
 	},
 	"melvorItA:Soul_Harvesting_Consumable_I": {
-		"u:prayerGet": [0,0,0,0,0,1]
+		"NprayerGet": [0,0,0,0,0,1]
 	},
 	"melvorItA:Soul_Harvesting_Consumable_II": {
-		"u:prayerGet": [0,0,0,0,0,2]
+		"NprayerGet": [0,0,0,0,0,2]
 	},
 	"melvorItA:Soul_Harvesting_Consumable_III": {
-		"u:prayerGet": [0,0,0,0,0,4]
+		"NprayerGet": [0,0,0,0,0,4]
 	},
 	"melvorItA:Item_Cost_Consumable_I": {
-		"u:skillextra": [0,0,0,10]
+		"Nskillextra": [0,0,0,10]
 	},
 	"melvorItA:Item_Cost_Consumable_II": {
-		"u:skillextra": [0,0,0,20]
+		"Nskillextra": [0,0,0,20]
 	},
 	"melvorItA:Item_Cost_Consumable_III": {
-		"u:skillextra": [0,0,0,40]
+		"Nskillextra": [0,0,0,40]
 	},
 	"melvorItA:Eldritch_Curse_Consumable_I": {
-		"u:ignore": [ [ 10 ], "n", [ "melvorItA:EldritchCurse" ,  "melvorD:BurnDOT" ] ],
-		"5rc": [ "melvorItA:EldritchCurse"],
-		"5uc:cbeasy": [["BGSCheat:EldritchCurse" ], 3, 10],
-		"10ce:ignore": [ [ -25 ], "n", [ "melvorItA:EldritchCurse" ,  "melvorD:BurnDOT" ] ]
+		"Oignore": [ 10, "ec", "burn" ],
+		"5Ocbeasy": [["ec" ], 3, 10],
+		"10Eignore": [ -25, "ec", "burn" ]
 	},
 	"melvorItA:Eldritch_Curse_Consumable_II": {
-		"u:ignore": [ [ 20 ], "n", [ "melvorItA:EldritchCurse" ,  "melvorD:BurnDOT" ] ],
-		"5rc": [ "melvorItA:EldritchCurse"],
-		"5uc:cbeasy": [["BGSCheat:EldritchCurse" ], 3, 20],
-		"10ce:ignore": [ [ -50 ], "n", [ "melvorItA:EldritchCurse" ,  "melvorD:BurnDOT" ] ]
+		"Oignore": [ 20, "ec", "burn" ],
+		"5Ocbeasy": [["ec" ], 3, 20],
+		"10Eignore": [ -50, "ec", "burn" ]
 	},
 	"melvorItA:Eldritch_Curse_Consumable_III": {
-		"u:ignore": [ [ 40 ], "n", [ "melvorItA:EldritchCurse" ,  "melvorD:BurnDOT" ] ],
-		"5rc": [ "melvorItA:EldritchCurse"],
-		"5uc:cbeasy": [["BGSCheat:EldritchCurse" ], 3, 40],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorItA:EldritchCurse" ,  "melvorD:BurnDOT" ] ]
+		"Oignore": [ 40, "ec", "burn" ],
+		"5Ocbeasy": [["ec" ], 3, 40],
+		"10Eignore": [ -100, "ec", "burn" ]
 	},
 	"melvorItA:Voidburst_Consumable_I": {
-		"u:ignore": [ [ 10 ], "n", [ "melvorItA:Voidburst" ,  "melvorD:StunLike" ] ],
-		"5rc": [ "melvorItA:Voidburst"],
-		"5uc:cbeasy": [["BGSCheat:Voidburst" ], 3, 10],
-		"10ce:ignore": [ [ -25 ], "n", [ "melvorItA:Voidburst" ,  "melvorD:StunLike" ] ]
+		"Oignore": [ 10, "void", "stunlike" ],
+		"5Ocbeasy": [["void" ], 3, 10],
+		"10Eignore": [ -25, "void", "stunlike" ]
 	},
 	"melvorItA:Voidburst_Consumable_II": {
-		"u:ignore": [ [ 20 ], "n", [ "melvorItA:Voidburst" ,  "melvorD:StunLike" ] ],
-		"5rc": [ "melvorItA:Voidburst"],
-		"5uc:cbeasy": [["BGSCheat:Voidburst" ], 3, 20],
-		"10ce:ignore": [ [ -50 ], "n", [ "melvorItA:Voidburst" ,  "melvorD:StunLike" ] ]
+		"Oignore": [ 20, "void", "stunlike" ],
+		"5Ocbeasy": [["void" ], 3, 20],
+		"10Eignore": [ -50, "void", "stunlike" ]
 	},
 	"melvorItA:Voidburst_Consumable_III": {
-		"u:ignore": [ [ 40 ], "n", [ "melvorItA:Voidburst" ,  "melvorD:StunLike" ] ],
-		"5rc": [ "melvorItA:Voidburst"],
-		"5uc:cbeasy": [["BGSCheat:Voidburst" ], 3, 40],
-		"10ce:ignore": [ [ -100, -1 ], "n", [ "melvorItA:Voidburst" ,  "melvorD:StunLike" ] ]
+		"Oignore": [ 40, "void", "stunlike" ],
+		"5Ocbeasy": [["void" ], 3, 40],
+		"10Eignore": [ -100, "void", "stunlike" ]
 	}
 }

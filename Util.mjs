@@ -243,7 +243,7 @@ export class Util {
 			formula = new Function("lv", f);
 		}
 		catch(e){
-			console.log(e);
+			console.log(e + " " + f);
 			return null;
 		}
 		this.mapFunctions.set(f,formula);
@@ -1357,7 +1357,7 @@ export class Util {
 			v.value = x[1];
 			if (scopes) {
 				Array.from(scopes, (v, i) => [i, v]).forEach(y => {
-					if (!y)
+					if (!y[1])
 						return;
 					let scopeName = scopeMap[y[0]];
 					if (typeof (scopeName) != "string")
@@ -1387,264 +1387,9 @@ export class EasyTool {
 		Util.addModiferDataAlias(modifiers, data, values, valueMap, scopes, scopeMap, type, lv, mul, extraMul);
 	}
 
-	/*
-	 * sphidden: [atk, str, def, range, magic, hp, corruption ]
-	 * spres: [fdr,dr,fadr,adr,fpdr,pdr,fedr,edr]
-	 gp			abygp		slayercoin	abysc 
-	sp-currg	sp-curra	sp-currs	sp-curras
-		valueMap = ["flatCurrencyGain", "currencyGain","itemSaleCurrencyGain"];
-	sp-currg2	sp-curra2	sp-currs2	sp-curras2
-		valueMap = ["flatMonsterDrops", "MonsterDrops", "flatGainOnHit", "FromCombat","FromSlayerTasks"];
-	sp-currg3	sp-curra3	sp-currs3	sp-curras3
-		valueMap = ["fGainOnHitCombatLl","fGainOnKillCombatLl","GainPerDealt","GainPerDealtOnCurrencyAmount"];
-	sp-currg4	sp-curra4	sp-currs4	sp-curras4
-		valueMap = ["minCurrMulPerDmg","maxCurrMulPerDmg","currGainPerDmgDealtOnCurrencyAmount"];
-	 */
-	static addSpecfiedModifier(modifiers, data, key, values, scopes, type, lv, mul, extraMul = 1) {
-		let valueMap = null
-		let scopeMap = null
-		let scopeValue = null;
-		switch (key) {
-			case "sphidden": {
-				valueMap = ["flatHiddenSkillLevel"];
-				scopeMap = ["skillID"];
-				let v = [0];
-				let s = [0];
-				Array.from(values,(v,i)=>[i,v]).forEach(x=>{
-					if (!x[1])
-						return;
-					v[0] = x[1];
-					switch (x[0]) {
-						case 0: { s[0] = "melvorD:Attack"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 1: { s[0] = "melvorD:Strength"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 2: { s[0] = "melvorD:Defence"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 3: { s[0] = "melvorD:Ranged"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 4: { s[0] = "melvorD:Magic"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 5: { s[0] = "melvorD:Hitpoints"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 6: { s[0] = "melvorItA:Corruption"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-					}
-				});
-				break;
-			}
-			case "spres": {
-				valueMap = ["flatResistance", "resistance","ignoreResistanceWhenAttackingChance"];
-				scopeMap = ["damageTypeID"];
-				let v = [0,0,0];
-				let s = [0];
-				Array.from(values,(v,i)=>[i,v]).forEach(x=>{
-					if (!x[1])
-						return;
-					v[0] = v[1] = v[2] = 0;
-					switch (x[0]) {
-						case 0: { v[0] = x[1]; s[0] = "melvorD:Normal"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 1: { v[1] = x[1]; s[0] = "melvorD:Normal"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 2: { v[0] = x[1]; s[0] = "melvorItA:Abyssal"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 3: { v[1] = x[1]; s[0] = "melvorItA:Abyssal"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 4: { v[2] = x[1]; s[0] = "melvorD:Normal"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 5: { v[2] = x[1]; s[0] = "melvorItA:Abyssal"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 7: { v[0] = x[1]; s[0] = "melvorF:Pure"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 8: { v[1] = x[1]; s[0] = "melvorF:Pure"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 8: { v[0] = x[1]; s[0] = "melvorItA:Eternal"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 9: { v[1] = x[1]; s[0] = "melvorItA:Eternal"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 10: { v[2] = x[1]; s[0] = "melvorF:Pure"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-						case 11: { v[2] = x[1]; s[0] = "melvorItA:Eternal"; this.addModiferWithScopeMinMaxEasy(modifiers, data, v, valueMap, s, scopeMap, type, lv, mul, extraMul); break; }
-					}
-				});
-				break;
-			}
-			case "sp-currg": if (!scopeValue) scopeValue = ["melvorD:GP"];
-			case "sp-curra": if (!scopeValue) scopeValue = ["melvorItA:AbyssalPieces"];
-			case "sp-currs": if (!scopeValue) scopeValue = ["melvorD:SlayerCoins"];
-			case "sp-curras": {
-				if (!scopeValue) scopeValue = ["melvorItA:AbyssalSlayerCoins"];
-				valueMap = ["flatCurrencyGain", "currencyGain", "itemSaleCurrencyGain"];
-				scopeMap = ["currencyID"];
-				this.addModiferWithScopeMinMaxEasy(modifiers, data, values, valueMap, scopeValue, scopeMap, type, lv, mul, extraMul);
-				break;
-			}
-			case "sp-currg2": if (!scopeValue) scopeValue = ["melvorD:GP"];
-			case "sp-curra2": if (!scopeValue) scopeValue = ["melvorItA:AbyssalPieces"];
-			case "sp-currs2": if (!scopeValue) scopeValue = ["melvorD:SlayerCoins"];
-			case "sp-curras2": {
-				if (!scopeValue) scopeValue = ["melvorItA:AbyssalSlayerCoins"];
-				valueMap = ["flatCurrencyGainFromMonsterDrops", "currencyGainFromMonsterDrops", "flatCurrencyGainOnEnemyHit", "currencyGainFromCombat","currencyGainFromSlayerTasks"];
-				scopeMap = ["currencyID"];
-				this.addModiferWithScopeMinMaxEasy(modifiers, data, values, valueMap, scopeValue, scopeMap, type, lv, mul, extraMul);
-				break;
-			}
-			case "sp-currg3": if (!scopeValue) scopeValue = ["melvorD:GP"];
-			case "sp-curra3": if (!scopeValue) scopeValue = ["melvorItA:AbyssalPieces"];
-			case "sp-currs3": if (!scopeValue) scopeValue = ["melvorD:SlayerCoins"];
-			case "sp-curras3": {
-				if (!scopeValue) scopeValue = ["melvorItA:AbyssalSlayerCoins"];
-				valueMap = ["flatCurrencyGainOnEnemyHitBasedOnCombatLevel","flatCurrencyGainOnMonsterKillBasedOnCombatLevel","currencyGainPerDamageDealt","currencyGainPerDamageDealtBasedOnCurrencyAmount"];
-				scopeMap = ["currencyID"];
-				this.addModiferWithScopeMinMaxEasy(modifiers, data, values, valueMap, scopeValue, scopeMap, type, lv, mul, extraMul);
-				break;
-			}
-			case "sp-currg4": if (!scopeValue) scopeValue = ["melvorD:GP"];
-			case "sp-curra4": if (!scopeValue) scopeValue = ["melvorItA:AbyssalPieces"];
-			case "sp-currs4": if (!scopeValue) scopeValue = ["melvorD:SlayerCoins"];
-			case "sp-curras4": {
-				if (!scopeValue) scopeValue = ["melvorItA:AbyssalSlayerCoins"];
-				valueMap = ["minCurrencyMultiplierPerDamage","maxCurrencyMultiplierPerDamage","currencyGainPerDamageDealtBasedOnCurrencyAmount"];
-				scopeMap = ["currencyID"];
-				this.addModiferWithScopeMinMaxEasy(modifiers, data, values, valueMap, scopeValue, scopeMap, type, lv, mul, extraMul);
-				break;
-			}
-			case "sp-ign": {
-				valueMap = ["effectIgnoreChance", "effectImmunity","cleansed","sleepImmunity"]
-				scopeMap = ["effectGroupID"];
-				Array.from(values, (v, i) => [i, v]).forEach(x => {
-					if (!x[1])
-						return;
-					switch (x[0]) {
-						case 0: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:Debuff"], scopeMap, type, lv, mul, extraMul);
-						case 1: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:StunLike"], scopeMap, type, lv, mul, extraMul);
-						case 2: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:Curse"], scopeMap, type, lv, mul, extraMul);
-						case 3: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:DamageOverTime"], scopeMap, type, lv, mul, extraMul);
-						case 4: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:Buff"], scopeMap, type, lv, mul, extraMul);
-					}
-				});
-				break;
-			}
-			case "sp-immu": {
-				valueMap = ["effectIgnoreChance", "effectImmunity","cleansed","sleepImmunity"]
-				scopeMap = ["effectGroupID"];
-				Array.from(values, (v, i) => [i, v]).forEach(x => {
-					if (!x[1])
-						return;
-					switch (x[0]) {
-						case 0: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorD:Debuff"], scopeMap, type, lv, mul, extraMul);
-						case 1: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorD:StunLike"], scopeMap, type, lv, mul, extraMul);
-						case 2: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorD:Curse"], scopeMap, type, lv, mul, extraMul);
-						case 3: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorD:DamageOverTime"], scopeMap, type, lv, mul, extraMul);
-						case 4: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorD:Buff"], scopeMap, type, lv, mul, extraMul);
-					}
-				});
-				break;
-			}
-			case "sp-ignc": {
-				valueMap = ["effectIgnoreChance", "effectImmunity","cleansed","sleepImmunity"]
-				scopeMap = ["effectGroupID"];
-				Array.from(values, (v, i) => [i, v]).forEach(x => {
-					if (!x[1])
-						return;
-					switch (x[0]) {
-						case 0: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:Stun"], scopeMap, type, lv, mul, extraMul);
-						case 1: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:Freeze"], scopeMap, type, lv, mul, extraMul);
-						case 2: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:Crystallize"], scopeMap, type, lv, mul, extraMul);
-						case 3: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:Sleep"], scopeMap, type, lv, mul, extraMul);
-						case 4: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:Slow"], scopeMap, type, lv, mul, extraMul);
-						case 5: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:Fear"], scopeMap, type, lv, mul, extraMul);
-					}
-				});
-				break;
-			}
-			case "sp-immuc": {
-				valueMap = ["effectIgnoreChance", "effectImmunity","cleansed","sleepImmunity"]
-				scopeMap = ["effectGroupID"];
-				Array.from(values, (v, i) => [i, v]).forEach(x => {
-					if (!x[1])
-						return;
-					switch (x[0]) {
-						case 0: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:Stun"], scopeMap, type, lv, mul, extraMul);
-						case 1: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:Freeze"], scopeMap, type, lv, mul, extraMul);
-						case 2: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:Crystallize"], scopeMap, type, lv, mul, extraMul);
-						case 3: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:Sleep"], scopeMap, type, lv, mul, extraMul);
-						case 4: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:Slow"], scopeMap, type, lv, mul, extraMul);
-						case 5: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:Fear"], scopeMap, type, lv, mul, extraMul);
-					}
-				});
-				break;
-			}
-			case "sp-ignd": {
-				valueMap = ["effectIgnoreChance", "effectImmunity","cleansed","sleepImmunity"]
-				scopeMap = ["effectGroupID"];
-				Array.from(values, (v, i) => [i, v]).forEach(x => {
-					if (!x[1])
-						return;
-					switch (x[0]) {
-						case 0: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:BurnDOT"], scopeMap, type, lv, mul, extraMul);
-						case 1: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:BleedDOT"], scopeMap, type, lv, mul, extraMul);
-						case 2: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:PoisonDOT"], scopeMap, type, lv, mul, extraMul);
-						case 3: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:DeadlyPoisonDOT"], scopeMap, type, lv, mul, extraMul);
-						case 4: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:LacerationDOT"], scopeMap, type, lv, mul, extraMul);
-						case 5: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorItA:Voidburst"], scopeMap, type, lv, mul, extraMul);
-						case 6: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorItA:ToxinDOT"], scopeMap, type, lv, mul, extraMul);
-						case 7: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorItA:AblazeDOT"], scopeMap, type, lv, mul, extraMul);
-					}
-				});
-				break;
-			}
-			case "sp-immud": {
-				valueMap = ["effectIgnoreChance", "effectImmunity","cleansed","sleepImmunity"]
-				scopeMap = ["effectGroupID"];
-				Array.from(values, (v, i) => [i, v]).forEach(x => {
-					if (!x[1])
-						return;
-					switch (x[0]) {
-						case 0: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:BurnDOT"], scopeMap, type, lv, mul, extraMul);
-						case 1: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:BleedDOT"], scopeMap, type, lv, mul, extraMul);
-						case 2: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:PoisonDOT"], scopeMap, type, lv, mul, extraMul);
-						case 3: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:DeadlyPoisonDOT"], scopeMap, type, lv, mul, extraMul);
-						case 4: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorD:LacerationDOT"], scopeMap, type, lv, mul, extraMul);
-						case 5: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorItA:Voidburst"], scopeMap, type, lv, mul, extraMul);
-						case 6: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorItA:ToxinDOT"], scopeMap, type, lv, mul, extraMul);
-						case 7: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0, x[1]], valueMap, ["melvorItA:AblazeDOT"], scopeMap, type, lv, mul, extraMul);
-					}
-				});
-				break;
-			}
-			case "sp-igns": {
-				valueMap = ["effectIgnoreChance", "effectImmunity","cleansed","sleepImmunity"]
-				scopeMap = ["effectGroupID"];
-				Array.from(values, (v, i) => [i, v]).forEach(x => {
-					if (!x[1])
-						return;
-					switch (x[0]) {
-						case 0: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:Frostburn"], scopeMap, type, lv, mul, extraMul);
-						case 1: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:CrystalSanction"], scopeMap, type, lv, mul, extraMul);
-						case 2: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorItA:Corruption"], scopeMap, type, lv, mul, extraMul);
-						case 3: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorItA:Blight"], scopeMap, type, lv, mul, extraMul);
-						case 4: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorItA:Wither"], scopeMap, type, lv, mul, extraMul);
-						case 5: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorItA:Silence"], scopeMap, type, lv, mul, extraMul);
-						case 6: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorItA:EldritchCurse"], scopeMap, type, lv, mul, extraMul);
-						case 7: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:BarrierBleedDOT"], scopeMap, type, lv, mul, extraMul);
-						case 8: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [x[1]], valueMap, ["melvorD:BarrierBurnDOT"], scopeMap, type, lv, mul, extraMul);
-					}
-				});
-				break;
-			}
-			case "sp-immus": {
-				valueMap = ["effectIgnoreChance", "effectImmunity","cleansed","sleepImmunity"]
-				scopeMap = ["effectGroupID"];
-				Array.from(values, (v, i) => [i, v]).forEach(x => {
-					if (!x[1])
-						return;
-					switch (x[0]) {
-						case 0: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorD:Frostburn"], scopeMap, type, lv, mul, extraMul);
-						case 1: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorD:CrystalSanction"], scopeMap, type, lv, mul, extraMul);
-						case 2: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorItA:Corruption"], scopeMap, type, lv, mul, extraMul);
-						case 3: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorItA:Blight"], scopeMap, type, lv, mul, extraMul);
-						case 4: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorItA:Wither"], scopeMap, type, lv, mul, extraMul);
-						case 5: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorItA:Silence"], scopeMap, type, lv, mul, extraMul);
-						case 6: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorItA:EldritchCurse"], scopeMap, type, lv, mul, extraMul);
-						case 7: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorD:BarrierBleedDOT"], scopeMap, type, lv, mul, extraMul);
-						case 8: return this.addModiferWithScopeMinMaxEasy(modifiers, data, [0,x[1]], valueMap, ["melvorD:BarrierBurnDOT"], scopeMap, type, lv, mul, extraMul);
-					}
-				});
-				break;
-			}
-			default: {
-				console.log("No such specfied modifier alias: " + key);
-			}
-		}
-
-	}
 
 	static scopeFromShortCut(scope, v) {
-		if (v.indexOf(":") != -1)
+		if (!v || v.indexOf(":") != -1)
 			return v;
 
 		let ret = null;
@@ -1692,11 +1437,12 @@ export class EasyTool {
 						console.log("Damage Type ID no such shortcut: " + v);
 					}
 				}
+				break;
 			}
 			case "skillID": {
 				switch (v) {
 					case "atk": ret = "melvorD:Attack"; break;
-					case "atr": ret = "melvorD:Strength"; break;
+					case "str": ret = "melvorD:Strength"; break;
 					case "def": ret = "melvorD:Defence"; break;
 					case "hp": ret = "melvorD:Hitpoints"; break;
 					case "ran": ret = "melvorD:Ranged"; break;
@@ -1722,11 +1468,12 @@ export class EasyTool {
 					case "cart": ret = "melvorAoD:Cartography"; break;
 					case "arch": ret = "melvorAoD:Archaeology"; break;
 					case "corr": ret = "melvorItA:Corruption"; break;
-					case "harv": ret = "melvorItA:Harvesting"
+					case "harv": ret = "melvorItA:Harvesting"; break;
 					default: {
 						console.log("Skill ID no such shortcut: " + v);
 					}
 				}
+				break;
 			}
 			case "effectGroupID": {
 				switch (v) {
@@ -1807,12 +1554,15 @@ export class EasyTool {
 					case "void":
 					case "Void":
 					case "Voidburst": ret = "melvorItA:Voidburst"; break;
+					case "toxin":
 					case "Toxin": ret = "melvorItA:ToxinDOT"; break;
-					case "Ablaze": ret = "melvorItA:AblazeDOT"
+					case "ablaze":
+					case "Ablaze": ret = "melvorItA:AblazeDOT"; break;
 					default: {
 						console.log("Effect  Group ID no such shortcut: " + v);
 					}
 				}
+				break;
 			}
 			case "subcategoryID": {
 				switch (v) {
@@ -1834,14 +1584,15 @@ export class EasyTool {
 					case "brume": ret = "melvorItA:Brume"; break;
 					case "gloom": ret = "melvorItA:Gloom"; break;
 					case "wither": ret = "melvorItA:Wither"; break;
-					case "nether": ret = "melvorItA:Nether"
+					case "nether": ret = "melvorItA:Nether"; break;
 					default: {
 						console.log("Category ID no such shortcut: " + v);
 					}
 				}
+				break;
 			}
 			default: {
-				console.log("No such scope: " + scope);
+				console.log("No such scope: (" + scope + ") for: " + v);
 			}
 		}
 		return ret;
@@ -1896,8 +1647,6 @@ export class EasyTool {
 	 * hidden
 				valueMap = ["flatHiddenSkillLevel", "flatHiddenSkillLevelBasedOnLevels"];
 				scopeMap = ["skillID"];
-	 * sphidden
-				[hiddenAttack, str, def, renge, magic, hp, corruption]
 	 * acc
 				valueMap = ["accuracyRating", "meleeAccuracyRating","rangedAccuracyRating","magicAccuracyRating"];
 	 * acc2
@@ -1924,8 +1673,6 @@ export class EasyTool {
 	 * res
 				valueMap = ["flatResistance", "resistance","ignoreResistanceWhenAttackingChance"];
 				scopeMap = ["damageTypeID"];
-	 * spres
-		[flat normal, normal, flat abyssal, abyssal, ignore normal, ignore abyssal, f p, p, f e, e, i p, i e]
 	 * strBonus
 		valueMap = ["meleeStrengthBonus", "rangedStrengthBonus", "magicDamageBonus", "flatMeleeStrengthBonusPerAttackInterval", "flatRangedStrengthBonusPerAttackInterval"];
 	 * hp
@@ -2031,11 +1778,9 @@ export class EasyTool {
 	harvest
 		valueMap = ["harvestingUniqueProductChance", "flatHarvestingIntensity", "doubleHarvestingIntensityChance", "minimumHarvestingIntensity","minimumHarvestingIntensity"];
 	 */
-	static addModiferWithScope(modifiers, data, key, values, scopes, type, lv, mul, extraMul = 1) {
+	static addModiferWithScope(modifiers, data, key, values, scopes, type, lv, mul, extraMul) {
 		let valueMap = null
 		let scopeMap = null
-		if (key.indexOf("sp-") == 0)
-			return this.addSpecfiedModifier(modifiers, data, key, values, scopes, type, lv, mul, extraMul);
 		switch (key) {
 			case "xp": {
 				valueMap = ["skillXP", "abyssalSkillXP", "masteryXP"];
@@ -2112,7 +1857,6 @@ export class EasyTool {
 				scopeMap = ["skillID"];
 				break;
 			}
-			case "sphidden": return this.addSpecfiedModifier(modifiers, data, key, values, scopes, type, lv, mul, extraMul);
 			case "acc": {
 				valueMap = ["accuracyRating", "meleeAccuracyRating","rangedAccuracyRating","magicAccuracyRating"];
 				break;
@@ -2181,7 +1925,6 @@ export class EasyTool {
 				scopeMap = ["damageTypeID"];
 				break;
 			}
-			case "spres": return this.addSpecfiedModifier(modifiers, data, key, values, scopes, type, lv, mul, extraMul);
 			case "strBonus": {
 				valueMap = ["meleeStrengthBonus", "rangedStrengthBonus", "magicDamageBonus", "flatMeleeStrengthBonusPerAttackInterval", "flatRangedStrengthBonusPerAttackInterval"];
 				break;
@@ -2388,8 +2131,17 @@ export class EasyTool {
 				console.log("No such modifier shortcut: " + key);
 			}
 		}
-		if (valueMap)
-			this.addModiferWithScopeMinMaxEasy(modifiers, data, values, valueMap, scopes, scopeMap, type, lv, mul, extraMul);
+		if (valueMap) {
+			if (scopes == null || scopeMap == null)
+				return Util.addModiferDataAlias(modifiers, data, values, valueMap, null, null, type, lv, mul, extraMul);
+			let v = [];
+			for (let m = 0; m < scopes.length; ++m) {
+				if (!scopeMap[m])
+					break;
+				v.push(this.scopeFromShortCut(scopeMap[m], scopes[m]));
+			}
+			return Util.addModiferDataAlias(modifiers, data, values, valueMap, v, scopeMap, type, lv, mul, extraMul);
+		}
 	}
 
 	static addModifersEasy(modifiers, data, key, modData, type, lv, mul, extraMul = 1) {
@@ -2407,28 +2159,15 @@ export class EasyTool {
 		if (i == -1)
 			return this.addModiferWithScope(modifiers, data, key, modData, null, type, lv, mul, extraMul);
 
-		const value = modData.slice(0, i);
+		const values = modData.slice(0, i);
 		const scopes = modData.slice(i);
 
-		if (modData[1] === "n") {
-			if (!(modData[0] instanceof Array))
-				return;
-			modData[2].forEach(x => {
-				if (x instanceof Array)
-					return this.addModiferWithScope(modifiers, data, key, modData[0], x, type, lv, mul, extraMul);
-				let a = [];
-				a.push(x);
-				return this.addModiferWithScope(modifiers, data, key, modData[0], a, type, lv, mul, extraMul);
-			});
-			return;
-		}
-
-		if (modData[1] === "s") {
-			if (!(modData[0] instanceof Array))
-				return;
-			return this.addModiferWithScope(modifiers, data, key, modData[0], modData.slice(2), type, lv, mul, extraMul);
-		}
-		return this.addModiferWithScope(modifiers, data, key, modData, null, type, lv, mul, extraMul);
+		scopes.forEach(x => {
+			if (typeof (x) == "string")
+				return this.addModiferWithScope(modifiers, data, key, values, [x], type, lv, mul, extraMul);
+			else
+				return this.addModiferWithScope(modifiers, data, key, values, x, type, lv, mul, extraMul);
+		});
 	}
 
 	static addModifersModificationEasy(modifiers, data, key, modData, type, lv, mul, extraMul = 1) {
@@ -2481,6 +2220,7 @@ export class EasyTool {
 				case "weak": 
 				case "weaken": 
 				case "Weakening": ret = "BGSCheat:Weakening"; break;
+				case "angu":
 				case "anguish": 
 				case "Anguish": ret = "BGSCheat:Anguish"; break;
 				case "confusion": 
@@ -2493,8 +2233,10 @@ export class EasyTool {
 				case "Madness": ret = "BGSCheat:Madness"; break;
 				case "torment": 
 				case "Torment": ret = "BGSCheat:Torment"; break;
+				case "fati":
 				case "fatigue": 
 				case "Fatigue": ret = "BGSCheat:Fatigue"; break;
+				case "petr":
 				case "petrified": 
 				case "Petrified": ret = "BGSCheat:Petrified"; break;
 				case "wither": 
@@ -2543,6 +2285,7 @@ export class EasyTool {
 				case "destruct": 
 				case "Destruction": ret = "BGSCheat:Destruction"; break;
 				case "shade": 
+				case "Shade": 
 				case "Shadeveil": ret = "BGSCheat:Shadeveil"; break;
 				case "spite": 
 				case "Spite": ret = "BGSCheat:Spite"; break;
@@ -2550,6 +2293,11 @@ export class EasyTool {
 				case "UnholyMark": ret = "BGSCheat:UnholyMark"; break;
 				case "blight": 
 				case "Blight": ret = "BGSCheat:Blight"; break;
+				case "shock": 
+				case "Shock": ret = "BGSCheat:Shock"; break;
+				case "reign": 
+				case "Reign": 
+				case "ReignOverTime": ret = "BGSCheat:ReignOverTime"; break;
 				default: {
 					console.log("No such ab effect: " + id);
 				}
@@ -2599,6 +2347,16 @@ export class EasyTool {
 				break;
 			case "Fear":
 				Util.removeCombatEffecModificationData(effects, data, "melvorD:Cleansed");
+				break;
+			case "Weakening":
+				Util.removeCombatEffecModificationData(effects, data, "melvorF:WeakeningI");
+				Util.removeCombatEffecModificationData(effects, data, "melvorF:WeakeningII");
+				Util.removeCombatEffecModificationData(effects, data, "melvorF:WeakeningIII");
+				break;
+			case "Anguish":
+				Util.removeCombatEffecModificationData(effects, data, "melvorF:AnguishI");
+				Util.removeCombatEffecModificationData(effects, data, "melvorF:AnguishII");
+				Util.removeCombatEffecModificationData(effects, data, "melvorF:AnguishIII");
 				break;
 			case "Confusion":
 				Util.removeCombatEffecModificationData(effects, data, "melvorF:Confusion");
@@ -2684,6 +2442,12 @@ export class EasyTool {
 			case "Blight":
 				Util.removeCombatEffecModificationData(effects, data, "melvorItA:Blight");
 				break;
+			case "Shock":
+				Util.removeCombatEffecModificationData(effects, data, "melvorTotH:Shock");
+				break;
+			case "ReignOverTime":
+				Util.removeCombatEffecModificationData(effects, data, "melvorTotH:ReignOverTime");
+				break;
 		}
 
 		return ret;
@@ -2710,7 +2474,7 @@ export class EasyTool {
 			case "Nulled":
 			case "Cleansed": {
 				if (_a.find(x => x.name == "turns") == null)
-					_a.push({ "name": "turns", "value": defValue });
+					_a.push({ "name": "turns", "value": { "f": defValue, "m": 1 } });
 				break;
 			}
 			case "Slow": {
@@ -2730,7 +2494,7 @@ export class EasyTool {
 			case "Spite":
 			case "Petrified": {
 				if (_a.find(x => x.name == "initialStacks") == null)
-					_a.push({ "name": "initialStacks", "value": defValue });
+					_a.push({ "name": "initialStacks", "value": { "f": defValue, "m": 1 } });
 				break;
 			}
 			case "Burn":
@@ -2748,15 +2512,17 @@ export class EasyTool {
 			case "Voidburst":
 			case "Toxin": {
 				if (_a.find(x => x.name == "percent") == null)
-					_a.push({ "name": "percent", "value": defValue });
+					_a.push({ "name": "percent", "value": { "f":defValue,"m":100 } });
 				break;
 			}
 			case "Laceration":
 			case "Shadeveil":
 			case "UnholyMark":
+			case "Shock":
+			case "ReignOverTime":
 			case "Wither": {
 				if (_a.find(x => x.name == "maxStacks") == null)
-					_a.push({ "name": "maxStacks", "value": defValue });
+					_a.push({ "name": "maxStacks", "value": { "f":defValue,"m":defValue } });
 				break;
 			}
 			case "Malice":
@@ -2764,22 +2530,22 @@ export class EasyTool {
 			case "Eradicate":
 			case "Destruction": {
 				if (_a.find(x => x.name == "maxStacks") == null && _a.find(x => x.name == "stacksToAdd") == null) {
-					_a.push({ "name": "maxStacks", "value": defValue });
-					_a.push({ "name": "stacksToAdd", "value": defValue });
+					_a.push({ "name": "maxStacks", "value": { "f":defValue,"m":defValue } });
+					_a.push({ "name": "stacksToAdd", "value": { "f":defValue,"m":defValue } });
 				}
 				break;
 			}
 			case "Blight": {
 				if (_a.find(x => x.name == "maxStacks") == null && _a.find(x => x.name == "resetStacks") == null) {
-					_a.push({ "name": "maxStacks", "value": defValue });
-					_a.push({ "name": "resetStacks", "value": defValue / 2 });
+					_a.push({ "name": "maxStacks", "value": { "f":defValue,"m":defValue } });
+					_a.push({ "name": "resetStacks", "value": { "f":(defValue / 2) >> 0,"m": (defValue / 2) >> 0 } });
 				}
 				break;
 			}
 			case "Frostburn": {
 				if (_a.find(x => x.name == "stacksToAdd") == null && _a.find(x => x.name == "initialStacks") == null) {
-					_a.push({ "name": "stacksToAdd", "value": defValue });
-					_a.push({ "name": "initialStacks", "value": defValue / 2 });
+					_a.push({ "name": "stacksToAdd", "value": { "f":defValue, "min":1 } });
+					_a.push({ "name": "initialStacks", "value": { "f":defValue, "min":1 } });
 				}
 				break;
 			}
@@ -3545,16 +3311,27 @@ export class EasyTool {
 			}
 		}
 		else {
-			if (k[0] == 'L' || k[0] == 'V')
-				type = 1;
-			if (k[0] == 'M' || k[0] == 'U')
-				type = 2;
-			if (k[0] == 'O' || k[0] == 'N')
-				type = 3;
-			if (k[0] == 'V' || k[0] == 'U' || k[0] == 'N')
-				type = type | 0x1000;
-			if (k[0] >= 'A' && k[0] <= 'Z')
-				k = k.slice(1);
+			let d = 0;
+			while (k[d] >= 'A' && k[d] <= 'Z') {
+				if (k[d] == 'L' || k[d] == 'V')
+					type = 1;
+				if (k[d] == 'M' || k[d] == 'U')
+					type = 2;
+				if (k[d] == 'O' || k[d] == 'N')
+					type = 3;
+				if (k[d] == 'V' || k[d] == 'U' || k[d] == 'N')
+					type = type | 0x1000;
+				if (k[d] == 'E')
+					mType = 'e';
+				if (k[d] == 'C')
+					mType = 'c';
+				if (k[d] == 'D')
+					mType = 'd';
+				if (k[d] == 'S')
+					mType = 's';
+				++d;
+			}
+			k = k.slice(d);
 		}
 		let name = i == -1 ? k : k.slice(i + 1);
 		this.addEasyValueInternal(statObject, data, name, value, mType, type, lv, mul, base, extraMul);

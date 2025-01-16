@@ -24,7 +24,7 @@ export class CheatManaget{
 	}
 
 	async init(ctx){
-		this.levelMultiplierFunction = await mod.api.BGSCheat.Util.getFunction("return 1+((lv<0)?0:(lv<11)?lv*0.1:(lv<20)?(lv-10)*(lv-9)*0.5+1:100)");
+		this.levelMultiplierFunction = await mod.api.BGSCheat.Util.getFunction("return ((lv<0)?0:(lv<11)?lv*0.1:(lv<20)?(lv-10)*(lv-9)*0.5+1:100)");
 		await this.initSettings();
 		await this.loadSkills(ctx);
 	}
@@ -74,7 +74,7 @@ export class CheatManaget{
 				name: "FormulaInput",
 				label: "Input for Custom Formula",
 				hint: "See custom formula manual at the bottom of the dialog.",
-				default: "[[9,2,0.6,8,0.4,2]]",
+				default: "[[90000,2,0.6,8,0.4,2]]",
 				onChange: (val, prev) => {
 					this.loadMasteryXpSettings(val);
 					this.initLevelTable();

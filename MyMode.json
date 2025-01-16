@@ -278,6 +278,16 @@
 					],
           "behaviours": [
             {
+              "type": "ModifyParameter",
+              "paramName": "maxStacks",
+              "newValue": "max(applicatorParam.maxStacks, p.maxStacks)",
+              "triggersOn": [
+                {
+                  "type": "EffectReapplied"
+                }
+              ]
+            },
+            {
               "type": "ModifyStats",
               "statGroupName": "stacks",
               "newValue": "min(p.initialStacks, p.maxStacks)",
@@ -4875,7 +4885,7 @@
 			},
 			{
 				"id": "Blind",
-				"templateID": "melvorD:StaticSelfCountingModifier",
+				"templateID": "BGSCheat:StaticSelfCountingModifier",
 				"name": "Blind",
 				"media": "assets/media/status/attack_decrease.png",
 				"target": "Target",
@@ -4927,7 +4937,7 @@
 			},
 			{
 				"id": "CrystalSanction",
-				"templateID": "melvorD:StaticSelfCountingModifier",
+				"templateID": "BGSCheat:StaticSelfCountingModifier",
 				"name": "Crystal Sanction",
 				"nameLang": "PASSIVES_NAME_CrystalSanction",
 				"media": "assets/media/status/crystal_sanction.png",
@@ -5100,7 +5110,7 @@
 			},
 			{
 				"id": "Wither",
-				"templateID": "melvorD:StackingNonCountingModifier",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
 				"name": "Wither",
 				"nameLang": "COMBAT_EFFECT_NAME_Wither",
 				"media": "assets/media/status/wither.png",
@@ -5147,7 +5157,7 @@
 			},
 			{
 				"id": "Silence",
-				"templateID": "melvorD:StaticSelfCountingModifier",
+				"templateID": "BGSCheat:StaticSelfCountingModifier",
 				"name": "Silence",
 				"nameLang": "COMBAT_EFFECT_NAME_Silence",
 				"media": "assets/media/status/silence.png",
@@ -5289,7 +5299,7 @@
 			},
 			{
 				"id": "EldritchCurse",
-				"templateID": "melvorD:StaticSelfCountingModifier",
+				"templateID": "BGSCheat:StaticSelfCountingModifier",
 				"name": "Eldritch Curse",
 				"nameLang": "COMBAT_EFFECT_NAME_EldritchCurse",
 				"media": "assets/media/status/eldritch_curse.png",
@@ -5516,7 +5526,7 @@
 			},
 			{
 				"id": "Nulled",
-				"templateID": "melvorD:StaticSelfCountingModifier",
+				"templateID": "BGSCheat:StaticSelfCountingModifier",
 				"name": "Nulled",
 				"nameLang": "COMBAT_EFFECT_NAME_Nulled",
 				"media": "assets/media/status/null.png",
@@ -5765,7 +5775,7 @@
 			},
 			{
 				"id": "Cleansed",
-				"templateID": "melvorD:StaticSelfCountingModifier",
+				"templateID": "BGSCheat:StaticSelfCountingModifier",
 				"name": "Cleansed",
 				"nameLang": "COMBAT_EFFECT_NAME_Cleansed",
 				"media": "assets/media/bank/Cleansing_Ring.png",
@@ -6225,7 +6235,7 @@
 			},
 			{
 				"id": "WrathObelisk",
-				"templateID": "melvorD:StackingNonCountingModifier",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
 				"name": "Wrath Obelisk",
 				"nameLang": "AGILITY_PILLAR_NAME_WrathObelisk",
 				"media": "assets/media/skills/agility/agility.png",
@@ -6257,41 +6267,8 @@
 				]
 			},
 			{
-				"id": "DarkBlade",
-				"templateID": "melvorD:StackingNonCountingModifier",
-				"name": "Dark Blade",
-				"nameLang": "PASSIVES_NAME_DarkBlade",
-				"media": "assets/media/status/attack_increase.png",
-				"target": "Self",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 1000
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"maxHit": 1
-						}
-					}
-				],
-				"effectGroups": [
-					"melvorD:Buff"
-				]
-			},
-			{
 				"id": "ReignOverTime",
-				"templateID": "melvorD:StackingNonCountingModifier",
+				"templateID": "BGSCheat:StackingNonCountingModifier",
 				"name": "Reign Over Time",
 				"nameLang": "PASSIVES_NAME_ReignOverTime",
 				"media": "assets/media/status/attack_increase.png",
@@ -6322,41 +6299,7 @@
 					}
 				],
 				"effectGroups": [
-					"BGSCheat:Buff"
-				]
-			},
-			{
-				"id": "WeakeningTouch",
-				"templateID": "melvorD:StackingNonCountingModifier",
-				"name": "Weakening Touch",
-				"nameLang": "PASSIVES_NAME_WeakeningTouch",
-				"media": "assets/media/status/evasion_decrease.png",
-				"target": "Target",
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 20
-					}
-				],
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"accuracyRating": -5,
-							"evasion": -5
-						}
-					}
-				],
-				"effectGroups": [
-					"BGSCheat:Debuff"
+					"melvorD:Buff"
 				]
 			},
 			{
@@ -6423,100 +6366,6 @@
 				],
 				"effectGroups": [
 					"melvorD:Buff"
-				]
-			},
-			{
-				"id": "AbyssalSpell",
-				"templateID": "melvorD:StackingNonCountingModifier",
-				"name": "Abyssal Spell",
-				"nameLang": "MAGIC_ABYSSAL_NAME_AbyssalBlast",
-				"media": "assets/media/skills/magic/AbyssalBlast.png",
-				"target": "Target",
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"accuracyRating": -2,
-							"maxHit": -2
-						}
-					}
-				],
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 50
-					}
-				],
-				"effectGroups": [
-					"BGSCheat:Debuff"
-				]
-			},
-			{
-				"id": "Sovereignty",
-				"templateID": "melvorD:NonCountingIncremental",
-				"name": "Sovereignty",
-				"nameLang": "PASSIVES_NAME_Sovereignty",
-				"media": "assets/media/status/attack_increase.png",
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"maxHit": 2,
-							"accuracyRating": 2,
-							"evasion": 2
-						}
-					}
-				],
-				"parameters": [
-					{
-						"name": "maxStacks",
-						"initialValue": 100
-					}
-				],
-				"effectGroups": [
-					"BGSCheat:Buff"
-				]
-			},
-			{
-				"id": "WrathOfTheRealm",
-				"templateID": "melvorD:StackingNonCountingModifier",
-				"name": "Wrath of the Realm",
-				"nameLang": "SPECIAL_ATTACK_NAME_WrathOfTheRealm",
-				"media": "assets/media/status/evasion_decrease.png",
-				"target": "Target",
-				"statGroups": [
-					{
-						"name": "stacks",
-						"modifiers": {
-							"accuracyRating": -2,
-							"evasion": -2
-						}
-					}
-				],
-				"parameters": [
-					{
-						"name": "initialStacks",
-						"initialValue": 1
-					},
-					{
-						"name": "stacksToAdd",
-						"initialValue": 1
-					},
-					{
-						"name": "maxStacks",
-						"initialValue": 50
-					}
-				],
-				"effectGroups": [
-					"BGSCheat:Debuff"
 				]
 			},
 			{
@@ -6726,31 +6575,6 @@
         ]
       },
       {
-        "id": "MalevolentBlight",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Malevolent Blight",
-        "nameLang": "SPECIAL_ATTACK_NAME_MalevolentBlightPlayer",
-        "media": "assets/media/status/attack_increase.png",
-        "target": "Self",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "toxinLifesteal": 100
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 5
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Buff"
-        ]
-      },
-      {
         "id": "SilentTangle",
         "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "Silent Tangle",
@@ -6812,7 +6636,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -6840,7 +6664,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -6868,7 +6692,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -6897,7 +6721,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -7079,78 +6903,6 @@
         ]
       },
       {
-        "id": "AbsorbingSkin",
-        "templateID": "melvorD:StackingNonCountingModifier",
-        "name": "AbsorbingSkin",
-        "nameLang": "PASSIVES_NAME_AbsorbingSkin",
-        "media": "assets/media/status/evasion_increase.png",
-        "target": "Self",
-        "parameters": [
-          {
-            "name": "initialStacks",
-            "initialValue": 1
-          },
-          {
-            "name": "stacksToAdd",
-            "initialValue": 1
-          },
-          {
-            "name": "maxStacks",
-            "initialValue": 50
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": 3
-                }
-              ]
-            }
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
-        ]
-      },
-      {
-        "id": "Rage",
-        "templateID": "melvorD:StackingNonCountingModifier",
-        "name": "Rage",
-        "nameLang": "PASSIVES_NAME_Rage",
-        "media": "assets/media/status/attack_increase.png",
-        "target": "Self",
-        "parameters": [
-          {
-            "name": "initialStacks",
-            "initialValue": 1
-          },
-          {
-            "name": "stacksToAdd",
-            "initialValue": 1
-          },
-          {
-            "name": "maxStacks",
-            "initialValue": 50
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "maxHit": 2,
-              "attackInterval": -2
-            }
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Buff"
-        ]
-      },
-      {
         "id": "Spite",
         "templateID": "BGSCheat:NonCountingReductive",
         "name": "Spite",
@@ -7173,134 +6925,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Debuff"
-        ]
-      },
-      {
-        "id": "VoidsEmbrace",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Void's Embrace",
-        "nameLang": "SPECIAL_ATTACK_NAME_VoidsEmbrace",
-        "media": "assets/media/status/speedup.png",
-        "target": "Self",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "attackInterval": -60,
-              "accuracyRating": 100,
-              "evasion": 100
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 5
-          },
-          {
-            "name": "percent",
-            "initialValue": 100
-          }
-        ],
-        "behaviours": [
-          {
-            "type": "HealCharacter",
-            "value": "floor(s.hitpoints * p.percent / 100)",
-            "triggersOn": [
-              {
-                "type": "EffectApplied"
-              },
-              {
-                "type": "EffectReapplied"
-              }
-            ]
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
-        ]
-      },
-      {
-        "id": "CaughtInTheWeb0",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Caught in the Web",
-        "nameLang": "SPECIAL_ATTACK_NAME_CaughtInTheWeb",
-        "media": "assets/media/status/speedup.png",
-        "target": "Self",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 5
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "lifesteal": 1000,
-              "attackInterval": -60
-            }
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
-        ]
-      },
-      {
-        "id": "ShadowAttack",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Shadow Trick",
-        "nameLang": "SPECIAL_ATTACK_NAME_ShadowAttack",
-        "media": "assets/media/status/attack_increase.png",
-        "target": "Self",
-        "statGroups": [
-          {
-            "name": "stacks",
-						"modifiers": {
-							"critChance": 100,
-							"critMultiplier": 100
-						}
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 5
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
-        ]
-      },
-      {
-        "id": "BoneWall",
-        "templateID": "melvorD:StaticTargetCountingModifier",
-        "name": "Bone Wall",
-        "nameLang": "SPECIAL_ATTACK_NAME_BoneWall",
-        "media": "assets/media/status/evasion_increase.png",
-        "target": "Self",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorItA:Abyssal",
-                  "value": 60
-                }
-              ]
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 5
-          }
-        ],
-        "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Debuff"
         ]
       },
       {
@@ -7371,7 +6996,7 @@
       },
       {
         "id": "RevenantHunter0",
-        "templateID": "melvorD:StackingNonCountingModifier",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
         "name": "Revenant Hunter",
         "nameLang": "SPECIAL_ATTACK_NAME_RevenantHunter",
         "media": "assets/media/status/attack_decrease.png",
@@ -7399,12 +7024,12 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Debuff"
+          "melvorD:Debuff"
         ]
       },
       {
         "id": "CarrionMarker0",
-        "templateID": "melvorD:StackingNonCountingModifier",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
         "name": "Carrion Marker",
         "nameLang": "SPECIAL_ATTACK_NAME_CarrionMarker",
         "media": "assets/media/status/evasion_decrease.png",
@@ -7439,7 +7064,7 @@
       },
       {
         "id": "EtheralArrows0",
-        "templateID": "melvorD:StackingSelfCountingModifier",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "Ethereal Arrows",
         "nameLang": "SPECIAL_ATTACK_NAME_EtheralArrows",
         "media": "assets/media/status/evasion_decrease.png",
@@ -7669,7 +7294,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 5
+						"initialValue": 3
 					},
           {
             "name": "turns",
@@ -7746,7 +7371,7 @@
       },
       {
         "id": "ObsidianVoidheartRingI",
-        "templateID": "melvorD:StackingNonCountingModifier",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
         "name": "Obsidian Voidheart Ring I",
         "nameLang": "ITEM_NAME_Obsidian_Voidheart_Ring_I",
         "media": "assets/media/bank/Obsidian_Voidheart_Ring.png",
@@ -7780,7 +7405,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -7825,7 +7450,7 @@
       },
       {
         "id": "AzurianVoidheartAmuletI",
-        "templateID": "melvorD:NonCountingIncremental",
+        "templateID": "BGSCheat:NonCountingIncremental",
         "name": "Azurian Voidheart Amulet I",
         "nameLang": "ITEM_NAME_Azurian_Voidheart_Amulet_I",
         "media": "assets/media/bank/Azurian_Voidheart_Amulet.png",
@@ -7859,7 +7484,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -7898,7 +7523,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -7942,7 +7567,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -7971,7 +7596,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -8015,7 +7640,7 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
@@ -8044,12 +7669,12 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Buff"
+          "melvorD:Buff"
         ]
       },
       {
         "id": "ObzurianRampantPowerAmuletPlayer",
-        "templateID": "melvorD:StackingNonCountingModifier",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
         "name": "Obzurian Rampant Power Amulet",
         "nameLang": "ITEM_NAME_Obzurian_Rampant_Power_Amulet",
         "media": "assets/media/bank/Obzurian_Rampant_Power_Amulet.png",
@@ -8083,7 +7708,7 @@
       },
       {
         "id": "ObzurianRampantPowerAmuletEnemy",
-        "templateID": "melvorD:StackingNonCountingModifier",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
         "name": "Obzurian Rampant Power Amulet",
         "nameLang": "ITEM_NAME_Obzurian_Rampant_Power_Amulet",
         "media": "assets/media/bank/Obzurian_Rampant_Power_Amulet.png",
@@ -8116,12 +7741,12 @@
           }
         ],
         "effectGroups": [
-          "BGSCheat:Debuff"
+          "melvorD:Debuff"
         ]
       },
       {
         "id": "ObzurianUnbreakableDefenderAmulet",
-        "templateID": "melvorD:StackingNonCountingModifier",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
         "name": "Obzurian Unbreakable Defender Amulet",
         "nameLang": "ITEM_NAME_Obzurian_Unbreakable_Defender_Amulet",
         "media": "assets/media/bank/Obzurian_Unbreakable_Defender_Amulet.png",
@@ -8567,26 +8192,6 @@
         "description": "You perform a regular attack. On use, you summon a curse totem that applies a random Curse for 3 turns. Avoidable.",
         "descriptionGenerator": "<Attacker> perform a regular attack. On use, <attacker> summon a curse totem that <prehitEffect>. <Avoidable>.",
         "usesRunesPerProc": false
-      },
-      {
-        "id": "BloodLinkPlayer",
-        "defaultChance": 50,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 80
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [],
-        "cantMiss": true,
-        "attackCount": 6,
-        "attackInterval": 200,
-        "lifesteal": 50,
-        "name": "Blood Link",
-        "description": "An unavoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. Lifesteals for 50% of damage dealt.",
-        "descriptionGenerator": "An unavoidable attack that deals <damage> <count> times over <duration>. Lifesteals for 50% of damage dealt.",
-        "usesRunesPerProc": true
       },
 			{
 				"id": "MySpEnd",

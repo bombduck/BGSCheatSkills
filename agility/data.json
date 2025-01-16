@@ -200,7 +200,7 @@
 					},
 					{
 						"skillID": "melvorD:Agility",
-						"value": { "c": -4 }
+						"value": [ -4 ]
 					}
 				]
 			}
@@ -250,7 +250,7 @@
 					}
 				],
 				"foodHealingValue": 10,
-				"skillXP": { "c": -4 }
+				"skillXP": [ -4 ]
 			}
 		}
 	},
@@ -285,7 +285,7 @@
 				"basePrimaryProductQuantity": [
 					{
 						"skillID": "melvorD:Farming",
-						"value": { "c": -10 }
+						"value": [ -10 ]
 					}
 				]
 			}
@@ -299,7 +299,7 @@
 				"quantity": 66
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"meleeMaxHit": 2,
 				"meleeAccuracyRating": 5,
@@ -321,7 +321,7 @@
 				"quantity": 96
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"ammoPreservationChance": 5,
 				"runePreservationChance": 5,
@@ -338,7 +338,7 @@
 				"quantity": 45
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -357,7 +357,7 @@
 				"quantity": 172
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillItemDoublingChance": [
 					{
@@ -389,7 +389,7 @@
 				"quantity": 82
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"currencyGain": [
 					{
@@ -417,7 +417,7 @@
 				"quantity": 117
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"meleeAccuracyRating": 5,
 				"rangedAccuracyRating": 5,
@@ -435,7 +435,7 @@
 				"quantity": 296
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"currencyGain": [
 					{
@@ -473,7 +473,7 @@
 				"quantity": 91
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillXP": 4,
 				"masteryXP": 3,
@@ -492,7 +492,7 @@
 				"quantity": 565
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillPreservationChance": 5,
 				"ammoPreservationChance": 5,
@@ -508,7 +508,7 @@
 				"quantity": 505
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillInterval": [
 					{
@@ -528,7 +528,7 @@
 				"quantity": 578
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatMaxHitpoints": 5
 			}
@@ -542,7 +542,7 @@
 				"quantity": 521
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"damageDealtToAllMonsters": 5,
 				"flatResistance": [
@@ -563,7 +563,7 @@
 				"quantity": 247
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"basePrimaryProductQuantity": [
 					{
@@ -664,7 +664,7 @@
 				"quantity": 1603
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"damageDealtToMonstersInArea": [
 					{
@@ -689,7 +689,7 @@
 				"quantity": 2619
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"damageDealtToAllMonsters": 2,
 				"flatMaxHitpoints": 2,
@@ -710,7 +710,7 @@
 				"quantity": 2301
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"damageDealtToMonstersInArea": [
 					{
@@ -730,7 +730,7 @@
 				"quantity": 2360
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": 5,
 				"skillXP": [ -6 ]
@@ -745,7 +745,7 @@
 				"quantity": 1228
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillXP": 5,
 				"masteryXP": [ -6 ]
@@ -760,7 +760,7 @@
 				"quantity": 3488
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatMonsterRespawnInterval": -300,
 				"flatResistance": [
@@ -782,7 +782,7 @@
 				"quantity": 888
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": 3,
 				"meleeMaxHit": 8,
@@ -799,7 +799,7 @@
 				"quantity": 3898
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillPreservationChance": 10,
 				"foodHealingValue": 5,
@@ -817,7 +817,7 @@
 				"quantity": 604
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"prayerPointPreservationChance": 10,
 				"ammoPreservationChance": 10,
@@ -834,7 +834,7 @@
 				"quantity": 1086
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"damageDealtToAllMonsters": 3,
 				"autoEatEfficiency": 10,
@@ -861,7 +861,7 @@
 				"quantity": 7626
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillInterval": [
 					{
@@ -892,7 +892,7 @@
 				"quantity": 2915
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillPreservationChance": 10,
 				"ammoPreservationChance": 5,
@@ -909,7 +909,7 @@
 				"quantity": 3257
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": 8
 			}
@@ -923,7 +923,7 @@
 				"quantity": 7175
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatMonsterRespawnInterval": -300,
 				"autoEatEfficiency": [ -16 ]
@@ -938,7 +938,7 @@
 				"quantity": 3380
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"damageDealtToAllMonsters": 5,
 				"autoEatEfficiency": 5,
@@ -959,7 +959,7 @@
 				"quantity": 252
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -990,7 +990,7 @@
 				"quantity": 2399
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillPreservationChance": [
 					{
@@ -1020,7 +1020,7 @@
 				"quantity": 56
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillXP": [
 					{
@@ -1048,7 +1048,7 @@
 				"quantity": 2200
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -1076,7 +1076,7 @@
 				"quantity": 288
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillXP": [
 					{
@@ -1103,7 +1103,7 @@
 		}
 	},
 	"melvorF:PillarofCombat": {
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"meleeEvasion": 10,
 				"rangedEvasion": 10,
@@ -1116,7 +1116,7 @@
 		}
 	},
 	"melvorF:PillarofSkilling": {
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"basePrimaryProductQuantity": [
 					{
@@ -1132,7 +1132,7 @@
 		}
 	},
 	"melvorF:PillarofGenerosity": {
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"bankSpace": 10,
 				"potionChargePreservationChance": 10,
@@ -1155,7 +1155,7 @@
 				"quantity": 7044
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -1177,7 +1177,7 @@
 				"quantity": 8269
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatMonsterRespawnInterval": -100,
 				"flatResistance": [
@@ -1200,7 +1200,7 @@
 				"quantity": 5130
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"globalItemDoublingChance": 10,
 				"skillXP": [ -10 ]
@@ -1215,7 +1215,7 @@
 				"quantity": 4341
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillXP": [
 					{
@@ -1243,7 +1243,7 @@
 				"quantity": 5111
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"damageDealtToMonstersInArea": [
 					{
@@ -1254,7 +1254,7 @@
 				"combatLootDoublingChance": [ -20 ]
 			}
 		},
-		"0u:enemyModifiers": {
+		"NenemyModifiers": {
 			"add": {
 				"flatResistance": [
 					{
@@ -1273,7 +1273,7 @@
 				"quantity": 5478
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"minHitBasedOnMaxHit": 5,
 				"flatAttackInterval": -100,
@@ -1289,7 +1289,7 @@
 				"quantity": 9164
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"potionChargePreservationChance": 15,
 				"skillPreservationChance": [
@@ -1315,7 +1315,7 @@
 				"quantity": 8552
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatBasePrimaryProductQuantity": [
 					{
@@ -1342,7 +1342,7 @@
 				"quantity": 6204
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"basePrimaryProductQuantity": [
 					{
@@ -1376,7 +1376,7 @@
 				"quantity": 6628
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"agilityObstacleCost": [
 					{
@@ -1408,7 +1408,7 @@
 				"quantity": 9080
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"damageDealtToBosses": 8,
 				"masteryXP": [
@@ -1428,7 +1428,7 @@
 				"quantity": 8387
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -1449,7 +1449,7 @@
 				"quantity": 8682
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"currencyGain": [
 					{
@@ -1470,7 +1470,7 @@
 				"quantity": 7567
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"potionChargePreservationChance": 5,
 				"summoningChargePreservationChance": 5,
@@ -1487,7 +1487,7 @@
 				"quantity": 9844
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"globalItemDoublingChance": 5,
 				"skillInterval": [
@@ -1514,7 +1514,7 @@
 				"quantity": 9274
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"thievingStealth": 75,
 				"currencyGain": [
@@ -1538,7 +1538,7 @@
 				"quantity": 7123
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillInterval": [
 					{
@@ -1570,7 +1570,7 @@
 				"quantity": 10357
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"evasion": 30,
 				"accuracyRating": 30,
@@ -1598,7 +1598,7 @@
 				"quantity": 6659
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"currencyGain": [
 					{
@@ -1628,7 +1628,7 @@
 				"quantity": 10897
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -1661,7 +1661,7 @@
 				"quantity": 11571
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"autoEatThreshold": 3,
 				"autoEatEfficiency": 15,
@@ -1688,7 +1688,7 @@
 				"quantity": 13542
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -1708,7 +1708,7 @@
 				"quantity": 11556
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"attackRolls": 1,
 				"flatMaxHitpoints": [ -10 ],
@@ -1729,7 +1729,7 @@
 				"quantity": 10103
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatSkillInterval": [
 					{
@@ -1772,7 +1772,7 @@
 				"quantity": 9899
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillPreservationChance": [
 					{
@@ -1790,7 +1790,7 @@
 		}
 	},
 	"melvorTotH:ElitePillarOfConflict": {
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"hitpointRegeneration": 50,
 				"lifesteal": 10,
@@ -1807,7 +1807,7 @@
 		}
 	},
 	"melvorTotH:ElitePillarOfEndowment": {
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"potionChargePreservationChance": 20,
 				"summoningChargePreservationChance": 20,
@@ -1823,7 +1823,7 @@
 		}
 	},
 	"melvorTotH:ElitePillarOfExpertise": {
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -1850,7 +1850,7 @@
 				"quantity": 45
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"cartographySurveyInterval": -5,
 				"mapRefinementCost": -5,
@@ -1871,7 +1871,7 @@
 				"quantity": 80
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"melvorAoD:mapChargePreservationChance": 5,
 				"skillXP": [
@@ -1897,7 +1897,7 @@
 				"quantity": 1560
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"mapRefinementCost": -10,
 				"skillItemDoublingChance": [
@@ -1927,7 +1927,7 @@
 				"quantity": 26
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"abyssalSkillXP": [
 					{
@@ -1958,7 +1958,7 @@
 				"quantity": 11
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"abyssalSkillXP": [
 					{
@@ -1978,7 +1978,7 @@
 				"quantity": 27
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatHiddenSkillLevel": [
 					{
@@ -2004,7 +2004,7 @@
 				"quantity": 73
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"maxHitAgainstDamageType": [
 					{
@@ -2027,7 +2027,7 @@
 				"skillPreservationChance": [ -10 ]
 			}
 		},
-		"0u:enemyModifiers": {
+		"NenemyModifiers": {
 			"add": {
 				"flatResistance": [
 					{
@@ -2046,7 +2046,7 @@
 				"quantity": 63
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"abyssalSkillXP": 4,
 				"additionalPrimaryProductChance": [
@@ -2071,7 +2071,7 @@
 				"quantity": 56
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"thievingStealth": [
 					{
@@ -2103,7 +2103,7 @@
 				"quantity": 149
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatResistance": [
 					{
@@ -2130,7 +2130,7 @@
 				"quantity": 117
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatAdditionalPrimaryProductQuantity": [
 					{
@@ -2163,7 +2163,7 @@
 				"quantity": 194
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"ammoPreservationChance": 5,
 				"runePreservationChance": 5,
@@ -2192,7 +2192,7 @@
 				"quantity": 347
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"abyssalSkillXP": [
 					{
@@ -2226,7 +2226,7 @@
 				"quantity": 385
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"abyssalSkillXP": 3,
 				"abyssalGemChance": 0.5,
@@ -2248,7 +2248,7 @@
 				"quantity": 400
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatAbyssalSlayerAreaEffectNegation": 10,
 				"currencyGain": [
@@ -2281,7 +2281,7 @@
 				"quantity": 1943
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatAdditionalPrimaryProductQuantity": [
 					{
@@ -2314,7 +2314,7 @@
 				"quantity": 941
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"additional8PrimaryProductChance": [
 					{
@@ -2342,7 +2342,7 @@
 				"quantity": 1178
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"soulPointPreservationChance": 10,
 				"doubleSoulDropChance": 10,
@@ -2358,7 +2358,7 @@
 				"quantity": 3933
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"abyssalSkillXP": [
 					{
@@ -2389,7 +2389,7 @@
 				"quantity": 1777
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"abyssalSkillXP": [
 					{
@@ -2416,7 +2416,7 @@
 				"quantity": 1354
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"accuracyRating": 20,
 				"minHitBasedOnMaxHit": 10,
@@ -2433,7 +2433,7 @@
 				"quantity": 8566
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"potionChargePreservationChance": 10,
 				"additionalPrimaryProductChance": [
@@ -2467,7 +2467,7 @@
 				"quantity": 6156
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"thievingStealth": [
 					{
@@ -2499,7 +2499,7 @@
 				"quantity": 5757
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"autoEatEfficiency": 5,
 				"skillInterval": [
@@ -2531,7 +2531,7 @@
 				"quantity": 8499
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatResistance": [
 					{
@@ -2553,7 +2553,7 @@
 				"quantity": 9881
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatAdditionalPrimaryProductQuantity": [
 					{
@@ -2594,7 +2594,7 @@
 				"quantity": 10628
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillCostReduction": [
 					{
@@ -2614,7 +2614,7 @@
 				"quantity": 17862
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatAdditionalPrimaryProductQuantity": [
 					{
@@ -2648,7 +2648,7 @@
 				"quantity": 26694
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"abyssalSkillXP": [
 					{
@@ -2680,7 +2680,7 @@
 				"quantity": 11741
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"additionalPrimaryProductChance": [
 					{
@@ -2716,7 +2716,7 @@
 				"quantity": 26665
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"currencyGain": [
 					{
@@ -2748,7 +2748,7 @@
 				"quantity": 13841
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatBasePrimaryProductQuantityChance": [
 					{
@@ -2786,7 +2786,7 @@
 				"quantity": 8465
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"masteryXP": [
 					{
@@ -2817,7 +2817,7 @@
 				"quantity": 29651
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatBasePrimaryProductQuantity": [
 					{
@@ -2848,7 +2848,7 @@
 				"quantity": 17051
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatResistance": [
 					{
@@ -2869,7 +2869,7 @@
 				"quantity": 15350
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillCostReduction": [
 					{
@@ -2889,13 +2889,13 @@
 				"quantity": 43500
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"damageDealtToBosses": 10,
 				"minHitBasedOnMaxHit": 5
 			}
 		},
-		"0u:enemyModifiers": {
+		"NenemyModifiers": {
 			"add": {
 				"flatResistance": [
 					{
@@ -2914,7 +2914,7 @@
 				"quantity": 61890
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatAdditionalPrimaryProductQuantity": 1,
 				"skillPreservationCap": [
@@ -2940,7 +2940,7 @@
 				"quantity": 73040
 			}
 		],
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillInterval": [
 					{
@@ -2963,7 +2963,7 @@
 		}
 	},
 	"melvorItA:WrathObelisk": {
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"flatAbyssalSlayerAreaEffectNegation": 30,
 				"currencyGain": [
@@ -3007,7 +3007,7 @@
 			"BGSCheat:WrathObelisk", 7, [ 100 ], [ 1, 1, 1 ], 0, "CUSTOM_APPLICATOR_WrathObelisk" ]
 	},
 	"melvorItA:GreedObelisk": {
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"skillCostReduction": [
 					{
@@ -3047,7 +3047,7 @@
 		}
 	},
 	"melvorItA:SlothObelisk": {
-		"0u:modifiers": {
+		"Nmodifiers": {
 			"add": {
 				"currencyGain": [
 					{

@@ -1,80 +1,81 @@
 {
 	"Base": {
-		"u:matks": [ 1, 1, 1, 1, 1 ],
-		"u:mstrs": [1,1,1],
-		"u:mdefs": [1,1,1],
-		"u:msums": [1,1,1]
+		"Omatks": [ 1, 1, 1, 1, 1 ],
+		"Omstrs": [ 1, 1, 1 ],
+		"Omdefs": [ 1, 1, 1 ]
 	},
 	"Unholy1": {
 		"base": "Base",
-		"10allow": [0,0,1],
-		"10atkeffect": [1],
-		"10cbeasy": ["melvorAoD:UnholyMark",3]
+		"10allow": [ 0, 0, 1 ],
+		"10atkeffect": [ 1 ],
+		"10cbeasy": [ "melvorAoD:UnholyMark", 3 ]
 	},
 	"Unholy2": {
 		"base": "Base",
-		"5allow": [0,0,1],
-		"5atkeffect": [1],
-		"5cbeasy": ["melvorAoD:UnholyMark",3],
+		"5allow": [ 0, 0, 1 ],
+		"5atkeffect": [ 1 ],
+		"5cbeasy": [ "melvorAoD:UnholyMark", 3 ],
 		"10cbeasy": [ "10unholy", 3 ]
 	},
 	"Unholy3": {
 		"base": "Base",
-		"3allow": [0,0,1],
-		"3atkeffect": [1],
-		"3cbeasy": ["melvorAoD:UnholyMark",3],
-		"6allow": [0,0,2],
-		"6cbeasy": [ "10unholy", 3 ],
-		"10atkeffect": [2],
-		"10cbeasy": [ "20unholy", 3 ]
+		"5allow": [ 0, 0, 1 ],
+		"5atkeffect": [ 1 ],
+		"5cbeasy": [ "10unholy", 3 ],
+		"10atkeffect": [ 2 ]
 	},
 	"Unholy4": {
 		"base": "Base",
-		"3allow": [0,0,1],
-		"3atkeffect": [1],
-		"3cbeasy": ["melvorAoD:UnholyMark",3],
-		"5allow": [0,0,2],
-		"5u:atkeffect": [3],
-		"10uc:cbeasy": [ "10unholy", 3 ]
+		"5allow": [ 0, 0, 1 ],
+		"5atkeffect": [ 1 ],
+		"5Ucbeasy": [ "20unholy", 3 ],
+		"10Uatkeffect": [ 2 ]
 	},
 	"Unholy5": {
 		"base": "Base",
-		"5u:corrupt": [10,5],
-		"10u:corrupt": [5,10]
+		"5Ucorrupt": [ 10, 5 ],
+		"10Ucorrupt": [ 5, 10 ]
 	},
 	"TotHD": {
 		"5slayer": [ 60 ],
 		"5summon": [ 0, -5, 80 ],
-		"5barrier": [0, 30, 50]
+		"5barrier": [ 0, 30, 50 ]
 	},
 	"TotHD2": {
-		"5u:slayer": [ 60 ],
-		"5u:summon": [ 0, -5, 80 ],
-		"5u:barrier": [0, 30, 50]
+		"5Uslayer": [ 60 ],
+		"5Usummon": [ 0, -5, 80 ],
+		"5Ubarrier": [ 0, 30, 50 ]
+	},
+	"AbyD": {
+		"Uress": [ 0, 3 ],
+		"5Uslayer": [ 0, 10 ],
+		"5Usummon": [ 0, -5, 100 ]
 	},
 	"body": {
-		"u:hp": [ 0, [ -5, 0, 5 ] ]
+		"Uhp": [ 0, 5 ]
 	},
 	"legs": {
-		"u:hp": [ [ -5, 0, 5 ] ]
+		"Mhp": [ 5 ]
+	},
+	"shield": {
+		"UdmgTaken": [ -5 ]
 	},
 	"tier1": {
 		"base": "Base",
-		"1v:modifiers": {
+		"1Vmodifiers": {
 			"add": {
 				"bankSpace": 5
 			}
 		},
-		"4u:sp-currg2": [ 0, 0, 100 ],
-		"6u:sp-currs2": [ 0, 0, 50 ],
-		"10u:sp-currg": [0, 50],
-		"10u:sp-currs": [0, 50]
+		"4Ucurrency2": [ 0, 0, 100, "gp" ],
+		"6Ucurrency2": [ 0, 0, 100, "sc" ],
+		"10Ucurrency": [ 0, 50, "gp", "sc" ]
 	},
 	"staff1": {
 		"base": "tier1",
 		"2barrier": [3],
-		"ress": [ [ -1, 0, 1 ] ],
-		"u:maghits": [1,2]
+		"Uress": [ 1 ],
+		"Mmaghits": [1,2]
 	},
 	"melvorF:Staff_of_Air": {
 		"base": "staff1",
@@ -96,33 +97,33 @@
 	},
 	"staff4": {
 		"base": "Uhholy1",
-		"ress": [ [ -4, 0, 4 ] ],
-		"u:maghits": [4,8]
+		"Uress": [ 4 ],
+		"Mmaghits": [4,8]
 	},
 	"melvorD:Air_Battlestaff": {
 		"base": "staff4",
 		"5OuniqueAttack": { "id": "NaturesCall" },
-		"10UdebuffAuto": ["20taken", 2, 30]
+		"10UdebuffAuto": ["20taken", 2, 20]
 	},
 	"melvorD:Water_Battlestaff": {
 		"base": "staff4",
 		"5OuniqueAttack": { "id": "ElementalImpactFrostburn" },
-		"10Udebuff": ["fspd", 2, 30]
+		"10Udebuff": ["fspd", 2, 20]
 	},
 	"melvorD:Earth_Battlestaff": {
 		"base": "staff4",
 		"5OuniqueAttack": { "id": "ElementalImpactStun" },
-		"10Ubuff": ["hp", 2, 30]
+		"10Ubuff": ["hp", 2, 20]
 	},
 	"melvorD:Fire_Battlestaff": {
 		"base": "staff4",
 		"5OuniqueAttack": { "id": "ElementalImpactBurn" },
-		"10Ucbeasy": ["Weakening", 2, 30]
+		"10Ucbeasy": ["Weakening", 2, 20]
 	},
 	"melvorAoD:Crystal_Battlestaff": {
 		"base": "staff4",
-		"5u:uniqueAtks": [ { "id": "CrystalBlast" }, {"id": "Whirlpool"}, {"id": "CrushingWaves"} ],
-		"10cc:cbeasy": ["c",
+		"5OuniqueAtks": [ { "id": "CrystalBlast" }, {"id": "Whirlpool"}, {"id": "CrushingWaves"} ],
+		"10cbeasy": ["c",
 			[ "melvorAoD:Malice", 7, 100, { "sm": 10, "sa": 10  } ],
 			[ "melvorAoD:GrudgePlayer", 7, 100, { "sm": 10, "sa":10  } ],
 			[ "melvorAoD:GrudgeEnemy", 7, 100, { "si": 10 } ],
@@ -132,32 +133,32 @@
 	},
 	"staff7": {
 		"base": "Uhholy2",
-		"ress": [ [ -7, 0, 7 ] ],
-		"u:maghits": [7,14]
+		"Uress": [ 7 ],
+		"Mmaghits": [7,14]
 	},
 	"melvorD:Mystic_Air_Staff": {
 		"base": "staff7",
 		"5OuniqueAttack": { "id": "SpiritPower" },
-		"10Ucbeasy": [["Burn"], 3, 10]
+		"10Ucbeasy": [["Burn"], 3, 30]
 	},
 	"melvorF:Mystic_Water_Staff": {
 		"base": "staff7",
 		"5OuniqueAttack": { "id": "FreezeRay" },
-		"10Ucbeasy": [["Frostburn"], 3, 30]
+		"10Ucbeasy": [ [ "Frostburn" ], 3, 30, { "t": 5 } ]
 	},
 	"melvorF:Mystic_Earth_Staff": {
 		"base": "staff7",
 		"5OuniqueAttack": { "id": "NaturesWrath" },
-		"10UbuffAuto": ["25spd", 2, 35, {"t": 2}]
+		"10UbuffAuto": ["25spd", 2, 30, {"t": 4}]
 	},
 	"melvorF:Mystic_Fire_Staff": {
 		"base": "staff7",
 		"5OuniqueAttack": { "id": "TripleDamage" },
-		"10Ucbeasy": [["Anguish"], 2, 25]
+		"10Ucbeasy": [["Anguish"], 2, 30]
 	},
 	"wand7": {
 		"base": "Uhholy2",
-		"u:maghits": [7,14]
+		"Mmaghits": [7,14]
 	},
 	"melvorF:Air_Imbued_Wand": {
 		"base": "wand7",
@@ -183,40 +184,41 @@
 					]
 				}
 			],
-			"attackInterval": { "c": 50 }
+			"attackInterval": [ 50 ]
 		},
-		"10Udebuff": [ "taken", 3, 15 ]
+		"10Udebuff": [ "taken", 3, 30 ]
 	},
 	"melvorF:Water_Imbued_Wand": {
 		"base": "wand7",
 		"5OuniqueAttack": { "id": "UnlimitedSlappingPower", "attackInterval": {"c": 50} },
-		"10Ucbeasy": [["Fear"], 2, 20]
+		"10Ucbeasy": [["1Fear"], 2, 30]
 	},
 	"melvorF:Earth_Imbued_Wand": {
 		"base": "wand7",
 		"5OuniqueAttack": { "id": "BruteForce" },
-		"10Ubuff": [["fspd"], 2, 25]
+		"10Ubuff": [["fspd"], 2, 30]
 	},
 	"melvorF:Fire_Imbued_Wand": {
 		"base": "wand7",
 		"5OuniqueAttack": { "id": "UnlimitedSlappingPower", "attackInterval": {"c": 50} },
-		"10Ucbeasy": [["Burn"], 2, 10]
+		"10Ucbeasy": [["Burn"], 2, 20]
 	},
 	"melvorAoD:Mystic_Pure_Crystal_Staff": {
 		"base": "staff7",
-		"5u:uniqueAttack": { "id": "CrystalTomb" },
-		"10u:cbeasy": [["Fatigue","Petrified"], 2, 20]
+		"5OuniqueAttack": { "id": "CrystalTomb" },
+		"10Ucbeasy": [["Fatigue","Petrified"], 2, 15]
 	},
 	"melvorAoD:Unholy_Staff": {
 		"base": "Base",
-		"ress": [ [ -7, 0, 7 ] ],
-		"u:maghits": [7,14],
-		"5u:atkeffect": [5],
+		"Uress": [ 7 ],
+		"Mmaghits": [7,14],
+		"5Uatkeffect": [3],
+		"5Ucbeasy": [ "20unholy", 3 ],
 		"5OuniqueAttack": { "id": "WaterPulsePlayer" }
 	},
 	"melvorAoD:Cursed_Staff": {
 		"base": "melvorAoD:Unholy_Staff",
-		"10u:cbeasy": ["c",
+		"10Ucbeasy": ["c",
 			[ "10Malice", 7, 100 ],
 			[ "10Destruction", 7, 100],
 			[ "10Spite", 7, 100 ],
@@ -226,63 +228,63 @@
 	},
 	"melvorTotH:Poison_Staff": {
 		"base": "Unholy4",
-		"ress": [ [ -12, 0, 12 ] ],
-		"u:maghits": [ [ 0, 0, 100, 100 ], "s","melvorTotH:Poison"],
-		"5u:uniqueAtks": [ { "id": "PoisonPods" }, {"id": "NaturesBloom"} ],
-		"10u:cbeasy": [ [ "100Poison", "100Deadly" ], 2, 25 ]
+		"Uress": [ 8 ],
+		"Mmaghits": [0, 0, 100, 100, "poison"],
+		"5OuniqueAtks": [ { "id": "PoisonPods" }, {"id": "NaturesBloom"} ],
+		"10Ucbeasy": [ [ "100Poison", "100Deadly" ], 2, 30 ]
 	},
 	"melvorTotH:Infernal_Staff": {
 		"base": "Unholy4",
-		"ress": [ [ -12, 0, 12 ] ],
-		"u:maghits": [ [ 0, 0, 100, 100 ], "s","melvorTotH:Infernal"],
-		"5u:uniqueAtks": [ { "id": "GiantFireball" }, {"id": "InfernalPower"} ],
-		"10u:cbeasy": [ [ "100Burn", "Freeze" ], 2, 25 ]
+		"Uress": [ 9 ],
+		"Mmaghits": [ 0, 0, 100, 100, "infernal"],
+		"5OuniqueAtks": [ { "id": "GiantFireball" }, {"id": "InfernalPower"} ],
+		"10Ucbeasy": [ [ "100Burn", "Freeze" ], 2, 30 ]
 	},
 	"melvorTotH:Lightning_Staff": {
 		"base": "Unholy4",
-		"ress": [ [ -12, 0, 12 ] ],
-		"u:maghits": [ [ 0, 0, 100, 100 ], "s","melvorTotH:Lightning"],
-		"5u:uniqueAtks": [ { "id": "ThunderStrike" }, {"id": "DragonStormCall"} ],
-		"10u:cbeasy": [ [ "BGSCheat:Shock","Stun" ], 2, 25 ]
+		"Uress": [ 10 ],
+		"Mmaghits": [ [ 0, 0, 100, 100 ], "s","lightning"],
+		"5OuniqueAtks": [ { "id": "ThunderStrike" }, {"id": "DragonStormCall"} ],
+		"10Ucbeasy": [ [ "BGSCheat:Shock","Stun" ], 2, 30 ]
 	},
 	"melvorTotH:Meteorite_Staff": {
 		"base": "Unholy4",
-		"ress": [ [ -12, 0, 12 ] ],
-		"u:maghits": [ [ 0, 0, 100, 100 ], "s","melvorTotH:Infernal"],
-		"5u:uniqueAttack": { "id": "MeteorShowerArchaic","damage": [{"amplitude": 140}] },
-		"10u:cbeasy": [ "Nulled", 2, 30 ]
+		"Uress": [ 10 ],
+		"Mmaghits": [ 0, 0, 100, 100, "infernal"],
+		"5OuniqueAttack": { "id": "MeteorShowerArchaic","damage": [{"amplitude": 140}] },
+		"10Ucbeasy": [ "Nulled", 2, 30 ]
 	},
 	"melvorTotH:Despair_Wand": {
 		"base": "Unholy4",
-		"u:maghits": [ 50, 100, 50, 50 ],
-		"5c:spellcost": [[0,0,-10],"s","melvorTotH:Despair_Rune"],
-		"5u:uniqueAttack": { "id": "TsunamiArchaic" },
-		"10c:spellcost": [[0,0,-20],"s","melvorTotH:Despair_Rune"],
-		"10u:cbeasy": [ "1Despair", 2, 10, { "t": 3 } ]
+		"Mmaghits": [ 50, 100, 50, 50 ],
+		"5spellcost": [0,0,-10,"melvorTotH:Despair_Rune"],
+		"5OuniqueAttack": { "id": "TsunamiArchaic" },
+		"10spellcost": [0,0,-20,"melvorTotH:Despair_Rune"],
+		"10Ucbeasy": [ "1Despair", 2, 30, { "t": 3 } ]
 	},
 	"melvorTotH:Archaic_Wand": {
 		"base": "Unholy4",
-		"u:maghits": [ 50, 100, 50, 50 ],
-		"5c:spellcost": [[0,0,-10],"s","melvorTotH:Archaic_Rune"],
-		"5u:uniqueAttack": { "id": "Soulash" },
-		"10c:spellcost": [[0,0,-20],"s","melvorTotH:Archaic_Rune"],
-		"10u:cbeasy": [ "1Madness", 2, 10, { "t": 3 } ]
+		"Mmaghits": [ 50, 100, 50, 50 ],
+		"5spellcost": [0,0,-10,"melvorTotH:Archaic_Rune"],
+		"5OuniqueAttack": { "id": "Soulash" },
+		"10spellcost": [0,0,-20,"melvorTotH:Archaic_Rune"],
+		"10Ucbeasy": [ "1Madness", 2, 30, { "t": 3 } ]
 	},
 	"melvorTotH:Calamity_Wand": {
 		"base": "Unholy4",
-		"u:maghits": [ 50, 100, 50, 50 ],
-		"5c:spellcost": [[0,0,-10],"s","melvorTotH:Calamity_Rune"],
-		"5u:uniqueAttack": { "id": "SlicingMaelstromArchaic" },
-		"10c:spellcost": [[0,0,-20],"s","melvorTotH:Calamity_Rune"],
-		"10u:cbeasy": [ "1Torment", 2, 10, { "t": 3 } ]
+		"Mmaghits": [ 50, 100, 50, 50 ],
+		"5spellcost": [0,0,-10,"melvorTotH:Calamity_Rune"],
+		"5OuniqueAttack": { "id": "SlicingMaelstromArchaic" },
+		"10spellcost": [0,0,-20,"melvorTotH:Calamity_Rune"],
+		"10Ucbeasy": [ "1Torment", 2, 30, { "t": 3 } ]
 	},
 	"melvorItA:Abyssal_Staff": {
 		"base": "Unholy5",
-		"ress": [ 0, [-3,0,3] ],
-		"u:maghits": [ [ 0, 0, 200, 100 ], "s","melvorItA:Abyssal"],
-		"5u:uniqueAttack": {
+		"Uress": [ 0, 3 ],
+		"Mmaghits": [ 0, 0, 200, 100 ,"abyssal"],
+		"5OuniqueAttack": {
 			"id": "ConsumingGrasp",
-			"attackInterval": {"c": 50},
+			"attackInterval": [50],
 			"onhitEffects": [
 				{
 					"effectID": "BGSCheat:ConsumingGrasp",
@@ -307,18 +309,18 @@
 				}
 			]
 		},
-		"10u:buff": [ "hp", 2, 25 ]
+		"10Ubuff": [ "hp", 2, 50 ]
 	},
 	"melvorItA:Lacerating_Staff": {
 		"base": "melvorItA:Abyssal_Staff",
-		"10u:cbeasy": [ "30Lace", 3, 25 ]
+		"10Ucbeasy": [ "30Lace", 3, 50 ]
 	},
 	"melvorItA:Abyssal_Wand": {
 		"base": "Unholy5",
-		"u:maghits": [ [ 0, 0, 100, 50 ], "s","melvorItA:Abyssal"],
-		"5u:uniqueAttack": {
+		"Mmaghits": [ 0, 0, 100, 50, "abyssal"],
+		"5OuniqueAttack": {
 			"id": "VoidVortexPlayer",
-			"attackInterval": { "c": 50 },
+			"attackInterval": [50],
 			"onhitEffects": [
 				{
 					"effectID": "BGSCheat:Slow",
@@ -331,13 +333,13 @@
 				}
 			]
 		},
-		"10u:cbeasy": [ "EldritchCurse", 3, 25 ]
+		"10Ucbeasy": [ "EldritchCurse", 3, 30 ]
 	},
 	"melvorItA:Brume_Staff": {
 		"base": "Unholy5",
-		"ress": [ 0, [-6,0,6] ],
-		"u:maghits": [ [ 0, 0, 200, 100 ], "s","melvorItA:Brume"],
-		"5u:uniqueAttack": {
+		"Uress": [ 0, 6 ],
+		"Mmaghits": [ 0, 0, 200, 100 ,"brume"],
+		"5OuniqueAttack": {
 			"id": "VoidfireVolley",
 			"onhitEffects": [
 				{
@@ -358,14 +360,14 @@
 					]
 				}
 			],
-	    "attackInterval": { "c": 50 }
+	    "attackInterval": [50]
 		},
-		"10u:cbeasy": ["10Blight", 2, 15]
+		"10Ucbeasy": ["10Blight", 2, 20]
 	},
 	"melvorItA:Brume_Wand": {
 		"base": "Unholy5",
-		"u:maghits": [ [ 0, 0, 100, 50 ], "s","melvorItA:Brume"],
-		"5u:uniqueAttack": {
+		"Mmaghits": [ 0, 0, 100, 50, "brume"],
+		"5OuniqueAttack": {
 			"id": "ToxicBlastPlayer",
 			"onhitEffects": [
 				{
@@ -379,17 +381,17 @@
 				}
 			]
 		},
-		"10u:cbeasy": [ "Silence", 3, 100 ]
+		"10Ucbeasy": [ "3Silence", 3, 100 ]
 	},
 	"melvorItA:Toxic_Fumes_Wand": {
 		"base": "melvorItA:Brume_Wand",
-		"10u:cbeasy": [ "Crystallize", 3, 100 ]
+		"10Ucbeasy": [ "2Crystallize", 3, 100 ]
 	},
 	"melvorItA:Gloom_Staff": {
 		"base": "Unholy5",
-		"ress": [ 0, [-9,0,9] ],
-		"u:maghits": [ [ 0, 0, 200, 100 ], "s","melvorItA:Gloom"],
-		"5u:uniqueAttack": {
+		"Uress": [ 0, 9 ],
+		"Mmaghits": [ 0, 0, 200, 100, "gloom"],
+		"5OuniqueAttack": {
 			"id": "BlackHole",
 			"damage": [
 				{
@@ -416,19 +418,19 @@
 				}
 			]
 		},
-		"10u:cbeasy": [ "100Toxin", 3, 25 ]
+		"10Ucbeasy": [ "100Toxin", 3, 40 ]
 	},
 	"melvorItA:Gloom_Wand": {
 		"base": "Unholy5",
-		"u:maghits": [ [ 0, 0, 100, 50 ], "s","melvorItA:Gloom"],
-		"5u:uniqueAttack": { "id": "WitherSporesPlayer" },
-		"10u:cbeasy": [ [ "100Ablaze" ], 3, 100 ]
+		"Mmaghits": [ 0, 0, 100, 50,"gloom"],
+		"5OuniqueAttack": { "id": "WitherSporesPlayer" },
+		"10Ucbeasy": [ [ "100Ablaze" ], 3, 40 ]
 	},
 	"melvorItA:Wither_Staff": {
 		"base": "Unholy5",
-		"ress": [ 0, [-12,0,12] ],
-		"u:maghits": [ [ 0, 0, 200, 100 ], "s","melvorItA:Wither"],
-		"5u:uniqueAttack": {
+		"Uress": [ 0, 12 ],
+		"Mmaghits": [ 0, 0, 200, 100,"wither"],
+		"5OuniqueAttack": {
 			"id": "NullSphere",
 			"damage": [
 				{
@@ -455,33 +457,33 @@
 				}
 			]
 		},
-		"10u:buff": [ [ "5spd" ], 3, 100 ]
+		"10Ubuff": [ [ "5spd" ], 3, 100 ]
 	},
 	"melvorItA:Wither_Wand": {
 		"base": "Unholy5",
-		"u:maghits": [ [ 0, 0, 100, 50 ], "s","melvorItA:Wither"],
-		"5u:uniqueAttack": { "id": "TendrilSlam" },
-		"10u:cbeasy": [ [ "10Wither" ], 3, 100 ]
+		"Mmaghits": [0, 0, 100, 50, "wither"],
+		"5OuniqueAttack": { "id": "TendrilSlam" },
+		"10Ucbeasy": [ [ "10Wither" ], 3, 60 ]
 	},
 	"melvorItA:Nether_Staff": {
 		"base": "Unholy5",
-		"ress": [ 0, [-15,0,15] ],
-		"u:maghits": [ [ 0, 0, 200, 100 ], "s","melvorItA:Nether"],
-		"5u:uniqueAttack": {
-			"id": "TerrorBeam", "attackCount": [ 10 ], "attackInterval": [ 50 ]
+		"Uress": [ 0, 15 ],
+		"Mmaghits": [ 0, 0, 200, 100,"nether"],
+		"5OuniqueAttack": {
+			"id": "TerrorBeam", "attackCount": [ 40 ], "attackInterval": [ 50 ]
 		},
-		"10u:buff": [ [ "5dmg" ], 3, 100 ]
+		"10Ubuff": [ [ "5dmg" ], 3, 40 ]
 	},
 	"melvorItA:Nether_Wand": {
 		"base": "Unholy5",
-		"u:maghits": [ [ 0, 0, 100, 50 ], "s","melvorItA:Nether"],
-		"5u:uniqueAttack": { "id": "Madness" },
-		"10u:cbeasy": [ [ "3EldritchCurse" ], 3, 100 ]
+		"Mmaghits": [ 0, 0, 100, 50, "nether"],
+		"5OuniqueAttack": { "id": "Madness" },
+		"10Ucbeasy": [ [ "3EldritchCurse" ], 3, 100 ]
 	},
 	"melvorItA:Desolation_Wand": {
 		"base": "Unholy5",
-		"u:maghits": [1000, 2000, 0, 50 ],
-		"5u:uniqueAttack": {
+		"Mmaghits": [1000, 2000, 0, 50 ],
+		"5OuniqueAttack": {
 			"id": "Pandemonium",
 			"attackIntefval": [ 50 ],
 			"onhitEffects": [
@@ -496,12 +498,12 @@
 				}
 			]
 		},
-		"10u:debuff": [ [ "hp" ], 3, 50 ]
+		"10Udebuff": [ [ "hp" ], 3, 50 ]
 	},
 	"melvorItA:Cataclysm_Wand": {
 		"base": "Unholy5",
-		"u:maghits": [0, 0, 100, 50 ],
-		"5u:uniqueAttack": {
+		"Mmaghits": [0, 0, 100, 50 ],
+		"5OuniqueAttack": {
 			"id": "InfiniteVoid",
 			"attackIntefval": [ 50 ],
 			"onhitEffects": [
@@ -538,23 +540,23 @@
 				}
 			]
 		},
-		"10u:buff": [ [ "5maxHit" ], 3, 100 ]
+		"10Ubuff": [ [ "5maxHit" ], 3, 50 ]
 	},
 	"Air": {
-		"u:maghits": [ [ 0, 0, [ -10, 0, 10 ], [ -10, 0, 10 ] ], "s", "melvorD:Air" ],
-		"spellcost": [ [ 0, 0, -1 ], "s", "melvorD:Air_Rune"]
+		"Mmaghits": [ 0, 0, 10, 10, "air" ],
+		"spellcost": [ 0, 0, -1, "melvorD:Air_Rune"]
 	},
 	"Water": {
-		"u:maghits": [ [ 0, 0, [ -10, 0, 10 ], [ -10, 0, 10 ] ], "s", "melvorD:Water" ],
-		"spellcost": [ [ 0, 0, -1 ], "s", "melvorD:Water_Rune"]
+		"Mmaghits": [ 0, 0, 10, 10, "water" ],
+		"spellcost": [ 0, 0, -1, "melvorD:Water_Rune"]
 	},
 	"Earth": {
-		"u:maghits": [ [ 0, 0, [ -10, 0, 10 ], [ -10, 0, 10 ] ], "s", "melvorD:Earth" ],
-		"spellcost": [ [ 0, 0, -1 ], "s", "melvorD:Earth_Rune"]
+		"Mmaghits": [ 0, 0, 10, 10, "earth" ],
+		"spellcost": [ 0, 0, -1, "melvorD:Earth_Rune"]
 	},
 	"Fire": {
-		"u:maghits": [ [ 0, 0, [ -10, 0, 10 ], [ -10, 0, 10 ] ], "s", "melvorD:Fire" ],
-		"spellcost": [ [ 0, 0, -1 ], "s", "melvorD:Fire_Rune"]
+		"Mmaghits": [ 0, 0, 10, 10, "fire" ],
+		"spellcost": [ 0, 0, -1, "melvorD:Fire_Rune"]
 	},
 	"AoD1": {
 		"3barrier": [ 6, 10 ],
@@ -562,13 +564,13 @@
 	},
 	"Acolyte": {
 		"base": "tier1",
-		"ress": [[-1,0,1]],
-		"u:maghits": [ [ [ -5, 0, 5 ], [ -10, 0, 10 ] ], "s", "melvorD:Strike" ],
-		"5u:slayer": [2]
+		"Uress": [1],
+		"Mmaghits": [ 5, 10, "strike" ],
+		"5Uslayer": [2]
 	},
 	"Acolyte_Hat": {
 		"base": "Acolyte",
-		"3spellcost": [ [ 0, 0, 0, -1 ], "s", 0, "melvorD:Standard"]
+		"3spellcost": [ 0, 0, 0, -1, [ "", "melvorD:Standard" ] ]
 	},
 	"Acolyte_Body": {
 		"base": [ "Acolyte", "body" ]
@@ -669,16 +671,15 @@
 	},
 	"Adept": {
 		"base": "Unholy1",
-		"ress": [[-4,0,4]],
-		"u:maghits": [
-			"c",
-			[ [ [ -10, 0, 10 ], [ -20, 0, 20 ] ], "s", "melvorD:Bolt" ],
-			[ [ [ -15, 0, 15 ], [ -30, 0, 30 ] ], "s", "melvorD:Blast" ]
+		"Uress": [4],
+		"Mmaghits": [
+			[ 10 , 20, "bolt" ],
+			[ 15 , 30, "blast" ]
 		]
 	},
 	"Adept_Hat": {
 		"base": "Adept",
-		"5spellcost": [ [ 0, 0, 0, -2 ], "s", 0, "melvorD:Standard"],
+		"5spellcost": [ 0, 0, 0, -2, [ "", "melvorD:Standard" ] ],
 		"5slayer": [10]
 	},
 	"Adept_Body": {
@@ -783,16 +784,15 @@
 	},
 	"Expert": {
 		"base": "Unholy2",
-		"ress": [[-7,0,7]],
-		"u:maghits": [
-			"c",
-			[ [ [ -20, 0, 20 ], [ -40, 0, 40 ] ], "s", "melvorD:Wave" ],
-			[ [ [ -20, 0, 30 ], [ -50, 0, 50 ] ], "s", "melvorD:Surge" ]
+		"Uress": [7],
+		"Mmaghits": [
+			[ 20, 40, "wave" ],
+			[ 30, 50, "surge" ]
 		]
 	},
 	"Expert_Hat": {
 		"base": "Expert",
-		"5spellcost": [ [ 0, 0, 0, -3 ], "s", 0, "melvorD:Standard"],
+		"5spellcost": [ 0, 0, 0, -3, [ "", "melvorD:Standard" ] ],
 		"5slayer": [40]
 	},
 	"Expert_Body": {
@@ -893,49 +893,49 @@
 	},
 	"melvorAoD:Unholy_Wizard_Robes": {
 		"base": [ "Base", "7body" ],
-		"ress": [[-7,0,7]],
-		"u:maghits": [
-			"c",
-			[ [ [ -30, 0, 30 ], [ -60, 0, 60 ] ], "s", "melvorD:Elemental" ],
-			[ [ [ -40, 0, 40 ], [ -40, 0, 40 ] ], "s", "melvorF:Nature" ]
+		"Uress": [7],
+		"Mmaghits": [
+			[ 30, 60, "elemental" ],
+			[ 40, 80, "nature" ]
 		],
-		"5u:atkeffect": [5],
+		"5Uatkeffect": [3],
+		"5Ucbeasy": [ "20unholy", 3 ],
 		"5slayer": [ 40 ]
 	},
 	"melvorAoD:Cursed_Wizard_Robes": {
 		"base": "melvorAoD:Unholy_Wizard_Robes",
-		"5u:barrier": [ 0, 25, 35 ],
-		"5u:summon": [ 0, -10, 35 ],
+		"5Ubarrier": [ 0, 25, 35 ],
+		"5Usummon": [ 0, -10, 35 ],
 		"5atkeffect": [ 0, 0, 50 ],
 		"10atkeffect": [ 0, 0, 100 ]
 	},
 	"Master": {
 		"base": [ "Unholy3", "TotHD" ],
-		"ress": [[-8,0,8]]
+		"Uress": [8]
 	},
 	"Legendary": {
 		"base": [ "Unholy3", "TotHD" ],
-		"ress": [[-9,0,9]]
+		"Uress": [9]
 	},
 	"Mythical": {
 		"base": [ "Unholy4", "TotHD2" ],
-		"ress": [[-10,0,10]]
+		"Uress": [10]
 	},
 	"Master_Poison": {
 		"base": [ "Master" ],
-		"u:maghits": [ [ [ -100, 0, 100 ], [ -200, 0, 200 ] ], "s", "melvorTotH:Poison" ]
+		"Mmaghits": [ 100, 200, "poison" ]
 	},
 	"Legendary_Poison": {
 		"base": [ "Legendary" ],
-		"u:maghits": [ [ [ -200, 0, 200 ], [ -400, 0, 400 ] ], "s", "melvorTotH:Poison" ]
+		"Mmaghits": [ 200, 400, "poison" ]
 	},
 	"Mythical_Poison": {
 		"base": [ "Mythical" ],
-		"u:maghits": [ [ [ -300, 0, 300 ], [ -600, 0, 600 ] ], "s", "melvorTotH:Poison" ]
+		"Mmaghits": [ 300, 600, "poison" ]
 	},
 	"melvorTotH:Poison_Master_Wizard_Hat": {
 		"base": "Master_Poison",
-		"5spellcost": [ [ 0, 0, 0, -2 ], "s", 0, "melvorTotH:Archaic" ]
+		"5spellcost": [ 0, 0, 0, -2, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Poison_Master_Wizard_Robes": {
 		"base": [ "Master_Poison", "8body" ]
@@ -948,7 +948,7 @@
 	},
 	"melvorTotH:Poison_Legendary_Wizard_Hat": {
 		"base": "Legendary_Poison",
-		"5spellcost": [ [ 0, 0, 0, -4 ], "s", 0, "melvorTotH:Archaic" ]
+		"5spellcost": [ 0, 0, 0, -4, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Poison_Legendary_Wizard_Robes": {
 		"base": [ "Legendary_Poison", "9body" ]
@@ -961,7 +961,7 @@
 	},
 	"melvorTotH:Poison_Mythical_Wizard_Hat": {
 		"base": "Mythical_Poison",
-		"5spellcost": [ [ 0, 0, 0, -6 ], "s", 0, "melvorTotH:Archaic" ]
+		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Poison_Mythical_Wizard_Robes": {
 		"base": [ "Mythical_Poison", "10body" ]
@@ -974,19 +974,19 @@
 	},
 	"Master_Infernal": {
 		"base": [ "Master" ],
-		"u:maghits": [ [ [ -100, 0, 100 ], [ -200, 0, 200 ] ], "s", "melvorTotH:Infernal" ]
+		"Mmaghits": [ 100, 200, "infernal" ]
 	},
 	"Legendary_Infernal": {
 		"base": [ "Legendary" ],
-		"u:maghits": [ [ [ -200, 0, 200 ], [ -400, 0, 400 ] ], "s", "melvorTotH:Infernal" ]
+		"Mmaghits": [ 200, 400, "infernal" ]
 	},
 	"Mythical_Infernal": {
 		"base": [ "Mythical" ],
-		"u:maghits": [ [ [ -300, 0, 300 ], [ -600, 0, 600 ] ], "s", "melvorTotH:Infernal" ]
+		"Mmaghits": [ 300, 600, "infernal" ]
 	},
 	"melvorTotH:Infernal_Master_Wizard_Hat": {
 		"base": "Master_Infernal",
-		"5spellcost": [ [ 0, 0, 0, -2 ], "s", 0, "melvorTotH:Archaic" ]
+		"5spellcost": [ 0, 0, 0, -2, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Infernal_Master_Wizard_Robes": {
 		"base": [ "Master_Infernal", "8body" ]
@@ -999,7 +999,7 @@
 	},
 	"melvorTotH:Infernal_Legendary_Wizard_Hat": {
 		"base": "Legendary_Infernal",
-		"5spellcost": [ [ 0, 0, 0, -4 ], "s", 0, "melvorTotH:Archaic" ]
+		"5spellcost": [ 0, 0, 0, -4, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Infernal_Legendary_Wizard_Robes": {
 		"base": [ "Legendary_Infernal", "9body" ]
@@ -1012,7 +1012,7 @@
 	},
 	"melvorTotH:Infernal_Mythical_Wizard_Hat": {
 		"base": "Mythical_Infernal",
-		"5spellcost": [ [ 0, 0, 0, -6 ], "s", 0, "melvorTotH:Archaic" ]
+		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Infernal_Mythical_Wizard_Robes": {
 		"base": [ "Mythical_Infernal", "10body" ]
@@ -1025,19 +1025,19 @@
 	},
 	"Master_Lightning": {
 		"base": [ "Master" ],
-		"u:maghits": [ [ [ -100, 0, 100 ], [ -200, 0, 200 ] ], "s", "melvorTotH:Lightning" ]
+		"Mmaghits": [ 100, 200, "lightning" ]
 	},
 	"Legendary_Lightning": {
 		"base": [ "Legendary" ],
-		"u:maghits": [ [ [ -200, 0, 200 ], [ -400, 0, 400 ] ], "s", "melvorTotH:Lightning" ]
+		"Mmaghits": [ 200, 400, "lightning" ]
 	},
 	"Mythical_Lightning": {
 		"base": [ "Mythical" ],
-		"u:maghits": [ [ [ -300, 0, 300 ], [ -600, 0, 600 ] ], "s", "melvorTotH:Lightning" ]
+		"Mmaghits": [ 300, 600, "lightning" ]
 	},
 	"melvorTotH:Lightning_Master_Wizard_Hat": {
 		"base": "Master_Lightning",
-		"5spellcost": [ [ 0, 0, 0, -2 ], "s", 0, "melvorTotH:Archaic" ]
+		"5spellcost": [ 0, 0, 0, -2, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Lightning_Master_Wizard_Robes": {
 		"base": [ "Master_Lightning", "8body" ]
@@ -1050,7 +1050,7 @@
 	},
 	"melvorTotH:Lightning_Legendary_Wizard_Hat": {
 		"base": "Legendary_Lightning",
-		"5spellcost": [ [ 0, 0, 0, -4 ], "s", 0, "melvorTotH:Archaic" ]
+		"5spellcost": [ 0, 0, 0, -4, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Lightning_Legendary_Wizard_Robes": {
 		"base": [ "Legendary_Lightning", "9body" ]
@@ -1063,7 +1063,7 @@
 	},
 	"melvorTotH:Lightning_Mythical_Wizard_Hat": {
 		"base": "Mythical_Lightning",
-		"5spellcost": [ [ 0, 0, 0, -6 ], "s", 0, "melvorTotH:Archaic" ]
+		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Lightning_Mythical_Wizard_Robes": {
 		"base": [ "Mythical_Lightning", "10body" ]
@@ -1077,22 +1077,13 @@
 	"Abyssal_Base": {
 		"base": [ "Unholy5"]
 	},
-	"Abyssal": {
-		"ress": [ 0, [ -3, 0, 3 ] ],
-		"5slayer": [0,10]
-	},
-	"Mystic": {
-		"base": [ "Unholy5"],
-		"ress": [ 0, [ -9, 0, 9 ] ],
-		"5slayer": [0,30]
-	},
 	"Abyssal_Abyssal": {
-		"base": ["Abyssal"],
-		"u:maghits": [ [ [ -50, 0, 50 ], [ -100, 0, 100 ], [ -10, 0, 10 ], [ -10, 0, 10 ] ], "s", "melvorItA:Abyssal" ]
+		"base": ["AbyD"],
+		"Mmaghits": [ 50, 100, 10, 10, "abyssal" ]
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "Abyssal_Abyssal"],
-		"5spellcost": [ [ 0, 0, 0, -2 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -2, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Hat_U": {
 		"base": "melvorItA:Abyssal_Elite_Wizard_Hat"
@@ -1105,7 +1096,7 @@
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "Abyssal_Abyssal"],
-		"5u:eva": [10]
+		"5Ueva": [10]
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Legs_U": {
 		"base": "melvorItA:Abyssal_Elite_Wizard_Legs"
@@ -1118,7 +1109,7 @@
 	},
 	"melvorItA:Abyssal_Master_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "2Abyssal_Abyssal"],
-		"5spellcost": [ [ 0, 0, 0, -4 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -4, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Abyssal_Master_Wizard_Hat_U": {
 		"base": "melvorItA:Abyssal_Master_Wizard_Hat"
@@ -1131,7 +1122,7 @@
 	},
 	"melvorItA:Abyssal_Master_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "2Abyssal_Abyssal"],
-		"5u:eva": [20]
+		"5Ueva": [20]
 	},
 	"melvorItA:Abyssal_Master_Wizard_Legs_U": {
 		"base": "melvorItA:Abyssal_Master_Wizard_Legs"
@@ -1144,7 +1135,7 @@
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "3Abyssal_Abyssal"],
-		"5spellcost": [ [ 0, 0, 0, -6 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Hat_U": {
 		"base": "melvorItA:Abyssal_Mystic_Wizard_Hat"
@@ -1157,7 +1148,7 @@
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "3Abyssal_Abyssal"],
-		"5u:eva": [30]
+		"5Ueva": [30]
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Legs_U": {
 		"base": "melvorItA:Abyssal_Mystic_Wizard_Legs"
@@ -1170,7 +1161,7 @@
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "4Abyssal_Abyssal"],
-		"5spellcost": [ [ 0, 0, 0, -8 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -8, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Hat_U": {
 		"base": "melvorItA:Abyssal_Legendary_Wizard_Hat"
@@ -1183,7 +1174,7 @@
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "4Abyssal_Abyssal"],
-		"5u:eva": [40]
+		"5Ueva": [40]
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Legs_U": {
 		"base": "melvorItA:Abyssal_Legendary_Wizard_Legs"
@@ -1196,7 +1187,7 @@
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "5Abyssal_Abyssal"],
-		"5spellcost": [ [ 0, 0, 0, -10 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -10, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Hat_U": {
 		"base": "melvorItA:Abyssal_Mythical_Wizard_Hat"
@@ -1209,7 +1200,7 @@
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "5Abyssal_Abyssal"],
-		"5u:eva": [50]
+		"5Ueva": [50]
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Legs_U": {
 		"base": "melvorItA:Abyssal_Mythical_Wizard_Legs"
@@ -1222,12 +1213,12 @@
 	},
 
 	"Abyssal_Brume": {
-		"base": ["Abyssal"],
-		"u:maghits": [ [ [ -50, 0, 50 ], [ -100, 0, 100 ], [ -10, 0, 10 ], [ -10, 0, 10 ] ], "s", "melvorItA:Brume" ]
+		"base": ["AbyD"],
+		"Mmaghits": [ 50, 100, 10, 10, "brume" ]
 	},
 	"melvorItA:Brume_Master_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "2Abyssal_Brume"],
-		"5spellcost": [ [ 0, 0, 0, -4 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -4, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Brume_Master_Wizard_Hat_U": {
 		"base": "melvorItA:Brume_Master_Wizard_Hat"
@@ -1240,7 +1231,7 @@
 	},
 	"melvorItA:Brume_Master_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "2Abyssal_Brume"],
-		"5u:eva": [20]
+		"5Ueva": [20]
 	},
 	"melvorItA:Brume_Master_Wizard_Legs_U": {
 		"base": "melvorItA:Brume_Master_Wizard_Legs"
@@ -1253,7 +1244,7 @@
 	},
 	"melvorItA:Brume_Mystic_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "3Abyssal_Brume"],
-		"5spellcost": [ [ 0, 0, 0, -6 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Brume_Mystic_Wizard_Hat_U": {
 		"base": "melvorItA:Brume_Mystic_Wizard_Hat"
@@ -1266,7 +1257,7 @@
 	},
 	"melvorItA:Brume_Mystic_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "3Abyssal_Brume"],
-		"5u:eva": [30]
+		"5Ueva": [30]
 	},
 	"melvorItA:Brume_Mystic_Wizard_Legs_U": {
 		"base": "melvorItA:Brume_Mystic_Wizard_Legs"
@@ -1279,7 +1270,7 @@
 	},
 	"melvorItA:Brume_Legendary_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "4Abyssal_Brume"],
-		"5spellcost": [ [ 0, 0, 0, -8 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -8, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Brume_Legendary_Wizard_Hat_U": {
 		"base": "melvorItA:Brume_Legendary_Wizard_Hat"
@@ -1292,7 +1283,7 @@
 	},
 	"melvorItA:Brume_Legendary_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "4Abyssal_Brume"],
-		"5u:eva": [40]
+		"5Ueva": [40]
 	},
 	"melvorItA:Brume_Legendary_Wizard_Legs_U": {
 		"base": "melvorItA:Brume_Legendary_Wizard_Legs"
@@ -1305,7 +1296,7 @@
 	},
 	"melvorItA:Brume_Mythical_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "5Abyssal_Brume"],
-		"5spellcost": [ [ 0, 0, 0, -10 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -10, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Brume_Mythical_Wizard_Hat_U": {
 		"base": "melvorItA:Brume_Mythical_Wizard_Hat"
@@ -1318,7 +1309,7 @@
 	},
 	"melvorItA:Brume_Mythical_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "5Abyssal_Brume" ],
-		"5u:eva": [50]
+		"5Ueva": [50]
 	},
 	"melvorItA:Brume_Mythical_Wizard_Legs_U": {
 		"base": "melvorItA:Brume_Mythical_Wizard_Legs"
@@ -1331,12 +1322,12 @@
 	},
 
 	"Abyssal_Gloom": {
-		"base": ["Abyssal"],
-		"u:maghits": [ [ [ -50, 0, 50 ], [ -100, 0, 100 ], [ -10, 0, 10 ], [ -10, 0, 10 ] ], "s", "melvorItA:Gloom" ]
+		"base": ["AbyD"],
+		"Mmaghits": [ 50, 100, 10, 10, "gloom" ]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "3Abyssal_Gloom"],
-		"5spellcost": [ [ 0, 0, 0, -6 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Hat_U": {
 		"base": "melvorItA:Gloom_Mystic_Wizard_Hat"
@@ -1349,7 +1340,7 @@
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "3Abyssal_Gloom", "13body" ],
-		"5u:eva": [30]
+		"5Ueva": [30]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Legs_U": {
 		"base": "melvorItA:Gloom_Mystic_Wizard_Legs"
@@ -1362,7 +1353,7 @@
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "4Abyssal_Gloom"],
-		"5spellcost": [ [ 0, 0, 0, -8 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -8, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Hat_U": {
 		"base": "melvorItA:Gloom_Legendary_Wizard_Hat"
@@ -1375,7 +1366,7 @@
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "4Abyssal_Gloom" ],
-		"5u:eva": [40]
+		"5Ueva": [40]
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Legs_U": {
 		"base": "melvorItA:Gloom_Legendary_Wizard_Legs"
@@ -1388,7 +1379,7 @@
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "5Abyssal_Gloom"],
-		"5spellcost": [ [ 0, 0, 0, -10 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -10, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Hat_U": {
 		"base": "melvorItA:Gloom_Mythical_Wizard_Hat"
@@ -1401,7 +1392,7 @@
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "5Abyssal_Gloom" ],
-		"5u:eva": [50]
+		"5Ueva": [50]
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Legs_U": {
 		"base": "melvorItA:Gloom_Mythical_Wizard_Legs"
@@ -1415,12 +1406,12 @@
 
 
 	"Abyssal_Wither": {
-		"base": ["Abyssal"],
-		"u:maghits": [ [ [ -50, 0, 50 ], [ -100, 0, 100 ], [ -10, 0, 10 ], [ -10, 0, 10 ] ], "s", "melvorItA:Wither" ]
+		"base": ["AbyD"],
+		"Mmaghits": [ 50, 100, 10, 10, "wither" ]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "4Abyssal_Wither"],
-		"5spellcost": [ [ 0, 0, 0, -8 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -8, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Hat_U": {
 		"base": "melvorItA:Wither_Legendary_Wizard_Hat"
@@ -1433,7 +1424,7 @@
 	},
 	"melvorItA:Wither_Legendary_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "4Abyssal_Wither", "14body" ],
-		"5u:eva": [40]
+		"5Ueva": [40]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Legs_U": {
 		"base": "melvorItA:Wither_Legendary_Wizard_Legs"
@@ -1446,7 +1437,7 @@
 	},
 	"melvorItA:Wither_Mythical_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "5Abyssal_Wither"],
-		"5spellcost": [ [ 0, 0, 0, -10 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -10, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Wither_Mythical_Wizard_Hat_U": {
 		"base": "melvorItA:Wither_Mythical_Wizard_Hat"
@@ -1459,7 +1450,7 @@
 	},
 	"melvorItA:Wither_Mythical_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "5Abyssal_Wither"],
-		"5u:eva": [50]
+		"5Ueva": [50]
 	},
 	"melvorItA:Wither_Mythical_Wizard_Legs_U": {
 		"base": "melvorItA:Wither_Mythical_Wizard_Legs"
@@ -1473,12 +1464,12 @@
 
 
 	"Abyssal_Nether": {
-		"base": ["Abyssal"],
-		"u:maghits": [ [ [ -50, 0, 50 ], [ -100, 0, 100 ], [ -10, 0, 10 ], [ -10, 0, 10 ] ], "s", "melvorItA:Nether" ]
+		"base": ["AbyD"],
+		"Mmaghits": [ 50, 100, 10, 10, "nether" ]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "5Abyssal_Nether"],
-		"5spellcost": [ [ 0, 0, 0, -10 ], "s", 0, "melvorItA:Abyssal" ]
+		"5spellcost": [ 0, 0, 0, -10, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Hat_U": {
 		"base": "melvorItA:Nether_Mythical_Wizard_Hat"
@@ -1491,7 +1482,7 @@
 	},
 	"melvorItA:Nether_Mythical_Wizard_Legs": {
 		"base": [ "Abyssal_Base", "5Abyssal_Nether", "15body" ],
-		"5u:eva": [50]
+		"5Ueva": [50]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Legs_U": {
 		"base": "melvorItA:Nether_Mythical_Wizard_Legs"
