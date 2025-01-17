@@ -646,7 +646,7 @@
         }
       ]
     },
-    "10Ucbeasy": [ "c", [ "100BarrierBleed", 11, 12 ], ["100BarrierBurn", 2, 12 ] ]
+    "10Ucbeasys": [ [ "100BarrierBleed", 11, 12 ], ["100BarrierBurn", 2, 12 ] ]
   },
   "melvorAoD:Unholy_Potion_IV": {
     "Nmodifiers": {

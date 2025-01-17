@@ -74,7 +74,7 @@ export class CheatManaget{
 				name: "FormulaInput",
 				label: "Input for Custom Formula",
 				hint: "See custom formula manual at the bottom of the dialog.",
-				default: "[[90000,2,0.6,8,0.4,2]]",
+				default: "[[9,2,0.6,8,0.4,2]]",
 				onChange: (val, prev) => {
 					this.loadMasteryXpSettings(val);
 					this.initLevelTable();

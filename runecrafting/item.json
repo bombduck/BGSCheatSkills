@@ -103,17 +103,17 @@
 	"melvorD:Air_Battlestaff": {
 		"base": "staff4",
 		"5OuniqueAttack": { "id": "NaturesCall" },
-		"10UdebuffAuto": ["20taken", 2, 20]
+		"10Ucbeasy": ["20@dtaken", 2, 20]
 	},
 	"melvorD:Water_Battlestaff": {
 		"base": "staff4",
 		"5OuniqueAttack": { "id": "ElementalImpactFrostburn" },
-		"10Udebuff": ["fspd", 2, 20]
+		"10Ucbeasy": ["100dfspd", 2, 20]
 	},
 	"melvorD:Earth_Battlestaff": {
 		"base": "staff4",
 		"5OuniqueAttack": { "id": "ElementalImpactStun" },
-		"10Ubuff": ["hp", 2, 20]
+		"10Ucbeasy": ["80bhp", 2, 20]
 	},
 	"melvorD:Fire_Battlestaff": {
 		"base": "staff4",
@@ -123,7 +123,7 @@
 	"melvorAoD:Crystal_Battlestaff": {
 		"base": "staff4",
 		"5OuniqueAtks": [ { "id": "CrystalBlast" }, {"id": "Whirlpool"}, {"id": "CrushingWaves"} ],
-		"10cbeasy": ["c",
+		"10cbeasys": [
 			[ "melvorAoD:Malice", 7, 100, { "sm": 10, "sa": 10  } ],
 			[ "melvorAoD:GrudgePlayer", 7, 100, { "sm": 10, "sa":10  } ],
 			[ "melvorAoD:GrudgeEnemy", 7, 100, { "si": 10 } ],
@@ -149,7 +149,7 @@
 	"melvorF:Mystic_Earth_Staff": {
 		"base": "staff7",
 		"5OuniqueAttack": { "id": "NaturesWrath" },
-		"10UbuffAuto": ["25spd", 2, 30, {"t": 4}]
+		"10Ucbeasy": ["25$$4@bspd", 2, 30]
 	},
 	"melvorF:Mystic_Fire_Staff": {
 		"base": "staff7",
@@ -186,21 +186,21 @@
 			],
 			"attackInterval": [ 50 ]
 		},
-		"10Udebuff": [ "taken", 3, 30 ]
+		"10Ucbeasy": [ "100dtaken", 3, 30 ]
 	},
 	"melvorF:Water_Imbued_Wand": {
 		"base": "wand7",
-		"5OuniqueAttack": { "id": "UnlimitedSlappingPower", "attackInterval": {"c": 50} },
+		"5OuniqueAttack": { "id": "UnlimitedSlappingPower", "attackInterval": [ 50 ] },
 		"10Ucbeasy": [["1Fear"], 2, 30]
 	},
 	"melvorF:Earth_Imbued_Wand": {
 		"base": "wand7",
 		"5OuniqueAttack": { "id": "BruteForce" },
-		"10Ubuff": [["fspd"], 2, 30]
+		"10Ucbeasy": [["100bfspd"], 2, 30]
 	},
 	"melvorF:Fire_Imbued_Wand": {
 		"base": "wand7",
-		"5OuniqueAttack": { "id": "UnlimitedSlappingPower", "attackInterval": {"c": 50} },
+		"5OuniqueAttack": { "id": "UnlimitedSlappingPower", "attackInterval": [50] },
 		"10Ucbeasy": [["Burn"], 2, 20]
 	},
 	"melvorAoD:Mystic_Pure_Crystal_Staff": {
@@ -218,13 +218,7 @@
 	},
 	"melvorAoD:Cursed_Staff": {
 		"base": "melvorAoD:Unholy_Staff",
-		"10Ucbeasy": ["c",
-			[ "10Malice", 7, 100 ],
-			[ "10Destruction", 7, 100],
-			[ "10Spite", 7, 100 ],
-			[ "10Consume", 7, 100],
-			[ "10Eradicate", 7, 100]
-		]
+		"10Ucbeasy": [ [ "10Malice", "10Destruction", "10Spite", "10Consume", "10Eradicate"], 7, 100 ]
 	},
 	"melvorTotH:Poison_Staff": {
 		"base": "Unholy4",
@@ -309,7 +303,7 @@
 				}
 			]
 		},
-		"10Ubuff": [ "hp", 2, 50 ]
+		"10Ucbeasy": [ "100bhp", 2, 50 ]
 	},
 	"melvorItA:Lacerating_Staff": {
 		"base": "melvorItA:Abyssal_Staff",
@@ -457,7 +451,7 @@
 				}
 			]
 		},
-		"10Ubuff": [ [ "5spd" ], 3, 100 ]
+		"10Ucbeasy": [ [ "100$5bspd" ], 3, 100 ]
 	},
 	"melvorItA:Wither_Wand": {
 		"base": "Unholy5",
@@ -472,7 +466,7 @@
 		"5OuniqueAttack": {
 			"id": "TerrorBeam", "attackCount": [ 40 ], "attackInterval": [ 50 ]
 		},
-		"10Ubuff": [ [ "5dmg" ], 3, 40 ]
+		"10Ucbeasy": [ [ "100$5bdmg" ], 3, 40 ]
 	},
 	"melvorItA:Nether_Wand": {
 		"base": "Unholy5",
@@ -498,7 +492,7 @@
 				}
 			]
 		},
-		"10Udebuff": [ [ "hp" ], 3, 50 ]
+		"10Ucbeasy": [ [ "100dhp" ], 6, 50 ]
 	},
 	"melvorItA:Cataclysm_Wand": {
 		"base": "Unholy5",
@@ -540,7 +534,7 @@
 				}
 			]
 		},
-		"10Ubuff": [ [ "5maxHit" ], 3, 50 ]
+		"10Ucbeasy": [ [ "100$5bhit" ], 3, 50 ]
 	},
 	"Air": {
 		"Mmaghits": [ 0, 0, 10, 10, "air" ],

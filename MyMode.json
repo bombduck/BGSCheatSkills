@@ -175,7 +175,7 @@
             {
               "type": "ModifyParameter",
               "paramName": "turns",
-              "newValue": "applicatorParam.turns",
+              "newValue": "max(param.turns,applicatorParam.turns)",
               "triggersOn": [
                 {
                   "type": "EffectReapplied"
@@ -227,7 +227,7 @@
             {
               "type": "ModifyParameter",
               "paramName": "turns",
-              "newValue": "applicatorParam.turns",
+              "newValue": "max(param.turns,applicatorParam.turns)",
               "triggersOn": [
                 {
                   "type": "EffectReapplied"
@@ -274,6 +274,18 @@
             {
               "name": "category",
               "initialValue": 1
+            },
+            {
+              "name": "maxStacksToAdd",
+              "initialValue": 0
+            },
+            {
+              "name": "maxCategories",
+              "initialValue": 1
+            },
+            {
+              "name": "maxCategory",
+              "initialValue": 1
             }
 					],
           "behaviours": [
@@ -282,6 +294,32 @@
               "paramName": "maxStacks",
               "newValue": "max(applicatorParam.maxStacks, p.maxStacks)",
               "triggersOn": [
+                {
+                  "type": "EffectReapplied"
+                }
+              ]
+            },
+            {
+              "type": "ModifyParameter",
+              "paramName": "maxStacks",
+              "newValue": "p.maxStacks + (applicatorParam.maxCategory == 1 ? 1 : ((p.maxCategories % applicatorParam.maxCategory) != 0) ? 1 : 0 ) * applicatorParam.maxStacksToAdd",
+              "triggersOn": [
+                {
+                  "type": "EffectApplied"
+                },
+                {
+                  "type": "EffectReapplied"
+                }
+              ]
+            },
+            {
+              "type": "ModifyParameter",
+              "paramName": "maxCategories",
+              "newValue": "(applicatorParam.maxCategory == 1 ? p.maxCategories : ((p.maxCategories % applicatorParam.maxCategory) != 0) ? (applicatorParam.maxCategory * p.maxCategories) : p.maxCategories)",
+              "triggersOn": [
+                {
+                  "type": "EffectApplied"
+                },
                 {
                   "type": "EffectReapplied"
                 }
@@ -2057,7 +2095,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -2090,7 +2128,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -2127,7 +2165,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -2160,7 +2198,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -2197,7 +2235,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -2230,7 +2268,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -2267,7 +2305,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -2300,7 +2338,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -2337,7 +2375,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -2370,7 +2408,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -2407,7 +2445,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -2440,7 +2478,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -2477,7 +2515,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -2510,7 +2548,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -2547,7 +2585,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -2597,7 +2635,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -2651,7 +2689,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -2684,7 +2722,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -2721,7 +2759,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -2754,7 +2792,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -2791,7 +2829,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -2824,7 +2862,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -2861,7 +2899,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -2894,7 +2932,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -2931,7 +2969,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -2962,10 +3000,10 @@
 						"name": "stacksToAdd",
 						"initialValue": 1
 					},
-					{
-						"name": "maxStacks",
-						"initialValue": 10000
-					},
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          },
 					{
 						"name": "turns",
 						"initialValue": 3
@@ -3001,7 +3039,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3034,7 +3072,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3071,7 +3109,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3104,7 +3142,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3141,7 +3179,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3174,7 +3212,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3211,7 +3249,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3261,7 +3299,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3315,7 +3353,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3365,7 +3403,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3419,7 +3457,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3452,7 +3490,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3489,7 +3527,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3522,7 +3560,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3559,7 +3597,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3592,7 +3630,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3629,7 +3667,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3662,7 +3700,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3699,7 +3737,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3732,7 +3770,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3769,7 +3807,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3802,7 +3840,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3839,7 +3877,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -3872,7 +3910,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -3909,7 +3947,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -3959,7 +3997,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -4013,7 +4051,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -4046,7 +4084,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -4083,7 +4121,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -4116,7 +4154,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -4153,7 +4191,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					}
 				],
 				"statGroups": [
@@ -4186,7 +4224,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 10000
+						"initialValue": 10
 					},
 					{
 						"name": "turns",
@@ -4223,7 +4261,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -4256,7 +4294,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -4293,7 +4331,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -4326,7 +4364,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -4363,7 +4401,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           }
         ],
         "statGroups": [
@@ -4396,7 +4434,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10000
+            "initialValue": 10
           },
 					{
 						"name": "turns",
@@ -4408,6 +4446,146 @@
             "name": "stacks",
             "modifiers": {
               "lifesteal": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffSummonAttack",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "summoningMaxHit": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffSummonAttackT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "summoningMaxHit": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffSummonSpd",
+        "templateID": "BGSCheat:StackingNonCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/speedup.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "summoningAttackInterval": -1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BuffSummonSpdT",
+				"templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Buff",
+        "nameLang": "EFFECT_GROUP_Buff",
+        "media": "assets/media/status/speedup.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          },
+					{
+						"name": "turns",
+						"initialValue": 3
+					}
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "summoningAttackInterval": -1
             }
           }
         ],
@@ -4473,7 +4651,7 @@
 					},
 					{
 						"name": "maxStacks",
-						"initialValue": 100
+						"initialValue": 1
 					},
 					{
 						"name": "turns",
@@ -8014,6 +8192,45 @@
         ],
         "effectGroups": [
           "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "KingsRage",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "King's Rage",
+        "nameLang": "SPECIAL_ATTACK_NAME_KingsRage",
+        "media": "assets/media/status/attack_increase.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHit": 35,
+              "lifesteal": 100,
+              "attackInterval": -40
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          },
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
         ]
       },
       {

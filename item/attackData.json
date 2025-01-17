@@ -1,7 +1,6 @@
 [
   {
     "id": "ShatterArrow",
-    "defaultChance": "return (lv>=10?100:lv>5?25+15*(lv-5):5*lv)",
     "damage": [
       {
         "damageType": "Custom",
@@ -27,7 +26,6 @@
   },
   {
     "id": "SunsetStab",
-    "defaultChance": "return (lv>=10?100:lv>5?25+15*(lv-5):5*lv)",
     "damage": [
       {
         "damageType": "Normal",
@@ -57,7 +55,6 @@
   },
   {
     "id": "BruteForce",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -77,7 +74,6 @@
   },
   {
     "id": "PiercingArrow",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -100,7 +96,6 @@
   },
   {
     "id": "Volley",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -120,7 +115,6 @@
   },
   {
     "id": "FrozenShot",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -161,7 +155,6 @@
   },
   {
     "id": "RapidFire",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -203,7 +196,6 @@
   },
   {
     "id": "OnTheHunt",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -232,7 +224,6 @@
   },
   {
     "id": "Onslaught",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -261,7 +252,6 @@
   },
   {
     "id": "TopazShots",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -290,7 +280,6 @@
   },
   {
     "id": "SapphireShots",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -326,7 +315,6 @@
   },
   {
     "id": "RubyShots",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -348,7 +336,6 @@
   },
   {
     "id": "EmeraldShots",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -374,7 +361,6 @@
   },
   {
     "id": "DiamondShots",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -396,7 +382,6 @@
   },
   {
     "id": "JadestoneShots",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -425,7 +410,6 @@
   },
   {
     "id": "TripleDamage",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -444,7 +428,6 @@
   },
   {
     "id": "TiltedShot",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -473,7 +456,6 @@
   },
   {
     "id": "UnlimitedSlappingPower",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -495,7 +477,6 @@
   },
   {
     "id": "ImpossibleShot",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -514,7 +495,6 @@
   },
   {
     "id": "DoubleSwipe",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -534,7 +514,6 @@
   },
   {
     "id": "TripleSwipe",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -554,7 +533,6 @@
   },
   {
     "id": "Flurry",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -584,7 +562,6 @@
   },
   {
     "id": "IcePrison",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -632,7 +609,6 @@
   },
   {
     "id": "Infernum",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -663,7 +639,6 @@
   },
   {
     "id": "CrushingBlow",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -686,7 +661,6 @@
   },
   {
     "id": "Stormsnap",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -709,7 +683,6 @@
   },
   {
     "id": "DualAttack",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -729,7 +702,6 @@
   },
   {
     "id": "FreezeRay",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -763,7 +735,6 @@
   },
   {
     "id": "SlicingWinds",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -787,7 +758,6 @@
   },
   {
     "id": "IcicleVolley",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -824,7 +794,6 @@
   },
   {
     "id": "Ignite",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -858,7 +827,6 @@
   },
   {
     "id": "Gust",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -893,7 +861,6 @@
   },
   {
     "id": "Frostbite",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -927,7 +894,6 @@
   },
   {
     "id": "Quake",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -964,7 +930,6 @@
   },
   {
     "id": "Incinerate",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -999,7 +964,6 @@
   },
   {
     "id": "ImpairingShot",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1037,7 +1001,6 @@
   },
   {
     "id": "Sandblast",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1071,7 +1034,6 @@
   },
   {
     "id": "Sandstorm",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -1101,7 +1063,6 @@
   },
   {
     "id": "DeadlyCut",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1131,7 +1092,6 @@
   },
   {
     "id": "Rend",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1164,7 +1124,6 @@
   },
   {
     "id": "QuadSwipe",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1184,7 +1143,6 @@
   },
   {
     "id": "TidalWave",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -1225,7 +1183,6 @@
   },
   {
     "id": "OceanSong",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -1266,7 +1223,6 @@
   },
   {
     "id": "Shockwave",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -1304,7 +1260,6 @@
   },
   {
     "id": "InfernalVolley",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1324,7 +1279,6 @@
   },
   {
     "id": "ElementalImpactBurn",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1349,7 +1303,6 @@
   },
   {
     "id": "ElementalImpactStun",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1380,7 +1333,6 @@
   },
   {
     "id": "ElementalImpactFreeze",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1411,7 +1363,6 @@
   },
   {
     "id": "ElementalImpactFrostburn",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1435,7 +1386,6 @@
   },
   {
     "id": "UnknownThreat",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1486,7 +1436,6 @@
   },
   {
     "id": "DoubleEdged",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1511,7 +1460,6 @@
   },
   {
     "id": "SwiftAttack",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1540,7 +1488,6 @@
   },
   {
     "id": "PoisonedHit",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -1575,7 +1522,6 @@
   },
   {
     "id": "NaturesCall",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1599,7 +1545,6 @@
   },
   {
     "id": "NaturesWrath",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1623,7 +1568,6 @@
   },
   {
     "id": "BladeEchoes",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1656,7 +1600,6 @@
   },
   {
     "id": "BarragePlayer",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1682,7 +1625,6 @@
   },
   {
     "id": "SpiritPower",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1729,7 +1671,6 @@
   },
   {
     "id": "CrushingDoubleSlash",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1754,7 +1695,6 @@
   },
   {
     "id": "Crystalline",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1792,7 +1732,6 @@
   },
   {
     "id": "TwinCrystals",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1823,7 +1762,6 @@
   },
   {
     "id": "CrystalCrash",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1860,7 +1798,6 @@
   },
   {
     "id": "CrystalFlurry",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1908,7 +1845,6 @@
   },
   {
     "id": "CrystalCleave",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1948,7 +1884,6 @@
   },
   {
     "id": "CrystalShot",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -1982,7 +1917,6 @@
   },
   {
     "id": "CrystalBoom",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2024,7 +1958,6 @@
   },
   {
     "id": "CrystalTomb",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2065,7 +1998,6 @@
   },
   {
     "id": "WaterPulsePlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2109,7 +2041,6 @@
   },
   {
     "id": "PlagueBoltPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2140,7 +2071,6 @@
   },
   {
     "id": "TrapDoor",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2163,7 +2093,6 @@
   },
   {
     "id": "Manipulate",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2196,7 +2125,6 @@
   },
   {
     "id": "GhostlyScimitarPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2223,7 +2151,6 @@
   },
   {
     "id": "ReflectionPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2246,7 +2173,6 @@
   },
   {
     "id": "TelekinesisPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2269,7 +2195,6 @@
   },
   {
     "id": "EngulfingVortexPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2303,7 +2228,6 @@
   },
   {
     "id": "EradicatingBlast",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2345,7 +2269,6 @@
   },
   {
     "id": "BlunderbussPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2370,7 +2293,6 @@
   },
   {
     "id": "CrushingWaves",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2403,7 +2325,6 @@
   },
   {
     "id": "Whirlpool",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2480,7 +2401,6 @@
   },
   {
     "id": "CrystalBlast",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2522,7 +2442,6 @@
   },
   {
     "id": "PoisonPods",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2556,7 +2475,6 @@
   },
   {
     "id": "GiantFireball",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2590,7 +2508,6 @@
   },
   {
     "id": "ThunderStrike",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2624,7 +2541,6 @@
   },
   {
     "id": "MeteorShowerArchaic",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2658,7 +2574,6 @@
   },
   {
     "id": "TsunamiArchaic",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2695,7 +2610,6 @@
   },
   {
     "id": "NaturesBloom",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2740,7 +2654,6 @@
   },
   {
     "id": "InfernalPower",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2768,7 +2681,6 @@
   },
   {
     "id": "Soulash",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2802,7 +2714,6 @@
   },
   {
     "id": "DragonStormCall",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2836,7 +2747,6 @@
   },
   {
     "id": "SlicingMaelstromArchaic",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -2882,7 +2792,6 @@
   },
   {
     "id": "DarkBladePlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2919,7 +2828,6 @@
   },
   {
     "id": "MeteorSwing",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2950,7 +2858,6 @@
   },
   {
     "id": "HeatedFury",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -2996,7 +2903,6 @@
   },
   {
     "id": "SpectralIceBlades",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3019,7 +2925,6 @@
   },
   {
     "id": "TorrentialBlast",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3038,7 +2943,6 @@
   },
   {
     "id": "PiercingToxicStrike",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3087,7 +2991,6 @@
   },
   {
     "id": "EtheralArrows",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3129,7 +3032,6 @@
   },
   {
     "id": "SpinningAxePlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3159,7 +3061,6 @@
   },
   {
     "id": "CorundumWounds",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3201,7 +3102,6 @@
   },
   {
     "id": "AugiteCrystallization",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3225,7 +3125,6 @@
   },
   {
     "id": "DivineBreaker",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3267,7 +3166,6 @@
   },
   {
     "id": "ElderwoodPoison",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3325,7 +3223,6 @@
   },
   {
     "id": "RevenantHunter",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3362,7 +3259,6 @@
   },
   {
     "id": "ThornedPower",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3388,7 +3284,6 @@
   },
   {
     "id": "CarrionMarker",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3425,7 +3320,6 @@
   },
   {
     "id": "AgileWingsPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3466,7 +3360,6 @@
   },
   {
     "id": "MeteorShot",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -3492,7 +3385,6 @@
   },
   {
     "id": "FeatherStormPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3538,7 +3430,6 @@
   },
   {
     "id": "FeatheredFrenzy",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3571,7 +3462,6 @@
   },
   {
     "id": "NecroticBeam",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3590,7 +3480,6 @@
   },
   {
     "id": "BlightedTendrilGrasp",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3645,7 +3534,6 @@
   },
   {
     "id": "NullWave",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3674,7 +3562,6 @@
   },
   {
     "id": "BlightedFeathersPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3710,7 +3597,6 @@
   },
   {
     "id": "SilentTanglePlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -3751,7 +3637,6 @@
   },
   {
     "id": "OpenWoundsPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3793,7 +3678,6 @@
   },
   {
     "id": "Lacerate",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3830,7 +3714,6 @@
     },
   {
     "id": "SoulbindChain",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -3852,7 +3735,6 @@
   },
   {
     "id": "BlazingShadowPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3884,7 +3766,6 @@
   },
   {
     "id": "HollowDoomPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -3943,7 +3824,6 @@
   },
   {
     "id": "MutedMaelstrom",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -3995,7 +3875,6 @@
   },
   {
     "id": "EldritchBeam",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -4028,7 +3907,6 @@
   },
   {
     "id": "VoidblazeBurst",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -4057,7 +3935,6 @@
   },
   {
     "id": "DevouringVoid",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -4090,7 +3967,6 @@
   },
   {
     "id": "AbyssalWhirlwind",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -4123,7 +3999,6 @@
   },
   {
     "id": "AbyssalBarrage",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -4161,7 +4036,6 @@
   },
   {
     "id": "VoidburstBeam",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -4187,7 +4061,6 @@
   },
   {
     "id": "BlightedSlashesPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -4211,7 +4084,6 @@
   },
   {
     "id": "ToxicBlastPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -4247,7 +4119,6 @@
   },
   {
     "id": "WitherSporesPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -4289,7 +4160,6 @@
   },
   {
     "id": "WitherStabsPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -4325,7 +4195,6 @@
   },
   {
     "id": "WitherBindingPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -4371,7 +4240,6 @@
   },
   {
     "id": "SilentSlashesPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Normal",
@@ -4395,7 +4263,6 @@
   },
   {
     "id": "StingingSilencePlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -4424,7 +4291,6 @@
   },
   {
     "id": "TendrilBindPlayer",
-    "defaultChance": { "v":10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -4456,7 +4322,6 @@
   },
   {
     "id": "VoidVortexPlayer",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Custom",
@@ -4501,7 +4366,6 @@
   },
   {
     "id": "VoidfireCascadePlayer",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Custom",
@@ -4527,7 +4391,6 @@
   },
   {
     "id": "VoidburstBarragePlayer",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Normal",
@@ -4550,7 +4413,6 @@
   },
   {
     "id": "MalevolentBlightPlayer",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Normal",
@@ -4580,7 +4442,6 @@
   },
   {
     "id": "CommandOfTheKing",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -4690,7 +4551,6 @@
   },
   {
     "id": "TendrilSlam",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Custom",
@@ -4721,7 +4581,6 @@
   },
   {
     "id": "Madness",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -4765,7 +4624,6 @@
   },
   {
     "id": "ConsumingGrasp",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Custom",
@@ -4809,7 +4667,6 @@
   },
   {
     "id": "Pandemonium",
-    "defaultChance": { "v": 10 },
     "damage": [
       {
         "damageType": "Custom",
@@ -4839,7 +4696,6 @@
   },
   {
     "id": "VoidfireVolley",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Custom",
@@ -4869,7 +4725,6 @@
   },
   {
     "id": "BlackHole",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Custom",
@@ -4936,7 +4791,6 @@
   },
   {
     "id": "NullSphere",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Custom",
@@ -4999,7 +4853,6 @@
   },
   {
     "id": "InfiniteVoid",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Custom",
@@ -5063,7 +4916,6 @@
   },
   {
     "id": "TerrorBeam",
-    "defaultChance": {"v": 10},
     "damage": [
       {
         "damageType": "Custom",

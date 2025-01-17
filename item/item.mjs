@@ -102,8 +102,8 @@ export class ItemLevelManager{
 		if (item instanceof PotionItem)
 			statObject = item.stats;
 		this.getLevelUpData(statObject, modData ,itemID,modBase,lv,mul);
-		//if (itemID === "melvorF:Air_Acolyte_Wizard_Hat")
-		//	console.log(JSON.stringify(modData));
+		if (itemID === "melvorD:Adamant_Battleaxe")
+			console.log(JSON.stringify(modData));
 		item.applyDataModification(modData, game);
 		delete item._modifiedDescription;
 		delete item._customDescription;
