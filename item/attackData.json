@@ -1,5 +1,390 @@
 [
   {
+    "id": "LavaSwipePlayer",
+    "damage": [
+      {
+        "damageType": "Normal",
+        "amplitude": 60
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [],
+    "cantMiss": false,
+    "attackCount": 3,
+    "attackInterval": { "c": 200, "u": -50 },
+    "lifesteal": 0,
+    "name": "Lava Swipe",
+    "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s.",
+    "descriptionGenerator": "An avoidable attack that deals <damage> <count> times over <duration>.",
+    "usesRunesPerProc": false
+  },
+  {
+    "id": "ShellBuff",
+    "damage": [
+      {
+        "damageType": "Normal",
+        "amplitude": 100
+      }
+    ],
+    "prehitEffects": [
+      {
+        "effectID": "BGSCheat:ShellBuff0",
+        "initialParams": [
+          {
+            "name": "maxStacks",
+            "value": 3
+          },
+          {
+            "name": "turns",
+            "value": 3
+          }
+        ]
+      }
+    ],
+    "onhitEffects": [],
+    "cantMiss": false,
+    "attackCount": [ 1 ],
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Shell Buff",
+    "description": "Perform a regular attack. Gives you +${preHitEffect0modValue0}% of damage taken from attacks healed on next hitpoint regeneration for ${preHitEffect0turns} of your turns.",
+    "descriptionGenerator": "Perform a regular attack. <PrehitEffect>.",
+    "usesRunesPerProc": false
+  },
+  {
+    "id": "NastyBitePlayer",
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Target",
+        "maxRoll": "CurrentHPCapped200",
+        "maxPercent": 20,
+        "roll": false
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [],
+    "cantMiss": false,
+    "attackCount": [ 1 ],
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Nasty Bite",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of the enemy's current hitpoints (Capped at 200 * Enemy HP Level damage).",
+    "descriptionGenerator": "An <avoidable> attack that deals damage equal to <damage>.",
+    "usesRunesPerProc": false
+  },
+  {
+    "id": "DarksteelStab",
+    "damage": [
+      {
+        "damageType": "Normal",
+        "amplitude": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "100Bleed400"
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": [ 1 ],
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Darksteel Stab",
+    "description": "On a hit inflicts Bleed that deals ${onHitEffect0DamageMaxValue0}% of the damage dealt as damage over ${onHitEffect0duration}s.",
+    "descriptionGenerator": "Deals <damage>. On a hit, <hitEffect>.",
+    "usesRunesPerProc": false
+  },
+  {
+    "id": "CrystalPierce",
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Target",
+        "maxRoll": "Crystallize",
+        "maxPercent": 50,
+        "roll": false
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [],
+    "cantMiss": true,
+    "attackCount": [ 1 ],
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Crystal Pierce",
+    "description": "An unavoidable attack that deals ${attackDamageMaxValue0}% of your max hit. This is doubled if Target is Crystallized.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage>.",
+    "usesRunesPerProc": false
+  },
+  {
+    "id": "LullabyOfTheEnchanter",
+    "damage": [
+      {
+        "damageType": "Normal",
+        "amplitude": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:Sleep",
+        "chance": 20,
+        "initialParams": [
+          {
+            "name": "turns",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "effectID": "BGSCheat:LullabyOfTheEnchanter1",
+        "initialParams": [
+          {
+            "name": "maxStacks",
+            "value": 3
+          },
+          {
+            "name": "turns",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": [ 1 ],
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Lullaby of the Enchanter",
+    "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage. On a hit, has a ${onHitEffect0chance}% chance to apply sleep for ${onHitEffect0turns} turn and gives the enemy -${onHitEffect1modValue0}% Max Hit and -${onHitEffect1modValue1}% Global Evasion for ${onHitEffect1turns} of the enemy's turns.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage>. On a hit, <hitEffect>.",
+    "usesRunesPerProc": true
+  },
+  {
+    "id": "RestorationOfTheMind",
+    "damage": [
+      {
+        "damageType": "Normal",
+        "amplitude": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:RestorationOfTheMind0",
+        "initialParams": [
+          {
+            "name": "percent",
+            "value": 200
+          }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": [ 1 ],
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Restoration of the Mind",
+    "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage. On a hit, gives Regen that heals ${onHitEffect0DamageMaxValue0}% of your current hitpoints over ${onHitEffect0duration}s.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage>. On a hit, <hitEffect>.",
+    "usesRunesPerProc": false
+  },
+  {
+    "id": "DanceOfTheMage",
+    "damage": [
+      {
+        "damageType": "Normal",
+        "amplitude": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "BGSCheat:DanceOfTheMage0",
+        "initialParams": [
+          {
+            "name": "maxStacks",
+            "value": 3
+          },
+          {
+            "name": "turns",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": [ 1 ],
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Dance of the Mage",
+    "description": "An avoidable attack that deals ${attackDamageMaxValue0}% of your normal damage. On a hit, gives you -${onHitEffect0modValue0}% Attack Interval and +${onHitEffect0modValue1}% Global Evasion for ${onHitEffect0turns} of your turns.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage>. On a hit, <hitEffect>.",
+    "usesRunesPerProc": false
+  },
+  {
+    "id": "Flight",
+    "damage": [],
+    "prehitEffects": [
+      {
+        "effectID": "BGSCheat:Flight0",
+        "initialParams": [
+          {
+            "name": "initialStacks",
+            "initialValue": 2
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 2
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          },
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ]
+      }
+    ],
+    "onhitEffects": [],
+    "cantMiss": true,
+    "attackCount": 1,
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Flight",
+    "description": "Gives you -${preHitEffect0modValue0}% Attack Interval and +${preHitEffect0modValue1}% Global Evasion for ${preHitEffect0turns} of your turns",
+    "descriptionGenerator": "<prehitEffect>",
+    "usesRunesPerProc": true,
+    "canNormalAttack": true
+  },
+  {
+    "id": "StunningBarrage",
+    "defaultChance": 40,
+    "damage": [
+      {
+        "damageType": "Normal",
+        "amplitude": 100
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "Stun",
+        "chance": 75,
+        "initialParams": [
+          {
+            "name": "turns",
+            "value": 2
+          }
+        ]
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": 3,
+    "attackInterval": [ 400, 0, -50 ],
+    "lifesteal": 0,
+    "name": "Stunning Barrage",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of the enemy's normal damage ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to apply stun for ${onHitEffect0turns} turn.",
+    "descriptionGenerator": "An <avoidable> attack that deals damage equal to <damage> <count> times over <duration>. On a hit, <hitEffect>.",
+    "usesRunesPerProc": false
+  },
+  {
+    "id": "BurningRootsPlayer",
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "maxRoll": "MaxHit",
+        "maxPercent": 30,
+        "roll": false
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [
+      {
+        "effectID": "100Burn",
+        "chance": 20,
+        "initialParams": {
+          "i": { "c": 250, "u": -50, "m": 50 }
+        }
+      }
+    ],
+    "cantMiss": false,
+    "attackCount": 5,
+    "attackInterval": [ 150, 0, -50 ],
+    "lifesteal": 0,
+    "name": "Burning Roots",
+    "description": "An avoidable attack that deals damage equal to ${attackDamageMaxValue0}% of your max hit ${hitCount} times over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s.",
+    "descriptionGenerator": "An <avoidable> attack that deals damage equal to <damage> <count> times over <duration>. On a hit, <hitEffect>.",
+    "usesRunesPerProc": false
+  },
+  {
+    "id": "BloodLinkPlayer",
+    "damage": [
+      {
+        "damageType": "Normal",
+        "amplitude": 50
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [],
+    "cantMiss": true,
+    "attackCount": 4,
+    "attackInterval": { "c": 400, "u": -50 },
+    "lifesteal": 50,
+    "name": "Blood Link",
+    "description": "An unavoidable attack that deals ${attackDamageMaxValue0}% of your normal damage ${hitCount} times over ${duration}s. Lifesteals for 50% of damage dealt.",
+    "descriptionGenerator": "An unavoidable attack that deals <damage> <count> times over <duration>. Lifesteals for 50% of damage dealt.",
+    "usesRunesPerProc": true
+  },
+  {
+    "id": "Killshot",
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "maxRoll": "MaxHit",
+        "maxPercent": 125,
+        "roll": false
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [],
+    "cantMiss": true,
+    "attackCount": [ 1 ],
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Killshot",
+    "description": "An unavoidable attack that deals ${attackDamageMaxValue0}% of your max hit.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage>.",
+    "usesRunesPerProc": true
+  },
+  {
+    "id": "HunterPrecision",
+    "damage": [
+      {
+        "damageType": "Custom",
+        "character": "Attacker",
+        "maxRoll": "MaxHit",
+        "maxPercent": 75,
+        "roll": false
+      }
+    ],
+    "prehitEffects": [],
+    "onhitEffects": [],
+    "cantMiss": true,
+    "attackCount": [ 1 ],
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Hunter Precision",
+    "description": "An unavoidable attack that deals ${attackDamageMaxValue0}% of your max hit.",
+    "descriptionGenerator": "An <avoidable> attack that deals <damage>.",
+    "usesRunesPerProc": true
+  },
+  {
     "id": "ShatterArrow",
     "damage": [
       {

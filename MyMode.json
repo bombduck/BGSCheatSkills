@@ -2031,6 +2031,100 @@
 				}
 			},
       {
+        "id": "Regen",
+        "baseTemplates": [
+          "melvorD:Proccing"
+        ],
+        "baseEffectData": {
+          "name": "Regen",
+          "nameLang": "DOT_TYPE_Regen",
+          "media": "assets/media/status/regen_increase.png",
+          "tooltipSpans": [
+            {
+              "type": "LangString",
+              "langID": "COMBAT_MISC_DOT_HEALING_DESC",
+              "templateData": {
+                "amount": "p.healingPerProc",
+                "interval": "p.interval / 1000"
+              }
+            },
+            {
+              "type": "LangString",
+              "langID": "COMBAT_MISC_ONE_PROC_LEFT",
+              "condition": {
+                "operator": "==",
+                "lhValue": "p.procs",
+                "rhValue": 1
+              },
+              "templateData": {
+                "count": "p.procs",
+                "interval": "p.procs * p.interval / 1000"
+              }
+            },
+            {
+              "type": "LangString",
+              "langID": "COMBAT_MISC_PROCS_LEFT",
+              "condition": {
+                "operator": "!=",
+                "lhValue": "p.procs",
+                "rhValue": 1
+              },
+              "templateData": {
+                "count": "p.procs",
+                "interval": "p.procs * p.interval / 1000"
+              }
+            }
+          ],
+          "descriptionTemplateData": {
+            "initialParameters": {
+              "duration": "procs * interval / 1000"
+            },
+            "damageGroups": {
+              "": "totalHealing"
+            }
+          },
+          "target": "Self",
+          "parameters": [
+            {
+              "name": "healingPerProc",
+              "initialValue": 0
+            },
+						{
+							"name": "percent",
+							"initialValue": 100
+						}
+          ],
+          "behaviours": [
+            {
+              "type": "ModifyParameter",
+              "paramName": "healingPerProc",
+              "newValue": "max(floor(d.totalHealing * p.percent / 100 / p.procs), 1)",
+              "triggersOn": [
+                {
+                  "type": "EffectApplied"
+                }
+              ]
+            },
+            {
+              "type": "HealCharacter",
+              "value": "p.healingPerProc",
+              "triggersOn": [
+                {
+                  "type": "TimerFired",
+                  "timerName": "proc"
+                }
+              ]
+            }
+          ],
+          "effectGroups": [
+            "melvorD:RegenDOT"
+          ],
+          "exclusiveGroups": [
+            "melvorD:RegenDOT"
+          ]
+        }
+      },
+      {
         "id": "Curse",
         "description": "Base template for all curse effects. Curse effects apply fixed modifiers for 3 of the character's turns. Only 1 curse effect can be active at once.",
         "baseTemplates": [
@@ -8234,6 +8328,282 @@
         ]
       },
       {
+        "id": "Flight0",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Flight",
+        "nameLang": "SPECIAL_ATTACK_NAME_Flight",
+        "media": "assets/media/status/evasion_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "attackInterval": -30,
+              "evasion": 30
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BurningGem",
+        "templateID": "melvorD:NonCountingResettingIncremental",
+        "name": "Burning Gem",
+        "nameLang": "ITEM_NAME_Burning_Gem",
+        "media": "assets/media/bank/Burning_Gem.png",
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "combatEffects": [
+              {
+                "effectID": "BGSCheat:Burn",
+                "chance": 2,
+                "appliesWhen": "PostAttack"
+              },
+              {
+                "effectID": "BGSCheat:Frostburn",
+                "chance": 2,
+                "appliesWhen": "PostAttack",
+                "initialParams": [
+                  {
+                    "name": "maxStacks",
+                    "value": 10
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "melvorAoD:Burning_Gem"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "PoisonousGem",
+        "templateID": "melvorD:NonCountingResettingIncremental",
+        "name": "Poisonous Gem",
+        "nameLang": "ITEM_NAME_Poisonous_Gem",
+        "media": "assets/media/bank/Poisonous_Gem.png",
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "combatEffects": [
+              {
+                "effectID": "BGSCheat:Poison",
+                "chance": 2,
+                "appliesWhen": "HitWithAttack"
+              },
+              {
+                "effectID": "BGSCheat:DeadlyPoison",
+                "chance": 2,
+                "appliesWhen": "HitWithAttack"
+              }
+            ]
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "melvorAoD:Poisonous_Gem"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "LullabyOfTheEnchanter1",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Lullaby of the Enchanter",
+        "nameLang": "SPECIAL_ATTACK_NAME_LullabyOfTheEnchanter",
+        "media": "assets/media/status/evasion_decrease.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHit": -10,
+              "evasion": -10
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "RestorationOfTheMind0",
+        "templateID": "BGSCheat:Regen",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 1
+          },
+          {
+            "name": "interval",
+            "initialValue": 50
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "totalHealing",
+            "damage": [
+              {
+                "roll": false,
+                "character": "Attacker",
+                "maxRoll": "CurrentHP",
+                "maxPercent": 8
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DanceOfTheMage0",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Dance of the Mage",
+        "nameLang": "SPECIAL_ATTACK_NAME_DanceOfTheMage",
+        "media": "assets/media/status/speedup.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "attackInterval": -15,
+              "evasion": 20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "ShellBuff0",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Shell Buff",
+        "nameLang": "SPECIAL_ATTACK_NAME_ShellBuff",
+        "media": "assets/media/status/evasion_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "regenPerDamageTaken": 50
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "Madness2",
         "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "Madness",
@@ -8433,7 +8803,7 @@
 		],
 		"skillLevelCapIncreases": [
 			{
-				"id": "Pre40DungeonsCombatOnly",
+				"id": "Pre100DungeonsCombatOnly",
 				"levelType": "Standard",
 				"requirementSets": [
 					{
@@ -8485,47 +8855,9 @@
 								"count": 1
 							}
 						]
-					}
-				],
-				"fixedIncreases": [
-					{
-						"skillID": "melvorD:Attack",
-						"increase": 10,
-						"maximum": 40
 					},
 					{
-						"skillID": "melvorD:Strength",
-						"increase": 10,
-						"maximum": 40
-					},
-					{
-						"skillID": "melvorD:Defence",
-						"increase": 10,
-						"maximum": 40
-					},
-					{
-						"skillID": "melvorD:Hitpoints",
-						"increase": 10,
-						"maximum": 40
-					},
-					{
-						"skillID": "melvorD:Ranged",
-						"increase": 10,
-						"maximum": 40
-					},
-					{
-						"skillID": "melvorD:Magic",
-						"increase": 10,
-						"maximum": 40
-					}
-				]
-			},
-			{
-				"id": "Pre60DungeonsCombatOnly",
-				"levelType": "Standard",
-				"requirementSets": [
-					{
-						"id": 0,
+						"id": 5,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8535,7 +8867,7 @@
 						]
 					},
 					{
-						"id": 1,
+						"id": 6,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8545,7 +8877,7 @@
 						]
 					},
 					{
-						"id": 2,
+						"id": 7,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8555,7 +8887,7 @@
 						]
 					},
 					{
-						"id": 3,
+						"id": 8,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8565,7 +8897,7 @@
 						]
 					},
 					{
-						"id": 4,
+						"id": 9,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8573,47 +8905,9 @@
 								"count": 1
 							}
 						]
-					}
-				],
-				"fixedIncreases": [
-					{
-						"skillID": "melvorD:Attack",
-						"increase": 10,
-						"maximum": 60
 					},
 					{
-						"skillID": "melvorD:Strength",
-						"increase": 10,
-						"maximum": 60
-					},
-					{
-						"skillID": "melvorD:Defence",
-						"increase": 10,
-						"maximum": 60
-					},
-					{
-						"skillID": "melvorD:Hitpoints",
-						"increase": 10,
-						"maximum": 60
-					},
-					{
-						"skillID": "melvorD:Ranged",
-						"increase": 10,
-						"maximum": 60
-					},
-					{
-						"skillID": "melvorD:Magic",
-						"increase": 10,
-						"maximum": 60
-					}
-				]
-			},
-			{
-				"id": "Pre80DungeonsCombatOnly",
-				"levelType": "Standard",
-				"requirementSets": [
-					{
-						"id": 0,
+						"id": 10,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8623,7 +8917,7 @@
 						]
 					},
 					{
-						"id": 1,
+						"id": 11,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8633,7 +8927,7 @@
 						]
 					},
 					{
-						"id": 2,
+						"id": 12,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8641,47 +8935,9 @@
 								"count": 1
 							}
 						]
-					}
-				],
-				"fixedIncreases": [
-					{
-						"skillID": "melvorD:Attack",
-						"increase": 10,
-						"maximum": 80
 					},
 					{
-						"skillID": "melvorD:Strength",
-						"increase": 10,
-						"maximum": 80
-					},
-					{
-						"skillID": "melvorD:Defence",
-						"increase": 10,
-						"maximum": 80
-					},
-					{
-						"skillID": "melvorD:Hitpoints",
-						"increase": 10,
-						"maximum": 80
-					},
-					{
-						"skillID": "melvorD:Ranged",
-						"increase": 10,
-						"maximum": 80
-					},
-					{
-						"skillID": "melvorD:Magic",
-						"increase": 10,
-						"maximum": 80
-					}
-				]
-			},
-			{
-				"id": "Pre100DungeonsCombatOnly",
-				"levelType": "Standard",
-				"requirementSets": [
-					{
-						"id": 0,
+						"id": 13,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8691,7 +8947,7 @@
 						]
 					},
 					{
-						"id": 1,
+						"id": 14,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8701,7 +8957,7 @@
 						]
 					},
 					{
-						"id": 2,
+						"id": 15,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8711,7 +8967,7 @@
 						]
 					},
 					{
-						"id": 3,
+						"id": 16,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8721,7 +8977,7 @@
 						]
 					},
 					{
-						"id": 4,
+						"id": 17,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8731,7 +8987,7 @@
 						]
 					},
 					{
-						"id": 5,
+						"id": 18,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8741,7 +8997,7 @@
 						]
 					},
 					{
-						"id": 6,
+						"id": 19,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8751,7 +9007,7 @@
 						]
 					},
 					{
-						"id": 7,
+						"id": 20,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8759,47 +9015,9 @@
 								"count": 1
 							}
 						]
-					}
-				],
-				"fixedIncreases": [
-					{
-						"skillID": "melvorD:Attack",
-						"increase": 10,
-						"maximum": 100
 					},
 					{
-						"skillID": "melvorD:Strength",
-						"increase": 10,
-						"maximum": 100
-					},
-					{
-						"skillID": "melvorD:Defence",
-						"increase": 10,
-						"maximum": 100
-					},
-					{
-						"skillID": "melvorD:Hitpoints",
-						"increase": 10,
-						"maximum": 100
-					},
-					{
-						"skillID": "melvorD:Ranged",
-						"increase": 10,
-						"maximum": 100
-					},
-					{
-						"skillID": "melvorD:Magic",
-						"increase": 10,
-						"maximum": 100
-					}
-				]
-			},
-			{
-				"id": "Pre100InfernalSpecialCase",
-				"levelType": "Standard",
-				"requirementSets": [
-					{
-						"id": 0,
+						"id": 21,
 						"requirements": [
 							{
 								"type": "DungeonCompletion",
@@ -8809,46 +9027,46 @@
 						]
 					}
 				],
-				"setIncreases": [
-					{
-						"skillID": "melvorAoD:Cartography",
-						"value": 120
-					},
-					{
-						"skillID": "melvorAoD:Archaeology",
-						"value": 120
-					}
-				],
 				"fixedIncreases": [
 					{
 						"skillID": "melvorD:Attack",
-						"increase": 10,
+						"increase": 5,
 						"maximum": 100
 					},
 					{
 						"skillID": "melvorD:Strength",
-						"increase": 10,
+						"increase": 5,
 						"maximum": 100
 					},
 					{
 						"skillID": "melvorD:Defence",
-						"increase": 10,
+						"increase": 5,
 						"maximum": 100
 					},
 					{
 						"skillID": "melvorD:Hitpoints",
-						"increase": 10,
+						"increase": 5,
 						"maximum": 100
 					},
 					{
 						"skillID": "melvorD:Ranged",
-						"increase": 10,
+						"increase": 5,
 						"maximum": 100
 					},
 					{
 						"skillID": "melvorD:Magic",
-						"increase": 10,
+						"increase": 5,
 						"maximum": 100
+					},
+					{
+						"skillID": "melvorAoD:Cartography",
+						"increase": 5,
+						"maximum": 120
+					},
+					{
+						"skillID": "melvorAoD:Archaeology",
+						"increase": 5,
+						"maximum": 120
 					}
 				]
 			},
@@ -9049,24 +9267,6 @@
 						"melvorD:Hitpoints",
 						"melvorD:Ranged",
 						"melvorD:Magic",
-						"melvorD:Prayer",
-						"melvorD:Slayer",
-						"melvorD:Woodcutting",
-						"melvorD:Fishing",
-						"melvorD:Firemaking",
-						"melvorD:Cooking",
-						"melvorD:Mining",
-						"melvorD:Smithing",
-						"melvorD:Thieving",
-						"melvorD:Farming",
-						"melvorD:Fletching",
-						"melvorD:Crafting",
-						"melvorD:Runecrafting",
-						"melvorD:Herblore",
-						"melvorD:Agility",
-						"melvorD:Summoning",
-						"melvorD:Astrology",
-						"melvorD:Township",
 						"melvorAoD:Cartography",
 						"melvorAoD:Archaeology"
 				],
@@ -9075,27 +9275,23 @@
 				"defaultInitialLevelCap": 10,
 				"defaultInitialAbyssalLevelCap": 10,
 				"levelCapIncreases": [
-					"BGSCheat:Pre40DungeonsCombatOnly",
-					"BGSCheat:Pre60DungeonsCombatOnly",
-					"BGSCheat:Pre80DungeonsCombatOnly",
 					"BGSCheat:Pre100DungeonsCombatOnly",
-					"BGSCheat:Pre100InfernalSpecialCase",
 					"BGSCheat:ImpendingDarknessSet",
 					"BGSCheat:TheAbyssCombatOnly",
 					"melvorTotH:Post99DungeonsCombatOnly"
 				],
 				"levelCapCost": {
-					"increase": 10,
+					"increase": 5,
 					"baseCost": {
 						"currencies": [
 							{
 								"id": "melvorD:GP",
-								"quantity": 10000
+								"quantity": 1000
 							}
 						]
 					},
 					"scalingFactor": 1.2,
-					"maxCostScaling": 50000,
+					"maxCostScaling": 5000000,
 					"skillLevelGates": [
 						"melvorD:Attack",
 						"melvorD:Strength",

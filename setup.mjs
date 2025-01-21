@@ -13,6 +13,7 @@ export class CheatManaget{
 	craftingManager;
 	runecraftingManager;
 	herbloreManager;
+	archaeologyManager;
 	levelMultiplierFunction;
 
 	constructor(){
@@ -38,6 +39,7 @@ export class CheatManaget{
 		this.craftingManager.initCharacter();
 		this.runecraftingManager.initCharacter();
 		this.herbloreManager.initCharacter();
+		this.archaeologyManager.initCharacter();
 	}
 
 	initSettings(){
@@ -47,12 +49,8 @@ export class CheatManaget{
 				name: "LevelFormula",
 				label: "Level Formula",
 				hint: "Level formula for mastery xp.",
-				default: 0,
+				default: 1,
 				options: [
-					{
-						value: 0,
-						display: Object.assign(document.createElement('span'), { innerHTML: 'Custom (Array Coefficients)' })
-					},
 					{
 						value: 1,
 						display: Object.assign(document.createElement('span'), { innerHTML: 'Custom (Javascript Code)' })
@@ -75,6 +73,7 @@ export class CheatManaget{
 				label: "Input for Custom Formula",
 				hint: "See custom formula manual at the bottom of the dialog.",
 				default: "[[9,2,0.6,8,0.4,2]]",
+				default: "return 90000*(lv+2)**0.6*8**(0.4*(lv+2))",
 				onChange: (val, prev) => {
 					this.loadMasteryXpSettings(val);
 					this.initLevelTable();
@@ -88,13 +87,6 @@ export class CheatManaget{
 				hint: Object.assign(document.createElement('span'), { innerHTML: '\
 					<p>The formula input for mastery xp expect one of three formats.</p>\
 					<dl>\
-						<dt><font color="#ee99ee">Array Coefficients</font></dt>\
-						<dd><p>The mod expected to get a array of number arrays with length six. Every array determines variable of a fix math formula. All formula will be summed finally.</p>\
-							<p>For example, [[1,2,3,4,5,6],[7,8,9,10,11,12]]<br/>means<br/>\
-								1 X (<i>Level</i> + 2)<sup>3</sup> X 4<sup>5 X (<i>Level</i> + 6)</sup> + \
-								7 X (<i>Level</i> + 8)<sup>9</sup> X 10<sup>11 X (<i>Level</i> + 12)</sup>\
-							</p>\
-						</dd>\
 						<dt><font color="#ee99ee">Javascript code</font></dt>\
 						<dd><p>The mod expected to get a simple java code to calculate the xp need from level <i>lv</i>-1 to level <i>lv</i>. The code should retrun a number.</p>\
 							<p>For example, the code<br/>\
@@ -169,6 +161,7 @@ export class CheatManaget{
 		this.craftingManager.updateItems();
 		this.runecraftingManager.updateItems();
 		this.herbloreManager.updateItems();
+		this.archaeologyManager.updateItems();
 	}
 
 	async loadSkills(ctx){
@@ -197,6 +190,8 @@ export class CheatManaget{
 		await this.runecraftingManager.init(ctx, Runecrafting, game.runecrafting, "runecrafting/item.json", "runecrafting/skill.json");
 		this.herbloreManager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
 		await this.herbloreManager.init(ctx, Herblore, game.herblore, "herblore/item.json", "herblore/skill.json");
+		this.archaeologyManager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
+		await this.archaeologyManager.init(ctx, Archaeology, game.archaeology, "archaeology/item.json", "archaeology/skill.json");
 	}
 
 	loadLevelTable(){

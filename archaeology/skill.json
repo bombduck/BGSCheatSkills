@@ -1,0 +1,20 @@
+{
+  "melvorAoD:OldVillage": [ "melvorAoD:Old_Wooden_Ladle", "melvorAoD:Old_Woodcutting_Gloves", "melvorAoD:Basic_Barrier_Gem", "melvorAoD:Old_Hunting_Bow", "melvorAoD:Ancient_Hunting_Bow" ],
+  "melvorAoD:AncientMarket": [ "melvorAoD:Barrier_Gem", "melvorAoD:Ancient_Scythe" ],
+  "melvorAoD:SacrificialSite": [ "melvorAoD:Bronze_Ring", "melvorAoD:Bone_Ring", "melvorAoD:Accuracy_Gem", "melvorAoD:Harming_Potion", "melvorAoD:Sacrificial_Dagger", "melvorAoD:Blood_Chalice", "melvorAoD:Circlet_of_Pain", "melvorAoD:Cult_Robes" ],
+  "melvorAoD:Stoneworkers": [ "melvorAoD:Ancient_Whetstone", "melvorAoD:Relic_Whetstone", "melvorAoD:Bulky_Gloves", "melvorAoD:Chisel", "melvorAoD:Heavy_Boots", "melvorAoD:Stone_Hammer" ],
+  "melvorAoD:Monuments": [ "melvorAoD:Golden_Wreath", "melvorAoD:Dividers", "melvorAoD:Old_Crafting_Gloves" ],
+  "melvorAoD:Bazaar": [ "melvorAoD:Tiny_Spice_Jar", "melvorAoD:Evasion_Gem", "melvorAoD:Ceramic_Jar", "melvorAoD:Golden_Fire_Cape", "melvorAoD:Ancient_Infernal_Cape" ],
+  "melvorAoD:Mines": [ "melvorAoD:Mining_Lantern"],
+  "melvorAoD:CoralWreckage": [ "melvorAoD:Sailors_Compass", "melvorAoD:Lifesteal_Gem", "melvorAoD:Old_Spyglass", "melvorAoD:Enhanced_Spyglass" ],
+  "melvorAoD:Quarry": [ "melvorAoD:Grinding_Stone", "melvorAoD:Rune_Mallet", "melvorAoD:Dirty_Mining_Boots" ],
+  "melvorAoD:RuinedCity": [ "melvorAoD:Old_Fancy_Quill", "melvorAoD:Sturdy_Fancy_Quill", "melvorAoD:Poisonous_Gem", "melvorAoD:Old_Scripture" ],
+  "melvorAoD:AncientForge": [ "melvorAoD:Blacksmith_Tongs", "melvorAoD:Ancient_Magic_Hammer", "melvorAoD:Elusive_Boots" ],
+  "melvorAoD:RitualSite": [ "melvorAoD:Ring_of_Summoning", "melvorAoD:Agile_Gem", "melvorAoD:Mask_of_Weakening", "melvorAoD:Mask_of_Confusion", "melvorAoD:Old_Summoning_Gloves", "melvorAoD:Magical_Broomstick" ],
+  "melvorAoD:LostTemple": [ "melvorAoD:Haunted_Ring", "melvorAoD:Burning_Gem", "melvorAoD:Decoy_Idol", "melvorAoD:Unholy_Gem", "melvorAoD:Elemental_Scroll", "melvorAoD:Magic_Flute", "melvorAoD:Cursed_Arcana", "melvorAoD:Blessed_Shield", "melvorAoD:Magicburn_Shield", "melvorAoD:Malevolent_Ward_Shield" ],
+  "melvorAoD:Watchtower": [ "melvorAoD:Confusing_Gem", "melvorAoD:Torch", "melvorAoD:Charged_Golden_Quiver", "melvorAoD:Charged_Ancient_Quiver", "melvorAoD:Charged_Relic_Quiver", "melvorAoD:Large_Warhorn" ],
+  "melvorAoD:CastleRuins": [ "melvorAoD:Book_of_Prayers", "melvorAoD:Peasant_Shirt", "melvorAoD:Kings_Crown", "melvorAoD:Aranite_Platebody", "melvorAoD:Golden_Bow", "melvorAoD:Darksteel_2H_SWord" ],
+  "melvorAoD:Cathedral": [ "melvorAoD:Ring_of_Faith", "melvorAoD:Impenetrable_Idol", "melvorAoD:Candle_Lamp_Lit", "melvorAoD:Candelabra_Lit", "melvorAoD:Cursed_Idol" ],
+  "melvorAoD:ShipwreckCove": [ "melvorAoD:Ring_of_Deception", "melvorAoD:Decaying_Gem", "melvorAoD:Eyepatch", "melvorAoD:Captains_Logbook", "melvorAoD:Old_Pirate_Pants", "melvorAoD:Pirate_Hook", "melvorAoD:Pirate_Captains_Sword" ],
+  "melvorAoD:Melantis": [ "melvorAoD:Shell_Amulet", "melvorAoD:Merman_Pendant", "melvorAoD:Power_Crystals", "melvorAoD:Bottle_of_Mystic_Water", "melvorAoD:Water_Crown", "melvorAoD:Ancient_Arcana", "melvorAoD:Water_Sceptre","melvorAoD:Water_Shield" ]
+}

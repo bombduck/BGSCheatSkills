@@ -237,7 +237,7 @@ export class AgilityCheatManager{
 		return v;
 	}
 
-	saveData(id, xp, penalty) {
+	saveData(id, xp) {
 		let v = this.loadData(id);
 		if (v == null)
 			return;
@@ -246,12 +246,6 @@ export class AgilityCheatManager{
 				v.xp = xp >> 0;
 			else
 				delete v.xp;
-		}
-		if (penalty) {
-			if (Util.isNumber(penalty))
-				v.pxp = penalty >> 0;
-			else
-				delete v.pxp;
 		}
 		characterStorage.setItem(id, v);
 	}
@@ -285,19 +279,28 @@ export class AgilityCheatManager{
 
 	getMasteryXP(action) {
 		const isPillar = (action instanceof AgilityPillar);
-		let v = this.loadData(action.id);
-		let xp = v?.pxp ?? 0;
-		if (isPillar)
-			xp += v?.xp ?? 0;
+		if (isPillar) {
+			let v = this.loadData(action.id);
+			return v?.xp ?? 0;
+		}
 		else
-			xp += game.agility.getMasteryXP(action);
-		return xp;
+			return game.agility.getMasteryXP(action);
+	}
+
+	setMasteryXP(action, xp) {
+		const isPillar = (action instanceof AgilityPillar);
+		if (isPillar)
+			this.setPillarMasteryXP(action, xp);
+		else {
+			let nxp = game.agility.getMasteryXP(action);
+			game.agility.addMasteryXP(action, xp - nxp);
+		}
 	}
 
 	setPillarMasteryXP(action, xp) {
 		const isPillar = (action instanceof AgilityPillar);
 		if (isPillar)
-			this.saveData(action.id, xp, null);
+			this.saveData(action.id, xp);
 	}
 
 	levelUpAgility(action, updateCheat) {
@@ -364,20 +367,16 @@ export class AgilityCheatManager{
 	downAction(action) {
 		if (action.id.indexOf("BGSCheat:") == 0)	//Don't handle myself action.
 			return;
+		const isPillar = (action instanceof AgilityPillar);
 		let xp = this.getMasteryXP(action);
 		let lv = this.levelFormula.testLevel(xp);
 		if (lv == 20)
 			return;
-		let nLv = lv > 0 ? lv - 1 : lv;
-		let nXp = this.levelFormula.getLevelTotalXp(nLv);
-		let pxp = nXp - xp;
-		let v = this.loadData(action.id);
-		if (v.pxp == null)
-			v.pxp = pxp;
-		else
-			v.pxp += pxp;
-
-		this.saveData(action.id, null, v.pxp);
+		const toLv = lv == 10 ? 10 : (lv > 0 ? lv - 1 : lv);
+		const toXp = Math.max(this.levelFormula.getLevelTotalXp(toLv), isPillar ? 0 : 13034431);
+		if (xp <= toXp)
+			return;
+		this.setMasteryXP(action, toXp);
 		this.levelUpAgility(action, false, false);
 	}
 
@@ -408,14 +407,12 @@ export class AgilityCheatManager{
 			if (x.id.indexOf("BGSCheat:") == 0)
 				return;
 			this.setData(x, 0);
-			this.saveData(x.id, null, "d");
 		});
 
 		game.agility.pillars.forEach(x => {
 			if (x.id.indexOf("BGSCheat:") == 0)
 				return;
 			this.setData(x, 0);
-			this.saveData(x.id, null, "d");
 		});
 		updateAgility();
 	}

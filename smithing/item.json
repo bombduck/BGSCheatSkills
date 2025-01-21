@@ -465,7 +465,7 @@
 	"melvorD:Steel_2H_Sword": {
 		"base": "tier3",
 		"Uress": [ 3 ],
-		"3OuniqueAttack": { "id": "DeadlyCut" },
+		"4OuniqueAttack": { "id": "DeadlyCut" },
 		"10arch": [ 0, 0, 0, 0, 50 ],
 		"10arch2": [ 50, 50, 50, 50 ]
 	},

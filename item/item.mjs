@@ -102,8 +102,8 @@ export class ItemLevelManager{
 		if (item instanceof PotionItem)
 			statObject = item.stats;
 		this.getLevelUpData(statObject, modData ,itemID,modBase,lv,mul);
-		if (itemID === "melvorD:Adamant_Battleaxe")
-			console.log(JSON.stringify(modData));
+		//if (itemID === "melvorAoD:Pirate_Captains_Sword")
+		//	console.log(JSON.stringify(modData));
 		item.applyDataModification(modData, game);
 		delete item._modifiedDescription;
 		delete item._customDescription;
@@ -134,6 +134,7 @@ export class SkillCheatManager{
 	itemManager = null;
 	skillObject = null;
 	mulFormula = null;
+	actionDataMap = null;
 
 	constructor(lF, mulF){
 		this.levelFormula = lF;
@@ -151,6 +152,8 @@ export class SkillCheatManager{
 		await this.itemManager.init(ctx,itemPath);
 		this.levelData = await ctx.loadData(skillPath);
 		this.skillObject = skillObject;
+		if (this.skillObject == game.archaeology)
+			this.actionDataMap = new Map();
 		await ctx.patch(skillClass, 'addMasteryXP').after((ret, action, mount)=> {
 			this.testAction(action);
 		});
@@ -172,6 +175,8 @@ export class SkillCheatManager{
 		const mul = this.mulFormula(lv);
 		data.forEach(x=>this.itemManager.levelUp(x,lv,mul));
 		this.actionLevelMap.set(action.id,lv);
+		if (this.skillObject == game.archaeology)
+			this.setArchaelogyData(action.id, lv);
 	}
 
 	testAction(action){
@@ -181,6 +186,33 @@ export class SkillCheatManager{
 		if (upXp == 0 || xp < upXp)
 			return false;
 		this.levelUpItem(action);
+	}
+
+	getArchaelogyData(id) {
+		const recipe = game.archaeology.actions.getObjectByID(id);
+		if (recipe == null)
+			return null;
+		let data = this.actionDataMap.get(id) ?? null;
+		if (data == null) {
+			data = {};
+			data.lv = 0;
+			data.name = recipe?.name??null;
+			data.localID = recipe?.localID??null;
+			this.actionDataMap.set(id, data);
+		}
+		return data;
+	}
+
+	setArchaelogyData(id, lv) {
+		let data = this.getArchaelogyData(id);
+		if (data == null)
+			return;
+		data.lv = lv;
+		if (data.name && data.localID) {
+			let newName = `${data.name} Lv${lv}`;
+			loadedLangJson[`POI_NAME_Melvor_${data.localID}`] = newName;
+		}
+		this.actionDataMap.set(id, data);
 	}
 }
 

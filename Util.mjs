@@ -275,6 +275,9 @@ export class Util {
 				v += (value.o * (mul + 1));
 		}
 
+		if (v == 0)
+			return 0;
+
 		if (isNumber(extraMul) && extraMul != 0)
 			v *= extraMul;
 
@@ -331,6 +334,7 @@ export class Util {
 			if (isNumber(_a.f)) {
 				if ((type & 0x0FFF) == 1) v.v = _a.f;
 				else if ((type & 0x0FFF) == 2) v.u = _a.f;
+				else if ((type & 0x0FFF) == 3) v.o = _a.f;
 				else v.c = _a.f;
 			}
 			else if (typeof (_a.f) == "string")
@@ -347,7 +351,13 @@ export class Util {
 		}
 		if (v.i === undefined && (type & 0x1000) != 0)
 			v.i = true;
-		return this.calcObjectValue(v, lv, mul, extraMul);
+		let ret = this.calcObjectValue(v, lv, mul, extraMul);
+		_a?.sums?.forEach(x => {
+			const n = this.calcValue(x, type, lv, mul, extraMul);
+			if (isNumber(n))
+				ret += n;
+		});
+		return ret;
 	}
 
 	static equalModifierScopeData(l,r){
@@ -852,10 +862,11 @@ export class Util {
 		attacks?.forEach(x => {
 			this.removeSpecialAttackData(data, x.id);
 		});
-		if (data?.specialAttacks) {
+		if (data.specialAttacks) {
 			data.specialAttacks.add = [];
-			data.specialAttacks.overrideSpecialChances = null;
 		}
+		if (data.overrideSpecialChances)
+			data.overrideSpecialChances = [];
 	}
 
 	static addSpecialAttacksData(statObject, data, modData, type, lv, mul, extraMul = 1, toCalc = true) {
@@ -1806,12 +1817,14 @@ export class EasyTool {
 		valueMap = ["unholyMarkOnHit", "onHitSlowMagnitude", "curseOnHitWithUnholyMark", "attackRolls","extraLacerationStackChance"];
 	astrology
 		valueMap = ["meteoriteLocationChance", "starFallChance", "astrologyModifierCost"];
+		scopeMap = ["realmID"];
 	town
 		valueMap = ["townshipMaxStorage", "townshipMaxSoulStorage", "townshipResourceProduction", "flatTownshipEducation","flatTownshipHappiness","flatTownshipPopulation","townshipTraderCost"];
 	arch
 		valueMap = ["sieveToolLevel", "trowelToolLevel","brushToolLevel" ,"shovelToolLevel","melvorAoD:mapChargePreservationChance","doubleConsumablesArchaeology"];
 	arch2
 		valueMap = ["tinyArtefactChance","smallArtefactChance", "mediumArtefactChance","largeArtefactChance","flatCurrencyGainPerArchaeologyLevelNoArtefact"];
+		scopeMap = ["currencyID"];
 	cart
 		valueMap = ["cartographySightRange","cartographySurveyRange","cartographyTravelCost","cartographySurveyInterval" ,"cartographySurveyXP","travelEventChance","doubleActiveModifiersCartography"];
 	cart2
@@ -2154,6 +2167,7 @@ export class EasyTool {
 			}
 			case "arch2":{
 				valueMap = ["tinyArtefactChance","smallArtefactChance", "mediumArtefactChance","largeArtefactChance","flatCurrencyGainPerArchaeologyLevelNoArtefact"];
+				scopeMap = ["currencyID"];
 				break;
 			}
 			case "cart": {
@@ -2303,7 +2317,9 @@ export class EasyTool {
 				case "Bleed1600": ret = "BGSCheat:Bleed1600"; break;
 				case "bleedr": 
 				case "BleedReflect": ret = "BGSCheat:BleedReflect"; break;
+				case "bbd":
 				case "BarrierBleed": ret = "BGSCheat:BarrierBleed"; break;
+				case "bbn":
 				case "BarrierBurn": ret = "BGSCheat:BarrierBurn"; break;
 				case "ablaze": 
 				case "Ablaze": ret = "BGSCheat:Ablaze"; break;
@@ -2389,7 +2405,7 @@ export class EasyTool {
 			}
 		}
 
-		if (!ret || ret.indexOf("BGSCheat:") != 0)
+		if (effects == null || data == null || !ret || ret.indexOf("BGSCheat:") != 0)
 			return ret;
 		const i = ret.indexOf(":");
 		const lID = ret.slice(i + 1);
@@ -2631,6 +2647,12 @@ export class EasyTool {
 					_a.push({ "name": "maxStacks", "value": { "f": v1, "m": v1 } });
 				break;
 			}
+			case "Frostburn": {
+				if (v2 && _a.find(x => x.name == "stacksToAdd") == null && _a.find(x => x.name == "initialStacks") == null) {
+					_a.push({ "name": "stacksToAdd", "value": { "f": v2, "min": 1 } });
+					_a.push({ "name": "initialStacks", "value": { "f": v2, "min": 1 } });
+				}
+			}
 			case "KingsRage": {
 				if (v3 && _a.find(x => x.name == "turns") == null)
 					_a.push({ "name": "turns", "value": { "f": v3, "m": 1 } });
@@ -2643,12 +2665,6 @@ export class EasyTool {
 			case "Wither": {
 				if (v2 && _a.find(x => x.name == "stacksToAdd") == null)
 					_a.push({ "name": "stacksToAdd", "value": { "f": v2, "m": 1 } });
-			}
-			case "Frostburn": {
-				if (v2 && _a.find(x => x.name == "stacksToAdd") == null && _a.find(x => x.name == "initialStacks") == null) {
-					_a.push({ "name": "stacksToAdd", "value": { "f": v2, "min": 1 } });
-					_a.push({ "name": "initialStacks", "value": { "f": v2, "min": 1 } });
-				}
 			}
 			case "UnholyMark": {
 				if (v1 && _a.find(x => x.name == "maxStacks") == null)
@@ -2748,6 +2764,41 @@ export class EasyTool {
 		}
 	}
 
+	static addInitialParamsEasy(dst, src) {
+		if (src instanceof Array)
+			dst.initialParams = _a[3];
+		else {
+			let _b = dst.initialParams = [];
+			Object.entries(src).forEach(x => {
+				if (!x[1] && x[1] !== 0)
+					return;
+				switch (x[0]) {
+					case "t": { _b.push({ "name": "turns", "value": x[1] }); break; }
+					case "i": { _b.push({ "name": "interval", "value": x[1] }); break; }
+					case "m": { _b.push({ "name": "magnitude", "value": x[1] }); break; }
+					case "p": { _b.push({ "name": "percent", "value": x[1] }); break; }
+					case "sa": { _b.push({ "name": "stacksToAdd", "value": x[1] }); break; }
+					case "sm": { _b.push({ "name": "maxStacks", "value": x[1] }); break; }
+					case "sma": { _b.push({ "name": "maxStacksToAdd", "value": x[1] }); break; }
+					case "si": { _b.push({ "name": "initialStacks", "value": x[1] }); break; }
+					case "s": { _b.push({ "name": "stacks", "value": x[1] }); break; }
+					case "sr": { _b.push({ "name": "resetStacks", "value": x[1] }); break; }
+					case "sp": { _b.push({ "name": "percentPerStack", "value": x[1] }); break; }
+					case "x": { _b.push({ "name": "XTurns", "value": x[1] }); break; }
+					case "pr": { _b.push({ "name": "procs", "value": x[1] }); break; }
+					case "c": { _b.push({ "name": "category", "value": x[1] }); break; }
+					case "cm": { _b.push({ "name": "maxCategory", "value": x[1] }); break; }
+					default: {
+						if (!x[0])
+							break;
+						_b.push({ "name": x[0], "value": x[1] });
+						break;
+					}
+				}
+			});
+		}
+	}
+
 	static addCombatEffectModificationShortCut(effects, data, modData, type, lv, mul, extraMul, category) {
 		if (!modData instanceof Array)
 			return;
@@ -2831,40 +2882,7 @@ export class EasyTool {
 		if (_a[2])
 			v.chance = _a[2];
 
-		if (_a[3]) {
-			if (_a[3] instanceof Array)
-				v.initialParams = _a[3];
-			else {
-				let _b = v.initialParams = [];
-				Object.entries(_a[3]).forEach(x => {
-					if (!x[1] && x[1] !== 0)
-						return;
-					switch (x[0]) {
-						case "t": { _b.push({ "name":"turns", "value": x[1] }); break; }
-						case "i": { _b.push({ "name":"interval", "value": x[1] }); break; }
-						case "m": { _b.push({ "name":"magnitude", "value": x[1] }); break; }
-						case "p": { _b.push({ "name":"percent", "value": x[1] }); break; }
-						case "sa": { _b.push({ "name":"stacksToAdd", "value": x[1] }); break; }
-						case "sm": { _b.push({ "name":"maxStacks", "value": x[1] }); break; }
-						case "sma": { _b.push({ "name":"maxStacksToAdd", "value": x[1] }); break; }
-						case "si": { _b.push({ "name":"initialStacks", "value": x[1] }); break; }
-						case "s": { _b.push({ "name":"stacks", "value": x[1] }); break; }
-						case "sr": { _b.push({ "name":"resetStacks", "value": x[1] }); break; }
-						case "sp": { _b.push({ "name":"percentPerStack", "value": x[1] }); break; }
-						case "x": { _b.push({ "name":"XTurns", "value": x[1] }); break; }
-						case "pr": { _b.push({ "name":"procs", "value": x[1] }); break; }
-						case "c": { _b.push({ "name":"category", "value": x[1] }); break; }
-						case "cm": { _b.push({ "name":"maxCategory", "value": x[1] }); break; }
-						default: {
-							if (!x[0])
-								break;
-							_b.push({ "name": x[0], "value": x[1] });
-							break;
-						}
-					}
-				});
-			}
-		}
+		if (_a[3]) this.addInitialParamsEasy(v, _a[3]);
 
 		this.setDefaultValue(v, defValue, useCategory ? category : 0, category);
 
@@ -3104,6 +3122,300 @@ export class EasyTool {
 		}
 	}
 
+	static copyAttackData(data) {
+		let v = {};
+		let _a = data;
+
+		v.id = data.id;
+
+		if (_a.defaultChance) v.defaultChance = _a.defaultChance;
+		else if (_a.dc) v.defaultChance = _a.dc;
+
+		if (_a.addChance) v.addChance = _a.addChance;
+		else if (_a.adc) v.addChance = _a.adc;
+
+		if (_a.attackCount) v.attackCount = _a.attackCount;
+		else if (_a.ac) v.attackCount = _a.ac;
+
+		if (_a.addCount) v.addCount = _a.addCount;
+		else if (_a.aac) v.addCount = _a.aac;
+
+		if (_a.attackInterval) v.attackInterval = _a.attackInterval;
+		else if (_a.ai) v.attackInterval = _a.ai;
+
+		if (_a.lifesteal) v.lifesteal = _a.lifesteal;
+		else if (_a.ls) v.lifesteal = _a.ls;
+
+		if (_a.addls) v.addls = _a.addls;
+
+		v.damage = [];
+		_a?.damage?.forEach(x => {
+			if (x.damageType !== undefined) {
+				v.damage.push(x);
+				return;
+			}
+			let y = {};
+			if (x.amplitude !== undefined)
+				y.amplitude = x.amplitude;
+			else if (x.a !== undefined)
+				y.amplitude = x.a;
+
+			if (x.minPercent)
+				y.minPercent = x.minPercent;
+			else if (x.m)
+				y.minPercent = x.m;
+
+			if (x.maxPercent)
+				y.maxercent = x.maxPercent;
+			else if (x.M)
+				y.maxPercent = x.M;
+
+			v.damage.push(y);
+		});
+
+		_a?.dmg?.forEach(x => {
+			let y = {};
+			y.amplitude = x;
+			y.maxPercent = x;
+			v.damage.push(y);
+		});
+
+
+		if (_a.addDamage || _a.admg) {
+			v.addDamage = [];
+			_a?.addDamage?.forEach(x => {
+				let y = {};
+				if (x.amplitude !== undefined)
+					y.amplitude = x.amplitude;
+				else if (x.a !== undefined)
+					y.amplitude = x.a;
+
+				if (x.minPercent)
+					y.minPercent = x.minPercent;
+				else if (x.m)
+					y.minPercent = x.m;
+
+				if (x.maxPercent)
+					y.maxercent = x.maxPercent;
+				else if (x.M)
+					y.maxPercent = x.M;
+
+				v.addDamage.push(y);
+			});
+
+			_a?.admg?.forEach(x => {
+				let y = {};
+				y.amplitude = x;
+				y.maxPercent = x;
+				v.addDamage.push(y);
+			});
+		}
+
+		v.prehitEffects = [];
+		_a?.prehitEffects?.forEach(x => {
+			let z = {};
+			if (x.effectID) {
+				let defValue, id;
+				[defValue, id] = this.parseNameNumber(x.effectID);
+				let useCategory = false;
+				if (id[0] == '@') {
+					useCategory = true;
+					id = id.slice(1);
+				}
+				z.effectID = this.translateCombatEffect(null, null, id);
+				if (x.chance) z.chance = x.chance;
+				if (x.initialParams) this.addInitialParamsEasy(z, x.initialParams);
+
+				this.setDefaultValue(z, defValue, useCategory ? 41 : 0, 41);
+				if (z.bypassBarrier === undefined && z.effectID.indexOf("BGSCheat:") == 0)
+					z.bypassBarrier = true;
+				if (z.applyEffectWhenMerged === undefined && z.effectID.indexOf("BGSCheat:") == 0)
+					z.applyEffectWhenMerged = true;
+			}
+			else if (x.tableID) {
+				z.tableID = x.tableID;
+				if (x.chance) z.chance = x.chance;
+			}
+			v.prehitEffects.push(z);
+		});
+
+		v.onhitEffects = [];
+		_a?.onhitEffects?.forEach(x => {
+			let z = {};
+			if (x.effectID) {
+				let defValue, id;
+				[defValue, id] = this.parseNameNumber(x.effectID);
+				let useCategory = false;
+				if (id[0] == '@') {
+					useCategory = true;
+					id = id.slice(1);
+				}
+				z.effectID = this.translateCombatEffect(null, null, id);
+				if (x.chance) z.chance = x.chance;
+				if (x.initialParams) this.addInitialParamsEasy(z, x.initialParams);
+
+				this.setDefaultValue(z, defValue, useCategory ? 41 : 0, 41);
+				if (z.bypassBarrier === undefined && z.effectID.indexOf("BGSCheat:") == 0)
+					z.bypassBarrier = true;
+				if (z.applyEffectWhenMerged === undefined && z.effectID.indexOf("BGSCheat:") == 0)
+					z.applyEffectWhenMerged = true;
+			}
+			else if (x.tableID) {
+				z.tableID = x.tableID;
+				if (x.chance) z.chance = x.chance;
+			}
+			v.onhitEffects.push(z);
+		});
+
+		if (_a.canNormalAttack) v.canNormalAttack = _a.canNormalAttack;
+		if (_a.cantMiss !== undefined) v.cantMiss = _a.cantMiss;
+		if (_a.name) v.name = _a.name;
+		if (_a.description) v.description = _a.description;
+		if (_a.descriptionGenerator) v.descriptionGenerator = _a.descriptionGenerator;
+		if (_a.consumesEffect) v.consumesEffect = _a.consumesEffect;
+		if (_a.usesRunesPerProc !== undefined) v.usesRunesPerProc = _a.usesRunesPerProc;
+		if (_a.usesPotionChargesPerProc !== undefined) v.usesPotionChargesPerProc = _a.usesPotionChargesPerProc;
+		if (_a.extraRuneConsumption) v.extraRuneConsumption = _a.extraRuneConsumption;
+		if (_a.isDragonbreath !== undefined) v.isDragonbreath = _a.isDragonbreath;
+		if (_a.attackTypes) v.attackTypes = _a.attackTypes;
+		if (_a.minAccuracy) v.minAccuracy = _a.minAccuracy;
+
+		return v;
+	}
+
+	static generateSpecialAttackData(id, data, modData) {
+		let _a = JSON.parse(JSON.stringify(this.copyAttackData(data)));
+		let _b = this.copyAttackData(modData);
+
+		if (_b.defaultChance) _a.defaultChance = _b.defaultChance;
+		else if (_b.addChance && _a.defaultChance) _a.defaultChance = { "sums": [_a.defaultChance, _b.addChance] };
+		else if (_b.addChance) _a.defaultChance = _b.addChance;
+
+		if (!_a.defaultChance)
+			_a.defaultChance = "return (lv>=10?100:lv>5?25+15*(lv-5):5*lv)";
+
+
+		if (_b.attackCount) _a.attackCount = _b.attackCount;
+		else if (_b.addCount && _a.attackCount) _a.attackCount = { "sums": [_a.attackCount, _b.addCount] };
+		else if (_b.addCount) _a.attackCount = _b.addCount;
+
+		if (!_a.attackCount)
+			_a.attackCount = [1];
+
+		if (_b.attackInterval) _a.attackInterval = _b.attackInterval;
+		if (!_a.attackInterval)
+			_a.attackInterval = [50];
+
+		if (_b.lifesteal) _a.lifesteal = _b.lifesteal;
+		else if (_b.addls && _a.lifesteal) _a.lifesteal = { "sums": [_a.lifesteal, _b.addls] };
+		else if (_b.addls) _a.lifesteal = _b.addls;
+
+		if (!_a.lifesteal)
+			_a.lifesteal = 0;
+
+		if (_a.damage instanceof Array) {
+			if (_b.damage && _b.damage.length > 0) {
+				for (let m = 0; m < _b.damage.length; ++m) {
+					let x = _b.damage[m];
+					let y;
+					if ((y=_a.damage[m]) === undefined)
+						continue;
+					if (x.amplitude && y.amplitude) y.amplitude = x.amplitude;
+					if (x.minPercent && y.minPercent) y.minPercent = x.minPercent;
+					if (x.maxPercent && y.maxPercent) y.maxPercent = x.maxPercent;
+				}
+			}
+			else if (_b.addDamage && _b.addDamage.length > 0) {
+				for (let m = 0; m < _b.addDamage.length; ++m) {
+					let x = _b.addDamage[m];
+					let y;
+					if ((y=_a.damage[m]) === undefined)
+						continue;
+					if (x.amplitude && y.amplitude) y.amplitude = { "sums": [y.amplitude, x.amplitude] };
+					if (x.minPercent && y.minPercent) y.minPercent = { "sums": [y.minPercent, x.minPercent] };
+					if (x.maxPercent && y.maxPercent) y.maxPercent = { "sums": [y.maxPercent, x.maxPercent] };
+				}
+			}
+		}
+
+		_b.prehitEffects.forEach(x => {
+			let effect = _a.prehitEffects.find(y => y.effectID == x.effectID);
+			if (!effect) {
+				_a.prehitEffects.push(x);
+				return;
+			}
+			if (x.chance) effect.chance = x.chance;
+			if (!(x.initialParams instanceof Array))
+				return;
+			if (effect.initialParams == null)
+				effect.initialParams = [];
+			x.initialParams.forEach(y => {
+				let param = effect.initialParams.find(z => z.name == y.name);
+				if (!param) {
+					effect.initialParams.push(y);
+					return;
+				}
+				param.value = y.value;
+			});
+		});
+
+		_b.onhitEffects.forEach(x => {
+			let effect = _a.onhitEffects.find(y => y.effectID == x.effectID);
+			if (!effect) {
+				_a.onhitEffects.push(x);
+				return;
+			}
+			if (x.chance) effect.chance = x.chance;
+			if (!(x.initialParams instanceof Array))
+				return;
+			if (effect.initialParams == null)
+				effect.initialParams = [];
+			x.initialParams.forEach(y => {
+				let param = effect.initialParams.find(z => z.name == y.name);
+				if (!param) {
+					effect.initialParams.push(y);
+					return;
+				}
+				param.value = y.value;
+			});
+		});
+
+		return _a;
+	}
+
+	static updateSpecialAttackEasy(id, data, modData, type, lv, mul, extraMul) {
+		let v = this.generateSpecialAttackData(id, data, modData);
+
+		v = JSON.parse(JSON.stringify(v));
+		v.defaultChance = Util.calcValue(v.defaultChance, 0x1000 | type, lv, mul, extraMul) ?? 0;
+		v.attackCount = (Util.calcValue(v.attackCount, 0x1000 | type, lv, mul, extraMul) ?? 1);
+		v.attackInterval = (Util.calcValue(v.attackInterval, 0x1000 | type, lv, mul, extraMul) ?? 50);
+		if (v.attackInterval < 50)
+			v.attackInterval = 50;
+		if (v.attackInterval % 50 != 0)
+			v.attackInterval = v.attackInterval - (v.attackInterval % 50);
+		v.lifesteal = Util.calcValue(v.lifesteal, 0x1000 | type, lv, mul, extraMul) ?? 0;
+		v?.damage.forEach(x => {
+			if (x.amplitude) x.amplitude = Util.calcValue(x.amplitude, type, lv, mul, extraMul);
+			if (x.minPercent) x.minPercent = Util.calcValue(x.minPercent, type, lv, mul, extraMul);
+			if (x.maxPercent) x.maxPercent = Util.calcValue(x.maxPercent, type, lv, mul, extraMul);
+		});
+		v?.prehitEffects?.forEach(x => {
+			if (x.chance) x.chance = Util.calcValue(x.chance, type, lv, mul, extraMul);
+			x?.initialParams?.forEach(y => { if (y.value) y.value = Util.calcValue(y.value, 0x1000 | type, lv, mul, extraMul); });
+		});
+		v?.onhitEffects?.forEach(x => {
+			if (x.chance) x.chance = Util.calcValue(x.chance, type, lv, mul, extraMul);
+			x?.initialParams?.forEach(y => { if (y.value) y.value = Util.calcValue(y.value, 0x1000 | type, lv, mul, extraMul); });
+		});
+
+		let sp = game.specialAttacks.getObjectByID("BGSCheat:" + id);
+		if (sp == null)
+			Util.registerSpecialAttack(v, id);
+		else
+			Util.updateSpecialAttack(sp, v);
+	}
+
 	static addEasyValueInternal(statObject, data, key, value, mType, type, lv, mul, base, extraMul = 1) {
 		let _v = value;
 		switch (key) {
@@ -3249,7 +3561,8 @@ export class EasyTool {
 					if (atk) {
 						let name = statObject.localID;
 						Util.removeAllSpecialAttackData(statObject.specialAttacks, data);
-						Util.levelUpSpecialAttack(name, atk, _v, type, lv, mul, extraMul);
+						this.updateSpecialAttackEasy(name, atk, _v, type, lv, mul, extraMul);
+						//Util.levelUpSpecialAttack(name, atk, _v, type, lv, mul, extraMul);
 						let v = { "specialAttacks": { "add": [`BGSCheat:${name}`] },"overrideSpecialChances":[0] };
 						Util.addSpecialAttacksData(statObject, data, v, type, lv, mul, extraMul);
 					}
@@ -3266,7 +3579,8 @@ export class EasyTool {
 							let name = statObject.localID;
 							name += order;
 							order++;
-							Util.levelUpSpecialAttack(name, atk, _v, type, lv, mul, extraMul);
+							this.updateSpecialAttackEasy(name, atk, _v, type, lv, mul, extraMul);
+							//Util.levelUpSpecialAttack(name, atk, _v, type, lv, mul, extraMul);
 							let v = { "specialAttacks": { "add": [`BGSCheat:${name}`] }, "overrideSpecialChances": [0] };
 							Util.addSpecialAttacksData(statObject, data, v, type, lv, mul, extraMul);
 						}
