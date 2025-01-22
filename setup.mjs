@@ -224,6 +224,7 @@ export async function setup(ctx) {
 
 	if (cloudManager.hasAoDEntitlement){
 		await ctx.gameData.addPackage('MyMode.json');
+/*
 		let theMode = await game.gamemodes.getObjectByID("BGSCheat:BGSARMode");
 		if (theMode!==undefined){
 			await game.skills.forEach(s => {
@@ -232,6 +233,7 @@ export async function setup(ctx) {
 					r.gamemodes.push(theMode);
 			});
 		}
+*/
 	}
 
 	await modifyMyDataLang();

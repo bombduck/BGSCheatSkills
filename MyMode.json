@@ -9256,10 +9256,10 @@
 				"capNonCombatSkillLevels": false,
 				"startingPage": "melvorD:Bank",
 				"startingItems": [
-					{
-						"id": "melvorD:Shrimp",
-						"quantity": 50
-					}
+          {
+            "id": "melvorD:Shrimp",
+            "quantity": 50
+          }
 				],
 				"allowSkillUnlock": true,
 				"startingSkills": [
@@ -9272,7 +9272,7 @@
 						"melvorAoD:Cartography",
 						"melvorAoD:Archaeology"
 				],
-				"skillUnlockCost": [10000,25000,50000,200000,250000,400000,1000000,2500000,10000000,25000000,50000000,100000000,200000000,500000000,500000000,500000000,500000000,500000000,500000000],
+				"skillUnlockCost": [0,25000,50000,200000,250000,400000,1000000,2500000,10000000,25000000,50000000,100000000,200000000,500000000,500000000,500000000,500000000,500000000,500000000],
 				"hasTutorial": true,
 				"defaultInitialLevelCap": 10,
 				"defaultInitialAbyssalLevelCap": 10,
