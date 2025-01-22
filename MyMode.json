@@ -9060,12 +9060,12 @@
 					},
 					{
 						"skillID": "melvorAoD:Cartography",
-						"increase": 5,
+						"increase": 10,
 						"maximum": 120
 					},
 					{
 						"skillID": "melvorAoD:Archaeology",
-						"increase": 5,
+						"increase": 10,
 						"maximum": 120
 					}
 				]
@@ -9239,8 +9239,10 @@
 					"Has Ancient Relics.",
 					"Hitpoints is multiple by 10.",
 					"The Combat Triangle penalties for using a combat style the enemy is resistant to are increased.",
-					"All skill start with a maximum Skill Level cap of Level 10.",
-					"Level Cap of Attack, Strench, Defence, Hitpoints, Ranged and Magic will be increased by defeat dungeons.",
+					"Only  skill start with a maximum Skill Level cap of Level 10.",
+					"For new game, only Attack, Strench, Defence, Hitpoints, Ranged, Magic, Cartography and Archaeology are unlocked with maximum skill level cap of 10",
+          "Other unlocked skills can be unlock by currency."
+					"Level Cap of Attack, Strench, Defence, Hitpoints, Ranged, Magic, Cartography and Archaeology will be increased by defeat dungeons.",
 					"The Level Cap of other skills will be increased by currency, limited by levels of Attack, Strench, Defence, Hitpoints, Ranged and Magic."
 				],
 				"textClass": "text-info",
@@ -9271,7 +9273,7 @@
 						"melvorAoD:Archaeology"
 				],
 				"skillUnlockCost": [10000,25000,50000,200000,250000,400000,1000000,2500000,10000000,25000000,50000000,100000000,200000000,500000000,500000000,500000000,500000000,500000000,500000000],
-				"hasTutorial": false,
+				"hasTutorial": true,
 				"defaultInitialLevelCap": 10,
 				"defaultInitialAbyssalLevelCap": 10,
 				"levelCapIncreases": [

@@ -414,7 +414,7 @@ export class AgilityCheatManager{
 				return;
 			this.setData(x, 0);
 		});
-		updateAgility();
+		this.updateAgility();
 	}
 
 	updateAgility() {
