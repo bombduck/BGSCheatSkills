@@ -52,12 +52,12 @@ export class CheatManaget{
 				default: 1,
 				options: [
 					{
-						value: 1,
-						display: Object.assign(document.createElement('span'), { innerHTML: 'Custom (Javascript Code)' })
+						value: 0,
+						display: Object.assign(document.createElement('span'), { innerHTML: 'Custom (XP table)' })
 					},
 					{
-						value: 2,
-						display: Object.assign(document.createElement('span'), { innerHTML: 'Custom (XP table)' })
+						value: 1,
+						display: Object.assign(document.createElement('span'), { innerHTML: 'Custom (Javascript Code)' })
 					}
 				],
 				onChange: (val, prev) => {
@@ -133,16 +133,16 @@ export class CheatManaget{
 		}
 		else{
 			try{
-				if (this.formulaType == 0){
-					this.levelFormula.setSumFormulas(this.formulaInput);
-					this.levelFormula.calcTables(this.maxLevel);
+				if (this.formulaType == 0) {
+					this.levelFormula.setTable(this.formulaInput, this.maxLevel);
 				}
-				else if (this.formulaType == 1){
+				else if (this.formulaType == 1) {
 					this.levelFormula.setStringFormula(this.formulaInput);
 					this.levelFormula.calcTables(this.maxLevel);
 				}
-				else
-					this.levelFormula.setTable(this.formulaInput, this.maxLevel);
+				else {
+					this.levelFormula.defaultTables(this.maxLevel);
+				}
 			}
 			catch(e){
 				this.levelFormula.cleanFormula();
