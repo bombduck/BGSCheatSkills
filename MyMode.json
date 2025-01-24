@@ -6319,6 +6319,16 @@
 					}
 				],
 				"behaviours": [
+          {
+            "type": "ModifyParameter",
+            "paramName": "maxStacks",
+            "newValue": "max(applicatorParam.maxStacks, p.maxStacks)",
+            "triggersOn": [
+              {
+                "type": "EffectReapplied"
+              }
+            ]
+          },
 					{
 						"type": "ModifyStats",
 						"statGroupName": "debuff",
@@ -8328,6 +8338,45 @@
         ]
       },
       {
+        "id": "Warhorn0",
+        "templateID": "BGSCheat:StackingSelfCountingModifier",
+        "name": "Warhorn",
+        "nameLang": "SPECIAL_ATTACK_NAME_Warhorn",
+        "media": "assets/media/status/speedup.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHit": 15,
+              "attackInterval": -5,
+              "lifesteal": 5
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "Flight0",
         "templateID": "BGSCheat:StackingSelfCountingModifier",
         "name": "Flight",
@@ -9060,12 +9109,12 @@
 					},
 					{
 						"skillID": "melvorAoD:Cartography",
-						"increase": 10,
+						"increase": 6,
 						"maximum": 120
 					},
 					{
 						"skillID": "melvorAoD:Archaeology",
-						"increase": 10,
+						"increase": 6,
 						"maximum": 120
 					}
 				]
@@ -9272,7 +9321,7 @@
 						"melvorAoD:Cartography",
 						"melvorAoD:Archaeology"
 				],
-				"skillUnlockCost": [0,25000,50000,200000,250000,400000,1000000,2500000,10000000,25000000,50000000,100000000,200000000,500000000,500000000,500000000,500000000,500000000,500000000],
+				"skillUnlockCost": [0,10000, 25000,50000,200000,250000,400000,1000000,2500000,10000000,25000000,50000000,100000000,200000000,500000000,1000000000,2500000000,5000000000,10000000000,50000000000],
 				"hasTutorial": true,
 				"defaultInitialLevelCap": 10,
 				"defaultInitialAbyssalLevelCap": 10,
@@ -9287,13 +9336,13 @@
 					"baseCost": {
 						"currencies": [
 							{
-								"id": "melvorD:GP",
-								"quantity": 1000
+								"id": "melvorD:SlayerCoins",
+								"quantity": 100
 							}
 						]
 					},
 					"scalingFactor": 1.2,
-					"maxCostScaling": 5000000,
+					"maxCostScaling": 50000000,
 					"skillLevelGates": [
 						"melvorD:Attack",
 						"melvorD:Strength",
@@ -9315,7 +9364,7 @@
 						]
 					},
 					"scalingFactor": 1.2,
-					"maxCostScaling": 40000,
+					"maxCostScaling": 200000,
 					"skillLevelGates": [
 						"melvorD:Attack",
 						"melvorD:Strength",

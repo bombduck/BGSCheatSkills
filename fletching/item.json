@@ -1,74 +1,4 @@
 {
-	"Base": {
-		"Omatks": [ 1, 1, 1, 1, 1 ],
-		"Omstrs": [ 1, 1, 1 ],
-		"Omdefs": [ 1, 1, 1 ]
-	},
-	"Unholy1": {
-		"base": "Base",
-		"10allow": [ 0, 0, 1 ],
-		"10atkeffect": [ 1 ],
-		"10cbeasy": [ "melvorAoD:UnholyMark", 3 ]
-	},
-	"Unholy2": {
-		"base": "Base",
-		"5allow": [ 0, 0, 1 ],
-		"5atkeffect": [ 1 ],
-		"5cbeasy": [ "melvorAoD:UnholyMark", 3 ],
-		"10cbeasy": [ "10unholy", 3 ]
-	},
-	"Unholy3": {
-		"base": "Base",
-		"5allow": [ 0, 0, 1 ],
-		"5atkeffect": [ 1 ],
-		"5cbeasy": [ "10unholy", 3 ],
-		"10atkeffect": [ 2 ]
-	},
-	"Unholy4": {
-		"base": "Base",
-		"5allow": [ 0, 0, 1 ],
-		"5atkeffect": [ 1 ],
-		"5Ucbeasy": [ "20unholy", 3 ],
-		"10Uatkeffect": [ 2 ]
-	},
-	"Unholy5": {
-		"base": "Base",
-		"5Ucorrupt": [ 10, 5 ],
-		"10Ucorrupt": [ 5, 10 ]
-	},
-	"TotHA": {
-		"5allow": [ 0, 1 ]
-	},
-	"tier1": {
-		"base": "Base",
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 5
-			}
-		},
-		"4Ucurrency2": [ 0, 0, 100, "gp" ],
-		"6Ucurrency2": [ 0, 0, 100, "sc" ],
-		"10Ucurrency": [ 0, 50, "gp", "sc" ]
-	},
-	"tier2": {
-		"base": "Base",
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 3
-			}
-		},
-		"3Lskillbase": [ 1, 0, 1 ],
-		"5Uskillextra": [ 1, 0, 2 ]
-	},
-	"tier3": {
-		"base": "Base",
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 1
-			}
-		},
-		"6Uxp": [ 0, 0, 100 ]
-	},
 	"melvorD:Bronze_Arrows": {
 		"base": "tier1",
 		"2barrier": [3],
@@ -579,7 +509,7 @@
 		"5OuniqueAttack": { "id": "Volley" },
 		"10Ucbeasy": [ [ "30$$3@dacc", "10$$3@dres$" ], 3, 20 ]
 	},
-	"melvorF:Magic_Longbow": {
+	"melvorD:Magic_Longbow": {
 		"base": "Unholy2",
 		"Uress": [ 6 ],
 		"5OuniqueAttack": { "id": "Shockwave", "damage": [ {}, { "maxPercent": 300 } ] },

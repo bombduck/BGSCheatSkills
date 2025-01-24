@@ -14,6 +14,7 @@ export class CheatManaget{
 	runecraftingManager;
 	herbloreManager;
 	archaeologyManager;
+	summoningMamager;
 	levelMultiplierFunction;
 
 	constructor(){
@@ -40,6 +41,7 @@ export class CheatManaget{
 		this.runecraftingManager.initCharacter();
 		this.herbloreManager.initCharacter();
 		this.archaeologyManager.initCharacter();
+		this.summoningMamager.initCharacter();
 	}
 
 	initSettings(){
@@ -73,7 +75,7 @@ export class CheatManaget{
 				label: "Input for Custom Formula",
 				hint: "See custom formula manual at the bottom of the dialog.",
 				default: "[[9,2,0.6,8,0.4,2]]",
-				default: "return 90000*(lv+2)**0.6*8**(0.4*(lv+2))",
+				default: "return 9*(lv+2)**0.6*8**(0.4*(lv+2))",
 				onChange: (val, prev) => {
 					this.loadMasteryXpSettings(val);
 					this.initLevelTable();
@@ -162,6 +164,7 @@ export class CheatManaget{
 		this.runecraftingManager.updateItems();
 		this.herbloreManager.updateItems();
 		this.archaeologyManager.updateItems();
+		this.summoningMamager.updateItems();
 	}
 
 	async loadSkills(ctx){
@@ -180,18 +183,22 @@ export class CheatManaget{
 		let atkData = await ctx.loadData("item/attackData.json");
 		mod.api.BGSCheat.EasyTool.setAttackData(atkData);
 
+		let commonData = await ctx.loadData("item/commonItem.json");
+
 		this.smithingManager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
-		await this.smithingManager.init(ctx, Smithing, game.smithing, "smithing/item.json", "smithing/skill.json");
+		await this.smithingManager.init(ctx, Smithing, game.smithing, "smithing/item.json", "smithing/skill.json", commonData );
 		this.fletchingManager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
-		await this.fletchingManager.init(ctx, Fletching, game.fletching, "fletching/item.json", "fletching/skill.json");
+		await this.fletchingManager.init(ctx, Fletching, game.fletching, "fletching/item.json", "fletching/skill.json", commonData );
 		this.craftingManager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
-		await this.craftingManager.init(ctx, Crafting, game.crafting, "crafting/item.json", "crafting/skill.json");
+		await this.craftingManager.init(ctx, Crafting, game.crafting, "crafting/item.json", "crafting/skill.json", commonData );
 		this.runecraftingManager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
-		await this.runecraftingManager.init(ctx, Runecrafting, game.runecrafting, "runecrafting/item.json", "runecrafting/skill.json");
+		await this.runecraftingManager.init(ctx, Runecrafting, game.runecrafting, "runecrafting/item.json", "runecrafting/skill.json", commonData );
 		this.herbloreManager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
-		await this.herbloreManager.init(ctx, Herblore, game.herblore, "herblore/item.json", "herblore/skill.json");
+		await this.herbloreManager.init(ctx, Herblore, game.herblore, "herblore/item.json", "herblore/skill.json", commonData );
 		this.archaeologyManager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
-		await this.archaeologyManager.init(ctx, Archaeology, game.archaeology, "archaeology/item.json", "archaeology/skill.json");
+		await this.archaeologyManager.init(ctx, Archaeology, game.archaeology, "archaeology/item.json", "archaeology/skill.json", commonData );
+		this.summoningMamager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
+		await this.summoningMamager.init(ctx, Summoning, game.summoning, "summoning/item.json", "summoning/skill.json", commonData );
 	}
 
 	loadLevelTable(){

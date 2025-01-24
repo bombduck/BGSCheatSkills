@@ -1,5 +1,39 @@
 [
   {
+    "id": "Warhorn",
+    "damage": [
+      {
+        "damageType": "Normal",
+        "amplitude": 100
+      }
+    ],
+    "prehitEffects": [
+      {
+        "effectID": "BGSCheat:Warhorn0",
+        "initialParams": [
+          {
+            "name": "maxStacks",
+            "value": 1
+          },
+          {
+            "name": "turns",
+            "value": 3
+          }
+        ]
+      }
+    ],
+    "onhitEffects": [],
+    "cantMiss": true,
+    "attackCount": [ 1 ],
+    "attackInterval": [ 50 ],
+    "lifesteal": 0,
+    "name": "Warhorn",
+    "description": "Gives you +${preHitEffect0modValue0}% Max Hit, -${preHitEffect0modValue1}% Attack Interval, and +${preHitEffect0modValue2}% Lifesteal for ${preHitEffect0turns} of your turns",
+    "descriptionGenerator": "<prehitEffect>",
+    "usesRunesPerProc": false,
+    "canNormalAttack": false
+  },
+  {
     "id": "LavaSwipePlayer",
     "damage": [
       {

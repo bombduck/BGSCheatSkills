@@ -1,101 +1,6 @@
 {
-	"Base": {
-		"Omatks": [ 1, 1, 1, 1, 1 ],
-		"Omstrs": [ 1, 1, 1 ],
-		"Omdefs": [ 1, 1, 1 ]
-	},
-	"Unholy1": {
-		"base": "Base",
-		"10allow": [ 0, 0, 1 ],
-		"10atkeffect": [ 1 ],
-		"10cbeasy": [ "melvorAoD:UnholyMark", 3 ]
-	},
-	"Unholy2": {
-		"base": "Base",
-		"5allow": [ 0, 0, 1 ],
-		"5atkeffect": [ 1 ],
-		"5cbeasy": [ "melvorAoD:UnholyMark", 3 ],
-		"10cbeasy": [ "10unholy", 3 ]
-	},
-	"Unholy3": {
-		"base": "Base",
-		"5allow": [ 0, 0, 1 ],
-		"5atkeffect": [ 1 ],
-		"5cbeasy": [ "10unholy", 3 ],
-		"10atkeffect": [ 2 ]
-	},
-	"Unholy4": {
-		"base": "Base",
-		"5allow": [ 0, 0, 1 ],
-		"5atkeffect": [ 1 ],
-		"5Ucbeasy": [ "20unholy", 3 ],
-		"10Uatkeffect": [ 2 ]
-	},
-	"Unholy5": {
-		"base": "Base",
-		"5Ucorrupt": [ 10, 5 ],
-		"10Ucorrupt": [ 5, 10 ]
-	},
-	"TotHA": {
-		"5allow": [ 0, 1 ]
-	},
-	"TotHD": {
-		"5slayer": [ 60 ],
-		"5summon": [ 0, -5, 80 ],
-		"5barrier": [ 0, 30, 50 ]
-	},
-	"TotHD2": {
-		"5Uslayer": [ 60 ],
-		"5Usummon": [ 0, -5, 80 ],
-		"5Ubarrier": [ 0, 30, 50 ]
-	},
-	"AbyD": {
-		"Uress": [ 0, 3 ],
-		"5Uslayer": [ 0, 10 ],
-		"5Usummon": [ 0, -5, 100 ]
-	},
-	"body": {
-		"Uhp": [ 0, 5 ]
-	},
-	"legs": {
-		"Mhp": [ 5 ]
-	},
-	"shield": {
-		"Uress": [ 1 ],
-		"UdmgTaken": [ -5 ]
-	},
-	"tier1": {
-		"base": "Base",
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 5
-			}
-		},
-		"4Ucurrency2": [ 0, 0, 100, "gp" ],
-		"6Ucurrency2": [ 0, 0, 100, "sc" ],
-		"10Ucurrency": [ 0, 50, "gp", "sc" ]
-	},
-	"tier2": {
-		"base": "Base",
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 3
-			}
-		},
-		"3Lskillbase": [ 1, 0, 1 ],
-		"5Uskillextra": [ 1, 0, 2 ]
-	},
-	"tier3": {
-		"base": "Base",
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 1
-			}
-		},
-		"6Uxp": [ 0, 0, 100 ]
-	},
 	"melvorD:Bronze_Dagger": {
-		"base": "tier1",
+		"base": [ "tier1" ],
 		"2barrier": [ 3 ],
 		"2OuniqueAttack": {
 			"id": "Sandstorm",
@@ -279,37 +184,37 @@
 		"10Ucbeasy": [ "100bhp", 3, 30 ]
 	},
 	"melvorTotH:Corundum_Sword": {
-		"base": [ "Unholy3", "TotH" ],
+		"base": [ "Unholy3", "TotHA" ],
 		"5OuniqueAttack": { "id": "TsunamiArchaic", "damage": [ { "amplitude": 170 } ] },
 		"10Ucbeasy": [ [ "100bcrit","100bcritm$" ], 2, 30 ]
 	},
 	"melvorTotH:Augite_Sword": {
-		"base": [ "Unholy3", "TotH" ],
+		"base": [ "Unholy3", "TotHA" ],
 		"5OuniqueAttack": { "id": "SpectralIceBlades", "damage": [ { "amplitude": 200 } ] },
 		"10Ucbeasy": [ "50ddmg", 2, 25 ]
 	},
 	"melvorTotH:Divine_Sword": {
-		"base": [ "Unholy4", "TotH" ],
+		"base": [ "Unholy4", "TotHA" ],
 		"5OuniqueAttack": { "id": "Soulash", "damage": [ { "amplitude": 160 } ] },
 		"10Ucbeasy": [ "1Fear", 2, 20 ]
 	},
 	"melvorItA:Abyssium_Sword": {
-		"base": [ "Unholy5", "TotH" ],
+		"base": [ "Unholy5", "TotHA" ],
 		"5OuniqueAttack": { "id": "WitherStabsPlayer" },
 		"10Ucbeasy": [ [ "100$$1@bdmg", "100$$1@bacc$" ], 1, 30 ]
 	},
 	"melvorItA:Brumite_Sword": {
-		"base": [ "Unholy5", "TotH" ],
+		"base": [ "Unholy5", "TotHA" ],
 		"5OuniqueAttack": { "id": "BlightedSlashesPlayer" },
 		"10Ucbeasy": [ "Nulled", 2, 80 ]
 	},
 	"melvorItA:Gloomite_Sword": {
-		"base": [ "Unholy5", "TotH" ],
+		"base": [ "Unholy5", "TotHA" ],
 		"5OuniqueAttack": { "id": "TendrilBindPlayer" },
 		"10Ucbeasy": [ [ "200$5deva", "200$5dacc$" ], 3, 50 ]
 	},
 	"melvorItA:Witherite_Sword": {
-		"base": [ "Unholy5", "TotH" ],
+		"base": [ "Unholy5", "TotHA" ],
 		"5OuniqueAttack": {
 			"id": "Pandemonium",
 			"attackCount": { "u": 5 },
@@ -320,7 +225,7 @@
 		"10Ucbeasy": [ [ "100dhp" ], 3, 30 ]
 	},
 	"melvorItA:Netherite_Sword": {
-		"base": [ "Unholy5", "TotH" ],
+		"base": [ "Unholy5", "TotHA" ],
 		"5OuniqueAttack": { "id": "VoidburstBarragePlayer" },
 		"10Ucbeasy": [ "2Silence", 3, 50 ]
 	},
@@ -514,7 +419,7 @@
 		"10Ucbeasy": [ [ "10Malice", "10Destruction", "10Spite", "10Consume", "10Eradicate"], 7, 100 ]
 	},
 	"melvorTotH:Corundum_2H_Sword": {
-		"base": [ "Unholy3", "TotH" ],
+		"base": [ "Unholy3", "TotHA" ],
 		"Uress": [ 8 ],
 		"5OuniqueAttack": {
 			"id": "DragonStormCall",
@@ -523,7 +428,7 @@
 		"10Ucbeasy": [ [ "Deadly" ], 2, 10 ]
 	},
 	"melvorTotH:Augite_2H_Sword": {
-		"base": [ "Unholy3", "TotH" ],
+		"base": [ "Unholy3", "TotHA" ],
 		"Uress": [ 9 ],
 		"5OuniqueAttack": {
 			"id": "HeatedFury",
@@ -537,19 +442,19 @@
 		"10Ucbeasy": [ [ "50$2dhit", "50$2dacc$", "50$2deva$" ], 2, 30 ]
 	},
 	"melvorTotH:Meteorite_2H_Sword": {
-		"base": [ "Unholy4", "TotH" ],
+		"base": [ "Unholy4", "TotHA" ],
 		"Uress": [ 10 ],
 		"5OuniqueAttack": { "id": "MeteorSwing" },
 		"10Ucbeasy": [ "Stun", 3, 25 ]
 	},
 	"melvorTotH:Divine_2H_Sword": {
-		"base": [ "Unholy4", "TotH" ],
+		"base": [ "Unholy4", "TotHA" ],
 		"Uress": [ 10 ],
 		"5UuniqueAttack": { "id": "DivineBreaker", "damage": [ { "amplitude": 160 } ] },
 		"10Ucbeasy": [ "100Bleed400", 3, 35 ]
 	},
 	"melvorItA:Abyssium_2H_Sword": {
-		"base": [ "Unholy5", "TotH" ],
+		"base": [ "Unholy5", "TotHA" ],
 		"Uress": [ 0, 3 ],
 		"5OuniqueAttack": {
 			"id": "NullSphere",
@@ -577,25 +482,25 @@
 		"10Ucbeasy": [ [ "50$2bspd", "50$2bres$", "50$2beva$" ], 2, 25 ]
 	},
 	"melvorItA:Brumite_2H_Sword": {
-		"base": [ "Unholy5", "TotH" ],
+		"base": [ "Unholy5", "TotHA" ],
 		"Uress": [ 0, 6 ],
 		"5OuniqueAttack": { "id": "SilentSlashesPlayer", "damage": [ { "amplitude": 170 } ] },
 		"10Ucbeasy": [ "25lace", 3, 50 ]
 	},
 	"melvorItA:Gloomite_2H_Sword": {
-		"base": [ "Unholy5", "TotH" ],
+		"base": [ "Unholy5", "TotHA" ],
 		"Uress": [ 0, 9 ],
 		"5OuniqueAttack": { "id": "OpenWoundsPlayer" },
 		"10Ucbeasy": [ "30$2bdmgmhp", 3, 30 ]
 	},
 	"melvorItA:Witherite_2H_Sword": {
-		"base": [ "Unholy5", "TotH" ],
+		"base": [ "Unholy5", "TotHA" ],
 		"Uress": [ 0, 12 ],
 		"5OuniqueAttack": { "id": "SilentTanglePlayer" },
 		"10Ucbeasy": [ "12blight", 3, 40 ]
 	},
 	"melvorItA:Netherite_2H_Sword": {
-		"base": [ "Unholy5", "TotH" ],
+		"base": [ "Unholy5", "TotHA" ],
 		"Uress": [ 0, 15 ],
 		"5OuniqueAttack": {
 			"id": "TerrorBeam",
@@ -1721,11 +1626,11 @@
 		"5slayer": [ 40 ],
 		"5Ucbeasy": [ "10Eradicate", 7, 100 ]
 	},
-	"melvorD:Pure_Crystal_Boots_T_S": {
-		"base": "melvorD:Pure_Crystal_Boots"
+	"melvorAoD:Pure_Crystal_Boots_T_S": {
+		"base": "melvorAoD:Pure_Crystal_Boots"
 	},
-	"melvorD:Pure_Crystal_Boots_T_G": {
-		"base": "melvorD:Pure_Crystal_Boots_T_S"
+	"melvorAoD:Pure_Crystal_Boots_T_G": {
+		"base": "melvorAoD:Pure_Crystal_Boots_T_S"
 	},
 	"melvorTotH:Corundum_Boots": {
 		"base": [ "Unholy3", "TotHD1" ],

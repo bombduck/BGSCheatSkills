@@ -1,0 +1,367 @@
+{
+	"Base": {
+		"Omatks": [ 1, 1, 1, 1, 1 ],
+		"Omstrs": [ 1, 1, 1 ],
+		"Omdefs": [ 1, 1, 1 ],
+		"Omsums": [ 1, 1, 1, 1 ]
+	},
+	"Unholy1": {
+		"base": "Base",
+		"10allow": [ 0, 0, 1 ],
+		"10atkeffect": [ 1 ],
+		"10cbeasy": [ "melvorAoD:UnholyMark", 3 ]
+	},
+	"Unholy2": {
+		"base": "Base",
+		"5allow": [ 0, 0, 1 ],
+		"5Natkeffect": [ 1 ],
+		"5cbeasy": [ "melvorAoD:UnholyMark", 3 ],
+		"10Ucbeasy": [ "10unholy", 3 ]
+	},
+	"Unholy3": {
+		"base": "Unholy2"
+	},
+	"Unholy4": {
+		"base": "Unholy3"
+	},
+	"Unholy5": {
+		"base": "Base",
+		"5Ucorrupt": [ 10, 5 ],
+		"10Ucorrupt": [ 5, 10 ]
+	},
+	"TotHA": {
+		"5allow": [ 0, 1 ]
+	},
+	"TotHD1": {
+		"5slayer": [ 50 ],
+		"5Nbarrier": [0, 20, 30],
+		"10Usummon": [ 0, -10, 50 ]
+	},
+	"TotHD2": {
+		"5Uslayer": [ 60 ],
+		"5Nbarrier": [0, 24, 40],
+		"10Usummon": [ 0, -15, 75 ]
+	},
+	"AbyD": {
+		"Uress": [ 0, 3 ],
+		"5Uslayer": [ 0, 10 ],
+		"5Usummon": [ 0, 0, 100 ],
+		"10Usummon": [ 0, -15 ]
+	},
+	"body": {
+		"Uhp": [ 0, 5 ]
+	},
+	"legs": {
+		"Mhp": [ 5 ]
+	},
+	"shield": {
+		"Uress": [ 1 ],
+		"UdmgTaken": [ -5 ]
+	},
+	"AoD1": {
+		"4barrier": [ 3, 5 ],
+		"6summon": [ 0, 0, 5 ]
+	},
+	"AoD2": {
+		"3barrier": [ 5, 7 ],
+		"5summon": [ 0, 0, 7 ]
+	},
+	"AoD3": {
+		"3barrier": [ 6, 10 ],
+		"6summon": [ 0, 0, 10 ]
+	},
+	"AoD4": {
+		"5barrier": [ 0, 7, 10 ],
+		"10summon": [ 0, 0, 10 ]
+	},
+	"AoD7": {
+		"5Nbarrier": [0, 16, 20],
+		"10Usummon": [ 0, -10, 30 ]
+	},
+	"tier1": {
+		"base": [ "Base", "AoD1" ],
+		"1Vmodifiers": {
+			"add": {
+				"bankSpace": 5
+			}
+		},
+		"2Ucurrency2": [ 100, "gp" ],
+		"4Ucurrency2": [ 50, "sc" ],
+		"6Ucurrency2": [ 0, 0, 0, 50, "gp", "sc" ]
+	},
+	"tier2": {
+		"base": [ "Base", "AoD2" ],
+		"1Vmodifiers": {
+			"add": {
+				"bankSpace": 3
+			}
+		},
+		"3Lskillbase": [ 1, 0, 1 ],
+		"5Uskillextra": [ 1, 0, 2 ]
+	},
+	"tier3": {
+		"base": [ "Base", "AoD3" ],
+		"1Vmodifiers": {
+			"add": {
+				"bankSpace": 1
+			}
+		},
+		"6Uxp": [ 0, 0, 100 ]
+	},
+	"BaseRing1": {
+		"base": "Base",
+		"Uatks": [ 20, 20, 20, 20, 20 ],
+		"Ustrs": [ 20, 17, 11 ],
+		"Udefs": [ 33, 33, 33 ],
+		"Uress": [ 3 ],
+		"Usums": [ 5 ],
+		"1Vmodifiers": {
+			"add": {
+				"bankSpace": 10
+			}
+		},
+		"10Ucbeasy": [ "3Nulled", 2, 20 ]
+	},
+	"BaseRing2": {
+		"base": "Base",
+		"Uatks": [ 30, 30, 30, 30, 30 ],
+		"Ustrs": [ 30, 25, 15 ],
+		"Udefs": [ 40, 40, 40 ],
+		"Uress": [ 5 ],
+		"Usums": [ 10 ],
+		"5Ucbeasy": [ "3Nulled", 2, 30 ]
+	},
+	"BaseRing3": {
+		"base": "Base",
+		"Uatks": [ 50, 50, 50, 50, 50 ],
+		"Ustrs": [ 50, 50, 18 ],
+		"Udefs": [ 40, 40, 40 ],
+		"Uress": [ 0, 3 ],
+		"Usums": [ 0, 10 ],
+		"Ucorrupt": [ 0, 0, 0, 100 ],
+		"5corrupt": [ 100, 100, 100 ],
+		"5Ucbeasy": [ "3Nulled", 2, 50 ]
+	},
+	"BaseRing4": {
+		"base": "BaseRing3",
+		"Uatks": [ 100, 100, 100, 100, 100 ],
+		"Ustrs": [ 100, 100, 36 ],
+		"Udefs": [ 100, 100, 100 ],
+		"Uress": [ 0, 5 ],
+		"Usums": [ 0, 15 ]
+	},
+	"BaseAmulet1": {
+		"base": "Base",
+		"Uatks": [ 30, 30, 30, 45, 27 ],
+		"Ustrs": [ 30, 15, 5 ],
+		"Udefs": [ 22, 22, 27 ],
+		"Uress": [ 3 ],
+		"Usums": [ 5 ],
+		"1Vmodifiers": {
+			"add": {
+				"bankSpace": 10
+			}
+		},
+		"10Ucbeasy": [ "3Cleansed", 2, 20 ]
+	},
+	"BaseAmulet2": {
+		"base": "Base",
+		"Uatks": [ 40, 40, 40, 55, 37 ],
+		"Ustrs": [ 35, 20, 9 ],
+		"Udefs": [ 32, 32, 37 ],
+		"Uress": [ 6 ],
+		"Usums": [ 10 ],
+		"5Ucbeasy": [ "3Cleansed", 2, 30 ]
+	},
+	"BaseAmulet3": {
+		"base": "Base",
+		"Uatks": [ 60, 60, 60, 60, 60 ],
+		"Ustrs": [ 40, 40, 12 ],
+		"Udefs": [ 60, 60, 60 ],
+		"Uress": [ 0, 3 ],
+		"Nsums": [ 0, 10 ],
+		"5Ucbeasy": [ "3Cleansed", 2, 50 ]
+	},
+	"BaseAmulet4": {
+		"base": "BaseAmulet3",
+		"Uatks": [ 100, 100, 100, 100, 100 ],
+		"Ustrs": [ 1350, 2750, 170 ],
+		"Udefs": [ 100, 100, 100 ],
+		"Uress": [ 0, 5 ],
+		"Nsums": [ 0, 15 ]
+	},
+	"staff1": {
+		"base": "tier1",
+		"2barrier": [ 3 ],
+		"Uress": [ 1 ],
+		"Mmaghits": [ 1, 2 ]
+	},
+	"staff4": {
+		"base": "Unholy1",
+		"Uress": [ 4 ],
+		"Mmaghits": [ 4, 8 ]
+	},
+	"staff7": {
+		"base": "Unholy2",
+		"Uress": [ 7 ],
+		"Mmaghits": [ 7, 14 ]
+	},
+	"wand7": {
+		"base": "Unholy2",
+		"Mmaghits": [ 7, 14 ]
+	},
+	"Air": {
+		"Mmaghits": [ 0, 0, 10, 10, "air" ],
+		"spellcost": [ 0, 0, -1, "melvorD:Air_Rune" ]
+	},
+	"Water": {
+		"Mmaghits": [ 0, 0, 10, 10, "water" ],
+		"spellcost": [ 0, 0, -1, "melvorD:Water_Rune" ]
+	},
+	"Earth": {
+		"Mmaghits": [ 0, 0, 10, 10, "earth" ],
+		"spellcost": [ 0, 0, -1, "melvorD:Earth_Rune" ]
+	},
+	"Fire": {
+		"Mmaghits": [ 0, 0, 10, 10, "fire" ],
+		"spellcost": [ 0, 0, -1, "melvorD:Fire_Rune" ]
+	},
+	"Acolyte": {
+		"base": "tier1",
+		"Uress": [ 1 ],
+		"Mmaghits": [ 5, 10, "strike" ],
+		"5Uslayer": [ 2 ]
+	},
+	"Acolyte_Hat": {
+		"base": "Acolyte",
+		"3spellcost": [ 0, 0, 0, -1, [ "", "melvorD:Standard" ] ]
+	},
+	"Acolyte_Body": {
+		"base": [ "Acolyte", "body" ]
+	},
+	"Acolyte_Legs": {
+		"base": [ "Acolyte", "legs" ]
+	},
+	"Acolyte_Boots": {
+		"base": [ "Acolyte" ]
+	},
+	"Adept": {
+		"base": "Unholy1",
+		"Uress": [ 4 ],
+		"Mmaghits": [
+			[ 10, 20, "bolt" ],
+			[ 15, 30, "blast" ]
+		]
+	},
+	"Adept_Hat": {
+		"base": "Adept",
+		"5spellcost": [ 0, 0, 0, -2, [ "", "melvorD:Standard" ] ],
+		"5slayer": [ 10 ]
+	},
+	"Adept_Body": {
+		"base": [ "Adept", "4body" ],
+		"5slayer": [ 10 ]
+	},
+	"Adept_Legs": {
+		"base": [ "Adept", "4legs" ],
+		"5slayer": [ 10 ]
+	},
+	"Adept_Boots": {
+		"base": "Adept"
+	},
+	"Expert": {
+		"base": "Unholy2",
+		"Uress": [7],
+		"Mmaghits": [
+			[ 20, 40, "wave" ],
+			[ 30, 50, "surge" ]
+		]
+	},
+	"Expert_Hat": {
+		"base": "Expert",
+		"5spellcost": [ 0, 0, 0, -3, [ "", "melvorD:Standard" ] ],
+		"5slayer": [40]
+	},
+	"Expert_Body": {
+		"base": [ "Expert", "7body" ],
+		"5slayer": [40]
+	},
+	"Expert_Legs": {
+		"base": [ "Expert", "7legs" ],
+		"5slayer": [40]
+	},
+	"Expert_Boots": {
+		"base": "Expert"
+	},
+	"Master": {
+		"base": [ "Unholy3", "TotHD1" ],
+		"Uress": [8]
+	},
+	"Legendary": {
+		"base": [ "Unholy3", "TotHD1" ],
+		"Uress": [9]
+	},
+	"Mythical": {
+		"base": [ "Unholy4", "TotHD2" ],
+		"Uress": [10]
+	},
+	"Master_Poison": {
+		"base": [ "Master" ],
+		"Mmaghits": [ 100, 200, "poison" ]
+	},
+	"Legendary_Poison": {
+		"base": [ "Legendary" ],
+		"Mmaghits": [ 200, 400, "poison" ]
+	},
+	"Mythical_Poison": {
+		"base": [ "Mythical" ],
+		"Mmaghits": [ 300, 600, "poison" ]
+	},
+	"Master_Infernal": {
+		"base": [ "Master" ],
+		"Mmaghits": [ 100, 200, "infernal" ]
+	},
+	"Legendary_Infernal": {
+		"base": [ "Legendary" ],
+		"Mmaghits": [ 200, 400, "infernal" ]
+	},
+	"Mythical_Infernal": {
+		"base": [ "Mythical" ],
+		"Mmaghits": [ 300, 600, "infernal" ]
+	},
+	"Master_Lightning": {
+		"base": [ "Master" ],
+		"Mmaghits": [ 100, 200, "lightning" ]
+	},
+	"Legendary_Lightning": {
+		"base": [ "Legendary" ],
+		"Mmaghits": [ 200, 400, "lightning" ]
+	},
+	"Mythical_Lightning": {
+		"base": [ "Mythical" ],
+		"Mmaghits": [ 300, 600, "lightning" ]
+	},
+	"Abyssal_Base": {
+		"base": [ "Unholy5"]
+	},
+	"Abyssal_Abyssal": {
+		"base": ["AbyD"],
+		"Mmaghits": [ 50, 100, 10, 10, "abyssal" ]
+	},
+	"Abyssal_Brume": {
+		"base": ["AbyD"],
+		"Mmaghits": [ 50, 100, 10, 10, "brume" ]
+	},
+	"Abyssal_Gloom": {
+		"base": ["AbyD"],
+		"Mmaghits": [ 50, 100, 10, 10, "gloom" ]
+	},
+	"Abyssal_Wither": {
+		"base": ["AbyD"],
+		"Mmaghits": [ 50, 100, 10, 10, "wither" ]
+	},
+	"Abyssal_Nether": {
+		"base": ["AbyD"],
+		"Mmaghits": [ 50, 100, 10, 10, "nether" ]
+	}
+}

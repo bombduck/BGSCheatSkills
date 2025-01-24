@@ -1,40 +1,4 @@
 {
-	"Base": {
-		"Omatks": [ 1, 1, 1, 1, 1 ],
-		"Omstrs": [ 1, 1, 1 ],
-		"Omdefs": [ 1, 1, 1 ]
-	},
-	"Unholy1": {
-		"base": "Base",
-		"10allow": [ 0, 0, 1 ],
-		"10atkeffect": [ 1 ],
-		"10cbeasy": [ "melvorAoD:UnholyMark", 3 ]
-	},
-	"Unholy2": {
-		"base": "Base",
-		"5allow": [ 0, 0, 1 ],
-		"5atkeffect": [ 1 ],
-		"5cbeasy": [ "melvorAoD:UnholyMark", 3 ],
-		"10cbeasy": [ "10unholy", 3 ]
-	},
-	"BaseRing1": {
-		"base": "Base",
-		"Uatks": [ 20, 20, 20, 20, 20 ],
-		"Ustrs": [ 20, 20, 10 ],
-		"Udefs": [  20, 20, 20 ],
-		"Uress": [5],
-		"Usums": [ 5 ],
-		"10Ucbeasy": ["3Nulled", 2, 20]
-	},
-	"BaseAmulet1": {
-		"base": "Base",
-		"Uatks": [ 30, 30, 30, 45, 27 ],
-		"Ustrs": [ 30, 15, 5 ],
-		"Udefs": [ 22, 22, 27 ],
-		"Uress": [5],
-		"Usums": [5],
-		"10Ucbeasy": ["3Cleansed", 2, 20]
-	},
   "melvorAoD:Old_Wooden_Ladle": {
     "Omodifiers": {
       "add": {
@@ -698,7 +662,26 @@
   },
   "melvorAoD:Malevolent_Ward_Shield": {
     "base": "Unholy2",
-		"UdmgTaken": [ -35 ]
+    "UdmgTaken": [ -35 ],
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Curse"
+          },
+          "enemyModifiers": {
+            "maxHit": -15,
+            "accuracyRating": -25,
+            "evasion": -25
+          },
+          "description": "When Enemies are Cursed, they have: -${modValue0}% Maximum Hit, -${modValue1}% Global Accuracy, and -${modValue2}% Global Evasion",
+          "descriptionLang": "COND_MODIFIER_Malevolent_Ward_Shield"
+        }
+      ]
+    }
   },
   "melvorAoD:Confusing_Gem": {
 		"base": "Unholy2",
@@ -737,6 +720,10 @@
         "ammoPreservationChance": 10
       }
     }
+  },
+  "melvorAoD:Large_Warhorn": {
+    "base": "Unholy2",
+		"5OuniqueAttack": { "id": "Warhorn" }
   },
   "melvorAoD:Book_of_Prayers": {
     "base": "Unholy2",

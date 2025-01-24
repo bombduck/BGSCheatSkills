@@ -1,0 +1,3208 @@
+{
+  "melvorF:Summoning_Familiar_Golbin_Thief": {
+    "base": "Base",
+    "1Vmodifiers": {
+      "add": {
+        "flatCurrencyGainOnEnemyHit": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Occultist": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "evasion": 10
+      }
+    },
+    "NenemyModifiers": {
+      "add": {
+        "evasion": -10
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Wolf": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "lifesteal": 2
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Ent": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Mole": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "skillID": "melvorD:Mining",
+            "value": 3
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Octopus": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "skillID": "melvorD:Fishing",
+            "value": 3
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Minotaur": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "meleeMaxHit": 3,
+        "meleeAccuracyRating": 3
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Centaur": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "rangedMaxHit": 3,
+        "rangedAccuracyRating": 3
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Witch": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "magicMaxHit": 3,
+        "magicAccuracyRating": 3
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Pig": {
+    "1Vmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Cooking",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Crow": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "subcategoryID": "melvorF:Runes",
+            "value": 2
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Leprechaun": {
+    "1Vmodifiers": {
+      "add": {
+        "flatThievingCurrencyGain": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 50
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Cyclops": {
+    "base": "Base",
+    "1Vmodifiers": {
+      "add": {
+        "currencyGain": [
+          {
+            "currencyID": "melvorD:SlayerCoins",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Yak": {
+    "base": "Base",
+    "1Vmodifiers": {
+      "add": {
+        "flatResistance": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Unicorn": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "hitpointRegeneration": 50
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Dragon": {
+    "base": "Base",
+    "Ncbeasy": ["burn",2,10]
+  },
+  "melvorF:Summoning_Familiar_Monkey": {
+    "1Vmodifiers": {
+      "add": {
+        "skillItemDoublingChance": [
+          {
+            "skillID": "melvorD:Crafting",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Salamander": {
+    "1Vmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Smithing",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Bear": {
+    "1Vmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Herblore",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Summoning_Familiar_Devil": {
+    "1Vmodifiers": {
+      "add": {
+        "skillInterval": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "value": -5
+          }
+        ]
+      }
+    }
+  },
+  "melvorTotH:Summoning_Familiar_Eagle": {
+    "1Vmodifiers": {
+      "add": {
+        "skillInterval": [
+          {
+            "skillID": "melvorD:Agility",
+            "value": -5
+          }
+        ]
+      }
+    }
+  },
+  "melvorTotH:Summoning_Familiar_Owl": {
+    "1Vmodifiers": {
+      "add": {
+        "skillInterval": [
+          {
+            "skillID": "melvorD:Astrology",
+            "value": -5
+          }
+        ]
+      }
+    }
+  },
+  "melvorTotH:Summoning_Familiar_Beaver": {
+    "1Vmodifiers": {
+      "add": {
+        "skillItemDoublingChance": [
+          {
+            "skillID": "melvorD:Fletching",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  "melvorTotH:Summoning_Familiar_Fox": {
+    "Nmodifiers": {
+      "add": {
+        "summoningMaxHit": 5
+      }
+    },
+    "Vmodifiers": {
+      "add": {
+        "skillInterval": [
+          {
+            "skillID": "melvorD:Summoning",
+            "value": -5
+          }
+        ]
+      }
+    }
+  },
+  "melvorTotH:Summoning_Familiar_Lightning_Spirit": {
+    "base": "Base",
+    "Ncbeasy": ["stun", 3, 5]
+  },
+  "melvorTotH:Summoning_Familiar_Siren": {
+    "base": "Base",
+    "Ncbeasy": ["sleep", 3, 5]
+  },
+  "melvorTotH:Summoning_Familiar_Spider": {
+    "base": "Base",
+    "Ncbeasy": [ [ "15$2slow", "poison" ], 3, 5 ]
+  },
+  "melvorTotH:Summoning_Familiar_Spectre": {
+    "base": "Base",
+    "NenemyModifiers": {
+      "add": {
+        "flatResistance": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": -5
+          }
+        ]
+      }
+    }
+  },
+  "melvorAoD:Summoning_Familiar_Barrier": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "barrierSummonDamage": 75
+      }
+    }
+  },
+  "melvorF:GolbinThief&melvorF:Occultist": {
+    "Nmodifiers": {
+      "add": {
+        "currencyGainOnMonsterKillBasedOnEvasion": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 15
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:GolbinThief&melvorF:Wolf": {
+    "Nmodifiers": {
+      "add": {
+        "flatCurrencyGainFromMonsterDrops": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 350
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:GolbinThief&melvorF:Minotaur": {
+    "Nmodifiers": {
+      "add": {
+        "currencyGainPerMeleeDamageDealt": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 2500
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:GolbinThief&melvorF:Centaur": {
+    "Nmodifiers": {
+      "add": {
+        "currencyGainPerRangedDamageDealt": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 2000
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:GolbinThief&melvorF:Witch": {
+    "Nmodifiers": {
+      "add": {
+        "currencyGainPerMagicDamageDealt": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 1500
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:GolbinThief&melvorF:Cyclops": {
+    "Nmodifiers": {
+      "add": {
+        "currencyGainFromSlayerTaskMonsterDrops": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 400
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:GolbinThief&melvorF:Yak": {
+    "Nmodifiers": {
+      "add": {
+        "flatCurrencyGainWhenHitBasedOnResistance": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "currencyID": "melvorD:GP",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:GolbinThief&melvorF:Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "currencyGainOnRegenBasedOnHPGained": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 1000
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:GolbinThief&melvorF:Dragon": {
+    "1rcm": ["CombatEffectGroup"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:BurnDOT"
+          },
+          "modifiers": {
+            "melvorD:currencyGainFromMonsterDrops": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 200
+              }
+            ]
+          },
+          "description": "+${modValue0}% GP from burning Monsters",
+          "descriptionLang": "MODIFIER_DATA_increasedGPFromBurningMonsters"
+        }
+      ]
+    }
+  },
+  "melvorF:Occultist&melvorF:Wolf": {
+    "rcm": ["Hitpoints"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Hitpoints",
+            "character": "Player",
+            "value": 100,
+            "operator": ">="
+          },
+          "modifiers": {
+            "evasion": 20
+          },
+          "enemyModifiers": {
+            "evasion": -20
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Occultist&melvorF:Minotaur": {
+    "NenemyModifiers": {
+      "add": {
+        "meleeEvasion": -20
+      }
+    }
+  },
+  "melvorF:Occultist&melvorF:Centaur": {
+    "NenemyModifiers": {
+      "add": {
+        "rangedEvasion": -20
+      }
+    }
+  },
+  "melvorF:Occultist&melvorF:Witch": {
+    "Nmodifiers": {
+      "add": {
+        "flatMagicDefenceBonus": 100
+      }
+    }
+  },
+  "melvorF:Occultist&melvorF:Cyclops": {
+    "rcm": ["FightingSlayerTask"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "FightingSlayerTask"
+          },
+          "enemyModifiers": {
+            "evasion": -20
+          },
+          "descriptionLang": "MODIFIER_DATA_decreasedSlayerTaskMonsterAccuracy"
+        }
+      ]
+    }
+  },
+  "melvorF:Occultist&melvorF:Yak": {
+    "Nmodifiers": {
+      "add": {
+        "flatMeleeDefenceBonusBasedOnResistance": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": 1
+          }
+        ],
+        "flatRangedDefenceBonusBasedOnResistance": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Occultist&melvorF:Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "hpRegenWhenEnemyHasMoreEvasion": 200
+      }
+    }
+  },
+  "melvorF:Occultist&melvorF:Dragon": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Player",
+            "groupID": "melvorD:BurnDOT"
+          },
+          "modifiers": {
+            "flatMeleeDefenceBonus": 75,
+            "flatRangedDefenceBonus": 75,
+            "flatMagicDefenceBonus": 75
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Wolf&melvorF:Minotaur": {
+    "Nmodifiers": {
+      "add": {
+        "meleeLifesteal": 12
+      }
+    }
+  },
+  "melvorF:Wolf&melvorF:Centaur": {
+    "Nmodifiers": {
+      "add": {
+        "rangedLifesteal": 8
+      }
+    }
+  },
+  "melvorF:Wolf&melvorF:Witch": {
+    "Nmodifiers": {
+      "add": {
+        "magicLifesteal": 4
+      }
+    }
+  },
+  "melvorF:Wolf&melvorF:Cyclops": {
+    "Nmodifiers": {
+      "add": {
+        "currencyGainFromLifesteal": [
+          {
+            "currencyID": "melvorD:SlayerCoins",
+            "value": 200
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Wolf&melvorF:Yak": {
+    "Nmodifiers": {
+      "add": {
+        "healingOnAttackBasedOnResistance": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Wolf&melvorF:Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "bleedLifesteal": 50
+      }
+    }
+  },
+  "melvorF:Wolf&melvorF:Dragon": {
+    "Nmodifiers": {
+      "add": {
+        "summoningAttackLifesteal": 100
+      }
+    }
+  },
+  "melvorF:Ent&melvorF:Mole": {
+    "1Vmodifiers": {
+      "additionalRandomGemChance": [
+        {
+          "skillID": "melvorD:Woodcutting",
+          "value": 5
+        }
+      ]
+    }
+  },
+  "melvorF:Ent&melvorF:Octopus": {
+    "1Vmodifiers": {
+      "add": {
+        "randomProductChance": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "itemID": "melvorD:Bird_Nest",
+            "value": 6
+          }
+        ],
+        "bonusFishingSpecialChance": [
+          {
+            "realmID": "melvorD:Melvor",
+            "value": 6
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Ent&melvorF:Pig": {
+    "Nmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorD:Melvor",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Ent&melvorF:Crow": {
+    "Nmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "subcategoryID": "melvorF:Staves",
+            "value": 20
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Ent&melvorF:Leprechaun": {
+    "1Vmodifiers": {
+      "add": {
+        "summoningSynergy_Ent_Leprechaun": 2
+      }
+    }
+  },
+  "melvorF:Ent&melvorF:Monkey": {
+    "Nmodifiers": {
+      "add": {
+        "woodcuttingJewelryChance": 35
+      }
+    }
+  },
+  "melvorF:Ent&melvorF:Salamander": {
+    "1Vmodifiers": {
+      "add": {
+        "flatBasePrimaryProductQuantityChance": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "realmID": "melvorD:Melvor",
+            "value": 20
+          },
+          {
+            "skillID": "melvorD:Smithing",
+            "realmID": "melvorD:Melvor",
+            "value": 20
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Ent&melvorF:Bear": {
+    "1rcm": [ "PotionUsed" ],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "PotionUsed",
+            "recipeID": "melvorF:Bird_Nest_Potion"
+          },
+          "modifiers": {
+            "flatBaseRandomProductQuantity": [
+              {
+                "skillID": "melvorD:Woodcutting",
+                "itemID": "melvorD:Bird_Nest",
+                "value": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Ent&melvorF:Devil": {
+    "1Vmodifiers": {
+      "add": {
+        "woodcuttingXPAddedAsFiremakingXP": 15,
+        "halveWoodcuttingDoubleChance": [ 1 ]
+      }
+    }
+  },
+  "melvorF:Mole&melvorF:Octopus": {
+    "1Vmodifiers": {
+      "add": {
+        "summoningSynergy_4_5": 15
+      }
+    }
+  },
+  "melvorF:Mole&melvorF:Pig": {
+    "modifiers": {
+      "add": {
+        "cookingSuccessCap": -25,
+        "flatCoalGainedOnCookingFailure": 100
+      }
+    }
+  },
+  "melvorF:Mole&melvorF:Crow": {
+    "Nmodifiers": {
+      "add": {
+        "doubleItemsSkill": [
+          {
+            "skillID": "melvorD:Mining",
+            "actionID": "melvorD:Rune_Essence",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Mole&melvorF:Leprechaun": {
+    "Nmodifiers": {
+      "add": {
+        "additionalRandomGemChance": [
+          {
+            "skillID": "melvorD:Thieving",
+            "actionID": "melvorF:MINER",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Mole&melvorF:Monkey": {
+    "Nmodifiers": {
+      "add": {
+        "doubleItemsSkill": [
+          {
+            "skillID": "melvorD:Mining",
+            "actionID": "melvorD:Silver_Ore",
+            "value": 1
+          },
+          {
+            "skillID": "melvorD:Mining",
+            "actionID": "melvorD:Gold_Ore",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Mole&melvorF:Salamander": {
+    "1Vmodifiers": {
+      "add": {
+        "miningBarChance": 15
+      }
+    }
+  },
+  "melvorF:Mole&melvorF:Bear": {
+    "1rcm": ["PotionUsed"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "PotionUsed",
+            "recipeID": "melvorF:Perfect_Swing_Potion"
+          },
+          "modifiers": {
+            "flatMiningNodeHP": 25
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Mole&melvorF:Devil": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalRandomSkillItemChance": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "itemID": "melvorD:Diamond",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Octopus&melvorF:Pig": {
+    "Nmodifiers": {
+      "add": {
+        "fishingCookedChance": 75
+      }
+    }
+  },
+  "melvorF:Octopus&melvorF:Crow": {
+    "1Vmodifiers": {
+      "add": {
+        "flatBasePrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "subcategoryID": "melvorF:WaterComboRunes",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Octopus&melvorF:Leprechaun": {
+    "modifiers": {
+      "add": {
+        "summoningSynergy_Octopus_Leprechaun": { "c": 50, "u": -15 }
+      }
+    }
+  },
+  "melvorF:Octopus&melvorF:Monkey": {
+    "Nmodifiers": {
+      "add": {
+        "additionalRandomGemChance": [
+          {
+            "skillID": "melvorD:Crafting",
+            "subcategoryID": "melvorF:Jewelry",
+            "value": 33
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Octopus&melvorF:Salamander": {
+    "Vmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Smithing",
+            "categoryID": "melvorD:DragonGear",
+            "value": 15
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Octopus&melvorF:Bear": {
+    "Nmodifiers": {
+      "add": {
+        "potionCharges": [
+          {
+            "actionID": "melvorF:Fishermans_Potion",
+            "value": 200
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Octopus&melvorF:Devil": {
+    "1Umodifiers": {
+      "add": {
+        "skillXP": [
+          {
+            "skillID": "melvorD:Cooking",
+            "value": [ -10 ]
+          }
+        ],
+        "masteryXP": [
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorD:Melvor",
+            "value": 100
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Minotaur&melvorF:Centaur": {
+    "rcm": ["CombatType"],
+    "conditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatType",
+            "character": "Enemy",
+            "thisAttackType": "ranged",
+            "targetAttackType": "any"
+          },
+          "modifiers": {
+            "flatStabAttackBonus": 25,
+            "flatSlashAttackBonus": 25,
+            "flatBlockAttackBonus": 25,
+            "flatMeleeStrengthBonus": 25
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Minotaur&melvorF:Witch": {
+    "Nmodifiers": {
+      "add": {
+        "magicMinHitBasedOnMaxHitSlayerTask": 5
+      }
+    }
+  },
+  "melvorF:Minotaur&melvorF:Cyclops": {
+    "Nmodifiers": {
+      "add": {
+        "meleeMinHitBasedOnMaxHitSlayerTask": 10
+      }
+    }
+  },
+  "melvorF:Minotaur&melvorF:Yak": {
+    "1Vmodifiers": {
+      "add": {
+        "flatResistanceAgainstRanged": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": 2
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Minotaur&melvorF:Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "flatHPRegenBasedOnMeleeMaxHit": 8
+      }
+    }
+  },
+  "melvorF:Minotaur&melvorF:Dragon": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:BurnDOT"
+          },
+          "modifiers": {
+            "meleeMaxHit": 10,
+            "meleeAccuracyRating": 10
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Centaur&melvorF:Witch": {
+    "rcm": ["CombatType"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatType",
+            "character": "Enemy",
+            "thisAttackType": "magic",
+            "targetAttackType": "any"
+          },
+          "modifiers": {
+            "flatRangedAttackBonus": 25,
+            "flatRangedStrengthBonus": 25
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Centaur&melvorF:Cyclops": {
+    "Nmodifiers": {
+      "add": {
+        "rangedMinHitBasedOnMaxHitSlayerTask": 10
+      }
+    }
+  },
+  "melvorF:Centaur&melvorF:Yak": {
+    "1Vmodifiers": {
+      "add": {
+        "flatResistanceAgainstMagic": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": 2
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Centaur&melvorF:Unicorn": {
+    "Nmodifiers": {
+      "add": {
+                "flatHPRegenBasedOnRangedMaxHit": 7
+      }
+    }
+  },
+  "melvorF:Centaur&melvorF:Dragon": {
+    "1Ncbeasy": ["burn",2,10]
+  },
+  "melvorF:Witch&melvorF:Cyclops": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainPerMagicDamageDealtOnSlayerTask": [
+          {
+            "currencyID": "melvorD:SlayerCoins",
+            "value": 40
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Witch&melvorF:Yak": {
+    "1Vmodifiers": {
+      "add": {
+        "flatResistanceAgainstMelee": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": 2
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Witch&melvorF:Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "flatHPRegenBasedOnMagicMaxHit": 5
+      }
+    }
+  },
+  "melvorF:Witch&melvorF:Dragon": {
+    "Nmodifiers": {
+      "add": {
+        "flatMagicMinHit": [
+          {
+            "subcategoryID": "melvorD:Air",
+            "value": 3
+          },
+          {
+            "subcategoryID": "melvorD:Water",
+            "value": 3
+          },
+          {
+            "subcategoryID": "melvorD:Earth",
+            "value": 3
+          },
+          {
+            "subcategoryID": "melvorD:Fire",
+            "value": 3
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Pig&melvorF:Crow": {
+    "1Vmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "subcategoryID": "melvorF:Runes",
+            "value": 15
+          },
+          {
+            "skillID": "melvorD:Cooking",
+            "value": 15
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Pig&melvorF:Leprechaun": {
+    "modifiers": {
+      "add": {
+        "ignoreThievingDamage": [
+          {
+            "actionID": "melvorF:CHEF",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "Vthieving": [0,0,1,"gp"]
+  },
+  "melvorF:Pig&melvorF:Monkey": {
+    "1Vmodifiers": {
+      "add": {
+        "flatCraftingDragonhideCost": -1
+      }
+    }
+  },
+  "melvorF:Pig&melvorF:Salamander": {
+    "Nmodifiers": {
+      "add": {
+        "flatSkillInterval": [
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorD:Melvor",
+            "value": -300
+          },
+          {
+            "skillID": "melvorD:Smithing",
+            "realmID": "melvorD:Melvor",
+            "value": -300
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Pig&melvorF:Bear": {
+    "Nmodifiers": {
+      "add": {
+        "potionCharges": [
+          {
+            "actionID": "melvorF:Generous_Cook_Potion",
+            "value": 200
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Pig&melvorF:Devil": {
+    "1Umodifiers": {
+      "add": {
+        "masteryXP": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "value": 100
+          },
+          {
+            "skillID": "melvorD:Cooking",
+            "value": 100
+          }
+        ],
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "value": -10
+          },
+          {
+            "skillID": "melvorD:Cooking",
+            "value": -10
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Crow&melvorF:Leprechaun": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalSkillItem": [
+          {
+            "skillID": "melvorD:Thieving",
+            "actionID": "melvorF:MINER",
+            "itemID": "melvorD:Rune_Essence",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Crow&melvorF:Monkey": {
+    "Nmodifiers": {
+      "add": {
+        "skillItemDoublingChance": [
+          {
+            "skillID": "melvorD:Crafting",
+            "categoryID": "melvorF:LeatherArmour",
+            "value": 20
+          },
+          {
+            "skillID": "melvorD:Crafting",
+            "categoryID": "melvorF:Dragonhide",
+            "value": 20
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Crow&melvorF:Salamander": {
+    "1Vmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Smithing",
+            "value": 10
+          },
+          {
+            "skillID": "melvorD:Runecrafting",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Crow&melvorF:Bear": {
+    "1rcm": ["PotionUsed"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "PotionUsed",
+            "recipeID": "melvorF:Elemental_Potion"
+          },
+          "modifiers": {
+            "giveRandomComboRunesRunecrafting": 1
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Crow&melvorF:Devil": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalSkillItem": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "subcategoryID": "melvorF:ElementalRunes",
+            "itemID": "melvorD:Fire_Rune",
+            "value": 10
+          }
+        ],
+        "skillXP": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "value": [ -5 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Leprechaun&melvorF:Monkey": {
+    "1Vmodifiers": {
+      "add": {
+        "thievingAutoSellPrice": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 15
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Leprechaun&melvorF:Salamander": {
+    "Nmodifiers": {
+      "add": {
+        "thievingMinerRandomBarChance": 50
+      }
+    }
+  },
+  "melvorF:Leprechaun&melvorF:Bear": {
+    "1Vmodifiers": {
+      "add": {
+        "thievingFarmerHerbSackChance": 3
+      }
+    }
+  },
+  "melvorF:Leprechaun&melvorF:Devil": {
+    "modifiers": {
+      "add": {
+        "summoningSynergy_Leprechaun_Devil": 1
+      }
+    }
+  },
+  "melvorF:Cyclops&melvorF:Yak": {
+    "1Vmodifiers": {
+      "add": {
+        "flatResistanceAgainstSlayerTasks": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": 3
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Cyclops&melvorF:Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "hitpointRegenerationAgainstSlayerTasks": 150
+      }
+    }
+  },
+  "melvorF:Cyclops&melvorF:Dragon": {
+    "Nmodifiers": {
+      "add": {
+        "dragonBreathDamage": -25
+      }
+    }
+  },
+  "melvorF:Yak&melvorF:Unicorn": {
+    "rcm": ["Hitpoints"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Hitpoints",
+            "character": "Player",
+            "operator": "<",
+            "value": 75
+          },
+          "modifiers": {
+            "hitpointRegeneration": 200
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Yak&melvorF:Dragon": {
+    "modifiers": {
+      "add": {
+        "effectIgnoreChance": [
+          {
+            "effectGroupID": "melvorD:BurnDOT",
+            "value": 100
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Unicorn&melvorF:Dragon": {
+    "Nmodifiers": {
+      "add": {
+        "burnLifesteal": 100
+      }
+    }
+  },
+  "melvorF:Monkey&melvorF:Salamander": {
+    "Nmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Crafting",
+            "subcategoryID": "melvorF:Jewelry",
+            "value": 33
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Monkey&melvorF:Bear": {
+    "Nmodifiers": {
+      "add": {
+        "potionCharges": [
+          {
+            "actionID": "melvorF:Crafting_Potion",
+            "value": 100
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Monkey&melvorF:Devil": {
+    "1Vmodifiers": {
+      "add": {
+        "firemakingLogCurrencyGain": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 400
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Salamander&melvorF:Bear": {
+    "1rcm": ["PotionUsed"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "PotionUsed",
+            "recipeID": "melvorF:Seeing_Gold_Potion"
+          },
+          "modifiers": {
+            "doubleItemsSkill": [
+              {
+                "skillID": "melvorD:Smithing",
+                "actionID": "melvorD:Silver_Bar",
+                "value": 1
+              },
+              {
+                "skillID": "melvorD:Smithing",
+                "actionID": "melvorD:Gold_Bar",
+                "value": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Salamander&melvorF:Devil": {
+    "1Vmodifiers": {
+      "add": {
+        "flatSmithingCoalCost": -3
+      }
+    }
+  },
+  "melvorF:Bear&melvorF:Devil": {
+    "1rcm": ["PotionUsed"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "PotionUsed",
+            "recipeID": "melvorF:Controlled_Heat_Potion"
+          },
+          "modifiers": {
+            "skillXP": [
+              {
+                "skillID": "melvorD:Firemaking",
+                "value": 5
+              }
+            ],
+            "firemakingBonfireInterval": 100
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Ent&melvorTotH:Eagle": {
+    "1Vmodifiers": {
+      "add": {
+        "flatSkillInterval": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "realmID": "melvorD:Melvor",
+            "value": -300
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Ent&melvorTotH:Owl": {
+    "5Omodifiers": {
+      "add": {
+        "skillMasteryXPPerDeedree": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Ent&melvorTotH:Beaver": {
+    "Nmodifiers": {
+      "add": {
+        "woodcuttingArrowShaftChance": 30
+      }
+    }
+  },
+  "melvorF:Ent&melvorTotH:Fox": {
+    "Nmodifiers": {
+      "add": {
+        "nonShardSummoningCostReduction": [
+          {
+            "actionID": "melvorF:Ent",
+            "value": 30
+          },
+          {
+            "actionID": "melvorTotH:Fox",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Mole&melvorTotH:Eagle": {
+    "Nmodifiers": {
+      "add": {
+        "flatSkillInterval": [
+          {
+            "skillID": "melvorD:Mining",
+            "realmID": "melvorD:Melvor",
+            "value": -200
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Mole&melvorTotH:Owl": {
+    "Nmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "skillID": "melvorD:Mining",
+            "actionID": "melvorTotH:Meteorite_Ore",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Mole&melvorTotH:Beaver": {
+  },
+  "melvorF:Mole&melvorTotH:Fox": {
+    "1Vmodifiers": {
+      "add": {
+        "qualitySuperiorGemChance": 10
+      }
+    }
+  },
+  "melvorF:Octopus&melvorTotH:Eagle": {
+    "Nmodifiers": {
+      "add": {
+        "flatSkillInterval": [
+          {
+            "skillID": "melvorD:Fishing",
+            "realmID": "melvorD:Melvor",
+            "value": -500
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Octopus&melvorTotH:Owl": {
+    "5Omodifiers": {
+      "add": {
+        "skillMasteryXPPerAmeria": [
+          {
+            "skillID": "melvorD:Fishing",
+            "value": 30 
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Octopus&melvorTotH:Beaver": {
+    "Nmodifiers": {
+      "add": {
+        "additional2PrimaryProductChance": [
+          {
+            "skillID": "melvorD:Fletching",
+            "subcategoryID": "melvorF:UnstrungBows",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Octopus&melvorTotH:Fox": {
+    "1Vmodifiers": {
+      "add": {
+        "skillInterval": [
+          {
+            "skillID": "melvorD:Summoning",
+            "actionID": "melvorF:Octopus",
+            "value": -5
+          }
+        ],
+        "nonShardSummoningCostReduction": [
+          {
+            "actionID": "melvorF:Octopus",
+            "value": 20
+          },
+          {
+            "actionID": "melvorTotH:Fox",
+            "value": 20
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Pig&melvorTotH:Eagle": {
+    "1Vmodifiers": {
+      "add": {
+        "skillInterval": [
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorD:Melvor",
+            "value": -10
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Pig&melvorTotH:Owl": {
+    "5Omodifiers": {
+      "add": {
+        "skillMasteryXPPerVale": [
+          {
+            "skillID": "melvorD:Cooking",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Pig&melvorTotH:Beaver": {
+    "1Vmodifiers": {
+      "add": {
+        "passiveCookingInterval": -15
+      }
+    }
+  },
+  "melvorF:Pig&melvorTotH:Fox": {
+    "Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "nonShardSummoningCostReduction": [
+            {
+              "actionID": "melvorF:Pig",
+              "value": 30
+            },
+            {
+              "actionID": "melvorTotH:Fox",
+              "value": 30
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Bear&melvorTotH:Eagle": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "skillInterval": [
+            {
+              "skillID": "melvorD:Herblore",
+              "realmID": "melvorD:Melvor",
+              "value": -10
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Bear&melvorTotH:Owl": {
+    "5Omodifiers": {
+      "add": {
+        "modifiers": {
+          "add": {
+            "skillMasteryXPPerQimican": [
+              {
+                "skillID": "melvorD:Herblore",
+                "value": 30
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "melvorF:Bear&melvorTotH:Beaver": {
+    "Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "skillPreservationCap": [
+            {
+              "skillID": "melvorD:Fletching",
+              "realmID": "melvorD:Melvor",
+              "value": 5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Bear&melvorTotH:Fox": {
+    "Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "skillPreservationCap": [
+            {
+              "skillID": "melvorD:Herblore",
+              "realmID": "melvorD:Melvor",
+              "value": 5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Leprechaun&melvorTotH:Eagle": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "currencyGainFromAgilityPerActiveObstacle": [
+            {
+              "currencyID": "melvorD:GP",
+              "value": 30
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Leprechaun&melvorTotH:Owl": {
+    "5Omodifiers": {
+      "add": {
+        "modifiers": {
+          "skillMasteryXPPerKo": [
+            {
+              "skillID": "melvorD:Thieving",
+              "value": 30
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Leprechaun&melvorTotH:Beaver": {
+    "Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "fletchingItemToCurrencyChance": [
+            {
+              "currencyID": "melvorD:GP",
+              "value": 20
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Leprechaun&melvorTotH:Fox": {
+    "Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "flatBasePrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Summoning",
+              "actionID": "melvorF:Leprechaun",
+              "value": 10
+            }
+          ],
+          "nonShardSummoningCostReduction": [
+            {
+              "actionID": "melvorF:Leprechaun",
+              "value": [ -100 ]
+            },
+            {
+              "actionID": "melvorTotH:Fox",
+              "value": [ -100 ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Crow&melvorTotH:Eagle": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "skillInterval": [
+            {
+              "skillID": "melvorD:Runecrafting",
+              "realmID": "melvorD:Melvor",
+              "value": -10
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Crow&melvorTotH:Owl": {
+    "5Omodifiers": {
+      "add": {
+        "modifiers": {
+          "skillMasteryXPPerArachi": [
+            {
+              "skillID": "melvorD:Runecrafting",
+              "value": 30
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Crow&melvorTotH:Beaver": {
+  },
+  "melvorF:Crow&melvorTotH:Fox": {
+    "Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "nonShardSummoningCostReduction": [
+            {
+              "actionID": "melvorF:Crow",
+              "value": 30
+            },
+            {
+              "actionID": "melvorTotH:Fox",
+              "value": 30
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Salamander&melvorTotH:Eagle": {
+    "Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "skillInterval": [
+            {
+              "skillID": "melvorD:Smithing",
+              "realmID": "melvorD:Melvor",
+              "value": -20
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Salamander&melvorTotH:Owl": {
+    "5Omodifiers": {
+      "add": {
+        "modifiers": {
+          "skillMasteryXPPerIridan": [
+            {
+              "skillID": "melvorD:Smithing",
+              "value": 30
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Salamander&melvorTotH:Beaver": {
+    "Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "additional3PrimaryProductChance": [
+            {
+              "skillID": "melvorD:Fletching",
+              "categoryID": "melvorF:Javelins",
+              "value": 30
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Salamander&melvorTotH:Fox": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "basePrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Summoning",
+              "actionID": "melvorF:Salamander",
+              "value": 200
+            }
+          ],
+          "disableSalamanderItemReduction": [ 1 ]
+        }
+      }
+    }
+  },
+  "melvorF:Monkey&melvorTotH:Eagle": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "skillInterval": [
+            {
+              "skillID": "melvorD:Agility",
+              "realmID": "melvorD:Melvor",
+              "value": -10
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Monkey&melvorTotH:Owl": {
+    "5Omodifiers": {
+      "add": {
+        "modifiers": {
+          "skillMasteryXPPerHyden": [
+            {
+              "skillID": "melvorD:Crafting",
+              "value": 30
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Monkey&melvorTotH:Beaver": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "flatBasePrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Fletching",
+              "categoryID": "melvorF:Javelins",
+              "value": 1
+            }
+          ],
+          "skillCostReduction": [
+            {
+              "skillID": "melvorD:Fletching",
+              "categoryID": "melvorF:Javelins",
+              "value": [ -100 ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Monkey&melvorTotH:Fox": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "flatBasePrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Summoning",
+              "actionID": "melvorF:Monkey",
+              "value": 15
+            },
+            {
+              "skillID": "melvorD:Summoning",
+              "actionID": "melvorTotH:Fox",
+              "value": 15
+            }
+          ],
+          "skillInterval": [
+            {
+              "skillID": "melvorD:Summoning",
+              "actionID": "melvorF:Monkey",
+              "value": -5
+            },
+            {
+              "skillID": "melvorD:Summoning",
+              "actionID": "melvorTotH:Fox",
+              "value": -5
+            }
+          ],
+          "nonShardSummoningCostReduction": [
+            {
+              "actionID": "melvorF:Monkey",
+              "value": -50
+            },
+            {
+              "actionID": "melvorTotH:Fox",
+              "value": -50
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Devil&melvorTotH:Eagle": {
+    "5Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:GP",
+              "skillID": "melvorD:Agility",
+              "value": [ -100 ]
+            }
+          ],
+          "masteryXP": [
+            {
+              "skillID": "melvorD:Agility",
+              "realmID": "melvorD:Melvor",
+              "value": 100
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Devil&melvorTotH:Owl": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "flatBaseRandomProductQuantity": [
+            {
+              "skillID": "melvorD:Astrology",
+              "itemID": "melvorF:Stardust",
+              "value": 4
+            }
+          ],
+          "randomProductChance": [
+            {
+              "skillID": "melvorD:Astrology",
+              "itemID": "melvorF:Golden_Stardust",
+              "value": [ -1000 ]
+            }
+          ],
+          "disableGoldenStardustDrops": [ 1 ]
+        }
+      }
+    }
+  },
+  "melvorF:Devil&melvorTotH:Beaver": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "flatBasePrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Fletching",
+              "categoryID": "melvorF:Bolts",
+              "value": 2
+            }
+          ],
+          "skillItemDoublingChance": [
+            {
+              "skillID": "melvorD:Fletching",
+              "value": [ -10 ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:Devil&melvorTotH:Fox": {
+    "Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "masteryXP": [
+            {
+              "skillID": "melvorD:Summoning",
+              "realmID": "melvorD:Melvor",
+              "value": 100
+            }
+          ],
+          "skillXP": [
+            {
+              "skillID": "melvorD:Summoning",
+              "value": [ 100 ]
+            }
+          ],
+          "flatBasePrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Summoning",
+              "value": [ -1000 ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorTotH:Eagle&melvorTotH:Owl": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "skillInterval": [
+            {
+              "skillID": "melvorD:Astrology",
+              "realmID": "melvorD:Melvor",
+              "value": -10
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorTotH:Eagle&melvorTotH:Beaver": {
+    "Nmodifiers": {
+      "add": {
+        "modifiers": {
+          "flatSkillInterval": [
+            {
+              "skillID": "melvorD:Fletching",
+              "categoryID": "melvorF:Arrows",
+              "value": -300
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorTotH:Eagle&melvorTotH:Fox": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "skillInterval": [
+            {
+              "skillID": "melvorD:Summoning",
+              "realmID": "melvorD:Melvor",
+              "value": -10
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorTotH:Owl&melvorTotH:Beaver": {
+    "5Omodifiers": {
+      "add": {
+        "modifiers": {
+          "skillMasteryXPPerSyllia": [
+            {
+              "skillID": "melvorD:Fletching",
+              "value": 30
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorTotH:Owl&melvorTotH:Fox": {
+    "5Omodifiers": {
+      "add": {
+        "modifiers": {
+          "skillMasteryXPPerQimican": [
+            {
+              "skillID": "melvorD:Summoning",
+              "value": 30
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorTotH:Beaver&melvorTotH:Fox": {
+    "1Vmodifiers": {
+      "add": {
+        "modifiers": {
+          "flatBasePrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Summoning",
+              "actionID": "melvorTotH:Beaver",
+              "value": 5
+            },
+            {
+              "skillID": "melvorD:Summoning",
+              "actionID": "melvorTotH:Fox",
+              "value": 5
+            }
+          ],
+          "nonShardSummoningCostReduction": [
+            {
+              "actionID": "melvorTotH:Beaver",
+              "value": 15
+            },
+            {
+              "actionID": "melvorTotH:Fox",
+              "value": 15
+            }
+          ]
+        }
+      }
+    }
+  },
+  "melvorF:GolbinThief&melvorTotH:LightningSpirit": {
+    "1Vrcm": ["CombatEffectGroup"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Stun"
+          },
+          "modifiers": {
+            "currencyGainPerDamageDealt": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 1500
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:GolbinThief&melvorTotH:Siren": {
+    "1Vrcm": ["CombatEffectGroup"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Sleep"
+          },
+          "modifiers": {
+            "currencyGainPerDamageDealt": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 2000
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:GolbinThief&melvorTotH:Spider": {
+    "1Vrcm": ["CombatEffectGroup"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Every",
+            "conditions": [
+              {
+                "type": "CombatEffectGroup",
+                "character": "Enemy",
+                "groupID": "melvorD:Slow"
+              },
+              {
+                "type": "CombatEffectGroup",
+                "character": "Enemy",
+                "groupID": "melvorD:PoisonDOT"
+              }
+            ]
+          },
+          "modifiers": {
+            "flatCurrencyGainOnEnemyHitBasedOnCombatLevel": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:GolbinThief&melvorTotH:Spectre": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainBasedOnSummonDamage": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 1000
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Wolf&melvorTotH:LightningSpirit": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Stun"
+          },
+          "modifiers": {
+            "lifesteal": 15
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Wolf&melvorTotH:Siren": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Sleep"
+          },
+          "modifiers": {
+            "lifesteal": 25
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Wolf&melvorTotH:Spider": {
+    "Nmodifiers": {
+      "add": {
+        "poisonLifesteal": 50
+      }
+    }
+  },
+  "melvorF:Wolf&melvorTotH:Spectre": {
+    "Nmodifiers": {
+      "add": {
+        "healingOnHitBasedOnTargetResistance": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Witch&melvorTotH:LightningSpirit": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Stun"
+          },
+          "modifiers": {
+            "magicDamageBonus": 15
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Witch&melvorTotH:Siren": {
+    "rc": ["melvorD:Sleep"],
+    "NcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Sleep",
+          "chance": 5,
+          "condition": {
+            "type": "CombatType",
+            "character": "Player",
+            "thisAttackType": "magic",
+            "targetAttackType": "any"
+          },
+          "appliesWhen": "HitWithAttack"
+        }
+      ]
+    }
+  },
+  "melvorF:Witch&melvorTotH:Spider": {
+    "rc": ["melvorD:Poison"],
+    "NcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Poison",
+          "chance": 30,
+          "condition": {
+            "type": "CombatType",
+            "character": "Player",
+            "thisAttackType": "magic",
+            "targetAttackType": "any"
+          },
+          "appliesWhen": "HitWithAttack"
+        }
+      ]
+    }
+  },
+  "melvorF:Witch&melvorTotH:Spectre": {
+    "rcm": ["CombatType"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatType",
+            "character": "Player",
+            "thisAttackType": "magic",
+            "targetAttackType": "any"
+          },
+          "enemyModifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -5
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Minotaur&melvorTotH:LightningSpirit": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Stun"
+          },
+          "modifiers": {
+            "meleeStrengthBonus": 15
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Minotaur&melvorTotH:Siren": {
+    "rc": ["melvorD:Sleep"],
+    "NcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Sleep",
+          "chance": 5,
+          "condition": {
+            "type": "CombatType",
+            "character": "Player",
+            "thisAttackType": "melee",
+            "targetAttackType": "any"
+          },
+          "appliesWhen": "HitWithAttack"
+        }
+      ]
+    }
+  },
+  "melvorF:Minotaur&melvorTotH:Spider": {
+    "rc": ["melvorD:Poison"],
+    "NcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Poison",
+          "chance": 30,
+          "condition": {
+            "type": "CombatType",
+            "character": "Player",
+            "thisAttackType": "melee",
+            "targetAttackType": "any"
+          },
+          "appliesWhen": "HitWithAttack"
+        }
+      ]
+    }
+  },
+  "melvorF:Minotaur&melvorTotH:Spectre": {
+    "rcm": ["CombatType"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatType",
+            "character": "Player",
+            "thisAttackType": "melee",
+            "targetAttackType": "any"
+          },
+          "enemyModifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -5
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Centaur&melvorTotH:LightningSpirit": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Stun"
+          },
+          "modifiers": {
+            "rangedStrengthBonus": 15
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Centaur&melvorTotH:Siren": {
+    "rc": ["melvorD:Sleep"],
+    "NcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Sleep",
+          "chance": 5,
+          "condition": {
+            "type": "CombatType",
+            "character": "Player",
+            "thisAttackType": "ranged",
+            "targetAttackType": "any"
+          },
+          "appliesWhen": "HitWithAttack"
+        }
+      ]
+    }
+  },
+  "melvorF:Centaur&melvorTotH:Spider": {
+    "rc": ["melvorD:Slow"],
+    "NcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Slow",
+          "chance": 15,
+          "condition": {
+            "type": "CombatType",
+            "character": "Player",
+            "thisAttackType": "ranged",
+            "targetAttackType": "any"
+          },
+          "initialParams": [
+            {
+              "name": "magnitude",
+              "value": 15
+            },
+            {
+              "name": "turns",
+              "value": 2
+            }
+          ],
+          "appliesWhen": "HitWithAttack"
+        }
+      ]
+    }
+  },
+  "melvorF:Centaur&melvorTotH:Spectre": {
+    "rcm": ["CombatType"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatType",
+            "character": "Player",
+            "thisAttackType": "ranged",
+            "targetAttackType": "any"
+          },
+          "enemyModifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -5
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Cyclops&melvorTotH:LightningSpirit": {
+    "1rcm": ["CombatEffectGroup"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Stun"
+          },
+          "modifiers": {
+            "currencyGainPerDamageDealt": [
+              {
+                "currencyID": "melvorD:SlayerCoins",
+                "value": 100
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Cyclops&melvorTotH:Siren": {
+    "1rcm": ["CombatEffectGroup"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Sleep"
+          },
+          "modifiers": {
+            "currencyGainPerDamageDealt": [
+              {
+                "currencyID": "melvorD:SlayerCoins",
+                "value": 150
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Cyclops&melvorTotH:Spider": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainPerPoisonDamage": [
+          {
+            "currencyID": "melvorD:SlayerCoins",
+            "value": 2000
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Cyclops&melvorTotH:Spectre": {
+    "1Vmodifiers": {
+      "add": {
+        "flatCurrencyGainOnHitOnSlayerTask": [
+          {
+            "currencyID": "melvorD:SlayerCoins",
+            "damageTypeID": "melvorD:Normal",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Occultist&melvorTotH:LightningSpirit": {
+    "Nmodifiers": {
+      "add": {
+        "decreaseEnemyEvasionOnStun": 100
+      }
+    }
+  },
+  "melvorF:Occultist&melvorTotH:Siren": {
+    "Nmodifiers": {
+      "add": {
+        "decreaseEnemyEvasionOnSleep": 100
+      }
+    }
+  },
+  "melvorF:Occultist&melvorTotH:Spider": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:PoisonDOT"
+          },
+          "enemyModifiers": {
+            "evasion": -20
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Occultist&melvorTotH:Spectre": {
+    "OenemyModifiers": {
+      "add": {
+        "evasionBasedOnResistance": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": -1
+          }
+        ]
+      }
+    }
+  },
+  "melvorF:Yak&melvorTotH:LightningSpirit": {
+    "1rcm": ["CombatEffectGroup"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Player",
+            "groupID": "melvorD:Stun"
+          },
+          "modifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": 3
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Yak&melvorTotH:Siren": {
+    "1rcm": ["CombatEffectGroup"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Player",
+            "groupID": "melvorD:Sleep"
+          },
+          "modifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": 3
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Yak&melvorTotH:Spider": {
+    "1rcm": ["CombatEffectGroup"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Player",
+            "groupID": "melvorD:PoisonDOT"
+          },
+          "modifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": 3
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Yak&melvorTotH:Spectre": {
+    "1rcm": ["EquipStatCompare"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "EquipStatCompare",
+            "statKey": "resistance",
+            "damageType": "melvorD:Normal",
+            "operator": "<"
+          },
+          "modifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": 2
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Unicorn&melvorTotH:LightningSpirit": {
+    "Nmodifiers": {
+      "add": {
+        "healWhenStunned": 10
+      }
+    }
+  },
+  "melvorF:Unicorn&melvorTotH:Siren": {
+    "Nmodifiers": {
+      "add": {
+        "healWhenSlept": 20
+      }
+    }
+  },
+  "melvorF:Unicorn&melvorTotH:Spider": {
+    "modifiers": {
+      "effectIgnoreChance": [
+        {
+          "effectGroupID": "melvorD:PoisonDOT",
+          "value": 100
+        }
+      ]
+    }
+  },
+  "melvorF:Unicorn&melvorTotH:Spectre": {
+    "Nmodifiers": {
+      "add": {
+        "healingOnHitBasedOnTargetResistance": [
+          {
+            "damageTypeID": "melvorD:Normal",
+            "value": 20
+          }
+        ],
+        "disableLifesteal": [ 1 ]
+      }
+    }
+  },
+  "melvorF:Dragon&melvorTotH:LightningSpirit": {
+    "rc": ["melvorD:Burn"],
+    "NcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Burn",
+          "chance": 15,
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:StunLike"
+          },
+          "appliesWhen": "PostAttack"
+        }
+      ]
+    }
+  },
+  "melvorF:Dragon&melvorTotH:Siren": {
+    "rc": ["melvorD:Burn"],
+    "NcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Burn",
+          "chance": 15,
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Sleep"
+          },
+          "appliesWhen": "PostAttack"
+        }
+      ]
+    }
+  },
+  "melvorF:Dragon&melvorTotH:Spider": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Every",
+            "conditions": [
+              {
+                "type": "CombatEffectGroup",
+                "character": "Enemy",
+                "groupID": "melvorD:Slow"
+              },
+              {
+                "type": "CombatEffectGroup",
+                "character": "Enemy",
+                "groupID": "melvorD:PoisonDOT"
+              },
+              {
+                "type": "CombatEffectGroup",
+                "character": "Enemy",
+                "groupID": "melvorD:BurnDOT"
+              }
+            ]
+          },
+          "modifiers": {
+            "maxHit": 300
+          }
+        }
+      ]
+    }
+  },
+  "melvorF:Dragon&melvorTotH:Spectre": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:BurnDOT"
+          },
+          "enemyModifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -8
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorTotH:LightningSpirit&melvorTotH:Siren": {
+    "1Vmodifiers": {
+      "add": {
+        "stunAvoidChance": 10,
+        "effectIgnoreChance": [
+          {
+            "effectGroupID": "melvorD:Sleep",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorTotH:LightningSpirit&melvorTotH:Spider": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:StunLike"
+          },
+          "modifiers": {
+            "attackInterval": -10
+          }
+        }
+      ]
+    }
+  },
+  "melvorTotH:LightningSpirit&melvorTotH:Spectre": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:StunLike"
+          },
+          "enemyModifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -5
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorTotH:Siren&melvorTotH:Spider": {
+    "rc": ["melvorD:Sleep"],
+    "NcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Sleep",
+          "chance": 10,
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:PoisonDOT"
+          },
+          "appliesWhen": "HitWithAttack"
+        }
+      ]
+    }
+  },
+  "melvorTotH:Siren&melvorTotH:Spectre": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorD:Sleep"
+          },
+          "enemyModifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -6
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorTotH:Spider&melvorTotH:Spectre": {
+    "Nmodifiers": {
+      "add": {
+        "summoningMaxHit": 100
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorF:GolbinThief": {
+    "1Vmodifiers": {
+      "add": {
+        "flatCurrencyGainOnEnemyHit": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 60
+          }
+        ]
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorF:Occultist": {
+    "Nmodifiers": {
+      "add": {
+        "evasion": 10
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorF:Wolf": {
+    "modifiers": {
+      "add": {
+        "doubleLifesteal": 1,
+        "autoEatEfficiency": [ -10, 1 ],
+        "autoEatHPLimit": [ -10, 1 ]
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorF:Minotaur": {
+    "Nmodifiers": {
+      "add": {
+        "meleeCritChance": 5
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorF:Centaur": {
+    "Nmodifiers": {
+      "add": {
+        "rangedCritChance": 5
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorF:Witch": {
+    "Nmodifiers": {
+      "add": {
+        "magicCritChance": 5
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorF:Cyclops": {
+    "1Vmodifiers": {
+      "add": {
+        "flatBasePrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Summoning",
+            "actionID": "melvorF:Cyclops",
+            "value": 5
+          }
+        ],
+        "nonShardSummoningCostReduction": [
+          {
+            "actionID": "melvorF:Cyclops",
+            "value": 15
+          },
+          {
+            "actionID": "melvorTotH:Fox",
+            "value": 15
+          }
+        ]
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorF:Yak": {
+    "1rcm": ["Hitpoints"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Hitpoints",
+            "character": "Player",
+            "value": 100,
+            "operator": "=="
+          },
+          "modifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": 3
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorTotH:Fox&melvorF:Unicorn": {
+    "1Lmodifiers": {
+      "add": {
+        "flatHPRegen": 1.5
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorF:Dragon": {
+    "NenemyModifiers": {
+      "add": {
+        "burnDOTDamageTaken": 100
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorTotH:LightningSpirit": {
+    "Nmodifiers": {
+      "add": {
+        "stunDurationIncreaseChance": 10
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorTotH:Siren": {
+    "Nmodifiers": {
+      "add": {
+        "sleepDurationIncreaseChance": 10
+      }
+    }
+  },
+  "melvorTotH:Fox&melvorTotH:Spider": {
+    "Ncbeasy": [ "dp", 3, 10 ]
+  },
+  "melvorTotH:Fox&melvorTotH:Spectre": {
+    "rcm": ["Hitpoints"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Hitpoints",
+            "character": "Player",
+            "value": 75,
+            "operator": ">"
+          },
+          "enemyModifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -5
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorAoD:Barrier&melvorF:Wolf": {
+    "Ncbeasy": ["bbd", 11, 10]
+  },
+  "melvorAoD:Barrier&melvorF:Witch": {
+    "Nmodifiers": {
+      "add": {
+        "flatBarrierSummonDamageMagic": 9
+      }
+    }
+  },
+  "melvorAoD:Barrier&melvorF:Minotaur": {
+    "Nmodifiers": {
+      "add": {
+        "flatBarrierSummonDamageMelee": 9
+      }
+    }
+  },
+  "melvorAoD:Barrier&melvorF:Centaur": {
+    "Nmodifiers": {
+      "add": {
+        "flatBarrierSummonDamageRanged": 9
+      }
+    }
+  },
+  "melvorAoD:Barrier&melvorF:Cyclops": {
+    "Nmodifiers": {
+      "add": {
+        "barrierSummonDamage": 20
+      }
+    }
+  },
+  "melvorAoD:Barrier&melvorF:Occultist": {
+    "rcm": ["Barrier"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Barrier",
+            "character": "Enemy",
+            "value": 0,
+            "operator": ">"
+          },
+          "modifiers": {},
+          "enemyModifiers": {
+            "evasion": -10
+          }
+        }
+      ]
+    },
+    "NenemyModifiers": {
+      "add": {
+        "evasion": -10
+      }
+    }
+  },
+  "melvorAoD:Barrier&melvorF:Yak": {
+    "1rcm": ["Barrier"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Barrier",
+            "character": "Enemy",
+            "value": 0,
+            "operator": ">"
+          },
+          "modifiers": {
+            "flatResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": 2
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorAoD:Barrier&melvorF:Unicorn": {
+    "rcm": ["Hitpoints"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Hitpoints",
+            "character": "Player",
+            "value": 75,
+            "operator": ">"
+          },
+          "modifiers": {
+            "barrierSummonDamage": 40
+          }
+        }
+      ]
+    }
+  },
+  "melvorAoD:Barrier&melvorF:Dragon": {
+    "Ncbeasy": ["bbn", 11, 20]
+  },
+  "melvorAoD:Barrier&melvorF:GolbinThief": {
+    "1Vmodifiers": {
+      "currencyGainBasedOnBarrierDamage": [
+        {
+          "currencyID": "melvorD:GP",
+          "value": 1000
+        }
+      ]
+    }
+  }
+}

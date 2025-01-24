@@ -1,96 +1,4 @@
 {
-	"Base": {
-		"Omatks": [ 1, 1, 1, 1, 1 ],
-		"Omstrs": [ 1, 1, 1 ],
-		"Omdefs": [ 1, 1, 1 ]
-	},
-	"Unholy1": {
-		"base": "Base",
-		"10allow": [ 0, 0, 1 ],
-		"10atkeffect": [ 1 ],
-		"10cbeasy": [ "melvorAoD:UnholyMark", 3 ]
-	},
-	"Unholy2": {
-		"base": "Base",
-		"5allow": [ 0, 0, 1 ],
-		"5atkeffect": [ 1 ],
-		"5cbeasy": [ "melvorAoD:UnholyMark", 3 ],
-		"10cbeasy": [ "10unholy", 3 ]
-	},
-	"Unholy3": {
-		"base": "Base",
-		"5allow": [ 0, 0, 1 ],
-		"5atkeffect": [ 1 ],
-		"5cbeasy": [ "10unholy", 3 ],
-		"10atkeffect": [ 2 ]
-	},
-	"Unholy4": {
-		"base": "Base",
-		"5allow": [ 0, 0, 1 ],
-		"5atkeffect": [ 1 ],
-		"5Ucbeasy": [ "20unholy", 3 ],
-		"10Uatkeffect": [ 2 ]
-	},
-	"Unholy5": {
-		"base": "Base",
-		"5Ucorrupt": [ 10, 5 ],
-		"10Ucorrupt": [ 5, 10 ]
-	},
-	"TotHD": {
-		"5slayer": [ 60 ],
-		"5summon": [ 0, -5, 80 ],
-		"5barrier": [ 0, 30, 50 ]
-	},
-	"TotHD2": {
-		"5Uslayer": [ 60 ],
-		"5Usummon": [ 0, -5, 80 ],
-		"5Ubarrier": [ 0, 30, 50 ]
-	},
-	"AbyD": {
-		"Uress": [ 0, 3 ],
-		"5Uslayer": [ 0, 10 ],
-		"5Usummon": [ 0, -5, 100 ]
-	},
-	"body": {
-		"Uhp": [ 0, 5 ]
-	},
-	"legs": {
-		"Mhp": [ 5 ]
-	},
-	"shield": {
-		"Uress": [ 1 ],
-		"UdmgTaken": [ -5 ]
-	},
-	"tier1": {
-		"base": "Base",
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 5
-			}
-		},
-		"4Ucurrency2": [ 0, 0, 100, "gp" ],
-		"6Ucurrency2": [ 0, 0, 100, "sc" ],
-		"10Ucurrency": [ 0, 50, "gp", "sc" ]
-	},
-	"tier2": {
-		"base": "Base",
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 3
-			}
-		},
-		"3Lskillbase": [ 1, 0, 1 ],
-		"5Uskillextra": [ 1, 0, 2 ]
-	},
-	"tier3": {
-		"base": "Base",
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 1
-			}
-		},
-		"6Uxp": [ 0, 0, 100 ]
-	},
 	"melvorD:Leather_Boots": {
 		"base": "tier1",
 		"Uress": [1],
@@ -436,7 +344,7 @@
 		"Uress": [1],
 		"2slayer": [ 5 ]
 	},
-	"melvorD:Leather_Chaps_B": {
+	"melvorAoD:Leather_Chaps_B": {
 		"base": "melvorD:Leather_Chaps",
 		"barrier": [0,2]
 	},
@@ -445,7 +353,7 @@
 		"Uress": [2],
 		"3slayer": [ 10 ]
 	},
-	"melvorF:Hard_Leather_Chaps_B": {
+	"melvorAoD:Hard_Leather_Chaps_B": {
 		"base": "melvorF:Hard_Leather_Chaps",
 		"3barrier": [ 0, 4, 5 ],
 		"5summon": [0,0,5]
@@ -458,7 +366,7 @@
 	"melvorD:Green_Dhide_Chaps_U": {
 		"base": "melvorD:Green_Dhide_Chaps"
 	},
-	"melvorD:Green_Dhide_Chaps_B": {
+	"melvorAoD:Green_Dhide_Chaps_B": {
 		"base": "melvorD:Green_Dhide_Chaps_U",
 		"5barrier": [0,8,15],
 		"5summon": [0,0,15]
@@ -471,7 +379,7 @@
 	"melvorD:Blue_Dhide_Chaps_U": {
 		"base": "melvorD:Blue_Dhide_Chaps"
 	},
-	"melvorD:Blue_Dhide_Chaps_B": {
+	"melvorAoD:Blue_Dhide_Chaps_B": {
 		"base": "melvorD:Blue_Dhide_Chaps_U",
 		"5barrier": [0,10,20],
 		"5summon": [0,0,20]
@@ -484,7 +392,7 @@
 	"melvorD:Red_Dhide_Chaps_U": {
 		"base": "melvorD:Red_Dhide_Chaps"
 	},
-	"melvorD:Red_Dhide_Chaps_B": {
+	"melvorAoD:Red_Dhide_Chaps_B": {
 		"base": "melvorD:Red_Dhide_Chaps_U",
 		"5barrier": [0,12,25],
 		"5summon": [0,0,25]
@@ -497,7 +405,7 @@
 	"melvorD:Black_Dhide_Chaps_U": {
 		"base": "melvorD:Black_Dhide_Chaps"
 	},
-	"melvorD:Black_Dhide_Chaps_B": {
+	"melvorAoD:Black_Dhide_Chaps_B": {
 		"base": "melvorD:Black_Dhide_Chaps_U",
 		"5barrier": [0,15,30],
 		"5summon": [0,0,30]
@@ -563,29 +471,39 @@
 	"melvorItA:Nethia_Legs_U": {
 		"base": "melvorItA:Nethia_Legs"
 	},
-	"BaseRing1": {
-		"base": "Base",
-		"Uatks": [ 20, 20, 20, 20, 20 ],
-		"Ustrs": [ 20, 20, 10 ],
-		"Udefs": [  20, 20, 20 ],
-		"Uress": [5],
-		"Usums": [ 5 ],
-		"10Ucbeasy": ["3Nulled", 2, 20]
-	},
 	"melvorF:Silver_Topaz_Ring": {
 		"base": "BaseRing1",
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 10
-			}
-		},
 		"5modifiers": {
 			"add": {
 				"autoSlayerUnlocked": 1
 			}
 		},
+		"5Ucurrency2": [0,0,100,"sc"],
 		"5Ucbeasy": [ [ "100$25$3bacc", "100$25$3beva$" ], 3, 30 ],
 		"10skillAddItem": [ 0, 0.1, [ "melvorF:Bank_Slot_Token", "fire" ] ]
+	},
+	"melvorF:Silver_Topaz_Necklace": {
+		"base": "BaseAmulet1",
+		"Nhidden": [12, "atk"],
+		"5allow": [0,0,0,1],
+		"5Ucurrency3": [2,"sc"],
+		"5Ucbeasy": [ [ "50$$3@dacc", "50$$3@deva$" ], 4, 30 ],
+		"10skillAddItem": [ 0, 0.1, ["melvorF:Bank_Slot_Token", "melvorAoD:Archaeology" ]]
+	},
+	"melvorD:Gold_Topaz_Ring": {
+		"base": "BaseRing1",
+		"Ncurrency2": [0,0,0,15,"gp"],
+		"5Ucbeasy": [ "Stun", 2, 10 ],
+		"5Ucurrency2": [0,50,200,"gp"],
+		"10Ucurrency": [0,100,"gp"]
+	},
+	"melvorF:Gold_Topaz_Necklace": {
+		"base": "BaseAmulet1",
+		"Ncurrency2": [50,0,0,10,"gp"],
+		"5allow": [0,0,0,0,1],
+		"5Ucurrency3": [4,"gp"],
+		"5Ucbeasy": ["Crystallize", 6, 10],
+		"10Ucurrency": [0,100,"gp"]
 	},
 	"melvorF:Silver_Sapphire_Ring": {
 		"base": "BaseRing1",
@@ -630,18 +548,6 @@
 		"base": "BaseRing1",
 		"UdmgTaken": [-10],
 		"5Ucbeasy": [["50$1bres","100$1bhp$","50$1btaken"],1,30]
-	},
-	"melvorD:Gold_Topaz_Ring": {
-		"base": "BaseRing1",
-		"Ncurrency2": [0,0,0,15,"gp"],
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 10
-			}
-		},
-		"5Ucbeasy": [ "Stun", 2, 10 ],
-		"5Ucurrency3": [ [ 0, 0, 100, "gp" ], [ 0, 0, 50, "sc" ] ],
-		"10Ucurrency4": [ 0, 0, 100, "gp", "sc" ]
 	},
 	"melvorF:Gold_Sapphire_Ring": {
 		"base": "BaseRing1",
@@ -691,15 +597,6 @@
 		"5OuniqueAttack": { "id": "SpiritPower" },
 		"5Ucbeasy": ["50dhit", 2, 50],
 		"10Ucbeasy": [ "Frostburn", 2, 20 ]
-	},
-	"BaseRing2": {
-		"base": "Base",
-		"Uatks": [ 30, 30, 30, 30, 30 ],
-		"Ustrs": [ 25, 25, 12 ],
-		"Udefs": [ 30, 30, 30 ],
-		"Uress": [6],
-		"Usums": [ 10 ],
-		"5Ucbeasy": ["3Nulled", 2, 30]
 	},
 	"melvorTotH:Iridium_Onyx_Ring": {
 		"base": "BaseRing2",
@@ -804,17 +701,6 @@
 		"Usummon": [0,-10,20],
 		"5Ucbeasy": [ [ "100BarrierBleed","100BarrierBurn","100Burn","100Poison" ], 11, 50 ],
 		"10U:cbeasy": [ [ "5Crystallize","5CrystalSanction" ], 11, 30 ]
-	},
-	"BaseRing3": {
-		"base": "Base",
-		"Uatks": [ 100, 100, 100, 100, 100 ],
-		"Ustrs": [ 100, 100, 40 ],
-		"Udefs": [ 70, 70, 70 ],
-		"Uress": [0, 5],
-		"Nsums": [ 0, 20 ],
-		"Ucorrupt": [0,0,0,50],
-		"5corrupt": [ 50, 50, 50 ],
-		"5Ucbeasy": ["3Nulled", 2, 50]
 	},
 	"melvorItA:Azurian_Nightopal_Ring_I": {
 		"base": "BaseRing3",
@@ -933,12 +819,6 @@
 			[ "BGSCheat:ObsidianVoidheartRingII$", 3]
 		]
 	},
-	"BaseRing4": {
-		"base": "BaseRing3",
-		"Uatks": [ 100, 100, 100, 100, 100 ],
-		"Ustrs": [ 1350, 2750, 170 ],
-		"Udefs": [ 100, 100, 100 ]
-	},
 	"melvorItA:Obzurian_Melee_Breaker_Ring": {
 		"base": "BaseRing4",
 		"5Ucbeasy": [ "5Silence", 1, 50 ],
@@ -962,28 +842,6 @@
 		"10Ucbeasy": [ [ "100dp", "100Ablaze", "25$2lace", "100void" ], 3, 25 ],
 		"10cbeasy": [ [ "100deva", "100dhp$", "100dtaken$", "100bacc", "100bhit$", "100bcrit$", "100bcritm$", "100bdmg$", "100bspd$" ], 1, 100 ]
 	},
-	"BaseAmulet1": {
-		"base": "Base",
-		"Uatks": [ 30, 30, 30, 45, 27 ],
-		"Ustrs": [ 30, 15, 5 ],
-		"Udefs": [ 22, 22, 27 ],
-		"Uress": [5],
-		"Usums": [5],
-		"10Ucbeasy": ["3Cleansed", 2, 20]
-	},
-	"melvorF:Silver_Topaz_Necklace": {
-		"base": "BaseAmulet1",
-		"Uhidden": [12, "atk"],
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 10
-			}
-		},
-		"5allow": [0,0,0,1],
-		"5Ucbeasy": [ [ "50$$3@dacc", "50$$3@deva$" ], 4, 35 ],
-		"10Uregen3": [5],
-		"10skillAddItem": [ 0, 0.1, ["melvorF:Bank_Slot_Token", "melvorAoD:Archaeology" ]]
-	},
 	"melvorF:Silver_Sapphire_Necklace": {
 		"base": "BaseAmulet1",
 		"5cbeasy": [ [ "30bfspd", "30dfspd" ], 2, 100 ]
@@ -1002,21 +860,6 @@
 		"base": "BaseAmulet1",
 		"5Ucbeasy": [ "50bhp", 1, 50 ],
 		"10Ucbeasy": ["Freeze", 6, 25]
-	},
-	"melvorF:Gold_Topaz_Necklace": {
-		"base": "BaseAmulet1",
-		"Ncurrency2": [50,0,0,10,"gp"],
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 10
-			}
-		},
-		"5allow": [0,0,0,0,1],
-		"5Ucbeasy": ["Crystallize", 6, 10],
-		"10Ucurrency3": [
-			[ 50, "gp" ],
-			[ 25, "sc" ]
-		]
 	},
 	"melvorF:Gold_Sapphire_Necklace": {
 		"base": "BaseAmulet1",
@@ -1040,15 +883,6 @@
 		"base": "BaseAmulet1",
 		"5Ucbeasy": [ "1Frostburn", 2, 30, { "t": 5 } ],
 		"10dmgignore": [0,0,0,0,0,0,1]
-	},
-	"BaseAmulet2": {
-		"base": "Base",
-		"Uatks": [ 40, 40, 40, 55, 37 ],
-		"Ustrs": [ 35, 20, 7 ],
-		"Udefs": [ 32, 32, 37 ],
-		"Uress": [ 10 ],
-		"Usums": [ 10 ],
-		"5Ucbeasy": ["3Cleansed", 2, 30]
 	},
 	"melvorTotH:Iridium_Onyx_Necklace": {
 		"base": "BaseAmulet2",
@@ -1121,15 +955,6 @@
 		"5Usummon": [0,-10,20],
 		"5Ucbeasy": [ [ "100BarrierBleed","100BarrierBurn","100Burn","100Poison" ], 11, 50 ],
 		"10Ucbeasy": [ [ "5Crystallize","5CrystalSanction" ], 11, 50 ]
-	},
-	"BaseAmulet3": {
-		"base": "Base",
-		"Uatks": [ 100, 100, 100, 115, 100 ],
-		"Ustrs": [ 60, 45, 12 ],
-		"Udefs": [ 92, 92, 97 ],
-		"Uress": [0, 5],
-		"Nsums": [0, 10 ],
-		"5Ucbeasy": ["3Cleansed", 2, 30]
 	},
 	"melvorItA:Azurian_Nightopal_Amulet_I": {
 		"base": "BaseAmulet3",
@@ -1253,14 +1078,6 @@
 		"5UprayerGet": [0,0,200,0,100,2],
 		"5Ucbeasy": [["50bres","100bhp$", "200$4beva$", "50btaken$"], 1, 100],
 		"10Ucbeasy": [ [ "2Silence", "2EldritchCurse", "2Crystallize" ], 4, 50 ]
-	},
-	"BaseAmulet4": {
-		"base": "BaseAmulet3",
-		"Uatks": [ 100, 100, 100, 100, 100 ],
-		"Ustrs": [ 1350, 2750, 170 ],
-		"Udefs": [ 100, 100, 100 ],
-		"Uress": [0, 3],
-		"Nsums": [0, 10 ]
 	},
 	"melvorItA:Obzurian_Critical_Strike_Amulet": {
 		"base": "BaseAmulet4",

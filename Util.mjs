@@ -821,7 +821,7 @@ export class Util {
 
 		let len = 0;
 		for (let m = 0; m < attacks.length; ++m) {
-			if (data?.remove?.find(y => y == x))
+			if (data?.specialAttacks?.remove?.find(y => y == attacks[m].id))
 				continue;
 			if (attacks[m].id == id) {
 				data.overrideSpecialChances[len] = chance;
@@ -831,7 +831,7 @@ export class Util {
 		}
 
 		let _i;
-		if (_i=data.specialAttacks.add.findIndex(x=>x==id) == -1){
+		if ((_i=data.specialAttacks.add.findIndex(x=>x==id)) == -1){
 			data.specialAttacks.add.push(id);
 			data.overrideSpecialChances.push(chance);
 		}
@@ -1110,7 +1110,9 @@ export class Util {
 
 	static addEquipmentStats(stats, data, modData, type, lv, mul, extraMul = 1) {
 		modData?.forEach(x => {
-			const add = this.calcValue(x.value, type, lv, mul, extraMul) >> 0;
+			let add = this.calcValue(x.value, type, lv, mul, extraMul);
+			if (x.key !== "summoningMaxhit")
+				add = add >> 0;
 			if (!add)
 				return;
 			let i = data.findIndex(y => y.key == x.key && y.damageType == x.damageType);
@@ -1210,7 +1212,7 @@ export class Util {
 		if (base == null)
 			return;
 		let _a;
-		let spd = (_a = Util.calcValue(mspd, type, lv, mul, extraMul) ? _a * (base[0] ?? 0) : 0);
+		let spd = ((_a = Util.calcValue(mspd, type, lv, mul, extraMul))? _a * (base[0] ?? 0) : 0);
 
 		let atkBonus = [];
 		if (matkBonus) {
@@ -1232,14 +1234,14 @@ export class Util {
 
 		let res = [];
 		if (mres) {
-			for (let m = 0; m < 3; ++m)
+			for (let m = 0; m < 4; ++m)
 				res.push((_a = Util.calcValue(mres[m], type, lv, mul, extraMul)) ? (_a * (base[12 + m] ?? 0)) : 0);
 		}
 
 		let sumMaxhit = [];
 		if (msumMaxhit) {
-			for (let m = 0; m < 3; ++m)
-				msumMaxhit.push((_a = Util.calcValue(msumMaxhit[m], type, lv, mul, extraMul)) ? (msumMaxhit[m] * (base[16 + m] ?? 0)) : 0);
+			for (let m = 0; m < 4; ++m)
+				sumMaxhit.push((_a = Util.calcValue(msumMaxhit[m], type, lv, mul, extraMul)) ? (_a * (base[16 + m] ?? 0)) : 0);
 		}
 
 		this.addEquipmentStatsAlias(stats, data, spd, atkBonus, strBonus, defBonus, res, sumMaxhit, 0, lv, mul);
@@ -1389,6 +1391,65 @@ export class Util {
 		if (data.add == null)
 			data.add = [];
 		this.addModiferDataAlias(modifiers, data.add, values, valueMap, scopes, scopeMap, type, lv, mul, extraMul);
+	}
+
+	static applyStatObjectDataModification(statObject, modData, game) {
+		var _a;
+		try {
+			if (modData.conditionalModifiers !== undefined) {
+				if (modData.conditionalModifiers.remove !== undefined && statObject.conditionalModifiers) {
+					modData.conditionalModifiers.remove.forEach((type) => {
+						statObject.conditionalModifiers = statObject.conditionalModifiers.filter((c) => c.condition.type !== type);
+					});
+				}
+				if (modData.conditionalModifiers.add !== undefined) {
+					statObject.conditionalModifiers.push(...modData.conditionalModifiers.add.map((data) => new ConditionalModifier(data, game, this)));
+				}
+			}
+			if (modData.enemyModifiers !== undefined) {
+				const modifiers = (_a = statObject.enemyModifiers) !== null && _a !== void 0 ? _a : [];
+				const newModifiers = game.modifyModifierValues(modifiers, modData.enemyModifiers);
+				if (newModifiers.length === 0) {
+					statObject.enemyModifiers = undefined;
+				}
+				else {
+					statObject.enemyModifiers = newModifiers;
+				}
+			}
+			if (modData.modifiers !== undefined) {
+				if (statObject.modifiers === undefined) {
+					if (modData.modifiers.add !== undefined)
+						statObject.modifiers = game.getModifierValuesFromData(modData.modifiers.add);
+				}
+				else {
+					statObject.modifiers = game.modifyModifierValues(statObject.modifiers, modData.modifiers);
+				}
+			}
+			if (modData.combatEffects !== undefined) {
+				if (statObject.combatEffects === undefined)
+					statObject.combatEffects = [];
+				game.modifyCombatEffectApplicators(statObject.combatEffects, modData.combatEffects, EquipmentItem.name);
+			}
+			if (modData.consumesOn !== undefined) {
+				if (modData.consumesOn.remove !== undefined) {
+					modData.consumesOn.remove.forEach((type) => {
+						if (statObject.consumesOn !== undefined)
+							statObject.consumesOn = this.consumesOn.filter((t) => t.type !== type);
+					});
+				}
+				if (modData.consumesOn.add !== undefined) {
+					if (statObject.consumesOn === undefined)
+						statObject.consumesOn = [];
+					statObject.consumesOn.push(...modData.consumesOn.add.map((data) => game.events.constructMatcher(data)));
+				}
+			}
+		}
+		catch (e) {
+			if (statObject instanceof SummoningSynergy)
+				console.log("Modify Summoning Synergy (" + statObject.summons[0].id + "," + statObject.summons[1].id + ") fail: " + e.message);
+			else
+				console.log("Modify StatObject fail: " + e.message);
+		}
 	}
 }
 
@@ -3562,7 +3623,6 @@ export class EasyTool {
 						let name = statObject.localID;
 						Util.removeAllSpecialAttackData(statObject.specialAttacks, data);
 						this.updateSpecialAttackEasy(name, atk, _v, type, lv, mul, extraMul);
-						//Util.levelUpSpecialAttack(name, atk, _v, type, lv, mul, extraMul);
 						let v = { "specialAttacks": { "add": [`BGSCheat:${name}`] },"overrideSpecialChances":[0] };
 						Util.addSpecialAttacksData(statObject, data, v, type, lv, mul, extraMul);
 					}
@@ -3580,7 +3640,6 @@ export class EasyTool {
 							name += order;
 							order++;
 							this.updateSpecialAttackEasy(name, atk, _v, type, lv, mul, extraMul);
-							//Util.levelUpSpecialAttack(name, atk, _v, type, lv, mul, extraMul);
 							let v = { "specialAttacks": { "add": [`BGSCheat:${name}`] }, "overrideSpecialChances": [0] };
 							Util.addSpecialAttacksData(statObject, data, v, type, lv, mul, extraMul);
 						}
@@ -3619,9 +3678,9 @@ export class EasyTool {
 				if (data.conditionalModifiers == null)
 					data.conditionalModifiers = {};
 				let _a = data.conditionalModifiers ;
-				if (_a.removed == null)
-					_a.removed = [];
-				_a.removed.push(..._v);
+				if (_a.remove == null)
+					_a.remove = [];
+				_a.remove.push(..._v);
 				break;
 			}
 			case "rs": {

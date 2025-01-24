@@ -12,14 +12,16 @@ let EasyTool = null;
 export class ItemLevelManager{
 	levelData;
 	itemDataMap;
+	commonData;
 	
 	constructor(){
 		this.levelData = null
 		this.itemDataMap = new Map();
 	}
 
-	async init(ctx, path){
+	async init(ctx, path, commonData){
 		this.levelData = await ctx.loadData(path);
+		this.commonData = commonData;
 	}
 
 	getLevelUpData(item,modData,itemID,base,lv,mul){
@@ -34,7 +36,11 @@ export class ItemLevelManager{
 		}
 		let data = this.levelData[k];
 		if (!data)
+			data = this.commonData[k];
+		if (!data) {
+			console.log("No such item or base: " + itemID);
 			return;
+		}
 		let _a = data;
 		if (_a.base instanceof Array)
 			_a.base.forEach(x => { this.getLevelUpData(item, modData, x, base, lv, mul); });
@@ -48,32 +54,33 @@ export class ItemLevelManager{
 		});
 	}
 
-	getCurrentEquipmentStat(item, data) {
-		data.base = [];
-		let _a = data.base;
-		if (item.equipmentStats) {
-			let s = item.equipmentStats;
-			_a.push(s.find(x => x?.key === "attackSpeed")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "stabAttackBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "slashAttackBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "blockAttackBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "rangedAttackBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "magicAttackBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "meleeStrengthBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "rangedStrengthBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "magicDamageBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "meleeDefenceBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "rangedDefenceBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "magicDefenceBonus")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "resistance" && x?.damageType?.id==="melvorD:Normal")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "resistance" && x?.damageType?.id==="melvorItA:Abyssal")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "resistance" && x?.damageType?.id==="melvorF:Pure")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "resistance" && x?.damageType?.id==="melvorItA:Eternal")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "summoningMaxhit" && x?.damageType?.id==="melvorD:Normal")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "summoningMaxhit" && x?.damageType?.id==="melvorItA:Abyssal")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "summoningMaxhit" && x?.damageType?.id==="melvorF:Pure")?.value ?? 0);
-			_a.push(s.find(x => x?.key === "summoningMaxhit" && x?.damageType?.id==="melvorItA:Eternal")?.value ?? 0);
+	getLevelUpDataForSummoningSynergy(statObject, modData, lv, mul) {
+		const _s = statObject.summons;
+		if (!(_s instanceof Array) || _s.length < 2 || typeof(_s[0].id) != "string" || typeof(_s[1].id) != "string") {
+			console.log("statObject is not accepatible" );
+			return;
 		}
+		let key = _s[0].id + "&" + _s[1].id;
+		let data = this.levelData[key];
+		if (!data) {
+			key = _s[1].id + "&" + _s[0].id;
+			data = this.levelData[key];
+		}
+		if (!data) {
+			console.log("No such synergy data: (" + _s[0].id + "," + _s[1].id + ")");
+			return;
+		}
+		let _a = data;
+		if (_a.base instanceof Array)
+			_a.base.forEach(x => { this.getLevelUpData(statObject, modData, x, null, lv, mul); });
+		else if (typeof (_a.base) == "string")
+			this.getLevelUpData(statObject, modData,_a.base,null,lv, mul);
+
+		Object.entries(_a).forEach(x => {
+			if (x[0] == "base")
+				return;
+			EasyTool.addEasyValue(statObject, modData, x[0], x[1], lv, mul, null, 1);
+		});
 	}
 
 	levelUp(itemID,lv,mul){
@@ -88,6 +95,8 @@ export class ItemLevelManager{
 			if (item.equipmentStats)
 				Util.getCurrentEquipmentStat(item, itemData);
 		}
+		if (itemID === "melvorF:Summoning_Familiar_Golbin_Thief")
+			console.log(JSON.stringify(itemData));
 		this.updateItemName(itemID, itemData.name, lv);
 		let modData = {};
 		let modBase = null;
@@ -101,8 +110,8 @@ export class ItemLevelManager{
 		let statObject = item;
 		if (item instanceof PotionItem)
 			statObject = item.stats;
-		this.getLevelUpData(statObject, modData ,itemID,modBase,lv,mul);
-		//if (itemID === "melvorAoD:Pirate_Captains_Sword")
+		this.getLevelUpData(statObject, modData ,itemID, modBase, lv, mul);
+		//if (itemID === "melvorD:Bronze_Dagger")
 		//	console.log(JSON.stringify(modData));
 		item.applyDataModification(modData, game);
 		delete item._modifiedDescription;
@@ -144,12 +153,12 @@ export class SkillCheatManager{
 		this.mulFormula = mulF;
 	}
 
-	async init(ctx, skillClass, skillObject, itemPath, skillPath){
+	async init(ctx, skillClass, skillObject, itemPath, skillPath, commonData){
 		Util = mod.api.BGSCheat.Util;
 		EasyTool = mod.api.BGSCheat.EasyTool;
 		LevelUpFormula = mod.api.BGSCheat.LevelUpFormula;
 		this.itemManager = await new ItemLevelManager();
-		await this.itemManager.init(ctx,itemPath);
+		await this.itemManager.init(ctx,itemPath, commonData);
 		this.levelData = await ctx.loadData(skillPath);
 		this.skillObject = skillObject;
 		if (this.skillObject == game.archaeology)
@@ -173,10 +182,17 @@ export class SkillCheatManager{
 			return;
 		const lv = this.levelFormula.testLevel(this.skillObject.getMasteryXP(action));
 		const mul = this.mulFormula(lv);
-		data.forEach(x=>this.itemManager.levelUp(x,lv,mul));
+		if (lv > 0)
+			data.forEach(x=>this.itemManager.levelUp(x,lv,mul));
 		this.actionLevelMap.set(action.id,lv);
-		if (this.skillObject == game.archaeology)
-			this.setArchaelogyData(action.id, lv);
+		if (lv > 0) {
+			if (this.skillObject == game.archaeology)
+				this.setArchaelogyData(action.id, lv);
+			if (this.skillObject == game.summoning)
+				this.updateSummoningSynergies(action.id, lv, mul);
+			const ns = game.registeredNamespaces.getNamespace("BGSCheat");
+			game.registerGameData(ns, {});
+		}
 	}
 
 	testAction(action){
@@ -213,6 +229,30 @@ export class SkillCheatManager{
 			loadedLangJson[`POI_NAME_Melvor_${data.localID}`] = newName;
 		}
 		this.actionDataMap.set(id, data);
+	}
+
+	updateSummoningSynergies(id, lv, mul) {
+		game.summoning.synergies.forEach(x => {
+			if (!(x.summons instanceof Array))
+				return;
+			if (x.summons.find(y => y.id == id) == null)
+				return;
+			const _a = x.summons.find(y => y.id != id);
+			if (!_a) return;
+			const tlv = this.actionLevelMap.get(_a.id) ?? 0;
+			if (tlv == 0) return;
+			this.updateSummoningSynergy(x, Math.min(lv, tlv), mul);
+		});
+	}
+
+	updateSummoningSynergy(statObject, lv, mul) {
+		if (!(statObject.summons instanceof Array))
+			return;
+		let modData = {};
+		this.itemManager.getLevelUpDataForSummoningSynergy(statObject, modData, lv, mul);
+		if (statObject.summons[0].id == "melvorF:GolbinThief" && statObject.summons[1].id == "melvorF:Dragon")
+			console.log("Synergies mod data: " + JSON.stringify(modData));
+		Util.applyStatObjectDataModification(statObject, modData, game);
 	}
 }
 
