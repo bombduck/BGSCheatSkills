@@ -74,8 +74,7 @@ export class CheatManaget{
 				name: "FormulaInput",
 				label: "Input for Custom Formula",
 				hint: "See custom formula manual at the bottom of the dialog.",
-				default: "[[9,2,0.6,8,0.4,2]]",
-				default: "return 9*(lv+2)**0.6*8**(0.4*(lv+2))",
+				default: "return 90000*(lv+2)**0.6*8**(0.4*(lv+2))",
 				onChange: (val, prev) => {
 					this.loadMasteryXpSettings(val);
 					this.initLevelTable();

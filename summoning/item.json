@@ -305,6 +305,272 @@
       }
     }
   },
+  "melvorItA:Summoning_Familiar_Imp": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "corruptionCounterRate": 10
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Golem": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "skillID": "melvorItA:Harvesting",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Golbin_Thief": {
+    "base": "Base",
+    "1Vmodifiers": {
+      "add": {
+        "flatCurrencyGainOnEnemyHit": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Occultist": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "evasion": 10
+      }
+    },
+    "NenemyModifiers": {
+      "add": {
+        "evasion": -10
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Wolf": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "lifesteal": 2
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Ent": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Mole": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "skillID": "melvorD:Mining",
+            "value": 3
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Octopus": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "skillID": "melvorD:Fishing",
+            "value": 3
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Minotaur": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "meleeMaxHit": 3,
+        "meleeAccuracyRating": 3
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Centaur": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "rangedMaxHit": 3,
+        "rangedAccuracyRating": 3
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Witch": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "magicMaxHit": 3,
+        "magicAccuracyRating": 3
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Pig": {
+    "1Vmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Cooking",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Crow": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "subcategoryID": "melvorF:Runes",
+            "value": 2
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Leprechaun": {
+    "1Vmodifiers": {
+      "add": {
+        "flatThievingCurrencyGain": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 50
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Cyclops": {
+    "base": "Base",
+    "1Vmodifiers": {
+      "add": {
+        "currencyGain": [
+          {
+            "currencyID": "melvorItA:AbyssalSlayerCoins",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Yak": {
+    "base": "Base",
+    "1Vmodifiers": {
+      "add": {
+        "flatResistance": [
+          {
+            "damageTypeID": "melvorItA:Abyssal",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Unicorn": {
+    "base": "Base",
+    "Nmodifiers": {
+      "add": {
+        "hitpointRegeneration": 50
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Dragon": {
+    "base": "Base",
+    "1rc": ["melvorItA:Ablaze"],
+    "1VcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Ablaze",
+          "chance": 1,
+          "appliesWhen": "PostAttack",
+          "condition": {
+            "type": "DamageType",
+            "character": "Player",
+            "damageType": "melvorItA:Abyssal"
+          },
+          "descriptionLang": "CUSTOM_APPLICATOR_HitWithAttack_DamageType"
+        }
+      ]
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Monkey": {
+    "1Vmodifiers": {
+      "add": {
+        "skillItemDoublingChance": [
+          {
+            "skillID": "melvorD:Crafting",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Salamander": {
+    "1Vmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Smithing",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Bear": {
+    "1Vmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Herblore",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Abyssal_Devil": {
+    "1Vmodifiers": {
+      "add": {
+        "skillInterval": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "value": -5
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Eldritch_Eyeball": {
+    "modifiers": {
+      "add": {
+        "skillPreservationChance": 5
+      }
+    }
+  },
+  "melvorItA:Summoning_Familiar_Void_Wisp": {
+    "base": "Base",
+    "Ncbeasy": ["ec", 3, 5]
+  },
   "melvorF:GolbinThief&melvorF:Occultist": {
     "Nmodifiers": {
       "add": {
@@ -3197,12 +3463,1697 @@
   },
   "melvorAoD:Barrier&melvorF:GolbinThief": {
     "1Vmodifiers": {
-      "currencyGainBasedOnBarrierDamage": [
+      "add": {
+        "currencyGainBasedOnBarrierDamage": [
+          {
+            "currencyID": "melvorD:GP",
+            "value": 1000
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Ent&melvorItA:Abyssal_Mole": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalRandomAbyssalGemChancePerInterval": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Ent&melvorItA:Abyssal_Octopus": {
+    "1Vmodifiers": {
+      "add": {
+        "bonusFishingSpecialChance": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "value": 6
+          }
+        ],
+        "randomProductChance": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "itemID": "melvorItA:Shadow_Raven_Nest",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Ent&melvorItA:Abyssal_Pig": {
+    "Nmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorItA:Abyssal",
+            "value": 40
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Ent&melvorItA:Abyssal_Bear": {
+    "1Vmodifiers": {
+      "add": {
+        "randomProductChance": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "itemID": "melvorItA:Shadow_Drake_Nest",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Ent&melvorItA:Abyssal_Leprechaun": {
+    "1Vmodifiers": {
+      "add": {
+        "flatDrakeNestsFromThievingTreant": 3
+      }
+    }
+  },
+  "melvorItA:Abyssal_Ent&melvorItA:Abyssal_Crow": {
+    "1Vmodifiers": {
+      "add": {
+        "skillCostReduction": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "categoryID": "melvorItA:AbyssalStaffsWands",
+            "value": 20
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Ent&melvorItA:Abyssal_Salamander": {
+    "Nmodifiers": {
+      "add": {
+        "flatBasePrimaryProductQuantityChance": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "realmID": "melvorItA:Abyssal",
+            "value": 30
+          },
+          {
+            "skillID": "melvorD:Smithing",
+            "realmID": "melvorItA:Abyssal",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Ent&melvorItA:Abyssal_Monkey": {
+    "Nmodifiers": {
+      "add": {
+        "woodcuttingDrakeNestJewelryChance": 35
+      }
+    }
+  },
+  "melvorItA:Abyssal_Ent&melvorItA:Abyssal_Devil": {
+    "modifiers": {
+      "add": {
+        "woodcuttingAXPAddedAsFiremakingAXP": 10,
+        "halveWoodcuttingDoubleChance": 1
+      }
+    }
+  },
+  "melvorItA:Abyssal_Mole&melvorItA:Abyssal_Octopus": {
+    "Nmodifiers": {
+      "add": {
+        "additionalAbyssalGemChance": 25,
+        "fishingAdditionalSpecialItemChance": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "value": 25
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Mole&melvorItA:Abyssal_Pig": {
+    "1Vmodifiers": {
+      "add": {
+        "cookingSuccessCap": [ -30 ],
+        "flatCoalGainedOnCookingFailure": 125
+      }
+    }
+  },
+  "melvorItA:Abyssal_Mole&melvorItA:Abyssal_Bear": {
+    "1Vmodifiers": {
+      "add": {
+        "flatMiningNodeHP": 25
+      }
+    }
+  },
+  "melvorItA:Abyssal_Mole&melvorItA:Abyssal_Leprechaun": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalRandomAbyssalGemChance": [
+          {
+            "skillID": "melvorD:Thieving",
+            "actionID": "melvorItA:WitheringGolem",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Mole&melvorItA:Abyssal_Crow": {
+    "1Vmodifiers": {
+      "add": {
+        "doubleItemsSkill": [
+          {
+            "skillID": "melvorD:Mining",
+            "actionID": "melvorItA:Abyssal_Essence",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Mole&melvorItA:Abyssal_Salamander": {
+    "Nmodifiers": {
+      "add": {
+        "miningBarChance": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "value": 25
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Mole&melvorItA:Abyssal_Monkey": {
+    "Nmodifiers": {
+      "add": {
+        "doubleItemsSkill": [
+          {
+            "skillID": "melvorD:Mining",
+            "categoryID": "melvorItA:Outcrop",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Mole&melvorItA:Abyssal_Devil": {
+    "1Lmodifiers": {
+      "add": {
+        "additionalRandomSkillItemChancePerInterval": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "itemID": "melvorItA:Voidheart",
+            "realmID": "melvorItA:Abyssal",
+            "value": 0.5
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Octopus&melvorItA:Abyssal_Pig": {
+    "modifiers": {
+      "add": {
+        "fishingCookedChance": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "value": 85
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Octopus&melvorItA:Abyssal_Bear": {
+    "1Vmodifiers": {
+      "add": {
+        "skillInterval": [
+          {
+            "skillID": "melvorD:Herblore",
+            "realmID": "melvorItA:Abyssal",
+            "value": -3
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Octopus&melvorItA:Abyssal_Leprechaun": {
+    "1Vmodifiers": {
+      "add": {
+        "thievingStunAvoidanceChance": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "value": 15
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Octopus&melvorItA:Abyssal_Crow": {
+    "1Vmodifiers": {
+      "add": {
+        "flatBasePrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "categoryID": "melvorItA:AbyssalComboRunes",
+            "value": 2
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Octopus&melvorItA:Abyssal_Salamander": {
+    "1Vmodifiers": {
+      "add": {
+        "skillCostReduction": [
+          {
+            "skillID": "melvorD:Smithing",
+            "realmID": "melvorItA:Abyssal",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Octopus&melvorItA:Abyssal_Monkey": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalRandomAbyssalGemChance": [
+          {
+            "skillID": "melvorD:Crafting",
+            "categoryID": "melvorItA:AbyssalAmulets",
+            "value": 10
+          },
+          {
+            "skillID": "melvorD:Crafting",
+            "categoryID": "melvorItA:AbyssalRings",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Octopus&melvorItA:Abyssal_Devil": {
+    "5Nmodifiers": {
+      "add": {
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Fishing",
+            "value": [ -4 ]
+          }
+        ],
+        "masteryXP": [
+          {
+            "skillID": "melvorD:Fishing",
+            "realmID": "melvorItA:Abyssal",
+            "value": 100
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Pig&melvorItA:Abyssal_Bear": {
+    "Nmodifiers": {
+      "add": {
+        "skillItemDoublingChance": [
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorItA:Abyssal",
+            "value": 20
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Pig&melvorItA:Abyssal_Leprechaun": {
+    "1Vmodifiers": {
+      "add": {
+        "ignoreThievingDamageChance": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "value": 20
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Pig&melvorItA:Abyssal_Crow": {
+    "Nmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "categoryID": "melvorItA:AbyssalRunes",
+            "value": 20
+          },
+          {
+            "skillID": "melvorD:Runecrafting",
+            "categoryID": "melvorItA:AbyssalComboRunes",
+            "value": 20
+          },
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorItA:Abyssal",
+            "value": 20
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Pig&melvorItA:Abyssal_Salamander": {
+    "Nmodifiers": {
+      "add": {
+        "flatSkillInterval": [
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorItA:Abyssal",
+            "value": -400
+          },
+          {
+            "skillID": "melvorD:Smithing",
+            "realmID": "melvorItA:Abyssal",
+            "value": -400
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Pig&melvorItA:Abyssal_Monkey": {
+    "1Vmodifiers": {
+      "add": {
+        "skillCostReduction": [
+          {
+            "skillID": "melvorD:Crafting",
+            "realmID": "melvorItA:Abyssal",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Pig&melvorItA:Abyssal_Devil": {
+    "5Nmodifiers": {
+      "add": {
+        "masteryXP": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "realmID": "melvorItA:Abyssal",
+            "value": 110
+          },
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorItA:Abyssal",
+            "value": 110
+          }
+        ],
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "realmID": "melvorItA:Abyssal",
+            "value": [ -12 ]
+          },
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorItA:Abyssal",
+            "value": [ -12 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Bear&melvorItA:Abyssal_Leprechaun": {
+    "1Lmodifiers": {
+      "add": {
+        "thievingAreaUniqueChance": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "value": 0.1
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Bear&melvorItA:Abyssal_Crow": {
+    "rcm": ["PotionUsed"],
+    "NconditionalModifiers": {
+      "add": [
         {
-          "currencyID": "melvorD:GP",
-          "value": 1000
+          "condition": {
+            "type": "PotionUsed",
+            "recipeID": "melvorItA:Abyssal_Combination_Potion"
+          },
+          "modifiers": {
+            "additional8PrimaryProductChance": [
+              {
+                "skillID": "melvorD:Runecrafting",
+                "categoryID": "melvorItA:AbyssalComboRunes",
+                "value": 40
+              }
+            ]
+          }
         }
       ]
+    }
+  },
+  "melvorItA:Abyssal_Bear&melvorItA:Abyssal_Salamander": {
+    "1rcm": ["PotionUsed"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "PotionUsed",
+            "recipeID": "melvorItA:Abyssal_Miner_Potion"
+          },
+          "modifiers": {
+            "doubleItemsSkill": [
+              {
+                "skillID": "melvorD:Smithing",
+                "actionID": "melvorItA:Azurian_Bar",
+                "value": 1
+              },
+              {
+                "skillID": "melvorD:Smithing",
+                "actionID": "melvorItA:Obsidian_Bar",
+                "value": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Bear&melvorItA:Abyssal_Monkey": {
+    "1Vmodifiers": {
+      "add": {
+        "skillItemDoublingChance": [
+          {
+            "skillID": "melvorD:Crafting",
+            "realmID": "melvorItA:Abyssal",
+            "value": 15
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Bear&melvorItA:Abyssal_Devil": {
+    "1Vmodifiers": {
+      "add": {
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "value": 5
+          }
+        ],
+        "firemakingBonfireInterval": 100
+      }
+    }
+  },
+  "melvorItA:Abyssal_Leprechaun&melvorItA:Abyssal_Crow": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalSkillItem": [
+          {
+            "skillID": "melvorD:Thieving",
+            "categoryID": "melvorItA:WitheringRuins",
+            "itemID": "melvorItA:Abyssal_Essence",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Leprechaun&melvorItA:Abyssal_Salamander": {
+    "Nmodifiers": {
+      "add": {
+        "randomBarThievingWitheringRuinsChance": 50
+      }
+    }
+  },
+  "melvorItA:Abyssal_Leprechaun&melvorItA:Abyssal_Monkey": {
+    "1Vmodifiers": {
+      "add": {
+        "thievingAutoSellPrice": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 15
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Leprechaun&melvorItA:Abyssal_Devil": {
+    "modifiers": {
+      "add": {
+        "summoningSynergy_Abyssal_Leprechaun_Devil": 1
+      }
+    }
+  },
+  "melvorItA:Abyssal_Crow&melvorItA:Abyssal_Salamander": {
+    "Nmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Smithing",
+            "realmID": "melvorItA:Abyssal",
+            "value": 20
+          },
+          {
+            "skillID": "melvorD:Runecrafting",
+            "realmID": "melvorItA:Abyssal",
+            "value": 20
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Crow&melvorItA:Abyssal_Monkey": {
+    "1Vmodifiers": {
+      "add": {
+        "skillItemDoublingChance": [
+          {
+            "skillID": "melvorD:Crafting",
+            "categoryID": "melvorItA:AbyssalArmour",
+            "value": 20
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Crow&melvorItA:Abyssal_Devil": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "categoryID": "melvorItA:AbyssalRunes",
+            "value": 3
+          }
+        ],
+        "masteryXP": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "realmID": "melvorItA:Abyssal",
+            "value": [ -15, 1 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Salamander&melvorItA:Abyssal_Monkey": {
+    "Nmodifiers": {
+      "add": {
+        "skillPreservationChance": [
+          {
+            "skillID": "melvorD:Crafting",
+            "categoryID": "melvorItA:AbyssalAmulets",
+            "value": 45
+          },
+          {
+            "skillID": "melvorD:Crafting",
+            "categoryID": "melvorItA:AbyssalRings",
+            "value": 45
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Salamander&melvorItA:Abyssal_Devil": {
+    "Nmodifiers": {
+      "add": {
+        "flatSmithingCoalCost": -5
+      }
+    }
+  },
+  "melvorItA:Abyssal_Monkey&melvorItA:Abyssal_Devil": {
+    "1Vmodifiers": {
+      "add": {
+        "firemakingLogCurrencyGain": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 200
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Golbin_Thief&melvorItA:Abyssal_Wolf": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainFromCombat": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 25
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Golbin_Thief&melvorItA:Abyssal_Witch": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainPerMagicDamageDealt": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 50
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Golbin_Thief&melvorItA:Abyssal_Minotaur": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainPerMeleeDamageDealt": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 50
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Golbin_Thief&melvorItA:Abyssal_Centaur": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainPerRangedDamageDealt": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 50
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Golbin_Thief&melvorItA:Abyssal_Cyclops": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainFromSlayerTaskMonsterDrops": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 400
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Golbin_Thief&melvorItA:Abyssal_Occultist": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainOnMonsterKillBasedOnEvasion": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Golbin_Thief&melvorItA:Abyssal_Yak": {
+    "1Vmodifiers": {
+      "add": {
+        "flatCurrencyGainWhenHitBasedOnResistance": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "damageTypeID": "melvorItA:Abyssal",
+            "value": 30
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Golbin_Thief&melvorItA:Abyssal_Unicorn": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainOnRegenBasedOnHPGained": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 10000
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Golbin_Thief&melvorItA:Abyssal_Dragon": {
+    "1rcm": ["CombatEffectGroup"],
+    "1VconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorItA:AblazeDOT"
+          },
+          "modifiers": {
+            "currencyGainFromMonsterDrops": [
+              {
+                "currencyID": "melvorItA:AbyssalPieces",
+                "value": 25
+              }
+            ]
+          },
+          "description": "+${modValue0}% ${modCurrencyName0} dropped from Monsters affected by ${condEffectGroupName}",
+          "descriptionLang": "COND_MODIFIER_currencyGainFromMonsterDropsEffectGroup"
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Wolf&melvorItA:Abyssal_Witch": {
+    "rcm": ["DamageType"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "DamageType",
+            "character": "Player",
+            "damageType": "melvorItA:Abyssal"
+          },
+          "modifiers": {
+            "magicLifesteal": 6
+          },
+          "descriptionLang": "COND_MODIFIER_magicLifestealDamageType"
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Wolf&melvorItA:Abyssal_Minotaur": {
+    "rcm": ["DamageType"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "DamageType",
+            "character": "Player",
+            "damageType": "melvorItA:Abyssal"
+          },
+          "modifiers": {
+            "meleeLifesteal": 15
+          },
+          "descriptionLang": "COND_MODIFIER_meleeLifestealDamageType"
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Wolf&melvorItA:Abyssal_Centaur": {
+    "rcm": ["DamageType"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "DamageType",
+            "character": "Player",
+            "damageType": "melvorItA:Abyssal"
+          },
+          "modifiers": {
+            "rangedLifesteal": 12
+          },
+          "descriptionLang": "COND_MODIFIER_rangedLifestealDamageType"
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Wolf&melvorItA:Abyssal_Cyclops": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainFromLifesteal": [
+          {
+            "currencyID": "melvorItA:AbyssalSlayerCoins",
+            "value": 200
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Wolf&melvorItA:Abyssal_Occultist": {
+    "rcm": ["Every"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Every",
+            "conditions": [
+              {
+                "type": "DamageType",
+                "character": "Player",
+                "damageType": "melvorItA:Abyssal"
+              },
+              {
+                "type": "Hitpoints",
+                "character": "Player",
+                "value": 100,
+                "operator": ">="
+              }
+            ]
+          },
+          "modifiers": {
+            "evasion": 30
+          },
+          "enemyModifiers": {
+            "evasion": -30
+          }
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Wolf&melvorItA:Abyssal_Yak": {
+    "Nmodifiers": {
+      "add": {
+        "healingOnAttackBasedOnResistance": [
+          {
+            "damageTypeID": "melvorItA:Abyssal",
+            "value": 1000
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Wolf&melvorItA:Abyssal_Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "bleedLifesteal": 75
+      }
+    }
+  },
+  "melvorItA:Abyssal_Wolf&melvorItA:Abyssal_Dragon": {
+    "Nmodifiers": {
+      "add": {
+        "summoningAttackLifesteal": 150
+      }
+    }
+  },
+  "melvorItA:Abyssal_Witch&melvorItA:Abyssal_Minotaur": {
+    "rcm": ["Every","DamageType"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Every",
+            "conditions": [
+              {
+                "type": "DamageType",
+                "character": "Player",
+                "damageType": "melvorItA:Abyssal"
+              },
+              {
+                "type": "CombatType",
+                "character": "Player",
+                "thisAttackType": "any",
+                "targetAttackType": "magic"
+              }
+            ]
+          },
+          "modifiers": {
+            "meleeMaxHit": 10,
+            "meleeAccuracyRating": 10
+          }
+        },
+        {
+          "condition": {
+            "type": "DamageType",
+            "character": "Player",
+            "damageType": "melvorItA:Abyssal"
+          },
+          "modifiers": {
+            "magicMinHitBasedOnMaxHitSlayerTask": 5
+          }
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Witch&melvorItA:Abyssal_Centaur": {
+    "rcm": [ "Every" ],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Every",
+            "conditions": [
+              {
+                "type": "DamageType",
+                "character": "Player",
+                "damageType": "melvorItA:Abyssal"
+              },
+              {
+                "type": "CombatType",
+                "character": "Enemy",
+                "thisAttackType": "magic",
+                "targetAttackType": "any"
+              }
+            ]
+          },
+          "modifiers": {
+            "flatRangedAttackBonus": 25,
+            "flatRangedStrengthBonus": 25
+          }
+        },
+        {
+          "condition": {
+            "type": "Every",
+            "conditions": [
+              {
+                "type": "DamageType",
+                "character": "Player",
+                "damageType": "melvorItA:Abyssal"
+              },
+              {
+                "type": "CombatType",
+                "character": "Enemy",
+                "thisAttackType": "ranged",
+                "targetAttackType": "any"
+              }
+            ]
+          },
+          "modifiers": {
+            "magicMaxHit": 10,
+            "magicAccuracyRating": 10
+          }
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Witch&melvorItA:Abyssal_Cyclops": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyGainPerMagicDamageDealtOnSlayerTask": [
+          {
+            "currencyID": "melvorItA:AbyssalSlayerCoins",
+            "value": 40
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Witch&melvorItA:Abyssal_Occultist": {
+    "Nmodifiers": {
+      "add": {
+        "flatMagicDefenceBonus": 150
+      }
+    }
+  },
+  "melvorItA:Abyssal_Witch&melvorItA:Abyssal_Yak": {
+    "1Vmodifiers": {
+      "add": {
+        "flatResistanceAgainstRanged": [
+          {
+            "damageTypeID": "melvorItA:Abyssal",
+            "value": 3
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Witch&melvorItA:Abyssal_Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "flatHPRegenBasedOnMagicMaxHit": 10
+      }
+    }
+  },
+  "melvorItA:Abyssal_Witch&melvorItA:Abyssal_Dragon": {
+    "Nmodifiers": {
+      "add": {
+        "flatMagicMinHit": [
+          {
+            "subcategoryID": "melvorItA:Abyssal",
+            "value": 10
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Minotaur&melvorItA:Abyssal_Centaur": {
+    "rcm": ["Every"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Every",
+            "conditions": [
+              {
+                "type": "DamageType",
+                "character": "Player",
+                "damageType": "melvorItA:Abyssal"
+              },
+              {
+                "type": "CombatType",
+                "character": "Enemy",
+                "thisAttackType": "ranged",
+                "targetAttackType": "any"
+              }
+            ]
+          },
+          "modifiers": {
+            "flatStabAttackBonus": 25,
+            "flatSlashAttackBonus": 25,
+            "flatBlockAttackBonus": 25,
+            "flatMeleeStrengthBonus": 25
+          }
+        },
+        {
+          "condition": {
+            "type": "Every",
+            "conditions": [
+              {
+                "type": "DamageType",
+                "character": "Player",
+                "damageType": "melvorItA:Abyssal"
+              },
+              {
+                "type": "CombatType",
+                "character": "Enemy",
+                "thisAttackType": "melee",
+                "targetAttackType": "any"
+              }
+            ]
+          },
+          "modifiers": {
+            "rangedMaxHit": 10,
+            "rangedAccuracyRating": 10
+          }
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Minotaur&melvorItA:Abyssal_Cyclops": {
+    "Nmodifiers": {
+      "add": {
+        "meleeMinHitBasedOnMaxHitSlayerTask": 15
+      }
+    }
+  },
+  "melvorItA:Abyssal_Minotaur&melvorItA:Abyssal_Occultist": {
+    "rcm": ["DamageType"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "character": "Player",
+            "type": "DamageType",
+            "damageType": "melvorItA:Abyssal"
+          },
+          "modifiers": {
+            "flatMeleeDefenceBonus": 150
+          },
+          "descriptionLang": "COND_MODIFIER_flatMeleeDefenceBonusDamageType"
+        }
+      ]
+    },
+    "NenemyModifiers": {
+      "add": {
+        "meleeEvasion": -20
+      }
+    }
+  },
+  "melvorItA:Abyssal_Minotaur&melvorItA:Abyssal_Yak": {
+    "1Vmodifiers": {
+      "add": {
+        "flatResistanceAgainstMagic": [
+          {
+            "damageTypeID": "melvorItA:Abyssal",
+            "value": 3
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Minotaur&melvorItA:Abyssal_Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "flatHPRegenBasedOnMeleeMaxHit": 12
+      }
+    }
+  },
+  "melvorItA:Abyssal_Minotaur&melvorItA:Abyssal_Dragon": {
+    "rcm": ["CombatEffectGroup"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Enemy",
+            "groupID": "melvorItA:AblazeDOT"
+          },
+          "modifiers": {
+            "meleeMaxHit": 15,
+            "meleeAccuracyRating": 15
+          }
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Centaur&melvorItA:Abyssal_Cyclops": {
+    "Nmodifiers": {
+      "add": {
+        "rangedMinHitBasedOnMaxHitSlayerTask": 15
+      }
+    }
+  },
+  "melvorItA:Abyssal_Centaur&melvorItA:Abyssal_Occultist": {
+    "rcm": ["DamageType"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "character": "Player",
+            "type": "DamageType",
+            "damageType": "melvorItA:Abyssal"
+          },
+          "modifiers": {
+            "flatRangedDefenceBonus": 150
+          },
+          "descriptionLang": "COND_MODIFIER_flatRangedDefenceBonusDamageType"
+        }
+      ]
+    },
+    "NenemyModifiers": {
+      "add": {
+        "rangedEvasion": -20
+      }
+    }
+  },
+  "melvorItA:Abyssal_Centaur&melvorItA:Abyssal_Yak": {
+    "1Vmodifiers": {
+      "add": {
+        "flatResistanceAgainstMelee": [
+          {
+            "damageTypeID": "melvorItA:Abyssal",
+            "value": 3
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Centaur&melvorItA:Abyssal_Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "flatHPRegenBasedOnRangedMaxHit": 10
+      }
+    }
+  },
+  "melvorItA:Abyssal_Centaur&melvorItA:Abyssal_Dragon": {
+    "rc": ["melvorItA:Ablaze"],
+    "NcombatEffects": {
+      "add": [
+        {
+          "effectID": "BGSCheat:Ablaze",
+          "chance": 5,
+          "condition": {
+            "type": "Every",
+            "conditions": [
+              {
+                "type": "DamageType",
+                "character": "Player",
+                "damageType": "melvorItA:Abyssal"
+              },
+              {
+                "character": "Player",
+                "type": "CombatType",
+                "thisAttackType": "ranged",
+                "targetAttackType": "any"
+              }
+            ]
+          },
+          "appliesWhen": "PostAttack",
+          "descriptionLang": "CUSTOM_APPLICATOR_PostAttack_RANGED_DamageType"
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Cyclops&melvorItA:Abyssal_Occultist": {
+    "rcm": ["FightingSlayerTask"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "FightingSlayerTask"
+          },
+          "enemyModifiers": {
+            "evasion": -30
+          },
+          "descriptionLang": "MODIFIER_DATA_decreasedSlayerTaskMonsterAccuracy"
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Cyclops&melvorItA:Abyssal_Yak": {
+    "1Vmodifiers": {
+      "add": {
+        "flatResistanceAgainstSlayerTasks": [
+          {
+            "damageTypeID": "melvorItA:Abyssal",
+            "value": 4
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Cyclops&melvorItA:Abyssal_Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "hitpointRegenerationAgainstSlayerTasks": 200
+      }
+    }
+  },
+  "melvorItA:Abyssal_Cyclops&melvorItA:Abyssal_Dragon": {
+    "Nmodifiers": {
+      "add": {
+        "dragonBreathDamage": -40
+      }
+    }
+  },
+  "melvorItA:Abyssal_Occultist&melvorItA:Abyssal_Yak": {
+    "Nmodifiers": {
+      "add": {
+        "flatMeleeDefenceBonusBasedOnResistance": [
+          {
+            "damageTypeID": "melvorItA:Abyssal",
+            "value": 1
+          }
+        ],
+        "flatRangedDefenceBonusBasedOnResistance": [
+          {
+            "damageTypeID": "melvorItA:Abyssal",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Occultist&melvorItA:Abyssal_Unicorn": {
+    "Nmodifiers": {
+      "add": {
+        "hpRegenWhenEnemyHasMoreEvasion": 300
+      }
+    }
+  },
+  "melvorItA:Abyssal_Occultist&melvorItA:Abyssal_Dragon": {
+    "rcm": ["CombatEffectGroup"],
+    "conditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "CombatEffectGroup",
+            "character": "Player",
+            "groupID": "melvorItA:AblazeDOT"
+          },
+          "modifiers": {
+            "flatMeleeDefenceBonus": 250,
+            "flatRangedDefenceBonus": 250,
+            "flatMagicDefenceBonus": 250
+          }
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Yak&melvorItA:Abyssal_Unicorn": {
+    "rcm": ["Every"],
+    "NconditionalModifiers": {
+      "add": [
+        {
+          "condition": {
+            "type": "Every",
+            "conditions": [
+              {
+                "type": "DamageType",
+                "character": "Player",
+                "damageType": "melvorItA:Abyssal"
+              },
+              {
+                "type": "Hitpoints",
+                "character": "Player",
+                "operator": "<",
+                "value": 75
+              }
+            ]
+          },
+          "modifiers": {
+            "hitpointRegeneration": 400
+          }
+        }
+      ]
+    }
+  },
+  "melvorItA:Abyssal_Yak&melvorItA:Abyssal_Dragon": {
+    "modifiers": {
+      "add": {
+        "effectIgnoreChance": [
+          {
+            "effectGroupID": "melvorItA:AblazeDOT",
+            "value": 100
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Abyssal_Unicorn&melvorItA:Abyssal_Dragon": {
+    "Nmodifiers": {
+      "add": {
+        "ablazeLifesteal": 150
+      }
+    }
+  },
+  "melvorItA:Golem&melvorItA:Abyssal_Ent": {
+    "1Vmodifiers": {
+      "add": {
+        "flatBasePrimaryProductQuantity": [
+          {
+            "skillID": "melvorItA:Harvesting",
+            "value": 2
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Golem&melvorItA:Abyssal_Mole": {
+    "1Vmodifiers": {
+      "add": {
+        "additionalRandomAbyssalGemChance": [
+          {
+            "skillID": "melvorItA:Harvesting",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Golem&melvorItA:Abyssal_Octopus": {
+    "Nmodifiers": {
+      "add": {
+        "flatSkillInterval": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "skillID": "melvorD:Fishing",
+            "value": -1000
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Golem&melvorItA:Abyssal_Pig": {
+    "Nmodifiers": {
+      "add": {
+        "additionalPrimaryProductChance": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "skillID": "melvorD:Cooking",
+            "subcategoryID": "melvorD:Fish",
+            "value": 50
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Golem&melvorItA:Abyssal_Bear": {
+    "1Vmodifiers": {
+      "add": {
+        "skillInterval": [
+          {
+            "skillID": "melvorItA:Harvesting",
+            "value": -5
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Golem&melvorItA:Abyssal_Leprechaun": {
+    "1Vmodifiers": {
+      "add": {
+        "currencyFromHarvestingChanceBasedOnLevel": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 5
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Golem&melvorItA:Abyssal_Crow": {
+    "5Nmodifiers": {
+      "add": {
+        "masteryXP": [
+          {
+            "skillID": "melvorItA:Harvesting",
+            "realmID": "melvorItA:Abyssal",
+            "value": 100
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Golem&melvorItA:Abyssal_Salamander": {
+    "Nmodifiers": {
+      "add": {
+        "doubleItemsSkill": [
+          {
+            "skillID": "melvorD:Smithing",
+            "categoryID": "melvorItA:AbyssalBars",
+            "value": 1
+          }
+        ],
+        "skillCostReduction": [
+          {
+            "skillID": "melvorD:Smithing",
+            "categoryID": "melvorItA:AbyssalBars",
+            "value": -300
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Golem&melvorItA:Abyssal_Monkey": {
+    "Nmodifiers": {
+      "add": {
+        "doubleItemsSkill": [
+          {
+            "skillID": "melvorD:Crafting",
+            "categoryID": "melvorItA:AbyssalConsumables",
+            "value": 1
+          }
+        ],
+        "skillCostReduction": [
+          {
+            "skillID": "melvorD:Crafting",
+            "categoryID": "melvorItA:AbyssalConsumables",
+            "value": -300
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Golem&melvorItA:Abyssal_Devil": {
+    "modifiers": {
+      "add": {
+        "summoningSynergy_Imp_Devil": 1
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Golem": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorItA:Harvesting",
+            "value": 5
+          }
+        ],
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorItA:Harvesting",
+            "value": [ -50 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Abyssal_Ent": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "realmID": "melvorItA:Abyssal",
+            "value": 1
+          }
+        ],
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Woodcutting",
+            "value": [ -50 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Abyssal_Mole": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Mining",
+            "realmID": "melvorItA:Abyssal",
+            "value": 1
+          }
+        ],
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Mining",
+            "value": [ -50 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Abyssal_Octopus": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Fishing",
+            "realmID": "melvorItA:Abyssal",
+            "value": 1
+          }
+        ],
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Fishing",
+            "value": [ -50 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Abyssal_Pig": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Cooking",
+            "realmID": "melvorItA:Abyssal",
+            "value": 1
+          }
+        ],
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Cooking",
+            "value": [ -50 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Abyssal_Bear": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Herblore",
+            "realmID": "melvorItA:Abyssal",
+            "value": 1
+          }
+        ],
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Herblore",
+            "value": [ -50 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Abyssal_Leprechaun": {
+    "1Vmodifiers": {
+      "add": {
+        "minThievingCurrencyGain": [
+          {
+            "currencyID": "melvorItA:AbyssalPieces",
+            "value": 20
+          }
+        ],
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Thieving",
+            "value": [ -50 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Abyssal_Crow": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "subcategoryID": "melvorF:Runes",
+            "value": 10
+          }
+        ],
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "value": [ -50 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Abyssal_Salamander": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Smithing",
+            "realmID": "melvorItA:Abyssal",
+            "value": 10
+          }
+        ],
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Smithing",
+            "value": [ -50 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Abyssal_Monkey": {
+    "1Vmodifiers": {
+      "add": {
+        "flatAdditionalPrimaryProductQuantity": [
+          {
+            "skillID": "melvorD:Crafting",
+            "realmID": "melvorItA:Abyssal",
+            "value": 10
+          }
+        ],
+        "abyssalSkillXP": [
+          {
+            "skillID": "melvorD:Crafting",
+            "value": [ -50 ]
+          }
+        ]
+      }
+    }
+  },
+  "melvorItA:Void_Wisp&melvorItA:Abyssal_Devil": {
+    "5Nmodifiers": {
+      "add": {
+        "masteryXP": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "value": 100
+          }
+        ],
+        "skillCostReduction": [
+          {
+            "realmID": "melvorItA:Abyssal",
+            "value": [ -20 ]
+          }
+        ]
+      }
     }
   }
 }
