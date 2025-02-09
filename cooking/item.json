@@ -1,0 +1,673 @@
+{
+  "melvorD:Shrimp": {
+    "Lmheal": 1
+  },
+  "melvorD:Shrimp_Perfect": {
+    "Lmheal": 1,
+    "2Lcurrency2": [0,0,0,0,30,"sc"],
+    "5Lfood": [5]
+  },
+  "melvorD:Sardine": {
+    "Lmheal": 1
+  },
+  "melvorD:Sardine_Perfect": {
+    "Lmheal": 1,
+    "2Lcurrency2": [ 100, "gp" ],
+    "5allow": [0,0,0,0,1]
+  },
+  "melvorD:Herring": {
+    "Lmheal": 1
+  },
+  "melvorD:Herring_Perfect": {
+    "Lmheal": 1,
+    "2LprayerGetCombat": [ 1 ],
+    "5allow": [0,0,0,1]
+  },
+  "melvorD:Trout": {
+    "Lmheal": 1
+  },
+  "melvorD:Trout_Perfect": {
+    "Lmheal": 1,
+    "2Lcurrency2": [ 0, 50, "gp" ],
+    "5Usteal": [10]
+  },
+  "melvorD:Salmon": {
+    "Lmheal": 1
+  },
+  "melvorD:Salmon_Perfect": {
+    "Lmheal": 1,
+    "2Lcurrency3": [ 0, 0, 10, "sc" ],
+    "5slayer2": [0,1]
+  },
+  "melvorD:Lobster": {
+    "Lmheal": 1
+  },
+  "melvorD:Lobster_Perfect": {
+    "Lmheal": 1,
+    "2Lcurrency2": [0,0,50,"gp"],
+    "5Uignore": [25, "burn"]
+  },
+  "melvorD:Swordfish": {
+    "Lmheal": 1
+  },
+  "melvorD:Swordfish_Perfect": {
+    "Lmheal": 1,
+    "2Uhp": [ 10 ],
+    "5Uignore": [20,"stun"]
+  },
+  "melvorD:Crab": {
+    "Lmheal": 1
+  },
+  "melvorD:Crab_Perfect": {
+    "Lmheal": 1,
+    "2Lloot": [ 0, -100 ],
+    "5Uignore": [20,"freeze"]
+  },
+  "melvorD:Shark": {
+    "Lmheal": 1
+  },
+  "melvorD:Shark_Perfect": {
+    "Lmheal": 1,
+    "2Lcurrency2": [ 0, 0, 50, "sc" ],
+    "5Uacc": [15]
+  },
+  "melvorD:Cave_Fish": {
+    "Lmheal": 1
+  },
+  "melvorD:Cave_Fish_Perfect": {
+    "Lmheal": 1,
+    "2Lslayer": [ 5 ],
+    "5Lloot": [15]
+  },
+  "melvorD:Manta_Ray": {
+    "Lmheal": 1
+  },
+  "melvorD:Manta_Ray_Perfect": {
+    "Lmheal": 1,
+    "2Ueva": [ 20 ],
+    "5ignore": [20, "bleed"]
+  },
+  "melvorD:Whale": {
+    "Lmheal": 1
+  },
+  "melvorD:Whale_Perfect": {
+    "Lmheal": 1,
+    "5Uignore": [ 30, "slow" ],
+    "10Edmgignore": [0,0,0,0,-1,-1,-1]
+  },
+  "melvorD:Anglerfish": {
+    "Lmheal": 1
+  },
+  "melvorD:Anglerfish_Perfect": {
+    "Lmheal": 1,
+    "5Uignore": [ 25, "curse" ],
+    "10Eignore": [-100,-1,"stun"]
+  },
+  "melvorD:Fanfish": {
+    "Lmheal": 1
+  },
+  "melvorD:Fanfish_Perfect": {
+    "Lmheal": 1,
+    "5Uignore": [ 30, "frostburn" ],
+    "5Ureflect": [0,20]
+  },
+  "melvorD:Seahorse": {
+    "Lmheal": 1
+  },
+  "melvorD:Seahorse_Perfect": {
+    "Lmheal": 1,
+    "5Uignore": [ 30, "poison" ],
+    "5Lcurrency3": [0, 1, "sc"]
+  },
+  "melvorD:Carp": {
+    "Lmheal": 1
+  },
+  "melvorD:Carp_Perfect": {
+    "Lmheal": 1,
+    "5Uignore": [ 20, "dp" ],
+    "5Lcurrency3": [0,0,100,"gp"]
+  },
+  "melvorD:Bread": {
+    "Lmheal": 1
+  },
+  "melvorD:Bread_Perfect": {
+    "Lmheal": 1,
+    "2Lloot": [ 5 ],
+    "5slayer2": [1]
+  },
+  "melvorD:Beef": {
+    "Lmheal": 1
+  },
+  "melvorD:Beef_Perfect": {
+    "Lmheal": 1,
+    "2Lcurrency3": [ 0, 2, "sc" ],
+    "5Lslayer": [15]
+  },
+  "melvorD:Chicken": {
+    "Lmheal": 1
+  },
+  "melvorD:Chicken_Perfect": {
+    "Lmheal": 1,
+    "2Lcurrency4": [ 10, 10, 10, "gp" ],
+    "5Uacc2": [10]
+  },
+  "melvorD:Plain_Pizza_Slice": {
+    "Lmheal": 1
+  },
+  "melvorD:Plain_Pizza_Slice_Perfect": {
+    "Lmheal": 1,
+    "2Usummon": [0,0,50]
+  },
+  "melvorD:Beef_Pie": {
+    "Lmheal": 1
+  },
+  "melvorD:Beef_Pie_Perfect": {
+    "Lmheal": 1,
+    "5Ures": [5,"n"]
+  },
+  "melvorD:Meat_Pizza_Slice": {
+    "Lmheal": 1
+  },
+  "melvorD:Meat_Pizza_Slice_Perfect": {
+    "Lmheal": 1,
+    "5UmaxHits": [0,2]
+  },
+  "melvorD:Basic_Soup": {
+    "Lmheal": 1
+  },
+  "melvorD:Basic_Soup_Perfect": {
+    "Lmheal": 1,
+    "5Uhp": [0,10]
+  },
+  "melvorD:Strawberry_Cupcake": {
+    "Lmheal": 1
+  },
+  "melvorD:Strawberry_Cupcake_Perfect": {
+    "Lmheal": 1,
+    "5Ueva2": [ 10 ]
+  },
+  "melvorD:Hearty_Soup": {
+    "Lmheal": 1
+  },
+  "melvorD:Hearty_Soup_Perfect": {
+    "Lmheal": 1,
+    "5Usummon": [-1000]
+  },
+  "melvorD:Cherry_Cupcake": {
+    "Lmheal": 1
+  },
+  "melvorD:Cherry_Cupcake_Perfect": {
+    "Lmheal": 1,
+    "5Usummon": [0,-10]
+  },
+  "melvorD:Cream_Corn_Soup": {
+    "Lmheal": 1
+  },
+  "melvorD:Cream_Corn_Soup_Perfect": {
+    "Lmheal": 1,
+    "5Uregen3": [10]
+  },
+  "melvorD:Chicken_Soup": {
+    "Lmheal": 1
+  },
+  "melvorD:Chicken_Soup_Perfect": {
+    "Lmheal": 1,
+    "5Udot": [-50]
+  },
+  "melvorD:Strawberry_Cake": {
+    "Lmheal": 1
+  },
+  "melvorD:Strawberry_Cake_Perfect": {
+    "Lmheal": 1,
+    "5Udot": [0,-50]
+  },
+  "melvorD:Carrot_Cake": {
+    "Lmheal": 1
+  },
+  "melvorD:Carrot_Cake_Perfect": {
+    "Lmheal": 1,
+    "5Udot": [0,0,-50]
+  },
+  "melvorF:Apple_Pie": {
+    "Lmheal": 1
+  },
+  "melvorF:Apple_Pie_Perfect": {
+    "Lmheal": 1,
+    "5Udot": [0,0,0,-50]
+  },
+  "melvorF:Lemon_Cake": {
+    "Lmheal": 1
+  },
+  "melvorF:Lemon_Cake_Perfect": {
+    "Lmheal": 1,
+    "2Lcurrency3": [1,"sc"],
+    "5slayer2": [0,1]
+  },
+  "melvorTotH:Lava_Fish": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Lava_Fish_Perfect": {
+    "Lmheal": 1,
+    "5Udmgignore": [20]
+  },
+  "melvorTotH:Blue_Crab": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Blue_Crab_Perfect": {
+    "Lmheal": 1,
+    "5Udmgignore": [0,20]
+  },
+  "melvorTotH:Magma_Fish": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Magma_Fish_Perfect": {
+    "Lmheal": 1,
+    "5Udmgignore": [0,0,20]
+  },
+  "melvorTotH:Static_Jellyfish": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Static_Jellyfish_Perfect": {
+    "Lmheal": 1,
+    "5Usummon": [ 0, 0, 100 ],
+    "10Usummon": [0,-20]
+  },
+  "melvorTotH:Frost_Crab": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Frost_Crab_Perfect": {
+    "Lmheal": 1,
+    "5UEdmgTaken": [0,20]
+  },
+  "melvorTotH:Magma_Eel": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Magma_Eel_Perfect": {
+    "Lmheal": 1,
+    "5Ures": [ 10, "n" ]
+  },
+  "melvorTotH:Frozen_Manta_Ray": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Frozen_Manta_Ray_Perfect": {
+    "Lmheal": 1,
+    "5Ureflect": [0,0,0,30]
+  },
+  "melvorTotH:Terrorfish": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Terrorfish_Perfect": {
+    "Lmheal": 1,
+    "5slayer2": [ 0, 0, 1 ],
+    "5Uslayer2": [0,0,0,0,0,0,0,25]
+  },
+  "melvorTotH:Mystic_Shark": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Mystic_Shark_Perfect": {
+    "Lmheal": 1,
+    "5Uatkeffect": [ 0, 10 ],
+    "10acc2": [0,1]
+  },
+  "melvorTotH:Banana_Bread": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Banana_Bread_Perfect": {
+    "Lmheal": 1,
+    "5Uregen": [ -2000 ],
+    "10Uregen2": [20]
+  },
+  "melvorTotH:Mushroom_Soup": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Mushroom_Soup_Perfect": {
+    "Lmheal": 1,
+    "5Usteal": [ 20 ],
+    "10Uhp": [0,15]
+  },
+  "melvorTotH:Spicy_Chicken_Pizza": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Spicy_Chicken_Pizza_Perfect": {
+    "Lmheal": 1,
+    "5UEres": [-12, "n"]
+  },
+  "melvorTotH:Beef_Mushroom_Stew": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Beef_Mushroom_Stew_Perfect": {
+    "Lmheal": 1,
+    "5Uacc2": [18]
+  },
+  "melvorTotH:Sandwich": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Sandwich_Perfect": {
+    "Lmheal": 1,
+    "5Ueva2": [18]
+  },
+  "melvorTotH:Pumpkin_Soup": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Pumpkin_Soup_Perfect": {
+    "Lmheal": 1,
+    "5Uregen3": [ 0, 20 ],
+    "5Usteal": [10]
+  },
+  "melvorTotH:Spicy_Shrimp_Soup": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Spicy_Shrimp_Soup_Perfect": {
+    "Lmheal": 1,
+    "5UEatkhits": [ 0, 0, 0, -10 ],
+    "10Uignore": [25,"debuff"]
+  },
+  "melvorTotH:Fancy_Meat_Pizza": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Fancy_Meat_Pizza_Perfect": {
+    "Lmheal": 1,
+    "5UprayerGetCombat": [ 10 ],
+    "5Ucurrency2": [0,0,0,100,"sc"]
+  },
+  "melvorTotH:Chicken_Cream_Mushroom_Soup": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Chicken_Cream_Mushroom_Soup_Perfect": {
+    "Lmheal": 1,
+    "5UmaxHits": [ 0, 3 ],
+    "10Uprayer": [0,0,0,3]
+  },
+  "melvorTotH:Chilli_Frost_Crab": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Chilli_Frost_Crab_Perfect": {
+    "Lmheal": 1,
+    "5UEatkspd": [0,10]
+  },
+  "melvorTotH:Starfruit_Cake": {
+    "Lmheal": 1
+  },
+  "melvorTotH:Starfruit_Cake_Perfect": {
+    "Lmheal": 1,
+    "5Ueva": [ 10 ],
+    "10dmgignore": [0,0,0,1]
+  },
+  "melvorAoD:Mackerel": {
+    "Lmheal": 1
+  },
+  "melvorAoD:Mackerel_Perfect": {
+    "Lmheal": 1,
+    "5Ubarrier": [ 0, 15 ],
+    "5allow": [0,0,0,1]
+  },
+  "melvorAoD:Halibut": {
+    "Lmheal": 1
+  },
+  "melvorAoD:Halibut_Perfect": {
+    "Lmheal": 1,
+    "5Ubarrier": [ 15 ],
+    "5Uignore": [20,"crystal"]
+  },
+  "melvorAoD:Tilapia": {
+    "Lmheal": 1
+  },
+  "melvorAoD:Tilapia_Perfect": {
+    "Lmheal": 1,
+    "5Uignore": [ 20, "cs" ],
+    "10ignore": [0,0,1]
+  },
+  "melvorItA:Crimson_Biter": {
+    "Lmheal": 1
+  },
+  "melvorItA:Crimson_Biter_Perfect": {
+    "Lmheal": 1,
+    "Nignore": [ 25, "lace" ],
+    "5Lcurrency2": [0,0,0,20,"ap"]
+  },
+  "melvorItA:Baked_Biter_Pie": {
+    "Lmheal": 1
+  },
+  "melvorItA:Baked_Biter_Pie_Perfect": {
+    "Lmheal": 1,
+    "Nacc": [ 10 ],
+    "5Lcurrency2": [0,0,0,20,"as"]
+  },
+  "melvorItA:Crimson_Bream": {
+    "Lmheal": 1
+  },
+  "melvorItA:Crimson_Bream_Perfect": {
+    "Lmheal": 1,
+    "Ndot": [ 0, 0, 0, 0, 0, 0, -25 ],
+    "5Lcurrency2": [0,0,100,"ap"]
+  },
+  "melvorItA:Crimson_Bream_Soup": {
+    "Lmheal": 1
+  },
+  "melvorItA:Crimson_Bream_Soup_Perfect": {
+    "Lmheal": 1,
+    "Ndot": [0,-50],
+    "5Lcurrency2": [0,0,50,"ap"]
+  },
+  "melvorItA:Veilhunter": {
+    "Lmheal": 1
+  },
+  "melvorItA:Veilhunter_Perfect": {
+    "Lmheal": 1,
+    "Neva": [10],
+    "5Lcurrency3": [0,10,"ap"]
+  },
+  "melvorItA:Abyssal_Pumpkin_Pie": {
+    "Lmheal": 1
+  },
+  "melvorItA:Abyssal_Pumpkin_Pie_Perfect": {
+    "Lmheal": 1,
+    "Nxp": [ 0, 8, "corr" ],
+    "5corrupt": [0,0,0,0,-100]
+  },
+  "melvorItA:Steamswimmer": {
+    "Lmheal": 1
+  },
+  "melvorItA:Steamswimmer_Perfect": {
+    "Lmheal": 1,
+    "Nignore": [20, "blight"],
+    "5Lcurrency3": [0,5,"as"]
+  },
+  "melvorItA:Steamswimmer_Soup": {
+    "Lmheal": 1
+  },
+  "melvorItA:Steamswimmer_Soup_Perfect": {
+    "Lmheal": 1,
+    "1Vcurrency": [ 10, "as" ],
+    "5Lcurrency4": [10,10,10,"as"]
+  },
+  "melvorItA:Toxic_Crab": {
+    "Lmheal": 1
+  },
+  "melvorItA:Toxic_Crab_Perfect": {
+    "Lmheal": 1,
+    "Ndot": [0,0,0,0,-50],
+    "1Vcurrency": [5,"ap"],
+    "5Lcurrency4": [20,20,20,"ap"]
+  },
+  "melvorItA:Toxic_Crab_Cream_Soup": {
+    "Lmheal": 1
+  },
+  "melvorItA:Toxic_Crab_Cream_Soup_Perfect": {
+    "Lmheal": 1,
+    "Ndmg2": [ 0, 0, 0, 0, 10, [ null, "a" ] ],
+    "5Usummon": [0,0,100]
+  },
+  "melvorItA:Stoneskin_Pike": {
+    "Lmheal": 1
+  },
+  "melvorItA:Stoneskin_Pike_Perfect": {
+    "Lmheal": 1,
+    "Nreflect": [ 0, 10 ],
+    "5Lloot": [0,-500]
+  },
+  "melvorItA:Stoneskin_Pepper": {
+    "Lmheal": 1
+  },
+  "melvorItA:Stoneskin_Pepper_Perfect": {
+    "Lmheal": 1,
+    "Nres": [ 3, "a" ],
+    "5Uhp": [0,18]
+  },
+  "melvorItA:Toxic_Octopus": {
+    "Lmheal": 1
+  },
+  "melvorItA:Toxic_Octopus_Perfect": {
+    "Lmheal": 1,
+    "Nsummon": [ 0, 0, 10 ],
+    "5Usummon": [0,-20]
+  },
+  "melvorItA:Toxic_Octopus_Stew": {
+    "Lmheal": 1
+  },
+  "melvorItA:Toxic_Octopus_Stew_Perfect": {
+    "Lmheal": 1,
+    "1Vcurrency2": [ 0, 0, 0, 20, "ap" ],
+    "5Udmg": [10]
+  },
+  "melvorItA:Shadenut_Cookie": {
+    "Lmheal": 1
+  },
+  "melvorItA:Shadenut_Cookie_Perfect": {
+    "Lmheal": 1,
+    "Ncritical": 5,
+    "5Ucritical": [0,30]
+  },
+  "melvorItA:Whisperfish": {
+    "Lmheal": 1
+  },
+  "melvorItA:Whisperfish_Perfect": {
+    "Lmheal": 1,
+    "Nignore": [ 25, "sleep" ],
+    "5Lregen": [0,0,0,5]
+  },
+  "melvorItA:Whisperfish_Pizza": {
+    "Lmheal": 1
+  },
+  "melvorItA:Whisperfish_Pizza_Perfect": {
+    "Lmheal": 1,
+    "Nignore": [ 25, "slow" ],
+    "5Uatkeffect": [0,20]
+  },
+  "melvorItA:Murmurclaw": {
+    "Lmheal": 1
+  },
+  "melvorItA:Murmurclaw_Perfect": {
+    "Lmheal": 1,
+    "Nfood": [0,0,0,10],
+    "5Uatkeffect": [0,0,0,0,20]
+  },
+  "melvorItA:Murmurclaw_Cream_Soup": {
+    "Lmheal": 1
+  },
+  "melvorItA:Murmurclaw_Cream_Soup_Perfect": {
+    "Lmheal": 1,
+    "Nmodifiers": {
+      "add": {
+        "stunAvoidChance": 25
+      }
+    },
+    "5Ucorrupt": [40]
+  },
+  "melvorItA:Depthlurker": {
+    "Lmheal": 1
+  },
+  "melvorItA:Depthlurker_Perfect": {
+    "Lmheal": 1,
+    "Nignore": [25,"fear"],
+    "5Lcorrupt": [0,10]
+  },
+  "melvorItA:Withermelon_Tart": {
+    "Lmheal": 1
+  },
+  "melvorItA:Withermelon_Tart_Perfect": {
+    "Lmheal": 1,
+    "Nignore": [ 25, "wither" ],
+    "5Lcorrupt": [0,0,10]
+  },
+  "melvorItA:Hushscale": {
+    "Lmheal": 1
+  },
+  "melvorItA:Hushscale_Perfect": {
+    "Lmheal": 1,
+    "Nignore": [25,"silence"],
+    "5Ucorrupt": [0,0,0,30]
+  },
+  "melvorItA:Hushscale_Pepper": {
+    "Lmheal": 1
+  },
+  "melvorItA:Hushscale_Pepper_Perfect": {
+    "Lmheal": 1,
+    "Nslayer": [ 0, 10 ],
+    "5UprayerGetCombat": [0,0,0,0,20]
+  },
+  "melvorItA:Deep_Squid": {
+    "Lmheal": 1
+  },
+  "melvorItA:Deep_Squid_Perfect": {
+    "Lmheal": 1,
+    "Nacc": [ 25 ],
+    "5UprayerGetCombat": [0,0,0,5]
+  },
+  "melvorItA:Whisperradish_Soup": {
+    "Lmheal": 1
+  },
+  "melvorItA:Whisperradish_Soup_Perfect": {
+    "Lmheal": 1,
+    "Nignore": [ 25, "ec" ],
+    "5food": [10]
+  },
+  "melvorItA:Voidfish": {
+    "Lmheal": 1
+  },
+  "melvorItA:Voidfish_Perfect": {
+    "Lmheal": 1,
+    "prayer": [ 0, 0, 0, 0, -3 ],
+    "5Ueva2": [15]
+  },
+  "melvorItA:Voidfish_Soup": {
+    "Lmheal": 1
+  },
+  "melvorItA:Voidfish_Soup_Perfect": {
+    "Lmheal": 1,
+    "Nignore": [ 25, "void" ],
+    "5UEatkspd": [500]
+  },
+  "melvorItA:Eldraberry_Pie": {
+    "Lmheal": 1
+  },
+  "melvorItA:Eldraberry_Pie_Perfect": {
+    "Lmheal": 1,
+    "Nhp": [ 0, 5 ],
+    "5Ureflect": [0,0,0,10]
+  },
+  "melvorItA:Void_Ray": {
+    "Lmheal": 1
+  },
+  "melvorItA:Void_Ray_Perfect": {
+    "Lmheal": 1,
+    "NEres": [ -5, "a" ],
+    "5Usteal": [10]
+  },
+  "melvorItA:Void_Ray_Cream_Stew": {
+    "Lmheal": 1
+  },
+  "melvorItA:Void_Ray_Cream_Stew_Perfect": {
+    "Lmheal": 1,
+    "Natkhits": [ 0, 0, 0, 20 ],
+    "5Lloot": [20]
+  },
+  "melvorItA:Celestial_Ray": {
+    "Lmheal": 1
+  },
+  "melvorItA:Celestial_Ray_Perfect": {
+    "Lmheal": 1,
+    "res": [ 50, "e" ],
+    "5Uhp": [0,0,10]
+  }
+}

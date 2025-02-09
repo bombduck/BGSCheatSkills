@@ -125,7 +125,7 @@
 		"5OuniqueAttack": { "id": "WaterPulsePlayer" }
 	},
 	"melvorAoD:Cursed_Staff": {
-		"base": "melvorAoD:Unholy_Staff",
+		"base": [ "melvorAoD:Unholy_Staff", "Update" ],
 		"10Ucbeasy": [ [ "10Malice", "10Destruction", "10Spite", "10Consume", "10Eradicate"], 7, 100 ]
 	},
 	"melvorTotH:Poison_Staff": {
@@ -214,7 +214,7 @@
 		"10Ucbeasy": [ "100bhp", 2, 50 ]
 	},
 	"melvorItA:Lacerating_Staff": {
-		"base": "melvorItA:Abyssal_Staff",
+		"base": [ "melvorItA:Abyssal_Staff", "Update" ],
 		"10Ucbeasy": [ "30Lace", 3, 50 ]
 	},
 	"melvorItA:Abyssal_Wand": {
@@ -286,7 +286,7 @@
 		"10Ucbeasy": [ "3Silence", 3, 100 ]
 	},
 	"melvorItA:Toxic_Fumes_Wand": {
-		"base": "melvorItA:Brume_Wand",
+		"base": [ "melvorItA:Brume_Wand", "Update" ],
 		"10Ucbeasy": [ "2Crystallize", 3, 100 ]
 	},
 	"melvorItA:Gloom_Staff": {
@@ -448,19 +448,19 @@
 		"base": [ "Acolyte_Hat", "Air" ]
 	},
 	"melvorAoD:Air_Acolyte_Wizard_Hat_B": {
-		"base": [ "melvorF:Air_Acolyte_Wizard_Hat", "AoD1" ]
+		"base": [ "melvorF:Air_Acolyte_Wizard_Hat", "AoD1", "Update" ]
 	},
 	"melvorF:Air_Acolyte_Wizard_Robes": {
 		"base": [ "Acolyte_Body", "Air" ]
 	},
 	"melvorAoD:Air_Acolyte_Wizard_Robes_B": {
-		"base": [ "melvorF:Air_Acolyte_Wizard_Robes", "AoD1" ]
+		"base": [ "melvorF:Air_Acolyte_Wizard_Robes", "AoD1", "Update" ]
 	},
 	"melvorF:Air_Acolyte_Wizard_Bottoms": {
 		"base": [ "Acolyte_Legs", "Air" ]
 	},
 	"melvorAoD:Air_Acolyte_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Air_Acolyte_Wizard_Bottoms", "AoD1" ]
+		"base": [ "melvorF:Air_Acolyte_Wizard_Bottoms", "AoD1", "Update" ]
 	},
 	"melvorF:Air_Acolyte_Wizard_Boots": {
 		"base": [ "Acolyte_Boots", "Air" ]
@@ -469,19 +469,19 @@
 		"base": [ "Acolyte_Hat", "Water" ]
 	},
 	"melvorAoD:Water_Acolyte_Wizard_Hat_B": {
-		"base": [ "melvorF:Water_Acolyte_Wizard_Hat", "AoD1" ]
+		"base": [ "melvorF:Water_Acolyte_Wizard_Hat", "AoD1", "Update" ]
 	},
 	"melvorF:Water_Acolyte_Wizard_Robes": {
 		"base": [ "Acolyte_Body", "Water" ]
 	},
 	"melvorAoD:Water_Acolyte_Wizard_Robes_B": {
-		"base": [ "melvorF:Water_Acolyte_Wizard_Robes", "AoD1" ]
+		"base": [ "melvorF:Water_Acolyte_Wizard_Robes", "AoD1", "Update" ]
 	},
 	"melvorF:Water_Acolyte_Wizard_Bottoms": {
 		"base": [ "Acolyte_Legs", "Water" ]
 	},
 	"melvorAoD:Water_Acolyte_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Water_Acolyte_Wizard_Bottoms", "AoD1" ]
+		"base": [ "melvorF:Water_Acolyte_Wizard_Bottoms", "AoD1", "Update" ]
 	},
 	"melvorF:Water_Acolyte_Wizard_Boots": {
 		"base": [ "Acolyte_Boots", "Water" ]
@@ -490,19 +490,19 @@
 		"base": [ "Acolyte_Hat", "Earth" ]
 	},
 	"melvorAoD:Earth_Acolyte_Wizard_Hat_B": {
-		"base": [ "melvorF:Earth_Acolyte_Wizard_Hat", "AoD1" ]
+		"base": [ "melvorF:Earth_Acolyte_Wizard_Hat", "AoD1", "Update" ]
 	},
 	"melvorF:Earth_Acolyte_Wizard_Robes": {
 		"base": [ "Acolyte_Body", "Earth" ]
 	},
 	"melvorAoD:Earth_Acolyte_Wizard_Robes_B": {
-		"base": [ "melvorF:Earth_Acolyte_Wizard_Robes", "AoD1" ]
+		"base": [ "melvorF:Earth_Acolyte_Wizard_Robes", "AoD1", "Update" ]
 	},
 	"melvorF:Earth_Acolyte_Wizard_Bottoms": {
 		"base": [ "Acolyte_Legs", "Earth" ]
 	},
 	"melvorAoD:Earth_Acolyte_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Earth_Acolyte_Wizard_Bottoms", "AoD1" ]
+		"base": [ "melvorF:Earth_Acolyte_Wizard_Bottoms", "AoD1", "Update" ]
 	},
 	"melvorF:Earth_Acolyte_Wizard_Boots": {
 		"base": [ "Acolyte_Boots", "Earth" ]
@@ -511,19 +511,19 @@
 		"base": [ "Acolyte_Hat", "Fire" ]
 	},
 	"melvorAoD:Fire_Acolyte_Wizard_Hat_B": {
-		"base": [ "melvorF:Fire_Acolyte_Wizard_Hat", "AoD1" ]
+		"base": [ "melvorF:Fire_Acolyte_Wizard_Hat", "AoD1", "Update" ]
 	},
 	"melvorF:Fire_Acolyte_Wizard_Robes": {
 		"base": [ "Acolyte_Body", "Fire" ]
 	},
 	"melvorAoD:Fire_Acolyte_Wizard_Robes_B": {
-		"base": [ "melvorF:Fire_Acolyte_Wizard_Robes", "AoD1" ]
+		"base": [ "melvorF:Fire_Acolyte_Wizard_Robes", "AoD1", "Update" ]
 	},
 	"melvorF:Fire_Acolyte_Wizard_Bottoms": {
 		"base": [ "Acolyte_Legs", "Fire" ]
 	},
 	"melvorAoD:Fire_Acolyte_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Fire_Acolyte_Wizard_Bottoms", "AoD1" ]
+		"base": [ "melvorF:Fire_Acolyte_Wizard_Bottoms", "AoD1","Update" ]
 	},
 	"melvorF:Fire_Acolyte_Wizard_Boots": {
 		"base": [ "Acolyte_Boots", "Fire" ]
@@ -532,19 +532,19 @@
 		"base": [ "Adept_Hat", "2Air" ]
 	},
 	"melvorAoD:Air_Adept_Wizard_Hat_B": {
-		"base": [ "melvorF:Air_Adept_Wizard_Hat", "AoD4" ]
+		"base": [ "melvorF:Air_Adept_Wizard_Hat", "AoD4", "Update" ]
 	},
 	"melvorF:Air_Adept_Wizard_Robes": {
 		"base": [ "Adept_Body", "2Air" ]
 	},
 	"melvorAoD:Air_Adept_Wizard_Robes_B": {
-		"base": [ "melvorF:Air_Adept_Wizard_Robes", "AoD4" ]
+		"base": [ "melvorF:Air_Adept_Wizard_Robes", "AoD4", "Update" ]
 	},
 	"melvorF:Air_Adept_Wizard_Bottoms": {
 		"base": [ "Adept_Legs", "2Air" ]
 	},
 	"melvorAoD:Air_Adept_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Air_Adept_Wizard_Bottoms", "AoD4" ]
+		"base": [ "melvorF:Air_Adept_Wizard_Bottoms", "AoD4", "Update" ]
 	},
 	"melvorF:Air_Adept_Wizard_Boots": {
 		"base": [ "Adept_Boots", "2Air" ]
@@ -553,19 +553,19 @@
 		"base": [ "Adept_Hat", "2Water" ]
 	},
 	"melvorAoD:Water_Adept_Wizard_Hat_B": {
-		"base": [ "melvorF:Water_Adept_Wizard_Hat", "AoD4" ]
+		"base": [ "melvorF:Water_Adept_Wizard_Hat", "AoD4", "Update" ]
 	},
 	"melvorF:Water_Adept_Wizard_Robes": {
 		"base": [ "Adept_Body", "2Water" ]
 	},
 	"melvorAoD:Water_Adept_Wizard_Robes_B": {
-		"base": [ "melvorF:Water_Adept_Wizard_Robes", "AoD4" ]
+		"base": [ "melvorF:Water_Adept_Wizard_Robes", "AoD4", "Update" ]
 	},
 	"melvorF:Water_Adept_Wizard_Bottoms": {
 		"base": [ "Adept_Legs", "2Water" ]
 	},
 	"melvorAoD:Water_Adept_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Water_Adept_Wizard_Bottoms", "AoD4" ]
+		"base": [ "melvorF:Water_Adept_Wizard_Bottoms", "AoD4", "Update" ]
 	},
 	"melvorF:Water_Adept_Wizard_Boots": {
 		"base": [ "Adept_Boots", "2Water" ]
@@ -574,19 +574,19 @@
 		"base": [ "Adept_Hat", "2Earth" ]
 	},
 	"melvorAoD:Earth_Adept_Wizard_Hat_B": {
-		"base": [ "melvorF:Earth_Adept_Wizard_Hat", "AoD4" ]
+		"base": [ "melvorF:Earth_Adept_Wizard_Hat", "AoD4", "Update" ]
 	},
 	"melvorF:Earth_Adept_Wizard_Robes": {
 		"base": [ "Adept_Body", "2Earth" ]
 	},
 	"melvorAoD:Earth_Adept_Wizard_Robes_B": {
-		"base": [ "melvorF:Earth_Adept_Wizard_Robes", "AoD4" ]
+		"base": [ "melvorF:Earth_Adept_Wizard_Robes", "AoD4", "Update" ]
 	},
 	"melvorF:Earth_Adept_Wizard_Bottoms": {
 		"base": [ "Adept_Legs", "2Earth" ]
 	},
 	"melvorAoD:Earth_Adept_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Earth_Adept_Wizard_Bottoms", "AoD4" ]
+		"base": [ "melvorF:Earth_Adept_Wizard_Bottoms", "AoD4", "Update" ]
 	},
 	"melvorF:Earth_Adept_Wizard_Boots": {
 		"base": [ "Adept_Boots", "2Earth" ]
@@ -595,19 +595,19 @@
 		"base": [ "Adept_Hat", "2Fire" ]
 	},
 	"melvorAoD:Fire_Adept_Wizard_Hat_B": {
-		"base": [ "melvorF:Fire_Adept_Wizard_Hat", "AoD4" ]
+		"base": [ "melvorF:Fire_Adept_Wizard_Hat", "AoD4", "Update" ]
 	},
 	"melvorF:Fire_Adept_Wizard_Robes": {
 		"base": [ "Adept_Body", "2Fire" ]
 	},
 	"melvorAoD:Fire_Adept_Wizard_Robes_B": {
-		"base": [ "melvorF:Fire_Adept_Wizard_Robes", "AoD4" ]
+		"base": [ "melvorF:Fire_Adept_Wizard_Robes", "AoD4", "Update" ]
 	},
 	"melvorF:Fire_Adept_Wizard_Bottoms": {
 		"base": [ "Adept_Legs", "2Fire" ]
 	},
 	"melvorAoD:Fire_Adept_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Fire_Adept_Wizard_Bottoms", "AoD4" ]
+		"base": [ "melvorF:Fire_Adept_Wizard_Bottoms", "AoD4", "Update" ]
 	},
 	"melvorF:Fire_Adept_Wizard_Boots": {
 		"base": [ "Adept_Boots", "2Fire" ]
@@ -616,19 +616,19 @@
 		"base": [ "Expert_Hat", "3Air" ]
 	},
 	"melvorAoD:Air_Expert_Wizard_Hat_B": {
-		"base": [ "melvorF:Air_Expert_Wizard_Hat", "AoD7" ]
+		"base": [ "melvorF:Air_Expert_Wizard_Hat", "AoD7", "Update" ]
 	},
 	"melvorF:Air_Expert_Wizard_Robes": {
 		"base": [ "Expert_Body", "3Air" ]
 	},
 	"melvorAoD:Air_Expert_Wizard_Robes_B": {
-		"base": [ "melvorF:Air_Expert_Wizard_Robes", "AoD7" ]
+		"base": [ "melvorF:Air_Expert_Wizard_Robes", "AoD7", "Update" ]
 	},
 	"melvorF:Air_Expert_Wizard_Bottoms": {
 		"base": [ "Expert_Legs", "3Air" ]
 	},
 	"melvorAoD:Air_Expert_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Air_Expert_Wizard_Bottoms", "AoD7" ]
+		"base": [ "melvorF:Air_Expert_Wizard_Bottoms", "AoD7", "Update" ]
 	},
 	"melvorF:Air_Expert_Wizard_Boots": {
 		"base": [ "Expert_Boots", "3Air" ]
@@ -637,19 +637,19 @@
 		"base": [ "Expert_Hat", "3Water" ]
 	},
 	"melvorAoD:Water_Expert_Wizard_Hat_B": {
-		"base": [ "melvorF:Water_Expert_Wizard_Hat", "AoD7" ]
+		"base": [ "melvorF:Water_Expert_Wizard_Hat", "AoD7", "Update" ]
 	},
 	"melvorF:Water_Expert_Wizard_Robes": {
 		"base": [ "Expert_Body", "3Water" ]
 	},
 	"melvorAoD:Water_Expert_Wizard_Robes_B": {
-		"base": [ "melvorF:Water_Expert_Wizard_Robes", "AoD7" ]
+		"base": [ "melvorF:Water_Expert_Wizard_Robes", "AoD7", "Update" ]
 	},
 	"melvorF:Water_Expert_Wizard_Bottoms": {
 		"base": [ "Expert_Legs", "3Water" ]
 	},
 	"melvorAoD:Water_Expert_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Water_Expert_Wizard_Bottoms", "AoD7" ]
+		"base": [ "melvorF:Water_Expert_Wizard_Bottoms", "AoD7", "Update" ]
 	},
 	"melvorF:Water_Expert_Wizard_Boots": {
 		"base": [ "Expert_Boots", "3Water" ]
@@ -658,19 +658,19 @@
 		"base": [ "Expert_Hat", "3Earth" ]
 	},
 	"melvorAoD:Earth_Expert_Wizard_Hat_B": {
-		"base": [ "melvorF:Earth_Expert_Wizard_Hat", "AoD7" ]
+		"base": [ "melvorF:Earth_Expert_Wizard_Hat", "AoD7", "Update" ]
 	},
 	"melvorF:Earth_Expert_Wizard_Robes": {
 		"base": [ "Expert_Body", "3Earth" ]
 	},
 	"melvorAoD:Earth_Expert_Wizard_Robes_B": {
-		"base": [ "melvorF:Earth_Expert_Wizard_Robes", "AoD7" ]
+		"base": [ "melvorF:Earth_Expert_Wizard_Robes", "AoD7", "Update" ]
 	},
 	"melvorF:Earth_Expert_Wizard_Bottoms": {
 		"base": [ "Expert_Legs", "3Earth" ]
 	},
 	"melvorAoD:Earth_Expert_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Earth_Expert_Wizard_Bottoms", "AoD7" ]
+		"base": [ "melvorF:Earth_Expert_Wizard_Bottoms", "AoD7", "Update" ]
 	},
 	"melvorF:Earth_Expert_Wizard_Boots": {
 		"base": [ "Expert_Boots", "3Earth" ]
@@ -679,37 +679,32 @@
 		"base": [ "Expert_Hat", "3Fire" ]
 	},
 	"melvorAoD:Fire_Expert_Wizard_Hat_B": {
-		"base": [ "melvorF:Fire_Expert_Wizard_Hat", "AoD7" ]
+		"base": [ "melvorF:Fire_Expert_Wizard_Hat", "AoD7", "Update" ]
 	},
 	"melvorF:Fire_Expert_Wizard_Robes": {
 		"base": [ "Expert_Body", "3Fire" ]
 	},
 	"melvorAoD:Fire_Expert_Wizard_Robes_B": {
-		"base": [ "melvorF:Fire_Expert_Wizard_Robes", "AoD7" ]
+		"base": [ "melvorF:Fire_Expert_Wizard_Robes", "AoD7", "Update" ]
 	},
 	"melvorF:Fire_Expert_Wizard_Bottoms": {
 		"base": [ "Expert_Legs", "3Fire" ]
 	},
 	"melvorAoD:Fire_Expert_Wizard_Bottoms_B": {
-		"base": [ "melvorF:Fire_Expert_Wizard_Bottoms", "AoD7" ]
+		"base": [ "melvorF:Fire_Expert_Wizard_Bottoms", "AoD7", "Update" ]
 	},
 	"melvorF:Fire_Expert_Wizard_Boots": {
 		"base": [ "Expert_Boots", "3Fire" ]
 	},
 	"melvorAoD:Unholy_Wizard_Robes": {
 		"base": [ "Base", "7body" ],
-		"Uress": [7],
-		"Mmaghits": [
-			[ 30, 60, "elemental" ],
-			[ 40, 80, "nature" ]
-		],
 		"5Uatkeffect": [3],
 		"5Ucbeasy": [ "20unholy", 3 ],
 		"5slayer": [ 40 ]
 	},
 	"melvorAoD:Cursed_Wizard_Robes": {
-		"base": "melvorAoD:Unholy_Wizard_Robes",
-		"5Ubarrier": [ 0, 25, 35 ],
+		"base": [ "melvorAoD:Unholy_Wizard_Robes", "Update" ],
+		"5Nbarrier": [ 0, 20, 30 ],
 		"5Usummon": [ 0, -10, 35 ],
 		"5atkeffect": [ 0, 0, 50 ],
 		"10atkeffect": [ 0, 0, 100 ]
@@ -719,10 +714,10 @@
 		"5spellcost": [ 0, 0, 0, -2, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Poison_Master_Wizard_Robes": {
-		"base": [ "Master_Poison", "8body" ]
+		"base": [ "Unholy3", "8body", "TotHD1" ]
 	},
 	"melvorTotH:Poison_Master_Wizard_Bottoms": {
-		"base": [ "Master_Poison", "8legs" ]
+		"base": [ "Unholy3", "8legs", "TotHD1" ]
 	},
 	"melvorTotH:Poison_Master_Wizard_Boots": {
 		"base": "Master_Poison"
@@ -732,10 +727,10 @@
 		"5spellcost": [ 0, 0, 0, -4, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Poison_Legendary_Wizard_Robes": {
-		"base": [ "Legendary_Poison", "9body" ]
+		"base": [ "Unholy3", "9body", "TotHD1" ]
 	},
 	"melvorTotH:Poison_Legendary_Wizard_Bottoms": {
-		"base": [ "Legendary_Poison", "9legs" ]
+		"base": [ "Unholy3", "9legs", "TotHD1" ]
 	},
 	"melvorTotH:Poison_Legendary_Wizard_Boots": {
 		"base": "Master_Poison"
@@ -745,10 +740,10 @@
 		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Poison_Mythical_Wizard_Robes": {
-		"base": [ "Mythical_Poison", "10body" ]
+		"base": [ "Unholy4", "10body", "TotHD2" ]
 	},
 	"melvorTotH:Poison_Mythical_Wizard_Bottoms": {
-		"base": [ "Mythical_Poison", "10legs" ]
+		"base": [ "Unholy4", "10legs", "TotHD2" ]
 	},
 	"melvorTotH:Poison_Mythical_Wizard_Boots": {
 		"base": "Mythical_Poison"
@@ -758,10 +753,10 @@
 		"5spellcost": [ 0, 0, 0, -2, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Infernal_Master_Wizard_Robes": {
-		"base": [ "Master_Infernal", "8body" ]
+		"base": [ "Unholy3", "8body", "TotHD1" ]
 	},
 	"melvorTotH:Infernal_Master_Wizard_Bottoms": {
-		"base": [ "Master_Infernal", "8legs" ]
+		"base": [ "Unholy3", "8legs", "TotHD1" ]
 	},
 	"melvorTotH:Infernal_Master_Wizard_Boots": {
 		"base": "Master_Infernal"
@@ -771,10 +766,10 @@
 		"5spellcost": [ 0, 0, 0, -4, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Infernal_Legendary_Wizard_Robes": {
-		"base": [ "Legendary_Infernal", "9body" ]
+		"base": [ "Unholy3", "9body", "TotHD1" ]
 	},
 	"melvorTotH:Infernal_Legendary_Wizard_Bottoms": {
-		"base": [ "Legendary_Infernal", "9legs" ]
+		"base": [ "Unholy3", "9legs", "TotHD1" ]
 	},
 	"melvorTotH:Infernal_Legendary_Wizard_Boots": {
 		"base": "Legendary_Infernal"
@@ -784,10 +779,10 @@
 		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Infernal_Mythical_Wizard_Robes": {
-		"base": [ "Mythical_Infernal", "10body" ]
+		"base": [ "Unholy4", "10body", "TotHD2" ]
 	},
 	"melvorTotH:Infernal_Mythical_Wizard_Bottoms": {
-		"base": [ "Mythical_Infernal", "10legs" ]
+		"base": [ "Unholy4", "10legs", "TotHD2" ]
 	},
 	"melvorTotH:Infernal_Mythical_Wizard_Boots": {
 		"base": "Mythical_Infernal"
@@ -797,10 +792,10 @@
 		"5spellcost": [ 0, 0, 0, -2, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Lightning_Master_Wizard_Robes": {
-		"base": [ "Master_Lightning", "8body" ]
+		"base": [ "Unholy3", "8body", "TotHD1" ]
 	},
 	"melvorTotH:Lightning_Master_Wizard_Bottoms": {
-		"base": [ "Master_Lightning", "8legs" ]
+		"base": [ "Unholy3", "8legs", "TotHD1" ]
 	},
 	"melvorTotH:Lightning_Master_Wizard_Boots": {
 		"base": "Master_Lightning"
@@ -810,10 +805,10 @@
 		"5spellcost": [ 0, 0, 0, -4, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Lightning_Legendary_Wizard_Robes": {
-		"base": [ "Legendary_Lightning", "9body" ]
+		"base": [ "Unholy3", "9body", "TotHD1" ]
 	},
 	"melvorTotH:Lightning_Legendary_Wizard_Bottoms": {
-		"base": [ "Legendary_Lightning", "9legs" ]
+		"base": [ "Unholy3", "9legs", "TotHD1" ]
 	},
 	"melvorTotH:Lightning_Legendary_Wizard_Boots": {
 		"base": "Legendary_Lightning"
@@ -823,10 +818,10 @@
 		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorTotH:Archaic" ] ]
 	},
 	"melvorTotH:Lightning_Mythical_Wizard_Robes": {
-		"base": [ "Mythical_Lightning", "10body" ]
+		"base": [ "Unholy4", "10body", "TotHD2" ]
 	},
 	"melvorTotH:Lightning_Mythical_Wizard_Bottoms": {
-		"base": [ "Mythical_Lightning", "10legs" ]
+		"base": [ "Unholy4", "10legs", "TotHD2" ]
 	},
 	"melvorTotH:Lightning_Mythical_Wizard_Boots": {
 		"base": "Mythical_Lightning"
@@ -836,390 +831,375 @@
 		"5spellcost": [ 0, 0, 0, -2, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Hat_U": {
-		"base": "melvorItA:Abyssal_Elite_Wizard_Hat"
+		"base": [ "melvorItA:Abyssal_Elite_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "Abyssal_Abyssal", "11body"]
+		"base": [ "Abyssal_Base", "bodyA"]
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Robes_U": {
-		"base": "melvorItA:Abyssal_Elite_Wizard_Robes"
+		"base": [ "melvorItA:Abyssal_Elite_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "Abyssal_Abyssal"],
-		"5Ueva": [10]
+		"base": [ "Abyssal_Base", "legsA"]
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Legs_U": {
-		"base": "melvorItA:Abyssal_Elite_Wizard_Legs"
+		"base": [ "melvorItA:Abyssal_Elite_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "Abyssal_Abyssal"]
 	},
 	"melvorItA:Abyssal_Elite_Wizard_Boots_U": {
-		"base": "melvorItA:Abyssal_Elite_Wizard_Boots"
+		"base": [ "melvorItA:Abyssal_Elite_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Abyssal_Master_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "2Abyssal_Abyssal"],
 		"5spellcost": [ 0, 0, 0, -4, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Abyssal_Master_Wizard_Hat_U": {
-		"base": "melvorItA:Abyssal_Master_Wizard_Hat"
+		"base": [ "melvorItA:Abyssal_Master_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Abyssal_Master_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "2Abyssal_Abyssal", "12body"]
+		"base": [ "Abyssal_Base", "2bodyA"]
 	},
 	"melvorItA:Abyssal_Master_Wizard_Robes_U": {
-		"base": "melvorItA:Abyssal_Master_Wizard_Robes"
+		"base": [ "melvorItA:Abyssal_Master_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Abyssal_Master_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "2Abyssal_Abyssal"],
-		"5Ueva": [20]
+		"base": [ "Abyssal_Base", "2legsA"]
 	},
 	"melvorItA:Abyssal_Master_Wizard_Legs_U": {
-		"base": "melvorItA:Abyssal_Master_Wizard_Legs"
+		"base": [ "melvorItA:Abyssal_Master_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Abyssal_Master_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "2Abyssal_Abyssal"]
 	},
 	"melvorItA:Abyssal_Master_Wizard_Boots_U": {
-		"base": "melvorItA:Abyssal_Master_Wizard_Boots"
+		"base": [ "melvorItA:Abyssal_Master_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "3Abyssal_Abyssal"],
 		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Hat_U": {
-		"base": "melvorItA:Abyssal_Mystic_Wizard_Hat"
+		"base": [ "melvorItA:Abyssal_Mystic_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "3Abyssal_Abyssal", "13body"]
+		"base": [ "Abyssal_Base", "3bodyA"]
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Robes_U": {
-		"base": "melvorItA:Abyssal_Mystic_Wizard_Robes"
+		"base": [ "melvorItA:Abyssal_Mystic_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "3Abyssal_Abyssal"],
-		"5Ueva": [30]
+		"base": [ "Abyssal_Base", "3legsA"]
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Legs_U": {
-		"base": "melvorItA:Abyssal_Mystic_Wizard_Legs"
+		"base": [ "melvorItA:Abyssal_Mystic_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "3Abyssal_Abyssal"]
 	},
 	"melvorItA:Abyssal_Mystic_Wizard_Boots_U": {
-		"base": "melvorItA:Abyssal_Mystic_Wizard_Boots"
+		"base": [ "melvorItA:Abyssal_Mystic_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "4Abyssal_Abyssal"],
 		"5spellcost": [ 0, 0, 0, -8, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Hat_U": {
-		"base": "melvorItA:Abyssal_Legendary_Wizard_Hat"
+		"base": [ "melvorItA:Abyssal_Legendary_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "4Abyssal_Abyssal","14body"]
+		"base": [ "Abyssal_Base", "4bodyA"]
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Robes_U": {
-		"base": "melvorItA:Abyssal_Legendary_Wizard_Robes"
+		"base": [ "melvorItA:Abyssal_Legendary_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "4Abyssal_Abyssal"],
-		"5Ueva": [40]
+		"base": [ "Abyssal_Base", "4legsA"]
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Legs_U": {
-		"base": "melvorItA:Abyssal_Legendary_Wizard_Legs"
+		"base": [ "melvorItA:Abyssal_Legendary_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "4Abyssal_Abyssal"]
 	},
 	"melvorItA:Abyssal_Legendary_Wizard_Boots_U": {
-		"base": "melvorItA:Abyssal_Legendary_Wizard_Boots"
+		"base": [ "melvorItA:Abyssal_Legendary_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "5Abyssal_Abyssal"],
 		"5spellcost": [ 0, 0, 0, -10, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Hat_U": {
-		"base": "melvorItA:Abyssal_Mythical_Wizard_Hat"
+		"base": [ "melvorItA:Abyssal_Mythical_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "5Abyssal_Abyssal", "15body"]
+		"base": [ "Abyssal_Base", "5bodyA"]
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Robes_U": {
-		"base": "melvorItA:Abyssal_Mythical_Wizard_Robes"
+		"base": [ "melvorItA:Abyssal_Mythical_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "5Abyssal_Abyssal"],
-		"5Ueva": [50]
+		"base": [ "Abyssal_Base", "5legsA"]
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Legs_U": {
-		"base": "melvorItA:Abyssal_Mythical_Wizard_Legs"
+		"base": [ "melvorItA:Abyssal_Mythical_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "5Abyssal_Abyssal"]
 	},
 	"melvorItA:Abyssal_Mythical_Wizard_Boots_U": {
-		"base": "melvorItA:Abyssal_Mythical_Wizard_Boots"
+		"base": [ "melvorItA:Abyssal_Mythical_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Brume_Master_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "2Abyssal_Brume"],
 		"5spellcost": [ 0, 0, 0, -4, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Brume_Master_Wizard_Hat_U": {
-		"base": "melvorItA:Brume_Master_Wizard_Hat"
+		"base": [ "melvorItA:Brume_Master_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Brume_Master_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "2Abyssal_Brume", "12body"]
+		"base": [ "Abyssal_Base", "2bodyA"]
 	},
 	"melvorItA:Brume_Master_Wizard_Robes_U": {
-		"base": "melvorItA:Brume_Master_Wizard_Robes"
+		"base": [ "melvorItA:Brume_Master_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Brume_Master_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "2Abyssal_Brume"],
-		"5Ueva": [20]
+		"base": [ "Abyssal_Base", "2legsA"]
 	},
 	"melvorItA:Brume_Master_Wizard_Legs_U": {
-		"base": "melvorItA:Brume_Master_Wizard_Legs"
+		"base": [ "melvorItA:Brume_Master_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Brume_Master_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "2Abyssal_Brume"]
 	},
 	"melvorItA:Brume_Master_Wizard_Boots_U": {
-		"base": "melvorItA:Brume_Master_Wizard_Boots"
+		"base": [ "melvorItA:Brume_Master_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Brume_Mystic_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "3Abyssal_Brume"],
 		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Brume_Mystic_Wizard_Hat_U": {
-		"base": "melvorItA:Brume_Mystic_Wizard_Hat"
+		"base": [ "melvorItA:Brume_Mystic_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Brume_Mystic_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "3Abyssal_Brume", "13body"]
+		"base": [ "Abyssal_Base", "3bodyA"]
 	},
 	"melvorItA:Brume_Mystic_Wizard_Robes_U": {
-		"base": "melvorItA:Brume_Mystic_Wizard_Robes"
+		"base": [ "melvorItA:Brume_Mystic_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Brume_Mystic_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "3Abyssal_Brume"],
-		"5Ueva": [30]
+		"base": [ "Abyssal_Base", "3legsA"]
 	},
 	"melvorItA:Brume_Mystic_Wizard_Legs_U": {
-		"base": "melvorItA:Brume_Mystic_Wizard_Legs"
+		"base": [ "melvorItA:Brume_Mystic_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Brume_Mystic_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "3Abyssal_Brume"]
 	},
 	"melvorItA:Brume_Mystic_Wizard_Boots_U": {
-		"base": "melvorItA:Brume_Mystic_Wizard_Boots"
+		"base": [ "melvorItA:Brume_Mystic_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Brume_Legendary_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "4Abyssal_Brume"],
 		"5spellcost": [ 0, 0, 0, -8, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Brume_Legendary_Wizard_Hat_U": {
-		"base": "melvorItA:Brume_Legendary_Wizard_Hat"
+		"base": [ "melvorItA:Brume_Legendary_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Brume_Legendary_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "4Abyssal_Brume","14body"]
+		"base": [ "Abyssal_Base", "4bodyA"]
 	},
 	"melvorItA:Brume_Legendary_Wizard_Robes_U": {
-		"base": "melvorItA:Brume_Legendary_Wizard_Robes"
+		"base": [ "melvorItA:Brume_Legendary_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Brume_Legendary_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "4Abyssal_Brume"],
-		"5Ueva": [40]
+		"base": [ "Abyssal_Base", "4legsA"]
 	},
 	"melvorItA:Brume_Legendary_Wizard_Legs_U": {
-		"base": "melvorItA:Brume_Legendary_Wizard_Legs"
+		"base": [ "melvorItA:Brume_Legendary_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Brume_Legendary_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "4Abyssal_Brume"]
 	},
 	"melvorItA:Brume_Legendary_Wizard_Boots_U": {
-		"base": "melvorItA:Brume_Legendary_Wizard_Boots"
+		"base": [ "melvorItA:Brume_Legendary_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Brume_Mythical_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "5Abyssal_Brume"],
 		"5spellcost": [ 0, 0, 0, -10, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Brume_Mythical_Wizard_Hat_U": {
-		"base": "melvorItA:Brume_Mythical_Wizard_Hat"
+		"base": [ "melvorItA:Brume_Mythical_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Brume_Mythical_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "5Abyssal_Brume", "15body"]
+		"base": [ "Abyssal_Base", "5bodyA"]
 	},
 	"melvorItA:Brume_Mythical_Wizard_Robes_U": {
-		"base": "melvorItA:Brume_Mythical_Wizard_Robes"
+		"base": [ "melvorItA:Brume_Mythical_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Brume_Mythical_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "5Abyssal_Brume" ],
-		"5Ueva": [50]
+		"base": [ "Abyssal_Base", "5legsA" ]
 	},
 	"melvorItA:Brume_Mythical_Wizard_Legs_U": {
-		"base": "melvorItA:Brume_Mythical_Wizard_Legs"
+		"base": [ "melvorItA:Brume_Mythical_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Brume_Mythical_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "5Abyssal_Brume"]
 	},
 	"melvorItA:Brume_Mythical_Wizard_Boots_U": {
-		"base": "melvorItA:Brume_Mythical_Wizard_Boots"
+		"base": [ "melvorItA:Brume_Mythical_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "3Abyssal_Gloom"],
 		"5spellcost": [ 0, 0, 0, -6, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Hat_U": {
-		"base": "melvorItA:Gloom_Mystic_Wizard_Hat"
+		"base": [ "melvorItA:Gloom_Mystic_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "3Abyssal_Gloom", "13body"]
+		"base": [ "Abyssal_Base", "3bodyA"]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Robes_U": {
-		"base": "melvorItA:Gloom_Mystic_Wizard_Robes"
+		"base": [ "melvorItA:Gloom_Mystic_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "3Abyssal_Gloom", "13body" ],
-		"5Ueva": [30]
+		"base": [ "Abyssal_Base", "3legsA" ]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Legs_U": {
-		"base": "melvorItA:Gloom_Mystic_Wizard_Legs"
+		"base": [ "melvorItA:Gloom_Mystic_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "3Abyssal_Gloom"]
 	},
 	"melvorItA:Gloom_Mystic_Wizard_Boots_U": {
-		"base": "melvorItA:Gloom_Mystic_Wizard_Boots"
+		"base": [ "melvorItA:Gloom_Mystic_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "4Abyssal_Gloom"],
 		"5spellcost": [ 0, 0, 0, -8, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Hat_U": {
-		"base": "melvorItA:Gloom_Legendary_Wizard_Hat"
+		"base": [ "melvorItA:Gloom_Legendary_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "4Abyssal_Gloom", "14body"]
+		"base": [ "Abyssal_Base", "4bodyA"]
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Robes_U": {
-		"base": "melvorItA:Gloom_Legendary_Wizard_Robes"
+		"base": [ "melvorItA:Gloom_Legendary_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "4Abyssal_Gloom" ],
-		"5Ueva": [40]
+		"base": [ "Abyssal_Base", "4legsA" ]
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Legs_U": {
-		"base": "melvorItA:Gloom_Legendary_Wizard_Legs"
+		"base": [ "melvorItA:Gloom_Legendary_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "4Abyssal_Gloom"]
 	},
 	"melvorItA:Gloom_Legendary_Wizard_Boots_U": {
-		"base": "melvorItA:Gloom_Legendary_Wizard_Boots"
+		"base": [ "melvorItA:Gloom_Legendary_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "5Abyssal_Gloom"],
 		"5spellcost": [ 0, 0, 0, -10, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Hat_U": {
-		"base": "melvorItA:Gloom_Mythical_Wizard_Hat"
+		"base": [ "melvorItA:Gloom_Mythical_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "5Abyssal_Gloom", "15body"]
+		"base": [ "Abyssal_Base", "5bodyA"]
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Robes_U": {
-		"base": "melvorItA:Gloom_Mythical_Wizard_Robes"
+		"base": [ "melvorItA:Gloom_Mythical_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "5Abyssal_Gloom" ],
-		"5Ueva": [50]
+		"base": [ "Abyssal_Base", "5legsA" ]
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Legs_U": {
-		"base": "melvorItA:Gloom_Mythical_Wizard_Legs"
+		"base": [ "melvorItA:Gloom_Mythical_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "5Abyssal_Gloom"]
 	},
 	"melvorItA:Gloom_Mythical_Wizard_Boots_U": {
-		"base": "melvorItA:Gloom_Mythical_Wizard_Boots"
+		"base": [ "melvorItA:Gloom_Mythical_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "4Abyssal_Wither"],
 		"5spellcost": [ 0, 0, 0, -8, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Hat_U": {
-		"base": "melvorItA:Wither_Legendary_Wizard_Hat"
+		"base": [ "melvorItA:Wither_Legendary_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "4Abyssal_Wither","14body"]
+		"base": [ "Abyssal_Base", "4bodyA"]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Robes_U": {
-		"base": "melvorItA:Wither_Legendary_Wizard_Robes"
+		"base": [ "melvorItA:Wither_Legendary_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "4Abyssal_Wither", "14body" ],
-		"5Ueva": [40]
+		"base": [ "Abyssal_Base", "4legsA" ]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Legs_U": {
-		"base": "melvorItA:Wither_Legendary_Wizard_Legs"
+		"base": [ "melvorItA:Wither_Legendary_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "4Abyssal_Wither"]
 	},
 	"melvorItA:Wither_Legendary_Wizard_Boots_U": {
-		"base": "melvorItA:Wither_Legendary_Wizard_Boots"
+		"base": [ "melvorItA:Wither_Legendary_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Wither_Mythical_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "5Abyssal_Wither"],
 		"5spellcost": [ 0, 0, 0, -10, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Wither_Mythical_Wizard_Hat_U": {
-		"base": "melvorItA:Wither_Mythical_Wizard_Hat"
+		"base": [ "melvorItA:Wither_Mythical_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Wither_Mythical_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "5Abyssal_Wither", "15body"]
+		"base": [ "Abyssal_Base", "5bodyA"]
 	},
 	"melvorItA:Wither_Mythical_Wizard_Robes_U": {
-		"base": "melvorItA:Wither_Mythical_Wizard_Robes"
+		"base": [ "melvorItA:Wither_Mythical_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Wither_Mythical_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "5Abyssal_Wither"],
-		"5Ueva": [50]
+		"base": [ "Abyssal_Base", "5legsA"]
 	},
 	"melvorItA:Wither_Mythical_Wizard_Legs_U": {
-		"base": "melvorItA:Wither_Mythical_Wizard_Legs"
+		"base": [ "melvorItA:Wither_Mythical_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Wither_Mythical_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "5Abyssal_Wither"]
 	},
 	"melvorItA:Wither_Mythical_Wizard_Boots_U": {
-		"base": "melvorItA:Wither_Mythical_Wizard_Boots"
+		"base": [ "melvorItA:Wither_Mythical_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Hat": {
 		"base": [ "Abyssal_Base", "5Abyssal_Nether"],
 		"5spellcost": [ 0, 0, 0, -10, [ "", "melvorItA:Abyssal" ] ]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Hat_U": {
-		"base": "melvorItA:Nether_Mythical_Wizard_Hat"
+		"base": [ "melvorItA:Nether_Mythical_Wizard_Hat", "Update" ]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Robes": {
-		"base": [ "Abyssal_Base", "5Abyssal_Nether", "15body"]
+		"base": [ "Abyssal_Base", "5bodyA"]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Robes_U": {
-		"base": "melvorItA:Nether_Mythical_Wizard_Robes"
+		"base": [ "melvorItA:Nether_Mythical_Wizard_Robes", "Update" ]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Legs": {
-		"base": [ "Abyssal_Base", "5Abyssal_Nether", "15body" ],
-		"5Ueva": [50]
+		"base": [ "Abyssal_Base", "5legsA" ]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Legs_U": {
-		"base": "melvorItA:Nether_Mythical_Wizard_Legs"
+		"base": [ "melvorItA:Nether_Mythical_Wizard_Legs", "Update" ]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Boots": {
 		"base": [ "Abyssal_Base", "5Abyssal_Nether"]
 	},
 	"melvorItA:Nether_Mythical_Wizard_Boots_U": {
-		"base": "melvorItA:Nether_Mythical_Wizard_Boots"
+		"base": [ "melvorItA:Nether_Mythical_Wizard_Boots", "Update" ]
 	},
 	"melvorItA:Eternity_Staff_Uncharged": {}
 }

@@ -9108,6 +9108,16 @@
 						"maximum": 100
 					},
 					{
+						"skillID": "melvorD:Slayer",
+						"increase": 5,
+						"maximum": 100
+					},
+					{
+						"skillID": "melvorD:Prayer",
+						"increase": 5,
+						"maximum": 100
+					},
+					{
 						"skillID": "melvorAoD:Cartography",
 						"increase": 6,
 						"maximum": 120
@@ -9160,6 +9170,14 @@
 						"value": 100
 					},
 					{
+						"skillID": "melvorD:Slayer",
+						"value": 100
+					},
+					{
+						"skillID": "melvorD:Prayer",
+						"value": 100
+					},
+					{
 						"skillID": "melvorAoD:Cartography",
 						"value": 120
 					},
@@ -9169,6 +9187,164 @@
 					}
 				]
 			},
+      {
+        "id": "Post99DungeonsCombatOnly",
+        "levelType": "Standard",
+        "requirementSets": [
+          {
+            "id": 0,
+            "requirements": [
+              {
+                "type": "DungeonCompletion",
+                "dungeonID": "melvorTotH:Ancient_Sanctuary",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": 1,
+            "requirements": [
+              {
+                "type": "DungeonCompletion",
+                "dungeonID": "melvorTotH:Underground_Lava_Lake",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "requirements": [
+              {
+                "type": "DungeonCompletion",
+                "dungeonID": "melvorTotH:Lightning_Region",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "requirements": [
+              {
+                "type": "DungeonCompletion",
+                "dungeonID": "melvorTotH:Lair_of_the_Spider_Queen",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "requirements": [
+              {
+                "type": "DungeonCompletion",
+                "dungeonID": "melvorTotH:Cursed_Forest",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "requirements": [
+              {
+                "type": "DungeonCompletion",
+                "dungeonID": "melvorTotH:Necromancers_Palace",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "fixedIncreases": [
+          {
+            "skillID": "melvorD:Attack",
+            "increase": 3,
+            "maximum": 120
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "increase": 3,
+            "maximum": 120
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "increase": 3,
+            "maximum": 120
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "increase": 3,
+            "maximum": 120
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "increase": 3,
+            "maximum": 120
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "increase": 3,
+            "maximum": 120
+          },
+          {
+            "skillID": "melvorD:Slayer",
+            "increase": 3,
+            "maximum": 120
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "increase": 3,
+            "maximum": 120
+          }
+        ]
+      },
+      {
+        "id": "ThroneOfTheHeraldSet120CombatOnly",
+        "levelType": "Standard",
+        "requirementSets": [
+          {
+            "id": 0,
+            "requirements": [
+              {
+                "type": "DungeonCompletion",
+                "dungeonID": "melvorTotH:Throne_of_the_Herald",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "setIncreases": [
+          {
+            "skillID": "melvorD:Attack",
+            "value": 120
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "value": 120
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "value": 120
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "value": 120
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "value": 120
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "value": 120
+          },
+          {
+            "skillID": "melvorD:Slayer",
+            "value": 120
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "value": 120
+          }
+        ]
+      },
 			{
 				"id":"TheAbyssCombatOnly",
 				"levelType": "Abyssal",
@@ -9274,6 +9450,16 @@
 						"skillID": "melvorD:Magic",
 						"increase": 10,
 						"maximum": 60
+					},
+					{
+						"skillID": "melvorD:Slayer",
+						"increase": 10,
+						"maximum": 60
+					},
+					{
+						"skillID": "melvorD:Prayer",
+						"increase": 10,
+						"maximum": 60
 					}
 				]
 			}
@@ -9311,17 +9497,19 @@
           }
 				],
 				"allowSkillUnlock": true,
-				"startingSkills": [
-						"melvorD:Attack",
-						"melvorD:Strength",
-						"melvorD:Defence",
-						"melvorD:Hitpoints",
-						"melvorD:Ranged",
-						"melvorD:Magic",
-						"melvorAoD:Cartography",
-						"melvorAoD:Archaeology"
-				],
-				"skillUnlockCost": [0,10000, 25000,50000,200000,250000,400000,1000000,2500000,10000000,25000000,50000000,100000000,200000000,500000000,1000000000,2500000000,5000000000,10000000000,50000000000],
+        "startingSkills": [
+          "melvorD:Attack",
+          "melvorD:Strength",
+          "melvorD:Defence",
+          "melvorD:Hitpoints",
+          "melvorD:Ranged",
+          "melvorD:Magic",
+          "melvorD:Slayer",
+          "melvorD:Prayer",
+          "melvorAoD:Cartography",
+          "melvorAoD:Archaeology"
+        ],
+				"skillUnlockCost": [0,10000,25000,50000,200000,250000,400000,1000000,2500000,10000000,25000000,50000000,100000000,200000000,500000000,1000000000,2500000000,5000000000,10000000000,50000000000],
 				"hasTutorial": true,
 				"defaultInitialLevelCap": 10,
 				"defaultInitialAbyssalLevelCap": 10,
@@ -9329,7 +9517,8 @@
 					"BGSCheat:Pre100DungeonsCombatOnly",
 					"BGSCheat:ImpendingDarknessSet",
 					"BGSCheat:TheAbyssCombatOnly",
-					"melvorTotH:Post99DungeonsCombatOnly"
+					"BGSCheat:Post99DungeonsCombatOnly",
+          "BGSCheat:ThroneOfTheHeraldSet120CombatOnly"
 				],
 				"levelCapCost": {
 					"increase": 5,
@@ -9341,7 +9530,7 @@
 							}
 						]
 					},
-					"scalingFactor": 1.2,
+					"scalingFactor": 1.125,
 					"maxCostScaling": 50000000,
 					"skillLevelGates": [
 						"melvorD:Attack",

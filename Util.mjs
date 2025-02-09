@@ -1757,6 +1757,39 @@ export class EasyTool {
 	firemaking
 		valueMap = ["firemakingLogCurrencyGain", "firemakingBonfireInterval","additionalRandomFiremakingOilChance"];
 		scopeMap = ["currencyID"];
+	 * mine
+		valueMap = ["miningGemChance", "qualitySuperiorGemChance", "abyssalGemChance", "additionalAbyssalGemChance","gemVeinChance","abyssalGemVeinChanceIncrease"];
+	 * mine2
+		valueMap = ["miningNodeRespawnInterval", "flatMiningNodeHP", "noMiningNodeDamageChance", "bonusCoalMining"];
+	 * farm
+		valueMap = ["compostPreservationChance", "bypassCompostPreservationChance", "flatFarmingSeedCost", "farmingSeedCost","farmingSeedReturn","regainAbyssalTreeSeedChance"];
+		scopeMap = ["realmID", "categoryID", "actionID"];
+	 * woodcut
+		valueMap = ["woodcuttingJewelryChance", "woodcuttingDrakeNestJewelryChance", "treeCutLimit"];
+	 * cook
+		valueMap = ["passiveCookingInterval","flatCoalGainedOnCookingFailure", "flatAbyssalGemsGainedOnCookingFailure"];
+	rune
+		valueMap = ["RuneCostReduction", "elementalChance", "elementalQuantity", "giveRandomComboRunes", "doubleRuneProvision"];
+		scopeMap = ["actionID"];
+	spellcost
+		valueMap = ["runePreservationChance","altMagicRunePreservationChance","flatSpellRuneCost", "flatAttackSpellRuneCost"];
+		scopeMap = ["itemID","categoryID"];
+	astrology
+		valueMap = ["meteoriteLocationChance", "starFallChance", "astrologyModifierCost"];
+		scopeMap = ["realmID"];
+	town
+		valueMap = ["townshipMaxStorage", "townshipMaxSoulStorage", "townshipResourceProduction", "flatTownshipEducation","flatTownshipHappiness","flatTownshipPopulation","townshipTraderCost"];
+	arch
+		valueMap = ["sieveToolLevel", "trowelToolLevel","brushToolLevel" ,"shovelToolLevel","melvorAoD:mapChargePreservationChance","doubleConsumablesArchaeology"];
+	arch2
+		valueMap = ["tinyArtefactChance","smallArtefactChance", "mediumArtefactChance","largeArtefactChance","flatCurrencyGainPerArchaeologyLevelNoArtefact"];
+		scopeMap = ["currencyID"];
+	cart
+		valueMap = ["cartographySightRange","cartographySurveyRange","cartographyTravelCost","cartographySurveyInterval" ,"cartographySurveyXP","travelEventChance","doubleActiveModifiersCartography"];
+	cart2
+		valueMap = ["cartographyPaperMakingInterval","cartographyMapUpgradeInterval","mapUpgradeActions","initialMapArtefactValues","mapRefinementCost"];
+	harvest
+		valueMap = ["harvestingUniqueProductChance", "flatHarvestingIntensity", "doubleHarvestingIntensityChance", "minimumHarvestingIntensity","minimumHarvestingIntensity"];
 	 * hidden
 				valueMap = ["flatHiddenSkillLevel", "flatHiddenSkillLevelBasedOnLevels"];
 				scopeMap = ["skillID"];
@@ -1781,8 +1814,6 @@ export class EasyTool {
 	 * against
 				valueMap = ["accuracyRatingAgainstDamageType", "evasionAgainstDamageType","maxHitAgainstDamageType","maxHitpointsAgainstDamageType"];
 				scopeMap = ["damageTypeID"];
-	 * againstN,againstP,againstI,againstE
-				scopes: Normal, Pure, Abyssal, Eternal
 	 * res
 				valueMap = ["flatResistance", "resistance","ignoreResistanceWhenAttackingChance"];
 				scopeMap = ["damageTypeID"];
@@ -1796,17 +1827,6 @@ export class EasyTool {
 		valueMap = ["hPRegenBasedOnMaxHP", "flatHPRegenBasedOnMeleeMaxHit", "flatHPRegenBasedOnRangedMaxHit", "flatHPRegenBasedOnMagicMaxHit"];
 	 * regen3
 		valueMap = ["regenPerDamageTaken", "healingWhenHit", "healWhenStunned", "healWhenSlept", "regenPerDamageTaken"];
-	 * mine
-		valueMap = ["miningGemChance", "qualitySuperiorGemChance", "abyssalGemChance", "additionalAbyssalGemChance","gemVeinChance","abyssalGemVeinChanceIncrease"];
-	 * mine2
-		valueMap = ["miningNodeRespawnInterval", "flatMiningNodeHP", "noMiningNodeDamageChance", "bonusCoalMining"];
-	 * farm
-		valueMap = ["compostPreservationChance", "bypassCompostPreservationChance", "flatFarmingSeedCost", "farmingSeedCost","farmingSeedReturn","regainAbyssalTreeSeedChance"];
-		scopeMap = ["realmID", "categoryID", "actionID"];
-	 * woodcut
-		valueMap = ["woodcuttingJewelryChance", "woodcuttingDrakeNestJewelryChance", "treeCutLimit"];
-	 * cook
-		valueMap = ["passiveCookingInterval","flatCoalGainedOnCookingFailure", "flatAbyssalGemsGainedOnCookingFailure"];
 	 * atkspd
 		valueMap = ["flatAttackInterval", "attackInterval","meleeAttackInterval","rangedAttackInterval","magicAttackInterval"];
 	*steal
@@ -1827,12 +1847,6 @@ export class EasyTool {
 		damageDealtToMonstersInArea ["melvorD:CombatAreas", "melvorD:Dungeons", "melvorF:SlayerAreas", "melvorF:Strongholds", "melvorItA:AbyssalCombatAreas", "melvorItA:AbyssalSlayerAreas", "melvorItA:AbyssalStrongholds", "melvorItA:TheAbyss"]
 	dot
 		valueMap = ["burnDOTDamageTaken", "bleedDOTDamageTaken","poisonDOTDamageTaken","deadlyPoisonDOTDamageTaken","toxinDOTDamageTaken","ablazeDOTDamageTaken","lacerationDOTDamageTaken","voidburstDOTDamageTaken"];
-	rune
-		valueMap = ["RuneCostReduction", "elementalChance", "elementalQuantity", "giveRandomComboRunes", "doubleRuneProvision"];
-		scopeMap = ["actionID"];
-	spellcost
-		valueMap = ["runePreservationChance","altMagicRunePreservationChance","flatSpellRuneCost", "flatAttackSpellRuneCost"];
-		scopeMap = ["itemID","categoryID"];
 	currency
 		valueMap = ["flatCurrencyGain", "currencyGain","itemSaleCurrencyGain"];
 		scopeMap = ["currencyID","skillID","actionID"];
@@ -1876,22 +1890,6 @@ export class EasyTool {
 		valueMap = ["critChance", "critMultiplier", "meleeCritChance", "rangedCritChance","magicCritChance"];
 	atkeffect
 		valueMap = ["unholyMarkOnHit", "onHitSlowMagnitude", "curseOnHitWithUnholyMark", "attackRolls","extraLacerationStackChance"];
-	astrology
-		valueMap = ["meteoriteLocationChance", "starFallChance", "astrologyModifierCost"];
-		scopeMap = ["realmID"];
-	town
-		valueMap = ["townshipMaxStorage", "townshipMaxSoulStorage", "townshipResourceProduction", "flatTownshipEducation","flatTownshipHappiness","flatTownshipPopulation","townshipTraderCost"];
-	arch
-		valueMap = ["sieveToolLevel", "trowelToolLevel","brushToolLevel" ,"shovelToolLevel","melvorAoD:mapChargePreservationChance","doubleConsumablesArchaeology"];
-	arch2
-		valueMap = ["tinyArtefactChance","smallArtefactChance", "mediumArtefactChance","largeArtefactChance","flatCurrencyGainPerArchaeologyLevelNoArtefact"];
-		scopeMap = ["currencyID"];
-	cart
-		valueMap = ["cartographySightRange","cartographySurveyRange","cartographyTravelCost","cartographySurveyInterval" ,"cartographySurveyXP","travelEventChance","doubleActiveModifiersCartography"];
-	cart2
-		valueMap = ["cartographyPaperMakingInterval","cartographyMapUpgradeInterval","mapUpgradeActions","initialMapArtefactValues","mapRefinementCost"];
-	harvest
-		valueMap = ["harvestingUniqueProductChance", "flatHarvestingIntensity", "doubleHarvestingIntensityChance", "minimumHarvestingIntensity","minimumHarvestingIntensity"];
 	 */
 	static addModiferWithScope(modifiers, data, key, values, scopes, type, lv, mul, extraMul) {
 		let valueMap = null
@@ -2011,30 +2009,6 @@ export class EasyTool {
 				scopeMap = ["damageTypeID"];
 				break;
 			}
-			case "againstD": {
-				valueMap = ["accuracyRatingAgainstDamageType", "evasionAgainstDamageType","maxHitAgainstDamageType","maxHitpointsAgainstDamageType"];
-				scopes = ["melvorD:Normal"];
-				scopeMap = ["damageTypeID"];
-				break;
-			}
-			case "againstP": {
-				valueMap = ["accuracyRatingAgainstDamageType", "evasionAgainstDamageType","maxHitAgainstDamageType","maxHitpointsAgainstDamageType"];
-				scopes = ["melvorF:Pure"];
-				scopeMap = ["damageTypeID"];
-				break;
-			}
-			case "againstI": {
-				valueMap = ["accuracyRatingAgainstDamageType", "evasionAgainstDamageType","maxHitAgainstDamageType","maxHitpointsAgainstDamageType"];
-				scopes = ["melvorItA:Abyssal"];
-				scopeMap = ["damageTypeID"];
-				break;
-			}
-			case "againstE": {
-				valueMap = ["accuracyRatingAgainstDamageType", "evasionAgainstDamageType","maxHitAgainstDamageType","maxHitpointsAgainstDamageType"];
-				scopes = ["melvorItA:Eternal"];
-				scopeMap = ["damageTypeID"];
-				break;
-			}
 			case "res": {
 				valueMap = ["flatResistance", "resistance","ignoreResistanceWhenAttackingChance"];
 				scopeMap = ["damageTypeID"];
@@ -2136,7 +2110,7 @@ export class EasyTool {
 			}
 			case "firemaking": {
 				valueMap = ["firemakingLogCurrencyGain", "firemakingBonfireInterval","additionalRandomFiremakingOilChance"];
-				scopeMap = ["currencyID"];
+				scopeMap = ["currencyID", "skillID"];
 				break;
 			}
 			case "currency": {
@@ -3477,7 +3451,7 @@ export class EasyTool {
 			Util.updateSpecialAttack(sp, v);
 	}
 
-	static addEasyValueInternal(statObject, data, key, value, mType, type, lv, mul, base, extraMul = 1) {
+	static addEasyValueInternal(statObject, data, key, value, mType, type, lv, mul, base, extraMul, baseHeal) {
 		let _v = value;
 		switch (key) {
 			case "modifiers": {
@@ -3602,6 +3576,23 @@ export class EasyTool {
 				Util.addSpecialAttacksDataAlias(statObject, data, _v, type, lv, mul, extraMul);
 				break;
 			}
+			case "heal": {
+				if (data.healsFor == null)
+					data.healsFor = Util.calcValue(_v, type, lv, mul, extraMul);
+				else
+					data.healsFor += Util.calcValue(_v, type, lv, mul, extraMul);
+				break;
+			}
+
+			case "mheal": {
+				if (isNumber(baseHeal) == false)
+					break;
+				if (data.healsFor == null)
+					data.healsFor = Util.calcValue(_v, type, lv, mul, extraMul) * baseHeal;
+				else
+					data.healsFor += (Util.calcValue(_v, type, lv, mul, extraMul) * baseHeal);
+				break;
+			}
 			case "spsar": {
 				Util.removeAllSpecialAttackData(statObject.specialAttacks, data);
 				Util.addSpecialAttacksDataAlias(statObject, data, _v, type, lv, mul, extraMul);
@@ -3719,7 +3710,7 @@ export class EasyTool {
 		}
 	}
 
-	static addEasyValue(statObject, data, key, value, lv, mul, base = null, extraMul = 1) {
+	static addEasyValue(statObject, data, key, value, lv, mul, base, extraMul, baseHeal) {
 		let k, uLv;
 		[uLv, k] = this.parseNameNumber(key);
 
@@ -3771,6 +3762,6 @@ export class EasyTool {
 			k = k.slice(d);
 		}
 		let name = i == -1 ? k : k.slice(i + 1);
-		this.addEasyValueInternal(statObject, data, name, value, mType, type, lv, mul, base, extraMul);
+		this.addEasyValueInternal(statObject, data, name, value, mType, type, lv, mul, base, extraMul, baseHeal);
 	}
 }

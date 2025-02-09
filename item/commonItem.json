@@ -3,7 +3,14 @@
 		"Omatks": [ 1, 1, 1, 1, 1 ],
 		"Omstrs": [ 1, 1, 1 ],
 		"Omdefs": [ 1, 1, 1 ],
+		"mress": [ 1, 1, 1, 1 ],
 		"Omsums": [ 1, 1, 1, 1 ]
+	},
+	"Update": {
+		"Omatks": [ 0.1, 0.1, 0.1, 0.1, 0.1 ],
+		"Omstrs": [ 0.1, 0.1, 0.1 ],
+		"Omdefs": [ 0.1, 0.1, 0.1 ],
+		"Omsums": [ 0.1, 0.1, 0.1, 0.1 ]
 	},
 	"Unholy1": {
 		"base": "Base",
@@ -32,6 +39,38 @@
 	"TotHA": {
 		"5allow": [ 0, 1 ]
 	},
+	"shield": {
+		"Uress": [ 1 ],
+		"UdmgTaken": [ -5 ]
+	},
+	"AoD1": {
+		"4barrier": [ 2, 5 ],
+		"6summon": [ 0, 0, 5 ]
+	},
+	"AoD2": {
+		"3barrier": [ 3, 7 ],
+		"5summon": [ 0, 0, 7 ]
+	},
+	"AoD3": {
+		"3barrier": [ 4, 10 ],
+		"6summon": [ 0, 0, 10 ]
+	},
+	"AoD4": {
+		"5Nbarrier": [ 0, 6, 10 ],
+		"5Usummon": [ 0, 0, 12 ]
+	},
+	"AoD5": {
+		"5Nbarrier": [ 0, 6, 12 ],
+		"5Usummon": [ 0, 0, 24 ]
+	},
+	"AoD6": {
+		"5Nbarrier": [ 0, 8, 16 ],
+		"5Usummon": [ 0, 0, 30 ]
+	},
+	"AoD7": {
+		"5Nbarrier": [0, 10, 20],
+		"10Usummon": [ 0, -10, 30 ]
+	},
 	"TotHD1": {
 		"5slayer": [ 50 ],
 		"5Nbarrier": [0, 20, 30],
@@ -43,61 +82,46 @@
 		"10Usummon": [ 0, -15, 75 ]
 	},
 	"AbyD": {
-		"Uress": [ 0, 3 ],
+		"Uress": [ 0, 3, 0, 3 ],
 		"5Uslayer": [ 0, 10 ],
 		"5Usummon": [ 0, 0, 100 ],
 		"10Usummon": [ 0, -15 ]
 	},
 	"body": {
-		"Uhp": [ 0, 5 ]
+		"Uhp": [ 0, 5 ],
+		"Uress": [1]
+	},
+	"bodyA": {
+		"base": ["AbyD"],
+		"Uhp": [ 0, 20 ]
 	},
 	"legs": {
-		"Mhp": [ 5 ]
+		"Mhp": [ 5 ],
+		"Uress": [1]
 	},
-	"shield": {
-		"Uress": [ 1 ],
-		"UdmgTaken": [ -5 ]
-	},
-	"AoD1": {
-		"4barrier": [ 3, 5 ],
-		"6summon": [ 0, 0, 5 ]
-	},
-	"AoD2": {
-		"3barrier": [ 5, 7 ],
-		"5summon": [ 0, 0, 7 ]
-	},
-	"AoD3": {
-		"3barrier": [ 6, 10 ],
-		"6summon": [ 0, 0, 10 ]
-	},
-	"AoD4": {
-		"5barrier": [ 0, 7, 10 ],
-		"10summon": [ 0, 0, 10 ]
-	},
-	"AoD7": {
-		"5Nbarrier": [0, 16, 20],
-		"10Usummon": [ 0, -10, 30 ]
+	"legsA": {
+		"base": ["AbyD"],
+		"Mhp": [ 400 ]
 	},
 	"tier1": {
 		"base": [ "Base", "AoD1" ],
 		"1Vmodifiers": {
 			"add": {
-				"bankSpace": 5
+				"bankSpace": 3
 			}
 		},
-		"2Ucurrency2": [ 100, "gp" ],
-		"4Ucurrency2": [ 50, "sc" ],
-		"6Ucurrency2": [ 0, 0, 0, 50, "gp", "sc" ]
+		"2Ucurrency2": [ 0,0,0,100, "gp" ],
+		"4Ucurrency2": [ 0,0,0,50, "sc" ]
 	},
 	"tier2": {
 		"base": [ "Base", "AoD2" ],
 		"1Vmodifiers": {
 			"add": {
-				"bankSpace": 3
+				"bankSpace": 2
 			}
 		},
-		"3Lskillbase": [ 1, 0, 1 ],
-		"5Uskillextra": [ 1, 0, 2 ]
+		"3Lskillbase": [ 2 ],
+		"5Nskillextra": [ 1, 0, 1 ]
 	},
 	"tier3": {
 		"base": [ "Base", "AoD3" ],
@@ -106,7 +130,7 @@
 				"bankSpace": 1
 			}
 		},
-		"6Uxp": [ 0, 0, 100 ]
+		"5Uxp": [ 0, 0, 200 ]
 	},
 	"BaseRing1": {
 		"base": "Base",
@@ -192,7 +216,7 @@
 	},
 	"staff1": {
 		"base": "tier1",
-		"2barrier": [ 3 ],
+		"2barrier": [ 2 ],
 		"Uress": [ 1 ],
 		"Mmaghits": [ 1, 2 ]
 	},
@@ -237,10 +261,10 @@
 		"3spellcost": [ 0, 0, 0, -1, [ "", "melvorD:Standard" ] ]
 	},
 	"Acolyte_Body": {
-		"base": [ "Acolyte", "body" ]
+		"base": [ "body" ]
 	},
 	"Acolyte_Legs": {
-		"base": [ "Acolyte", "legs" ]
+		"base": [ "legs" ]
 	},
 	"Acolyte_Boots": {
 		"base": [ "Acolyte" ]
@@ -259,11 +283,11 @@
 		"5slayer": [ 10 ]
 	},
 	"Adept_Body": {
-		"base": [ "Adept", "4body" ],
+		"base": [ "Unholy1", "4body" ],
 		"5slayer": [ 10 ]
 	},
 	"Adept_Legs": {
-		"base": [ "Adept", "4legs" ],
+		"base": [ "Unholy1", "4legs" ],
 		"5slayer": [ 10 ]
 	},
 	"Adept_Boots": {
@@ -283,11 +307,11 @@
 		"5slayer": [40]
 	},
 	"Expert_Body": {
-		"base": [ "Expert", "7body" ],
+		"base": [ "Unholy2", "7body" ],
 		"5slayer": [40]
 	},
 	"Expert_Legs": {
-		"base": [ "Expert", "7legs" ],
+		"base": [ "Unholy2", "7legs" ],
 		"5slayer": [40]
 	},
 	"Expert_Boots": {

@@ -15,6 +15,7 @@ export class CheatManaget{
 	herbloreManager;
 	archaeologyManager;
 	summoningMamager;
+	cookingManager;
 	levelMultiplierFunction;
 
 	constructor(){
@@ -42,6 +43,7 @@ export class CheatManaget{
 		this.herbloreManager.initCharacter();
 		this.archaeologyManager.initCharacter();
 		this.summoningMamager.initCharacter();
+		this.cookingMamager.initCharacter();
 	}
 
 	initSettings(){
@@ -74,7 +76,7 @@ export class CheatManaget{
 				name: "FormulaInput",
 				label: "Input for Custom Formula",
 				hint: "See custom formula manual at the bottom of the dialog.",
-				default: "return 90000*(lv+2)**0.6*8**(0.4*(lv+2))",
+				default: "return 1000000*(lv+2)**1.2*2**((lv+1)*0.6)*3**((lv-3)*0.3)*4**((lv-10)*0.2)",
 				onChange: (val, prev) => {
 					this.loadMasteryXpSettings(val);
 					this.initLevelTable();
@@ -164,6 +166,7 @@ export class CheatManaget{
 		this.herbloreManager.updateItems();
 		this.archaeologyManager.updateItems();
 		this.summoningMamager.updateItems();
+		this.cookingMamager.updateItems();
 	}
 
 	async loadSkills(ctx){
@@ -198,6 +201,8 @@ export class CheatManaget{
 		await this.archaeologyManager.init(ctx, Archaeology, game.archaeology, "archaeology/item.json", "archaeology/skill.json", commonData );
 		this.summoningMamager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
 		await this.summoningMamager.init(ctx, Summoning, game.summoning, "summoning/item.json", "summoning/skill.json", commonData );
+		this.cookingMamager = await new SkillCheatManager(this.levelFormula, this.levelMultiplierFunction);
+		await this.cookingMamager.init(ctx, Cooking, game.cooking, "cooking/item.json", "cooking/skill.json", commonData );
 	}
 
 	loadLevelTable(){

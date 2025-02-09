@@ -7,7 +7,7 @@
 		"10Ucbeasy": ["Poison", 3, 30]
 	},
 	"melvorAoD:Shatter_Arrows": {
-		"base": "melvorD:Bronze_Arrows",
+		"base": [ "melvorD:Bronze_Arrows", "Update" ],
 		"5OuniqueAttack": { "id": "ShatterArrow" }
 	},
 	"melvorD:Iron_Arrows": {
@@ -113,10 +113,10 @@
 		"10Ucbeasy": [ "Confusion", 3, 12 ]
 	},
 	"melvorAoD:Topaz_Bolts_Enchanted": {
-		"base": "melvorF:Topaz_Bolts"
+		"base": [ "melvorF:Topaz_Bolts", "Update" ]
 	},
 	"melvorAoD:Topaz_Bolts_Arcane": {
-		"base": "melvorAoD:Topaz_Bolts_Enchanted"
+		"base": [ "melvorAoD:Topaz_Bolts_Enchanted", "Update" ]
 	},
 	"melvorF:Sapphire_Bolts": {
 		"base": "tier3",
@@ -124,10 +124,10 @@
 		"10Ucbeasy": [ "Freeze", 3, 14 ]
 	},
 	"melvorAoD:Sapphire_Bolts_Enchanted": {
-		"base": "melvorF:Sapphire_Bolts"
+		"base": [ "melvorF:Sapphire_Bolts", "Update" ]
 	},
 	"melvorAoD:Sapphire_Bolts_Arcane": {
-		"base": "melvorAoD:Sapphire_Bolts_Enchanted"
+		"base": [ "melvorAoD:Sapphire_Bolts_Enchanted", "Update" ]
 	},
 	"melvorF:Ruby_Bolts": {
 		"base": "Base",
@@ -135,10 +135,10 @@
 		"10Ucbeasy": [ "Burn", 3, 16 ]
 	},
 	"melvorAoD:Ruby_Bolts_Enchanted": {
-		"base": "melvorF:Ruby_Bolts"
+		"base": [ "melvorF:Ruby_Bolts", "Update" ]
 	},
 	"melvorAoD:Ruby_Bolts_Arcane": {
-		"base": "melvorAoD:Ruby_Bolts_Enchanted"
+		"base": [ "melvorAoD:Ruby_Bolts_Enchanted", "Update" ]
 	},
 	"melvorF:Emerald_Bolts": {
 		"base": "Base",
@@ -146,10 +146,10 @@
 		"10Ucbeasy": [ "Poison", 3, 18 ]
 	},
 	"melvorAoD:Emerald_Bolts_Enchanted": {
-		"base": "melvorF:Emerald_Bolts"
+		"base": [ "melvorF:Emerald_Bolts", "Update" ]
 	},
 	"melvorAoD:Emerald_Bolts_Arcane": {
-		"base": "melvorAoD:Emerald_Bolts_Enchanted"
+		"base": [ "melvorAoD:Emerald_Bolts_Enchanted", "Update" ]
 	},
 	"melvorF:Diamond_Bolts": {
 		"base": "Base",
@@ -157,10 +157,10 @@
 		"10Ucbeasy": [ [ "30dres", "30deva$" ], 2, 25 ]
 	},
 	"melvorAoD:Diamond_Bolts_Enchanted": {
-		"base": "melvorF:Diamond_Bolts"
+		"base": [ "melvorF:Diamond_Bolts", "Update" ]
 	},
 	"melvorAoD:Diamond_Bolts_Arcane": {
-		"base": "melvorAoD:Diamond_Bolts_Enchanted"
+		"base": [ "melvorAoD:Diamond_Bolts_Enchanted", "Update" ]
 	},
 	"melvorF:Jadestone_Bolts": {
 		"base": "Base",
@@ -168,10 +168,10 @@
 		"10Ucbeasy": ["100DeadlyPoison", 2, 15]
 	},
 	"melvorAoD:Jadestone_Bolts_Enchanted": {
-		"base": "melvorF:Jadestone_Bolts"
+		"base": [ "melvorF:Jadestone_Bolts", "Update" ]
 	},
 	"melvorAoD:Jadestone_Bolts_Arcane": {
-		"base": "melvorAoD:Jadestone_Bolts_Enchanted"
+		"base": [ "melvorAoD:Jadestone_Bolts_Enchanted", "Update" ]
 	},
 	"melvorTotH:Onyx_Bolts": {
 		"base": "Base",
@@ -428,7 +428,7 @@
 		"10Ucbeasy": [ "30$1ddmgs", 2, 50 ]
 	},
 	"melvorItA:Lacerating_Shortbow": {
-		"base": "melvorItA:Twisted_Shortbow",
+		"base": [ "melvorItA:Twisted_Shortbow", "Update" ],
 		"10Ucbeasy": [ "30Lace", 2, 50 ]
 	},
 	"melvorItA:Plagueroot_Shortbow": {
@@ -524,7 +524,7 @@
 		"10Ucbeasy": [ [ "50bhp", "50bres$", "50btaken$" ], 3, 15 ]
 	},
 	"melvorAoD:Cursed_Longbow": {
-		"base": "melvorAoD:Unholy_Longbow",
+		"base": [ "melvorAoD:Unholy_Longbow", "Update" ],
 		"10Ucbeasy": [ [ "10Malice", "10Destruction", "10Spite", "10Consume", "10Eradicate"], 7, 100 ]
 	},
 	"melvorD:Redwood_Longbow": {
@@ -558,7 +558,7 @@
 		"10Ucbeasy": [ [ "2Madness" ], 3, 20 ]
 	},
 	"melvorTotH:Thorned_Power_Bow": {
-		"base": [ "melvorTotH:Carrion_Longbow" ],
+		"base": [ "melvorTotH:Carrion_Longbow", "Update" ],
 		"10Ucbeasy": [ [ "100Deadly" ], 3, 15 ]
 	},
 	"melvorItA:Twisted_Longbow": {
@@ -666,7 +666,7 @@
 		"10Ucbeasy": [ [ "50bres", "100$2beva$" ], 3, 20 ]
 	},
 	"melvorF:Slayer_Crossbow": {
-		"base": "melvorF:Dragon_Crossbow"
+		"base": [ "melvorF:Dragon_Crossbow", "Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Crossbow": {
 		"base": "Unholy2",
@@ -704,7 +704,7 @@
 		"10Ucbeasy": [ [ "100bhit", "50bres$" ], 3, 15 ]
 	},
 	"melvorItA:Toxic_Blast_Crossbow": {
-		"base": "melvorItA:Brumite_Crossbow",
+		"base": [ "melvorItA:Brumite_Crossbow", "Update" ],
 		"10Ucbeasy": [ "Anguish", 3, 25 ]
 	},
 	"melvorItA:Gloomite_Crossbow": {

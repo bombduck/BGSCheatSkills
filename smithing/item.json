@@ -1,7 +1,6 @@
 {
 	"melvorD:Bronze_Dagger": {
 		"base": [ "tier1" ],
-		"2barrier": [ 3 ],
 		"2OuniqueAttack": {
 			"id": "Sandstorm",
 			"damage": [
@@ -14,31 +13,29 @@
 	},
 	"melvorD:Iron_Dagger": {
 		"base": "tier2",
-		"3barrier": [ 5 ],
-		"3OuniqueAttack": { "id": "PoisonedHit" }
+		"3OuniqueAttack": { "id": "PoisonedHit" },
+		"10UitemRand": [
+			[ 0, 5, [ "melvorF:Stardust", "astr" ] ]
+		]
 	},
 	"melvorD:Steel_Dagger": {
 		"base": "tier3",
-		"4OuniqueAttack": { "id": "SwiftAttack", "damage": [ { "amplitude": 140 } ] },
-		"10UitemRand": [
-			[ 0, 5, [ "melvorF:Stardust", "astr" ] ],
-			[ 0, 3, [ "melvorF:Golden_Stardust", "astr" ] ]
-		]
+		"4OuniqueAttack": { "id": "SwiftAttack", "damage": [ { "amplitude": 140 } ] }
 	},
 	"melvorD:Mithril_Dagger": {
 		"base": "Unholy1",
 		"5OuniqueAttack": { "id": "BruteForce", "damage": [ { "amplitude": 140 } ] },
-		"10Ucbeasy": [ [ "100$$2@bacc", "100$$2@beva$", "10$$2@bsdmg$" ], 3, 15 ]
+		"10Ucbeasy": [ [ "100$$2@bacc", "100$$2@beva$", "10$$2@bsdmg$" ], 3, 10 ]
 	},
 	"melvorD:Adamant_Dagger": {
 		"base": "Unholy1",
 		"5OuniqueAttack": { "id": "ElementalImpactFrostburn" },
-		"10Ucbeasy": [ [ "Freeze" ], 3, 18 ]
+		"10Ucbeasy": [ [ "Freeze" ], 3, 12 ]
 	},
 	"melvorD:Rune_Dagger": {
 		"base": "Unholy2",
 		"5OuniqueAttack": { "id": "SunsetStab" },
-		"10Ucbeasy": [ "20@bdmghp", 1, 10 ]
+		"10Ucbeasy": [ "20@bdmghp", 1, 15 ]
 	},
 	"melvorD:Dragon_Dagger": {
 		"base": "Unholy2",
@@ -48,7 +45,7 @@
 	"melvorTotH:Corundum_Dagger": {
 		"base": [ "Unholy3", "TotHA" ],
 		"5OuniqueAttack": { "id": "Soulash", "damage": [ { "amplitude": 160 } ] },
-		"10Ucbeasy": [ [ "10shock" ], 3, 35 ]
+		"10Ucbeasy": [ [ "10shock" ], 3, 30 ]
 	},
 	"melvorTotH:Augite_Dagger": {
 		"base": [ "Unholy3", "TotHA" ],
@@ -156,12 +153,14 @@
 	"melvorD:Iron_Sword": {
 		"base": "tier2",
 		"3barrier": [ 8 ],
-		"3OuniqueAttack": { "id": "Sandstorm" }
+		"3OuniqueAttack": { "id": "Sandstorm" },
+		"10UitemRand": [
+			[ 0, 3, [ "melvorF:Golden_Stardust", "astr" ] ]
+		]
 	},
 	"melvorD:Steel_Sword": {
 		"base": "tier3",
-		"4OuniqueAttack": { "id": "Sandstorm", "damage": [{"minPercent": 4, "maxPercent": 28}] },
-		"10Uthieving": [ 0, 10000, "gp" ]
+		"4OuniqueAttack": { "id": "Sandstorm", "damage": [{"minPercent": 4, "maxPercent": 28}] }
 	},
 	"melvorD:Mithril_Sword": {
 		"base": "Unholy1",
@@ -237,12 +236,12 @@
 	"melvorD:Iron_Battleaxe": {
 		"base": "tier2",
 		"3barrier": [ 12 ],
-		"3OuniqueAttack": { "id": "ElementalImpactStun" }
+		"3OuniqueAttack": { "id": "ElementalImpactStun" },
+		"10Ucart2": [ 0, 0, 50 ]
 	},
 	"melvorD:Steel_Battleaxe": {
 		"base": "tier3",
-		"4OuniqueAttack": { "id": "UnlimitedSlappingPower" },
-		"10cart": [ -90 ]
+		"4OuniqueAttack": { "id": "UnlimitedSlappingPower" }
 	},
 	"melvorD:Mithril_Battleaxe": {
 		"base": "Unholy1",
@@ -287,12 +286,12 @@
 	"melvorD:Iron_Scimitar": {
 		"base": "tier2",
 		"3barrier": [ 9 ],
-		"3OuniqueAttack": { "id": "CrushingDoubleSlash", "damage": [ { "amplitude": 60 } ] }
+		"3OuniqueAttack": { "id": "CrushingDoubleSlash", "damage": [ { "amplitude": 60 } ] },
+		"10skillAddItem": [ 0, 0.1, [ "melvorF:Bank_Slot_Token", "fire" ] ]
 	},
 	"melvorD:Steel_Scimitar": {
 		"base": "tier3",
-		"4OuniqueAttack": { "id": "DoubleEdged" },
-		"10skillAddItem": [ 0, 0.1, [ "melvorF:Bank_Slot_Token", "fire" ] ]
+		"4OuniqueAttack": { "id": "DoubleEdged" }
 	},
 	"melvorD:Mithril_Scimitar": {
 		"base": "Unholy1",
@@ -365,14 +364,14 @@
 		"base": "tier2",
 		"Uress": [ 2 ],
 		"3barrier": [ 15 ],
-		"3OuniqueAttack": { "id": "UnlimitedSlappingPower" }
+		"3OuniqueAttack": { "id": "UnlimitedSlappingPower" },
+		"10arch": [ 0, 0, 0, 0, 50 ],
+		"10arch2": [ 50, 50, 50, 50 ]
 	},
 	"melvorD:Steel_2H_Sword": {
 		"base": "tier3",
 		"Uress": [ 3 ],
-		"4OuniqueAttack": { "id": "DeadlyCut" },
-		"10arch": [ 0, 0, 0, 0, 50 ],
-		"10arch2": [ 50, 50, 50, 50 ]
+		"4OuniqueAttack": { "id": "DeadlyCut" }
 	},
 	"melvorD:Mithril_2H_Sword": {
 		"base": "Unholy1",
@@ -516,12 +515,12 @@
 	"melvorD:Iron_Throwing_Knife": {
 		"base": "tier2",
 		"3barrier": [ 5 ],
-		"3OuniqueAttack": { "id": "SwiftAttack", "damage": [{"amplitude": 80}] }
+		"3OuniqueAttack": { "id": "SwiftAttack", "damage": [{"amplitude": 80}] },
+		"10skillAddItem": [ 0, 0.1, [ "melvorF:Bank_Slot_Token", "arch" ] ]
 	},
 	"melvorD:Steel_Throwing_Knife": {
 		"base": "tier3",
-		"4OuniqueAttack": { "id": "ElementalImpactFrostburn" },
-		"10skillAddItem": [ 0, 0.1, [ "melvorF:Bank_Slot_Token", "arch" ] ]
+		"4OuniqueAttack": { "id": "ElementalImpactFrostburn" }
 	},
 	"melvorD:Mithril_Throwing_Knife": {
 		"base": "Unholy1",
@@ -641,56 +640,59 @@
 		"base": [ "tier1", "shield" ]
 	},
 	"melvorD:Bronze_Shield_T_S": {
-		"base": "melvorD:Bronze_Shield"
+		"base": [ "melvorD:Bronze_Shield", "Update" ]
 	},
 	"melvorD:Bronze_Shield_T_G": {
-		"base": "melvorD:Bronze_Shield_T_S"
+		"base": [ "melvorD:Bronze_Shield_T_S", "Update" ]
 	},
 	"melvorD:Iron_Shield": {
-		"base": [ "tier2", "2shield" ]
+		"base": [ "tier2", "2shield" ],
+		"10itemRand": [
+			[ 100, [ "melvorF:Stardust", "astr" ] ]
+		]
 	},
 	"melvorD:Iron_Shield_T_S": {
-		"base": "melvorD:Iron_Shield"
+		"base": [ "melvorD:Iron_Shield", "Update" ]
 	},
 	"melvorD:Iron_Shield_T_G": {
-		"base": "melvorD:Iron_Shield_T_S"
+		"base": [ "melvorD:Iron_Shield_T_S", "Update" ]
 	},
 	"melvorD:Steel_Shield": {
 		"base": [ "tier3", "3shield" ]
 	},
 	"melvorD:Steel_Shield_T_S": {
-		"base": "melvorD:Steel_Shield"
+		"base": [ "melvorD:Steel_Shield", "Update" ]
 	},
 	"melvorD:Steel_Shield_T_G": {
-		"base": "melvorD:Steel_Shield_T_S"
+		"base": [ "melvorD:Steel_Shield_T_S", "Update" ]
 	},
 	"melvorD:Mithril_Shield": {
 		"base": [ "Unholy1", "4shield" ]
 	},
 	"melvorD:Mithril_Shield_T_S": {
-		"base": "melvorD:Mithril_Shield"
+		"base": ["melvorD:Mithril_Shield","Update"]
 	},
 	"melvorD:Mithril_Shield_T_G": {
-		"base": "melvorD:Mithril_Shield_T_S"
+		"base": [ "melvorD:Mithril_Shield_T_S", "Update" ]
 	},
 	"melvorAoD:Crystal_Shield": {
 		"base": [ "Unholy1", "4shield" ],
 		"5cbeasy": [ [ "melvorAoD:GrudgePlayer","melvorAoD:GrudgeEnemy$"], 7, 100 ]
 	},
 	"melvorAoD:Crystal_Shield_T_S": {
-		"base": "melvorAoD:Crystal_Shield"
+		"base": [ "melvorAoD:Crystal_Shield", "Update" ]
 	},
 	"melvorAoD:Crystal_Shield_T_G": {
-		"base": "melvorAoD:Crystal_Shield_T_S"
+		"base": [ "melvorAoD:Crystal_Shield_T_S", "Update" ]
 	},
 	"melvorD:Adamant_Shield": {
 		"base": [ "Unholy1", "5shield" ]
 	},
 	"melvorD:Adamant_Shield_T_S": {
-		"base": "melvorD:Adamant_Shield"
+		"base": [ "melvorD:Adamant_Shield", "Update" ]
 	},
 	"melvorD:Adamant_Shield_T_G": {
-		"base": "melvorD:Adamant_Shield_T_S"
+		"base": [ "melvorD:Adamant_Shield_T_S", "Update" ]
 	},
 	"melvorAoD:Aranite_Shield": {
 		"base": [ "Unholy1", "5shield" ],
@@ -700,29 +702,29 @@
 		"base": [ "Unholy2", "6shield" ]
 	},
 	"melvorD:Rune_Shield_T_S": {
-		"base": "melvorD:Rune_Shield"
+		"base": [ "melvorD:Rune_Shield", "Update" ]
 	},
 	"melvorD:Rune_Shield_T_G": {
-		"base": "melvorD:Rune_Shield_T_S"
+		"base": [ "melvorD:Rune_Shield_T_S", "Update" ]
 	},
 	"melvorD:Dragon_Shield": {
 		"base": [ "Unholy2", "7shield" ]
 	},
 	"melvorD:Dragon_Shield_T_S": {
-		"base": "melvorD:Dragon_Shield"
+		"base": [ "melvorD:Dragon_Shield", "Update" ]
 	},
 	"melvorD:Dragon_Shield_T_G": {
-		"base": "melvorD:Dragon_Shield_T_S"
+		"base": [ "melvorD:Dragon_Shield_T_S", "Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Shield": {
 		"base": [ "Unholy2", "7shield" ],
 		"5Ucbeasy": [ "melvorAoD:Martyr", 7, 30, { "sm": 10, "sa": 10 } ]
 	},
 	"melvorAoD:Pure_Crystal_Shield_T_S": {
-		"base": "melvorAoD:Pure_Crystal_Shield"
+		"base": [ "melvorAoD:Pure_Crystal_Shield", "Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Shield_T_G": {
-		"base": "melvorAoD:Pure_Crystal_Shield_T_S"
+		"base": [ "melvorAoD:Pure_Crystal_Shield_T_S", "Update" ]
 	},
 	"melvorAoD:Darksteel_Shield": {
 		"base": [ "Unholy2", "7shield" ],
@@ -735,28 +737,28 @@
 		"base": [ "Unholy3", "8shield" ]
 	},
 	"melvorTotH:Corundum_Shield_T_I": {
-		"base": "melvorTotH:Corundum_Shield"
+		"base": [ "melvorTotH:Corundum_Shield", "Update" ]
 	},
 	"melvorTotH:Corundum_Shield_T_P": {
-		"base": "melvorTotH:Corundum_Shield_T_I"
+		"base": [ "melvorTotH:Corundum_Shield_T_I", "Update" ]
 	},
 	"melvorTotH:Augite_Shield": {
 		"base": [ "Unholy3", "9shield" ]
 	},
 	"melvorTotH:Augite_Shield_T_I": {
-		"base": "melvorTotH:Augite_Shield"
+		"base": [ "melvorTotH:Augite_Shield", "Update" ]
 	},
 	"melvorTotH:Augite_Shield_T_P": {
-		"base": "melvorTotH:Augite_Shield_T_I"
+		"base": [ "melvorTotH:Augite_Shield_T_I", "Update" ]
 	},
 	"melvorTotH:Divine_Shield": {
 		"base": [ "Unholy4", "10shield" ]
 	},
 	"melvorTotH:Divine_Shield_T_I": {
-		"base": "melvorTotH:Divine_Shield"
+		"base": [ "melvorTotH:Divine_Shield", "Update" ]
 	},
 	"melvorTotH:Divine_Shield_T_P": {
-		"base": "melvorTotH:Divine_Shield_T_I"
+		"base": [ "melvorTotH:Divine_Shield_T_I", "Update" ]
 	},
 	"melvorD:Bronze_Gloves": {
 		"base": "tier1",
@@ -764,7 +766,8 @@
 	},
 	"melvorD:Iron_Gloves": {
 		"base": "tier2",
-		"5Ucbeasy": [ "2Stun", 2, 10 ]
+		"5Ucbeasy": [ "2Stun", 2, 10 ],
+		"10Uastrology": [0,0,-10]
 	},
 	"melvorD:Steel_Gloves": {
 		"base": "tier3",
@@ -820,43 +823,38 @@
 		"base": "melvorD:Bronze_Helmet_T_S"
 	},
 	"melvorAoD:Bronze_Helmet_T_B": {
-		"base": "melvorD:Bronze_Helmet_T_G",
-		"barrier": [ 0, 2 ]
+		"base": [ "melvorD:Bronze_Helmet_T_G", "AoD1" ]
 	},
 	"melvorD:Iron_Helmet": {
 		"base": "tier2",
 		"Uress": [ 2 ],
 		"3slayer": [ 10 ],
-		"3prayerGetCombat": [ 0, 20 ]
+		"3prayerGetCombat": [ 0, 20 ],
+		"10rune": [ 0, 100, 50, 50 ]
 	},
 	"melvorD:Iron_Helmet_T_S": {
-		"base": "melvorD:Iron_Helmet"
+		"base": [ "melvorD:Iron_Helmet", "Update" ]
 	},
 	"melvorD:Iron_Helmet_T_G": {
-		"base": "melvorD:Iron_Helmet_T_S"
+		"base": [ "melvorD:Iron_Helmet_T_S", "Update" ]
 	},
 	"melvorAoD:Iron_Helmet_T_B": {
-		"base": "melvorD:Iron_Helmet_T_G",
-		"3barrier": [ 0, 4, 5 ],
-		"5summon": [ 0, 0, 5 ]
+		"base": [ "melvorD:Iron_Helmet_T_G", "AoD2", "Update" ]
 	},
 	"melvorD:Steel_Helmet": {
 		"base": "tier3",
 		"Uress": [ 3 ],
 		"3allow": [ 0, 0, 0, 0, 1 ],
-		"3slayer": [ 15 ],
-		"10rune": [ 0, 100, 50, 50 ]
+		"3slayer": [ 15 ]
 	},
 	"melvorD:Steel_Helmet_T_S": {
-		"base": "melvorD:Steel_Helmet"
+		"base": [ "melvorD:Steel_Helmet", "Update" ]
 	},
 	"melvorD:Steel_Helmet_T_G": {
-		"base": "melvorD:Steel_Helmet_T_S"
+		"base": [ "melvorD:Steel_Helmet_T_S", "Update" ]
 	},
 	"melvorAoD:Steel_Helmet_T_B": {
-		"base": "melvorD:Steel_Helmet_T_G",
-		"3barrier": [ 6, 10 ],
-		"6summon": [ 0, 0, 10 ]
+		"base": [ "melvorD:Steel_Helmet_T_G", "AoD3", "Update" ]
 	},
 	"melvorD:Mithril_Helmet": {
 		"base": "Unholy1",
@@ -865,35 +863,29 @@
 		"10Ucbeasy": [ "2Weakening", 5, 15, { "t": 4 } ]
 	},
 	"melvorD:Mithril_Helmet_T_S": {
-		"base": "melvorD:Mithril_Helmet"
+		"base": [ "melvorD:Mithril_Helmet", "Update" ]
 	},
 	"melvorD:Mithril_Helmet_T_G": {
-		"base": "melvorD:Mithril_Helmet_T_S"
+		"base": [ "melvorD:Mithril_Helmet_T_S", "Update" ]
 	},
 	"melvorAoD:Mithril_Helmet_T_B": {
-		"base": "melvorD:Mithril_Helmet_T_G",
-		"5barrier": [ 0, 8, 15 ],
-		"5summon": [ 0, 0, 15 ]
+		"base": [ "melvorD:Mithril_Helmet_T_G", "AoD4","Update" ]
 	},
 	"melvorAoD:Mithril_Helmet_T_C": {
-		"base": "melvorAoD:Mithril_Helmet_T_B",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Mithril_Helmet_T_B", "Update" ]
 	},
 	"melvorAoD:Crystal_Helmet": {
-		"base": "Unholy1",
+		"base": [ "Unholy1", "AoD4" ],
 		"Uress": [ 4 ],
 		"5slayer": [ 10 ],
 		"5Ucbeasy": [ "Consume", 7, 100 ],
 		"10Ucbeasy": [ "1Weakening", 4, 40, { "t": 2 } ]
 	},
 	"melvorAoD:Crystal_Helmet_T_S": {
-		"base": "melvorAoD:Crystal_Helmet",
-		"5barrier": [ 0, 8, 15 ],
-		"5summon": [ 0, 0, 15 ]
+		"base": [ "melvorAoD:Crystal_Helmet", "Update" ]
 	},
 	"melvorAoD:Crystal_Helmet_T_G": {
-		"base": "melvorAoD:Crystal_Helmet_T_S",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Crystal_Helmet_T_S", "Update" ]
 	},
 	"melvorD:Adamant_Helmet": {
 		"base": "Unholy1",
@@ -902,19 +894,16 @@
 		"10Ucbeasy": [ "Slow", 3, 40, { "t": 4 } ]
 	},
 	"melvorD:Adamant_Helmet_T_S": {
-		"base": "melvorD:Adamant_Helmet"
+		"base": [ "melvorD:Adamant_Helmet", "Update" ]
 	},
 	"melvorD:Adamant_Helmet_T_G": {
-		"base": "melvorD:Adamant_Helmet_T_S"
+		"base": [ "melvorD:Adamant_Helmet_T_S", "Update" ]
 	},
 	"melvorAoD:Adamant_Helmet_T_B": {
-		"base": "melvorD:Adamant_Helmet_T_G",
-		"5barrier": [ 0, 10, 20 ],
-		"5summon": [ 0, 0, 20 ]
+		"base": [ "melvorD:Adamant_Helmet_T_G", "AoD5","Update" ]
 	},
 	"melvorAoD:Adamant_Helmet_T_C": {
-		"base": "melvorAoD:Adamant_Helmet_T_B",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Adamant_Helmet_T_B", "Update" ]
 	},
 	"melvorD:Rune_Helmet": {
 		"base": "Unholy2",
@@ -923,19 +912,16 @@
 		"10Ucbeasy": [ "2Stun", 2, 25 ]
 	},
 	"melvorD:Rune_Helmet_T_S": {
-		"base": "melvorD:Rune_Helmet"
+		"base": [ "melvorD:Rune_Helmet", "Update" ]
 	},
 	"melvorD:Rune_Helmet_T_G": {
-		"base": "melvorD:Rune_Helmet_T_S"
+		"base": [ "melvorD:Rune_Helmet_T_S", "Update" ]
 	},
 	"melvorAoD:Rune_Helmet_T_B": {
-		"base": "melvorD:Rune_Helmet_T_G",
-		"5barrier": [ 0, 12, 25 ],
-		"5summon": [ 0, 0, 25 ]
+		"base": [ "melvorD:Rune_Helmet_T_G", "AoD6","Update" ]
 	},
 	"melvorAoD:Rune_Helmet_T_C": {
-		"base": "melvorAoD:Rune_Helmet_T_B",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Rune_Helmet_T_B", "Update" ]
 	},
 	"melvorD:Dragon_Helmet": {
 		"base": "Unholy2",
@@ -944,35 +930,28 @@
 		"10Ucbeasy": [ [ "50bhp", "50bres$", "50beva$", "50btaken$" ], 5, 20 ]
 	},
 	"melvorD:Dragon_Helmet_T_S": {
-		"base": "melvorD:Dragon_Helmet"
+		"base": [ "melvorD:Dragon_Helmet", "Update" ]
 	},
 	"melvorD:Dragon_Helmet_T_G": {
-		"base": "melvorD:Dragon_Helmet_T_S"
+		"base": [ "melvorD:Dragon_Helmet_T_S", "Update" ]
 	},
 	"melvorAoD:Dragon_Helmet_T_B": {
-		"base": "melvorD:Dragon_Helmet_T_G",
-		"5barrier": [ 0, 15, 30 ],
-		"5summon": [ 0, 0, 30 ]
+		"base": [ "melvorD:Dragon_Helmet_T_G", "AoD7","Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Helmet": {
-		"base": "Unholy2",
+		"base": [ "Unholy2", "AoD7" ],
 		"Uress": [ 7 ],
 		"5slayer": [ 40 ],
 		"5Ucbeasy": [ "10Consume", 7, 100 ]
 	},
 	"melvorAoD:Pure_Crystal_Helmet_T_S": {
-		"base": "melvorAoD:Pure_Crystal_Helmet",
-		"5barrier": [ 0, 20, 35 ],
-		"5summon": [ 0, 0, 35 ]
+		"base": [ "melvorAoD:Pure_Crystal_Helmet", "Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Helmet_T_G": {
-		"base": "melvorAoD:Pure_Crystal_Helmet_T_S",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Pure_Crystal_Helmet_T_S", "Update" ]
 	},
 	"melvorAoD:Dragon_Helmet_T_C": {
-		"base": "melvorAoD:Pure_Crystal_Helmet_T_G",
-		"5barrier": [ 0, 25, 40 ],
-		"5summon": [ 0, -10, 40 ]
+		"base": [ "melvorAoD:Dragon_Helmet_T_B", "melvorAoD:Pure_Crystal_Helmet_T_G" ]
 	},
 	"melvorTotH:Corundum_Helmet": {
 		"base": [ "Unholy3", "TotHD1" ],
@@ -980,10 +959,10 @@
 		"5Ucbeasy": [ "100dp", 3, 20 ]
 	},
 	"melvorTotH:Corundum_Helmet_T_I": {
-		"base": "melvorTotH:Corundum_Helmet"
+		"base": [ "melvorTotH:Corundum_Helmet", "Update" ]
 	},
 	"melvorTotH:Corundum_Helmet_T_P": {
-		"base": "melvorTotH:Corundum_Helmet_T_I"
+		"base": [ "melvorTotH:Corundum_Helmet_T_I", "Update" ]
 	},
 	"melvorTotH:Augite_Helmet": {
 		"base": [ "Unholy3", "TotHD1" ],
@@ -991,10 +970,10 @@
 		"5Ucbeasy": [ "2Despair", 3, 20, { "t": 3 } ]
 	},
 	"melvorTotH:Augite_Helmet_T_I": {
-		"base": "melvorTotH:Augite_Helmet"
+		"base": [ "melvorTotH:Augite_Helmet", "Update" ]
 	},
 	"melvorTotH:Augite_Helmet_T_P": {
-		"base": "melvorTotH:Augite_Helmet_T_I"
+		"base": [ "melvorTotH:Augite_Helmet_T_I", "Update" ]
 	},
 	"melvorTotH:Meteorite_Helmet": {
 		"base": [ "Unholy4", "TotHD2" ],
@@ -1007,433 +986,367 @@
 		"5Ucbeasy": [ [ "50$1bhit", "50$1bhp$", "50$1btaken$", "50$1bspd$", "50$1bdmg$", "50$1bcrit$", "50$1bcritm$" ], 2, 20 ]
 	},
 	"melvorTotH:Divine_Helmet_T_I": {
-		"base": "melvorTotH:Divine_Helmet"
+		"base": [ "melvorTotH:Divine_Helmet", "Update" ]
 	},
 	"melvorTotH:Divine_Helmet_T_P": {
-		"base": "melvorTotH:Divine_Helmet_T_I"
+		"base": [ "melvorTotH:Divine_Helmet_T_I", "Update" ]
 	},
 	"melvorItA:Abyssium_Helmet": {
 		"base": [ "Unholy5", "AbyD" ],
 		"5Ucbeasy": [ "10Ablaze", 2, 25 ]
 	},
 	"melvorItA:Abyssium_Helmet_U": {
-		"base": "melvorItA:Abyssium_Helmet"
+		"base": [ "melvorItA:Abyssium_Helmet", "Update" ]
 	},
 	"melvorItA:Brumite_Helmet": {
 		"base": [ "Unholy5", "2AbyD" ],
 		"5Ucbeasy": [ "10blight", 3, 25 ]
 	},
 	"melvorItA:Brumite_Helmet_U": {
-		"base": "melvorItA:Brumite_Helmet"
+		"base": [ "melvorItA:Brumite_Helmet", "Update" ]
 	},
 	"melvorItA:Gloomite_Helmet": {
 		"base": [ "Unholy5", "3AbyD" ],
 		"5Ucbeasy": [ "100Toxin", 3, 20 ]
 	},
 	"melvorItA:Gloomite_Helmet_U": {
-		"base": "melvorItA:Gloomite_Helmet"
+		"base": [ "melvorItA:Gloomite_Helmet", "Update" ]
 	},
 	"melvorItA:Fear_Helmet": {
-		"base": "melvorItA:Gloomite_Helmet_U"
+		"base": [ "melvorItA:Gloomite_Helmet_U", "Update" ]
 	},
 	"melvorItA:Witherite_Helmet": {
 		"base": [ "Unholy5", "4AbyD" ],
 		"5Ucbeasy": [ "5Silence", 3, 25 ]
 	},
 	"melvorItA:Witherite_Helmet_U": {
-		"base": "melvorItA:Witherite_Helmet"
+		"base": [ "melvorItA:Witherite_Helmet", "Update" ]
 	},
 	"melvorItA:Netherite_Helmet": {
 		"base": [ "Unholy5", "5AbyD" ],
 		"5Ucbeasy": [ "100Voidburst", 3, 25 ]
 	},
 	"melvorItA:Netherite_Helmet_U": {
-		"base": "melvorItA:Netherite_Helmet"
+		"base": [ "melvorItA:Netherite_Helmet", "Update" ]
 	},
 	"melvorD:Bronze_Platebody": {
 		"base": [ "tier1", "body" ],
-		"Uress": [ 1 ],
 		"2slayer": [ 5 ]
 	},
 	"melvorD:Bronze_Platebody_T_S": {
-		"base": "melvorD:Bronze_Platebody"
+		"base": [ "melvorD:Bronze_Platebody", "Update" ]
 	},
 	"melvorD:Bronze_Platebody_T_G": {
-		"base": "melvorD:Bronze_Platebody_T_S"
+		"base": [ "melvorD:Bronze_Platebody_T_S", "Update" ]
 	},
 	"melvorAoD:Bronze_Platebody_T_B": {
-		"base": "melvorD:Bronze_Platebody_T_G",
-		"barrier": [ 0, 2 ]
+		"base": [ "melvorD:Bronze_Platebody_T_G", "AoD1","Update" ]
 	},
 	"melvorD:Iron_Platebody": {
 		"base": [ "tier2", "2body" ],
-		"Uress": [ 2 ],
-		"3slayer": [ 10 ]
-	},
-	"melvorD:Iron_Platebody_T_S": {
-		"base": "melvorD:Iron_Platebody"
-	},
-	"melvorD:Iron_Platebody_T_G": {
-		"base": "melvorD:Iron_Platebody_T_S"
-	},
-	"melvorAoD:Iron_Platebody_T_B": {
-		"base": "melvorD:Iron_Platebody_T_G",
-		"3barrier": [ 0, 4, 5 ],
-		"5summon": [ 0, 0, 5 ]
-	},
-	"melvorD:Steel_Platebody": {
-		"base": [ "tier3", "3body" ],
-		"Uress": [ 3 ],
-		"3slayer": [ 15 ],
+		"3slayer": [ 10 ],
 		"10itemRand": [
-			[ 100, [ "melvorF:Stardust", "astr" ] ],
 			[ 80, [ "melvorF:Golden_Stardust", "astr" ] ]
 		]
 	},
+	"melvorD:Iron_Platebody_T_S": {
+		"base": [ "melvorD:Iron_Platebody", "Update" ]
+	},
+	"melvorD:Iron_Platebody_T_G": {
+		"base": [ "melvorD:Iron_Platebody_T_S", "Update" ]
+	},
+	"melvorAoD:Iron_Platebody_T_B": {
+		"base": [ "melvorD:Iron_Platebody_T_G", "AoD2","Update" ]
+	},
+	"melvorD:Steel_Platebody": {
+		"base": [ "tier3", "3body" ],
+		"3slayer": [ 15 ]
+	},
 	"melvorD:Steel_Platebody_T_S": {
-		"base": "melvorD:Steel_Platebody"
+		"base": [ "melvorD:Steel_Platebody", "Update" ]
 	},
 	"melvorD:Steel_Platebody_T_G": {
-		"base": "melvorD:Steel_Platebody_T_S"
+		"base": [ "melvorD:Steel_Platebody_T_S", "Update" ]
 	},
 	"melvorAoD:Steel_Platebody_T_B": {
-		"base": "melvorD:Steel_Platebody_T_G",
-		"3barrier": [ 6, 10 ],
-		"6summon": [ 0, 0, 10 ]
+		"base": [ "melvorD:Steel_Platebody_T_G", "AoD3","Update" ]
 	},
 	"melvorD:Mithril_Platebody": {
 		"base": [ "Unholy1", "4body" ],
-		"Uress": [ 4 ],
 		"5slayer": [ 10 ]
 	},
 	"melvorD:Mithril_Platebody_T_S": {
-		"base": "melvorD:Mithril_Platebody"
+		"base": [ "melvorD:Mithril_Platebody", "Update" ]
 	},
 	"melvorD:Mithril_Platebody_T_G": {
-		"base": "melvorD:Mithril_Platebody_T_S"
+		"base": [ "melvorD:Mithril_Platebody_T_S", "Update" ]
 	},
 	"melvorAoD:Mithril_Platebody_T_B": {
-		"base": "melvorD:Mithril_Platebody_T_G",
-		"5barrier": [ 0, 8, 15 ],
-		"5summon": [ 0, 0, 15 ]
+		"base": [ "melvorD:Mithril_Platebody_T_G", "AoD4", "Update" ]
 	},
 	"melvorAoD:Mithril_Platebody_T_C": {
-		"base": "melvorAoD:Mithril_Platebody_T_B",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Mithril_Platebody_T_B", "Update" ]
 	},
 	"melvorAoD:Crystal_Platebody": {
-		"base": [ "Unholy1", "4body" ],
-		"Uress": [ 4 ],
+		"base": [ "Unholy1", "4body", "AoD4" ],
 		"5slayer": [ 10 ],
 		"5cbeasy": [ "Spite", 7, 100 ]
 	},
 	"melvorAoD:Crystal_Platebody_T_S": {
-		"base": "melvorAoD:Crystal_Platebody",
-		"5barrier": [ 0, 8, 15 ],
-		"5summon": [ 0, 0, 15 ]
+		"base": [ "melvorAoD:Crystal_Platebody", "Update" ]
 	},
 	"melvorAoD:Crystal_Platebody_T_G": {
-		"base": "melvorAoD:Crystal_Platebody_T_S",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Crystal_Platebody_T_S", "Update" ]
 	},
 	"melvorD:Adamant_Platebody": {
 		"base": [ "Unholy1", "5body" ],
-		"Uress": [ 5 ],
 		"5slayer": [ 20 ]
 	},
 	"melvorD:Adamant_Platebody_T_S": {
-		"base": "melvorD:Adamant_Platebody"
+		"base": [ "melvorD:Adamant_Platebody", "Update" ]
 	},
 	"melvorD:Adamant_Platebody_T_G": {
-		"base": "melvorD:Adamant_Platebody_T_S"
+		"base": [ "melvorD:Adamant_Platebody_T_S", "Update" ]
 	},
 	"melvorAoD:Adamant_Platebody_T_B": {
-		"base": "melvorD:Adamant_Platebody_T_G",
-		"5barrier": [ 0, 10, 20 ],
-		"5summon": [ 0, 0, 20 ]
+		"base": [ "melvorD:Adamant_Platebody_T_G", "AoD5","Update" ]
 	},
 	"melvorAoD:Adamant_Platebody_T_C": {
-		"base": "melvorAoD:Adamant_Platebody_T_B",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Adamant_Platebody_T_B", "Update" ]
 	},
 	"melvorD:Rune_Platebody": {
 		"base": [ "Unholy2", "6body" ],
-		"Uress": [ 6 ],
 		"5slayer": [ 30 ]
 	},
 	"melvorD:Rune_Platebody_T_S": {
-		"base": "melvorD:Rune_Platebody"
+		"base": [ "melvorD:Rune_Platebody", "Update" ]
 	},
 	"melvorD:Rune_Platebody_T_G": {
-		"base": "melvorD:Rune_Platebody_T_S"
+		"base": [ "melvorD:Rune_Platebody_T_S", "Update" ]
 	},
 	"melvorAoD:Rune_Platebody_T_B": {
-		"base": "melvorD:Rune_Platebody_T_G",
-		"5barrier": [ 0, 12, 25 ],
-		"5summon": [ 0, 0, 25 ]
+		"base": [ "melvorD:Rune_Platebody_T_G", "AoD6","Update" ]
 	},
 	"melvorAoD:Rune_Platebody_T_C": {
-		"base": "melvorAoD:Rune_Platebody_T_B",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Rune_Platebody_T_B", "Update" ]
 	},
 	"melvorD:Dragon_Platebody": {
 		"base": [ "Unholy2", "7body" ],
-		"Uress": [ 7 ],
 		"5slayer": [ 40 ]
 	},
 	"melvorD:Dragon_Platebody_T_S": {
-		"base": "melvorD:Dragon_Platebody"
+		"base": [ "melvorD:Dragon_Platebody", "Update" ]
 	},
 	"melvorD:Dragon_Platebody_T_G": {
-		"base": "melvorD:Dragon_Platebody_T_S"
+		"base": [ "melvorD:Dragon_Platebody_T_S", "Update" ]
 	},
 	"melvorAoD:Dragon_Platebody_T_B": {
-		"base": "melvorD:Dragon_Platebody_T_G",
-		"5barrier": [ 0, 15, 30 ],
-		"5summon": [ 0, 0, 30 ]
+		"base": [ "melvorD:Dragon_Platebody_T_G", "AoD7","Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Platebody": {
-		"base": [ "Unholy2", "7body" ],
-		"Uress": [ 7 ],
+		"base": [ "Unholy2", "7body", "AoD7"],
 		"5slayer": [ 40 ],
 		"5Ucbeasy": [ "10Spite", 7, 100 ]
 	},
 	"melvorAoD:Pure_Crystal_Platebody_T_S": {
-		"base": "melvorAoD:Pure_Crystal_Platebody",
-		"5barrier": [ 0, 20, 35 ],
-		"5summon": [ 0, 0, 35 ]
+		"base": [ "melvorAoD:Pure_Crystal_Platebody", "Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Platebody_T_G": {
-		"base": "melvorAoD:Pure_Crystal_Platebody_T_S",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Pure_Crystal_Platebody_T_S", "Update" ]
 	},
 	"melvorAoD:Dragon_Platebody_T_C": {
-		"base": "melvorAoD:Pure_Crystal_Platebody_T_G",
-		"5barrier": [ 0, 25, 40 ],
-		"5summon": [ 0, -10, 40 ]
+		"base": [ "melvorAoD:Dragon_Platebody_T_B","melvorAoD:Pure_Crystal_Platebody_T_G" ]
 	},
 	"melvorAoD:Unholy_Platebody": {
 		"base": [ "Base", "7body" ],
-		"Uress": [ 7 ],
 		"5Uatkeffect": [3],
 		"5Ucbeasy": [ "20unholy", 3 ],
 		"5slayer": [ 40 ]
 	},
 	"melvorAoD:Cursed_Platebody": {
-		"base": "melvorAoD:Unholy_Platebody",
-		"5Ubarrier": [ 0, 25, 35 ],
+		"base": [ "melvorAoD:Unholy_Platebody", "Update" ],
+		"5Nbarrier": [ 0, 20, 30 ],
 		"5Usummon": [ 0, -10, 35 ],
 		"5atkeffect": [ 0, 0, 50 ],
 		"10atkeffect": [ 0, 0, 100 ]
 	},
 	"melvorTotH:Corundum_Platebody": {
-		"base": [ "Unholy3", "8body", "TotHD1" ],
-		"Uress": [ 8 ]
+		"base": [ "Unholy3", "8body", "TotHD1" ]
 	},
 	"melvorTotH:Corundum_Platebody_T_I": {
-		"base": "melvorTotH:Corundum_Platebody"
+		"base": [ "melvorTotH:Corundum_Platebody", "Update" ]
 	},
 	"melvorTotH:Corundum_Platebody_T_P": {
-		"base": "melvorTotH:Corundum_Platebody_T_I"
+		"base": [ "melvorTotH:Corundum_Platebody_T_I", "Update" ]
 	},
 	"melvorTotH:Augite_Platebody": {
-		"base": [ "Unholy3", "9body", "TotHD1" ],
-		"Uress": [ 9 ]
+		"base": [ "Unholy3", "9body", "TotHD1" ]
 	},
 	"melvorTotH:Augite_Platebody_T_I": {
-		"base": "melvorTotH:Augite_Platebody"
+		"base": [ "melvorTotH:Augite_Platebody", "Update" ]
 	},
 	"melvorTotH:Augite_Platebody_T_P": {
-		"base": "melvorTotH:Augite_Platebody_T_I"
+		"base": [ "melvorTotH:Augite_Platebody_T_I", "Update" ]
 	},
 	"melvorTotH:Meteorite_Platebody": {
-		"base": [ "Unholy4", "10body", "TotHD2" ],
-		"Uress": [ 10 ]
+		"base": [ "Unholy4", "10body", "TotHD2" ]
 	},
 	"melvorTotH:Divine_Platebody": {
-		"base": [ "Unholy4", "10body", "TotHD2" ],
-		"Uress": [ 10 ]
+		"base": [ "Unholy4", "10body", "TotHD2" ]
 	},
 	"melvorTotH:Divine_Platebody_T_I": {
-		"base": "melvorTotH:Divine_Platebody"
+		"base": [ "melvorTotH:Divine_Platebody", "Update" ]
 	},
 	"melvorTotH:Divine_Platebody_T_P": {
-		"base": "melvorTotH:Divine_Platebody_T_I"
+		"base": [ "melvorTotH:Divine_Platebody_T_I", "Update" ]
 	},
 	"melvorItA:Abyssium_Platebody": {
-		"base": [ "Unholy5", "11body", "AbyD" ]
+		"base": [ "Unholy5", "bodyA" ]
 	},
 	"melvorItA:Abyssium_Platebody_U": {
-		"base": "melvorItA:Abyssium_Platebody"
+		"base": [ "melvorItA:Abyssium_Platebody", "Update" ]
 	},
 	"melvorItA:Woeful_Platebody": {
-		"base": "melvorItA:Abyssium_Platebody_U"
+		"base": [ "melvorItA:Abyssium_Platebody_U", "Update" ]
 	},
 	"melvorItA:Brumite_Platebody": {
-		"base": [ "Unholy5", "12body", "2AbyD" ]
+		"base": [ "Unholy5", "2bodyA" ]
 	},
 	"melvorItA:Brumite_Platebody_U": {
-		"base": "melvorItA:Brumite_Platebody"
+		"base": [ "melvorItA:Brumite_Platebody", "Update" ]
 	},
 	"melvorItA:Gloomite_Platebody": {
-		"base": [ "Unholy5", "13body", "3AbyD" ]
+		"base": [ "Unholy5", "3bodyA" ]
 	},
 	"melvorItA:Gloomite_Platebody_U": {
-		"base": "melvorItA:Gloomite_Platebody"
+		"base": [ "melvorItA:Gloomite_Platebody", "Update" ]
 	},
 	"melvorItA:Witherite_Platebody": {
-		"base": [ "Unholy5", "14body", "4AbyD" ]
+		"base": [ "Unholy5", "4bodyA" ]
 	},
 	"melvorItA:Witherite_Platebody_U": {
-		"base": "melvorItA:Witherite_Platebody"
+		"base": [ "melvorItA:Witherite_Platebody", "Update" ]
 	},
 	"melvorItA:Netherite_Platebody": {
-		"base": [ "Unholy5", "15body", "5AbyD" ]
+		"base": [ "Unholy5", "5bodyA" ]
 	},
 	"melvorItA:Netherite_Platebody_U": {
-		"base": "melvorItA:Netherite_Platebody"
+		"base": [ "melvorItA:Netherite_Platebody", "Update" ]
 	},
 	"melvorD:Bronze_Platelegs": {
 		"base": [ "tier1", "legs" ],
-		"Uress": [ 1 ],
 		"2slayer": [ 5 ]
 	},
 	"melvorD:Bronze_Platelegs_T_S": {
-		"base": "melvorD:Bronze_Platelegs"
+		"base": [ "melvorD:Bronze_Platelegs", "Update" ]
 	},
 	"melvorD:Bronze_Platelegs_T_G": {
-		"base": "melvorD:Bronze_Platelegs_T_S"
+		"base": [ "melvorD:Bronze_Platelegs_T_S", "Update" ]
 	},
 	"melvorAoD:Bronze_Platelegs_T_B": {
-		"base": "melvorD:Bronze_Platelegs_T_G",
-		"barrier": [ 0, 2 ]
+		"base": [ "melvorD:Bronze_Platelegs_T_G", "AoD1", "Update" ]
 	},
 	"melvorD:Iron_Platelegs": {
 		"base": [ "tier2", "2legs" ],
-		"Uress": [ 2 ],
-		"3slayer": [ 10 ]
+		"3slayer": [ 10 ],
+		"10summon2": [ 0, 100 ]
 	},
 	"melvorD:Iron_Platelegs_T_S": {
-		"base": "melvorD:Iron_Platelegs"
+		"base": [ "melvorD:Iron_Platelegs", "Update" ]
 	},
 	"melvorD:Iron_Platelegs_T_G": {
-		"base": "melvorD:Iron_Platelegs_T_S"
+		"base": [ "melvorD:Iron_Platelegs_T_S", "Update" ]
 	},
 	"melvorAoD:Iron_Platelegs_T_B": {
-		"base": "melvorD:Iron_Platelegs_T_G",
-		"3barrier": [ 0, 4, 5 ],
-		"5summon": [ 0, 0, 5 ]
+		"base": [ "melvorD:Iron_Platelegs_T_G", "AoD2", "Update" ]
 	},
 	"melvorD:Steel_Platelegs": {
 		"base": [ "tier3", "3legs" ],
-		"Uress": [ 3 ],
-		"3slayer": [ 15 ],
-		"10summon2": [ 0, 100 ]
+		"3slayer": [ 15 ]
 	},
 	"melvorD:Steel_Platelegs_T_S": {
-		"base": "melvorD:Steel_Platelegs"
+		"base": [ "melvorD:Steel_Platelegs", "Update" ]
 	},
 	"melvorD:Steel_Platelegs_T_G": {
-		"base": "melvorD:Steel_Platelegs_T_S"
+		"base": [ "melvorD:Steel_Platelegs_T_S", "Update" ]
 	},
 	"melvorAoD:Steel_Platelegs_T_B": {
-		"base": "melvorD:Steel_Platelegs_T_G",
-		"3barrier": [ 6, 10 ],
-		"6summon": [ 0, 0, 10 ]
+		"base": [ "melvorD:Steel_Platelegs_T_G", "AoD3", "Update" ]
 	},
 	"melvorD:Mithril_Platelegs": {
 		"base": [ "Unholy1", "4legs" ],
-		"Uress": [ 4 ],
 		"5slayer": [ 10 ]
 	},
 	"melvorD:Mithril_Platelegs_T_S": {
-		"base": "melvorD:Mithril_Platelegs"
+		"base": [ "melvorD:Mithril_Platelegs", "Update" ]
 	},
 	"melvorD:Mithril_Platelegs_T_G": {
-		"base": "melvorD:Mithril_Platelegs_T_S"
+		"base": [ "melvorD:Mithril_Platelegs_T_S", "Update" ]
 	},
 	"melvorAoD:Mithril_Platelegs_T_B": {
-		"base": "melvorD:Mithril_Platelegs_T_G",
-		"5barrier": [ 0, 8, 15 ],
-		"5summon": [ 0, 0, 15 ]
+		"base": [ "melvorD:Mithril_Platelegs_T_G", "AoD4", "Update" ]
 	},
 	"melvorAoD:Mithril_Platelegs_T_C": {
-		"base": "melvorAoD:Mithril_Platelegs_T_B",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Mithril_Platelegs_T_B", "Update" ]
 	},
 	"melvorAoD:Crystal_Platelegs": {
-		"base": [ "Unholy1", "4legs" ],
-		"Uress": [ 4 ],
+		"base": [ "Unholy1", "4legs", "AoD4" ],
 		"5slayer": [ 10 ],
 		"5cbeasy": [ "melvorAoD:Martyr", 7, 100 ]
 	},
 	"melvorAoD:Crystal_Platelegs_T_S": {
-		"base": "melvorAoD:Crystal_Platelegs",
-		"5barrier": [ 0, 8, 15 ],
-		"5summon": [ 0, 0, 15 ]
+		"base": [ "melvorAoD:Crystal_Platelegs", "Update" ]
 	},
 	"melvorAoD:Crystal_Platelegs_T_G": {
-		"base": "melvorAoD:Crystal_Platelegs_T_S",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Crystal_Platelegs_T_S", "Update" ]
 	},
 	"melvorD:Adamant_Platelegs": {
 		"base": [ "Unholy1", "5legs" ],
-		"Uress": [ 5 ],
 		"5slayer": [ 20 ]
 	},
 	"melvorD:Adamant_Platelegs_T_S": {
-		"base": "melvorD:Adamant_Platelegs"
+		"base": [ "melvorD:Adamant_Platelegs", "Update" ]
 	},
 	"melvorD:Adamant_Platelegs_T_G": {
-		"base": "melvorD:Adamant_Platelegs_T_S"
+		"base": [ "melvorD:Adamant_Platelegs_T_S", "Update" ]
 	},
 	"melvorAoD:Adamant_Platelegs_T_B": {
-		"base": "melvorD:Adamant_Platelegs_T_G",
-		"5barrier": [ 0, 10, 20 ],
-		"5summon": [ 0, 0, 20 ]
+		"base": [ "melvorD:Adamant_Platelegs_T_G", "AoD5", "Update" ]
 	},
 	"melvorAoD:Adamant_Platelegs_T_C": {
-		"base": "melvorAoD:Adamant_Platelegs_T_B",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Adamant_Platelegs_T_B", "Update" ]
 	},
 	"melvorD:Rune_Platelegs": {
 		"base": [ "Unholy2", "6legs" ],
-		"Uress": [ 6 ],
 		"5slayer": [ 30 ]
 	},
 	"melvorD:Rune_Platelegs_T_S": {
-		"base": "melvorD:Rune_Platelegs"
+		"base": [ "melvorD:Rune_Platelegs", "Update" ]
 	},
 	"melvorD:Rune_Platelegs_T_G": {
-		"base": "melvorD:Rune_Platelegs_T_S"
+		"base": [ "melvorD:Rune_Platelegs_T_S", "Update" ]
 	},
 	"melvorAoD:Rune_Platelegs_T_B": {
-		"base": "melvorD:Rune_Platelegs_T_G",
-		"5barrier": [ 0, 12, 25 ],
-		"5summon": [ 0, 0, 25 ]
+		"base": [ "melvorD:Rune_Platelegs_T_G", "AoD6", "Update" ]
 	},
 	"melvorAoD:Rune_Platelegs_T_C": {
-		"base": "melvorAoD:Rune_Platelegs_T_B",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Rune_Platelegs_T_B", "Update" ]
 	},
 	"melvorD:Dragon_Platelegs": {
 		"base": [ "Unholy2", "7legs" ],
-		"Uress": [ 7 ],
 		"5slayer": [ 40 ]
 	},
 	"melvorD:Dragon_Platelegs_T_S": {
-		"base": "melvorD:Dragon_Platelegs"
+		"base": [ "melvorD:Dragon_Platelegs", "Update" ]
 	},
 	"melvorD:Dragon_Platelegs_T_G": {
-		"base": "melvorD:Dragon_Platelegs_T_S"
+		"base": [ "melvorD:Dragon_Platelegs_T_S", "Update" ]
 	},
 	"melvorAoD:Dragon_Platelegs_T_B": {
-		"base": "melvorD:Dragon_Platelegs_T_G",
-		"5barrier": [ 0, 15, 30 ],
-		"5summon": [ 0, 0, 30 ]
+		"base": [ "melvorD:Dragon_Platelegs_T_G", "AoD7", "Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Platelegs": {
-		"base": [ "Unholy2", "7legs" ],
+		"base": [ "Unholy2", "7legs", "AoD7" ],
 		"Uress": [ 7 ],
 		"5slayer": [ 40 ],
 		"5cbeasys": [
@@ -1442,93 +1355,79 @@
 		]
 	},
 	"melvorAoD:Pure_Crystal_Platelegs_T_S": {
-		"base": "melvorAoD:Pure_Crystal_Platelegs",
-		"5barrier": [ 0, 20, 35 ],
-		"5summon": [ 0, 0, 35 ]
+		"base": [ "melvorAoD:Pure_Crystal_Platelegs", "Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Platelegs_T_G": {
-		"base": "melvorAoD:Pure_Crystal_Platelegs_T_S",
-		"5summon": [ 0, -5 ]
+		"base": [ "melvorAoD:Pure_Crystal_Platelegs_T_S", "Update" ]
 	},
 	"melvorAoD:Dragon_Platelegs_T_C": {
-		"base": "melvorAoD:Pure_Crystal_Platelegs_T_G",
-		"5barrier": [ 0, 25, 40 ],
-		"5summon": [ 0, -10, 40 ]
+		"base": [ "melvorAoD:Pure_Crystal_Platelegs_T_G", "melvorAoD:Dragon_Platelegs_T_B" ]
 	},
 	"melvorTotH:Corundum_Platelegs": {
-		"base": [ "Unholy3", "8legs", "TotHD1" ],
-		"Uress": [ 8 ]
+		"base": [ "Unholy3", "8legs", "TotHD1" ]
 	},
 	"melvorTotH:Corundum_Platelegs_T_I": {
-		"base": "melvorTotH:Corundum_Platelegs"
+		"base": [ "melvorTotH:Corundum_Platelegs", "Update" ]
 	},
 	"melvorTotH:Corundum_Platelegs_T_P": {
-		"base": "melvorTotH:Corundum_Platelegs_T_I"
+		"base": [ "melvorTotH:Corundum_Platelegs_T_I", "Update" ]
 	},
 	"melvorTotH:Augite_Platelegs": {
-		"base": [ "Unholy3", "9legs", "TotHD1" ],
-		"Uress": [ 9 ]
+		"base": [ "Unholy3", "9legs", "TotHD1" ]
 	},
 	"melvorTotH:Augite_Platelegs_T_I": {
-		"base": "melvorTotH:Augite_Platelegs"
+		"base": [ "melvorTotH:Augite_Platelegs", "Update" ]
 	},
 	"melvorTotH:Augite_Platelegs_T_P": {
-		"base": "melvorTotH:Augite_Platelegs_T_I"
+		"base": [ "melvorTotH:Augite_Platelegs_T_I", "Update" ]
 	},
 	"melvorTotH:Meteorite_Platelegs": {
-		"base": [ "Unholy4", "10legs", "TotHD2" ],
-		"Uress": [ 10 ]
+		"base": [ "Unholy4", "10legs", "TotHD2" ]
 	},
 	"melvorTotH:Divine_Platelegs": {
-		"base": [ "Unholy4", "10legs", "TotHD2" ],
-		"Uress": [ 10 ]
+		"base": [ "Unholy4", "10legs", "TotHD2" ]
 	},
 	"melvorTotH:Divine_Platelegs_T_I": {
-		"base": "melvorTotH:Divine_Platelegs"
+		"base": [ "melvorTotH:Divine_Platelegs", "Update" ]
 	},
 	"melvorTotH:Divine_Platelegs_T_P": {
-		"base": "melvorTotH:Divine_Platelegs_T_I"
+		"base": [ "melvorTotH:Divine_Platelegs_T_I", "Update" ]
 	},
 	"melvorTotH:Burning_Protection_Platelegs": {
-		"base": "melvorTotH:Divine_Platelegs_T_P"
+		"base": [ "melvorTotH:Divine_Platelegs_T_P", "Update" ]
 	},
 	"melvorItA:Abyssium_Platelegs": {
-		"base": [ "Unholy5", "AbyD" ],
-		"Ueva": [ 10 ]
+		"base": [ "Unholy5", "legsA" ]
 	},
 	"melvorItA:Abyssium_Platelegs_U": {
-		"base": "melvorItA:Abyssium_Platelegs"
+		"base": [ "melvorItA:Abyssium_Platelegs", "Update" ]
 	},
 	"melvorItA:Brumite_Platelegs": {
-		"base": [ "Unholy5", "2AbyD" ],
-		"Ueva": [ 20 ]
+		"base": [ "Unholy5", "2legsA" ]
 	},
 	"melvorItA:Brumite_Platelegs_U": {
-		"base": "melvorItA:Brumite_Platelegs"
+		"base": [ "melvorItA:Brumite_Platelegs", "Update" ]
 	},
 	"melvorItA:Blighting_Platelegs": {
-		"base": "melvorItA:Brumite_Platelegs_U"
+		"base": [ "melvorItA:Brumite_Platelegs_U", "Update" ]
 	},
 	"melvorItA:Gloomite_Platelegs": {
-		"base": [ "Unholy5", "3AbyD" ],
-		"Ueva": [ 30 ]
+		"base": [ "Unholy5", "3legsA" ]
 	},
 	"melvorItA:Gloomite_Platelegs_U": {
-		"base": "melvorItA:Gloomite_Platelegs"
+		"base": [ "melvorItA:Gloomite_Platelegs", "Update" ]
 	},
 	"melvorItA:Witherite_Platelegs": {
-		"base": [ "Unholy5", "4AbyD" ],
-		"Ueva": [ 40 ]
+		"base": [ "Unholy5", "4legsA" ]
 	},
 	"melvorItA:Witherite_Platelegs_U": {
-		"base": "melvorItA:Witherite_Platelegs"
+		"base": [ "melvorItA:Witherite_Platelegs", "Update" ]
 	},
 	"melvorItA:Netherite_Platelegs": {
-		"base": [ "Unholy5", "5AbyD" ],
-		"Ueva": [ 50 ]
+		"base": [ "Unholy5", "5legsA" ]
 	},
 	"melvorItA:Netherite_Platelegs_U": {
-		"base": "melvorItA:Netherite_Platelegs"
+		"base": [ "melvorItA:Netherite_Platelegs", "Update" ]
 	},
 	"melvorD:Bronze_Boots": {
 		"base": "tier1",
@@ -1536,21 +1435,22 @@
 		"4eva": [ 5 ]
 	},
 	"melvorD:Bronze_Boots_T_S": {
-		"base": "melvorD:Bronze_Boots"
+		"base": [ "melvorD:Bronze_Boots", "Update" ]
 	},
 	"melvorD:Bronze_Boots_T_G": {
-		"base": "melvorD:Bronze_Boots_T_S"
+		"base": [ "melvorD:Bronze_Boots_T_S", "Update" ]
 	},
 	"melvorD:Iron_Boots": {
 		"base": "tier2",
 		"Uress": [ 2 ],
-		"3slayer": [ 10 ]
+		"3slayer": [ 10 ],
+		"10cart2": [-90,-90]
 	},
 	"melvorD:Iron_Boots_T_S": {
-		"base": "melvorD:Iron_Boots"
+		"base": [ "melvorD:Iron_Boots", "Update" ]
 	},
 	"melvorD:Iron_Boots_T_G": {
-		"base": "melvorD:Iron_Boots_T_S"
+		"base": [ "melvorD:Iron_Boots_T_S", "Update" ]
 	},
 	"melvorD:Steel_Boots": {
 		"base": "tier3",
@@ -1559,10 +1459,10 @@
 		"6loot": [ 100, -2000 ]
 	},
 	"melvorD:Steel_Boots_T_S": {
-		"base": "melvorD:Steel_Boots"
+		"base": [ "melvorD:Steel_Boots", "Update" ]
 	},
 	"melvorD:Steel_Boots_T_G": {
-		"base": "melvorD:Steel_Boots_T_S"
+		"base": [ "melvorD:Steel_Boots_T_S", "Update" ]
 	},
 	"melvorD:Mithril_Boots": {
 		"base": "Unholy1",
@@ -1570,22 +1470,22 @@
 		"5slayer": [ 10 ]
 	},
 	"melvorD:Mithril_Boots_T_S": {
-		"base": "melvorD:Mithril_Boots"
+		"base": [ "melvorD:Mithril_Boots", "Update" ]
 	},
 	"melvorD:Mithril_Boots_T_G": {
-		"base": "melvorD:Mithril_Boots_T_S"
+		"base": [ "melvorD:Mithril_Boots_T_S", "Update" ]
 	},
 	"melvorAoD:Crystal_Boots": {
-		"base": "Unholy1",
+		"base": [ "Unholy1", "AoD4" ],
 		"Uress": [ 4 ],
 		"5slayer": [ 10 ],
 		"5cbeasy": [ "Eradicate", 7, 100 ]
 	},
 	"melvorAoD:Crystal_Boots_T_S": {
-		"base": "melvorAoD:Crystal_Boots"
+		"base": [ "melvorAoD:Crystal_Boots", "Update" ]
 	},
 	"melvorAoD:Crystal_Boots_T_G": {
-		"base": "melvorAoD:Crystal_Boots_T_S"
+		"base": [ "melvorAoD:Crystal_Boots_T_S", "Update" ]
 	},
 	"melvorD:Adamant_Boots": {
 		"base": "Unholy1",
@@ -1593,10 +1493,10 @@
 		"5slayer": [ 20 ]
 	},
 	"melvorD:Adamant_Boots_T_S": {
-		"base": "melvorD:Adamant_Boots"
+		"base": [ "melvorD:Adamant_Boots", "Update" ]
 	},
 	"melvorD:Adamant_Boots_T_G": {
-		"base": "melvorD:Adamant_Boots_T_S"
+		"base": [ "melvorD:Adamant_Boots_T_S", "Update" ]
 	},
 	"melvorD:Rune_Boots": {
 		"base": "Unholy2",
@@ -1604,10 +1504,10 @@
 		"5slayer": [ 30 ]
 	},
 	"melvorD:Rune_Boots_T_S": {
-		"base": "melvorD:Rune_Boots"
+		"base": [ "melvorD:Rune_Boots", "Update" ]
 	},
 	"melvorD:Rune_Boots_T_G": {
-		"base": "melvorD:Rune_Boots_T_S"
+		"base": [ "melvorD:Rune_Boots_T_S", "Update" ]
 	},
 	"melvorD:Dragon_Boots": {
 		"base": "Unholy2",
@@ -1615,82 +1515,82 @@
 		"5slayer": [ 40 ]
 	},
 	"melvorD:Dragon_Boots_T_S": {
-		"base": "melvorD:Dragon_Boots"
+		"base": [ "melvorD:Dragon_Boots", "Update" ]
 	},
 	"melvorD:Dragon_Boots_T_G": {
-		"base": "melvorD:Dragon_Boots_T_S"
+		"base": [ "melvorD:Dragon_Boots_T_S", "Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Boots": {
-		"base": "Unholy2",
+		"base": [ "Unholy2", "AoD7" ],
 		"Uress": [ 7 ],
 		"5slayer": [ 40 ],
 		"5Ucbeasy": [ "10Eradicate", 7, 100 ]
 	},
 	"melvorAoD:Pure_Crystal_Boots_T_S": {
-		"base": "melvorAoD:Pure_Crystal_Boots"
+		"base": [ "melvorAoD:Pure_Crystal_Boots", "Update" ]
 	},
 	"melvorAoD:Pure_Crystal_Boots_T_G": {
-		"base": "melvorAoD:Pure_Crystal_Boots_T_S"
+		"base": [ "melvorAoD:Pure_Crystal_Boots_T_S", "Update" ]
 	},
 	"melvorTotH:Corundum_Boots": {
 		"base": [ "Unholy3", "TotHD1" ],
 		"Uress": [ 8 ]
 	},
 	"melvorTotH:Corundum_Boots_T_I": {
-		"base": "melvorTotH:Corundum_Boots"
+		"base": [ "melvorTotH:Corundum_Boots", "Update" ]
 	},
 	"melvorTotH:Corundum_Boots_T_P": {
-		"base": "melvorTotH:Corundum_Boots_T_I"
+		"base": [ "melvorTotH:Corundum_Boots_T_I", "Update" ]
 	},
 	"melvorTotH:Augite_Boots": {
 		"base": [ "Unholy3", "TotHD1" ],
 		"Uress": [ 9 ]
 	},
 	"melvorTotH:Augite_Boots_T_I": {
-		"base": "melvorTotH:Augite_Boots"
+		"base": [ "melvorTotH:Augite_Boots", "Update" ]
 	},
 	"melvorTotH:Augite_Boots_T_P": {
-		"base": "melvorTotH:Augite_Boots_T_I"
+		"base": [ "melvorTotH:Augite_Boots_T_I", "Update" ]
 	},
 	"melvorTotH:Divine_Boots": {
 		"base": [ "Unholy4", "TotHD2" ],
 		"Uress": [ 10 ]
 	},
 	"melvorTotH:Divine_Boots_T_I": {
-		"base": "melvorTotH:Divine_Boots"
+		"base": [ "melvorTotH:Divine_Boots", "Update" ]
 	},
 	"melvorTotH:Divine_Boots_T_P": {
-		"base": "melvorTotH:Divine_Boots_T_I"
+		"base": [ "melvorTotH:Divine_Boots_T_I", "Update" ]
 	},
 	"melvorItA:Abyssium_Boots": {
 		"base": [ "Unholy5", "AbyD" ]
 	},
 	"melvorItA:Abyssium_Boots_U": {
-		"base": "melvorItA:Abyssium_Boots"
+		"base": [ "melvorItA:Abyssium_Boots", "Update" ]
 	},
 	"melvorItA:Brumite_Boots": {
 		"base": [ "Unholy5", "2AbyD" ]
 	},
 	"melvorItA:Brumite_Boots_U": {
-		"base": "melvorItA:Brumite_Boots"
+		"base": [ "melvorItA:Brumite_Boots", "Update" ]
 	},
 	"melvorItA:Gloomite_Boots": {
 		"base": [ "Unholy5", "3AbyD" ]
 	},
 	"melvorItA:Gloomite_Boots_U": {
-		"base": "melvorItA:Gloomite_Boots"
+		"base": [ "melvorItA:Gloomite_Boots", "Update" ]
 	},
 	"melvorItA:Witherite_Boots": {
 		"base": [ "Unholy5", "4AbyD" ]
 	},
 	"melvorItA:Witherite_Boots_U": {
-		"base": "melvorItA:Witherite_Boots"
+		"base": [ "melvorItA:Witherite_Boots", "Update" ]
 	},
 	"melvorItA:Netherite_Boots": {
 		"base": [ "Unholy5", "5AbyD" ]
 	},
 	"melvorItA:Netherite_Boots_U": {
-		"base": "melvorItA:Netherite_Boots"
+		"base": [ "melvorItA:Netherite_Boots", "Update" ]
 	},
 	"melvorAoD:Crystal_Twin_Blades": {
 		"base": "Unholy1",

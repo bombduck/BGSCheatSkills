@@ -5,6 +5,7 @@
         "meleeAccuracyRating": 25
       }
     },
+    "3Lcurrency2": [0,0,100,"gp"],
     "5acc2": [0,0,5],
     "5UEdot": [0,100], 
     "5Eignore": [-50,"bleed"],
@@ -16,6 +17,7 @@
         "meleeMaxHit": 10
       }
     },
+    "3Lcurrency2": [0,0,50,"sc"],
     "5Eignore": [-50,"stun"],
     "10Eignore": [-100,-1,"stun"]
   },
@@ -87,7 +89,7 @@
         ]
       }
     },
-    "10UdmgTaken": [-10]
+    "5UdmgTaken": [-10]
   },
   "melvorF:Bird_Nest_Potion_IV": {
     "Nmodifiers": {
@@ -134,7 +136,7 @@
       }
     },
     "5Ubypass": [ 20 ],
-    "5Ufiremaking": [ 200, "gp" ],
+    "5Lfiremaking": [ 300, "gp" ],
     "10UskillAddItem": [ 0, 1, [ "melvorF:Chest_Of_Gems", "fire" ] ]
   },
   "melvorF:Generous_Cook_Potion_IV": {
@@ -287,7 +289,7 @@
         "attackRolls": 1
       }
     },
-    "1Uacc2": [5]
+    "5Vcurrency3": [0.2,"sc"]
   },
   "melvorF:Divine_Potion_IV": {
     "Nmodifiers": {
@@ -305,7 +307,7 @@
         "seedDropConversionChance": 50
       }
     },
-    "1Uloot": [25,-500]
+    "1Lloot": [10,-300]
   },
   "melvorF:Performance_Enhancing_Potion_IV": {
     "Nmodifiers": {
@@ -426,8 +428,8 @@
         "flatSlayerAreaEffectNegation": 50
       }
     },
-    "5Ucurrency3": [100,"sc"],
-    "10Ucurrency2": [0,0,0,100, "sc"]
+    "5Lcurrency2": [0,0,0,30, "sc"],
+    "10Vcurrency3": [0.2,"sc"]
   },
   "melvorTotH:Adaptive_Defence_Potion_IV": {
     "Nmodifiers": {
@@ -622,6 +624,7 @@
         "flatBarrierSummonDamage": 4
       }
     },
+    "3currency3": [0,0,1,"sc"],
     "5Ubarrier": [0,0,10],
     "10Usummon": [0,-8]
   },
@@ -730,8 +733,8 @@
         ]
       }
     },
-    "5Ucurrency2": [0,0,10000,"ap"],
-    "10Ucurrency3": [1000,"ap"]
+    "5Lcurrency2": [0,0,100,"ap"],
+    "10Vcurrency3": [0.2,"ap"]
   },
   "melvorItA:Laceration_Potion_IV": {
     "NcombatEffects": {

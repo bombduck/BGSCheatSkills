@@ -4,9 +4,12 @@
 			{ "index": 0 },
 			{
 				"index": 1,
-				"Nxp": [ 0, 0, 1, "wood", "farm" ]
+				"xp": [ 0, 0, {"c": 1, "u": 2}, "wood", "farm" ]
 			},
-			{ "index": 2 }
+			{
+				"index": 2,
+				"10skillItemBase": [1,"wood","farm"]
+			}
 		],
 		"uniqueModifiers": [
 			{
@@ -22,8 +25,8 @@
 			},
 			{
 				"index": 2,
-				"5skillAddItem": [ 1, [ "melvorF:Stardust", "wood" ] ],
-				"10skillAddItem": [ 1, [ "melvorF:Golden_Stardust", "wood" ] ]
+				"5skillAddItem": [ 0, 1, [ "melvorF:Stardust", "wood" ] ],
+				"10skillAddItem": [ 0, 1, [ "melvorF:Golden_Stardust", "wood" ] ]
 			}
 		]
 	},
@@ -32,11 +35,12 @@
 			{ "index": 0 },
 			{
 				"index": 1,
-				"Nxp": [ 0, 0, 1 , "smit" ]
+				"xp": [ 0, 0, {"c": 1, "u": 2} , "smit" ]
 			},
 			{
 				"index": 2,
-				"10skillbase": [ 1 , "smit" ]
+				"5skillbase": [ 1 , "smit" ],
+				"10skillItemBase": [1,"smit"]
 			}
 		],
 		"uniqueModifiers": [
@@ -58,12 +62,12 @@
 			{ "index": 0 },
 			{
 				"index": 1,
-				"Nxp": [ 0, 0, 1, "fish", "fire" ]
+				"xp": [ 0, 0, {"c": 1,"u": 2}, "fish", "fire" ]
 			},
 			{
 				"index": 2,
-				"5firemaking": [ 10,  "gp" ],
-				"10skillbase": [ 1 , "fire" ]
+				"5skillbase": [ 1 , "fire" ],
+				"10skillItemBase": [1,"fish"]
 			}
 		],
 		"uniqueModifiers": [
@@ -89,9 +93,12 @@
 			{ "index": 0 },
 			{
 				"index": 1,
-				"Nxp": [ 0, 0, 1, "mine" ]
+				"xp": [ 0, 0, {"c": 1,"u": 2}, "mine" ]
 			},
-			{ "index": 2 }
+			{
+				"index": 2,
+				"10skillItemBase": [1,"mine"]
+			}
 		],
 		"uniqueModifiers": [
 			{
@@ -115,11 +122,12 @@
 			},
 			{
 				"index": 1,
-				"Nxp": [ 0, 0, 1, "cook" ]
+				"xp": [ 0, 0, {"c": 1,"u": 2}, "cook" ]
 			},
 			{
 				"index": 2,
-				"5skillbase": [ 1, "cook" ]
+				"5skillbase": [ 1, "cook" ],
+				"10skillItemBase": [1,"cook"]
 			}
 		],
 		"uniqueModifiers": [
@@ -130,7 +138,7 @@
 			},
 			{
 				"index": 1,
-				"10Mhp": [ 0, 1 ]
+				"10hp": [ 0, 1 ]
 			},
 			{
 				"index": 2,
@@ -143,11 +151,12 @@
 			{ "index": 0 },
 			{
 				"index": 1,
-				"Nxp": [ 0, 0, 1, "flet" ]
+				"xp": [ 0, 0, {"c": 1,"u": 2}, "flet" ]
 			},
 			{
 				"index": 2,
-				"5skillbase": [ 1, "flet" ]
+				"5skillbase": [ 1, "flet" ],
+				"10skillItemBase": [1,"flet"]
 			}
 		],
 		"uniqueModifiers": [
@@ -171,11 +180,12 @@
 			{ "index": 0 },
 			{
 				"index": 1,
-				"Nxp": [ 0, 0, 1, "rune" ]
+				"xp": [ 0, 0, {"c": 1,"u": 2}, "rune" ]
 			},
 			{
 				"index": 2,
-				"5skillbase": [ 1, "rune" ]
+				"5skillbase": [ 1, "rune" ],
+				"10skillItemBase": [1,"rune"]
 			}
 		],
 		"uniqueModifiers": [
@@ -198,7 +208,7 @@
 			{ "index": 0 },
 			{
 				"index": 1,
-				"Nxp": [ 0, 0, 1, "thie", "agil" ]
+				"xp": [ 0, 0, {"c": 1,"u": 2}, "thie", "agil" ]
 			},
 			{ "index": 2 }
 		],
@@ -227,16 +237,15 @@
 			},
 			{
 				"index": 2,
-				"5currency2": [ 0, 0, 0, 2, "gp" ],
-				"10currency2": [0, 0, 0, 5, 5, "gp" ]
+				"5currency2": [ 0, 0, 0, 5, "gp" ],
+				"10currency2": [0, 0, 0, 0, 5, "gp" ]
 			}
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
-				"5currency": [ 0, 2, "sc" ],
-				"10currency": [ 0, 5, "sc" ],
-				"10currency3": [ 10, "sc" ]
+				"5currency": [ 0, {"c": 1,"u": 2, "i": 1}, "sc" ],
+				"10currency2": [ 0,0,5, "sc" ]
 			},
 			{
 				"index": 1,
@@ -253,11 +262,12 @@
 			{ "index": 0 },
 			{
 				"index": 1,
-				"Nxp": [ 0, 0, 1, "craf" ]
+				"xp": [ 0, 0, {"c": 1,"u": 2}, "craf" ]
 			},
 			{
 				"index": 2,
-				"5skillbase": [ 1, "craf" ]
+				"5skillbase": [ 1, "craf" ],
+				"10skillItemBase": [1,"craf"]
 			}
 		],
 		"uniqueModifiers": [
@@ -277,9 +287,13 @@
 			{ "index": 0 },
 			{
 				"index": 1,
-				"Nxp": [ 0, 0, 1, "herb", "summ" ]
+				"xp": [ 0, 0, {"c": 1,"u": 2}, "herb", "summ" ]
 			},
-			{ "index": 2 }
+			{
+				"index": 2,
+				"5skillbase": [ 1, "herb", "summ" ],
+				"10skillItemBase": [ [ 1, "herb" ], [0,1, "summ"] ]
+			}
 		],
 		"uniqueModifiers": [
 			{
@@ -305,7 +319,7 @@
 			{
 				"index": 1,
 				"1rm": [ "masteryXP" ],
-				"1Nxp": [ 0, 0, 1, "astr" ]
+				"1xp": [ 0, 0, {"c": 1,"u": 2}, "astr" ]
 			},
 			{
 				"index": 2,
@@ -334,11 +348,11 @@
 			{ "index": 0 },
 			{
 				"index": 1,
-				"5town": [ 0, 0, {"o": 2,"i": 1} ]
+				"5Ntown": [ 0, 0, 2 ]
 			},
 			{
 				"index": 2,
-				"5town": [ {"o": 4,"i": 1} ]
+				"5Ntown": [ 4 ]
 			}
 		],
 		"uniqueModifiers": [
@@ -354,7 +368,7 @@
 			},
 			{
 				"index": 2,
-				"5town": [ 0, 0, 0, {"o": 4, "i": 1} ]
+				"5Ntown": [ 0, 0, 0, 4 ]
 			}
 		]
 	},
@@ -367,7 +381,7 @@
 			},
 			{
 				"index": 1,
-				"5skillextra": [ 0, 0, {"o": 1,"i": 1} ]
+				"5Nskillextra": [ 0, 0, 1 ]
 			},
 			{
 				"index": 2,
@@ -385,7 +399,7 @@
 			},
 			{
 				"index": 2,
-				"5Nxp": [ 0, 0, 1 ]
+				"5Nxp": [ 0, 0, 2 ]
 			}
 		]
 	},
@@ -428,18 +442,18 @@
 			},
 			{
 				"index": 1,
-				"10arch": [ 1, 1, 1, 1 ]
+				"5skillbase": [0,0,0,-1,"arch"]
 			},
 			{
 				"index": 2,
-				"Nxp": [ 0, 0, 1, "arch" ]
+				"xp": [ 0, 0, {"c": 1,"u": 2}, "arch" ]
 			}
 		],
 		"uniqueModifiers": [
 			{
 				"index": 0,
 				"5cart2": [ 0, 0, 1 ],
-				"10cart2": [ 0, 0, 2, -1 ]
+				"10cart2": [ 0, 0, {"o": 2}, -1 ]
 			},
 			{
 				"index": 1,
@@ -456,8 +470,9 @@
 		"abyssalModifiers": [
 			{
 				"index": 0,
-				"Nxp": [ 0, 0, 1, "harv" ],
-				"10harvest": [ 0, 0, 1 ]
+				"xp": [ 0, 0, {"c": 1,"u": 2}, "harv" ],
+				"10harvest": [ 0, 0, 1 ],
+				"10skillItemBase": [1,"harv"]
 			},
 			{
 				"index": 1,
@@ -591,7 +606,8 @@
 			},
 			{
 				"index": 2,
-				"5currency": [ 0, {"o": 2, "i": 1} , "melvorItA:AbyssalSlayerCoins" ]
+				"5currency": [ 0, { "o": 2, "i": 1 }, "as" ],
+				"10currency4": [0,0,1,"as"]
 			},
 			{
 				"index": 3,

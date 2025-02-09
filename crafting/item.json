@@ -18,43 +18,43 @@
 		"base": [ "Unholy1", "4shield" ]
 	},
 	"melvorF:Green_Dhide_Shield_U": {
-		"base": "melvorF:Green_Dhide_Shield"
+		"base": [ "melvorF:Green_Dhide_Shield", "Update" ]
 	},
 	"melvorF:Blue_Dhide_Shield": {
 		"base": [ "Unholy1", "5shield" ]
 	},
 	"melvorF:Blue_Dhide_Shield_U": {
-		"base": "melvorF:Blue_Dhide_Shield"
+		"base": [ "melvorF:Blue_Dhide_Shield", "Update" ]
 	},
 	"melvorF:Red_Dhide_Shield": {
 		"base": [ "Unholy2", "6shield" ]
 	},
 	"melvorF:Red_Dhide_Shield_U": {
-		"base": "melvorF:Red_Dhide_Shield"
+		"base": [ "melvorF:Red_Dhide_Shield", "Update" ]
 	},
 	"melvorF:Black_Dhide_Shield": {
 		"base": [ "Unholy2", "7shield" ]
 	},
 	"melvorF:Black_Dhide_Shield_U": {
-		"base": "melvorF:Black_Dhide_Shield"
+		"base": [ "melvorF:Black_Dhide_Shield", "Update" ]
 	},
 	"melvorTotH:Elderwood_Shield": {
 		"base": [ "Unholy3", "8shield", "TotHD1" ]
 	},
 	"melvorTotH:Elderwood_Shield_U": {
-		"base": "melvorTotH:Elderwood_Shield"
+		"base": [ "melvorTotH:Elderwood_Shield", "Update" ]
 	},
 	"melvorTotH:Revenant_Shield": {
 		"base": [ "Unholy3", "9shield", "TotHD1" ]
 	},
 	"melvorTotH:Revenant_Shield_U": {
-		"base": "melvorTotH:Revenant_Shield"
+		"base": [ "melvorTotH:Revenant_Shield", "Update" ]
 	},
 	"melvorTotH:Carrion_Shield": {
 		"base": [ "Unholy4", "10shield", "TotHD2" ]
 	},
 	"melvorTotH:Carrion_Shield_U": {
-		"base": "melvorTotH:Carrion_Shield"
+		"base": [ "melvorTotH:Carrion_Shield", "Update" ]
 	},
 	"melvorF:Leather_Gloves": {
 		"base": "tier1",
@@ -69,87 +69,75 @@
 		"5Ucbeasy": ["Bleed200", 3, 15]
 	},
 	"melvorAoD:Leather_Vambraces_B": {
-		"base": "melvorD:Leather_Vambraces",
-		"3barrier": [ 0, 4, 5 ],
-		"5summon": [0,0,5]
+		"base": [ "melvorD:Leather_Vambraces", "AoD2", "Update" ]
 	},
 	"melvorF:Hard_Leather_Vambraces": {
 		"base": "tier3",
 		"5Ucbeasy": ["Confusion", 3, 20]
 	},
 	"melvorAoD:Hard_Leather_Vambraces_B": {
-		"base": "melvorF:Hard_Leather_Vambraces",
-		"3barrier": [ 6, 10 ],
-		"6summon": [0,0,10]
+		"base": [ "melvorF:Hard_Leather_Vambraces", "AoD3", "Update" ]
 	},
 	"melvorD:Green_Dhide_Vambraces": {
 		"base": "Unholy1",
 		"5Ucbeasy": ["100dp", 2, 20]
 	},
 	"melvorD:Green_Dhide_Vambraces_U": {
-		"base": "melvorD:Green_Dhide_Vambraces"
+		"base": [ "melvorD:Green_Dhide_Vambraces", "Update" ]
 	},
 	"melvorAoD:Green_Dhide_Vambraces_B": {
-		"base": "melvorD:Green_Dhide_Vambraces_U",
-		"5barrier": [0,8,15],
-		"5summon": [0,0,15]
+		"base": [ "melvorD:Green_Dhide_Vambraces_U", "AoD4", "Update" ]
 	},
 	"melvorD:Blue_Dhide_Vambraces": {
 		"base": "Unholy1",
 		"5Ucbeasy": [ "30$$3@bhit", 2, 35 ]
 	},
 	"melvorD:Blue_Dhide_Vambraces_U": {
-		"base": "melvorD:Blue_Dhide_Vambraces"
+		"base": [ "melvorD:Blue_Dhide_Vambraces", "Update" ]
 	},
 	"melvorAoD:Blue_Dhide_Vambraces_B": {
-		"base": "melvorD:Blue_Dhide_Vambraces_U",
-		"5barrier": [0,10,20],
-		"5summon": [0,0,20]
+		"base": [ "melvorD:Blue_Dhide_Vambraces_U", "AoD5", "Update" ]
 	},
 	"melvorD:Red_Dhide_Vambraces": {
 		"base": "Unholy2",
 		"5Ucbeasy": ["1Anguish", 2, 20, {"t": 2}]
 	},
 	"melvorD:Red_Dhide_Vambraces_U": {
-		"base": "melvorD:Red_Dhide_Vambraces"
+		"base": [ "melvorD:Red_Dhide_Vambraces", "Update" ]
 	},
 	"melvorAoD:Red_Dhide_Vambraces_B": {
-		"base": "melvorD:Red_Dhide_Vambraces_U",
-		"5barrier": [0,12,25],
-		"5summon": [0,0,25]
+		"base": [ "melvorD:Red_Dhide_Vambraces_U", "AoD6", "Update" ]
 	},
 	"melvorD:Black_Dhide_Vambraces": {
 		"base": "Unholy2",
 		"5Ucbeasy": ["2Crystallize", 2, 20]
 	},
 	"melvorD:Black_Dhide_Vambraces_U": {
-		"base": "melvorD:Black_Dhide_Vambraces"
+		"base": [ "melvorD:Black_Dhide_Vambraces", "Update" ]
 	},
 	"melvorAoD:Black_Dhide_Vambraces_B": {
-		"base": "melvorD:Black_Dhide_Vambraces_U",
-		"5barrier": [0,15,30],
-		"5summon": [0,0,30]
+		"base": [ "melvorD:Black_Dhide_Vambraces_U", "AoD7", "Update" ]
 	},
 	"melvorTotH:Elderwood_Vambraces": {
 		"base": [ "Unholy3", "TotHD1" ],
 		"5Ucbeasy": ["reign", 2, 30]
 	},
 	"melvorTotH:Elderwood_Vambraces_U": {
-		"base": "melvorTotH:Elderwood_Vambraces"
+		"base": [ "melvorTotH:Elderwood_Vambraces", "Update" ]
 	},
 	"melvorTotH:Revenant_Vambraces": {
 		"base": [ "Unholy3", "TotHD1" ],
 		"5Ucbeasy": [ [ "60dhp", "60dhit$" ], 2, 30 ]
 	},
 	"melvorTotH:Revenant_Vambraces_U": {
-		"base": "melvorTotH:Revenant_Vambraces"
+		"base": [ "melvorTotH:Revenant_Vambraces", "Update" ]
 	},
 	"melvorTotH:Carrion_Vambraces": {
 		"base": [ "Unholy4", "TotHD2" ],
 		"5Ucbeasy": [["20bspd","20dspd"], 9, 100]
 	},
 	"melvorTotH:Carrion_Vambraces_U": {
-		"base": "melvorTotH:Carrion_Vambraces"
+		"base": [ "melvorTotH:Carrion_Vambraces", "Update" ]
 	},
 	"melvorD:Leather_Cowl": {
 		"base": "tier1",
@@ -166,48 +154,45 @@
 		"5Ucbeasy": ["100Toxin", 4, 30]
 	},
 	"melvorItA:Abyssia_Coif_U": {
-		"base": "melvorItA:Abyssia_Coif"
+		"base": [ "melvorItA:Abyssia_Coif", "Update" ]
 	},
 	"melvorItA:Brumia_Coif": {
 		"base": [ "Unholy5", "2AbyD" ],
 		"5Ucbeasy": ["4ec", 4, 50]
 	},
 	"melvorItA:Brumia_Coif_U": {
-		"base": "melvorItA:Brumia_Coif"
+		"base": [ "melvorItA:Brumia_Coif", "Update" ]
 	},
 	"melvorItA:Gloomia_Coif": {
 		"base": [ "Unholy5", "3AbyD" ],
 		"5Ucbeasy": ["10Blight", 4, 30]
 	},
 	"melvorItA:Gloomia_Coif_U": {
-		"base": "melvorItA:Gloomia_Coif"
+		"base": [ "melvorItA:Gloomia_Coif", "Update" ]
 	},
 	"melvorItA:Withia_Coif": {
 		"base": [ "Unholy5", "4AbyD" ],
 		"5Ucbeasy": ["12Wither", 4, 50]
 	},
 	"melvorItA:Withia_Coif_U": {
-		"base": "melvorItA:Withia_Coif"
+		"base": [ "melvorItA:Withia_Coif", "Update" ]
 	},
 	"melvorItA:Nethia_Coif": {
 		"base": [ "Unholy5", "5AbyD" ],
 		"5Ucbeasy": ["100void", 4, 30]
 	},
 	"melvorItA:Nethia_Coif_U": {
-		"base": "melvorItA:Nethia_Coif"
+		"base": [ "melvorItA:Nethia_Coif", "Update" ]
 	},
 	"melvorF:Leather_Body": {
 		"base": ["tier1", "body"],
-		"Uress": [1],
 		"2slayer": [ 5 ]
 	},
 	"melvorAoD:Leather_Body_B": {
-		"base": "melvorF:Leather_Body",
-		"barrier": [0,2]
+		"base": [ "melvorF:Leather_Body", "AoD1", "Update" ]
 	},
 	"melvorF:Hard_Leather_Body": {
 		"base": ["tier2", "2body"],
-		"Uress": [2],
 		"3slayer": [ 10 ],
 		"10itemRand": [
 			[ 100, [ "melvorF:Stardust", "astr" ] ],
@@ -215,261 +200,217 @@
 		]
 	},
 	"melvorAoD:Hard_Leather_Body_B": {
-		"base": "melvorF:Hard_Leather_Body",
-		"3barrier": [ 0, 4, 5 ],
-		"5summon": [0,0,5]
+		"base": [ "melvorF:Hard_Leather_Body", "AoD2", "Update" ]
 	},
 	"melvorD:Green_Dhide_Body": {
 		"base": [ "Unholy1", "4body" ],
-		"Uress": [4],
 		"5slayer": [ 10 ]
 	},
 	"melvorD:Green_Dhide_Body_U": {
-		"base": "melvorD:Green_Dhide_Body"
+		"base": [ "melvorD:Green_Dhide_Body", "Update" ]
 	},
 	"melvorAoD:Green_Dhide_Body_B": {
-		"base": "melvorD:Green_Dhide_Body_U",
-		"5barrier": [0,8,15],
-		"5summon": [0,0,15]
+		"base": [ "melvorD:Green_Dhide_Body_U", "AoD4", "Update" ]
 	},
 	"melvorD:Blue_Dhide_Body": {
 		"base": [ "Unholy1", "5body" ],
-		"Uress": [5],
 		"5slayer": [ 20 ]
 	},
 	"melvorD:Blue_Dhide_Body_U": {
-		"base": "melvorD:Blue_Dhide_Body"
+		"base": [ "melvorD:Blue_Dhide_Body", "Update" ]
 	},
 	"melvorAoD:Blue_Dhide_Body_B": {
-		"base": "melvorD:Blue_Dhide_Body_U",
-		"5barrier": [0,10,20],
-		"5summon": [0,0,20]
+		"base": [ "melvorD:Blue_Dhide_Body_U", "AoD5", "Update" ]
 	},
 	"melvorD:Red_Dhide_Body": {
 		"base": [ "Unholy2", "6body" ],
-		"Uress": [6],
 		"5slayer": [ 30 ]
 	},
 	"melvorD:Red_Dhide_Body_U": {
-		"base": "melvorD:Red_Dhide_Body"
+		"base": [ "melvorD:Red_Dhide_Body", "Update" ]
 	},
 	"melvorAoD:Red_Dhide_Body_B": {
-		"base": "melvorD:Red_Dhide_Body_U",
-		"5barrier": [0,12,25],
-		"5summon": [0,0,25]
+		"base": [ "melvorD:Red_Dhide_Body_U", "AoD6", "Update" ]
 	},
 	"melvorD:Black_Dhide_Body": {
 		"base": [ "Unholy2", "7body" ],
-		"Uress": [7],
 		"5slayer": [ 40 ]
 	},
 	"melvorD:Black_Dhide_Body_U": {
-		"base": "melvorD:Black_Dhide_Body"
+		"base": [ "melvorD:Black_Dhide_Body", "Update" ]
 	},
 	"melvorAoD:Black_Dhide_Body_B": {
-		"base": "melvorD:Black_Dhide_Body_U",
-		"5barrier": [0,15,30],
-		"5summon": [0,0,30]
+		"base": [ "melvorD:Black_Dhide_Body_U", "AoD7", "Update" ]
 	},
 	"melvorAoD:Unholy_Body": {
 		"base": [ "Base", "7body" ],
-		"Uress": [7],
 		"5Uatkeffect": [3],
 		"5Ucbeasy": [ "20unholy", 3 ],
 		"5slayer": [ 40 ]
 	},
 	"melvorAoD:Cursed_Body": {
 		"base": "melvorAoD:Unholy_Body",
-		"5Ubarrier": [ 0, 25, 35 ],
+		"5Nbarrier": [ 0, 20, 30 ],
 		"5Usummon": [ 0, -10, 35 ],
 		"5atkeffect": [ 0, 0, 50 ],
 		"10atkeffect": [ 0, 0, 100 ]
 	},
 	"melvorTotH:Elderwood_Body": {
-		"base": ["Unholy3","8body", "TotHD1"],
-		"Uress": [8]
+		"base": ["Unholy3","8body", "TotHD1"]
 	},
 	"melvorTotH:Elderwood_Body_U": {
-		"base": "melvorTotH:Elderwood_Body"
+		"base": [ "melvorTotH:Elderwood_Body", "Update" ]
 	},
 	"melvorTotH:Revenant_Body": {
-		"base": ["Unholy3","9body","TotHD1"],
-		"Uress": [9]
+		"base": ["Unholy3","9body","TotHD1"]
 	},
 	"melvorTotH:Revenant_Body_U": {
-		"base": "melvorTotH:Revenant_Body"
+		"base": [ "melvorTotH:Revenant_Body", "Update" ]
 	},
 	"melvorTotH:Carrion_Body": {
-		"base": ["Unholy4","10body","TotHD2"],
-		"Uress": [10]
+		"base": ["Unholy4","10body","TotHD2"]
 	},
 	"melvorTotH:Carrion_Body_U": {
-		"base": "melvorTotH:Carrion_Body"
+		"base": [ "melvorTotH:Carrion_Body", "Update" ]
 	},
 	"melvorItA:Abyssal_Leather_Body": {
-		"base": ["Unholy5","11body","AbyD"]
+		"base": ["Unholy5","bodyA"]
 	},
 	"melvorItA:Abyssia_Body": {
-		"base": ["Unholy5","11body","AbyD"]
+		"base": ["Unholy5","bodyA"]
 	},
 	"melvorItA:Abyssia_Body_U": {
-		"base": "melvorItA:Abyssia_Body"
+		"base": [ "melvorItA:Abyssia_Body", "Update" ]
 	},
 	"melvorItA:Brumia_Body": {
-		"base": ["Unholy5","12body","2AbyD"]
+		"base": ["Unholy5","2bodyA"]
 	},
 	"melvorItA:Brumia_Body_U": {
-		"base": "melvorItA:Brumia_Body"
+		"base": [ "melvorItA:Brumia_Body", "Update" ]
 	},
 	"melvorItA:Gloomia_Body": {
-		"base": ["Unholy5","13body","3AbyD"]
+		"base": ["Unholy5","3bodyA"]
 	},
 	"melvorItA:Gloomia_Body_U": {
-		"base": "melvorItA:Gloomia_Body"
+		"base": [ "melvorItA:Gloomia_Body", "Update" ]
 	},
 	"melvorItA:Withia_Body": {
-		"base": ["Unholy5","14body","4AbyD"]
+		"base": ["Unholy5","4bodyA"]
 	},
 	"melvorItA:Withia_Body_U": {
-		"base": "melvorItA:Withia_Body"
+		"base": [ "melvorItA:Withia_Body", "Update" ]
 	},
 	"melvorItA:Nethia_Body": {
-		"base": ["Unholy5","15body","5AbyD"]
+		"base": ["Unholy5","5bodyA"]
 	},
 	"melvorItA:Nethia_Body_U": {
-		"base": "melvorItA:Nethia_Body"
+		"base": [ "melvorItA:Nethia_Body", "Update" ]
 	},
 	"melvorD:Leather_Chaps": {
 		"base": [ "tier1", "legs" ],
-		"Uress": [1],
 		"2slayer": [ 5 ]
 	},
 	"melvorAoD:Leather_Chaps_B": {
-		"base": "melvorD:Leather_Chaps",
-		"barrier": [0,2]
+		"base": [ "melvorD:Leather_Chaps", "AoD1", "Update" ]
 	},
 	"melvorF:Hard_Leather_Chaps": {
 		"base": [ "tier2", "2legs"],
-		"Uress": [2],
 		"3slayer": [ 10 ]
 	},
 	"melvorAoD:Hard_Leather_Chaps_B": {
-		"base": "melvorF:Hard_Leather_Chaps",
-		"3barrier": [ 0, 4, 5 ],
-		"5summon": [0,0,5]
+		"base": [ "melvorF:Hard_Leather_Chaps", "AoD2", "Update" ]
 	},
 	"melvorD:Green_Dhide_Chaps": {
 		"base": [ "Unholy1", "4legs" ],
-		"Uress": [4],
 		"5slayer": [ 10 ]
 	},
 	"melvorD:Green_Dhide_Chaps_U": {
-		"base": "melvorD:Green_Dhide_Chaps"
+		"base": [ "melvorD:Green_Dhide_Chaps", "Update" ]
 	},
 	"melvorAoD:Green_Dhide_Chaps_B": {
-		"base": "melvorD:Green_Dhide_Chaps_U",
-		"5barrier": [0,8,15],
-		"5summon": [0,0,15]
+		"base": [ "melvorD:Green_Dhide_Chaps_U", "AoD4", "Update" ]
 	},
 	"melvorD:Blue_Dhide_Chaps": {
 		"base": [ "Unholy1", "5legs" ],
-		"Uress": [5],
 		"5slayer": [ 20 ]
 	},
 	"melvorD:Blue_Dhide_Chaps_U": {
-		"base": "melvorD:Blue_Dhide_Chaps"
+		"base": [ "melvorD:Blue_Dhide_Chaps", "Update" ]
 	},
 	"melvorAoD:Blue_Dhide_Chaps_B": {
-		"base": "melvorD:Blue_Dhide_Chaps_U",
-		"5barrier": [0,10,20],
-		"5summon": [0,0,20]
+		"base": [ "melvorD:Blue_Dhide_Chaps_U", "AoD5", "Update" ]
 	},
 	"melvorD:Red_Dhide_Chaps": {
 		"base": [ "Unholy2", "6legs" ],
-		"Uress": [6],
 		"5slayer": [ 30 ]
 	},
 	"melvorD:Red_Dhide_Chaps_U": {
-		"base": "melvorD:Red_Dhide_Chaps"
+		"base": [ "melvorD:Red_Dhide_Chaps", "Update" ]
 	},
 	"melvorAoD:Red_Dhide_Chaps_B": {
-		"base": "melvorD:Red_Dhide_Chaps_U",
-		"5barrier": [0,12,25],
-		"5summon": [0,0,25]
+		"base": [ "melvorD:Red_Dhide_Chaps_U", "AoD6", "Update" ]
 	},
 	"melvorD:Black_Dhide_Chaps": {
 		"base": [ "Unholy2", "7legs" ],
-		"Uress": [7],
 		"5slayer": [ 40 ]
 	},
 	"melvorD:Black_Dhide_Chaps_U": {
-		"base": "melvorD:Black_Dhide_Chaps"
+		"base": [ "melvorD:Black_Dhide_Chaps", "Update" ]
 	},
 	"melvorAoD:Black_Dhide_Chaps_B": {
-		"base": "melvorD:Black_Dhide_Chaps_U",
-		"5barrier": [0,15,30],
-		"5summon": [0,0,30]
+		"base": [ "melvorD:Black_Dhide_Chaps_U", "AoD7", "Update" ]
 	},
 	"melvorTotH:Elderwood_Chaps": {
-		"base": [ "Unholy3", "8legs","TotHD1" ],
-		"Uress": [8]
+		"base": [ "Unholy3", "8legs","TotHD1" ]
 	},
 	"melvorTotH:Elderwood_Chaps_U": {
-		"base": "melvorTotH:Elderwood_Chaps"
+		"base": [ "melvorTotH:Elderwood_Chaps", "Update" ]
 	},
 	"melvorTotH:Revenant_Chaps": {
-		"base": [ "Unholy3", "9legs","TotHD1" ],
-		"Uress": [9]
+		"base": [ "Unholy3", "9legs","TotHD1" ]
 	},
 	"melvorTotH:Revenant_Chaps_U": {
-		"base": "melvorTotH:Revenant_Chaps"
+		"base": [ "melvorTotH:Revenant_Chaps", "Update" ]
 	},
 	"melvorTotH:Carrion_Chaps": {
-		"base": [ "Unholy4", "10legs","TotHD2" ],
-		"Uress": [10]
+		"base": [ "Unholy4", "10legs","TotHD2" ]
 	},
 	"melvorTotH:Carrion_Chaps_U": {
-		"base": "melvorTotH:Carrion_Chaps"
+		"base": [ "melvorTotH:Carrion_Chaps", "Update" ]
 	},
 	"melvorItA:Abyssal_Leather_Legs": {
-		"base": [ "Unholy5", "AbyD" ],
-		"eva": [10],
+		"base": [ "Unholy5", "legsA" ],
 		"10u:itemRand": [ 0, 8,["melvorItA:Abyssal_Stardust", "astr" ] ]
 	},
 	"melvorItA:Abyssia_Legs": {
-		"base": [ "Unholy5", "AbyD" ],
-		"Ueva": [10]
+		"base": [ "Unholy5", "legsA" ]
 	},
 	"melvorItA:Abyssia_Legs_U": {
-		"base": "melvorItA:Abyssia_Legs"
+		"base": [ "melvorItA:Abyssia_Legs", "Update" ]
 	},
 	"melvorItA:Brumia_Legs": {
-		"base": [ "Unholy5", "2AbyD" ],
-		"Ueva": [20]
+		"base": [ "Unholy5", "2legsA" ]
 	},
 	"melvorItA:Brumia_Legs_U": {
-		"base": "melvorItA:Brumia_Legs"
+		"base": [ "melvorItA:Brumia_Legs", "Update" ]
 	},
 	"melvorItA:Gloomia_Legs": {
-		"base": [ "Unholy5", "3AbyD" ],
-		"Ueva": [30]
+		"base": [ "Unholy5", "3legsA" ]
 	},
 	"melvorItA:Gloomia_Legs_U": {
-		"base": "melvorItA:Gloomia_Legs"
+		"base": [ "melvorItA:Gloomia_Legs", "Update" ]
 	},
 	"melvorItA:Withia_Legs": {
-		"base": [ "Unholy5", "4AbyD" ],
-		"Ueva": [40]
+		"base": [ "Unholy5", "4legsA" ]
 	},
 	"melvorItA:Withia_Legs_U": {
-		"base": "melvorItA:Withia_Legs"
+		"base": [ "melvorItA:Withia_Legs", "Update" ]
 	},
 	"melvorItA:Nethia_Legs": {
-		"base": [ "Unholy5", "5AbyD" ],
-		"Ueva": [50]
+		"base": [ "Unholy5", "5legsA" ]
 	},
 	"melvorItA:Nethia_Legs_U": {
-		"base": "melvorItA:Nethia_Legs"
+		"base": [ "melvorItA:Nethia_Legs", "Update" ]
 	},
 	"melvorF:Silver_Topaz_Ring": {
 		"base": "BaseRing1",
@@ -688,7 +629,7 @@
 		"10atkeffect": [0,0,50]
 	},
 	"melvorAoD:Cursed_Ring": {
-		"base": "melvorAoD:Unholy_Ring",
+		"base": [ "melvorAoD:Unholy_Ring", "Update" ],
 		"5Ucbeasy": [ [ "10Malice","10Consume","10Eradicate", "10Destruction" ], 1, 30 ],
 		"5barrier": [ 0, 25, 35 ],
 		"5summon": [0,0,35],
@@ -759,13 +700,13 @@
 		"10Ucbeasy": [ ["100dp", "100Ablaze", "25Laceration", "100Voidburst" ], 13, 15 ]
 	},
 	"melvorItA:Abyss_Ring": {
-		"base": "melvorItA:Azurian_Voidheart_Ring_I"
+		"base": [ "melvorItA:Azurian_Voidheart_Ring_I", "Update" ]
 	},
 	"melvorItA:Powerful_Abyss_Ring": {
-		"base": "melvorItA:Abyss_Ring"
+		"base": [ "melvorItA:Abyss_Ring", "Update" ]
 	},
 	"melvorItA:Eldritch_Abyss_Ring": {
-		"base": "melvorItA:Powerful_Abyss_Ring"
+		"base": [ "melvorItA:Powerful_Abyss_Ring", "Update" ]
 	},
 	"melvorItA:Obsidian_Nightopal_Ring_I": {
 		"base": "BaseRing3",
@@ -942,7 +883,7 @@
 		"10atkeffect": [0,0,50]
 	},
 	"melvorAoD:Cursed_Amulet": {
-		"base": "melvorAoD:Unholy_Amulet",
+		"base": [ "melvorAoD:Unholy_Amulet", "Update" ],
 		"5Ucbeasy": [ "10Spite", 4, 50 ],
 		"10Ucbeasy": [ [ "10Malice","10Consume","10Eradicate", "10Destruction" ], 4, 50 ],
 		"5barrier": [ 0, 25, 35 ],
@@ -950,6 +891,7 @@
 		"10atkeffect": [0,0,100]
 	},
 	"melvorAoD:Amulet_of_Barrier_Touch": {
+		"base": "BaseAmulet2",
 		"Usums": [ 10, 10, 10, 10 ],
 		"Ubarrier": [ 0, 10, 20 ],
 		"5Usummon": [0,-10,20],

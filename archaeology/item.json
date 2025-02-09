@@ -11,7 +11,11 @@
         ]
       }
     },
-    "Ucook": [-10]
+    "5UskillAddItem": [
+      1,
+      [ "melvorF:Summoning_Shard_Green", "cook" ]
+    ],
+    "5Uxp": [ 0, 0, 300, "cook" ]
   },
   "melvorAoD:Old_Woodcutting_Gloves": {
     "Omodifiers": {
@@ -32,46 +36,49 @@
         ]
       }
     },
-    "10Mmodifiers": {
-      "add": {
-        "treeCutLimit": 1
-      }
-    }
+    "5UskillAddItem": [
+      1,
+      [ "melvorF:Summoning_Shard_Red", "wood" ]
+    ],
+    "10Uxp": [ 0, 0, 200 ]
   },
   "melvorAoD:Basic_Barrier_Gem": {
-		"base": "Base",
+    "base": "Base",
     "Omodifiers": {
       "add": {
         "flatBarrierDamage": 1
       }
     },
-    "Uarch2": [0,0,0,0,500, "gp"],
-    "5Ucbeasy": [ "bbn", 3, 15 ]
+    "Larch2": [ 0, 0, 0, 0, 500, "gp" ],
+    "5Lcurrency2": [ 0, 0, 20, "sc" ],
+    "10Ucart2": [ 0, 0, 0, 50 ]
   },
   "melvorAoD:Old_Hunting_Bow": {
-		"base": "Unholy1",
-    "Uress": [4],
+    "base": "Unholy1",
+    "Uress": [ 4 ],
+    "5Lcurrency2": [ 100, "sc" ],
     "5OuniqueAttack": { "id": "HunterPrecision" },
-    "10Ucbeasy": ["3$$3frost", 3, 10]
+    "5Uxp": [ 0, 0, 200 ]
   },
   "melvorAoD:Ancient_Hunting_Bow": {
-		"base": "Unholy2",
-    "Uress": [7],
+    "base": "Unholy2",
+    "Uress": [ 7 ],
     "5OuniqueAttack": { "id": "Killshot" },
-    "10Ucbeasy": [ [ "1$2fati","1$2petr" ], 3, 15 ]
+    "10Ucbeasy": [ "3$$3frost", 3, 10 ]
   },
   "melvorAoD:Barrier_Gem": {
-		"base": "Unholy1",
+    "base": "Unholy1",
     "Omodifiers": {
       "add": {
         "flatBarrierDamage": 1.5
       }
     },
-    "Msums": [10],
-    "5Ucbeasy": ["100bbd", 11, 15]
+    "Msums": [ 10 ],
+    "5Uxp": [ 0, 0, 200 ],
+    "5Ucart2": [ 0, -20 ]
   },
   "melvorAoD:Ancient_Scythe": {
-    "Umodifiers": {
+    "Nmodifiers": {
       "add": {
         "basePrimaryProductQuantity": [
           {
@@ -88,28 +95,37 @@
         ]
       }
     },
-    "5farm": [ 0, 0, 3, [ 0, "melvorD:Allotment" ], [ 0, "melvorD:Herb" ], [ 0, "melvorD:Tree" ] ],
-    "10farm": [0,20]
+    "5farm": [
+      0,
+      0,
+      3,
+      [ 0, "melvorD:Allotment" ],
+      [ 0, "melvorD:Herb" ],
+      [ 0, "melvorD:Tree" ]
+    ],
+    "5Uxp": [ 0, 0, 200 ],
+    "10farm": [ 0, 20 ]
   },
   "melvorAoD:Bronze_Ring": {
-		"base": "BaseRing1",
+    "base": "BaseRing1",
     "Ohidden": [ 3, "atk", "str", "def", "ran", "mag" ],
-		"1Vmodifiers": {
-			"add": {
-				"bankSpace": 15
-			}
-		},
-    "5Ucbeasy": ["sleep", 8, 10]
+    "5Vcurrency3": [ 0.2, "sc" ]
   },
   "melvorAoD:Bone_Ring": {
-		"base": "BaseRing1",
+    "base": "BaseRing1",
     "OprayerGetCombat": [ 0, 0, 3 ],
-    "5Ucbeasy": ["burn", 9, 15]
+    "5Uxp": [ 0, 0, 200 ]
   },
   "melvorAoD:Accuracy_Gem": {
-		"base": "Unholy1",
-    "1Ocbeasy": [ "melvorAoD:AccuracyGem", 7, 100, { "sm": 10 }, [ 0, true ] ],
-    "5Ucbeasy": ["40$3slow", 9, 50]
+    "base": "Unholy1",
+    "1Ocbeasy": [
+      "melvorAoD:AccuracyGem",
+      7,
+      100,
+      { "sm": 10 },
+      [ 0, true ]
+    ],
+    "5Vcurrency3": [ 0.4, "gp" ]
   },
   "melvorAoD:Harming_Potion": {
     "Nmodifiers": {
@@ -125,10 +141,10 @@
       }
     },
     "5Uatkspd": [ 0, -13 ],
-    "10Uhp": [0, 13]
+    "10Uhp": [ 0, 13 ]
   },
   "melvorAoD:Sacrificial_Dagger": {
-		"base": "Base",
+    "base": "tier3",
     "Nmodifiers": {
       "add": {
         "flatMeleeStrengthBonusBasedOnSkillLevel": [
@@ -139,32 +155,41 @@
         ]
       }
     },
-		"5OuniqueAttack": { "id": "BloodLinkPlayer" },
-		"10Ucbeasy": ["25@bhp", 8, 20]
+    "4OuniqueAttack": { "id": "BloodLinkPlayer" }
   },
   "melvorAoD:Blood_Chalice": {
     "modifiers": {
       "add": {
-        "selfDamageOnHitBasedOnCurrentHitpoints": {"c": 5, "v": -1, "m": 1}
+        "selfDamageOnHitBasedOnCurrentHitpoints": {
+          "c": 5,
+          "v": -1,
+          "m": 1
+        }
       }
     },
     "Ohidden": [ 5, "atk", "str", "def", "hp", "ran", "mag" ],
-    "5steal": [ 5 ]
+    "5steal": [ 5 ],
+    "5Vcurrency3": [ 0.2, "sc" ]
   },
   "melvorAoD:Circlet_of_Pain": {
     "base": "Unholy1",
     "Nmodifiers": {
       "add": {
-        "selfDamageOnHitBasedOnCurrentHitpoints": { "c": 5,"u": -1, "m": 1 },
+        "selfDamageOnHitBasedOnCurrentHitpoints": {
+          "c": 5,
+          "u": -1,
+          "m": 1
+        },
         "rolledReflectDamage": 4
       }
     },
-    "5Ureflect": [5],
-    "10Ureflect": [0,10]
+    "5Ureflect": [ 5 ],
+    "5Ubypass": [ 2 ],
+    "10Ureflect": [ 0, 10 ]
   },
   "melvorAoD:Cult_Robes": {
-    "base": "Unholy1",
-		"Mmaghits": [ [ 20 , 40, "bolt" ] ]
+    "base": "Adept_Body",
+    "Mmaghits": [ [ 20, 40, "bolt" ] ]
   },
   "melvorAoD:Ancient_Whetstone": {
     "Omodifiers": {
@@ -173,7 +198,7 @@
         "meleeMaxHit": 10
       }
     },
-    "5UstrBonus": [4]
+    "5UstrBonus": [ 4 ]
   },
   "melvorAoD:Relic_Whetstone": {
     "Nmodifiers": {
@@ -181,11 +206,11 @@
         "meleeAccuracyMaxHitPer8Strength": 1
       }
     },
-    "5UstrBonus": [2,0,0,2]
+    "5UstrBonus": [ 2, 0, 0, 2 ]
   },
   "melvorAoD:Bulky_Gloves": {
     "base": "Unholy2",
-    "5cbeasy": ["2stun", 9, 30]
+    "5cbeasy": [ "2stun", 9, 20 ]
   },
   "melvorAoD:Chisel": {
     "Nmodifiers": {
@@ -205,19 +230,20 @@
         ]
       }
     },
-    "10Uskillextra": [0,1,"craf"]
+    "5Uxp": [ 0, 0, 200 ],
+    "10Uskillextra": [ 0, 1, "craf" ]
   },
   "melvorAoD:Heavy_Boots": {
     "base": "Base",
-    "5cbeasy": ["20bres", 5, 35]
+    "5cbeasy": [ "20bres", 5, 35 ]
   },
   "melvorAoD:Stone_Hammer": {
     "base": "Unholy1",
-		"5OuniqueAttack": { "id": "BurningRootsPlayer" },
-		"10Ucbeasy": ["1cs", 9, 50]
+    "5OuniqueAttack": { "id": "BurningRootsPlayer" },
+    "10Ucbeasy": [ "1cs", 9, 20 ]
   },
   "melvorAoD:Golden_Wreath": {
-    "Nmodifiers": {
+    "1Lmodifiers": {
       "add": {
         "flatCurrencyGain": [
           {
@@ -234,8 +260,17 @@
         ]
       }
     },
-    "5Ucurrency": [ 0, 500, "gp" ],
-    "10Uxp": [0,0,1000]
+    "5Lmodifiers": {
+      "add": {
+        "flatCurrencyGain": [
+          {
+            "currencyID": "melvorD:SlayerCoins",
+            "value": 100
+          }
+        ]
+      }
+    },
+    "5Uxp": [ 0, 0, 200 ]
   },
   "melvorAoD:Dividers": {
     "Nmodifiers": {
@@ -245,7 +280,7 @@
     }
   },
   "melvorAoD:Old_Crafting_Gloves": {
-    "Nmodifiers": {
+    "1Lmodifiers": {
       "add": {
         "crafting30CurrencyGainChance": [
           {
@@ -262,8 +297,8 @@
         ]
       }
     },
-    "5Ucurrency": [0,50, "gp"],
-    "10Uxp": [0,0,250,"craf"]
+    "5Uxp": [ 0, 0, 200 ],
+    "10Uskillextra": [ 0, 1, "craf" ]
   },
   "melvorAoD:Tiny_Spice_Jar": {
     "Nmodifiers": {
@@ -271,12 +306,18 @@
         "additionalPerfectItemChance": 20
       }
     },
-    "10Uskillextra": [0,1,"cook"]
+    "10Uskillextra": [ 0, 1, "cook" ]
   },
   "melvorAoD:Evasion_Gem": {
-		"base": "Unholy1",
-    "1Ocbeasy": [ "melvorAoD:EvasionGem", 7, 100, { "sm": 10 }, [ 0, true ] ],
-    "5Ucbeasy": ["1weak", 8, 50]
+    "base": "Unholy1",
+    "1Ocbeasy": [
+      "melvorAoD:EvasionGem",
+      7,
+      100,
+      { "sm": 10 },
+      [ 0, true ]
+    ],
+    "5Ucbeasy": [ "1weak", 8, 30 ]
   },
   "melvorAoD:Ceramic_Jar": {
     "Umodifiers": {
@@ -296,7 +337,7 @@
           {
             "skillID": "melvorD:Cooking",
             "subcategoryID": "melvorD:Soup",
-            "value": 6 
+            "value": 6
           }
         ]
       }
@@ -305,13 +346,14 @@
   "melvorAoD:Golden_Fire_Cape": {
     "base": "Base",
     "Ncbeasy": [ "blind", 6, 5 ],
-    "5Ucbeasy": ["burn", 3, 10]
+    "5Ucbeasy": [ "burn", 3, 10 ],
+    "5Uxp": [ 0, 0, 200 ]
   },
   "melvorAoD:Ancient_Infernal_Cape": {
     "base": "Base",
     "Ncritical": [ 0, 0, 3, 3, 3 ],
     "5Ucritical": [ 0, 15 ],
-    "5Ucbeasy": ["100burn", 3, 15]
+    "5Ucbeasy": [ "100burn", 3, 15 ]
   },
   "melvorAoD:Mining_Lantern": {
     "Nmodifiers": {
@@ -324,21 +366,27 @@
         ]
       }
     },
-    "10Uskillextra": [0,1,"mine"]
+    "10Uskillextra": [ 0, 1, "mine" ]
   },
   "melvorAoD:Sailors_Compass": {
-    "Nmodifiers": {
+    "1Lmodifiers": {
       "add": {
         "cartographyTravelCost": -6
       }
     },
     "5cart": [ 5, 5 ],
-    "10cart": [0,0,0,-10,0,20]
+    "10cart": [ 0, 0, 0, -10, 0, 20 ]
   },
   "melvorAoD:Lifesteal_Gem": {
-		"base": "Unholy1",
-    "1Ocbeasy": [ "melvorAoD:LifestealGem", 7, 100, { "sm": 10 }, [ 0, true ] ],
-    "5Ucbeasy": ["1fati", 8, 50]
+    "base": "Unholy1",
+    "1Ocbeasy": [
+      "melvorAoD:LifestealGem",
+      7,
+      100,
+      { "sm": 10 },
+      [ 0, true ]
+    ],
+    "5Ucbeasy": [ "1fati", 8, 50 ]
   },
   "melvorAoD:Old_Spyglass": {
     "Nmodifiers": {
@@ -353,7 +401,7 @@
         "cartographyTravelCost": -8
       }
     },
-    "10cart": [0,0,0,-10,0,20]
+    "10cart": [ 0, 0, 0, -10, 0, 20 ]
   },
   "melvorAoD:Enhanced_Spyglass": {
     "Nmodifiers": {
@@ -369,19 +417,19 @@
         "cartographyTravelCost": -10
       }
     },
-    "10cart": [0,0,0,-10,0,20]
+    "10cart": [ 0, 0, 0, -10, 0, 20 ]
   },
   "melvorAoD:Grinding_Stone": {
-    "Ncritical": [0,0,10,10,10],
-    "5Ucritical": [0,20]
+    "Ncritical": [ 0, 0, 10, 10, 10 ],
+    "5Ucritical": [ 0, 20 ]
   },
   "melvorAoD:Rune_Mallet": {
     "base": "Unholy2",
     "5OuniqueAttack": { "id": "StunningBarrage" },
-    "10Ucbeasy": ["50$$3@dspd", 3, 10]
+    "10Ucbeasy": [ "50$$3@dspd", 3, 10 ]
   },
   "melvorAoD:Dirty_Mining_Boots": {
-    "Omodifiers": {
+    "1Lmodifiers": {
       "add": {
         "flatSkillInterval": [
           {
@@ -391,7 +439,8 @@
         ]
       }
     },
-    "10Uskillextra": [0,1,"mine"]
+    "5Uxp": [ 0, 0, 200 ],
+    "10Uskillextra": [ 0, 1, "mine" ]
   },
   "melvorAoD:Old_Fancy_Quill": {
     "Nmodifiers": {
@@ -408,7 +457,7 @@
         }
       ]
     },
-    "5Ucart": [0,0,0,-10]
+    "5Ucart": [ 0, 0, 0, -10 ]
   },
   "melvorAoD:Sturdy_Fancy_Quill": {
     "Nmodifiers": {
@@ -439,12 +488,19 @@
         ]
       }
     },
-    "5Ucart": [0,0,0,-20]
+    "5Ucart": [ 0, 0, 0, -20 ],
+    "5Uxp": [ 0, 0, 200 ]
   },
   "melvorAoD:Poisonous_Gem": {
-		"base": "Unholy1",
-    "1Ocbeasy": [ "BGSCheat:PoisonousGem", 7, 100, { "sm": 10 }, [ 0, true ] ],
-    "5Ucbeasy": ["1petr", 8, 50]
+    "base": "Unholy1",
+    "1Ocbeasy": [
+      "BGSCheat:PoisonousGem",
+      7,
+      100,
+      { "sm": 10 },
+      [ 0, true ]
+    ],
+    "5Ucbeasy": [ "1petr", 8, 50 ]
   },
   "melvorAoD:Old_Scripture": {
     "Nmodifiers": {
@@ -457,7 +513,8 @@
         ]
       }
     },
-    "10Uskillextra": [0,1,"arch"]
+    "5Uxp": [ 0, 0, 300, "arch" ],
+    "10Uskillextra": [ 0, 1, "arch" ]
   },
   "melvorAoD:Blacksmith_Tongs": {
     "Nmodifiers": {
@@ -483,7 +540,7 @@
         ]
       }
     },
-    "10Uxp": [0,0,250, "smit"]
+    "5Uxp": [ 0, 0, 300, "smit" ]
   },
   "melvorAoD:Ancient_Magic_Hammer": {
     "Nmodifiers": {
@@ -509,7 +566,8 @@
         ]
       }
     },
-    "10Uxp": [0,0,250, "smit"]
+    "5Uxp": [ 0, 0, 300, "smit" ],
+    "10bypass": [ 0, 1, "smit" ]
   },
   "melvorAoD:Elusive_Boots": {
     "base": "Unholy1",
@@ -547,21 +605,32 @@
         "summoningChargePreservationChance": 5
       }
     },
-    "5Usummon": [0,0,50],
-    "10Usummon": [0,-20]
+    "5Ubypass": [ 0, 0, 0, 0, 10 ],
+    "5Uskillextra": [ 20, "summ" ],
+    "10Ubypass": [ 0, 1, "summ" ]
   },
   "melvorAoD:Agile_Gem": {
-		"base": "Unholy2",
-    "1Ocbeasy": [ "melvorAoD:AgileGem", 7, 100, { "sm": 12 }, [ 0, true ] ],
-    "5Ucbeasy": ["1Sleep", 3, 30]
+    "base": "Unholy2",
+    "1Ocbeasy": [
+      "melvorAoD:AgileGem",
+      7,
+      100,
+      { "sm": 12 },
+      [ 0, true ]
+    ],
+    "5Ucbeasy": [
+      [ "1crystal", "poison" ],
+      3,
+      10
+    ]
   },
   "melvorAoD:Mask_of_Weakening": {
-		"base": "Unholy2",
-    "5Ucbeasy": ["1$10weak",7,100]
+    "base": "Unholy2",
+    "5Ucbeasy": [ "1$10weak", 7, 100 ]
   },
   "melvorAoD:Mask_of_Confusion": {
-		"base": "Unholy2",
-    "5Ucbeasy": ["2$10confusion",7,100]
+    "base": "Unholy2",
+    "5Ucbeasy": [ "2$10confusion", 7, 100 ]
   },
   "melvorAoD:Old_Summoning_Gloves": {
     "Nmodifiers": {
@@ -587,10 +656,11 @@
         ]
       }
     },
-    "10Uskillextra": [0,1,"summ"]
+    "5Uxp": [ 0, 0, 300, "summ" ],
+    "10Uskillextra": [ 0, 1, "summ" ]
   },
   "melvorAoD:Magical_Broomstick": {
-		"base": "Unholy2",
+    "base": "Unholy2",
     "Nmodifiers": {
       "add": {
         "flatMeleeStrengthBonusBasedOnSkillLevel": [
@@ -602,28 +672,40 @@
       }
     },
     "5OuniqueAttack": { "id": "Flight" },
-    "10Ucbeasy": ["5$$3frost", 3, 10]
+    "10Ucbeasy": [ "5$$3frost", 3, 10 ]
   },
   "melvorAoD:Haunted_Ring": {
-		"base": "BaseRing1",
-    "1Ocbeasy": [ "melvorAoD:HauntedRing", 7, 100, { "sm": 6 }, [ 0, true ] ],
-    "5Ucbeasy": ["20$2bspd", 8, 25]
+    "base": "BaseRing1",
+    "1Ocbeasy": [
+      "melvorAoD:HauntedRing",
+      7,
+      100,
+      { "sm": 6 },
+      [ 0, true ]
+    ],
+    "5Ucbeasy": [ "20$2bspd", 8, 25 ]
   },
   "melvorAoD:Burning_Gem": {
-		"base": "BaseRing1",
-    "1Ocbeasy": [ "BGSCheat:BurningGem", 7, 100, { "sm": 10 }, [ 0, true ] ],
-    "5Ucbeasy": ["bleed400", 9, 25]
+    "base": "BaseRing1",
+    "1Ocbeasy": [
+      "BGSCheat:BurningGem",
+      7,
+      100,
+      { "sm": 10 },
+      [ 0, true ]
+    ],
+    "5Ucbeasy": [ "bleed400", 9, 25 ]
   },
   "melvorAoD:Decoy_Idol": {
-    "5Uhp": [0,0,10]
+    "5Uhp": [ 0, 0, 10 ]
   },
   "melvorAoD:Unholy_Gem": {
-		"5Uatkeffect": [3],
-		"5Ucbeasy": [ "20unholy", 3 ]
+    "5Uatkeffect": [ 3 ],
+    "5Ucbeasy": [ "20unholy", 3 ]
   },
   "melvorAoD:Elemental_Scroll": {
-		"UdmgTaken": [ -20 ],
-    "5Mmaghits": [10,20]
+    "UdmgTaken": [ -20 ],
+    "5Mmaghits": [ 10, 20 ]
   },
   "melvorAoD:Magic_Flute": {
     "base": "Unholy2",
@@ -632,18 +714,22 @@
       { "id": "RestorationOfTheMind" },
       { "id": "DanceOfTheMage" }
     ],
-    "10Ucbeasy": ["1angu", 3, 25]
+    "10Ucbeasy": [ "1angu", 3, 25 ]
   },
   "melvorAoD:Cursed_Arcana": {
     "base": "Unholy2",
-		"UdmgTaken": [ -30 ],
+    "UdmgTaken": [ -30 ],
     "5cbeasy": [ "2blind", 2, 15 ],
-    "10cbeasy": [ "2crystal", [ 3, 4 ], 10 ]
+    "10cbeasy": [
+      "2crystal",
+      [ 3, 4 ],
+      10
+    ]
   },
   "melvorAoD:Blessed_Shield": {
     "base": "Unholy1",
-		"UdmgTaken": [ -20 ],
-    "Umodifiers": {
+    "UdmgTaken": [ -20 ],
+    "1Vmodifiers": {
       "add": {
         "flatResistanceWithActivePrayer": [
           {
@@ -657,13 +743,17 @@
   },
   "melvorAoD:Magicburn_Shield": {
     "base": "Unholy2",
-		"UdmgTaken": [ -30 ],
-    "5Ucbeasy": [["100burn","5$$5frost"], 10, 15]
+    "UdmgTaken": [ -30 ],
+    "5Ucbeasy": [
+      [ "100burn", "5$$5frost" ],
+      10,
+      15
+    ]
   },
   "melvorAoD:Malevolent_Ward_Shield": {
     "base": "Unholy2",
     "UdmgTaken": [ -35 ],
-    "rcm": ["CombatEffectGroup"],
+    "rcm": [ "CombatEffectGroup" ],
     "NconditionalModifiers": {
       "add": [
         {
@@ -684,16 +774,22 @@
     }
   },
   "melvorAoD:Confusing_Gem": {
-		"base": "Unholy2",
-    "1Ocbeasy": [ "melvorAoD:ConfusingGem", 7, 100, { "sm": 10 }, [ 0, true ] ],
-    "5cbeasy": ["5Malice", 7, 100],
-    "10Ucbeasy": ["10Malice", 7, 100]
+    "base": "Unholy2",
+    "1Ocbeasy": [
+      "melvorAoD:ConfusingGem",
+      7,
+      100,
+      { "sm": 10 },
+      [ 0, true ]
+    ],
+    "5cbeasy": [ "5Malice", 7, 100 ],
+    "10Ucbeasy": [ "10Malice", 7, 100 ]
   },
   "melvorAoD:Torch": {
     "base": "Unholy2",
     "UdmgTaken": [ -10 ],
-    "5cbeasy": ["burn", 2, 10],
-    "10Ucbeasy": ["100burn", 2, 15]
+    "5cbeasy": [ "burn", 2, 10 ],
+    "10Ucbeasy": [ "100burn", 2, 15 ]
   },
   "melvorAoD:Charged_Golden_Quiver": {
     "Nmodifiers": {
@@ -701,7 +797,8 @@
         "rangedStrengthBonus": 5,
         "ammoPreservationChance": 5
       }
-    }
+    },
+    "5Ubypass": [ 0, 0, 10 ]
   },
   "melvorAoD:Charged_Ancient_Quiver": {
     "Nmodifiers": {
@@ -710,7 +807,8 @@
         "rangedAccuracyRating": 5,
         "ammoPreservationChance": 5
       }
-    }
+    },
+    "5Ubypass": [ 0, 0, 10 ]
   },
   "melvorAoD:Charged_Relic_Quiver": {
     "Nmodifiers": {
@@ -719,16 +817,18 @@
         "rangedAccuracyRating": 10,
         "ammoPreservationChance": 10
       }
-    }
+    },
+    "5Ubypass": [ 0, 0, 20 ]
   },
   "melvorAoD:Large_Warhorn": {
     "base": "Unholy2",
-		"5OuniqueAttack": { "id": "Warhorn" }
+    "5OuniqueAttack": { "id": "Warhorn" },
+    "10Ucbeasy": [ "Destruction", 2, 10 ]
   },
   "melvorAoD:Book_of_Prayers": {
     "base": "Unholy2",
-		"UdmgTaken": [ -15 ],
-    "Omodifiers": {
+    "UdmgTaken": [ -15 ],
+    "Lmodifiers": {
       "add": {
         "prayerPointPreservationChancePerPoint": 1,
         "maxHitBasedOnPrayerCost": 0.33
@@ -747,7 +847,8 @@
         ]
       }
     },
-    "10Ubypass": [3]
+    "5Uxp": [ 0, 0, 200 ],
+    "10Ubypass": [ 5 ]
   },
   "melvorAoD:Kings_Crown": {
     "Nmodifiers": {
@@ -760,41 +861,47 @@
         ]
       }
     },
-    "10Uskillbase": [0,0,0,0,10]
+    "5Uxp": [ 0, 0, 200 ],
+    "5Uskillbase": [ 0, 0, 0, 0, 20 ]
+  },
+  "melvorAoD:Aranite_2H_Blade": {
+    "base": [ "Unholy1", "4body", "AoD4" ],
+    "Uress": [ 4 ],
+    "5OuniqueAttack": { "id": "TripleDamage" },
+    "10Ucbeasy": [ "10fati", 7 ]
   },
   "melvorAoD:Aranite_Platebody": {
-    "base": "Unholy1",
-    "Uhp": [ 0, 20 ],
-    "Uress": [4]
+    "base": [ "Unholy1", "4body", "AoD4" ],
+    "5slayer": [ 10 ]
   },
   "melvorAoD:Golden_Bow": {
     "base": "Unholy1",
-    "Uress": [6],
-		"5OuniqueAttack": { "id": "CrystalPierce" },
-		"10Ucbeasy": [ "3crystal", 3, 25 ]
+    "Uress": [ 6 ],
+    "5OuniqueAttack": { "id": "CrystalPierce" },
+    "10Ucbeasy": [ "3crystal", 3, 25 ]
   },
   "melvorAoD:Darksteel_2H_SWord": {
     "base": "Unholy2",
-    "Uress": [7],
-		"5OuniqueAttack": { "id": "DarksteelStab" },
-		"10Ucbeasy": [ "10Consume", 7 ]
+    "Uress": [ 7 ],
+    "5OuniqueAttack": { "id": "DarksteelStab" },
+    "10Ucbeasy": [ "10Consume", 7 ]
 
   },
   "melvorAoD:Ring_of_Faith": {
     "base": "BaseRing1",
-    "Nmodifiers": {
+    "1Lmodifiers": {
       "add": {
         "flatAdditionalHolyDustFromBlessedOffering": 2
       }
     },
-    "5UprayerGet": [5]
+    "5UprayerGet": [ 5 ]
   },
   "melvorAoD:Impenetrable_Idol": {
-    "5cbeasy": ["5crystal", 7],
-    "10Ucbeasy": ["10stun", 7]
+    "5cbeasy": [ "5crystal", 7 ],
+    "10Ucbeasy": [ "10stun", 7 ]
   },
   "melvorAoD:Candle_Lamp_Lit": {
-    "Vmodifiers": {
+    "1Vmodifiers": {
       "add": {
         "skillXP": [
           {
@@ -836,13 +943,17 @@
           {
             "currencyID": "melvorD:GP",
             "value": 25
+          },
+          {
+            "currencyID": "melvorD:SlayerCoins",
+            "value": 25
           }
         ]
       }
     }
   },
   "melvorAoD:Candelabra_Lit": {
-    "Vmodifiers": {
+    "1Vmodifiers": {
       "add": {
         "nonCombatSkillXP": 4,
         "masteryXP": [
@@ -854,10 +965,11 @@
         "skillPreservationChance": 3,
         "skillInterval": -3
       }
-    }
+    },
+    "5Uxp": [ 0, 0, 200 ]
   },
   "melvorAoD:Cursed_Idol": {
-    "Vmodifiers": {
+    "1Vmodifiers": {
       "add": {
         "skillXP": [
           {
@@ -875,13 +987,20 @@
       "add": {
         "combatLootDoublingChance": 15
       }
-    }
+    },
+    "5Vcurrency3": [ 0.2, "sc" ]
   },
   "melvorAoD:Decaying_Gem": {
-		"base": "Unholy2",
-    "1Ocbeasy": [ "melvorAoD:DecayingGem", 7, 100, { "sm": 10 }, [ 0, true ] ],
-    "5cbeasy": ["5Eradicate", 7, 100],
-    "10Ucbeasy": ["10Eradicate", 7, 100]
+    "base": "Unholy2",
+    "1Ocbeasy": [
+      "melvorAoD:DecayingGem",
+      7,
+      100,
+      { "sm": 10 },
+      [ 0, true ]
+    ],
+    "5cbeasy": [ "5Eradicate", 7, 100 ],
+    "10Ucbeasy": [ "10Eradicate", 7, 100 ]
   },
   "melvorAoD:Eyepatch": {
   },
@@ -895,15 +1014,20 @@
           }
         ]
       }
-    }
+    },
+    "5Uskillbase": [ 0, 0, 0, -10, "cart" ]
   },
   "melvorAoD:Old_Pirate_Pants": {
     "base": "Unholy1",
-    "Vmodifiers": {
+    "1Vmodifiers": {
       "add": {
         "flatCurrencyGainOnEnemyHitBasedOnCombatLevel": [
           {
             "currencyID": "melvorD:GP",
+            "value": 2
+          },
+          {
+            "currencyID": "melvorD:SlayerCoins",
             "value": 1
           }
         ]
@@ -913,50 +1037,61 @@
   "melvorAoD:Pirate_Hook": {
     "base": "Unholy2",
     "Uress": [ 7 ],
-		"UdmgTaken": [ -35 ]
+    "UdmgTaken": [ -35 ]
   },
   "melvorAoD:Pirate_Captains_Sword": {
     "base": "Unholy2",
     "5OuniqueAttack": { "id": "NastyBitePlayer" },
-    "10Ucbeasy": ["20$5dtaken", 3, 20]
+    "10Ucbeasy": [ "20$5dtaken", 3, 20 ]
   },
   "melvorAoD:Shell_Amulet": {
     "base": "BaseAmulet1",
     "5OuniqueAttack": { "id": "ShellBuff" },
-    "10Ucbeasy": ["weak", 4, 20]
+    "10Ucbeasy": [ "weak", 4, 20 ]
   },
   "melvorAoD:Merman_Pendant": {
-    "base": "BaseAmulet1"
+    "base": "BaseAmulet1",
+    "5Ucbeasy": [ "100$20bhp", 2 ]
   },
   "melvorAoD:Power_Crystals": {
     "5Ncbeasys": [
-      [ [ "stun", "freeze" ], 3, 10 ],
-      [ [ "burn" ], 2, 10 ]
+      [
+        [ "stun", "freeze" ],
+        3,
+        10
+      ],
+      [
+        [ "burn" ],
+        2,
+        10
+      ]
     ],
-    "10Ucbeasy": [ ["crystal","weak","angu"], 2, 15 ]
+    "10Ucbeasy": [
+      [ "crystal", "weak", "angu" ],
+      2,
+      15
+    ]
   },
   "melvorAoD:Bottle_of_Mystic_Water": {
-    "base": "Unholy2",
-    "Uress": [ 7 ],
-		"UdmgTaken": [ -35 ]
+    "base": [ "Unholy2", "7shield" ]
   },
   "melvorAoD:Water_Crown": {
     "base": "Unholy2",
-    "5cbeasy": ["20$5bres", 6, 40]
+    "5cbeasy": [ "20$5bres", 6, 40 ]
   },
   "melvorAoD:Ancient_Arcana": {
-    "base": "Unholy2",
-    "Uress": [ 7 ],
-		"UdmgTaken": [ -35 ]
+    "base": [ "Unholy2", "7shield" ]
   },
   "melvorAoD:Water_Sceptre": {
     "base": "Unholy2",
     "5OuniqueAttack": { "id": "LavaSwipePlayer" },
-    "10Ucbeasy": [ [ "1fati","1petr" ], 2, 10 ]
+    "10Ucbeasy": [
+      [ "1fati", "1petr" ],
+      2,
+      10
+    ]
   },
   "melvorAoD:Water_Shield": {
-    "base": "Unholy2",
-    "Uress": [ 7 ],
-		"UdmgTaken": [ -35 ]
+    "base": [ "Unholy2", "7shield" ]
   }
 }

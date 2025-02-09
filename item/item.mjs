@@ -24,7 +24,7 @@ export class ItemLevelManager{
 		this.commonData = commonData;
 	}
 
-	getLevelUpData(item,modData,itemID,base,lv,mul){
+	getLevelUpData(item,modData,itemID,base,lv,mul,heal){
 		let k = itemID;
 		let extraMul = 1;
 		if (k[0] >= '0' && k[0] <= '9') {
@@ -45,12 +45,12 @@ export class ItemLevelManager{
 		if (_a.base instanceof Array)
 			_a.base.forEach(x => { this.getLevelUpData(item, modData, x, base, lv, mul); });
 		else if (typeof (_a.base) == "string")
-			this.getLevelUpData(item, modData,_a.base,base,lv, mul);
+			this.getLevelUpData(item, modData,_a.base,base,lv, mul, heal);
 
 		Object.entries(_a).forEach(x => {
 			if (x[0] == "base")
 				return;
-			EasyTool.addEasyValue(item, modData, x[0], x[1], lv, mul, base, extraMul);
+			EasyTool.addEasyValue(item, modData, x[0], x[1], lv, mul, base, extraMul, heal);
 		});
 	}
 
@@ -72,14 +72,14 @@ export class ItemLevelManager{
 		}
 		let _a = data;
 		if (_a.base instanceof Array)
-			_a.base.forEach(x => { this.getLevelUpData(statObject, modData, x, null, lv, mul); });
+			_a.base.forEach(x => { this.getLevelUpData(statObject, modData, x, null, lv, mul, null); });
 		else if (typeof (_a.base) == "string")
-			this.getLevelUpData(statObject, modData,_a.base,null,lv, mul);
+			this.getLevelUpData(statObject, modData,_a.base,null,lv, mul, null);
 
 		Object.entries(_a).forEach(x => {
 			if (x[0] == "base")
 				return;
-			EasyTool.addEasyValue(statObject, modData, x[0], x[1], lv, mul, null, 1);
+			EasyTool.addEasyValue(statObject, modData, x[0], x[1], lv, mul, null, 1, null);
 		});
 	}
 
@@ -94,9 +94,9 @@ export class ItemLevelManager{
 			itemData.name = item?.name ?? null;
 			if (item.equipmentStats)
 				Util.getCurrentEquipmentStat(item, itemData);
+			if (item.healsFor)
+				itemData.healsFor = item.healsFor;
 		}
-		if (itemID === "melvorF:Summoning_Familiar_Golbin_Thief")
-			console.log(JSON.stringify(itemData));
 		this.updateItemName(itemID, itemData.name, lv);
 		let modData = {};
 		let modBase = null;
@@ -110,7 +110,7 @@ export class ItemLevelManager{
 		let statObject = item;
 		if (item instanceof PotionItem)
 			statObject = item.stats;
-		this.getLevelUpData(statObject, modData ,itemID, modBase, lv, mul);
+		this.getLevelUpData(statObject, modData ,itemID, modBase, lv, mul, itemData.healsFor);
 		//if (itemID === "melvorD:Bronze_Dagger")
 		//	console.log(JSON.stringify(modData));
 		item.applyDataModification(modData, game);
@@ -250,8 +250,6 @@ export class SkillCheatManager{
 			return;
 		let modData = {};
 		this.itemManager.getLevelUpDataForSummoningSynergy(statObject, modData, lv, mul);
-		if (statObject.summons[0].id == "melvorF:GolbinThief" && statObject.summons[1].id == "melvorF:Dragon")
-			console.log("Synergies mod data: " + JSON.stringify(modData));
 		Util.applyStatObjectDataModification(statObject, modData, game);
 	}
 }
